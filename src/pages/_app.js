@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import "../../public/assets/css/animate.css";
-import "react-modal-video/css/modal-video.css";
 import "../../public/assets/css/bootstrap.min.css";
 import "../../public/assets/css/swiper-bundle.css";
 import "../../public/assets/font/flaticon.css";
