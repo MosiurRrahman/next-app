@@ -3,7 +3,6 @@ import Footer from "../components/common/Footer";
 import Header from "../components/common/Header";
 import NewsLatter from "../components/common/NewsLatter";
 import Preloader from "../components/common/Preloader";
-import Home1Destination from "../components/home/home1Destination";
 
 import Home1package from "../components/home/Home1package";
 import Home2Banner from "../components/home/Home2Banner";
@@ -31,7 +30,6 @@ export default function Homepage2() {
           <Home2Banner />
           <Home2Offer />
           <Home1package />
-          {/* <Home1Destination /> */}
           <Review1 />
           <Home2Feature />
           <Home2Blog/>

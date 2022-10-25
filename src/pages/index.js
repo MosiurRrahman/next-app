@@ -7,7 +7,6 @@ import Preloader from "../components/common/Preloader";
 import Topbar from "../components/common/Topbar";
 import Home1AchiveMent from "../components/home/Home1AchiveMent";
 import Home1Blog from "../components/home/Home1Blog";
-import Home1Destination from "../components/home/home1Destination";
 
 import Home1Feature from "../components/home/Home1Feature";
 import Home1package from "../components/home/Home1package";
@@ -34,7 +33,7 @@ export default function Home() {
           <Mainbarnner1 />
           <FilterForm />
           <Home1package />
-          {/* <Home1Destination /> */}
+         
           <Home1AchiveMent />
           <Review1 />
           <Home1Feature />
