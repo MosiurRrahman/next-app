@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ModalVideo from "react-modal-video";
-import "react-modal-video/css/modal-video.css";
+
 export default function AboutWrap() {
   const [isOpen, setOpen] = useState(false);
   return (
@@ -18,14 +18,7 @@ export default function AboutWrap() {
                   style={{ cursor: "pointer" }}><i className="flaticon-play-button-arrowhead" />
             </div>
           </div>
-          <React.Fragment>
-        <ModalVideo
-          channel="youtube"
-          isOpen={isOpen}
-          videoId="TboWOSW7qCI"
-          onClose={() => setOpen(false)}
-        />
-      </React.Fragment>
+         
         </div>
       </div>
       <div className="col-lg-5 col-md-12">
@@ -53,6 +46,14 @@ export default function AboutWrap() {
           </div>
         </div>
       </div>
+      <React.Fragment>
+        <ModalVideo
+          channel="youtube"
+          isOpen={isOpen}
+          videoId="TboWOSW7qCI"
+          onClose={() => setOpen(false)}
+        />
+      </React.Fragment>
     </div>
   </div>
 </div>

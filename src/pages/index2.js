@@ -4,6 +4,7 @@ import Header from "../components/common/Header";
 import NewsLatter from "../components/common/NewsLatter";
 import Preloader from "../components/common/Preloader";
 import Home1Destination from "../components/home/home1Destination";
+
 import Home1package from "../components/home/Home1package";
 import Home2Banner from "../components/home/Home2Banner";
 import Home2Blog from "../components/home/Home2Blog";
