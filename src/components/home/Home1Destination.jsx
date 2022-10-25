@@ -70,64 +70,64 @@ export default function Home1Destination() {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-3 col-md-3">
-            <div className="package-slider-wrap">
-              <img
-                src="assets/images/destination/d-1.png"
-                alt=""
-                className="img-fluid"
-              />
-              <div className="pakage-overlay">
-                <strong>Spain</strong>
-              </div>
-              <div className="slider-arrows text-center d-xl-flex d-none justify-content-between">
-                <div className="bannerNext1 swiper-btn">
-                  <i className="bx bx-chevron-left"></i>
+            <div className="col-lg-3 col-md-3">
+              <div className="package-slider-wrap">
+                <img
+                  src="assets/images/destination/d-1.png"
+                  alt=""
+                  className="img-fluid"
+                />
+                <div className="pakage-overlay">
+                  <strong>Spain</strong>
                 </div>
-                <div className="bannerPrev1 swiper-btn">
-                  <i className="bx bx-chevron-right"></i>
+                <div className="slider-arrows text-center d-xl-flex d-none justify-content-between">
+                  <div className="bannerNext1 swiper-btn">
+                    <i className="bx bx-chevron-left"></i>
+                  </div>
+                  <div className="bannerPrev1 swiper-btn">
+                    <i className="bx bx-chevron-right"></i>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="col-lg-9 col-md-9">
-            <div className="row destinations-1">
-              <Swiper {...destinationSlide} {...slider1} className="swipper">
-                <div className="swipper-wrapper">
-                  {destinationCardData.slice(0, 4).map((data) => {
-                    const { id, image, title, rating, price } = data;
-                    return (
-                      <SwiperSlide key={id}>
-                        <div className="package-card">
-                          <div className="package-thumb">
-                            <img src={image} alt="" className="img-fluid" />
-                          </div>
-                          <div className="package-details">
-                            <div className="package-info">
-                              <h5>
-                                <span>${price}</span>/Per Person
-                              </h5>
+            <div className="col-lg-9 col-md-9">
+              <div className="row destinations-1">
+                <Swiper {...destinationSlide} {...slider1} className="swipper">
+                  <div className="swipper-wrapper">
+                    {destinationCardData.slice(0, 4).map((data) => {
+                      const { id, image, title, rating, price } = data;
+                      return (
+                        <SwiperSlide key={id}>
+                          <div className="package-card">
+                            <div className="package-thumb">
+                              <img src={image} alt="" className="img-fluid" />
                             </div>
-                            <h3>
-                              <i className="flaticon-arrival" />
-                              <Link href="/package-details"><a>{title}</a></Link>
-                            </h3>
-                            <div className="package-rating">
-                              <i className="bx bxs-star" />
-                              <strong>
-                                <span>{rating}</span> Rating
-                              </strong>
+                            <div className="package-details">
+                              <div className="package-info">
+                                <h5>
+                                  <span>${price}</span>/Per Person
+                                </h5>
+                              </div>
+                              <h3>
+                                <i className="flaticon-arrival" />
+                                <Link href="/package-details"><a>{title}</a></Link>
+                              </h3>
+                              <div className="package-rating">
+                                <i className="bx bxs-star" />
+                                <strong>
+                                  <span>{rating}</span> Rating
+                                </strong>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </SwiperSlide>
-                    );
-                  })}
-                </div>
-              </Swiper>
+                        </SwiperSlide>
+                      );
+                    })}
+                  </div>
+                </Swiper>
+              </div>
             </div>
           </div>
-        </div>
         <div className="row">
           <div className="col-lg-9 col-md-9">
             <div className="row destinations-2">
