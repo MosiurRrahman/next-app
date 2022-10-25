@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <Layout>
       <Breadcumb pageName="About Us" pageTitle="About Us" />
-      <AboutWrap/>
+      {/* <AboutWrap/> */}
       <GuideArea/>
       <Home1AchiveMent />
       <Review1 />

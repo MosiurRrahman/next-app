@@ -34,7 +34,7 @@ export default function Home() {
           <Mainbarnner1 />
           <FilterForm />
           <Home1package />
-          <Home1Destination />
+          {/* <Home1Destination /> */}
           <Home1AchiveMent />
           <Review1 />
           <Home1Feature />

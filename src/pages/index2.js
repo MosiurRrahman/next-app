@@ -31,7 +31,7 @@ export default function Homepage2() {
           <Home2Banner />
           <Home2Offer />
           <Home1package />
-          <Home1Destination />
+          {/* <Home1Destination /> */}
           <Review1 />
           <Home2Feature />
           <Home2Blog/>
