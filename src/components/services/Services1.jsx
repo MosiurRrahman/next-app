@@ -132,44 +132,43 @@ function Services1() {
                     </Swiper>
                   </div>
                   <div className="tab-pane fade" id="pills-videography" role="tabpanel" aria-labelledby="pills-videography-tab">
-                    <div className="swiper services-slider">
+                    <Swiper {...slider} className="swiper services-slider">
                       <div className="swiper-wrapper">
-                        <div className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/videography11.png" alt="image" /></a></div>
-                        <div className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/videography12.png" alt="image" /></a></div>
-                        <div className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/videography13.png" alt="image" /></a></div>
+                        <SwiperSlide className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/videography11.png" alt="image" /></a></SwiperSlide>
+                        <SwiperSlide className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/videography12.png" alt="image" /></a></SwiperSlide>
                       </div>
                       <div className="swiper-pagination" />
-                    </div>
+                    </Swiper>
                   </div>
                   <div className="tab-pane fade" id="pills-wedding" role="tabpanel" aria-labelledby="pills-wedding-tab">
                     <div className="swiper services-slider">
                       <div className="swiper-wrapper">
-                        <div className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/wedding11.png" alt="image" /></a></div>
-                        <div className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/wedding12.png" alt="image" /></a></div>
-                        <div className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/wedding13.png" alt="image" /></a></div>
+                        <SwiperSlide className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/wedding11.png" alt="image" /></a></SwiperSlide>
+                        <SwiperSlide className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/wedding12.png" alt="image" /></a></SwiperSlide>
+                        <SwiperSlide className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/wedding13.png" alt="image" /></a></SwiperSlide>
                       </div>
                       <div className="swiper-pagination" />
                     </div>
                   </div>
                   <div className="tab-pane fade" id="pills-aerial" role="tabpanel" aria-labelledby="pills-aerial-tab">
-                    <div className="swiper services-slider">
+                    <Swiper {...slider} className="swiper services-slider">
                       <div className="swiper-wrapper">
-                        <div className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/aerial11.png" alt="image" /></a></div>
-                        <div className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/aerial12.png" alt="image" /></a></div>
-                        <div className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/aerial13.png" alt="image" /></a></div>
+                        <SwiperSlide className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/aerial11.png" alt="image" /></a></SwiperSlide>
+                        <SwiperSlide className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/aerial12.png" alt="image" /></a></SwiperSlide>
+                        <SwiperSlide className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/aerial13.png" alt="image" /></a></SwiperSlide>
                       </div>
                       <div className="swiper-pagination" />
-                    </div>
+                    </Swiper>
                   </div>
                   <div className="tab-pane fade" id="pills-fashion" role="tabpanel" aria-labelledby="pills-fashion-tab">
-                    <div className="swiper services-slider">
+                    <Swiper {...slider} className="swiper services-slider">
                       <div className="swiper-wrapper">
-                        <div className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/fashion11.png" alt="image" /></a></div>
-                        <div className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/fashion12.png" alt="image" /></a></div>
-                        <div className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/fashion13.png" alt="image" /></a></div>
+                        <SwiperSlide className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/fashion11.png" alt="image" /></a></SwiperSlide>
+                        <SwiperSlide className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/fashion12.png" alt="image" /></a></SwiperSlide>
+                        <SwiperSlide className="swiper-slide"><a className=" magnetic-item" href="#"><img className="img-fluid anim-image-parallax tt-lazy" data-cursor="View<br>Services" src="assets/images/bg/fashion13.png" alt="image" /></a></SwiperSlide>
                       </div>
                       <div className="swiper-pagination" />
-                    </div>
+                    </Swiper>
                   </div>
                 </div>
               </div>
