@@ -20,9 +20,10 @@ export default function Home() {
   return (
     <>
     <h1>hello</h1>
-    {/* <Header />
+ 
+     <Header />
     <Sidebar/>
-    <Banner1 />
+    {/* <Banner1 />
     <About1 />
     <Service1 />
     <HomeGallary1/>
@@ -31,9 +32,8 @@ export default function Home() {
     <HomePricePlan/>
     <HomeNews1/>
     <HomeBooking1/>
-    <InstagramFeed1/>
-    <Footer /> */}
-    
+    <InstagramFeed1/> */}
+    <Footer /> 
   </>
   )
 }
