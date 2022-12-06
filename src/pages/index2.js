@@ -4,9 +4,9 @@ import About2 from "../components/about/About2";
 import BlogHisory1 from "../components/blog/BlogHisory1";
 import Partner1 from "../components/partnar/Partner1";
 import Portfolio2 from "../components/portfolio/Portfolio2";
-import Service2 from "../components/service/Service2";
 import VideoTestimonial from "../components/video/VideoTestimonial";
 import BannerIndex2 from "../components/banner/BannerIndex2";
+import Services2 from "../components/services/Services2";
 
 function Index2() {
   return (
@@ -15,7 +15,7 @@ function Index2() {
       <BannerIndex2 />
       <Partner1 />
       <About2 />
-      <Service2 />
+      <Services2 />
       <Portfolio2 />
       <VideoTestimonial />
       <BlogHisory1 />
