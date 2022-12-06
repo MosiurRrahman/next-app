@@ -1,48 +1,39 @@
-import { useEffect, useState } from "react";
-import FilterForm from "../components/common/FilterForm";
-import Footer from "../components/common/Footer";
-import Header from "../components/common/Header";
-import NewsLatter from "../components/common/NewsLatter";
-import Preloader from "../components/common/Preloader";
-import Topbar from "../components/common/Topbar";
-import Home1AchiveMent from "../components/home/Home1AchiveMent";
-import Home1Blog from "../components/home/Home1Blog";
-import Home1Destination from "../components/home/Home1Destination";
+// import Banner1 from "../components/banner/Banner1";
+// import About1 from "../components/about/About1";
+// import HomeBooking1 from "../components/booking/HomeBooking1";
+// import Footer from "../components/footer/Footer";
+// import HomeGallary1 from "../components/gallary/HomeGallary1";
+// import Header from "../components/header/Header";
+// import HomeNews1 from "../components/news/HomeNews1";
+// import InstagramFeed1 from "../components/nstagramFeed/InstagramFeed1";
+// import HomePricePlan from "../components/pricing-plan/HomePricePlan";
+// import Service1 from "../components/service/Service1";
+// import HomeTestimonial1 from "../components/testimonial/HomeTestimonial1";
+// import HomeVideo1 from "../components/video/HomeVideo1";
+// import Sidebar from "../components/common/sidebar";
 
-import Home1Feature from "../components/home/Home1Feature";
-import Home1package from "../components/home/Home1package";
-import Mainbarnner1 from "../components/home/Mainbarnner1";
-import Review1 from "../components/home/Review1";
+
+
+
 
 export default function Home() {
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setLoading(false);
-    setTimeout(() => {
-      setLoading(true);
-    }, 3000);
-  }, []);
   return (
     <>
-      {!loading ? (
-        <Preloader />
-      ) : (
-        <>
-          <Topbar />
-          <Header />
-          <Mainbarnner1 />
-          <FilterForm />
-          <Home1package />
-          <Home1Destination />
-          <Home1AchiveMent />
-          <Review1 />
-          <Home1Feature />
-          <Home1Blog />
-          <NewsLatter />
-          <Footer />
-        </>
-      )}
-    </>
-  );
+    <h1>hello</h1>
+    {/* <Header />
+    <Sidebar/>
+    <Banner1 />
+    <About1 />
+    <Service1 />
+    <HomeGallary1/>
+    <HomeVideo1/>
+    <HomeTestimonial1/>
+    <HomePricePlan/>
+    <HomeNews1/>
+    <HomeBooking1/>
+    <InstagramFeed1/>
+    <Footer /> */}
+    
+  </>
+  )
 }
