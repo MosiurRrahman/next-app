@@ -1,6 +1,6 @@
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
-import Sidebar from "../components/com+mon/sidebar";
+// import Sidebar from "../components/com+mon/sidebar";
 // import Banner1 from "../components/banner/Banner1";
 // import About1 from "../components/about/About1";
 // import HomeBooking1 from "../components/booking/HomeBooking1";
@@ -22,7 +22,7 @@ export default function Home() {
     <h1>hello</h1>
  
      <Header />
-    <Sidebar/>
+    {/* <Sidebar/> */}
     {/* <Banner1 />
     <About1 />
     <Service1 />
