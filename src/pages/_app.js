@@ -16,10 +16,12 @@ import "../../public/assets/css/magnific-popup.css";
 import "../../public/assets/css/odometer.css";
 import "../../public/assets/css/custom-video-player.css";
 import "../../public/assets/css/style.css";
+import Sidebar from "../components/common/sidebar";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     import("../../public/js/bootstrap.bundle.min.js");
+    <Sidebar/>
   });
   return (
     <>
