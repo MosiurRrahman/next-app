@@ -1,107 +1,114 @@
 import Link from 'next/link'
 import React from 'react'
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 function Banner3() {
+  const bannerSlider = {
+    slidesPerView: 3,
+	centeredSlides: true,
+	loop: true,
+	speed: 1000,
+	spaceBetween: 30,
+	// autoplay: true,
+	mousewheel: {
+		enabled: true,
+		sensitivity: 5.5,
+	  },
+	pagination: {
+	  el: '.swiper-center-pagination',
+	  clickable: true,
+	  renderBullet: function (index, className) {
+		return '<span class="' + className + '">' + (index + 1) + '</span>';
+	  },
+	},
+	breakpoints: {
+		280: {
+			slidesPerView: 2,
+			navigation: false,
+		},
+		386: {
+			slidesPerView: 2,
+			navigation: false,
+		},
+		576: {
+			slidesPerView: 2,
+			navigation: false,
+		},
+		768: {
+			slidesPerView: 2,
+			navigation: false,
+		},
+		1200: {
+			slidesPerView: 2,
+			navigation: false,
+		},
+		1400: {
+			slidesPerView: 3,
+			navigation: false,
+		}
+	}
+  }
   return (
     <div className="horo-style-1 overflow-hidden">
-  <div className="warter-mark">
-    <h2>XOON</h2>
-  </div>
-  <div className="social-area sytle-two">
-    <ul>
-      <li><Link href="https://www.facebook.com/">Facebook</Link></li>
-      <li><Link href="https://www.instagram.com/">instagram</Link></li>
-      <li><Link href="https://twitter.com/">Twitter</Link></li>
-    </ul>
-  </div>
-  <div className="container-fluid">
-    <div className="row align-items-center">
-      <div className="col-12">
-        <div className="bk-slider">
-          <div className="swiper personal-center-banner swiper-initialized swiper-horizontal swiper-pointer-events">
-            <div className="swiper-wrapper" id="swiper-wrapper-7cdb2be497bfba19" aria-live="polite" style={{transitionDuration: '0ms', transform: 'translate3d(-3900px, 0px, 0px)'}}><div className="swiper-slide magnetic-wrap swiper-slide-duplicate" data-swiper-slide-index={1} style={{width: '620px', marginRight: '30px'}} role="group" aria-label="2 / 4">
-                <div className="magnetic-wrap"><div className="magnetic-item">
-                    <img src="assets/images/fullscreen-banner/image2.png" alt="image" />
-                    <div className="banner-img-overlay">
-                      <h2><Link data-cursor="View<br>Details" className="not-hide-cursor" href="/portfolio-details">Modeling Photography</Link></h2>
-                    </div>
-                  </div></div>
-              </div><div className="swiper-slide magnetic-wrap swiper-slide-duplicate" data-swiper-slide-index={2} style={{width: '620px', marginRight: '30px'}} role="group" aria-label="3 / 4">
-                <div className="magnetic-wrap"><div className="magnetic-item">
-                    <img src="assets/images/fullscreen-banner/image3.png" alt="image" />
-                    <div className="banner-img-overlay">
-                      <h2><Link data-cursor="View<br>Details" className="not-hide-cursor" href="/portfolio-details">Personal Photography</Link></h2>
-                    </div>
-                  </div></div>
-              </div><div className="swiper-slide magnetic-wrap swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index={3} style={{width: '620px', marginRight: '30px'}} role="group" aria-label="4 / 4">
-                <div className="magnetic-wrap"><div className="magnetic-item">
-                    <img src="assets/images/fullscreen-banner/image2.png" alt="image" />
-                    <div className="banner-img-overlay">
-                      <h2><Link data-cursor="View<br>Details" className="not-hide-cursor" href="/portfolio-details">Birthday Photography</Link></h2>
-                    </div>
-                  </div></div>
-              </div>
-              <div className="swiper-slide magnetic-wrap swiper-slide-duplicate-active" data-swiper-slide-index={0} style={{width: '620px', marginRight: '30px'}} role="group" aria-label="1 / 4">
-                <div className="magnetic-wrap"><div className="magnetic-item" style={{}}>
+    <div className="warter-mark">
+      <h2>XOON</h2>
+    </div>
+    <div className="social-area sytle-two">
+      <ul>
+        <li><a href="https://www.facebook.com/">Facebook</a></li>
+        <li><a href="https://www.instagram.com/">instagram</a></li>
+        <li><a href="https://twitter.com/">Twitter</a></li>
+      </ul>
+    </div>
+    <div className="container-fluid">
+      <div className="row align-items-center">
+        <div className="col-12">
+          <div className="bk-slider">
+            <Swiper {...bannerSlider} className="swiper personal-center-banner">
+              <div className="swiper-wrapper">
+                <SwiperSlide className="swiper-slide magnetic-wrap">
+                  <div className="magnetic-item">
                     <img src="assets/images/fullscreen-banner/image1.png" alt="image" />
                     <div className="banner-img-overlay">
-                      <h2><Link data-cursor="View<br>Details" className="not-hide-cursor" href="/portfolio-details">Wedding Photography</Link></h2>
+                      <h2><Link legacyBehavior data-cursor="View<br>Details" className="not-hide-cursor" href="/portfolio-details"><a>Wedding Photography</a></Link></h2>
                     </div>
-                  </div></div>
-              </div>
-              <div className="swiper-slide magnetic-wrap swiper-slide-duplicate-next" data-swiper-slide-index={1} style={{width: '620px', marginRight: '30px'}} role="group" aria-label="2 / 4">
-                <div className="magnetic-wrap"><div className="magnetic-item" style={{}}>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className="swiper-slide magnetic-wrap">
+                  <div className="magnetic-item">
                     <img src="assets/images/fullscreen-banner/image2.png" alt="image" />
                     <div className="banner-img-overlay">
-                      <h2><Link data-cursor="View<br>Details" className="not-hide-cursor" href="/portfolio-details">Modeling Photography</Link></h2>
+                      <h2><Link data-cursor="View<br>Details" className="not-hide-cursor" href="/portfolio-details"><a>Modeling Photography</a></Link></h2>
                     </div>
-                  </div></div>
-              </div>
-              <div className="swiper-slide magnetic-wrap" data-swiper-slide-index={2} style={{width: '620px', marginRight: '30px'}} role="group" aria-label="3 / 4">
-                <div className="magnetic-wrap"><div className="magnetic-item" style={{}}>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className="swiper-slide magnetic-wrap">
+                  <div className="magnetic-item">
                     <img src="assets/images/fullscreen-banner/image3.png" alt="image" />
                     <div className="banner-img-overlay">
-                      <h2><Link data-cursor="View<br>Details" className="not-hide-cursor" href="/portfolio-details">Personal Photography</Link></h2>
+                      <h2><Link data-cursor="View<br>Details" className="not-hide-cursor" href="/portfolio-details"><a>Personal Photography</a></Link></h2>
                     </div>
-                  </div></div>
-              </div>
-              <div className="swiper-slide magnetic-wrap swiper-slide-prev" data-swiper-slide-index={3} style={{width: '620px', marginRight: '30px'}} role="group" aria-label="4 / 4">
-                <div className="magnetic-wrap"><div className="magnetic-item" style={{}}>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className="swiper-slide magnetic-wrap">
+                  <div className="magnetic-item">
                     <img src="assets/images/fullscreen-banner/image2.png" alt="image" />
                     <div className="banner-img-overlay">
-                      <h2><Link data-cursor="View<br>Details" className="not-hide-cursor" href="/portfolio-details">Birthday Photography</Link></h2>
+                      <h2><Link data-cursor="View<br>Details" className="not-hide-cursor" href="/portfolio-details"><a>Birthday Photography</a></Link></h2>
                     </div>
-                  </div></div>
+                  </div>
+                </SwiperSlide>
               </div>
-              <div className="swiper-slide magnetic-wrap swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index={0} style={{width: '620px', marginRight: '30px'}} role="group" aria-label="1 / 4">
-                <div className="magnetic-wrap"><div className="magnetic-item">
-                    <img src="assets/images/fullscreen-banner/image1.png" alt="image" />
-                    <div className="banner-img-overlay">
-                      <h2><Link data-cursor="View<br>Details" className="not-hide-cursor" href="/portfolio-details">Wedding Photography</Link></h2>
-                    </div>
-                  </div></div>
-              </div><div className="swiper-slide magnetic-wrap swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index={1} style={{width: '620px', marginRight: '30px'}} role="group" aria-label="2 / 4">
-                <div className="magnetic-wrap"><div className="magnetic-item">
-                    <img src="assets/images/fullscreen-banner/image2.png" alt="image" />
-                    <div className="banner-img-overlay">
-                      <h2><Link data-cursor="View<br>Details" className="not-hide-cursor" href="/portfolio-details">Modeling Photography</Link></h2>
-                    </div>
-                  </div></div>
-              </div><div className="swiper-slide magnetic-wrap swiper-slide-duplicate" data-swiper-slide-index={2} style={{width: '620px', marginRight: '30px'}} role="group" aria-label="3 / 4">
-                <div className="magnetic-wrap"><div className="magnetic-item">
-                    <img src="assets/images/fullscreen-banner/image3.png" alt="image" />
-                    <div className="banner-img-overlay">
-                      <h2><Link data-cursor="View<br>Details" className="not-hide-cursor" href="/portfolio-details">Personal Photography</Link></h2>
-                    </div>
-                  </div></div>
-              </div></div>
-            <span className="swiper-notification" aria-live="assertive" aria-atomic="true" /></div>
-          <div className="swiper-center-pagination d-flex justify-content-center swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span className="swiper-pagination-bullet swiper-pagination-bullet-active" tabIndex={0}>1</span><span className="swiper-pagination-bullet" tabIndex={0}>2</span><span className="swiper-pagination-bullet" tabIndex={0}>3</span><span className="swiper-pagination-bullet" tabIndex={0}>4</span></div>
+            </Swiper>
+            {/* Add Pagination */}
+            <div className="swiper-center-pagination d-flex justify-content-center" />
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+  
 
   )
 }

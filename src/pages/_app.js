@@ -1,6 +1,5 @@
 import Script from "next/script";
 import { useEffect } from "react";
-import Preloader from "../components/common/preloader";
 import SmoothPageScroll from "../components/common/smoothPageScroll";
 import DarkMode from "../components/common/themeMood";
 import ScrollToTop from "../components/scrollToTop";
@@ -26,10 +25,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <DarkMode/>
-
       <Component {...pageProps} />
       <SmoothPageScroll/>
-      {/* <Preloader/> */}
+ 
       <ScrollToTop />
       <Script id="simpleParallax" src="js/simpleParallax.min.js"></Script>
       <Script id="isotope" src="js/isotope.pkgd.min.js"></Script>

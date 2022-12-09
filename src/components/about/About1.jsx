@@ -18,7 +18,7 @@ function About1() {
         </div>
         <div className="row mb-70">
           <div className="col-md-3 d-flex justify-content-center">
-            <div className="about-img1">
+            <div className="about-img1 custom-cursor">
               <img
                 className="img-fluid  magnetic-item"
                 src="assets/images/bg/about-img1.png"

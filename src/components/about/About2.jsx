@@ -2,8 +2,10 @@ import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Pagination,EffectFade } from "swiper";
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 SwiperCore.use([Navigation, Pagination, Autoplay, EffectFade]);
 function About2() {
+  const currentRoute = useRouter().pathname
     const aboutSlider = {
         slidesPerView: 1,
 	loop: true,
@@ -23,7 +25,7 @@ function About2() {
 	  },
     }
   return (
-    <div className="about-area2" id="about-style-2">
+    <div className={currentRoute === "/about-us"?"about-area2 style-two":"about-area2"} id="about-style-2">
   <div className="container-fluid">
     <div className="row justify-content-center">
       <div className="col-lg-5 col-md-10 col-sm-10 position-relative">
@@ -61,7 +63,7 @@ function About2() {
               day
               is something that I'll always cherish and be forever grateful for. Lorem Ipsum
               decided to leave for the far World of Grammar.</p>
-            <Link className="primary-btn6 button-hover-one" href="/about-us">Learn
+            <Link className={currentRoute === "/about-us"?"primary-btn6 style-two button-hover-two":"primary-btn6 button-hover-one"} href="/about-us">Learn
               More</Link>
           </div>
           <div className="about-sm-img">

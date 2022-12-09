@@ -48,13 +48,14 @@ function Partner1() {
     <div
       className={
         currentRoute === "/services" || "/services-2"
-          ? "our-patner-area two mb-120"
+          ? "our-patner-area two mb-120" 
           : "our-patner-area mb-120"
       }
+      style={currentRoute==="/index2-thumbnail-slider"||currentRoute==="/index2-center-slider"|| currentRoute==="/about-us" || currentRoute==="/index2-pagination"? {marginBottom:"50px"}:{}}
     >
      <div className="container">
       <div className="row">
-        <Swiper {...sliderPartnar} className="swiper our-patner-slider">
+        <Swiper {...sliderPartnar} className="swiper our-patner-slider" style={currentRoute==="/index2"||currentRoute==="/index2-thumbnail-slider" || currentRoute==="/index2-pagination"|| currentRoute==="/about-us"||currentRoute==="/index2-center-slider"? {border:"none", paddingTop:"120px"}:{}}>
           <div className="swiper-wrapper">
             <SwiperSlide className="swiper-slide">
               <svg width={108} height={50} viewBox="0 0 108 50" xmlns="http://www.w3.org/2000/svg">

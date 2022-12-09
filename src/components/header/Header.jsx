@@ -90,194 +90,224 @@ function Header() {
           </div>
           <ul className="menu-list">
             <li className="menu-item-has-children">
-              <a href="#" className="btn--primary1">
+              <a href="#" className={
+              currentRoute === "/"||
+              currentRoute === "/index-video"||
+              currentRoute === "/index2-pagination" ||
+              currentRoute === "/index-personal-showcase"||
+              currentRoute === "/index-fullscreen"||
+              currentRoute === "/index-portfolio"||
+              currentRoute === "/index2" ||
+              currentRoute === "/index2-center-slider" ||
+              currentRoute === "/index2-video" ||
+              currentRoute === "/index2-thumbnail-slider"?"btn--primary1 active":""}>
                 Home
               </a>
               <i className="bx bxs-circle dropdown-icon" />
               <ul className="submenu">
                 <li>
                   <Link legacyBehavior href="/">
-                    <a>Personal Home</a>
+                    <a className={currentRoute === "/"? "active":"disable"}>Personal Home</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="index-video">
-                    <a>Personal Home Video</a>
+                    <a className={currentRoute === "/index-video"? "active":"disable"}>Personal Home Video</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="index-personal-showcase">
-                    <a>Personal Home showcase</a>
+                    <a className={currentRoute === "/index-personal-showcase"? "active":"disable"}>Personal Home showcase</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="index-fullscreen">
-                    <a>Personal Home Fullscreen</a>
+                    <a className={currentRoute === "/index-fullscreen"? "active":"disable"}>Personal Home Fullscreen</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="index-portfolio">
-                    <a>Personal Home Portfolio</a>
+                    <a className={currentRoute === "/index-portfolio"? "active":"disable"}>Personal Home Portfolio</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="index2">
-                    <a>Agency Home</a>
+                    <a className={currentRoute === "/index2"? "active":"disable"}>Agency Home</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="index2-video">
-                    <a>Agency Home Video</a>
+                    <a className={currentRoute === "/index2-video"? "active":"disable"}>Agency Home Video</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="index2-thumbnail-slider">
-                    <a>Agency Home Thumbnail</a>
+                    <a className={currentRoute === "/index2-thumbnail-slider"? "active":"disable"}>Agency Home Thumbnail</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="index2-pagination">
-                    <a>Agency Home Pagination</a>
+                    <a className={currentRoute === "/index2-pagination"? "active":"disable"}>Agency Home Pagination</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="index2-center-slider">
-                    <a>Agency Home Center Slider</a>
+                    <a className={currentRoute === "/index2-center-slider"? "active":"disable"}>Agency Home Center Slider</a>
                   </Link>
                 </li>
               </ul>
             </li>
             <li className="menu-item-has-children">
-              <a href="#" className="btn--primary1">
+              <a href="#" className={currentRoute === "/about-me"|| currentRoute === "/about-us"?"btn--primary1 active":"btn--primary1"}>
                 About
               </a>
               <i className="bx bxs-circle dropdown-icon" />
               <ul className="submenu">
                 <li>
                   <Link legacyBehavior href="/about-me">
-                    <a>About Me</a>
+                    <a  className={currentRoute === "/about-me"? "active":"disable"}>About Me</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="/about-us">
-                    <a>About Us</a>
+                    <a  className={currentRoute === "/about-us"? "active":"disable"} >About Us</a>
                   </Link>
                 </li>
               </ul>
             </li>
             <li className="menu-item-has-children">
-              <a href="#" className="btn--primary1">
+              <a href="#" className={
+                currentRoute === "/protfolio"||
+                currentRoute === "/portfolio-02"||
+                currentRoute === "/protfolio-03"||
+                currentRoute === "/protfolio-details"
+                ?"btn--primary1 active":"btn--primary1"}>
                 Portfolio
               </a>
               <i className="bx bxs-circle dropdown-icon" />
               <ul className="submenu">
                 <li>
                   <Link legacyBehavior href="/portfolio">
-                    <a>Portfolio 01</a>
+                    <a  className={currentRoute === "/protfolio"? "active":"disable"}>Portfolio 01</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="/portfolio-02">
-                    <a>Portfolio 02</a>
+                    <a  className={currentRoute === "/portfolio-02"? "active":"disable"}>Portfolio 02</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="/portfolio-03">
-                    <a>Portfolio 03</a>
+                    <a  className={currentRoute === "/portfolio-03"? "active":"disable"}>Portfolio 03</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="/portfolio-details">
-                    <a>Portfolio Details</a>
+                    <a  className={currentRoute === "/portfolio-details"? "active":"disable"}>Portfolio Details</a>
                   </Link>
                 </li>
               </ul>
             </li>
             <li className="menu-item-has-children">
-              <a href="#" className="btn--primary1">
+              <a href="#" className={
+                currentRoute === "/blog-grid1"||
+                currentRoute === "/blog-grid2"||
+                currentRoute === "/blog-standard"||
+                currentRoute === "/blog-details"
+                ?"btn--primary1 active":"btn--primary1"}>
                 Blog
               </a>
               <i className="bx bxs-circle dropdown-icon" />
               <ul className="submenu">
                 <li>
                   <Link legacyBehavior href="/blog-grid1">
-                    <a>Blog Grid 01</a>
+                    <a  className={currentRoute === "/blog-grid1"? "active":"disable"}>Blog Grid 01</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="/blog-grid2">
-                    <a>Blog Grid 02</a>
+                    <a  className={currentRoute === "/blog-grid2"? "active":"disable"}>Blog Grid 02</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="/blog-standard">
-                    <a>Blog Standard</a>
+                    <a className={currentRoute === "/blog-standard"? "active":"disable"}>Blog Standard</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="/blog-details">
-                    <a>Blog Details</a>
+                    <a className={currentRoute === "/blog-details"? "active":"disable"}>Blog Details</a>
                   </Link>
                 </li>
               </ul>
             </li>
             <li className="menu-item-has-children">
-              <a href="#" className="btn--primary1">
+              <a href="#" className={
+                currentRoute === "/services"||
+                currentRoute === "/services-2"||
+                currentRoute === "/services-details"||
+                currentRoute === "/team"||
+                currentRoute === "/faq"||
+                currentRoute === "/gallary"
+                ?"btn--primary1 active":"btn--primary1"}>
                 Pages
               </a>
               <i className="bx bxs-circle dropdown-icon" />
               <ul className="submenu">
                 <li>
                   <Link legacyBehavior href="/services">
-                    <a>Services 01</a>
+                    <a className={currentRoute === "/services"? "active":"disable"}>Services 01</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="/services-2">
-                    <a>Services 02</a>
+                    <a  className={currentRoute === "/services-2"? "active":"disable"}>Services 02</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="/services-details">
-                    <a>Services Details</a>
+                    <a  className={currentRoute === "/services-details"? "active":"disable"}>Services Details</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="/team">
-                    <a>Our Team</a>
+                    <a  className={currentRoute === "/team"? "active":"disable"}>Our Team</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="/gallery">
-                    <a>Gallery</a>
+                    <a className={currentRoute === "/gallary"? "active":"disable"}>Gallery</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="/faq">
-                    <a>Faq</a>
+                    <a className={currentRoute === "/faq"? "active":"disable"}>Faq</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="/error">
-                    <a>Error</a>
+                    <a className={currentRoute === "/error"? "active":"disable"}>Error</a>
                   </Link>
                 </li>
               </ul>
             </li>
             <li className="menu-item-has-children">
-              <a href="#" className="btn--primary1">
+              <a href="#" className={
+                currentRoute === "/contact-us"||
+                currentRoute === "/contact-me"
+                ?"btn--primary1 active":"btn--primary1"}>
                 Contact
               </a>
               <i className="bx bxs-circle dropdown-icon" />
               <ul className="submenu">
                 <li>
                   <Link legacyBehavior href="/contact-us">
-                    <a>Contact Us</a>
+                    <a className={currentRoute === "/contact-us"? "active":"disable"}>Contact Us</a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="/contact-me">
-                    <a>Contact Me</a>
+                    <a className={currentRoute === "/contact-me"? "active":"disable"}>Contact Me</a>
                   </Link>
                 </li>
               </ul>
@@ -308,6 +338,7 @@ function Header() {
               currentRoute === "/about-me"
                 ? "header-btn"
                 : currentRoute === "/index2" ||
+                 currentRoute === "/index2-video" ||
                   currentRoute === "/index2-thumbnail-slider" ||
                   currentRoute === "/index2-pagination" ||
                   currentRoute === "/index2-center-slider"
