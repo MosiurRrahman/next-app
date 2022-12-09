@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 import React, { useRef } from 'react'
 
-function Test() {
+function Filter() {
      // init one ref to store the future isotope object
      const isotope = React.useRef()
      // store the filter keyword in a state
@@ -250,13 +250,11 @@ function Test() {
 </div>
 
      <Script src="../../../public/js/gsap.min.js" />   
-     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     </>
   )
 }
 
-export default Test
+export default Filter
 
 
 /* 

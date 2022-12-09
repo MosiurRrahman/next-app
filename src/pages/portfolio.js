@@ -1,6 +1,7 @@
 import React from "react";
 import Breadcrumb from "../components/breadcrumb/Breadcrumb";
-import Test from "../components/common/test";
+import Filter from "../components/common/filter";
+// import Test from "../components/common/test";
 import Layout from "../layout/Layout";
 
 function PortfolioPage() {
@@ -8,7 +9,7 @@ function PortfolioPage() {
     <>
       <Layout>
         <Breadcrumb pageName="Our Portfolio" pageTitle="Our Portfolio" />
-        <Test/>
+        <Filter/>
         </Layout>
     </>
   );
