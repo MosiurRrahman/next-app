@@ -1,29 +1,20 @@
-import React, { useEffect } from "react";
-
+import React, { useEffect, useState } from "react";
 function Preloader() {
   useEffect(() => {
-    counter_num();
+    const interval = setInterval(() => {
+      var c = parseInt(document.querySelector(".counter").textContent, 0);
+        document.querySelector('.counter').textContent = ++c;
+        if ( c >= 99 ) {
+          document.querySelector('.counter').classList.add("hide");
+          document.querySelector('.preloader').classList.add("active");
+          clearInterval(interval);
+        }
+    });
   });
   return (
     <div className="preloader">
-        <div className="counter">0</div>
+      <div className="counter">0</div>
     </div>
   );
 }
-
 export default Preloader;
-
-// function counter_num() {
-//   var count = setInterval(function () {
-//     var c = parseInt(document.querySelector(".counter").textContent, 0);
-//     console.log(c);
-//     document.querySelector('.counter').textContent = ++c;
-//     if (c === 100) {
-//       console.log(c);
-//       clearInterval(count);
-//       console.log(count);
-//       document.querySelector(".counter").classList.add("hide")
-//       document.querySelector(".preloader").classList.add("active");
-//     }
-//   });
-// }

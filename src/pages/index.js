@@ -11,7 +11,7 @@ import HomeTestimonial1 from "../components/testimonial/HomeTestimonial1";
 import HomeVideo1 from "../components/video/HomeVideo1";
 import Services1 from "../components/services/Services1";
 import Head from "next/head";
-// import Preloader from "../components/common/preloader";
+import Preloader from "../components/common/preloader";
 
 export default function Home() {
   return (
@@ -32,7 +32,7 @@ export default function Home() {
           sizes="20x20"
         />
       </Head>
-      {/* <Preloader/> */}
+      <Preloader/>
       <Header />
       <Banner1 />
       <About1 />
@@ -43,7 +43,7 @@ export default function Home() {
       <HomePricePlan />
       <HomeNews1 />
       <HomeBooking1 />
-      <InstagramFeed1 />
+      {/* <InstagramFeed1 /> */}
       <Footer />
     </>
   );
