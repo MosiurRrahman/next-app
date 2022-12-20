@@ -6,12 +6,12 @@ function Header() {
     <header className="header-area style-1 bg-color2">
     <div className="container-fluid d-flex justify-content-between align-items-center">
       <div className="header-logo">
-        <a href="index.html"><img alt="image" className="img-fluid" src="assets/images/header1-logo.svg" /></a>
+        <Link legacyBehavior href="/"><a><img alt="image" className="img-fluid" src="assets/images/header1-logo.svg" /></a></Link>
       </div>
       <div className="main-menu">
         <div className="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
           <div className="mobile-logo-wrap">
-            <a href="index.html"><img alt="image" src="assets/images/header1-logo.svg" /></a>
+            <Link href="/" legacyBehavior><a><img alt="image" src="assets/images/header1-logo.svg" /></a></Link>
           </div>
           <div className="menu-close-btn">
             <i className="bi bi-x-lg text-white" />
@@ -21,51 +21,51 @@ function Header() {
           <li className="menu-item-has-children active">
             <a href="#" className="drop-down">Home</a><i className="bi bi-plus dropdown-icon" />
             <ul className="sub-menu">
-              <li><a className="active" href="index.html">Home One</a></li>
-              <li><a href="index2.html">Home Two</a></li>
-              <li><a href="index3.html">Home Three</a></li>
+              <li><Link className="active" href="/">Home One</Link></li>
+              <li><Link href="/index2">Home Two</Link></li>
+              <li><Link href="/index3">Home Three</Link></li>
             </ul>
           </li>
-          <li><a href="about.html">About</a></li>
+          <li><Link href="/about">About</Link></li>
           <li className="menu-item-has-children">
             <a href="#">Menu</a><i className="bi bi-plus dropdown-icon" />
             <ul className="sub-menu">
-              <li><a href="menu1.html">Menu List-01</a></li>
-              <li><a href="menu2.html">Menu List-02</a></li>
-              <li><a href="3col-menu.html">3 Columns Menu</a></li>
+              <li><Link href="/menu1">Menu List-01</Link></li>
+              <li><Link href="/menu2">Menu List-02</Link></li>
+              <li><Link href="/3col-menu">3 Columns Menu</Link></li>
             </ul>
           </li>
           <li className="menu-item-has-children">
             <a href="#" className="drop-down">Pages</a><i className="bi bi-plus dropdown-icon" />
             <ul className="sub-menu">
-              <li><a href="category.html">Food Category</a></li>
-              <li><a href="reservation.html">Reservation</a></li>
-              <li><a href="2col-gallery.html">Gallery</a><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
+              <li><Link href="/category">Food Category</Link></li>
+              <li><Link href="/reservation">Reservation</Link></li>
+              <li><Link href="/2col-gallery">Gallery</Link><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
                 <i className="d-lg-none d-flex bi bi-chevron-down dropdown-icon" />
                 <ul className="sub-menu">
-                  <li><a href="2col-gallery.html">2 Columns Gallery </a></li>
-                  <li><a href="3col-gallery.html">3 Columns Gallery </a></li>
-                  <li><a href="mesonary-gallery.html">Mesonary Gallery</a></li>
+                  <li><Link href="/2col-gallery">2 Columns Gallery</Link></li>
+                  <li><Link href="/3col-gallery">3 Columns Gallery</Link></li>
+                  <li><Link href="/mesonary-gallery">Mesonary Gallery</Link></li>
                 </ul>
               </li>
-              <li><a href="chef-expertis.html">Chef</a><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
+              <li><a href="#">Chef</a><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
                 <i className="d-lg-none d-flex bi bi-chevron-down dropdown-icon" />
                 <ul className="sub-menu">
-                  <li><a href="chef-expertis.html">Chef Experties</a></li>
-                  <li><a href="chef-details.html">Chef Details</a></li>
+                  <li><Link href="/chef-expertis">Chef Experties</Link></li>
+                  <li><Link href="/chef-details">Chef Details</Link></li>
                 </ul>
               </li>
-              <li><a href="shop.html">Shop</a><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
+              <li><a href="#">Shop</a><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
                 <i className="d-lg-none d-flex bi bi-chevron-down dropdown-icon" />
                 <ul className="sub-menu">
-                  <li><a href="shop.html">Shop</a></li>
-                  <li><a href="shop-details.html">Shop Details</a></li>
-                  <li><a href="cart.html">Cart</a></li>
-                  <li><a href="check-out.html">Checkout</a></li>
+                  <li><Link href="/shop">Shop</Link></li>
+                  <li><Link href="/shop-details">Shop Details</Link></li>
+                  <li><Link href="/cart">Cart</Link></li>
+                  <li><Link href="/check-out">Checkout</Link></li>
                 </ul>
               </li>
-              <li><a href="faq.html">Faq</a></li>
-              <li><a href="error.html">Error</a></li>
+              <li><Link href="/faq">Faq</Link></li>
+              <li><Link href="/error">Error</Link></li>
             </ul>
           </li>
           <li className="menu-item-has-children">
