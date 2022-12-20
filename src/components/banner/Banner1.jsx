@@ -1,123 +1,116 @@
-import React from "react";
-import bannerData from "../../data/Banner1_data.json";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+import React from 'react'
+
 function Banner1() {
-  const bannerSlider = {
-    spaceBetween: 20,
-    loop: true,
-    slidesPerView: 2,
-    speed: 2000,
-    autoplay: {
-      delay: 1500,
-    },
-    keyboard: {
-      enabled: true,
-    },
-    pagination: {
-      el: ".swiper-pagination-h",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + 0 + (index + 1) + "</span>";
-      },
-    },
-  };
   return (
-    <div className="horo-style-1">
-      <div className="social-area">
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/">Facebook</a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/">instagram</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/">Linked in</a>
-          </li>
-        </ul>
-      </div>
-      <div className="container-fluid">
-        <div className="row align-items-center">
-          <div className="col-lg-6 d-flex justify-content-center">
-            <div className="banner-left-img">
-              <img
-                className="img-fluid "
-                src="assets/images/bg/banner-left-img.png"
-                alt="image"
-              />
+    <div className="banner-section1">
+  <div className="banner-vector">
+    <img className="vector-top" src="assets/images/icon/shape2.svg" alt="" />
+    <img className="vector-btm" src="assets/images/icon/shape1.svg" alt="" />
+  </div>
+  <div className="swiper banner1-slider">
+    <div className="swiper-wrapper">
+      <div className="swiper-slide">
+        <div className="banner-wrapper d-flex align-items-center justify-content-between">
+          <div className="social-area">
+            <ul className="m-0 p-0 d-flex align-items-center">
+              <li><a href="https://www.facebook.com/">Facebook</a></li>
+              <li><a href="https://twitter.com/">Twitter</a></li>
+              <li><a href="https://www.instagram.com/">Instagram</a></li>
+              <li><a href="https://www.skype.com/">Skype</a></li>
+            </ul>
+          </div>
+          <div className="banner-left-img">
+            <img src="assets/images/icon/union-left.svg" alt="union-left" />
+            <div className="food-img">
+              <img className="img-fluid" src="assets/images/bg/banner-img-1.png" alt="banner-img-1" />
             </div>
           </div>
-          <div className="col-lg-6">
-            <div className="banner-slider">
-              <Swiper
-                {...bannerSlider}
-                className="swiper banner-slider1 swiper-initialized swiper-horizontal swiper-pointer-events"
-              >
-                <div
-                  className="swiper-wrapper"
-                  id="swiper-wrapper-cdb357a0f7c6d5ab"
-                  aria-live="off"
-                  style={{
-                    transform: "translate3d(-2670px, 0px, 0px)",
-                    transitionDuration: "0ms",
-                  }}
-                >
-                  {bannerData.map((item) => {
-                    return (
-                      <SwiperSlide
-                        key={item.id}
-                        className="swiper-slide swiper-slide-duplicate-next"
-                        style={{ width: "514px", marginRight: "20px" }}
-                        role="group"
-                        aria-label="1 / 4"
-                      >
-                        <div className="slider-cetagory">
-                          <h4>{item.category}</h4>
-                        </div>
-                        <img
-                          className="img-fluid"
-                          src={item.image}
-                          alt="image"
-                        />
-                      </SwiperSlide>
-                    );
-                  })}
-                </div>
-                <div className="swiper-pagination swiper-pagination-h swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
-                  <span className="swiper-pagination-bullet" tabIndex={0}>
-                    01
-                  </span>
-                  <span className="swiper-pagination-bullet" tabIndex={0}>
-                    02
-                  </span>
-                  <span className="swiper-pagination-bullet" tabIndex={0}>
-                    03
-                  </span>
-                  <span
-                    className="swiper-pagination-bullet swiper-pagination-bullet-active"
-                    tabIndex={0}
-                  >
-                    04
-                  </span>
-                </div>
-                <span
-                  className="swiper-notification"
-                  aria-live="assertive"
-                  aria-atomic="true"
-                />
-              </Swiper>
+          <div className="banner-content">
+            <span><img className="left-vec" src="assets/images/icon/sub-title-vec.svg" alt="sub-title-vec" />Welcome To Restho<img className="right-vec" src="assets/images/icon/sub-title-vec.svg" alt="sub-title-vec" /></span>
+            <h1>Find Your Best 
+              Healthy &amp; Tasty Food.</h1>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page.</p>
+            <a className="primary-btn2" href="about.html"><i className="bi bi-arrow-up-right-circle" />Discover More</a>
+          </div>
+          <div className="banner-right-img">
+            <img src="assets/images/icon/union-right.svg" alt="union-right" />
+            <div className="food-img">
+              <img className="img-fluid" src="assets/images/bg/banner-img-2.png" alt="banner-img-2" />
             </div>
-            <div className="banner-right-content">
-              <h1>Louisa Jacobson</h1>
-              <h5>Professional Photographer</h5>
+          </div>
+        </div>
+      </div>
+      <div className="swiper-slide">
+        <div className="banner-wrapper d-flex align-items-center justify-content-between">
+          <div className="social-area">
+            <ul className="m-0 p-0 d-flex align-items-center">
+              <li><a href="https://www.facebook.com/">Facebook</a></li>
+              <li><a href="https://twitter.com/">Twitter</a></li>
+              <li><a href="https://www.instagram.com/">Instagram</a></li>
+              <li><a href="https://www.skype.com/">Skype</a></li>
+            </ul>
+          </div>
+          <div className="banner-left-img">
+            <img src="assets/images/icon/union-left.svg" alt="union-left" />
+            <div className="food-img">
+              <img className="img-fluid" src="assets/images/bg/banner-img-3.png" alt="banner-img-3" />
+            </div>
+          </div>
+          <div className="banner-content">
+            <span><img className="left-vec" src="assets/images/icon/sub-title-vec.svg" alt="sub-title-vec" />Welcome To Restho<img className="right-vec" src="assets/images/icon/sub-title-vec.svg" alt="sub-title-vec" /></span>
+            <h1>Find Your Best 
+              Healthy &amp; Tasty Food.</h1>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page.</p>
+            <a className="primary-btn2" href="about.html"><i className="bi bi-arrow-up-right-circle" />Discover More</a>
+          </div>
+          <div className="banner-right-img">
+            <img src="assets/images/icon/union-right.svg" alt="union-right" />
+            <div className="food-img">
+              <img className="img-fluid" src="assets/images/bg/banner-img-4.png" alt="banner-img-4" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="swiper-slide">
+        <div className="banner-wrapper d-flex align-items-center justify-content-between">
+          <div className="social-area">
+            <ul className="m-0 p-0 d-flex align-items-center">
+              <li><a href="https://www.facebook.com/">Facebook</a></li>
+              <li><a href="https://twitter.com/">Twitter</a></li>
+              <li><a href="https://www.instagram.com/">Instagram</a></li>
+              <li><a href="https://www.skype.com/">Skype</a></li>
+            </ul>
+          </div>
+          <div className="banner-left-img">
+            <img src="assets/images/icon/union-left.svg" alt="union-left" />
+            <div className="food-img">
+              <img className="img-fluid" src="assets/images/bg/banner-img-5.png" alt="banner-img-5" />
+            </div>
+          </div>
+          <div className="banner-content">
+            <span><img className="left-vec" src="assets/images/icon/sub-title-vec.svg" alt="sub-title-vec" />Welcome To Restho<img className="right-vec" src="assets/images/icon/sub-title-vec.svg" alt="sub-title-vec" /></span>
+            <h1>Find Your Best 
+              Healthy &amp; Tasty Food.</h1>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page.</p>
+            <a className="primary-btn2" href="about.html"><i className="bi bi-arrow-up-right-circle" />Discover More</a>
+          </div>
+          <div className="banner-right-img">
+            <img src="assets/images/icon/union-right.svg" alt="union-right" />
+            <div className="food-img">
+              <img className="img-fluid" src="assets/images/bg/banner-img-6.png" alt="banner-img-5" />
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+    <div className="swiper-btn d-flex justify-content-between align-items-center">
+      <div className="prev-btn-1"><i className="bi bi-chevron-left" /></div>
+      <div className="next-btn-1"><i className="bi bi-chevron-right" /></div>
+    </div>
+  </div>
+</div>
+
+  )
 }
 
-export default Banner1;
+export default Banner1

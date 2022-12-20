@@ -1,85 +1,77 @@
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import SidebarLeftArea from "../components/blog/SidebarLeftArea";
-import WedgetBlogAuthor from "../components/blog/WedgetBlogAuthor";
-import WidgetBlogCategory from "../components/blog/WidgetBlogCategory";
-import WidgetBlogRecentPost from "../components/blog/WidgetBlogRecentPost";
-import WidgetSearch from "../components/blog/WidgetSearch";
-import WidgetSocial from "../components/blog/WidgetSocial";
-import Widgettag from "../components/blog/Widgettag";
-import Breadcrumb from "../components/breadcrumb/Breadcrumb";
+import React from "react";
+import BannerBlogWidget from "../components/blog/BannerBlogWidget";
+import CategoryBlogWidget from "../components/blog/CategoryBlogWidget";
+import RecentPostBlogWidget from "../components/blog/RecentPostBlogWidget";
+import SearchBlogWidget from "../components/blog/SearchBlogWidget";
+import TagBlogWidget from "../components/blog/TagBlogWidget";
+import Breadcrumb from "../components/common/Breadcrumb";
 import Layout from "../layout/Layout";
-// import ModalVideo from "react-modal-video";
-// import "react-modal-video/css/modal-video.css";
-function BlogStandardPage() {
-  useEffect(() => {
-    console.clear();
-  }, []);
-  const [isOpen, setOpen] = useState(false);
+import standardData from '../data/blog_standard_data.json';
+function BlogGrid1Page() {
   return (
     <>
       <Layout>
         <Breadcrumb pageName="Blog Standard" pageTitle="Blog Standard" />
-        <div className="inner-blog pt-120 mb-120">
-          <div className="container">
-            <div className="row g-lg-5 g-4 justify-content-center">
-              <div className="col-lg-8">
-                <SidebarLeftArea />
-                <nav aria-label="Page navigation example">
-                  <ul className="pagination justify-content-center">
-                    <li className="page-item">
-                      <Link className="page-link" href="#">
-                        <i className="bi bi-arrow-left" /> PREV
-                      </Link>
-                    </li>
-                    <li className="page-item">
-                      <Link className="page-link" href="#">
-                        01
-                      </Link>
-                    </li>
-                    <li className="page-item">
-                      <Link className="page-link active" href="#">
-                        02
-                      </Link>
-                    </li>
-                    <li className="page-item">
-                      <Link className="page-link" href="#">
-                        03
-                      </Link>
-                    </li>
-                    <li className="page-item">
-                      <Link className="page-link" href="#">
-                        NEXT <i className="bi bi-arrow-right" />
-                      </Link>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-              <div className="col-lg-4 col-md-8">
-                <div className="widget-area">
-                  <WidgetSearch />
-                  <WedgetBlogAuthor />
-                  <WidgetBlogCategory />
-                  <WidgetBlogRecentPost />
-                  <WidgetSocial />
-                  <Widgettag />
-                </div>
-              </div>
+        <div className="blog-standard-pages pt-120 mb-120">
+  <div className="container">
+    <div className="row g-lg-5 gy-5">
+     
+      <div className="col-lg-8">
+         {
+      standardData.map((item)=>{
+        const {id, image, date, title, description, numberOfComment,author} = item;
+        return(
+          <div key={id} className="news-wrap2">
+          <div className="post-thum">
+            <img className="img-fluid" src={image} alt="blog-st-01" />
+            <div className="batch">
+              <a href="blog-grid.html">{date}</a>
             </div>
           </div>
-          {/* {typeof window !== "undefined" && (
-        <ModalVideo
-          channel="vimeo"
-          autoplay
-          isOpen={isOpen}
-          videoId="127203262"
-          onClose={() => setOpen(false)}
-        />
-      )} */}
+          <div className="news-content">
+            <div className="news-meta">
+              <div className="publisher">
+                <a href="blog-grid.html"><img src="assets/images/icon/User.svg" alt="" /> By {author}</a>
+              </div>
+              <div className="comment">
+                <a href="blog-grid.html"><img src="assets/images/icon/Comment.svg" alt="" /> Comment({numberOfComment})</a>
+              </div>
+            </div>
+            <h3><a href="blog-details.html">{title}</a></h3>
+            <p>{description}</p>
+          </div>
         </div>
-      </Layout>
+        )
+      })
+      }
+      
+        <div className="paginations-area">
+          <nav aria-label="Page navigation example">
+            <ul className="pagination">
+              {/* <li class="page-item"><a class="page-link" href="#"><i class="bi bi-arrow-left"></i></a></li> */}
+              <li className="page-item"><a className="page-link" href="#">01</a></li>
+              <li className="page-item"><a className="page-link" href="#">02</a></li>
+              <li className="page-item"><a className="page-link" href="#">03</a></li>
+              <li className="page-item"><a className="page-link" href="#"><i className="bi bi-arrow-right" /></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div className="col-lg-4">
+        <div className="widget-area">
+          <BannerBlogWidget/>
+         <SearchBlogWidget/>
+          <RecentPostBlogWidget/>
+          <CategoryBlogWidget/>
+         <TagBlogWidget/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ </Layout>
     </>
   );
 }
 
-export default BlogStandardPage;
+export default BlogGrid1Page;
