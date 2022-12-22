@@ -23,7 +23,7 @@ function BlogGrid1Page() {
       <div className="col-lg-4">
         <div className="widget-area">
           <BannerBlogWidget/>
-         <SearchBlogWidget/>
+          <SearchBlogWidget/>
           <RecentPostBlogWidget/>
           <CategoryBlogWidget/>
          <TagBlogWidget/>

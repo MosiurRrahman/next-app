@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 function CategoryBlogWidget() {
+  const currentRoute = useRouter().pathname
   return (
     <div className="single-widgets widget_egns_categoris">
       <div className="widget-title">
@@ -9,7 +11,7 @@ function CategoryBlogWidget() {
       </div>
       <ul className="wp-block-categoris-cloud">
         <li>
-          <Link legacyBehavior href="/blog-grid">
+          <Link legacyBehavior href={currentRoute === "/shop"?"/shop":currentRoute ==="/blog-standard"? "/blog-standard":"#"}>
             <a>
               <span className="tag-name">Food</span>{" "}
               <img

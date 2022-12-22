@@ -16,7 +16,7 @@ function Items({ currentItems }) {
           <div className="food-img">
             <img className="img-fluid" src={item.image} alt="h2-food-item-1" />
             <div className="cart-icon">
-              <a href="cart.html"><i className="bi bi-cart-plus" /></a>
+              <Link href="/cart" legacyBehavior><a><i className="bi bi-cart-plus" /></a></Link>
             </div>
             <div className="pric-tag">
               <span>${item.price}</span>
@@ -30,7 +30,7 @@ function Items({ currentItems }) {
               <li><i className="bi bi-star-fill" /></li>
               <li><i className="bi bi-star-fill" /></li>
             </ul>
-            <h3><a href="shop-details.html">{item.title}</a></h3>
+            <h3><Link href="/shop-details">{item.title}</Link></h3>
           </div>
         </div>
       </div>
