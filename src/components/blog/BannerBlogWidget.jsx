@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function BannerBlogWidget() {
@@ -7,8 +8,8 @@ function BannerBlogWidget() {
     <div className="overlay d-flex align-items-center justify-content-center">
       <div className="items-content text-center">
         <span><img className="left-vec" src="assets/images/icon/shape-white1.svg" alt="sub-title-vec" />Reserve<img className="right-vec" src="assets/images/icon/shape-white1.svg" alt="sub-title-vec" /></span>
-        <h3><a href="reservation.html">For Your Private Event</a></h3>
-        <a className="primary-btn btn-sm" href="reservation.html">Book Table</a>
+        <h3><Link href="/reservation">For Your Private Event</Link></h3>
+        <Link className="primary-btn btn-sm" href="/reservation">Book Table</Link>
       </div>
     </div>
   </div>
