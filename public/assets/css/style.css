@@ -65,6 +65,56 @@ Template Name: Restho - Resturent HTML Template
   font-family: var(--font-cormorant);
 }
 
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url(../fonts/CormorantGaramond-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url(../fonts/CormorantGaramond-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url(../fonts/CormorantGaramond-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url(../fonts/CormorantGaramond-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url(../fonts/CormorantGaramond-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Jost";
+  src: url(../fonts/Jost-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Jost";
+  src: url(../fonts/Jost-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Jost";
+  src: url(../fonts/Jost-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Jost";
+  src: url(../fonts/Jost-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Jost";
+  src: url(../fonts/Jost-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
 /*================================================
 1. Mixins Css
 =================================================*/
