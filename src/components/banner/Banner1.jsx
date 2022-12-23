@@ -1,15 +1,37 @@
 import React from 'react'
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, {
+  Autoplay,
+  EffectFade,
+  Navigation,
+} from "swiper";
+import Link from 'next/link';
+SwiperCore.use([Navigation, Autoplay, EffectFade]);
 function Banner1() {
+  const bannerSlider = {
+    slidesPerView: 1,
+    speed: 1200,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    autoplay: true,
+    loop: true,
+    navigation: {
+      nextEl: ".next-btn-1",
+      prevEl: ".prev-btn-1",
+    },
+    pagination: false,
+  }
   return (
     <div className="banner-section1">
   <div className="banner-vector">
     <img className="vector-top" src="assets/images/icon/shape2.svg" alt="" />
     <img className="vector-btm" src="assets/images/icon/shape1.svg" alt="" />
   </div>
-  <div className="swiper banner1-slider">
+  <Swiper {...bannerSlider} className="swiper banner1-slider">
     <div className="swiper-wrapper">
-      <div className="swiper-slide">
+      <SwiperSlide className="swiper-slide">
         <div className="banner-wrapper d-flex align-items-center justify-content-between">
           <div className="social-area">
             <ul className="m-0 p-0 d-flex align-items-center">
@@ -30,7 +52,7 @@ function Banner1() {
             <h1>Find Your Best 
               Healthy &amp; Tasty Food.</h1>
             <p>It is a long established fact that a reader will be distracted by the readable content of a page.</p>
-            <a className="primary-btn2" href="about.html"><i className="bi bi-arrow-up-right-circle" />Discover More</a>
+            <Link legacyBehavior  href="/about"><a  className="primary-btn2"><i className="bi bi-arrow-up-right-circle" />Discover More</a></Link>
           </div>
           <div className="banner-right-img">
             <img src="assets/images/icon/union-right.svg" alt="union-right" />
@@ -39,8 +61,8 @@ function Banner1() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="swiper-slide">
+      </SwiperSlide>
+      <SwiperSlide className="swiper-slide">
         <div className="banner-wrapper d-flex align-items-center justify-content-between">
           <div className="social-area">
             <ul className="m-0 p-0 d-flex align-items-center">
@@ -61,7 +83,7 @@ function Banner1() {
             <h1>Find Your Best 
               Healthy &amp; Tasty Food.</h1>
             <p>It is a long established fact that a reader will be distracted by the readable content of a page.</p>
-            <a className="primary-btn2" href="about.html"><i className="bi bi-arrow-up-right-circle" />Discover More</a>
+            <Link legacyBehavior href="/about"><a  className="primary-btn2"><i className="bi bi-arrow-up-right-circle" />Discover More</a></Link>
           </div>
           <div className="banner-right-img">
             <img src="assets/images/icon/union-right.svg" alt="union-right" />
@@ -70,8 +92,8 @@ function Banner1() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="swiper-slide">
+      </SwiperSlide>
+      <SwiperSlide className="swiper-slide">
         <div className="banner-wrapper d-flex align-items-center justify-content-between">
           <div className="social-area">
             <ul className="m-0 p-0 d-flex align-items-center">
@@ -92,7 +114,7 @@ function Banner1() {
             <h1>Find Your Best 
               Healthy &amp; Tasty Food.</h1>
             <p>It is a long established fact that a reader will be distracted by the readable content of a page.</p>
-            <a className="primary-btn2" href="about.html"><i className="bi bi-arrow-up-right-circle" />Discover More</a>
+            <Link legacyBehavior href="/about"><a  className="primary-btn2"><i className="bi bi-arrow-up-right-circle" />Discover More</a></Link>
           </div>
           <div className="banner-right-img">
             <img src="assets/images/icon/union-right.svg" alt="union-right" />
@@ -101,13 +123,13 @@ function Banner1() {
             </div>
           </div>
         </div>
-      </div>
+      </SwiperSlide>
     </div>
-    <div className="swiper-btn d-flex justify-content-between align-items-center">
-      <div className="prev-btn-1"><i className="bi bi-chevron-left" /></div>
-      <div className="next-btn-1"><i className="bi bi-chevron-right" /></div>
+    <div className="swiper-btn d-flex justify-content-between align-items-center" >
+      <div style={{cursor:"pointer"}} className="prev-btn-1"><i className="bi bi-chevron-left" /></div>
+      <div style={{cursor:"pointer"}} className="next-btn-1"><i className="bi bi-chevron-right" /></div>
     </div>
-  </div>
+  </Swiper>
 </div>
 
   )

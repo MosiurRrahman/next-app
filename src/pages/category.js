@@ -22,7 +22,6 @@ function Category() {
                 <ul className="nav nav-tabs" id="myTab" role="tablist">
                   {
                     [...categoryCard].map( ( key, index ) => {
-                   
                       return(
                         <li key={key[1]} className="nav-item" role="presentation">
                           <button className={index===0?"active nav-link":"nav-link"} id="vegetarian-tab" data-bs-toggle="tab" data-bs-target={`#${ key[1]}`} type="button" role="tab" aria-controls={`#${ key[1]}`} aria-selected="false"><span>{key[0]}</span><span><i className="bi bi-arrow-right" /></span></button>
@@ -39,7 +38,7 @@ function Category() {
                   [...categoryCard].map( ( key,index ) => {
                     console.log(key);
                     return(
-                      <div key={key[1]} className={index === 0 ? "active tab-pane":"tab-pane"} id={`${ key[1]}`} role="tabpanel" aria-labelledby="seafood-tab">
+                      <div key={key[1]} className={index === 0 ? "active show fade tab-pane":"tab-pane show fade"} id={`${ key[1]}`} role="tabpanel" aria-labelledby="seafood-tab">
                       <div className="food-category-wrap">
                         <div className="row g-4">
                           <div className="divider" />

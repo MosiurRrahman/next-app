@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Banner3() {
@@ -28,7 +29,7 @@ function Banner3() {
         <span> <img className="left-vec" src="assets/images/icon/h3-sub-title-vec.svg" alt="" /> Welcome To Restho <img className="right-vec" src="assets/images/icon/h3-sub-title-vec.svg" alt="" /></span>
         <h1>Find Your Best 
           Healthy &amp; Tasty Food.</h1>
-        <a className="primary-btn7 btn-md2" href="about.html"><i className="bi bi-arrow-up-right-circle" /> Discover More</a>
+        <Link legacyBehavior  href="/about"><a className="primary-btn7 btn-md2"><i className="bi bi-arrow-up-right-circle" /> Discover More</a></Link>
       </div>
     </div>
   </div>
