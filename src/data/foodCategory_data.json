@@ -163,7 +163,7 @@
   },
   {
     "id": 19,
-    "image": "assets/images/bg/Meat-11.png",
+    "image": "assets/images/bg/meat-11.png",
     "title": "Chicken Grill",
     "description": "Complete account of the system.",
     "price": "90",
@@ -172,7 +172,7 @@
   },
   {
     "id": 20,
-    "image": "assets/images/bg/Meat-12.png",
+    "image": "assets/images/bg/meat-12.png",
     "title": "CBeef BBQ",
     "description": "Complete account of the system.",
     "price": "90",
@@ -181,7 +181,7 @@
   },
   {
     "id": 21,
-    "image": "assets/images/bg/Meat-13.png",
+    "image": "assets/images/bg/meat-13.png",
     "title": "Spicy Beef",
     "description": "Complete account of the system.",
     "price": "90",
@@ -190,7 +190,7 @@
   },
   {
     "id": 22,
-    "image": "assets/images/bg/Meat-14.png",
+    "image": "assets/images/bg/meat-14.png",
     "title": "Kebab Item",
     "description": "Complete account of the system.",
     "price": "90",
@@ -199,7 +199,7 @@
   },
   {
     "id": 23,
-    "image": "assets/images/bg/Meat-15.png",
+    "image": "assets/images/bg/meat-15.png",
     "title": "Naga Chicken",
     "description": "Complete account of the system.",
     "price": "90",
@@ -208,7 +208,7 @@
   },
   {
     "id": 24,
-    "image": "assets/images/bg/Meat-16.png",
+    "image": "assets/images/bg/meat-16.png",
     "title": "Chicken Wings",
     "description": "Complete account of the system.",
     "price": "90",
@@ -217,7 +217,7 @@
   },
   {
     "id": 25,
-    "image": "assets/images/bg/Meat-16.png",
+    "image": "assets/images/bg/meat-16.png",
     "title": "Chicken Wings",
     "description": "Complete account of the system.",
     "price": "90",
