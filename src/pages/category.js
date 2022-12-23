@@ -48,7 +48,7 @@ function Category() {
                                 <div key={value.id} className="col-lg-6 col-md-6">
                                   <div className="category-item">
                                     <div className="icon">
-                                      <img className="img-fluid" src={ value.image } alt="" />
+                                      <img className="img-fluid" src={ value.image} alt="" />
                                     </div>
                                     <div className="category-content">
                                       <h4><a href="shop-details.html">{ value.title } </a></h4>
