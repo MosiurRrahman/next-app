@@ -214,5 +214,133 @@
     "price": "90",
     "category": "Meat",
     "categorySlug": "meat-food"
+  },
+  {
+    "id": 25,
+    "image": "assets/images/bg/Meat-16.png",
+    "title": "Chicken Wings",
+    "description": "Complete account of the system.",
+    "price": "90",
+    "category": "Meat",
+    "categorySlug": "meat-food"
+  },
+  {
+    "id": 26,
+    "image": "assets/images/bg/meat-11.png",
+    "title": "Chicken Grill",
+    "description": "Complete account of the system.",
+    "price": "90",
+    "category": "Italian Food",
+    "categorySlug": "italian-food"
+  }
+  ,
+  {
+    "id": 27,
+    "image": "assets/images/bg/meat-12.png",
+    "title": "Beef BBQ",
+    "description": "Complete account of the system.",
+    "price": "20",
+    "category": "Italian Food",
+    "categorySlug": "italian-food"
+  }
+  ,
+  {
+    "id": 28,
+    "image": "assets/images/bg/meat-13.png",
+    "title": "Spicy Beef",
+    "description": "Complete account of the system.",
+    "price": "25",
+    "category": "Italian Food",
+    "categorySlug": "italian-food"
+  }
+  ,
+  {
+    "id": 29,
+    "image": "assets/images/bg/meat-14.png",
+    "title": "Kebab Item",
+    "description": "Complete account of the system.",
+    "price": "35",
+    "category": "Italian Food",
+    "categorySlug": "italian-food"
+  }
+  ,
+  {
+    "id": 30,
+    "image": "assets/images/bg/meat-15.png",
+    "title": "Naga Chicken",
+    "description": "Complete account of the system.",
+    "price": "33",
+    "category": "Italian Food",
+    "categorySlug": "italian-food"
+  }
+  ,
+  {
+    "id": 31,
+    "image": "assets/images/bg/meat-16.png",
+    "title": "Naga Chicken",
+    "description": " Chicken Wings",
+    "price": "43",
+    "category": "Italian Food",
+    "categorySlug": "italian-food"
+  }
+  ,
+  {
+    "id": 32,
+    "image": "assets/images/bg/fast-food-11.png",
+    "title": "Mixed Vegetable Salad",
+    "description": "Complete account of the system.",
+    "price": "43",
+    "category": "Fast Food",
+    "categorySlug": "fast-food"
+  }
+  ,
+  {
+    "id": 33,
+    "image": "assets/images/bg/fast-food-12.png",
+    "title": "Naga Chicken",
+    "description": "Complete account of the system.",
+    "price": "43",
+    "category": "Fast Food",
+    "categorySlug": "fast-food"
+  }
+  ,
+  {
+    "id": 34,
+    "image": "assets/images/bg/fast-food-13.png",
+    "title": "Greek Salad",
+    "description": "Complete account of the system.",
+    "price": "13",
+    "category": "Fast Food",
+    "categorySlug": "fast-food"
+  }
+  ,
+  {
+    "id": 35,
+    "image": "assets/images/bg/fast-food-14.png",
+    "title": "Summer Corn",
+    "description": "Complete account of the system.",
+    "price": "33",
+    "category": "Fast Food",
+    "categorySlug": "fast-food"
+  }
+  ,
+  {
+    "id": 36,
+    "image": "assets/images/bg/fast-food-15.png",
+    "title": "Broccoli Pasta Item",
+    "description": "Complete account of the system.",
+    "price": "15",
+    "category": "Fast Food",
+    "categorySlug": "fast-food"
+  }
+  ,
+  {
+    "id": 37,
+    "image": "assets/images/bg/fast-food-16.png",
+    "title": "Taco Salad Item",
+    "description": "Complete account of the system.",
+    "price": "15",
+    "category": "Fast Food",
+    "categorySlug": "fast-food"
   }
 ]
