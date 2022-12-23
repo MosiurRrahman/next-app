@@ -36,7 +36,6 @@ function Category() {
               <div className="tab-content">
                 {
                   [...categoryCard].map( ( key,index ) => {
-                    console.log(key);
                     return(
                       <div key={key[1]} className={index === 0 ? "active show fade tab-pane":"tab-pane show fade"} id={`${ key[1]}`} role="tabpanel" aria-labelledby="seafood-tab">
                       <div className="food-category-wrap">

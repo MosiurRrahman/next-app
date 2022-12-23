@@ -1,6 +1,56 @@
 import React from 'react'
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, {
+  Autoplay,
+  EffectFade,
+  Navigation,
+} from "swiper";
+import Link from 'next/link';
+SwiperCore.use([Navigation, Autoplay, EffectFade]);
 function NewItem2() {
+  const newItemslider = {
+    slidesPerView: 4,
+  spaceBetween: 25,
+  loop: true,
+  speed:1500,
+  autoplay: {
+    delay: 2000,
+  },
+  navigation: {
+    nextEl: ".next-btn-3",
+    prevEl: ".prev-btn-3",
+  },
+
+  breakpoints: {
+    280:{
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    480:{
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    768:{
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    992:{
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1200:{
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1400:{
+      slidesPerView:3,
+      spaceBetween: 15,
+    },
+    1600:{
+      slidesPerView: 3
+    },
+  }
+  }
   return (
     <div className="h2-reguler-item mb-120">
   <div className="container">
@@ -14,9 +64,9 @@ function NewItem2() {
       </div>
     </div>
     <div className="row position-relative">
-      <div className="swiper h2-reguler-items-slider">
+      <Swiper {...newItemslider} className="swiper h2-reguler-items-slider">
         <div className="swiper-wrapper">
-          <div className="swiper-slide">
+          <SwiperSlide className="swiper-slide">
             <div className="reguler-items-wrap">
               <div className="item-img">
                 <img className="img-fluid" src="assets/images/bg/h2-regular-items11.png" alt="" />
@@ -25,12 +75,12 @@ function NewItem2() {
                 </div>
               </div>
               <div className="reguler-items-content">
-                <h3><a href="shop-details.html">Prawn Fried</a></h3>
+                <h3><Link href="/shop-details">Prawn Fried</Link></h3>
                 <p>It is a long established fact that a reader will be distracted.</p>
               </div>
             </div>
-          </div>
-          <div className="swiper-slide">
+          </SwiperSlide>
+          <SwiperSlide className="swiper-slide">
             <div className="reguler-items-wrap">
               <div className="item-img">
                 <img className="img-fluid" src="assets/images/bg/h2-regular-items12.png" alt="" />
@@ -39,12 +89,12 @@ function NewItem2() {
                 </div>
               </div>
               <div className="reguler-items-content">
-                <h3><a href="shop-details.html">Prawn with Noodles</a></h3>
+                <h3><Link href="/shop-details">Prawn with Noodles</Link></h3>
                 <p>It is a long established fact that a reader will be distracted.</p>
               </div>
             </div>
-          </div>
-          <div className="swiper-slide">
+          </SwiperSlide>
+          <SwiperSlide className="swiper-slide">
             <div className="reguler-items-wrap">
               <div className="item-img">
                 <img className="img-fluid" src="assets/images/bg/h2-regular-items13.png" alt="" />
@@ -53,18 +103,18 @@ function NewItem2() {
                 </div>
               </div>
               <div className="reguler-items-content">
-                <h3><a href="shop-details.html">Soup with Egg</a></h3>
+                <h3><Link href="/shop-details">Soup with Egg</Link></h3>
                 <p>It is a long established fact that a reader will be distracted.</p>
               </div>
             </div>
-          </div>
+          </SwiperSlide>
         </div>
-      </div>
+      </Swiper>
       <div className="slider-btn">
-        <div className="prev-btn-3">
+        <div className="prev-btn-3" style={{cursor:"pointer"}}>
           <i className="bi bi-arrow-left-short" />
         </div>
-        <div className="next-btn-3">
+        <div className="next-btn-3" style={{cursor:"pointer"}}>
           <i className="bi bi-arrow-right-short" />
         </div>
       </div>

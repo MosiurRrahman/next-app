@@ -1,8 +1,69 @@
-import React from 'react'
+import React, { useState } from 'react'
+// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay, Navigation, Pagination ,EffectFade} from "swiper";
-SwiperCore.use([Navigation, Pagination, Autoplay,EffectFade]);
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+
+
+// import required modules
+import { FreeMode, Navigation, Thumbs } from "swiper";
 function NewItem1() {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const smImgSlider = {
+    loop: true,
+  spaceBetween: 22,
+  slidesPerView: 6,
+  freeMode: true,
+  // centeredSlides: true,
+  watchSlidesProgress: true,
+  navigation: {
+    nextEl: ".next-btn-2",
+    prevEl: ".prev-btn-2",
+  },
+
+  breakpoints: {
+    280:{
+      slidesPerView: 3,
+      spaceBetween: 15
+    },
+    480:{
+      slidesPerView: 4
+    },
+    768:{
+      slidesPerView: 5
+    },
+    992:{
+      slidesPerView: 6
+    },
+    1200:{
+      slidesPerView: 6
+    },
+    1400:{
+      slidesPerView:6
+    },
+    1600:{
+      slidesPerView: 6
+    },
+  }
+  }
+  const bigImgSlider = {
+    slidesPerView: 1,
+  speed: 1200,
+  // spaceBetween: 15,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  autoplay: true,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination-g",
+  },
+  }
   return (
     <div className="new-items1 mb-120">
   <div className="container">
@@ -28,7 +89,10 @@ function NewItem1() {
         </div>
       </div>
       <div className="col-lg-4 col-md-6 col-sm-10 order-lg-2 order-3">
-        <Swiper className="swiper new-item-big-slider">
+        <Swiper loop={true}
+      {... bigImgSlider}
+        thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
+        modules={[FreeMode, Navigation, Thumbs]} className="swiper new-item-big-slider">
           <div className="swiper-wrapper">
             <SwiperSlide className="swiper-slide">
               <div className="new-items-wrap2">
@@ -127,7 +191,8 @@ function NewItem1() {
       </div>
     </div>
     <div className="row position-relative">
-      <Swiper className="swiper new-item-sm-slider">
+      <Swiper  onSwiper={setThumbsSwiper}
+        {...smImgSlider} className="swiper new-item-sm-slider">
         <div className="swiper-wrapper">
           <SwiperSlide className="swiper-slide">
             <div className="new-items-sm-img">
