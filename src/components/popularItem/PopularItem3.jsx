@@ -1,6 +1,51 @@
 import React from 'react'
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay, Navigation, Pagination ,EffectFade} from "swiper";
+SwiperCore.use([Navigation, Pagination, Autoplay,EffectFade]);
 function PopularItem3() {
+  const popularItemsSlider = {
+    slidesPerView: 4,
+  spaceBetween: 55,
+  loop: true,
+  speed:1500,
+  autoplay: {
+    delay: 2000,
+  },
+  navigation: {
+    nextEl: ".next-btn-3",
+    prevEl: ".prev-btn-3",
+  },
+
+  breakpoints: {
+    280:{
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    480:{
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    768:{
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    992:{
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1200:{
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1400:{
+      slidesPerView:3,
+      spaceBetween: 15,
+    },
+    1600:{
+      slidesPerView: 3
+    },
+  }
+  }
   return (
     <div className="populer-food-area mb-120">
       <div className="container">
@@ -73,9 +118,9 @@ function PopularItem3() {
           </div>
         </div>
         <div className="row justify-content-center position-relative">
-          <div className="swiper h3-popular-food-slider">
+          <Swiper {...popularItemsSlider} className="swiper h3-popular-food-slider">
             <div className="swiper-wrapper">
-              <div className="swiper-slide">
+              <SwiperSlide className="swiper-slide">
                 <div className="h3-popular-food-card">
                   <div className="food-img">
                     <img className="img-fluid" src="assets/images/bg/h3-popular-items-1.png" alt="" />
@@ -91,8 +136,8 @@ function PopularItem3() {
                     <p>It’s so tasty and delicious for creating our customer, get This.</p>
                   </div>
                 </div>
-              </div> 
-              <div className="swiper-slide">
+              </SwiperSlide> 
+              <SwiperSlide className="swiper-slide">
                 <div className="h3-popular-food-card">
                   <div className="food-img">
                     <img className="img-fluid" src="assets/images/bg/h3-popular-items-2.png" alt="" />
@@ -108,8 +153,8 @@ function PopularItem3() {
                     <p>It’s so tasty and delicious for creating our customer, get This.</p>
                   </div>
                 </div>
-              </div> 
-              <div className="swiper-slide">
+              </SwiperSlide> 
+              <SwiperSlide className="swiper-slide">
                 <div className="h3-popular-food-card">
                   <div className="food-img">
                     <img className="img-fluid" src="assets/images/bg/h3-popular-items-3.png" alt="" />
@@ -125,9 +170,9 @@ function PopularItem3() {
                     <p>It’s so tasty and delicious for creating our customer, get This.</p>
                   </div>
                 </div>
-              </div> 
+              </SwiperSlide> 
             </div>
-          </div>
+          </Swiper>
           <div className="slider-btn">
             <div className="prev-btn-3">
               <i className="bi bi-arrow-left-short" />

@@ -1441,6 +1441,11 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
 
+"react-modal-image@^2.6.0":
+  "integrity" "sha512-NNc1xPKzFAn0VsNMdJ8NXt6c54aL/z0fcoYmw9qn4SBUONdGl+8LOQ0sTfo0wtdzcjLiby/ncloHcAL+UI+wIA=="
+  "resolved" "https://registry.npmjs.org/react-modal-image/-/react-modal-image-2.6.0.tgz"
+  "version" "2.6.0"
+
 "react-paginate@^8.1.4":
   "integrity" "sha512-c3rxjcTEqeDQa6LqXifxLeFguY2qy2CHGRphVjHLFFMGfIHyaJ+v3bOvIlLYEeohwQ1q+cQpknjsqBVrkc/SNA=="
   "resolved" "https://registry.npmjs.org/react-paginate/-/react-paginate-8.1.4.tgz"

@@ -1,6 +1,31 @@
 import React from 'react'
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, {
+  Autoplay,
+  EffectFade,
+  Navigation,
+  Pagination,
+} from "swiper";
+import Link from 'next/link';
+SwiperCore.use([Navigation, Autoplay, Pagination, EffectFade]);
 function SpcialOffer3() {
+  const offerSlider = {
+    slidesPerView: 1,
+    // spaceBetween: 15,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    speed:1500,
+    autoplay: {
+      delay: 2000,
+    },
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination-i",
+      clickable: true,
+    },
+  }
   return (
     <div className="h3-spacial-offer-area mb-120 ">
     <div className="container">
@@ -13,9 +38,9 @@ function SpcialOffer3() {
         </div>
       </div>
       <div className="row mb-40">
-        <div className="swiper h3-spacial-offer-slider">
+        <Swiper {...offerSlider} className="swiper h3-spacial-offer-slider">
           <div className="swiper-wrapper">
-            <div className="swiper-slide">
+            <SwiperSlide className="swiper-slide">
               <div className="row position-relative g-lg-5 g-4">
                 <div className="divider" />
                 <div className="col-lg-6">
@@ -107,8 +132,8 @@ function SpcialOffer3() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="swiper-slide">
+            </SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <div className="row position-relative g-lg-5 g-4">
                 <div className="divider" />
                 <div className="col-lg-6">
@@ -200,8 +225,8 @@ function SpcialOffer3() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="swiper-slide">
+            </SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <div className="row position-relative g-lg-5 g-4">
                 <div className="divider" />
                 <div className="col-lg-6">
@@ -293,9 +318,9 @@ function SpcialOffer3() {
                   </div>
                 </div>
               </div>
-            </div>
+            </SwiperSlide>
           </div>
-        </div>
+        </Swiper>
       </div>
       <div className="row position-relative">
         <div className="col-lg-12 d-flex justify-content-center">

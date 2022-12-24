@@ -1,6 +1,47 @@
 import React from 'react'
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay, Navigation, Pagination ,EffectFade} from "swiper";
+SwiperCore.use([Navigation, Pagination, Autoplay,EffectFade]);
 function Home3Testimonial() {
+  const testimonialSlider = {
+    slidesPerView: 4,
+  spaceBetween: 25,
+  loop: true,
+  speed:1500,
+  autoplay: {
+    delay: 2000,
+  },
+  navigation: {
+    nextEl: ".next-btn-4",
+    prevEl: ".prev-btn-4",
+  },
+
+  breakpoints: {
+    280:{
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    480:{
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    768:{
+      slidesPerView: 2,
+    },
+    992:{
+      slidesPerView: 3,
+    },
+    1200:{
+      slidesPerView: 3,
+    },
+    1400:{
+      slidesPerView:3,
+    },
+    1600:{
+      slidesPerView: 3
+    },
+  }
+  }
   return (
     <div className="home3-testimonial mb-120">
     <div className="container">
@@ -13,9 +54,9 @@ function Home3Testimonial() {
         </div>
       </div>
       <div className="row mb-50">
-        <div className="swiper home3-testimonial-slider">
+        <Swiper {...testimonialSlider} className="swiper home3-testimonial-slider">
           <div className="swiper-wrapper">
-            <div className="swiper-slide">
+            <SwiperSlide className="swiper-slide">
               <div className="testimonial-wrap">
                 <div className="testimonial-content">
                   <div className="quoat-icon">
@@ -38,8 +79,8 @@ function Home3Testimonial() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="swiper-slide">
+            </SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <div className="testimonial-wrap">
                 <div className="testimonial-content">
                   <div className="quoat-icon">
@@ -62,8 +103,8 @@ function Home3Testimonial() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="swiper-slide">
+            </SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <div className="testimonial-wrap">
                 <div className="testimonial-content">
                   <div className="quoat-icon">
@@ -86,9 +127,9 @@ function Home3Testimonial() {
                   </div>
                 </div>
               </div>
-            </div>
+            </SwiperSlide>
           </div>
-        </div>
+        </Swiper>
       </div>
       <div className="row">
         <div className="col-lg-12">
