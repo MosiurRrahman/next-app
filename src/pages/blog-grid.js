@@ -4,6 +4,7 @@ import Layout from "../layout/Layout";
 import blogGridData from "../data/blog_gird_data.json";
 import Link from "next/link";
 import ReactPaginate from "react-paginate";
+
 function BlogGirdPage() {
   return (
     <>

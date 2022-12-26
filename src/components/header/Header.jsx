@@ -45,7 +45,6 @@ function Header() {
                 <ul className="sub-menu">
                   <li><Link href="/2col-gallery">2 Columns Gallery</Link></li>
                   <li><Link href="/3col-gallery">3 Columns Gallery</Link></li>
-                  <li><Link href="/mesonary-gallery">Mesonary Gallery</Link></li>
                 </ul>
               </li>
               <li><a href="#">Chef</a><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />

@@ -1,0 +1,53 @@
+[
+    {
+        "id":1,
+        "imageBig":"assets/images/bg/2col-gallery-big-01.png",
+        "imageSmalll":"assets/images/bg/2col-gallery-01.png",
+        "category":"food"
+    }
+    
+    ,
+    {
+        "id":2,
+        "imageBig":"assets/images/bg/2col-gallery-big-02.png",
+        "imageSmalll":"assets/images/bg/2col-gallery-02.png",
+        "category":"interior"
+    }
+    ,
+    {
+        "id":3,
+        "imageBig":"assets/images/bg/2col-gallery-big-03.png",
+        "imageSmalll":"assets/images/bg/2col-gallery-03.png",
+        "category":"traditions"
+    },
+    {
+        "id":4,
+        "imageBig":"assets/images/bg/2col-gallery-big-04.png",
+        "imageSmalll":"assets/images/bg/2col-gallery-04.png",
+        "category":"privateevent"
+    }
+    ,
+    {
+        "id":5,
+        "imageBig":"assets/images/bg/2col-gallery-big-05.png",
+        "imageSmalll":"assets/images/bg/2col-gallery-05.png",
+        "category":"eatingplace"
+    }
+    ,
+    {
+        "id":6,
+        "imageBig":"assets/images/bg/2col-gallery-big-06.png",
+        "imageSmalll":"assets/images/bg/2col-gallery-06.png",
+        "category":"interior"
+    }
+    
+    ,
+    {
+        "id":7,
+        "imageBig":"assets/images/bg/2col-gallery-big-06.png",
+        "imageSmalll":"assets/images/bg/2col-gallery-06.png",
+        "category":"interior"
+    }
+    
+
+]

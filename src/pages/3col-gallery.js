@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Breadcrumb from '../components/common/Breadcrumb'
 import Layout from '../layout/Layout'
 import gallaryData from '../data/gallery2.json';
-function GalleryTwoColumnLayout() {
+function GalleryThreeColumnLayout() {
     const [items, setItems] = useState(gallaryData);
     const filterItem = (catagoryItem) => {
       const updateItems = gallaryData.filter((curentElemet) => {
@@ -12,7 +12,7 @@ function GalleryTwoColumnLayout() {
     };
   return (
     <Layout>
-        <Breadcrumb pageName="2 Columns Gallery" pageTitle="2 Columns Gallery"/>
+        <Breadcrumb pageName="3 Columns Gallery" pageTitle="3 Columns Gallery"/>
         <div className="columns2-gallery-area pt-120 mb-120">
         <div className="container">
             <div className="row">
@@ -33,7 +33,7 @@ function GalleryTwoColumnLayout() {
                 {
                     items.map((element)=>{
                         return(
-                            <div key={element.id} className="col-md-6 col-sm-12 grid-item food">
+                            <div key={element.id} className="col-lg-4 col-md-6 col-sm-12 grid-item">
                             <a href={element.imageBig} data-fancybox="gallery" className="gallery2-img">
                             <div className="gallery-img">
                                 <img className="img-fluid" src={element.imageSmalll} alt="" />
@@ -62,4 +62,4 @@ function GalleryTwoColumnLayout() {
   )
 }
 
-export default GalleryTwoColumnLayout
+export default GalleryThreeColumnLayout

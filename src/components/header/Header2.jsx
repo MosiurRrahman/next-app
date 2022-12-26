@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Header2() {
@@ -42,59 +43,59 @@ function Header2() {
           <li className="menu-item-has-children active">
             <a href="#" className="drop-down">Home</a><i className="bi bi-plus dropdown-icon" />
             <ul className="sub-menu">
-              <li><a href="index.html">Home One</a></li>
-              <li><a className="active" href="index2.html">Home Two</a></li>
-              <li><a href="index3.html">Home Three</a></li>
+              <li><Link href="/">Home One</Link></li>
+              <li><Link className="active" href=".index2">Home Two</Link></li>
+              <li><Link href="/index3">Home Three</Link></li>
             </ul>
           </li>
-          <li><a href="about.html">About</a></li>
+          <li><Link href="/about">About</Link></li>
           <li className="menu-item-has-children">
             <a href="#">Menu</a><i className="bi bi-plus dropdown-icon" />
             <ul className="sub-menu">
-              <li><a href="menu1.html">Menu List-01</a></li>
-              <li><a href="menu2.html">Menu List-02</a></li>
-              <li><a href="3col-menu.html">3 Columns Menu</a></li>
+              <li><Link href="/menu1">Menu List-01</Link></li>
+              <li><Link href="/menu2">Menu List-02</Link></li>
+              <li><Link href="/3col-menu">3 Columns Menu</Link></li>
             </ul>
           </li>
           <li className="menu-item-has-children">
             <a href="#" className="drop-down">Pages</a><i className="bi bi-plus dropdown-icon" />
             <ul className="sub-menu">
-              <li><a href="category.html">Food Category</a></li>
-              <li><a href="reservation.html">Reservation</a></li>
-              <li><a href="2col-gallery.html">Gallery</a><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
+              <li><Link href="/category">Food Category</Link></li>
+              <li><Link href="/reservation">Reservation</Link></li>
+              <li><Link href="/2col-gallery">Gallery</Link><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
                 <i className="d-lg-none d-flex bi bi-chevron-down dropdown-icon" />
                 <ul className="sub-menu">
-                  <li><a href="2col-gallery.html">2 Columns Gallery </a></li>
-                  <li><a href="3col-gallery.html">3 Columns Gallery </a></li>
-                  <li><a href="mesonary-gallery.html">Mesonary Gallery</a></li>
+                  <li><Link href="/2col-gallery">2 Columns Gallery </Link></li>
+                  <li><Link href="/3col-gallery">3 Columns Gallery </Link></li>
+                  <li><Link href="/mesonary-gallery">Mesonary Gallery</Link></li>
                 </ul>
               </li>
               <li><a href="chef-expertis.html">Chef</a><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
                 <i className="d-lg-none d-flex bi bi-chevron-down dropdown-icon" />
                 <ul className="sub-menu">
-                  <li><a href="chef-expertis.html">Chef Experties</a></li>
-                  <li><a href="chef-details.html">Chef Details</a></li>
+                  <li><Link href="/chef-expertis">Chef Experties</Link></li>
+                  <li><Link href="/chef-details">Chef Details</Link></li>
                 </ul>
               </li>
               <li><a href="shop.html">Shop</a><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
                 <i className="d-lg-none d-flex bi bi-chevron-down dropdown-icon" />
                 <ul className="sub-menu">
-                  <li><a href="shop.html">Shop</a></li>
-                  <li><a href="shop-details.html">Shop Details</a></li>
-                  <li><a href="cart.html">Cart</a></li>
-                  <li><a href="check-out.html">Checkout</a></li>
+                  <li><Link href="/shop">Shop</Link></li>
+                  <li><Link href="/shop-details">Shop Details</Link></li>
+                  <li><Link href="/cart">Cart</Link></li>
+                  <li><Link href="/check-out">Checkout</Link></li>
                 </ul>
               </li>
-              <li><a href="faq.html">Faq</a></li>
-              <li><a href="error.html">Error</a></li>
+              <li><Link href="/faq">Faq</Link></li>
+              <li><Link href="/error">Error</Link></li>
             </ul>
           </li>
           <li className="menu-item-has-children">
             <a href="#">Blog</a><i className="bi bi-plus dropdown-icon" />
             <ul className="sub-menu">
-              <li><a href="blog-grid.html">Blog Grid</a></li>
-              <li><a href="blog-standard.html">Blog Standard</a></li>
-              <li><a href="blog-details.html">Blog Details</a></li>
+              <li><Link href="/blog-grid">Blog Grid</Link></li>
+              <li><Link href="/blog-standard">Blog Standard</Link></li>
+              <li><Link href="/blog-details">Blog Details</Link></li>
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
@@ -113,11 +114,11 @@ function Header2() {
           </div>
         </div>
         <div className="reservation-btn d-lg-none d-flex">
-          <a href="reservation.html" className="primary-btn4 btn-md">Find Reservation</a>
+          <Link href="/reservation" className="primary-btn4 btn-md">Find Reservation</Link>
         </div>
       </div>
       <div className="nav-right d-flex jsutify-content-end align-items-center">
-        <a href="reservation.html" className="primary-btn4 btn-md">Find Reservation</a>
+        <Link href="/reservation" className="primary-btn4 btn-md">Find Reservation</Link>
         <div className="sidebar-button mobile-menu-btn ">
           <i className="bi bi-list" />
         </div>
