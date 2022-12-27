@@ -4,7 +4,7 @@ import SwiperCore, { Autoplay, Navigation, Pagination ,EffectFade} from "swiper"
 SwiperCore.use([Navigation, Pagination, Autoplay,EffectFade]);
 function Experties1() {
   const expertiesSlider = {
-    slidesPerView: 3,
+    slidesPerView: "auto",
   spaceBetween: 37,
   // centeredSlides: true,
   loop: true,
@@ -59,31 +59,11 @@ function Experties1() {
       <div className="row">
         <Swiper {...expertiesSlider} className="swiper expart-slider">
           <div className="swiper-wrapper">
+            
             <SwiperSlide className="swiper-slide">
               <div className="cooking-expart-wrap">
                 <div className="exparts-img">
-                  <img className="img-fluid" src="assets/images/bg/exparts1.png" alt="" />
-                  <div className="social-area">
-                    <div className="share-icon">
-                      <i className="bx bx-share-alt" />
-                    </div>
-                    <ul>
-                      <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook" /></a></li>
-                      <li><a href="https://twitter.com/"><i className="bx bxl-twitter" /></a></li>
-                      <li><a href="https://www.instagram.com/"><i className="bx bxl-instagram-alt" /></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="exparts-content text-center">
-                  <h3><a href="chef-details.html">Mr. Willium Jhon</a></h3>
-                  <p>Senior Chef </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <div className="cooking-expart-wrap">
-                <div className="exparts-img">
-                  <img className="img-fluid" src="assets/images/bg/exparts2.png" alt="" />
+                  <img className="img-fluid" src="assets/images/bg/exparts1.png" alt="exparts1" />
                   <div className="social-area">
                     <div className="share-icon">
                       <i className="bx bx-share-alt" />
@@ -101,6 +81,28 @@ function Experties1() {
                 </div>
               </div>
             </SwiperSlide>
+            <SwiperSlide className="swiper-slide">
+              <div className="cooking-expart-wrap">
+                <div className="exparts-img">
+                  <img className="img-fluid" src="assets/images/bg/exparts6.png" alt="exparts5" />
+                  <div className="social-area">
+                    <div className="share-icon">
+                      <i className="bx bx-share-alt" />
+                    </div>
+                    <ul>
+                      <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook" /></a></li>
+                      <li><a href="https://twitter.com/"><i className="bx bxl-twitter" /></a></li>
+                      <li><a href="https://www.instagram.com/"><i className="bx bxl-instagram-alt" /></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="exparts-content text-center">
+                  <h3><a href="chef-details.html">Markoney Smith</a></h3>
+                  <p>Chef of Head</p>
+                </div>
+              </div>
+            </SwiperSlide>
+        
             <SwiperSlide className="swiper-slide">
               <div className="cooking-expart-wrap">
                 <div className="exparts-img">

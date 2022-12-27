@@ -16,7 +16,7 @@ function NewItem1() {
   const smImgSlider = {
     loop: true,
   spaceBetween: 22,
-  slidesPerView: 6,
+  slidesPerView: "auto",
   freeMode: true,
   // centeredSlides: true,
   watchSlidesProgress: true,
@@ -201,12 +201,12 @@ function NewItem1() {
           </SwiperSlide>
           <SwiperSlide className="swiper-slide">
             <div className="new-items-sm-img">
-              <img src="assets/images/bg/new-item-sm2.png" alt="new-item-sm2" />
+              <img src="assets/images/bg/new-item-sm1.png" alt="new-item-sm2" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="swiper-slide">
             <div className="new-items-sm-img">
-              <img src="assets/images/bg/new-item-sm3.png" alt="new-item-sm3" />
+              <img src="assets/images/bg/new-item-sm2.png" alt="new-item-sm3" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="swiper-slide">

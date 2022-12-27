@@ -4,7 +4,7 @@ import SwiperCore, { Autoplay, Navigation, Pagination ,EffectFade} from "swiper"
 SwiperCore.use([Navigation, Pagination, Autoplay,EffectFade]);
 function PopularItem1() {
   const popularItemSlider = {
-    slidesPerView: 3,
+    slidesPerView: "auto",
   spaceBetween: 30,
   // centeredSlides: true,
   loop: true,

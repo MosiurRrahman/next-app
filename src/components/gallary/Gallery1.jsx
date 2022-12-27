@@ -4,7 +4,7 @@ import SwiperCore, { Autoplay, Navigation, Pagination ,EffectFade} from "swiper"
 SwiperCore.use([Navigation, Pagination, Autoplay,EffectFade]);
 function Gallery1() {
     const gallarySlider = {
-        slidesPerView: 5,
+        slidesPerView: "auto",
         spaceBetween: 37,
         loop: true,
         speed:1500,
