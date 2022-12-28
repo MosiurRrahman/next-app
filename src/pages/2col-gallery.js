@@ -2,8 +2,16 @@ import React, { useState } from 'react'
 import Breadcrumb from '../components/common/Breadcrumb'
 import Layout from '../layout/Layout'
 import gallaryData from '../data/gallery2.json';
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
+
 function GalleryTwoColumnLayout() {
     const [items, setItems] = useState(gallaryData);
+    const [isOpenimg, setOpenimg] = useState({
+        openingState: false,
+        openingIndex: 0,
+      });
     const filterItem = (catagoryItem) => {
       const updateItems = gallaryData.filter((curentElemet) => {
         return curentElemet.category === catagoryItem;
@@ -31,19 +39,20 @@ function GalleryTwoColumnLayout() {
             </div>
             <div className="row grid g-4">
                 {
-                    items.map((element)=>{
+                    items.map((element, index)=>{
                         return(
                             <div key={element.id} className="col-md-6 col-sm-12 grid-item food">
-                            <a href={element.imageBig} data-fancybox="gallery" className="gallery2-img">
+                            <div className="gallery2-img">
                             <div className="gallery-img">
                                 <img className="img-fluid" src={element.imageSmalll} alt="" />
                                 <div className="overlay">
                                 <div className="zoom-icon">
-                                    <img src="assets/images/icon/Zoom.svg" alt="" />
+                                    <img style={{cursor:"pointer"}} src="assets/images/icon/Zoom.svg" 
+                                     onClick={() => setOpenimg({ openingState: true, openingIndex:index })} alt="" />
                                 </div>
                                 </div>
                             </div>
-                            </a>
+                            </div>
                         </div>
                         )
                     })
@@ -58,6 +67,17 @@ function GalleryTwoColumnLayout() {
             </div>
         </div>
         </div>
+        <Lightbox
+        className="img-fluid"
+        open={isOpenimg.openingState}
+        plugins={[Fullscreen]}
+        index={isOpenimg.openingIndex}
+        close={() => setOpenimg(false)}
+        styles={{ container: { backgroundColor: "rgba(0, 0, 0, .9)" } }}
+        slides={items.map(function(elem) { 
+            return { src: elem.imageBig } 
+        })}
+      />
     </Layout>
   )
 }

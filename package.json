@@ -19,7 +19,8 @@
     "react-paginate": "^8.1.4",
     "simple-react-lightbox": "^3.6.9-0",
     "styled-components": "^5.3.6",
-    "swiper": "^8.4.5"
+    "swiper": "^8.4.5",
+    "yet-another-react-lightbox": "^2.2.5"
   },
   "devDependencies": {
     "eslint": "8.29.0",
