@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Experties3() {
@@ -29,7 +30,7 @@ function Experties3() {
                 </div>
               </div>
               <div className="exparts-content text-center">
-                <h3><a href="chef-details.html">Josef Harry</a></h3>
+                <h3><Link href="/chef-details" legacyBehavior><a>Josef Harry</a></Link></h3>
                 <p>Senior Chef</p>
               </div>
             </div>
@@ -50,7 +51,7 @@ function Experties3() {
                 </div>
               </div>
               <div className="exparts-content text-center">
-                <h3><a href="chef-details.html">Hony Harry</a></h3>
+                <h3><Link legacyBehavior href="/chef-details"><a>Hony Harry</a></Link></h3>
                 <p>Junior Chef</p>
               </div>
             </div>
@@ -71,7 +72,7 @@ function Experties3() {
                 </div>
               </div>
               <div className="exparts-content text-center">
-                <h3><a href="chef-details.html">Smith Robert</a></h3>
+                <h3><Link href="/chef-details" legacyBehavior><a>Smith Robert</a></Link></h3>
                 <p>Head of Chef</p>
               </div>
             </div>

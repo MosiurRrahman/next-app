@@ -11,6 +11,7 @@ import "swiper/css/thumbs";
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper";
+import Link from 'next/link';
 function NewItem1() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const smImgSlider = {
@@ -80,7 +81,7 @@ function NewItem1() {
         <div className="new-items-wrap1 d-flex align-items-center justify-content-center">
           <div className="items-content text-center">
             <span>Spcial Offer</span>
-            <h3><a href="shop-details.html">Our New Item has offer</a></h3>
+            <h3><Link legacyBehavior href="/shop-details"><a>Our New Item has offer</a></Link></h3>
             <div className="descount-area text-center">
               <h3>After Discount</h3>
               <span>20%</span>
@@ -103,7 +104,7 @@ function NewItem1() {
                   </div>
                 </div>
                 <div className="content">
-                  <h3><a href="shop-details.html">Chicken Fried</a></h3>
+                  <h3><Link legacyBehavior href="/shop-details"><a>Chicken Fried</a></Link></h3>
                 </div>
               </div>
             </SwiperSlide>
@@ -116,7 +117,7 @@ function NewItem1() {
                   </div>
                 </div>
                 <div className="content">
-                  <h3><a href="shop-details.html">Vagitable Fried</a></h3>
+                  <h3><Link href="/shop-details" legacyBehavior><a>Vagitable Fried</a></Link></h3>
                 </div>
               </div>
             </SwiperSlide>
@@ -129,7 +130,7 @@ function NewItem1() {
                   </div>
                 </div>
                 <div className="content">
-                  <h3><a href="shop-details.html">Prawn Curry</a></h3>
+                  <h3><Link legacyBehavior href="/shop-details"><a>Prawn Curry</a></Link></h3>
                 </div>
               </div>
             </SwiperSlide>
@@ -142,7 +143,7 @@ function NewItem1() {
                   </div>
                 </div>
                 <div className="content">
-                  <h3><a href="shop-details.html">Chicken Kebab</a></h3>
+                  <h3><Link legacyBehavior href="/shop-details"><a>Chicken Kebab</a></Link></h3>
                 </div>
               </div>
             </SwiperSlide>
@@ -155,7 +156,7 @@ function NewItem1() {
                   </div>
                 </div>
                 <div className="content">
-                  <h3><a href="shop-details.html">Full Chicken</a></h3>
+                  <h3><Link legacyBehavior href="/shop-details"><a>Full Chicken</a></Link></h3>
                 </div>
               </div>
             </SwiperSlide>
@@ -168,7 +169,7 @@ function NewItem1() {
                   </div>
                 </div>
                 <div className="content">
-                  <h3><a href="shop-details.html">Momo Package</a></h3>
+                  <h3><Link legacyBehavior href="/shop-details"><a>Momo Package</a></Link></h3>
                 </div>
               </div>
             </SwiperSlide>
@@ -183,8 +184,8 @@ function NewItem1() {
           <div className="overlay d-flex align-items-center justify-content-center">
             <div className="items-content text-center">
               <span><img className="left-vec" src="assets/images/icon/shape-white1.svg" alt="sub-title-vec" />Reserve<img className="right-vec" src="assets/images/icon/shape-white1.svg" alt="sub-title-vec" /></span>
-              <h3><a href="reservation.html">For Your Private Event</a></h3>
-              <a className="primary-btn btn-sm" href="reservation.html">Book Table</a>
+              <h3><Link href="/reservation" legacyBehavior><a>For Your Private Event</a></Link></h3>
+              <Link legacyBehavior href="/reservation"><a className="primary-btn btn-sm">Book Table</a></Link>
             </div>
           </div>
         </div>

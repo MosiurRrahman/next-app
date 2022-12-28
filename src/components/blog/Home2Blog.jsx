@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Home2Blog() {
@@ -18,17 +19,17 @@ function Home2Blog() {
           <div className="blog-img">
             <img className="img-fluid" src="assets/images/bg/h2-blog1.png" alt="h2-blog1" />
             <div className="batch">
-              <a href="blog-grid.html"><span>17</span><br />Apr</a>
+              <Link href="/blog-grid" legacyBehavior><a><span>17</span><br />Apr</a></Link>
             </div>
           </div>
           <div className="blog-content">
             <div className="blog-meta">
-              <a href="blog-grid.html">By Clone Watson</a>
+              <Link legacyBehavior href="/blog-grid">By Clone Watson</Link>
             </div>
-            <h3><a href="blog-details.html">To Make Good Health Take 
-                Nutrition Food.</a></h3>
+            <h3><Link legacyBehavior href="/blog-details">To Make Good Health Take 
+                Nutrition Food.</Link></h3>
             <div className="read-more-btn">
-              <a href="blog-details.html"><span>Read More</span><span><i className="bi bi-arrow-right" /></span></a>
+              <Link href="/blog-details" legacyBehavior><a><span>Read More</span><span><i className="bi bi-arrow-right" /></span></a></Link>
             </div>
           </div>
         </div>
@@ -38,16 +39,16 @@ function Home2Blog() {
           <div className="blog-img">
             <img className="img-fluid" src="assets/images/bg/h2-blog2.png" alt="h2-blog1" />
             <div className="batch">
-              <a href="blog-grid.html"><span>18</span><br />Apr</a>
+              <Link href="/blog-grid" legacyBehavior><a><span>18</span><br />Apr</a></Link>
             </div>
           </div>
           <div className="blog-content">
             <div className="blog-meta">
-              <a href="blog-grid.html">By Hilary Watson</a>
+              <Link legacyBehavior href="/blog-grid">By Hilary Watson</Link>
             </div>
-            <h3><a href="blog-details.html">Eat at Some Nutition Food &amp; Happy Leadlife.</a></h3>
+            <h3><Link legacyBehavior href="/blog-details">Eat at Some Nutition Food &amp; Happy Leadlife.</Link></h3>
             <div className="read-more-btn">
-              <a href="blog-details.html"><span>Read More</span><span><i className="bi bi-arrow-right" /></span></a>
+              <Link href="/blog-details" legacyBehavior><a><span>Read More</span><span><i className="bi bi-arrow-right" /></span></a></Link>
             </div>
           </div>
         </div>
@@ -57,16 +58,16 @@ function Home2Blog() {
           <div className="blog-img">
             <img className="img-fluid" src="assets/images/bg/h2-blog3.png" alt="h2-blog1" />
             <div className="batch">
-              <a href="blog-grid.html"><span>17</span><br />Apr</a>
+              <Link legacyBehavior href="/blog-grid" ><a><span>17</span><br />Apr</a></Link>
             </div>
           </div>
           <div className="blog-content">
             <div className="blog-meta">
-              <a href="blog-grid.html">By Clone Watson</a>
+              <Link href="/blog-grid" legacyBehavior><a>By Clone Watson</a></Link>
             </div>
-            <h3><a href="blog-details.html">Esay To Make Some Special Food In Home.</a></h3>
+            <h3><Link  href="/blog-details" legacyBehavior><a>Esay To Make Some Special Food In Home.</a></Link></h3>
             <div className="read-more-btn">
-              <a href="blog-details.html"><span>Read More</span><span><i className="bi bi-arrow-right" /></span></a>
+              <Link legacyBehavior href="/blog-details" ><a><span>Read More</span><span><i className="bi bi-arrow-right" /></span></a></Link>
             </div>
           </div>
         </div>

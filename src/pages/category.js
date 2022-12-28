@@ -4,6 +4,7 @@ import Layout from '../layout/Layout'
 import categodyCardData from "../data/foodCategory_data.json"
 import ReservationForm from '../components/category/ReservationForm'
 import Testimonial3 from '../components/testimonial/Testimonial3'
+import Link from 'next/link'
 function Category() {
 
   const categoryCard = new Map([
@@ -50,7 +51,7 @@ console.log(categoryCard.category);
                                       <img className="img-fluid" src={ value.image} alt="" />
                                     </div>
                                     <div className="category-content">
-                                      <h4><a href="shop-details.html">{ value.title } </a></h4>
+                                      <h4><Link legacyBehavior href="/shop-details"><a>{ value.title }</a></Link></h4>
                                       <p>{ value.description }</p>
                                       <div className="price">
                                         <h5>${ value.price } <span>Only</span></h5>

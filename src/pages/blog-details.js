@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import BannerBlogWidget from '../components/blog/BannerBlogWidget'
 import BlogComment from '../components/blog/BlogComment'
@@ -20,16 +21,16 @@ function BlogDetailspage() {
                         <div className="post-thum">
                             <img className="img-fluid" src="assets/images/blog/blog-st-01.png" alt="blog-st-01" />
                             <div className="batch">
-                            <a href="blog-grid.html">01 Aug,2022</a>
+                            <Link legacyBehavior href="/blog-grid"><a>01 Aug,2022</a></Link>
                             </div>
                         </div>
                         <div className="news-content">
                             <div className="news-meta">
                             <div className="publisher">
-                                <a href="blog-grid.html"><img src="assets/images/icon/User.svg" alt="" /> By Admin</a>
+                                <Link legacyBehavior href="/blog-grid"><a><img src="assets/images/icon/User.svg" alt="" /> By Admin</a></Link>
                             </div>
                             <div className="comment">
-                                <a href="blog-grid.html"><img src="assets/images/icon/Comment.svg" alt="" /> Comment(10)</a>
+                                <Link  legacyBehavior href="/blog-grid"><a><img src="assets/images/icon/Comment.svg" alt="" /> Comment(10)</a></Link>
                             </div>
                             </div>
                             <h3>Eat Healthy Food &amp; Get Your Happiness.</h3>
@@ -79,10 +80,10 @@ function BlogDetailspage() {
                             <div className="row">
                             <div className="col-lg-6">
                                 <ul className="tags">
-                                <li><a href="blog-grid.html">Food</a></li>
-                                <li><a href="blog-grid.html">Beverage</a></li>
-                                <li><a href="blog-grid.html">Menu List</a></li>
-                                <li><a href="blog-grid.html">Dinner</a></li>
+                                <li><Link legacyBehavior href="/blog-grid"><a>Food</a></Link></li>
+                                <li><Link legacyBehavior href="/blog-grid"><a>Beverage</a></Link></li>
+                                <li><Link legacyBehavior href="/blog-grid"><a>Menu List</a></Link></li>
+                                <li><Link legacyBehavior href="/blog-grid"><a>Dinner</a></Link></li>
                                 </ul>
                             </div>
                             <div className="col-lg-6">
@@ -104,14 +105,14 @@ function BlogDetailspage() {
                             <div className="col-lg-6">
                             <div className="navigation-btn d-flex align-items-center">
                                 <a href="#"><i className="bi bi-arrow-left" />Prev Post</a>
-                                <h5><a href="blog-details.html">To Serve Food 
-                                    Customer With Coffee.</a></h5>
+                                <h5><Link legacyBehavior href="/blog-details"><a>To Serve Food 
+                                    Customer With Coffee.</a></Link></h5>
                             </div>
                             </div>
                             <div className="col-lg-6">
                             <div className="navigation-btn two d-flex align-items-center">
-                                <h5><a href="blog-details.html">To Serve Food 
-                                    Customer With Coffee.</a></h5>
+                                <h5><Link legacyBehavior href="/blog-details"><a>To Serve Food 
+                                    Customer With Coffee.</a></Link></h5>
                                 <a href="#">Next Post<i className="bi bi-arrow-right" /></a>
                             </div>
                             </div>

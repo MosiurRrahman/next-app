@@ -1,6 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Pagination ,EffectFade} from "swiper";
+import Link from 'next/link';
 SwiperCore.use([Navigation, Pagination, Autoplay,EffectFade]);
 function PopularItem3() {
   const popularItemsSlider = {
@@ -132,7 +133,7 @@ function PopularItem3() {
                     <div className="food-cetagory">
                       <a>Meat &amp; Poultry</a>
                     </div>
-                    <h3><a href="shop-details.html">Chicken Fry</a></h3>
+                    <h3><Link legacyBehavior href="/shop-details">Chicken Fry</Link></h3>
                     <p>It’s so tasty and delicious for creating our customer, get This.</p>
                   </div>
                 </div>
@@ -149,7 +150,7 @@ function PopularItem3() {
                     <div className="food-cetagory">
                       <a>Sea-Fish Food</a>
                     </div>
-                    <h3><a href="shop-details.html">Sea-Fish Food</a></h3>
+                    <h3><Link legacyBehavior href="/shop-details"><a>Sea-Fish Food</a></Link></h3>
                     <p>It’s so tasty and delicious for creating our customer, get This.</p>
                   </div>
                 </div>
@@ -166,7 +167,7 @@ function PopularItem3() {
                     <div className="food-cetagory">
                       <a>Pasta Salad</a>
                     </div>
-                    <h3><a href="shop-details.html">Vegetable</a></h3>
+                    <h3><Link legacyBehavior href="/shop-details"><a>Vegetable</a></Link></h3>
                     <p>It’s so tasty and delicious for creating our customer, get This.</p>
                   </div>
                 </div>

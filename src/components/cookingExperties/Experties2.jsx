@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Experties2() {
@@ -19,7 +20,7 @@ function Experties2() {
               <img className="img-fluid" src="assets/images/bg/chef-kitchen1.png" alt="chef-kitchen1" />
             </div>
             <div className="Chef-content text-center">
-              <h3><a href="chef-details.html">Mr. Willium Jhon</a></h3>
+              <h3><Link legacyBehavior href="/chef-details"><a>Mr. Willium Jhon</a></Link></h3>
               <p>Chef of Head</p>
               <ul>
                 <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook" /></a></li>
@@ -36,7 +37,7 @@ function Experties2() {
               <img className="img-fluid" src="assets/images/bg/chef-kitchen2.png" alt="chef-kitchen1" />
             </div>
             <div className="Chef-content text-center">
-              <h3><a href="chef-details.html">Mile Woatson </a></h3>
+              <h3><Link legacyBehavior href="/chef-details"><a>Mile Woatson </a></Link></h3>
               <p>Chef of Head</p>
               <ul>
                 <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook" /></a></li>
@@ -53,7 +54,7 @@ function Experties2() {
               <img className="img-fluid" src="assets/images/bg/chef-kitchen3.png" alt="chef-kitchen1" />
             </div>
             <div className="Chef-content text-center">
-              <h3><a href="chef-details.html">Mr. Robert Jhon</a></h3>
+              <h3><Link href="/chef-details" legacyBehavior><a>Mr. Robert Jhon</a></Link></h3>
               <p>Chef of Head</p>
               <ul>
                 <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook" /></a></li>

@@ -1,7 +1,30 @@
 import Link from 'next/link'
-import React from 'react'
-
+import { useRouter } from 'next/router';
+import React, { useReducer } from 'react'
+/*---------Using reducer mange the active or inactive menu----------*/
+const initialState = { activeMenu: ""  , mobileMenuState: false, navState: false, };
+function reducer(state, action) {
+  switch (action.type) {
+    case "homeOne":
+      return {...state, activeMenu: "homeOne" ,};
+    case "suits":
+      return {...state, activeMenu: "suits" };
+    case "blog":
+      return {...state, activeMenu: "blog" };
+    case "menu":
+      return {...state, activeMenu: "menu" };
+    case "pages":
+      return { ...state, activeMenu: "pages" };
+      case "mobileMenu":
+        return { ...state, mobileMenuState: action.isMobileMenu };
+    default:
+      return { activeMenu: "" };
+  }
+}
 function Header2() {
+  const currentRoute = useRouter().pathname;
+
+  const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <div>
   <div className="top-bar two">
@@ -28,62 +51,73 @@ function Header2() {
   <header className="header-area style-2">
     <div className="container-fluid d-flex justify-content-between align-items-center">
       <div className="header-logo">
-        <a href="index.html"><img alt="image" className="img-fluid" src="assets/images/header2-logo.svg" /></a>
+        <Link href="/" legacyBehavior><a><img alt="image" className="img-fluid" src="assets/images/header2-logo.svg" /></a></Link>
       </div>
       <div className="main-menu">
         <div className="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
           <div className="mobile-logo-wrap">
-            <a href="index.html"><img alt="image" src="assets/images/header1-logo.svg" /></a>
+            <Link href="/" legacyBehavior><a><img alt="image" src="assets/images/header1-logo.svg" /></a></Link>
           </div>
           <div className="menu-close-btn">
             <i className="bi bi-x-lg text-white" />
           </div>
         </div>
         <ul className="menu-list">
-          <li className="menu-item-has-children active">
-            <a href="#" className="drop-down">Home</a><i className="bi bi-plus dropdown-icon" />
-            <ul className="sub-menu">
-              <li><Link href="/">Home One</Link></li>
-              <li><Link className="active" href=".index2">Home Two</Link></li>
-              <li><Link href="/index3">Home Three</Link></li>
+          <li className="menu-item-has-children">
+            <a href="#"  className={currentRoute==="/"?"drop-down active":"drop-down"} >Home</a><i onClick={() => dispatch({ type: "homeOne"})} className={state.activeMenu === "homeOne"?"bi bi-plus dropdown-icon active":"bi bi-plus dropdown-icon"}  />
+            <ul   className={
+                   state.activeMenu === "homeOne"
+                   ? "sub-menu  d-block"
+                   : "sub-menu d-xl-block d-none"
+                }>
+              <li><Link  href="/" className={currentRoute==="/"?"active":"disable"}>Home One</Link></li>
+              <li><Link href="/index2"  className={currentRoute==="/index2"?"active":"disable"}>Home Two</Link></li>
+              <li><Link href="/index3" className={currentRoute==="/index3"?"active":"disable"}>Home Three</Link></li>
             </ul>
           </li>
-          <li><Link href="/about">About</Link></li>
+          <li><Link href="/about" className={currentRoute === "/about"? "active":"disable"} onClick={() => dispatch({ type: "about" })}>About</Link></li>
           <li className="menu-item-has-children">
-            <a href="#">Menu</a><i className="bi bi-plus dropdown-icon" />
-            <ul className="sub-menu">
-              <li><Link href="/menu1">Menu List-01</Link></li>
-              <li><Link href="/menu2">Menu List-02</Link></li>
-              <li><Link href="/3col-menu">3 Columns Menu</Link></li>
+            <Link href="/menu1" className={currentRoute==="/menu1"?"drop-down active":"drop-down"}>Menu</Link><i onClick={() => dispatch({ type: "menu"})} className={state.activeMenu === "menu"?"bi bi-plus dropdown-icon active":"bi bi-plus dropdown-icon"} />
+            <ul className={
+                   state.activeMenu === "menu"
+                   ? "sub-menu  d-block"
+                   : "sub-menu d-xl-block d-none"
+                }>
+              <li><Link href="/menu1" className={currentRoute === "/menu1"? "active":"disable"}>Menu List-01</Link></li>
+              <li><Link href="/menu2"className={currentRoute === "/menu2"? "active":"disable"}>Menu List-02</Link></li>
+              <li><Link href="/3col-menu"className={currentRoute === "/3col-menu"? "active":"disable"}>3 Columns Menu</Link></li>
             </ul>
           </li>
           <li className="menu-item-has-children">
-            <a href="#" className="drop-down">Pages</a><i className="bi bi-plus dropdown-icon" />
-            <ul className="sub-menu">
-              <li><Link href="/category">Food Category</Link></li>
-              <li><Link href="/reservation">Reservation</Link></li>
-              <li><Link href="/2col-gallery">Gallery</Link><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
+            <a href="#" className="drop-down">Pages</a><i onClick={() => dispatch({ type: "pages"})} className={state.activeMenu === "pages"?"bi bi-plus dropdown-icon active":"bi bi-plus dropdown-icon"} />
+            <ul className={
+                   state.activeMenu === "pages"
+                   ? "sub-menu  d-block"
+                   : "sub-menu d-xl-block d-none"
+                }>
+              <li><Link href="/category" className={currentRoute === "/category"? "active":"disable"}>Food Category</Link></li>
+              <li><Link href="/reservation" className={currentRoute === "/reservation"? "active":"disable"}>Reservation</Link></li>
+              <li><Link href="/2col-gallery"className={currentRoute === "/2col-gallery"? "active":"disable"}>Gallery</Link><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
                 <i className="d-lg-none d-flex bi bi-chevron-down dropdown-icon" />
                 <ul className="sub-menu">
-                  <li><Link href="/2col-gallery">2 Columns Gallery </Link></li>
-                  <li><Link href="/3col-gallery">3 Columns Gallery </Link></li>
-                  <li><Link href="/mesonary-gallery">Mesonary Gallery</Link></li>
+                  <li><Link href="/2col-gallery" className={currentRoute === "/2col-gallery"? "active":"disable"}>2 Columns Gallery</Link></li>
+                  <li><Link href="/3col-gallery" className={currentRoute === "/3col-gallery"? "active":"disable"}>3 Columns Gallery</Link></li>
                 </ul>
               </li>
-              <li><a href="chef-expertis.html">Chef</a><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
+              <li><a href="#" className={currentRoute === "/chef-expertis"? "active":"disable"}>Chef</a><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
                 <i className="d-lg-none d-flex bi bi-chevron-down dropdown-icon" />
                 <ul className="sub-menu">
-                  <li><Link href="/chef-expertis">Chef Experties</Link></li>
-                  <li><Link href="/chef-details">Chef Details</Link></li>
+                  <li><Link href="/chef-expertis" className={currentRoute === "/chef-expertis"? "active":"disable"}>Chef Experties</Link></li>
+                  <li><Link href="/chef-details" className={currentRoute === "/chef-details"? "active":"disable"}>Chef Details</Link></li>
                 </ul>
               </li>
-              <li><a href="shop.html">Shop</a><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
+              <li><Link href="/shop" className={currentRoute === "/shop"? "active":"disable"}>Shop</Link><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
                 <i className="d-lg-none d-flex bi bi-chevron-down dropdown-icon" />
                 <ul className="sub-menu">
-                  <li><Link href="/shop">Shop</Link></li>
-                  <li><Link href="/shop-details">Shop Details</Link></li>
-                  <li><Link href="/cart">Cart</Link></li>
-                  <li><Link href="/check-out">Checkout</Link></li>
+                  <li><Link href="/shop" className={currentRoute === "/shop"? "active":"disable"}>Shop</Link></li>
+                  <li><Link href="/shop-details" className={currentRoute === "/shop-details"? "active":"disable"}>Shop Details</Link></li>
+                  <li><Link href="/cart" className={currentRoute === "/cart"? "active":"disable"}>Cart</Link></li>
+                  <li><Link href="/check-out" className={currentRoute === "/check-out"? "active":"disable"}>Checkout</Link></li>
                 </ul>
               </li>
               <li><Link href="/faq">Faq</Link></li>
@@ -91,14 +125,18 @@ function Header2() {
             </ul>
           </li>
           <li className="menu-item-has-children">
-            <a href="#">Blog</a><i className="bi bi-plus dropdown-icon" />
-            <ul className="sub-menu">
+            <a href="#">Blog</a><i onClick={() => dispatch({ type: "blog"})} className={state.activeMenu === "blog"?"bi bi-plus dropdown-icon active":"bi bi-plus dropdown-icon"} />
+            <ul className={
+                   state.activeMenu === "blog"
+                   ? "sub-menu  d-block"
+                   : "sub-menu d-xl-block d-none"
+                }>
               <li><Link href="/blog-grid">Blog Grid</Link></li>
               <li><Link href="/blog-standard">Blog Standard</Link></li>
               <li><Link href="/blog-details">Blog Details</Link></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><Link  href="/contact" className={currentRoute === "/contact"? "active":"disable"} >Contact</Link></li>
         </ul>
         <div className="hotline d-lg-none d-flex mb-30">
           <div className="hotline-icon">

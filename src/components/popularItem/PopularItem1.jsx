@@ -1,6 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Pagination ,EffectFade} from "swiper";
+import Link from 'next/link';
 SwiperCore.use([Navigation, Pagination, Autoplay,EffectFade]);
 function PopularItem1() {
   const popularItemSlider = {
@@ -76,7 +77,7 @@ function PopularItem1() {
                   </ul>
                   <span>Review(20)</span>
                 </div>
-                <h3><a href="shop-details.html">Beaf Machal</a></h3>
+                <h3><Link legacyBehavior href="/shop-details"><a>Beaf Machal</a></Link></h3>
                 <p>It is a long established fact that a reader will be distracted.</p>
               </div>
             </div>
@@ -103,7 +104,7 @@ function PopularItem1() {
                   </ul>
                   <span>Review(37)</span>
                 </div>
-                <h3><a href="shop-details.html">Beaf Biriyani</a></h3>
+                <h3><Link legacyBehavior href="/shop-details"><a>Beaf Biriyani</a></Link></h3>
                 <p>It is a long established fact that a reader will be distracted.</p>
               </div>
             </div>
@@ -129,7 +130,7 @@ function PopularItem1() {
                   </ul>
                   <span>Review(54)</span>
                 </div>
-                <h3><a href="shop-details.html">Thai Soup</a></h3>
+                <h3><Link legacyBehavior href="/shop-details"><a>Thai Soup</a></Link></h3>
                 <p>It is a long established fact that a reader will be distracted.</p>
               </div>
             </div>

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function About2() {
@@ -40,7 +41,7 @@ function About2() {
         </li>
       </ul>
     </div>
-    <a className="primary-btn5 btn-md2" href="about.html"><i className="bi bi-arrow-up-right-circle" />Discover More</a>
+    <Link legacyBehavior className="primary-btn5 btn-md2" href="/about"><a><i className="bi bi-arrow-up-right-circle" />Discover More</a></Link>
   </div>
 </div>
 

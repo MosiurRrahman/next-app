@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import Breadcrumb from '../components/common/Breadcrumb'
 import Layout from '../layout/Layout'
@@ -33,7 +34,7 @@ function Cart() {
                       <td data-label="Image">
                         <img src="assets/images/bg/cart-01.png" alt="" />
                       </td>
-                      <td data-label="Food Name"><a href="shop-details.html">Organic Vegetable grains 100%</a></td>
+                      <td data-label="Food Name"><Link legacyBehavior href="/shop-details"><a>Organic Vegetable grains 100%</a></Link></td>
                       <td data-label="Unite Price"><del>$32.36</del></td>
                       <td data-label="Discount Price">$22.36</td>
                       <td data-label="Quantity">
@@ -56,7 +57,7 @@ function Cart() {
                       <td data-label="Image">
                         <img src="assets/images/bg/cart-02.png" alt="" />
                       </td>
-                      <td data-label="Food Name"><a href="shop-details.html">Fresh Vegetable Eggplant</a></td>
+                      <td data-label="Food Name"><Link legacyBehavior href="/shop-details"><a>Fresh Vegetable Eggplant</a></Link></td>
                       <td data-label="Unite Price"><del>$45.36</del></td>
                       <td data-label="Discount Price">$35</td>
                       <td data-label="Quantity">
@@ -79,7 +80,7 @@ function Cart() {
                       <td data-label="Image">
                         <img src="assets/images/bg/cart-03.png" alt="" />
                       </td>
-                      <td data-label="Food Name"><a href="shop-details.html">Fresh Delicious And Healthy</a></td>
+                      <td data-label="Food Name"><Link legacyBehavior href="/shop-details"><a>Fresh Delicious And Healthy</a></Link></td>
                       <td data-label="Unite Price">$15.36</td>
                       <td data-label="Discount Price">$22.36</td>
                       <td data-label="Quantity">
@@ -153,8 +154,8 @@ function Cart() {
                 </tbody>
               </table>
               <div className="cart-btn-group">
-                <a href="shop.html" className="primary-btn3 btn-lg">Continue to shopping</a>
-                <a href="checkout.html" className="primary-btn3 btn-lg">Proceed to Checkout</a>
+                <Link legacyBehavior href="/shop"><a  className="primary-btn3 btn-lg">Continue to shopping</a></Link>
+                <Link legacyBehavior href="/checkout"><a className="primary-btn3 btn-lg">Proceed to Checkout</a></Link>
               </div>
             </div>
           </div>

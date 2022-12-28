@@ -20,11 +20,11 @@ function GalleryTwoColumnLayout() {
                 <div className="filters filter-button-group">
                 <ul className="d-flex justify-content-center flex-wrap">
                     <li onClick={() => setItems(gallaryData)} className="active" data-filter="*">All</li>
-                    <li onClick={() => filterItem("food")} className>Food</li>
-                    <li  onClick={() => filterItem("privateevent")} className>Private Event</li>
-                    <li onClick={() => filterItem("interior")} className>Interior</li>
-                    <li onClick={() => filterItem("eatingplace")} className>Eating Place</li>
-                    <li onClick={() => filterItem("traditions")} className>Traditions</li>
+                    <li onClick={() => filterItem("food")} className="">Food</li>
+                    <li onClick={() => filterItem("privateevent")} className="">Private Event</li>
+                    <li onClick={() => filterItem("interior")} className="">Interior</li>
+                    <li onClick={() => filterItem("eatingplace")} className="">Eating Place</li>
+                    <li onClick={() => filterItem("traditions")} className="">Traditions</li>
                 </ul>
                 </div>
             </div>

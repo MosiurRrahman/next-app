@@ -55,7 +55,7 @@ function Header() {
               <li><Link href="/index3" className={currentRoute==="/index3"?"active":"disable"}>Home Three</Link></li>
             </ul>
           </li>
-          <li><Link href="/about" className={currentRoute === "/about"? "active":"disable"} onClick={() => dispatch({ type: "about" })}>About</Link></li>
+          <li><Link href="/about">About</Link></li>
           <li className="menu-item-has-children">
             <Link href="/menu1" className={currentRoute==="/menu1"?"drop-down active":"drop-down"}>Menu</Link><i onClick={() => dispatch({ type: "menu"})} className={state.activeMenu === "menu"?"bi bi-plus dropdown-icon active":"bi bi-plus dropdown-icon"} />
             <ul className={

@@ -60,7 +60,7 @@ function SpcialOffer3() {
                           <span>01</span>
                         </div>
                       </div>
-                      <h3><a href="shop-details.html">Chicken with Drinks.</a></h3>
+                      <h3><Link legacyBehavior href="/shop-details"><a>Chicken with Drinks.</a></Link></h3>
                       <p>It’s so tasty and delicious for creating our customer. So visit our restaurant. </p>
                     </div>
                   </div>
@@ -82,7 +82,7 @@ function SpcialOffer3() {
                           <span>02</span>
                         </div>
                       </div>
-                      <h3><a href="shop-details.html">Burger with Drinks.</a></h3>
+                      <h3><Link legacyBehavior href="/shop-details">Burger with Drinks.</Link></h3>
                       <p>It’s so tasty and delicious for creating our customer. So visit our restaurant. </p>
                     </div>
                   </div>
@@ -104,7 +104,7 @@ function SpcialOffer3() {
                           <span>03</span>
                         </div>
                       </div>
-                      <h3><a href="shop-details.html">Soup with Kabab.</a></h3>
+                      <h3><Link legacyBehavior href="/shop-details">Soup with Kabab.</Link></h3>
                       <p>It’s so tasty and delicious for creating our customer. So visit our restaurant. </p>
                     </div>
                   </div>
@@ -126,7 +126,7 @@ function SpcialOffer3() {
                           <span>04</span>
                         </div>
                       </div>
-                      <h3><a href="shop-details.html">Pizza with Pasta.</a></h3>
+                      <h3><Link legacyBehavior href="/shop-details">Pizza with Pasta.</Link></h3>
                       <p>It’s so tasty and delicious for creating our customer. So visit our restaurant. </p>
                     </div>
                   </div>
@@ -153,7 +153,7 @@ function SpcialOffer3() {
                           <span>05</span>
                         </div>
                       </div>
-                      <h3><a href="shop-details.html">Beef with Drinks.</a></h3>
+                      <h3><Link legacyBehavior href="/shop-details">Beef with Drinks.</Link></h3>
                       <p>It’s so tasty and delicious for creating our customer. So visit our restaurant. </p>
                     </div>
                   </div>
@@ -175,7 +175,7 @@ function SpcialOffer3() {
                           <span>06</span>
                         </div>
                       </div>
-                      <h3><a href="shop-details.html">Fish with Drinks.</a></h3>
+                      <h3><Link legacyBehavior href="/shop-details">Fish with Drinks.</Link></h3>
                       <p>It’s so tasty and delicious for creating our customer. So visit our restaurant. </p>
                     </div>
                   </div>
@@ -197,7 +197,7 @@ function SpcialOffer3() {
                           <span>07</span>
                         </div>
                       </div>
-                      <h3><a href="shop-details.html">Prwan with Kabab.</a></h3>
+                      <h3><Link legacyBehavior href="/shop-details">Prwan with Kabab.</Link></h3>
                       <p>It’s so tasty and delicious for creating our customer. So visit our restaurant. </p>
                     </div>
                   </div>
@@ -219,7 +219,7 @@ function SpcialOffer3() {
                           <span>08</span>
                         </div>
                       </div>
-                      <h3><a href="shop-details.html">Mutton with Pasta.</a></h3>
+                      <h3><Link legacyBehavior href="/shop-details">Mutton with Pasta.</Link></h3>
                       <p>It’s so tasty and delicious for creating our customer. So visit our restaurant. </p>
                     </div>
                   </div>
@@ -246,7 +246,7 @@ function SpcialOffer3() {
                           <span>09</span>
                         </div>
                       </div>
-                      <h3><a href="shop-details.html">Chicken with Drinks.</a></h3>
+                      <h3><Link legacyBehavior href="/shop-details">Chicken with Drinks.</Link></h3>
                       <p>It’s so tasty and delicious for creating our customer. So visit our restaurant. </p>
                     </div>
                   </div>
@@ -268,7 +268,7 @@ function SpcialOffer3() {
                           <span>10</span>
                         </div>
                       </div>
-                      <h3><a href="shop-details.html">Burger with Drinks.</a></h3>
+                      <h3><Link legacyBehavior href="/shop-details">Burger with Drinks.</Link></h3>
                       <p>It’s so tasty and delicious for creating our customer. So visit our restaurant. </p>
                     </div>
                   </div>
@@ -290,7 +290,7 @@ function SpcialOffer3() {
                           <span>11</span>
                         </div>
                       </div>
-                      <h3><a href="shop-details.html">Soup with Kabab.</a></h3>
+                      <h3><Link legacyBehavior href="/shop-details">Soup with Kabab.</Link></h3>
                       <p>It’s so tasty and delicious for creating our customer. So visit our restaurant. </p>
                     </div>
                   </div>
@@ -312,7 +312,7 @@ function SpcialOffer3() {
                           <span>12</span>
                         </div>
                       </div>
-                      <h3><a href="shop-details.html">Pizza with Pasta.</a></h3>
+                      <h3><Link legacyBehavior href="/shop-details">Pizza with Pasta.</Link></h3>
                       <p>It’s so tasty and delicious for creating our customer. So visit our restaurant. </p>
                     </div>
                   </div>

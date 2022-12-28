@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Product1() {
@@ -11,7 +12,7 @@ function Product1() {
             <img className="img-fluid" src="assets/images/bg/h2-product-1.png" alt="h2-product-1" />
           </div>
           <div className="product-content">
-            <h4><a href="category.html">Sea Food</a></h4>
+            <h4><Link legacyBehavior href="/category"><a>Sea Food</a></Link></h4>
             <p>Lorem ipsum dolor sit amet consectet.</p>
           </div>
         </div>
@@ -22,7 +23,7 @@ function Product1() {
             <img className="img-fluid" src="assets/images/bg/h2-product-2.png" alt="h2-product-2" />
           </div>
           <div className="product-content">
-            <h4><a href="category.html">Meat Masala</a></h4>
+            <h4><Link legacyBehavior href="/category"><a>Meat Masala</a></Link></h4>
             <p>Lorem ipsum dolor sit amet consectet.</p>
           </div>
         </div>
@@ -33,7 +34,7 @@ function Product1() {
             <img className="img-fluid" src="assets/images/bg/h2-product-3.png" alt="h2-product-3" />
           </div>
           <div className="product-content">
-            <h4><a href="category.html">Vegetarian</a></h4>
+            <h4><Link legacyBehavior href="/category"><a>Vegetarian</a></Link></h4>
             <p>Lorem ipsum dolor sit amet consectet.</p>
           </div>
         </div>
@@ -44,7 +45,7 @@ function Product1() {
             <img className="img-fluid" src="assets/images/bg/h2-product-4.png" alt="h2-product-4" />
           </div>
           <div className="product-content">
-            <h4><a href="category.html">Thai Soup</a></h4>
+            <h4><Link legacyBehavior href="/category"><a>Thai Soup</a></Link></h4>
             <p>Lorem ipsum dolor sit amet consectet.</p>
           </div>
         </div>
@@ -55,7 +56,7 @@ function Product1() {
             <img className="img-fluid" src="assets/images/bg/h2-product-1.png" alt="h2-product-1" />
           </div>
           <div className="product-content">
-            <h4><a href="category.html">Sea Food</a></h4>
+            <h4><Link legacyBehavior href="/category"><a>Sea Food</a></Link></h4>
             <p>Lorem ipsum dolor sit amet consectet.</p>
           </div>
         </div>
@@ -66,7 +67,7 @@ function Product1() {
             <img className="img-fluid" src="assets/images/bg/h2-product-2.png" alt="h2-product-2" />
           </div>
           <div className="product-content">
-            <h4><a href="category.html">Meat Masala</a></h4>
+            <h4><Link legacyBehavior href="/category"><a>Meat Masala</a></Link></h4>
             <p>Lorem ipsum dolor sit amet consectet.</p>
           </div>
         </div>
@@ -77,7 +78,7 @@ function Product1() {
             <img className="img-fluid" src="assets/images/bg/h2-product-3.png" alt="h2-product-3" />
           </div>
           <div className="product-content">
-            <h4><a href="category.html">Vegetarian</a></h4>
+            <h4><Link legacyBehavior href="/category"><a>Vegetarian</a></Link></h4>
             <p>Lorem ipsum dolor sit amet consectet.</p>
           </div>
         </div>
@@ -88,7 +89,7 @@ function Product1() {
             <img className="img-fluid" src="assets/images/bg/h2-product-4.png" alt="h2-product-4" />
           </div>
           <div className="product-content">
-            <h4><a href="category.html">Thai Soup</a></h4>
+            <h4><Link legacyBehavior href="/category"><a>Thai Soup</a></Link></h4>
             <p>Lorem ipsum dolor sit amet consectet.</p>
           </div>
         </div>

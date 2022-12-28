@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import Breadcrumb from '../components/common/Breadcrumb'
 import Layout from '../layout/Layout'
@@ -62,23 +63,23 @@ function ShopDetails() {
                       <input type="number" defaultValue={1} min={1} />
                     </div>
                   </div>
-                  <a href="cart.html" className="primary-btn3">Add to cart</a>
+                  <Link legacyBehavior href="/cart" className="primary-btn3"><a>Add to cart</a></Link>
                 </div>
                 <div className="category-tag">
                   <ul>
                     <li>Category:</li>
-                    <li><a href="shop.html">Food(05),</a></li>
-                    <li><a href="shop.html">Modern Life(10),</a></li>
-                    <li><a href="shop.html">Healthy(02),</a></li>
-                    <li><a href="shop.html">Desset(04)</a></li>
+                    <li><Link legacyBehavior href="/shop"><a>Food(05),</a></Link></li>
+                    <li><Link legacyBehavior href="/shop"><a>Modern Life(10),</a></Link></li>
+                    <li><Link legacyBehavior href="/shop"><a>Healthy(02),</a></Link></li>
+                    <li><Link legacyBehavior href="/shop"><a>Desset(04)</a></Link></li>
                   </ul>
                   <ul>
                     <li>Tag:</li>
-                    <li><a href="shop.html">Dinner,</a></li>
-                    <li><a href="shop.html">Breakfast,</a></li>
-                    <li><a href="shop.html">Berverage,</a></li>
-                    <li><a href="shop.html">Sea Food,</a></li>
-                    <li><a href="shop.html">Menu</a></li>
+                    <li><Link legacyBehavior href="/shop"><a>Dinner,</a></Link></li>
+                    <li><Link legacyBehavior href="/shop"><a>Breakfast,</a></Link></li>
+                    <li><Link legacyBehavior href="/shop"><a>Berverage,</a></Link></li>
+                    <li><Link legacyBehavior href="/shop"><a>Sea Food,</a></Link></li>
+                    <li><Link legacyBehavior href="/shop"><a>Menu</a></Link></li>
                   </ul>
                 </div>
               </div>
@@ -247,7 +248,7 @@ function ShopDetails() {
                     <div className="food-img">
                       <img className="img-fluid" src="assets/images/bg/h2-food-item-8.png" alt="h2-food-item-1" />
                       <div className="cart-icon">
-                        <a href="cart.html"><i className="bi bi-cart-plus" /></a>
+                        <Link legacyBehavior href="/cart"><a><i className="bi bi-cart-plus" /></a></Link>
                       </div>
                       <div className="pric-tag">
                         <span>$17</span>
@@ -261,7 +262,7 @@ function ShopDetails() {
                         <li><i className="bi bi-star-fill" /></li>
                         <li><i className="bi bi-star-fill" /></li>
                       </ul>
-                      <h3><a href="shop-details.html">Mutton with Shrimps</a></h3>
+                      <h3><Link legacyBehavior href="/shop-details"><a>Mutton with Shrimps</a></Link></h3>
                     </div>
                   </div>
                 </div>
@@ -270,7 +271,7 @@ function ShopDetails() {
                     <div className="food-img">
                       <img className="img-fluid" src="assets/images/bg/h2-food-item-5.png" alt="h2-food-item-1" />
                       <div className="cart-icon">
-                        <a href="cart.html"><i className="bi bi-cart-plus" /></a>
+                        <Link legacyBehavior href="/cart"><a><i className="bi bi-cart-plus" /></a></Link>
                       </div>
                       <div className="pric-tag">
                         <span>$41</span>
@@ -284,7 +285,7 @@ function ShopDetails() {
                         <li><i className="bi bi-star-fill" /></li>
                         <li><i className="bi bi-star-fill" /></li>
                       </ul>
-                      <h3><a href="shop-details.html">Mutton Kabab</a></h3>
+                      <h3><Link href="/shop-details" legacyBehavior><a>Mutton Kabab</a></Link></h3>
                     </div>
                   </div>
                 </div>
@@ -293,7 +294,7 @@ function ShopDetails() {
                     <div className="food-img">
                       <img className="img-fluid" src="assets/images/bg/h2-food-item-6.png" alt="h2-food-item-1" />
                       <div className="cart-icon">
-                        <a href="cart.html"><i className="bi bi-cart-plus" /></a>
+                        <Link href="/cart" legacyBehavior><a><i className="bi bi-cart-plus" /></a></Link>
                       </div>
                       <div className="pric-tag">
                         <span>$15</span>
@@ -307,7 +308,7 @@ function ShopDetails() {
                         <li><i className="bi bi-star-fill" /></li>
                         <li><i className="bi bi-star-fill" /></li>
                       </ul>
-                      <h3><a href="shop-details.html">Burger with Drinks</a></h3>
+                      <h3><Link href="/shop-details" legacyBehavior><a>Burger with Drinks</a></Link></h3>
                     </div>
                   </div>
                 </div>
@@ -316,7 +317,7 @@ function ShopDetails() {
                     <div className="food-img">
                       <img className="img-fluid" src="assets/images/bg/h2-food-item-7.png" alt="h2-food-item-1" />
                       <div className="cart-icon">
-                        <a href="cart.html"><i className="bi bi-cart-plus" /></a>
+                        <Link legacyBehavior href="/cart"><a><i className="bi bi-cart-plus" /></a></Link>
                       </div>
                       <div className="pric-tag">
                         <span>$09</span>
@@ -330,7 +331,7 @@ function ShopDetails() {
                         <li><i className="bi bi-star-fill" /></li>
                         <li><i className="bi bi-star-fill" /></li>
                       </ul>
-                      <h3><a href="shop-details.html">Shrimps with Role</a></h3>
+                      <h3><Link href="/shop-details" legacyBehavior><a>Shrimps with Role</a></Link></h3>
                     </div>
                   </div>
                 </div>

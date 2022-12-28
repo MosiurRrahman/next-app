@@ -6,6 +6,7 @@ import SwiperCore, {
   Navigation,
   Pagination,
 } from "swiper";
+import Link from 'next/link';
 SwiperCore.use([Navigation, Pagination, Autoplay, EffectFade]);
 function RecentPostBlogWidget() {
   const recentPostSlider = {
@@ -47,13 +48,13 @@ function RecentPostBlogWidget() {
                   <div className="news-content">
                     <div className="news-meta">
                       <div className="publisher">
-                        <a href="blog-grid.html"><img src="assets/images/icon/User.svg" alt="" /> By Admin</a>
+                        <Link legacyBehavior href="/blog-grid"><a><img src="assets/images/icon/User.svg" alt="" /> By Admin</a></Link>
                       </div>
                       <div className="comment">
-                        <a href="blog-grid.html"><img src="assets/images/icon/Comment.svg" alt="" /> Comment(10)</a>
+                        <Link legacyBehavior href="/blog-grid"><a><img src="assets/images/icon/Comment.svg" alt="" /> Comment(10)</a></Link>
                       </div>
                     </div>
-                    <h3><a href="blog-details.html">Cooking Delicious Food Our Experties Chef.</a></h3>
+                    <h3><Link legacyBehavior href="/blog-details">Cooking Delicious Food Our Experties Chef.</Link></h3>
                   </div>
                 </div>
               </SwiperSlide>
@@ -65,13 +66,13 @@ function RecentPostBlogWidget() {
                   <div className="news-content">
                     <div className="news-meta">
                       <div className="publisher">
-                        <a href="blog-grid.html"><img src="assets/images/icon/User.svg" alt="" /> By Admin</a>
+                        <Link legacyBehavior href="/blog-grid"><a><img src="assets/images/icon/User.svg" alt="" /> By Admin</a></Link>
                       </div>
                       <div className="comment">
-                        <a href="blog-grid.html"><img src="assets/images/icon/Comment.svg" alt="" /> Comment(10)</a>
+                        <Link legacyBehavior href="/blog-grid"><a><img src="assets/images/icon/Comment.svg" alt="" /> Comment(10)</a></Link>
                       </div>
                     </div>
-                    <h3><a href="blog-details.html">Esay To Make Some Special Food In Home.</a></h3>
+                    <h3><Link legacyBehavior href="/blog-details"><a>Esay To Make Some Special Food In Home.</a></Link></h3>
                   </div>
                 </div>
               </SwiperSlide>

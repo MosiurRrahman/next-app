@@ -1,6 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Pagination ,EffectFade} from "swiper";
+import Link from 'next/link';
 SwiperCore.use([Navigation, Pagination, Autoplay,EffectFade]);
 function Experties1() {
   const expertiesSlider = {
@@ -76,7 +77,7 @@ function Experties1() {
                   </div>
                 </div>
                 <div className="exparts-content text-center">
-                  <h3><a href="chef-details.html">Markoney Smith</a></h3>
+                  <h3><Link href="/chef-details" legacyBehavior><a>Markoney Smith</a></Link></h3>
                   <p>Chef of Head</p>
                 </div>
               </div>
@@ -97,7 +98,7 @@ function Experties1() {
                   </div>
                 </div>
                 <div className="exparts-content text-center">
-                  <h3><a href="chef-details.html">Markoney Smith</a></h3>
+                  <h3><Link href="/chef-details" legacyBehavior><a>Markoney Smith</a></Link></h3>
                   <p>Chef of Head</p>
                 </div>
               </div>
@@ -119,7 +120,7 @@ function Experties1() {
                   </div>
                 </div>
                 <div className="exparts-content text-center">
-                  <h3><a href="chef-details.html">Jackline Nory</a></h3>
+                  <h3><Link href="/chef-details" legacyBehavior><a>Jackline Nory</a></Link></h3>
                   <p>Assistant Chef</p>
                 </div>
               </div>
