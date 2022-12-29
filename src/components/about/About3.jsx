@@ -55,7 +55,7 @@ function About3() {
                 </ul>
               </div>
               <div className="discover-btn">
-                <Link legacyBehavior className="primary-btn7 btn-md2" href="/about"><a><i className="bi bi-arrow-up-right-circle" />Discover More</a></Link>
+                <Link legacyBehavior href="/about"><a  className="primary-btn7 btn-md2"><i className="bi bi-arrow-up-right-circle" />Discover More</a></Link>
               </div>
             </div>
           </div>

@@ -41,7 +41,7 @@ function About2() {
         </li>
       </ul>
     </div>
-    <Link legacyBehavior className="primary-btn5 btn-md2" href="/about"><a><i className="bi bi-arrow-up-right-circle" />Discover More</a></Link>
+    <Link legacyBehavior href="/about"><a  className="primary-btn5 btn-md2"><i className="bi bi-arrow-up-right-circle" />Discover More</a></Link>
   </div>
 </div>
 

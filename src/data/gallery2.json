@@ -3,7 +3,10 @@
         "id":1,
         "imageBig":"assets/images/bg/2col-gallery-big-01.png",
         "imageSmalll":"assets/images/bg/2col-gallery-01.png",
-        "category":"food"
+        "sliderImage":"assets/images/bg/h2-gallery-1.png",
+        "category":"food",
+        "slideCategoryTitle":"Cooking",
+        "slideTitle":"Chef Cooking Vegetarian"
     }
     
     ,
@@ -11,42 +14,60 @@
         "id":2,
         "imageBig":"assets/images/bg/2col-gallery-big-02.png",
         "imageSmalll":"assets/images/bg/2col-gallery-02.png",
-        "category":"interior"
+        "sliderImage":"assets/images/bg/h2-gallery-2.png",
+        "category":"interior",
+        "slideCategoryTitle":"Cooking",
+        "slideTitle":"Chef Cooking Vegetarian"
     }
     ,
     {
         "id":3,
         "imageBig":"assets/images/bg/2col-gallery-big-03.png",
+        "sliderImage":"assets/images/bg/h2-gallery-3.png",
         "imageSmalll":"assets/images/bg/2col-gallery-03.png",
-        "category":"traditions"
+        "category":"traditions",
+        "slideCategoryTitle":"Cooking",
+        "slideTitle":"Chef Cooking Vegetarian"
     },
     {
         "id":4,
         "imageBig":"assets/images/bg/2col-gallery-big-04.png",
+        "sliderImage":"assets/images/bg/h2-gallery-4.png",
         "imageSmalll":"assets/images/bg/2col-gallery-04.png",
-        "category":"privateevent"
+        "category":"privateevent",
+        "slideCategoryTitle":"Cooking",
+        "slideTitle":"Chef Cooking Vegetarian"
     }
     ,
     {
         "id":5,
         "imageBig":"assets/images/bg/2col-gallery-big-05.png",
+        "sliderImage":"assets/images/bg/h2-gallery-5.png",
         "imageSmalll":"assets/images/bg/2col-gallery-05.png",
-        "category":"eatingplace"
+        "category":"eatingplace",
+        "slideCategoryTitle":"Cooking",
+        "slideTitle":"Chef Cooking Vegetarian"
     }
     ,
     {
         "id":6,
         "imageBig":"assets/images/bg/2col-gallery-big-06.png",
+        "sliderImage":"assets/images/bg/h2-gallery-6.png",
         "imageSmalll":"assets/images/bg/2col-gallery-06.png",
-        "category":"interior"
+        "category":"interior",
+        "slideCategoryTitle":"Cooking",
+        "slideTitle":"Chef Cooking Vegetarian"
     }
     
     ,
     {
         "id":7,
         "imageBig":"assets/images/bg/2col-gallery-big-06.png",
+        "sliderImage":"assets/images/bg/h2-gallery-7.png",
         "imageSmalll":"assets/images/bg/2col-gallery-06.png",
-        "category":"interior"
+        "category":"interior",
+        "slideCategoryTitle":"Cooking",
+        "slideTitle":"Chef Cooking Vegetarian"
     }
     
 

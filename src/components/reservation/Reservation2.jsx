@@ -1,6 +1,8 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 function Reservation2() {
+  const [startDate1, setStartDate1] = useState(false);
   return (
     <div className="h2-reservarion-area mb-120">
   <div className="bg-vector">
@@ -36,7 +38,14 @@ function Reservation2() {
             </div>
             <div className="col-lg-6 col-md-6 mb-25">
               <div className="form-inner date-icon">
-                <input id="datepicker" type="text" placeholder="Date" />
+              <ReactDatePicker
+              
+                            selected={startDate1}
+                            onChange={(date) => setStartDate1(date)}
+                            placeholderText="Check In"
+                            className="calendar"
+                            
+                          />
               </div>  
             </div>
             <div className="col-lg-6 col-md-6 mb-25">

@@ -2,6 +2,7 @@ import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Pagination ,EffectFade} from "swiper";
 import Link from 'next/link';
+import CountUp from 'react-countup';
 SwiperCore.use([Navigation, Pagination, Autoplay,EffectFade]);
 function PopularItem3() {
   const popularItemsSlider = {
@@ -61,7 +62,7 @@ function PopularItem3() {
                     </div>
                     <div className="coundown">
                       <div className="d-flex align-items-center gap-2">
-                        <h3 className="odometer" data-odometer-final={100}>0</h3>
+                        <h3 className="odometer"><CountUp end={100} /></h3>
                       </div>
                       <p>Professional Chef</p>
                     </div>
@@ -74,7 +75,7 @@ function PopularItem3() {
                     </div>
                     <div className="coundown">
                       <div className="d-flex align-items-center gap-2">
-                        <h3 className="odometer" data-odometer-final={250}>0</h3>
+                      <h3 className="odometer"><CountUp end={180} /></h3>
                       </div>
                       <p>Food Category</p>
                     </div>
@@ -87,7 +88,7 @@ function PopularItem3() {
                     </div> 
                     <div className="coundown">
                       <div className="d-flex align-items-center gap-2">
-                        <h3 className="odometer" data-odometer-final={10}>0</h3><span>k</span>
+                      <h3 className="odometer"><CountUp end={30} />K</h3>
                       </div>
                       <p>Customer Satisfy</p>
                     </div>
@@ -100,7 +101,7 @@ function PopularItem3() {
                     </div>
                     <div className="coundown">
                       <div className="d-flex align-items-center gap-2">
-                        <h3 className="odometer" data-odometer-final={100}>0</h3>
+                      <h3 className="odometer"><CountUp end={150} /></h3>
                       </div>
                       <p>Award Wining</p>
                     </div>

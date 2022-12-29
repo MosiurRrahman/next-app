@@ -1,8 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Breadcrumb from '../components/common/Breadcrumb'
 import Layout from '../layout/Layout'
 
 function Checkout() {
+  const [count, setCount] =useState(0);
+
+  const handelIncrement = ()=> {
+  
+    setCount((prevCount)=>prevCount + 1)
+   
+  }
+  const handelDecrement = ()=> {
+    setCount((prevCount)=>{
+      if (prevCount === 0) {
+        return prevCount
+      } else{
+      return  prevCount - 1
+      }
+    })
+  }
   return (
     <Layout>
         <Breadcrumb pageName="Checkout" pageTitle="Checkout" />
@@ -40,20 +56,12 @@ function Checkout() {
                       </div>
                       <div className="col-12">
                         <div className="form-inner">
-                          <select style={{display: 'none'}}>
+                          <select >
                             <option>Town / City</option>
                             <option>Dhaka</option>
                             <option>Saidpur</option>
                             <option>Newyork</option>
                           </select>
-                          <div className="nice-select" tabIndex={0}><span className="current">Town / City</span>
-                            <ul className="list">
-                              <li data-value="Town / City" className="option selected">Town / City</li>
-                              <li data-value="Dhaka" className="option">Dhaka</li>
-                              <li data-value="Saidpur" className="option">Saidpur</li>
-                              <li data-value="Newyork" className="option">Newyork</li>
-                            </ul>
-                          </div>
                         </div>
                       </div>
                       <div className="col-12">
@@ -126,7 +134,9 @@ function Checkout() {
                           <div className="quantity">
                             <div className="quantity d-flex align-items-center">
                               <div className="quantity-nav nice-number d-flex align-items-center">
-                                <input type="number" defaultValue={1} min={1} />
+                                <button onClick={handelDecrement} type="button"><i className="bi bi-dash"></i></button>
+                                <input type="number" defaultValue={count} />
+                                <button onClick={handelIncrement} type="button"><i className="bi bi-plus"></i></button>
                               </div>
                             </div>
                           </div>
@@ -149,7 +159,9 @@ function Checkout() {
                           <div className="quantity">
                             <div className="quantity d-flex align-items-center">
                               <div className="quantity-nav nice-number d-flex align-items-center">
-                                <input type="number" defaultValue={1} min={1} />
+                              <button  type="button"><i className="bi bi-dash"></i></button>
+                                <input type="number" defaultValue={1} />
+                                <button type="button"><i className="bi bi-plus"></i></button>
                               </div>
                             </div>
                           </div>
@@ -171,7 +183,9 @@ function Checkout() {
                         <div className="product-total d-flex align-items-center">
                           <div className="quantity d-flex align-items-center">
                             <div className="quantity-nav nice-number d-flex align-items-center">
-                              <input type="number" defaultValue={1} min={1} />
+                            <button  type="button"><i className="bi bi-dash"></i></button>
+                                <input type="number" defaultValue={1} />
+                                <button  type="button"><i className="bi bi-plus"></i></button>
                             </div>
                           </div>
                           <strong> <i className="bi bi-x-lg px-2" />

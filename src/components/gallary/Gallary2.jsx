@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
-import ModalImage from "react-modal-image";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import gallaryData from '../../data/gallery2.json';
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
+
 import SwiperCore, {
   Autoplay,
   EffectFade,
@@ -9,15 +13,19 @@ import SwiperCore, {
 import Link from 'next/link';
 SwiperCore.use([Navigation, Autoplay, EffectFade]);
 function Gallary2() {
+  const [isOpenimg, setOpenimg] = useState({
+    openingState: false,
+    openingIndex: 0,
+  });
   const gallarySider =  {
-    slidesPerView: 5,
+    slidesPerView: "auto",
     spaceBetween: 37,
     // centeredSlides: true,
     loop: true,
     speed:1500,
-    autoplay: {
-      delay: 2000,
-    },
+    // autoplay: {
+    //   delay: 2000,
+    // },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -71,104 +79,37 @@ function Gallary2() {
   </div>
   <Swiper {...gallarySider} className="swiper h2-gallery">
     <div className="swiper-wrapper">
-      <SwiperSlide className="swiper-slide">
-      <ModalImage
-              small="assets/images/icon/Zoom.svg"
-              large="assets/images/bg/h2-gallery-big-1.png"
-              showRotate={true}
-              hideZoom={true}
-            />
-        {/* <a href="assets/images/bg/h2-gallery-big-1.png" data-fancybox="gallery" className="portfolio-img">
-          <div className="gallery-img">
-            <img className="img-fluid" src="assets/images/bg/h2-gallery-1.png" alt="" />
-            <div className="overlay">
-              <img src="assets/images/icon/Zoom.svg" alt="" />
-            </div>
+     
+      {
+        gallaryData.map((data , index)=>{
+          const {id, imageSmalll} = data;
+          return(
+        <SwiperSlide key={id} className="swiper-slide">
+            <div className="gallery-img">
+              <img className="img-fluid" src={imageSmalll} alt="" />
+              <div className="overlay">
+                <img src="assets/images/icon/Zoom.svg" onClick={() => setOpenimg({ openingState: true, openingIndex:index })} alt="" />
+              </div>
           </div>
-        </a> */}
-      </SwiperSlide>
-      <SwiperSlide className="swiper-slide">
-        <a href="assets/images/bg/h2-gallery-big-2.png" data-fancybox="gallery" className="portfolio-img">
-          <div className="gallery-img">
-            <img className="img-fluid" src="assets/images/bg/h2-gallery-2.png" alt="" />
-            <div className="overlay">
-              <img src="assets/images/icon/Zoom.svg" alt="" />
-            </div>
-          </div>
-        </a>
-      </SwiperSlide>
-      <SwiperSlide className="swiper-slide">
-        <a href="assets/images/bg/h2-gallery-big-3.png" data-fancybox="gallery" className="portfolio-img">
-          <div className="gallery-img">
-            <img className="img-fluid" src="assets/images/bg/h2-gallery-3.png" alt="" />
-            <div className="overlay">
-              <img src="assets/images/icon/Zoom.svg" alt="" />
-            </div>
-          </div>
-        </a>
-      </SwiperSlide>
-      <SwiperSlide className="swiper-slide">
-        <a href="assets/images/bg/h2-gallery-big-4.png" data-fancybox="gallery" className="portfolio-img">
-          <div className="gallery-img">
-            <img className="img-fluid" src="assets/images/bg/h2-gallery-4.png" alt="" />
-            <div className="overlay">
-              <img src="assets/images/icon/Zoom.svg" alt="" />
-            </div>
-          </div>
-        </a>
-      </SwiperSlide>
-      <SwiperSlide className="swiper-slide">
-        <a href="assets/images/bg/h2-gallery-big-5.png" data-fancybox="gallery" className="portfolio-img">
-          <div className="gallery-img">
-            <img className="img-fluid" src="assets/images/bg/h2-gallery-5.png" alt="" />
-            <div className="overlay">
-              <img src="assets/images/icon/Zoom.svg" alt="" />
-            </div>
-          </div>
-        </a>
-      </SwiperSlide>
-      <SwiperSlide className="swiper-slide">
-        <a href="assets/images/bg/h2-gallery-big-6.png" data-fancybox="gallery" className="portfolio-img">
-          <div className="gallery-img">
-            <img className="img-fluid" src="assets/images/bg/h2-gallery-6.png" alt="" />
-            <div className="overlay">
-              <img src="assets/images/icon/Zoom.svg" alt="" />
-            </div>
-          </div>
-        </a>
-      </SwiperSlide>
-      <SwiperSlide className="swiper-slide">
-        <a href="assets/images/bg/h2-gallery-big-7.png" data-fancybox="gallery" className="portfolio-img">
-          <div className="gallery-img">
-            <img className="img-fluid" src="assets/images/bg/h2-gallery-7.png" alt="" />
-            <div className="overlay">
-              <img src="assets/images/icon/Zoom.svg" alt="" />
-            </div>
-          </div>
-        </a>
-      </SwiperSlide>
-      <SwiperSlide className="swiper-slide">
-        <a href="assets/images/bg/h2-gallery-big-8.png" data-fancybox="gallery" className="portfolio-img">
-          <div className="gallery-img">
-            <img className="img-fluid" src="assets/images/bg/h2-gallery-8.png" alt="" />
-            <div className="overlay">
-              <img src="assets/images/icon/Zoom.svg" alt="" />
-            </div>
-          </div>
-        </a>
-      </SwiperSlide>
-      <SwiperSlide className="swiper-slide">
-        <a href="assets/images/bg/h2-gallery-big-7.png" data-fancybox="gallery" className="portfolio-img">
-          <div className="gallery-img">
-            <img className="img-fluid" src="assets/images/bg/h2-gallery-9.png" alt="" />
-            <div className="overlay">
-              <img src="assets/images/icon/Zoom.svg" alt="" />
-            </div>
-          </div>
-        </a>
-      </SwiperSlide>
+        </SwiperSlide>
+          )
+        })
+      }
+      
+     
     </div>
   </Swiper>
+  <Lightbox
+        className="img-fluid"
+        open={isOpenimg.openingState}
+        plugins={[Fullscreen]}
+        index={isOpenimg.openingIndex}
+        close={() => setOpenimg(false)}
+        styles={{ container: { backgroundColor: "rgba(0, 0, 0, .9)" } }}
+        slides={gallaryData.map(function(elem) { 
+            return { src: elem.imageBig } 
+        })}
+      />
 </div>
 
   )

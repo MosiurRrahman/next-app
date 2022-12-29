@@ -5156,9 +5156,6 @@ header.style-3 .main-menu ul li.menu-item-has-children > i {
 .gallery-slider1 {
   cursor: -webkit-grab;
 }
-.gallery-slider1 .gallery2-img {
-  z-index: 99;
-}
 .gallery-slider1 .swiper-slide:nth-child(odd) {
   transform: scaleX(1.1);
 }
@@ -6110,10 +6107,10 @@ footer .footer-btm .privacy-policy p a:hover {
 .h2-special-gallery .h2-gallery {
   padding: 15px 0 0px;
 }
-.h2-special-gallery .portfolio-img .gallery-img {
+.h2-special-gallery .gallery-img {
   position: relative;
 }
-.h2-special-gallery .portfolio-img .gallery-img .overlay {
+.h2-special-gallery .gallery-img .overlay {
   position: absolute;
   left: 0;
   top: 0;
@@ -6127,28 +6124,22 @@ footer .footer-btm .privacy-policy p a:hover {
   transform-origin: right;
   transition: transform 0.4s ease-in;
 }
-.h2-special-gallery .portfolio-img .gallery-img:hover .overlay {
+.h2-special-gallery .gallery-img:hover .overlay {
   transform: scaleX(1);
   transform-origin: left;
 }
-.h2-special-gallery .swiper-slide:nth-child(odd) .portfolio-img {
-  transform: scaleX(0.9);
-}
-.h2-special-gallery .swiper-slide:nth-child(odd) .portfolio-img .gallery-img {
+.h2-special-gallery .swiper-slide:nth-child(odd) .gallery-img {
   transform: scaleX(0.9);
   overflow: hidden;
 }
-.h2-special-gallery .swiper-slide:nth-child(odd) .portfolio-img .gallery-img > img {
+.h2-special-gallery .swiper-slide:nth-child(odd) .gallery-img > img {
   min-height: 270px;
 }
-.h2-special-gallery .swiper-slide:nth-child(even) .portfolio-img {
-  transform: scaleX(1.2);
-}
-.h2-special-gallery .swiper-slide:nth-child(even) .portfolio-img .gallery-img {
+.h2-special-gallery .swiper-slide:nth-child(even) .gallery-img {
   margin-top: -15px;
   transform: scaleX(1.2);
 }
-.h2-special-gallery .swiper-slide:nth-child(even) .portfolio-img .gallery-img > img {
+.h2-special-gallery .swiper-slide:nth-child(even) .gallery-img > img {
   min-height: 300px;
 }
 
@@ -6297,7 +6288,7 @@ footer .footer-btm .privacy-policy p a:hover {
 .h2-reservarion-area form .form-inner input:focus {
   border: 1px solid rgba(191, 148, 68, 0.5);
 }
-.h2-reservarion-area form .form-inner button {
+.h2-reservarion-area form .form-inner button[type=submit] {
   width: 100%;
   border-radius: 50px;
   background-color: var(--primary-color1);
@@ -6311,7 +6302,7 @@ footer .footer-btm .privacy-policy p a:hover {
   position: relative;
   overflow: hidden;
 }
-.h2-reservarion-area form .form-inner button:before {
+.h2-reservarion-area form .form-inner button[type=submit]:before {
   transition: 0.5s all ease;
   position: absolute;
   top: 0;
@@ -6323,19 +6314,19 @@ footer .footer-btm .privacy-policy p a:hover {
   background-color: var(--white);
   z-index: -1;
 }
-.h2-reservarion-area form .form-inner button:hover {
+.h2-reservarion-area form .form-inner button[type=submit]:hover {
   color: var(--primary-color1);
 }
-.h2-reservarion-area form .form-inner button:hover i::before {
+.h2-reservarion-area form .form-inner button[type=submit]:hover i::before {
   content: "\f134";
 }
-.h2-reservarion-area form .form-inner button:hover:before {
+.h2-reservarion-area form .form-inner button[type=submit]:hover:before {
   transition: 0.5s all ease;
   left: 0;
   right: 0;
   opacity: 1;
 }
-.h2-reservarion-area form .form-inner button:focus:before {
+.h2-reservarion-area form .form-inner button[type=submit]:focus:before {
   transition: 0.5s all ease;
   left: 0;
   right: 0;
@@ -12005,7 +11996,7 @@ footer .footer-btm .privacy-policy p a:hover {
 }
 
 .quantity input {
-  width: 70px;
+  width: 25px;
   height: 42px;
   line-height: 1.65;
   float: left;
@@ -12604,4 +12595,41 @@ footer .footer-btm .privacy-policy p a:hover {
   font-weight: 400;
   font-size: 18px;
   font-family: var(--font-Jost);
+}
+
+.form-inner.date-icon .react-datepicker__tab-loop {
+  position: relative !important;
+  z-index: 9999 !important;
+}
+.form-inner.date-icon .react-datepicker__triangle {
+  display: none !important;
+}
+.form-inner.date-icon .react-datepicker__current-month {
+  margin-top: 0;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.944rem;
+  background: #bf9444;
+  padding: 6px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.form-inner.date-icon .react-datepicker__navigation--next, .form-inner.date-icon .react-datepicker__navigation--previous {
+  top: 17px;
+}
+.form-inner.date-icon .react-datepicker__day {
+  display: inline-block;
+  width: 1.7rem;
+  line-height: 1.7rem;
+  text-align: center;
+  margin: 0.166rem;
+  border: 1px solid #ddd;
+}
+.form-inner.date-icon .react-datepicker__day-name {
+  border: none !important;
+}
+.form-inner.date-icon .react-datepicker__day--selected {
+  background-color: #bf9444;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

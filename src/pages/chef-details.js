@@ -1,4 +1,5 @@
 import React from "react";
+import CountUp from 'react-countup';
 import Breadcrumb from "../components/common/Breadcrumb";
 import Layout from "../layout/Layout";
 
@@ -99,7 +100,7 @@ function ChefDetails() {
                 </div>
                 <div className="coundown">
                   <div className="d-flex align-items-center gap-2">
-                    <h3 className="odometer odometer-auto-theme" data-odometer-final={15}>0</h3>
+                  <h3 className="odometer"><CountUp end={100} /></h3>
                     <span>+</span>
                   </div>
                   <p>Years Of Expert</p>
@@ -113,7 +114,7 @@ function ChefDetails() {
                 </div>
                 <div className="coundown">
                   <div className="d-flex align-items-center gap-2">
-                    <h3 className="odometer odometer-auto-theme" data-odometer-final={70}>0</h3>
+                  <h3 className="odometer"><CountUp end={100} /></h3>
                     <span>+</span>
                   </div>
                   <p>Award Wining</p>
@@ -127,7 +128,7 @@ function ChefDetails() {
                 </div> 
                 <div className="coundown">
                   <div className="d-flex align-items-center gap-2">
-                    <h3 className="odometer odometer-auto-theme" data-odometer-final={100}>0</h3>
+                  <h3 className="odometer"><CountUp end={100} /></h3>
                     <span>+</span>
                   </div>
                   <p>Client Rating</p>
@@ -141,7 +142,7 @@ function ChefDetails() {
                 </div>
                 <div className="coundown">
                   <div className="d-flex align-items-center gap-2">
-                    <h3 className="odometer odometer-auto-theme" data-odometer-final={50}>0</h3>
+                  <h3 className="odometer"><CountUp end={100} /></h3>
                     <span>+</span>
                   </div>
                   <p>Golden Clients</p>

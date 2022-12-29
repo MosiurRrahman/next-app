@@ -5249,9 +5249,7 @@ header.style-3 {
 
 .gallery-slider1{
     cursor: -webkit-grab;
-    .gallery2-img{
-        z-index: 99;
-    }
+  
     .swiper-slide{
         &:nth-child(odd){
             transform: scaleX(1.1);
@@ -6159,35 +6157,31 @@ footer{
     .h2-gallery{
         padding: 15px 0 0px;
     }
-    .portfolio-img{
-        .gallery-img{
-            position: relative;
+    .gallery-img{
+        position: relative;
+        .overlay{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(359.58deg, #002133 0.39%, rgba(0, 33, 51, 0) 51.47%);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform .4s ease-in,-webkit-transform .4s ease-in;
+        }
+        &:hover{
             .overlay{
-                position: absolute;
-                left: 0;
-                top: 0;
-                height: 100%;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: linear-gradient(359.58deg, #002133 0.39%, rgba(0, 33, 51, 0) 51.47%);
-                transform: scaleX(0);
-                transform-origin: right;
-                transition: transform .4s ease-in,-webkit-transform .4s ease-in;
-            }
-            &:hover{
-                .overlay{
-                    transform: scaleX(1);
-                    transform-origin: left;
-                }
+                transform: scaleX(1);
+                transform-origin: left;
             }
         }
     }
     .swiper-slide{
         &:nth-child(odd){
-            .portfolio-img{
-                transform: scaleX(0.9);
                 .gallery-img{
                     transform: scaleX(0.9);
                     overflow: hidden;
@@ -6196,12 +6190,9 @@ footer{
                         }
                         
                 }
-            }
 
         }
         &:nth-child(even){
-            .portfolio-img{
-                transform: scaleX(1.2);
                 .gallery-img{
                     margin-top: -15px;
                     transform: scaleX(1.2);
@@ -6209,7 +6200,6 @@ footer{
                         min-height: 300px;
                     }
                 }
-            }
         }
     }
 }
@@ -6355,7 +6345,8 @@ footer{
                 }
             }
             button{
-                width: 100%;
+            &[type="submit"]
+                {width: 100%;
                 border-radius: 50px;
                 background-color: var(--primary-color1);
                 @include font(1.125rem,500,var(--white));
@@ -6401,7 +6392,7 @@ footer{
                     right:0;
                     opacity:1;
                   }
-                }
+                }}
             }
             &.date-icon{
                 position: relative;
@@ -11789,7 +11780,7 @@ footer{
 }
 
 .quantity input {
-    width: 70px;
+    width: 25px;
     height: 42px;
     line-height: 1.65;
     float: left;
@@ -12449,4 +12440,44 @@ footer{
         }
     }
     
+}
+
+.form-inner.date-icon{
+    .react-datepicker__tab-loop{
+        position: relative !important;
+        z-index: 9999 !important;
+    }
+    .react-datepicker__triangle{
+        display: none !important;
+    }
+    .react-datepicker__current-month{
+        margin-top: 0;
+        color: #000;
+        font-weight: bold;
+        font-size: 0.944rem;
+        background: #bf9444;
+        padding: 6px;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 5px;
+    }
+    .react-datepicker__navigation--next,.react-datepicker__navigation--previous{
+        top: 17px;
+    }
+    .react-datepicker__day{
+        // color: var(--text-color1);
+        display: inline-block;
+        width: 1.7rem;
+        line-height: 1.7rem;
+        text-align: center;
+        margin: 0.166rem;
+        border: 1px solid #ddd;
+    }
+    .react-datepicker__day-name{
+        border: none !important;
+    }
+    .react-datepicker__day--selected{
+        background-color: #bf9444;
+        color: #fff;
+    }
 }

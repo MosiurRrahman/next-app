@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Pagination ,EffectFade} from "swiper";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import gallaryData from '../../data/gallery2.json';
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 SwiperCore.use([Navigation, Pagination, Autoplay,EffectFade]);
 function Gallery1() {
+  const [isOpenimg, setOpenimg] = useState({
+    openingState: false,
+    openingIndex: 0,
+  });
     const gallarySlider = {
         slidesPerView: "auto",
         spaceBetween: 37,
@@ -63,73 +71,41 @@ function Gallery1() {
     <div className="row">
       <Swiper {...gallarySlider} className="swiper gallery-slider1">
         <div className="swiper-wrapper">
-          <SwiperSlide className="swiper-slide">
-            <a href="assets/images/bg/gallery-big-1.png" data-fancybox="gallery" className="gallery2-img">
-              <div className="gallery-wrap">
-                <img className="img-fluid" src="assets/images/bg/gallery-1.png" alt="" />
-                <div className="overlay d-flex align-items-center justify-content-center">
-                  <div className="items-content text-center">
-                    <span><img className="left-vec" src="assets/images/icon/shape-white1.svg" alt="sub-title-vec" />Cooking<img className="right-vec" src="assets/images/icon/shape-white1.svg" alt="sub-title-vec" /></span>
-                    <h3>Spicy Beef</h3>
+          {
+            gallaryData.map((data, index)=>{
+              const {id, imageSmalll,slideCategoryTitle,slideTitle} = data;
+              return (
+                <SwiperSlide key={id} className="swiper-slide">
+                
+                  <div className="gallery-wrap" onClick={() => setOpenimg({ openingState: true, openingIndex:index })}>
+                    <img className="img-fluid" src={imageSmalll} alt="" />
+                    <div className="overlay d-flex align-items-center justify-content-center">
+                      <div className="items-content text-center">
+                        <span><img className="left-vec" src="assets/images/icon/shape-white1.svg" alt="sub-title-vec" />{slideCategoryTitle}<img className="right-vec" src="assets/images/icon/shape-white1.svg" alt="sub-title-vec" /></span>
+                        <h3>{slideTitle}</h3>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </a>
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <a href="assets/images/bg/gallery-big-2.png" data-fancybox="gallery" className="gallery2-img">
-              <div className="gallery-wrap">
-                <img className="img-fluid" src="assets/images/bg/gallery-2.png" alt="" />
-                <div className="overlay d-flex align-items-center justify-content-center">
-                  <div className="items-content text-center">
-                    <span><img className="left-vec" src="assets/images/icon/shape-white1.svg" alt="sub-title-vec" />Restaurent<img className="right-vec" src="assets/images/icon/shape-white1.svg" alt="sub-title-vec" /></span>
-                    <h3>Restho Interior Part</h3>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <a href="assets/images/bg/gallery-big-3.png" data-fancybox="gallery" className="gallery2-img">
-              <div className="gallery-wrap">
-                <img className="img-fluid" src="assets/images/bg/gallery-3.png" alt="" />
-                <div className="overlay d-flex align-items-center justify-content-center">
-                  <div className="items-content text-center">
-                    <span><img className="left-vec" src="assets/images/icon/shape-white1.svg" alt="sub-title-vec" />Cooking<img className="right-vec" src="assets/images/icon/shape-white1.svg" alt="sub-title-vec" /></span>
-                    <h3>Delicious Food</h3>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <a href="assets/images/bg/gallery-big-4.png" data-fancybox="gallery" className="gallery2-img">
-              <div className="gallery-wrap">
-                <img className="img-fluid" src="assets/images/bg/gallery-4.png" alt="" />
-                <div className="overlay d-flex align-items-center justify-content-center">
-                  <div className="items-content text-center">
-                    <span><img className="left-vec" src="assets/images/icon/shape-white1.svg" alt="sub-title-vec" />Cooking<img className="right-vec" src="assets/images/icon/shape-white1.svg" alt="sub-title-vec" /></span>
-                    <h3>Chef Cooking Vegetarian</h3>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <a href="assets/images/bg/gallery-big-5.png" data-fancybox="gallery" className="gallery2-img">
-              <div className="gallery-wrap">
-                <img className="img-fluid" src="assets/images/bg/gallery-5.png" alt="" />
-                <div className="overlay d-flex align-items-center justify-content-center">
-                  <div className="items-content text-center">
-                    <span><img className="left-vec" src="assets/images/icon/shape-white1.svg" alt="sub-title-vec" />Cooking<img className="right-vec" src="assets/images/icon/shape-white1.svg" alt="sub-title-vec" /></span>
-                    <h3>Chef Cooking Vegetarian</h3>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </SwiperSlide>
+             
+              </SwiperSlide>
+              )
+            })
+          }
+       
+    
         </div>
       </Swiper>
+      <Lightbox
+        className="img-fluid"
+        open={isOpenimg.openingState}
+        plugins={[Fullscreen]}
+        index={isOpenimg.openingIndex}
+        close={() => setOpenimg(false)}
+        styles={{ container: { backgroundColor: "rgba(0, 0, 0, .9)" } }}
+        slides={gallaryData.map(function(elem) { 
+            return { src: elem.imageBig } 
+        })}
+      />
     </div>
   </div>
 </div>
