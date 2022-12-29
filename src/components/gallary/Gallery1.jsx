@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Pagination ,EffectFade} from "swiper";
+import gallaryData from '../../data/gallery2.json';
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import gallaryData from '../../data/gallery2.json';
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 SwiperCore.use([Navigation, Pagination, Autoplay,EffectFade]);
 function Gallery1() {
@@ -16,9 +16,9 @@ function Gallery1() {
         spaceBetween: 37,
         loop: true,
         speed:1500,
-        autoplay: {
-            delay: 2000,
-        },
+        // autoplay: {
+        //     delay: 2000,
+        // },
         pagination: {
             el: ".swiper-pagination",
             clickable: true,

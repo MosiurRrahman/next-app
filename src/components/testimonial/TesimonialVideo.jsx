@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ModalVideo from 'react-modal-video'
 
+import "react-modal-video/css/modal-video.css";
 function TesimonialVideo() {
+  const [isOpen, setOpen] = useState(false)
   return (
     <div className="testimonial-video-area mb-120">
   <div className="container">
@@ -9,12 +12,16 @@ function TesimonialVideo() {
         <div className="testi-video-wrap">
           <img className="img-fluid" src="assets/images/bg/testi-video-bg.png" alt="" />
           <div className="video-icon">
-            <a className="gallery2-img" data-fancybox="gallery" href="https://www.youtube.com/watch?v=xwlqHOVklyk&ab_channel=JoomlaTemplate"><i className="bi bi-play-circle" /></a>
+            <a className="gallery2-img" data-fancybox="gallery"  onClick={()=> setOpen(true)}><i className="bi bi-play-circle" /></a>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <React.Fragment>
+			<ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="L61p2uyiMSo" onClose={() => setOpen(false)}  />
+
+		</React.Fragment>
 </div>
 
   )

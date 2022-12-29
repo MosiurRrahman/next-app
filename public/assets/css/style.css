@@ -9901,6 +9901,7 @@ footer .footer-btm .privacy-policy p a:hover {
   color: var(--white);
   opacity: 0.7;
   transition: 0.35s;
+  cursor: pointer;
 }
 .chef-video-area .video-img .video-content .video-icon a:hover {
   color: var(--primary-color1);

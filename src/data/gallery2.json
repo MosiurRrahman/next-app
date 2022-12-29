@@ -6,7 +6,8 @@
         "sliderImage":"assets/images/bg/h2-gallery-1.png",
         "category":"food",
         "slideCategoryTitle":"Cooking",
-        "slideTitle":"Chef Cooking Vegetarian"
+        "slideTitle":"Chef Cooking Vegetarian",
+        "categorySlug": "food"
     }
     
     ,
@@ -16,6 +17,7 @@
         "imageSmalll":"assets/images/bg/2col-gallery-02.png",
         "sliderImage":"assets/images/bg/h2-gallery-2.png",
         "category":"interior",
+        "categorySlug": "interior",
         "slideCategoryTitle":"Cooking",
         "slideTitle":"Chef Cooking Vegetarian"
     }
@@ -26,6 +28,7 @@
         "sliderImage":"assets/images/bg/h2-gallery-3.png",
         "imageSmalll":"assets/images/bg/2col-gallery-03.png",
         "category":"traditions",
+        "categorySlug": "traditions",
         "slideCategoryTitle":"Cooking",
         "slideTitle":"Chef Cooking Vegetarian"
     },
@@ -35,6 +38,7 @@
         "sliderImage":"assets/images/bg/h2-gallery-4.png",
         "imageSmalll":"assets/images/bg/2col-gallery-04.png",
         "category":"privateevent",
+        "categorySlug": "privateevent",
         "slideCategoryTitle":"Cooking",
         "slideTitle":"Chef Cooking Vegetarian"
     }
@@ -45,6 +49,7 @@
         "sliderImage":"assets/images/bg/h2-gallery-5.png",
         "imageSmalll":"assets/images/bg/2col-gallery-05.png",
         "category":"eatingplace",
+        "categorySlug": "eatingplace",
         "slideCategoryTitle":"Cooking",
         "slideTitle":"Chef Cooking Vegetarian"
     }
@@ -55,6 +60,7 @@
         "sliderImage":"assets/images/bg/h2-gallery-6.png",
         "imageSmalll":"assets/images/bg/2col-gallery-06.png",
         "category":"interior",
+        "categorySlug": "interior",
         "slideCategoryTitle":"Cooking",
         "slideTitle":"Chef Cooking Vegetarian"
     }
@@ -66,6 +72,7 @@
         "sliderImage":"assets/images/bg/h2-gallery-7.png",
         "imageSmalll":"assets/images/bg/2col-gallery-06.png",
         "category":"interior",
+        "categorySlug": "interior",
         "slideCategoryTitle":"Cooking",
         "slideTitle":"Chef Cooking Vegetarian"
     }

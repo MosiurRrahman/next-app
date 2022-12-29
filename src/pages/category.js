@@ -10,6 +10,7 @@ function Category() {
   const categoryCard = new Map([
     ...categodyCardData.map( categoryData => [categoryData.category, categoryData.categorySlug])
   ]);
+  console.log(categoryCard);
 console.log(categoryCard.category);
   return (
     <Layout>

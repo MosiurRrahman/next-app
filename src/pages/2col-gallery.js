@@ -18,6 +18,9 @@ function GalleryTwoColumnLayout() {
       });
       setItems(updateItems);
     };
+    const categoryCard = new Map([
+      ...gallaryData.map( categoryData => [categoryData.category, categoryData.categorySlug])
+    ]);
   return (
     <Layout>
         <Breadcrumb pageName="2 Columns Gallery" pageTitle="2 Columns Gallery"/>
@@ -27,12 +30,23 @@ function GalleryTwoColumnLayout() {
             <div className="col-lg-12 mb--70">
                 <div className="filters filter-button-group">
                 <ul className="d-flex justify-content-center flex-wrap">
-                    <li onClick={() => setItems(gallaryData)} className="active" data-filter="*">All</li>
+                    
+                    {/* <li onClick={() => setItems(gallaryData)} className="active" data-filter="*">All</li>
                     <li onClick={() => filterItem("food")} className="">Food</li>
                     <li onClick={() => filterItem("privateevent")} className="">Private Event</li>
                     <li onClick={() => filterItem("interior")} className="">Interior</li>
                     <li onClick={() => filterItem("eatingplace")} className="">Eating Place</li>
                     <li onClick={() => filterItem("traditions")} className="">Traditions</li>
+                    <br />
+                    <br />
+                    <br />
+                    <br /> */}
+                    {
+                      [...categoryCard].map((listItem, index)=>{
+                        console.log(listItem);
+                        return(<li key={listItem[0]} onClick={() => filterItem("food")} className={index===0?"activek":"gh"}>{listItem[1]}</li>)
+                      })
+                    }
                 </ul>
                 </div>
             </div>
