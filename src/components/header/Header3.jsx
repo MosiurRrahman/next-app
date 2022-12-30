@@ -69,13 +69,13 @@ function Header3() {
       <div className="header-logo">
         <Link legacyBehavior href="/"><a><img alt="image" className="img-fluid" src="assets/images/header2-logo.svg" /></a></Link>
       </div>
-      <div className="main-menu">
+      <div className={state.mobileMenuState == true ? "main-menu show-menu" : "main-menu"}>
         <div className="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
           <div className="mobile-logo-wrap">
-            <Link href="/" legacyBehavior><a><img alt="image" src="assets/images/header1-logo.svg" /></a></Link>
+            <Link href="/" legacyBehavior><a><img alt="image" src="assets/images/header2-logo.svg" /></a></Link>
           </div>
-          <div className="menu-close-btn">
-            <i className="bi bi-x-lg text-white" />
+          <div className="menu-close-btn" onClick={() => dispatch({  type: "mobileMenu", isMobileMenu: false })}>
+            <i className="bi bi-x-lg" />
           </div>
         </div>
         <ul className="menu-list">
@@ -186,7 +186,7 @@ function Header3() {
           </div>
         </div>
         <Link href="/reservation" legacyBehavior><a  className="primary-btn6 btn-md">Find Reservation</a></Link>
-        <div className="sidebar-button mobile-menu-btn ">
+        <div className="sidebar-button mobile-menu-btn " onClick={() => dispatch({ type: "mobileMenu", isMobileMenu: true }) }>
           <i className="bi bi-list" />
         </div>
       </div>
