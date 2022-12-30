@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router';
-import React, { useReducer, useRef } from 'react'
+import React, { useEffect, useReducer, useRef } from 'react'
 /*---------Using reducer mange the active or inactive menu----------*/
 const initialState = { activeMenu: ""  , mobileMenuState: false, navState: false, };
 function reducer(state, action) {
@@ -21,10 +21,26 @@ function reducer(state, action) {
       return { activeMenu: "" };
   }
 }
+
 function Header() {
   const currentRoute = useRouter().pathname;
-
   const [state, dispatch] = useReducer(reducer, initialState);
+ // Sticky Menu Area
+  useEffect(() => {
+    window.addEventListener("scroll", isSticky);
+    return () => {
+      window.removeEventListener("scroll", isSticky);
+    };
+  });
+
+  const isSticky = (e) => {
+    const header = document.querySelector("header");
+    const scrollTop = window.scrollY;
+    scrollTop >= 100
+      ? header.classList.add("sticky")
+      : header.classList.remove("sticky");
+  };
+
   return (
     <header className="header-area style-1 bg-color2">
     <div className="container-fluid d-flex justify-content-between align-items-center">

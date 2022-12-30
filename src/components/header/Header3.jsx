@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router';
-import React, { useReducer } from 'react'
+import React, { useEffect, useReducer } from 'react'
 const initialState = { activeMenu: ""  , mobileMenuState: false, navState: false, };
 function reducer(state, action) {
   switch (action.type) {
@@ -24,6 +24,22 @@ function Header3() {
   const currentRoute = useRouter().pathname;
 
   const [state, dispatch] = useReducer(reducer, initialState);
+   // Sticky Menu Area
+   useEffect(() => {
+    window.addEventListener("scroll", isSticky);
+    return () => {
+      window.removeEventListener("scroll", isSticky);
+    };
+  });
+
+  const isSticky = (e) => {
+    const header = document.querySelector("header");
+    const scrollTop = window.scrollY;
+    scrollTop >= 10
+      ? header.classList.add("sticky")
+      : header.classList.remove("sticky");
+  };
+
   return (
     <>
     <div className="top-bar three">

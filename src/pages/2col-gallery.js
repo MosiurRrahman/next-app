@@ -7,20 +7,29 @@ import "yet-another-react-lightbox/styles.css";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 
 function GalleryTwoColumnLayout() {
-    const [items, setItems] = useState(gallaryData);
-    const [isOpenimg, setOpenimg] = useState({
-        openingState: false,
-        openingIndex: 0,
-      });
-    const filterItem = (catagoryItem) => {
-      const updateItems = gallaryData.filter((curentElemet) => {
-        return curentElemet.category === catagoryItem;
-      });
-      setItems(updateItems);
-    };
-    const categoryCard = new Map([
-      ...gallaryData.map( categoryData => [categoryData.category, categoryData.categorySlug])
-    ]);
+  const [items, setItems] = useState(gallaryData);
+  const [CategoryActiveSlug, setCategoryActiveSlug] = useState(null);
+
+  const [isOpenimg, setOpenimg] = useState({
+      openingState: false,
+      openingIndex: 0,
+    });
+  const filterItem = (catagoryItem) => {
+    setCategoryActiveSlug(catagoryItem);
+    const updateItems = gallaryData.filter((curentElemet) => {
+      return curentElemet.categorySlug === catagoryItem;
+    });
+    setItems(updateItems);
+  };
+  const setAllItems = ( allItems ) => {
+    setCategoryActiveSlug(allItems);
+    return setItems(gallaryData);
+  }
+
+  const categoryCard = new Map([
+    ...gallaryData.map( categoryData => [categoryData.category, categoryData.categorySlug])
+  ]);
+
   return (
     <Layout>
         <Breadcrumb pageName="2 Columns Gallery" pageTitle="2 Columns Gallery"/>
@@ -30,24 +39,17 @@ function GalleryTwoColumnLayout() {
             <div className="col-lg-12 mb--70">
                 <div className="filters filter-button-group">
                 <ul className="d-flex justify-content-center flex-wrap">
-                    
-                    {/* <li onClick={() => setItems(gallaryData)} className="active" data-filter="*">All</li>
-                    <li onClick={() => filterItem("food")} className="">Food</li>
-                    <li onClick={() => filterItem("privateevent")} className="">Private Event</li>
-                    <li onClick={() => filterItem("interior")} className="">Interior</li>
-                    <li onClick={() => filterItem("eatingplace")} className="">Eating Place</li>
-                    <li onClick={() => filterItem("traditions")} className="">Traditions</li>
-                    <br />
-                    <br />
-                    <br />
-                    <br /> */}
-                    {
-                      [...categoryCard].map((listItem, index)=>{
-                        console.log(listItem);
-                        return(<li key={listItem[0]} onClick={() => filterItem("food")} className={index===0?"activek":"gh"}>{listItem[1]}</li>)
-                      })
-                    }
-                </ul>
+                      <li onClick={ () => setAllItems('all')} className={ CategoryActiveSlug == 'all' || CategoryActiveSlug == null ? 'active' : '' } data-filter="*">All</li>
+                      {
+                        [...categoryCard].map( ( key ) => {
+                          return(
+                              <li  key={key[1]} onClick={() => filterItem(`${key[1]}`)} className={ key[1] == CategoryActiveSlug ? 'active' : '' } >{ key[0] }</li>
+                          )
+                        })
+                      }
+                      
+                      
+                  </ul>
                 </div>
             </div>
             </div>
