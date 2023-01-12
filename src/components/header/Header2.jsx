@@ -1,187 +1,449 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router';
-import React, { useEffect, useReducer } from 'react'
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React, { useEffect, useReducer, useRef } from "react";
 /*---------Using reducer mange the active or inactive menu----------*/
-const initialState = { activeMenu: ""  , mobileMenuState: false, navState: false, };
+const initialState = {
+  activeMenu: "",
+  mobileMenuState: false,
+  navState: false,
+  scrollY: 0,
+};
 function reducer(state, action) {
   switch (action.type) {
-    case "homeOne":
-      return {...state, activeMenu: "homeOne" ,};
-    case "suits":
-      return {...state, activeMenu: "suits" };
+    case "home":
+      return { ...state, activeMenu: "home" };
     case "blog":
-      return {...state, activeMenu: "blog" };
-    case "menu":
-      return {...state, activeMenu: "menu" };
+      return { ...state, activeMenu: "blog" };
+    case "shop":
+      return { ...state, activeMenu: "shop" };
+    case "services":
+      return { ...state, activeMenu: "services" };
     case "pages":
       return { ...state, activeMenu: "pages" };
-      case "mobileMenu":
-        return { ...state, mobileMenuState: action.isMobileMenu };
+    case "mobileMenu":
+      return { ...state, mobileMenuState: action.isMobileMenu };
+    case "setScrollY":
+      return { ...state, scrollY: action.payload };
     default:
-      return { activeMenu: "" };
+      throw new Error();
   }
 }
+
 function Header2() {
   const currentRoute = useRouter().pathname;
-
   const [state, dispatch] = useReducer(reducer, initialState);
-   // Sticky Menu Area
-   useEffect(() => {
-    window.addEventListener("scroll", isSticky);
-    return () => {
-      window.removeEventListener("scroll", isSticky);
-    };
-  });
-
-  const isSticky = (e) => {
-    const header = document.querySelector("header");
-    const scrollTop = window.scrollY;
-    scrollTop >= 100
-      ? header.classList.add("sticky")
-      : header.classList.remove("sticky");
+  const headerRef = useRef(null);
+  const handleScroll = () => {
+    const { scrollY } = window;
+    dispatch({ type: "setScrollY", payload: scrollY });
   };
 
-  return (
-    <div>
-  <div className="top-bar two">
-    <div className="container-lg container-fluid ">
-      <div className="row">
-        <div className="col-lg-5 col-md-5 d-flex align-items-center justify-content-md-start justify-content-center">
-          <div className="open-time">
-            <p><span>Opening Hour:</span> 9.00 am to 10.00 pm</p>
-          </div>
-        </div>
-        <div className="col-lg-7 col-md-7 d-flex justify-content-end">
-          <div className="contact-info">
-            <ul>
-              <li><a href="mailto:info@example.com"><i className="bi bi-envelope" /> info@example.com</a></li>
-              <li><a><i className="bi bi-geo-alt" />Road-01, Block-B, West London City</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  {/* ========== Top Bar End============= */}
-  {/* ========== header============= */}
-  <header className="header-area style-2">
-    <div className="container-fluid d-flex justify-content-between align-items-center">
-      <div className="header-logo">
-        <Link href="/" legacyBehavior><a><img alt="image" className="img-fluid" src="assets/images/header2-logo.svg" /></a></Link>
-      </div>
-      <div className={state.mobileMenuState == true ? "main-menu show-menu" : "main-menu"}>
-        <div className="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
-          <div className="mobile-logo-wrap">
-            <Link href="/" legacyBehavior><a><img alt="image" src="assets/images/header1-logo.svg" /></a></Link>
-          </div>
-          <div className="menu-close-btn" onClick={() => dispatch({  type: "mobileMenu", isMobileMenu: false })}>
-            <i className="bi bi-x-lg text-white" />
-          </div>
-        </div>
-        <ul className="menu-list">
-          <li className="menu-item-has-children">
-            <a href="#"  className={currentRoute==="/"?"drop-down active":"drop-down"} >Home</a><i onClick={() => dispatch({ type: "homeOne"})} className={state.activeMenu === "homeOne"?"bi bi-plus dropdown-icon active":"bi bi-plus dropdown-icon"}  />
-            <ul   className={
-                   state.activeMenu === "homeOne"
-                   ? "sub-menu  d-block"
-                   : "sub-menu d-xl-block d-none"
-                }>
-              <li><Link  href="/" className={currentRoute==="/"?"active":"disable"}>Home One</Link></li>
-              <li><Link href="/index2"  className={currentRoute==="/index2"?"active":"disable"}>Home Two</Link></li>
-              <li><Link href="/index3" className={currentRoute==="/index3"?"active":"disable"}>Home Three</Link></li>
-            </ul>
-          </li>
-          <li><Link href="/about" className={currentRoute === "/about"? "active":"disable"} onClick={() => dispatch({ type: "about" })}>About</Link></li>
-          <li className="menu-item-has-children">
-            <Link href="/menu1" className={currentRoute==="/menu1"?"drop-down active":"drop-down"}>Menu</Link><i onClick={() => dispatch({ type: "menu"})} className={state.activeMenu === "menu"?"bi bi-plus dropdown-icon active":"bi bi-plus dropdown-icon"} />
-            <ul className={
-                   state.activeMenu === "menu"
-                   ? "sub-menu  d-block"
-                   : "sub-menu d-xl-block d-none"
-                }>
-              <li><Link href="/menu1" className={currentRoute === "/menu1"? "active":"disable"}>Menu List-01</Link></li>
-              <li><Link href="/menu2"className={currentRoute === "/menu2"? "active":"disable"}>Menu List-02</Link></li>
-              <li><Link href="/3col-menu"className={currentRoute === "/3col-menu"? "active":"disable"}>3 Columns Menu</Link></li>
-            </ul>
-          </li>
-          <li className="menu-item-has-children">
-            <a href="#" className="drop-down">Pages</a><i onClick={() => dispatch({ type: "pages"})} className={state.activeMenu === "pages"?"bi bi-plus dropdown-icon active":"bi bi-plus dropdown-icon"} />
-            <ul className={
-                   state.activeMenu === "pages"
-                   ? "sub-menu  d-block"
-                   : "sub-menu d-xl-block d-none"
-                }>
-              <li><Link href="/category" className={currentRoute === "/category"? "active":"disable"}>Food Category</Link></li>
-              <li><Link href="/reservation" className={currentRoute === "/reservation"? "active":"disable"}>Reservation</Link></li>
-              <li><Link href="/2col-gallery"className={currentRoute === "/2col-gallery"? "active":"disable"}>Gallery</Link><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
-                <i className="d-lg-none d-flex bi bi-chevron-down dropdown-icon" />
-                <ul className="sub-menu">
-                  <li><Link href="/2col-gallery" className={currentRoute === "/2col-gallery"? "active":"disable"}>2 Columns Gallery</Link></li>
-                  <li><Link href="/3col-gallery" className={currentRoute === "/3col-gallery"? "active":"disable"}>3 Columns Gallery</Link></li>
-                </ul>
-              </li>
-              <li><a href="#" className={currentRoute === "/chef-expertis"? "active":"disable"}>Chef</a><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
-                <i className="d-lg-none d-flex bi bi-chevron-down dropdown-icon" />
-                <ul className="sub-menu">
-                  <li><Link href="/chef-expertis" className={currentRoute === "/chef-expertis"? "active":"disable"}>Chef Experties</Link></li>
-                  <li><Link href="/chef-details" className={currentRoute === "/chef-details"? "active":"disable"}>Chef Details</Link></li>
-                </ul>
-              </li>
-              <li><Link href="/shop" className={currentRoute === "/shop"? "active":"disable"}>Shop</Link><i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
-                <i className="d-lg-none d-flex bi bi-chevron-down dropdown-icon" />
-                <ul className="sub-menu">
-                  <li><Link href="/shop" className={currentRoute === "/shop"? "active":"disable"}>Shop</Link></li>
-                  <li><Link href="/shop-details" className={currentRoute === "/shop-details"? "active":"disable"}>Shop Details</Link></li>
-                  <li><Link href="/cart" className={currentRoute === "/cart"? "active":"disable"}>Cart</Link></li>
-                  <li><Link href="/check-out" className={currentRoute === "/check-out"? "active":"disable"}>Checkout</Link></li>
-                </ul>
-              </li>
-              <li><Link href="/faq">Faq</Link></li>
-              <li><Link href="/error">Error</Link></li>
-            </ul>
-          </li>
-          <li className="menu-item-has-children">
-            <a href="#">Blog</a><i onClick={() => dispatch({ type: "blog"})} className={state.activeMenu === "blog"?"bi bi-plus dropdown-icon active":"bi bi-plus dropdown-icon"} />
-            <ul className={
-                   state.activeMenu === "blog"
-                   ? "sub-menu  d-block"
-                   : "sub-menu d-xl-block d-none"
-                }>
-              <li><Link href="/blog-grid">Blog Grid</Link></li>
-              <li><Link href="/blog-standard">Blog Standard</Link></li>
-              <li><Link href="/blog-details">Blog Details</Link></li>
-            </ul>
-          </li>
-          <li><Link  href="/contact" className={currentRoute === "/contact"? "active":"disable"} >Contact</Link></li>
-        </ul>
-        <div className="hotline d-lg-none d-flex mb-30">
-          <div className="hotline-icon">
-            <svg width={26} height={26} viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20.5488 16.106C20.0165 15.5518 19.3745 15.2554 18.694 15.2554C18.0191 15.2554 17.3716 15.5463 16.8173 16.1005L15.0833 17.8291C14.9406 17.7522 14.7979 17.6809 14.6608 17.6096C14.4632 17.5108 14.2766 17.4175 14.1175 17.3187C12.4932 16.2871 11.0171 14.9426 9.6013 13.2031C8.91536 12.3361 8.45441 11.6063 8.11968 10.8655C8.56965 10.4539 8.9867 10.0259 9.39277 9.61431C9.54642 9.46066 9.70007 9.30152 9.85372 9.14787C11.0061 7.9955 11.0061 6.50291 9.85372 5.35054L8.35564 3.85246C8.18553 3.68234 8.00993 3.50674 7.8453 3.33115C7.51606 2.99092 7.17034 2.63972 6.81366 2.31047C6.28137 1.78368 5.64483 1.50381 4.97535 1.50381C4.30588 1.50381 3.65836 1.78368 3.10961 2.31047C3.10412 2.31596 3.10412 2.31596 3.09864 2.32145L1.23289 4.20365C0.530497 4.90605 0.129911 5.7621 0.0421114 6.75533C-0.089588 8.35768 0.382335 9.85027 0.744508 10.827C1.63348 13.2251 2.96145 15.4475 4.94243 17.8291C7.34594 20.699 10.2378 22.9653 13.5413 24.5622C14.8034 25.1603 16.4881 25.8682 18.3703 25.9889C18.4855 25.9944 18.6062 25.9999 18.716 25.9999C19.9836 25.9999 21.0482 25.5445 21.8823 24.639C21.8878 24.628 21.8987 24.6226 21.9042 24.6116C22.1896 24.2659 22.5188 23.9531 22.8645 23.6184C23.1005 23.3934 23.3419 23.1574 23.5779 22.9105C24.1212 22.3453 24.4065 21.6868 24.4065 21.0118C24.4065 20.3314 24.1157 19.6783 23.5614 19.1296L20.5488 16.106ZM22.5133 21.8843C22.5078 21.8843 22.5078 21.8898 22.5133 21.8843C22.2993 22.1148 22.0798 22.3233 21.8439 22.5538C21.4872 22.894 21.125 23.2507 20.7848 23.6513C20.2305 24.2439 19.5775 24.5238 18.7215 24.5238C18.6392 24.5238 18.5514 24.5238 18.4691 24.5183C16.8393 24.414 15.3247 23.7775 14.1888 23.2342C11.0829 21.7307 8.35564 19.596 6.08931 16.8907C4.21808 14.6354 2.96694 12.5501 2.13833 10.3112C1.62799 8.94484 1.44142 7.88026 1.52373 6.87606C1.57861 6.23402 1.82554 5.70174 2.281 5.24628L4.15223 3.37504C4.42112 3.12262 4.70647 2.98543 4.98633 2.98543C5.33204 2.98543 5.6119 3.19396 5.7875 3.36956C5.79299 3.37504 5.79847 3.38053 5.80396 3.38602C6.1387 3.69881 6.45697 4.02257 6.79171 4.36828C6.96182 4.54388 7.13742 4.71948 7.31302 4.90056L8.8111 6.39865C9.39277 6.98032 9.39277 7.51809 8.8111 8.09976C8.65196 8.2589 8.49831 8.41804 8.33918 8.57169C7.87823 9.04361 7.43923 9.48261 6.96182 9.91063C6.95085 9.92161 6.93987 9.92709 6.93438 9.93807C6.46246 10.41 6.55026 10.8709 6.64903 11.1837C6.65452 11.2002 6.66001 11.2167 6.6655 11.2331C7.05511 12.177 7.60385 13.0659 8.43795 14.125L8.44344 14.1305C9.95798 15.9962 11.5548 17.4504 13.3163 18.5644C13.5413 18.7071 13.7718 18.8223 13.9913 18.932C14.1888 19.0308 14.3754 19.1241 14.5345 19.2229C14.5565 19.2339 14.5784 19.2503 14.6004 19.2613C14.787 19.3546 14.9626 19.3985 15.1436 19.3985C15.5991 19.3985 15.8845 19.1131 15.9777 19.0198L17.8545 17.1431C18.041 16.9566 18.3374 16.7316 18.6831 16.7316C19.0233 16.7316 19.3032 16.9456 19.4733 17.1322C19.4788 17.1376 19.4788 17.1376 19.4842 17.1431L22.5078 20.1667C23.0731 20.7265 23.0731 21.3026 22.5133 21.8843Z" />
-              <path d="M14.0512 6.18495C15.4889 6.4264 16.7949 7.10685 17.8375 8.14947C18.8802 9.19209 19.5551 10.4981 19.8021 11.9358C19.8624 12.298 20.1752 12.5504 20.5319 12.5504C20.5758 12.5504 20.6142 12.5449 20.6581 12.5395C21.0642 12.4736 21.3331 12.0895 21.2672 11.6834C20.9709 9.94387 20.1478 8.35799 18.8911 7.10136C17.6345 5.84473 16.0486 5.0216 14.3091 4.72528C13.903 4.65943 13.5244 4.92832 13.4531 5.3289C13.3817 5.72949 13.6451 6.1191 14.0512 6.18495Z" />
-              <path d="M25.9707 11.4691C25.4823 8.60468 24.1324 5.99813 22.0581 3.92387C19.9838 1.8496 17.3773 0.49968 14.5128 0.011294C14.1122 -0.0600432 13.7336 0.214331 13.6623 0.614917C13.5964 1.02099 13.8653 1.39963 14.2714 1.47096C16.8285 1.90447 19.1607 3.11721 21.0155 4.96649C22.8702 6.82125 24.0775 9.15343 24.511 11.7106C24.5714 12.0728 24.8841 12.3252 25.2408 12.3252C25.2847 12.3252 25.3231 12.3197 25.367 12.3142C25.7676 12.2539 26.042 11.8697 25.9707 11.4691Z" />
-            </svg>
-          </div>
-          <div className="hotline-info">
-            <span>Call Now</span>
-            <h6><a href="tel:+998-8776345">+998-8776345</a></h6>
-          </div>
-        </div>
-        <div className="reservation-btn d-lg-none d-flex">
-          <Link href="/reservation" className="primary-btn4 btn-md">Find Reservation</Link>
-        </div>
-      </div>
-      <div className="nav-right d-flex jsutify-content-end align-items-center">
-        <Link href="/reservation" className="primary-btn4 btn-md">Find Reservation</Link>
-        <div className="sidebar-button mobile-menu-btn "  onClick={() => dispatch({ type: "mobileMenu", isMobileMenu: true }) }>
-          <i className="bi bi-list" />
-        </div>
-      </div>
-    </div>
-  </header>
-</div>
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-  )
+  return (
+    <header
+      ref={headerRef}
+      className={
+        state.scrollY > 150
+          ? "header-area style-2 sticky"
+          : "header-area style-2"
+      }
+    >
+      <div className="container-fluid d-flex justify-content-between align-items-center">
+        <div className="header-logo">
+          <Link legacyBehavior href="/">
+            <a>
+              <img
+                alt="image"
+                className="img-fluid"
+                src="assets/images/header2-logo.svg"
+              />
+            </a>
+          </Link>
+        </div>
+        <div
+          className={
+            state.mobileMenuState === true ? "main-menu show-menu" : "main-menu"
+          }
+        >
+          <div className="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
+            <div className="mobile-logo-wrap">
+              <Link legacyBehavior href="/">
+                <a>
+                  {" "}
+                  <img alt="image" src="assets/images/header1-logo.svg" />
+                </a>
+              </Link>
+            </div>
+            <div className="menu-close-btn">
+              <i
+                className="bi bi-x-lg text-white"
+                onClick={() =>
+                  dispatch({ type: "mobileMenu", isMobileMenu: false })
+                }
+              />
+            </div>
+          </div>
+          <ul className="menu-list">
+            <li className="menu-item-has-children active">
+              <Link href="#" legacyBehavior>
+                <a className="drop-down">Home</a>
+              </Link>
+              <i
+                className="bi bi-plus dropdown-icon"
+                onClick={() => dispatch({ type: "home" })}
+              />
+              <ul
+                className={
+                  state.activeMenu === "home"
+                    ? "sub-menu  d-block"
+                    : "sub-menu d-xl-block d-none"
+                }
+              >
+                <li>
+                  <Link className="active" legacyBehavior href="/">
+                    <a>Home One</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/index2">
+                    <a>Home Two</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/index3">
+                    <a>Home Three</a>
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <Link legacyBehavior href="/about">
+                <a>About</a>
+              </Link>
+            </li>
+            <li className="menu-item-has-children">
+              <Link legacyBehavior href="#">
+                <a>Services</a>
+              </Link>
+              <i
+                className="bi bi-plus dropdown-icon"
+                onClick={() => dispatch({ type: "services" })}
+              />
+              <ul
+                className={
+                  state.activeMenu === "services"
+                    ? "sub-menu  d-block"
+                    : "sub-menu d-xl-block d-none"
+                }
+              >
+                <li>
+                  <Link legacyBehavior href="/service-details">
+                    <a>Daycare</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/service-details">
+                    <a>Grooming</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/service-details">
+                    <a>Boarding</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/service-details">
+                    <a>Veterinary</a>
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item-has-children">
+              <Link href="#" legacyBehavior>
+                <a className="drop-down">Pages</a>
+              </Link>
+              <i
+                className="bi bi-plus dropdown-icon"
+                onClick={() => dispatch({ type: "pages" })}
+              />
+              <ul
+                className={
+                  state.activeMenu === "pages"
+                    ? "sub-menu  d-block"
+                    : "sub-menu d-xl-block d-none"
+                }
+              >
+                <li>
+                  <Link legacyBehavior href="/pricing-plan">
+                    <a>Pricing Plan</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/team">
+                    <a>Our Team</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/gallery">
+                    <a>Gallery</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/faq">
+                    <a>Faq</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/error">
+                    <a>Error</a>
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item-has-children">
+              <Link legacyBehavior href="#">
+                <a>Shop</a>
+              </Link>
+              <i
+                className="bi bi-plus dropdown-icon"
+                onClick={() => dispatch({ type: "shop" })}
+              />
+              <ul
+                className={
+                  state.activeMenu === "shop"
+                    ? "sub-menu  d-block"
+                    : "sub-menu d-xl-block d-none"
+                }
+              >
+                <li>
+                  <Link legacyBehavior href="/shop">
+                    <a>Shop</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/shop-details">
+                    <a>Shop Details</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/cart">
+                    <a>Cart</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/check-out">
+                    <a>Check Out</a>
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item-has-children">
+              <Link legacyBehavior href="#">
+                <a>Blog</a>
+              </Link>
+              <i
+                className="bi bi-plus dropdown-icon"
+                onClick={() => dispatch({ type: "blog" })}
+              />
+              <ul
+                className={
+                  state.activeMenu === "blog"
+                    ? "sub-menu  d-block"
+                    : "sub-menu d-xl-block d-none"
+                }
+              >
+                <li>
+                  <Link legacyBehavior href="/blog-grid">
+                    <a>Blog Grid</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/blog-grid-sidebar">
+                    <a>blog-grid-sidebar</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/blog-standard">
+                    <a>Blog Standard</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/blog-details">
+                    <a>Blog Details</a>
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <Link legacyBehavior href="/contact">
+                <a>Contact</a>
+              </Link>
+            </li>
+          </ul>
+          <div className="for-mobile-menu d-lg-none d-block">
+            <div className="hotline mb-5">
+              <div className="hotline-info">
+                <span>Click To Call</span>
+                <h6>
+                  <a href="tel:+1(541)754-3010">+1 (541) 754-3010</a>
+                </h6>
+              </div>
+            </div>
+            <ul className="social-link mb-5">
+              <li>
+                <Link legacyBehavior href="/">
+                  <svg
+                    width={14}
+                    height={13}
+                    viewBox="0 0 14 13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12.4147 1.51371C11.0037 0.302997 8.92573 0.534835 7.61736 1.87434L7.12993 2.38954L6.61684 1.87434C5.33413 0.534835 3.23047 0.302997 1.81948 1.51371C0.203258 2.90473 0.126295 5.37767 1.56294 6.87174L6.53988 12.0237C6.84773 12.3586 7.38647 12.3586 7.69433 12.0237L12.6713 6.87174C14.1079 5.37767 14.0309 2.90473 12.4147 1.51371Z" />
+                  </svg>
+                </Link>
+              </li>
+              <li>
+                <Link legacyBehavior href="/">
+                  <a>
+                    <svg
+                      width={16}
+                      height={13}
+                      viewBox="0 0 16 13"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M15.6365 5.46266C15.6365 5.12721 15.3541 4.84336 15.0202 4.84336H13.274L10.5262 1.07601C10.2694 0.688956 9.75576 0.611544 9.39624 0.895386C9.01104 1.15342 8.934 1.6695 9.21648 2.03075L11.2452 4.84336H5.21036L7.2391 2.03075C7.52158 1.6695 7.44454 1.15342 7.05934 0.895386C6.69982 0.611544 6.18621 0.688956 5.92941 1.07601L3.18163 4.84336H1.46105C1.10153 4.84336 0.844727 5.12721 0.844727 5.46266V5.87552C0.844727 6.23677 1.10153 6.49481 1.46105 6.49481H1.66649L2.33418 11.2169C2.41122 11.8362 2.92482 12.2749 3.54115 12.2749H12.9144C13.5308 12.2749 14.0444 11.8362 14.1214 11.2169L14.8148 6.49481H15.0202C15.3541 6.49481 15.6365 6.23677 15.6365 5.87552V5.46266ZM8.85696 10.0041C8.85696 10.3654 8.57447 10.6234 8.24063 10.6234C7.88111 10.6234 7.6243 10.3654 7.6243 10.0041V7.1141C7.6243 6.77865 7.88111 6.49481 8.24063 6.49481C8.57447 6.49481 8.85696 6.77865 8.85696 7.1141V10.0041ZM11.7331 10.0041C11.7331 10.3654 11.4507 10.6234 11.1168 10.6234C10.7573 10.6234 10.5005 10.3654 10.5005 10.0041V7.1141C10.5005 6.77865 10.7573 6.49481 11.1168 6.49481C11.4507 6.49481 11.7331 6.77865 11.7331 7.1141V10.0041ZM5.98077 10.0041C5.98077 10.3654 5.69829 10.6234 5.36445 10.6234C5.00492 10.6234 4.74812 10.3654 4.74812 10.0041V7.1141C4.74812 6.77865 5.00492 6.49481 5.36445 6.49481C5.69829 6.49481 5.98077 6.77865 5.98077 7.1141V10.0041Z" />
+                    </svg>
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link legacyBehavior href="/">
+                  <a>
+                    <svg
+                      width={15}
+                      height={15}
+                      viewBox="0 0 15 15"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clipPath="url(#clip0_1585_341)">
+                        <path d="M6.98716 0.938832C6.28609 1.04711 5.65949 1.38227 5.169 1.90563C4.62972 2.48055 4.3498 3.14571 4.31128 3.94235C4.25735 5.0561 4.80177 6.12086 5.74167 6.73703C6.20391 7.04125 6.64818 7.19594 7.18747 7.23977C8.18643 7.31711 9.03901 7.00258 9.72724 6.29875C10.2742 5.74188 10.5516 5.13344 10.6183 4.35743C10.7108 3.32102 10.3205 2.3568 9.54234 1.68133C9.03901 1.24821 8.57676 1.03164 7.93733 0.938832C7.62916 0.895004 7.26964 0.892426 6.98716 0.938832Z" />
+                        <path d="M4.65531 7.29655C3.49456 7.4203 2.68821 8.25561 2.31327 9.7303C2.06418 10.7126 1.99998 11.8933 2.15919 12.5405C2.29016 13.0587 2.71902 13.5846 3.21465 13.8373C3.43807 13.9507 3.75907 14.0435 4.02871 14.0744C4.18793 14.0951 5.40004 14.1002 7.71896 14.0951L11.1729 14.0873L11.3912 14.0255C12.2027 13.8037 12.7574 13.2572 12.9603 12.4889C13.0656 12.0893 13.0527 11.1354 12.9295 10.3826C12.6598 8.70678 11.9767 7.70131 10.8956 7.38678C10.6491 7.31459 10.2074 7.26045 10.0764 7.28623C9.95057 7.30944 9.77594 7.40225 9.38047 7.65749C8.95931 7.93077 8.90025 7.9617 8.58438 8.0803C8.21972 8.21694 7.91926 8.27624 7.56745 8.27624C7.20792 8.27624 6.93058 8.22467 6.56592 8.09577C6.2218 7.97202 6.20639 7.96428 5.66711 7.62139C5.38463 7.44092 5.17405 7.32491 5.09187 7.3017C4.94806 7.26561 4.94806 7.26561 4.65531 7.29655Z" />
+                      </g>
+                    </svg>
+                  </a>
+                </Link>
+              </li>
+            </ul>
+            <form className="mobile-menu-form">
+              <div className="input-with-btn d-flex flex-column">
+                <input type="text" placeholder="Search here..." />
+                <button className="primary-btn1" type="submit">
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div className="nav-right d-flex jsutify-content-end align-items-center">
+          <ul>
+            <li className="search-btn">
+              <a>
+                <svg
+                  width={15}
+                  height={15}
+                  viewBox="0 0 15 15"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M13.8914 12.3212L11.3164 9.74312C11.1877 9.63999 11.0332 9.56265 10.8787 9.56265H10.4667C11.1619 8.6603 11.5997 7.52593 11.5997 6.26265C11.5997 3.32358 9.1792 0.900146 6.2437 0.900146C3.28245 0.900146 0.887695 3.32358 0.887695 6.26265C0.887695 9.22749 3.28245 11.6251 6.2437 11.6251C7.4797 11.6251 8.6127 11.2126 9.5397 10.4908V10.9291C9.5397 11.0837 9.5912 11.2384 9.71995 11.3673L12.2692 13.9197C12.5267 14.1775 12.9129 14.1775 13.1447 13.9197L13.8657 13.1978C14.1232 12.9658 14.1232 12.5791 13.8914 12.3212ZM6.2437 9.56265C4.41545 9.56265 2.9477 8.09312 2.9477 6.26265C2.9477 4.45796 4.41545 2.96265 6.2437 2.96265C8.0462 2.96265 9.5397 4.45796 9.5397 6.26265C9.5397 8.09312 8.0462 9.56265 6.2437 9.56265Z" />
+                </svg>
+              </a>
+              <form className="nav__search-form">
+                <input
+                  type="text"
+                  placeholder="Search keyword"
+                  id="search"
+                  autoComplete="off"
+                />
+                <button type="submit">
+                  <svg
+                    width={15}
+                    height={15}
+                    viewBox="0 0 15 15"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M13.8914 12.3212L11.3164 9.74312C11.1877 9.63999 11.0332 9.56265 10.8787 9.56265H10.4667C11.1619 8.6603 11.5997 7.52593 11.5997 6.26265C11.5997 3.32358 9.1792 0.900146 6.2437 0.900146C3.28245 0.900146 0.887695 3.32358 0.887695 6.26265C0.887695 9.22749 3.28245 11.6251 6.2437 11.6251C7.4797 11.6251 8.6127 11.2126 9.5397 10.4908V10.9291C9.5397 11.0837 9.5912 11.2384 9.71995 11.3673L12.2692 13.9197C12.5267 14.1775 12.9129 14.1775 13.1447 13.9197L13.8657 13.1978C14.1232 12.9658 14.1232 12.5791 13.8914 12.3212ZM6.2437 9.56265C4.41545 9.56265 2.9477 8.09312 2.9477 6.26265C2.9477 4.45796 4.41545 2.96265 6.2437 2.96265C8.0462 2.96265 9.5397 4.45796 9.5397 6.26265C9.5397 8.09312 8.0462 9.56265 6.2437 9.56265Z" />
+                  </svg>
+                </button>
+              </form>
+            </li>
+            <li>
+              <a href="#">
+                <svg
+                  width={14}
+                  height={13}
+                  viewBox="0 0 14 13"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M12.4147 1.51371C11.0037 0.302997 8.92573 0.534835 7.61736 1.87434L7.12993 2.38954L6.61684 1.87434C5.33413 0.534835 3.23047 0.302997 1.81948 1.51371C0.203258 2.90473 0.126295 5.37767 1.56294 6.87174L6.53988 12.0237C6.84773 12.3586 7.38647 12.3586 7.69433 12.0237L12.6713 6.87174C14.1079 5.37767 14.0309 2.90473 12.4147 1.51371Z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <Link legacyBehavior href="/cart">
+                <a>
+                  <svg
+                    width={16}
+                    height={13}
+                    viewBox="0 0 16 13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M15.6365 5.46266C15.6365 5.12721 15.3541 4.84336 15.0202 4.84336H13.274L10.5262 1.07601C10.2694 0.688956 9.75576 0.611544 9.39624 0.895386C9.01104 1.15342 8.934 1.6695 9.21648 2.03075L11.2452 4.84336H5.21036L7.2391 2.03075C7.52158 1.6695 7.44454 1.15342 7.05934 0.895386C6.69982 0.611544 6.18621 0.688956 5.92941 1.07601L3.18163 4.84336H1.46105C1.10153 4.84336 0.844727 5.12721 0.844727 5.46266V5.87552C0.844727 6.23677 1.10153 6.49481 1.46105 6.49481H1.66649L2.33418 11.2169C2.41122 11.8362 2.92482 12.2749 3.54115 12.2749H12.9144C13.5308 12.2749 14.0444 11.8362 14.1214 11.2169L14.8148 6.49481H15.0202C15.3541 6.49481 15.6365 6.23677 15.6365 5.87552V5.46266ZM8.85696 10.0041C8.85696 10.3654 8.57447 10.6234 8.24063 10.6234C7.88111 10.6234 7.6243 10.3654 7.6243 10.0041V7.1141C7.6243 6.77865 7.88111 6.49481 8.24063 6.49481C8.57447 6.49481 8.85696 6.77865 8.85696 7.1141V10.0041ZM11.7331 10.0041C11.7331 10.3654 11.4507 10.6234 11.1168 10.6234C10.7573 10.6234 10.5005 10.3654 10.5005 10.0041V7.1141C10.5005 6.77865 10.7573 6.49481 11.1168 6.49481C11.4507 6.49481 11.7331 6.77865 11.7331 7.1141V10.0041ZM5.98077 10.0041C5.98077 10.3654 5.69829 10.6234 5.36445 10.6234C5.00492 10.6234 4.74812 10.3654 4.74812 10.0041V7.1141C4.74812 6.77865 5.00492 6.49481 5.36445 6.49481C5.69829 6.49481 5.98077 6.77865 5.98077 7.1141V10.0041Z" />
+                  </svg>
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link legacyBehavior href="/login">
+                <a>
+                  <svg
+                    width={15}
+                    height={15}
+                    viewBox="0 0 15 15"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clipPath="url(#clip0_1585_341)">
+                      <path d="M6.98716 0.938832C6.28609 1.04711 5.65949 1.38227 5.169 1.90563C4.62972 2.48055 4.3498 3.14571 4.31128 3.94235C4.25735 5.0561 4.80177 6.12086 5.74167 6.73703C6.20391 7.04125 6.64818 7.19594 7.18747 7.23977C8.18643 7.31711 9.03901 7.00258 9.72724 6.29875C10.2742 5.74188 10.5516 5.13344 10.6183 4.35743C10.7108 3.32102 10.3205 2.3568 9.54234 1.68133C9.03901 1.24821 8.57676 1.03164 7.93733 0.938832C7.62916 0.895004 7.26964 0.892426 6.98716 0.938832Z" />
+                      <path d="M4.65531 7.29655C3.49456 7.4203 2.68821 8.25561 2.31327 9.7303C2.06418 10.7126 1.99998 11.8933 2.15919 12.5405C2.29016 13.0587 2.71902 13.5846 3.21465 13.8373C3.43807 13.9507 3.75907 14.0435 4.02871 14.0744C4.18793 14.0951 5.40004 14.1002 7.71896 14.0951L11.1729 14.0873L11.3912 14.0255C12.2027 13.8037 12.7574 13.2572 12.9603 12.4889C13.0656 12.0893 13.0527 11.1354 12.9295 10.3826C12.6598 8.70678 11.9767 7.70131 10.8956 7.38678C10.6491 7.31459 10.2074 7.26045 10.0764 7.28623C9.95057 7.30944 9.77594 7.40225 9.38047 7.65749C8.95931 7.93077 8.90025 7.9617 8.58438 8.0803C8.21972 8.21694 7.91926 8.27624 7.56745 8.27624C7.20792 8.27624 6.93058 8.22467 6.56592 8.09577C6.2218 7.97202 6.20639 7.96428 5.66711 7.62139C5.38463 7.44092 5.17405 7.32491 5.09187 7.3017C4.94806 7.26561 4.94806 7.26561 4.65531 7.29655Z" />
+                    </g>
+                  </svg>
+                </a>
+              </Link>
+            </li>
+          </ul>
+          <div className="hotline-info">
+            <span>Call Us Now</span>
+            <h6>
+              <a href="tel:+1(541)754-3010">+1 (541) 754-3010</a>
+            </h6>
+          </div>
+          <div className="sidebar-button mobile-menu-btn">
+            <i
+              className="bi bi-list"
+              onClick={() =>
+                dispatch({ type: "mobileMenu", isMobileMenu: true })
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+  );
 }
 
-export default Header2
+export default Header2;

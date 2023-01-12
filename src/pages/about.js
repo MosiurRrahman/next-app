@@ -1,23 +1,25 @@
-import React from 'react'
-import About1 from '../components/about/About1'
-import Breadcrumb from '../components/common/Breadcrumb'
-import Experties1 from '../components/cookingExperties/Experties1'
-import Gallery1 from '../components/gallary/Gallery1'
-import TesimonialVideo from '../components/testimonial/TesimonialVideo'
-import Testimonial1 from '../components/testimonial/Testimonial1'
-import Layout from '../layout/Layout'
+import React from "react";
+import Home1About from "../components/about/Home1About";
+import Breadcrumb from "../components/breadcrumb/Breadcrumb";
+import ChooseUs from "../components/chooseUs/ChooseUs";
+import AboutService from "../components/service/AboutService";
+import Home1Team from "../components/team/Home1Team";
+import Home1Testimonial from "../components/testimonial/Home1Testimonial";
+import Layout from "../layout/Layout";
 
-function About() {
+function AboutPage() {
   return (
-    <Layout>
-       <Breadcrumb pageName="About Us" pageTitle="About Us"/> 
-       <About1/>
-       <Testimonial1/>
-       <TesimonialVideo/>
-       <Experties1/>
-       <Gallery1/>
-    </Layout>
-  )
+    <>
+      <Layout>
+        <Breadcrumb pageName="About Me" pageTitle="About Me" />
+        <Home1About />
+        <AboutService />
+        <Home1Testimonial />
+        <ChooseUs />
+        <Home1Team />
+      </Layout>
+    </>
+  );
 }
 
-export default About
+export default AboutPage;

@@ -1,13 +1,13 @@
-import Link from 'next/link'
-import React from 'react'
-import Breadcrumb from '../components/common/Breadcrumb'
-import Layout from '../layout/Layout'
+import Link from "next/link";
+import React from "react";
+import Breadcrumb from "../components/breadcrumb/Breadcrumb";
+import Layout from "../layout/Layout";
 
-function Cart() {
+function CartPage() {
   return (
     <Layout>
-        <Breadcrumb pageName="Cart" pageTitle="Cart"/>
-        <div className="cart-section pt-120 pb-120">
+      <Breadcrumb pageName="Cart" pageTitle="Cart" />
+      <div className="cart-section pt-120 pb-120">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -34,19 +34,23 @@ function Cart() {
                       <td data-label="Image">
                         <img src="assets/images/bg/cart-01.png" alt="" />
                       </td>
-                      <td data-label="Food Name"><Link legacyBehavior href="/shop-details"><a>Organic Vegetable grains 100%</a></Link></td>
-                      <td data-label="Unite Price"><del>$32.36</del></td>
-                      <td data-label="Discount Price">$22.36</td>
+                      <td data-label="Food Name">
+                        <Link legacyBehavior href="/shop-details">
+                          <a>Whiskas Cat Food Core Tuna</a>
+                        </Link>
+                      </td>
+                      <td data-label="Unite Price">
+                        <del>$30.00</del>
+                      </td>
+                      <td data-label="Discount Price">$25.00</td>
                       <td data-label="Quantity">
                         <div className="quantity d-flex align-items-center">
                           <div className="quantity-nav nice-number d-flex align-items-center">
-                          <button className='btn increment'><i className="bi bi-plus"></i></button>
-                              <input type="number" defaultValue={1} min={1} />
-                              <button className='btn decrement'><i className="bi bi-dash"></i></button>
+                            <input type="number" defaultValue={1} min={1} />
                           </div>
                         </div>
                       </td>
-                      <td data-label="Subtotal">$22.36</td>
+                      <td data-label="Subtotal">$25.006</td>
                     </tr>
                     <tr>
                       <td data-label="Delete">
@@ -57,19 +61,23 @@ function Cart() {
                       <td data-label="Image">
                         <img src="assets/images/bg/cart-02.png" alt="" />
                       </td>
-                      <td data-label="Food Name"><Link legacyBehavior href="/shop-details"><a>Fresh Vegetable Eggplant</a></Link></td>
-                      <td data-label="Unite Price"><del>$45.36</del></td>
-                      <td data-label="Discount Price">$35</td>
+                      <td data-label="Food Name">
+                        <Link legacyBehavior href="/shop-details">
+                          <a>Friskies Kitten Discoveries.</a>
+                        </Link>
+                      </td>
+                      <td data-label="Unite Price">
+                        <del>$49.00</del>
+                      </td>
+                      <td data-label="Discount Price">$39.00</td>
                       <td data-label="Quantity">
                         <div className="quantity d-flex align-items-center">
                           <div className="quantity-nav nice-number d-flex align-items-center">
-                          <button className='btn increment'><i className="bi bi-plus"></i></button>
-                              <input type="number" defaultValue={1} min={1} />
-                              <button className='btn decrement'><i className="bi bi-dash"></i></button>
+                            <input type="number" defaultValue={1} min={1} />
                           </div>
                         </div>
                       </td>
-                      <td data-label="Subtotal">$35.36</td>
+                      <td data-label="Subtotal">$39.00</td>
                     </tr>
                     <tr>
                       <td data-label="Delete">
@@ -80,19 +88,21 @@ function Cart() {
                       <td data-label="Image">
                         <img src="assets/images/bg/cart-03.png" alt="" />
                       </td>
-                      <td data-label="Food Name"><Link legacyBehavior href="/shop-details"><a>Fresh Delicious And Healthy</a></Link></td>
-                      <td data-label="Unite Price">$15.36</td>
-                      <td data-label="Discount Price">$22.36</td>
+                      <td data-label="Food Name">
+                        <Link legacyBehavior href="/shop-details">
+                          <a>Natural Dog Fresh Food.</a>
+                        </Link>
+                      </td>
+                      <td data-label="Unite Price">$30.00</td>
+                      <td data-label="Discount Price">$18.00</td>
                       <td data-label="Quantity">
                         <div className="quantity d-flex align-items-center">
                           <div className="quantity-nav nice-number d-flex align-items-center">
-                              <button className='btn increment'><i className="bi bi-plus"></i></button>
-                              <input type="number" defaultValue={1} min={1} />
-                              <button className='btn decrement'><i className="bi bi-dash"></i></button>
+                            <input type="number" defaultValue={1} min={1} />
                           </div>
                         </div>
                       </td>
-                      <td data-label="Subtotal">$30.72</td>
+                      <td data-label="Subtotal">$18.00</td>
                     </tr>
                   </tbody>
                 </table>
@@ -129,17 +139,17 @@ function Cart() {
                         <li>Total ( tax excl.)</li>
                         <li>Total ( tax incl.)</li>
                         <li>Taxes</li>
-                        <li>Shipping Enter your address to view shipping options. <br /> <a href="#">Calculate shipping</a>
+                        <li>
+                          Shipping Enter your address to view shipping options.{" "}
+                          <br /> <a href="#">Calculate shipping</a>
                         </li>
                       </ul>
                     </td>
                     <td>
                       <ul className="single-cost text-center">
                         <li>Fee</li>
-                        <li>$15
-                        </li>
-                        <li>
-                        </li>
+                        <li>$15</li>
+                        <li></li>
                         <li>$15</li>
                         <li>$15</li>
                         <li>$5</li>
@@ -153,17 +163,24 @@ function Cart() {
                   </tr>
                 </tbody>
               </table>
-              <div className="cart-btn-group">
-                <Link legacyBehavior href="/shop"><a  className="primary-btn3 btn-lg">Continue to shopping</a></Link>
-                <Link legacyBehavior href="/checkout"><a className="primary-btn3 btn-lg">Proceed to Checkout</a></Link>
-              </div>
+              <ul className="cart-btn-group">
+                <li>
+                  <Link legacyBehavior href="/shop">
+                    <a className="primary-btn2 btn-lg">Continue to shopping</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/check-out">
+                    <a className="primary-btn3 btn-lg">Proceed to Checkout</a>
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-
     </Layout>
-  )
+  );
 }
 
-export default Cart
+export default CartPage;

@@ -1,39 +1,180 @@
-import Link from 'next/link'
-import React from 'react'
-
+import Link from "next/link";
+import React, { useMemo } from "react";
+import Marquee from "react-fast-marquee";
+import SwiperCore, {
+  Autoplay,
+  EffectFade,
+  Navigation,
+  Pagination,
+} from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+SwiperCore.use([Navigation, Pagination, Autoplay, EffectFade]);
 function Banner3() {
+  const bannerSlider = useMemo(() => {
+    return {
+      slidesPerView: "auto",
+      spaceBetween: 12,
+      effect: "fade",
+      loop: true,
+      speed: 1500,
+      autoplay: {
+        delay: 3000,
+      },
+      keyboard: {
+        enabled: true,
+      },
+      pagination: {
+        el: ".h3-hero-slider-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return (
+            '<span class="' + className + '">' + 0 + (index + 1) + "</span>"
+          );
+        },
+      },
+    };
+  }, []);
   return (
-    <div className="home3-banner">
-    <div className="social-area">
-      <ul>
-        <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook" /></a></li>
-        <li><a href="https://www.instagram.com/"><i className="bx bxl-instagram-alt" /></a></li>
-        <li><a href="https://www.pinterest.com/"><i className="bx bxl-linkedin" /></a></li>
-        <li><a href="https://twitter.com/"><i className="bx bxl-twitter" /></a></li>
-      </ul>
-    </div>
-    <div className="open-time">
-      <div className="left-vect">
-        <img src="assets/images/bg/open-vec-left.png" alt="" />
+    <>
+      <div className="hero3 mb-90">
+        <div className="background-text">
+          <Marquee pauseOnHover={true} gradient={false} speed={60}>
+            <h2 className="marquee_text">
+              <img src="assets/images/icon/marque-foot.svg" alt="image" />
+              <span>Get exciting Discount</span> Up To 40%
+              <img src="assets/images/icon/marque-foot.svg" alt="image" />
+              <span>On Your first buying</span> Up To 50%
+              <img src="assets/images/icon/marque-foot.svg" alt="image" />
+              <span>Get exciting Discount</span> Up To 30%
+            </h2>
+          </Marquee>
+        </div>
+        <Swiper {...bannerSlider} className="swiper hero3-slider">
+          <div className="swiper-wrapper">
+            <SwiperSlide className="swiper-slide">
+              <div className="hero-wrapper">
+                <div className="container">
+                  <div className="row align-items-center">
+                    <div className="col-lg-6">
+                      <div className="banner-content">
+                        <h6>Limited Offer</h6>
+                        <h1>Best Food For Your Loving Dog.</h1>
+                        <div className="btn-group">
+                          <Link legacyBehavior href="/shop">
+                            <a className="primary-btn5 btn-md">Shop Now</a>
+                          </Link>
+                          <Link legacyBehavior href="/shop-details">
+                            <a className="primary-btn6">View Details</a>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-6 d-flex justify-content-end">
+                      <div className="hero-img">
+                        <div className="offer-card">
+                          <img
+                            className="img-fluid"
+                            src="assets/images/bg/h3-banner-offer.png"
+                            alt=""
+                          />
+                        </div>
+                        <img
+                          className="img-fluid banner-imgas"
+                          src="assets/images/bg/h3-banner-img.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="swiper-slide">
+              <div className="hero-wrapper">
+                <div className="container">
+                  <div className="row align-items-center">
+                    <div className="col-lg-6">
+                      <div className="banner-content">
+                        <h6>Limited Offer</h6>
+                        <h1>Best Food For Your Loving Cat.</h1>
+                        <div className="btn-group">
+                          <Link legacyBehavior href="/shop">
+                            <a className="primary-btn5 btn-md">Shop Now</a>
+                          </Link>
+                          <Link legacyBehavior href="/shop-details">
+                            <a className="primary-btn6">View Details</a>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-6 d-flex justify-content-end">
+                      <div className="hero-img">
+                        <div className="offer-card">
+                          <img
+                            className="img-fluid"
+                            src="assets/images/bg/h3-banner-offer.png"
+                            alt=""
+                          />
+                        </div>
+                        <img
+                          className="img-fluid banner-imgas"
+                          src="assets/images/bg/h3-banner-img-cat.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="swiper-slide">
+              <div className="hero-wrapper">
+                <div className="container">
+                  <div className="row align-items-center">
+                    <div className="col-lg-6">
+                      <div className="banner-content">
+                        <h6>Limited Offer</h6>
+                        <h1>Best Food For Your Loving Dog.</h1>
+                        <div className="btn-group">
+                          <Link legacyBehavior href="/shop">
+                            <a className="primary-btn5 btn-md">Shop Now</a>
+                          </Link>
+                          <Link legacyBehavior href="/shop-details">
+                            <a className="primary-btn6">View Details</a>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-6 d-flex justify-content-end">
+                      <div className="hero-img">
+                        <div className="offer-card">
+                          <img
+                            className="img-fluid"
+                            src="assets/images/bg/h3-banner-offer.png"
+                            alt=""
+                          />
+                        </div>
+                        <img
+                          className="img-fluid banner-imgas"
+                          src="assets/images/bg/h3-banner-img-dog.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+        </Swiper>
+        <div className="right-sidebar">
+          <div className="slider-pagination-area">
+            <div className="h3-hero-slider-pagination" />
+          </div>
+        </div>
       </div>
-      <div className="right-vect">
-        <img src="assets/images/bg/open-vec-right.png" alt="" />
-      </div>
-      <p><img className="left-vec" src="assets/images/icon/h3-open-vec.svg" alt="" />Our Restho Restaurant is Opening Hour 9:30 AM to 9.00 PM<img className="right-vec" src="assets/images/icon/h3-open-vec.svg" alt="" /></p>
-    </div>
-    <div className="video-wrap d-flex align-items-center justify-content-center">
-      <video autoPlay loop="loop" muted preload="auto">
-        <source src="assets/video/v1.mp4" type="video/mp4" />
-      </video>
-      <div className="banner-content text-center">
-        <span> <img className="left-vec" src="assets/images/icon/h3-sub-title-vec.svg" alt="" /> Welcome To Restho <img className="right-vec" src="assets/images/icon/h3-sub-title-vec.svg" alt="" /></span>
-        <h1>Find Your Best 
-          Healthy &amp; Tasty Food.</h1>
-        <Link legacyBehavior  href="/about"><a className="primary-btn7 btn-md2"><i className="bi bi-arrow-up-right-circle" /> Discover More</a></Link>
-      </div>
-    </div>
-  </div>
-  )
+    </>
+  );
 }
 
-export default Banner3
+export default Banner3;

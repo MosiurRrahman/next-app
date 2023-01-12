@@ -1,138 +1,114 @@
-import React from 'react'
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, {
-  Autoplay,
-  EffectFade,
-  Navigation,
-} from "swiper";
-import Link from 'next/link';
-SwiperCore.use([Navigation, Autoplay, EffectFade]);
-function Banner1() {
-  const bannerSlider = {
-    slidesPerView: 1,
-    speed: 1200,
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true
-    },
-    autoplay: true,
-    loop: true,
-    navigation: {
-      nextEl: ".next-btn-1",
-      prevEl: ".prev-btn-1",
-    },
-    pagination: false,
-  }
-  return (
-    <div className="banner-section1">
-  <div className="banner-vector">
-    <img className="vector-top" src="assets/images/icon/shape2.svg" alt="" />
-    <img className="vector-btm" src="assets/images/icon/shape1.svg" alt="" />
-  </div>
-  <Swiper {...bannerSlider} className="swiper banner1-slider">
-    <div className="swiper-wrapper">
-      <SwiperSlide className="swiper-slide">
-        <div className="banner-wrapper d-flex align-items-center justify-content-between">
-          <div className="social-area">
-            <ul className="m-0 p-0 d-flex align-items-center">
-              <li><a href="https://www.facebook.com/">Facebook</a></li>
-              <li><a href="https://twitter.com/">Twitter</a></li>
-              <li><a href="https://www.instagram.com/">Instagram</a></li>
-              <li><a href="https://www.skype.com/">Skype</a></li>
-            </ul>
-          </div>
-          <div className="banner-left-img">
-            <img src="assets/images/icon/union-left.svg" alt="union-left" />
-            <div className="food-img">
-              <img className="img-fluid" src="assets/images/bg/banner-img-1.png" alt="banner-img-1" />
-            </div>
-          </div>
-          <div className="banner-content">
-            <span><img className="left-vec" src="assets/images/icon/sub-title-vec.svg" alt="sub-title-vec" />Welcome To Restho<img className="right-vec" src="assets/images/icon/sub-title-vec.svg" alt="sub-title-vec" /></span>
-            <h1>Find Your Best 
-              Healthy &amp; Tasty Food.</h1>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page.</p>
-            <Link legacyBehavior  href="/about"><a  className="primary-btn2"><i className="bi bi-arrow-up-right-circle" />Discover More</a></Link>
-          </div>
-          <div className="banner-right-img">
-            <img src="assets/images/icon/union-right.svg" alt="union-right" />
-            <div className="food-img">
-              <img className="img-fluid" src="assets/images/bg/banner-img-2.png" alt="banner-img-2" />
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className="swiper-slide">
-        <div className="banner-wrapper d-flex align-items-center justify-content-between">
-          <div className="social-area">
-            <ul className="m-0 p-0 d-flex align-items-center">
-              <li><a href="https://www.facebook.com/">Facebook</a></li>
-              <li><a href="https://twitter.com/">Twitter</a></li>
-              <li><a href="https://www.instagram.com/">Instagram</a></li>
-              <li><a href="https://www.skype.com/">Skype</a></li>
-            </ul>
-          </div>
-          <div className="banner-left-img">
-            <img src="assets/images/icon/union-left.svg" alt="union-left" />
-            <div className="food-img">
-              <img className="img-fluid" src="assets/images/bg/banner-img-3.png" alt="banner-img-3" />
-            </div>
-          </div>
-          <div className="banner-content">
-            <span><img className="left-vec" src="assets/images/icon/sub-title-vec.svg" alt="sub-title-vec" />Welcome To Restho<img className="right-vec" src="assets/images/icon/sub-title-vec.svg" alt="sub-title-vec" /></span>
-            <h1>Find Your Best 
-              Healthy &amp; Tasty Food.</h1>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page.</p>
-            <Link legacyBehavior href="/about"><a  className="primary-btn2"><i className="bi bi-arrow-up-right-circle" />Discover More</a></Link>
-          </div>
-          <div className="banner-right-img">
-            <img src="assets/images/icon/union-right.svg" alt="union-right" />
-            <div className="food-img">
-              <img className="img-fluid" src="assets/images/bg/banner-img-4.png" alt="banner-img-4" />
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className="swiper-slide">
-        <div className="banner-wrapper d-flex align-items-center justify-content-between">
-          <div className="social-area">
-            <ul className="m-0 p-0 d-flex align-items-center">
-              <li><a href="https://www.facebook.com/">Facebook</a></li>
-              <li><a href="https://twitter.com/">Twitter</a></li>
-              <li><a href="https://www.instagram.com/">Instagram</a></li>
-              <li><a href="https://www.skype.com/">Skype</a></li>
-            </ul>
-          </div>
-          <div className="banner-left-img">
-            <img src="assets/images/icon/union-left.svg" alt="union-left" />
-            <div className="food-img">
-              <img className="img-fluid" src="assets/images/bg/banner-img-5.png" alt="banner-img-5" />
-            </div>
-          </div>
-          <div className="banner-content">
-            <span><img className="left-vec" src="assets/images/icon/sub-title-vec.svg" alt="sub-title-vec" />Welcome To Restho<img className="right-vec" src="assets/images/icon/sub-title-vec.svg" alt="sub-title-vec" /></span>
-            <h1>Find Your Best 
-              Healthy &amp; Tasty Food.</h1>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page.</p>
-            <Link legacyBehavior href="/about"><a  className="primary-btn2"><i className="bi bi-arrow-up-right-circle" />Discover More</a></Link>
-          </div>
-          <div className="banner-right-img">
-            <img src="assets/images/icon/union-right.svg" alt="union-right" />
-            <div className="food-img">
-              <img className="img-fluid" src="assets/images/bg/banner-img-6.png" alt="banner-img-5" />
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
-    </div>
-    <div className="swiper-btn d-flex justify-content-between align-items-center" >
-      <div style={{cursor:"pointer"}} className="prev-btn-1"><i className="bi bi-chevron-left" /></div>
-      <div style={{cursor:"pointer"}} className="next-btn-1"><i className="bi bi-chevron-right" /></div>
-    </div>
-  </Swiper>
-</div>
+import Link from "next/link";
+import React from "react";
 
-  )
+function Banner1() {
+  return (
+    <div className="hero-style-1">
+      <div className="container-fluid">
+        <div className="row justify-content-center">
+          <div className="col-lg-11">
+            <div className="row">
+              <div className="col-xxl-6 col-xl-5 d-flex align-items-center">
+                <div className="banner-content ">
+                  <div className="tag">
+                    <ul>
+                      <li>Trustworthy</li>
+                      <li>Safely</li>
+                      <li>Loyalty</li>
+                    </ul>
+                  </div>
+                  <h1>
+                    To Ensure Perfect
+                    <br /> Service Of Your{" "}
+                    <span id="js-rotating">cat., dog.</span>
+                  </h1>
+                </div>
+              </div>
+              <div className="col-xxl-6 col-xl-7 d-flex align-items-center justify-content-md-start justify-content-center">
+                <div className="banner-img">
+                  <img
+                    className="img-fluid"
+                    src="assets/images/bg/new-banner-img.png"
+                    alt=""
+                  />
+                </div>
+                <div className="reservation-review">
+                  <div className="reservation-btn">
+                    <Link legacyBehavior href="/contact">
+                      <a className="primary-btn1">Make A Reservation</a>
+                    </Link>
+                  </div>
+                  <div className="review-area">
+                    <ul>
+                      <li>
+                        <div className="single-review">
+                          <div className="icon">
+                            <img
+                              src="assets/images/icon/trustpilot001.svg"
+                              alt=""
+                            />
+                            <span>reviews</span>
+                          </div>
+                          <div className="reviews">
+                            <ul>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                            </ul>
+                            <span>(200)</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="single-review">
+                          <div className="icon">
+                            <img src="assets/images/icon/google2.svg" alt="" />
+                            <span>reviews</span>
+                          </div>
+                          <div className="reviews">
+                            <ul>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                            </ul>
+                            <span>(300)</span>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Banner1
+export default Banner1;
