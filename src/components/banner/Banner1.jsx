@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import Morphext from "../morphext/morphext";
+import Morphext from "../morphext/Morphext";
 
 function Banner1() {
   const phrases = ["Cart .", "Dog .", "Cat ."];
