@@ -60,7 +60,7 @@ function FeatureCounter() {
               <div className="coundown">
                 <div className="d-flex align-items-center gap-2">
                   <h3 className="odometer">
-                    <CountUp end={200} />
+                    <CountUp end={"02"} />
                   </h3>
                 </div>
                 <p>Combined years</p>

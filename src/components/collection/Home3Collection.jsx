@@ -26,7 +26,7 @@ function Home3Collection() {
           </div>
         </div>
         <div className="row g-4 justify-content-center">
-          {petCollection.map((item) => {
+          {petCollection.slice(0, 8).map((item) => {
             const {
               id,
               img,
@@ -35,9 +35,8 @@ function Home3Collection() {
               offer_price,
               regular_price,
               tag,
-              tagSlug,
+              tag_badge,
             } = item;
-            console.log(tag);
             return (
               <div key={id} className="col-lg-3 col-md-4 col-sm-6">
                 <div className="collection-card">
@@ -45,8 +44,10 @@ function Home3Collection() {
                     ""
                   ) : (
                     <div
-                      class={
-                        tagSlug === "" ? "offer-card" : `offer-card ${tagSlug}`
+                      className={
+                        tag_badge === ""
+                          ? "offer-card"
+                          : `offer-card ${tag_badge}`
                       }
                     >
                       <span>{tag}</span>

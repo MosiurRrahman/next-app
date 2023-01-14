@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import Breadcrumb from "../components/breadcrumb/Breadcrumb";
-import CountdownTimer from "../components/common/CountdownTimer";
 import Layout from "../layout/Layout";
 
 function PricingPlan() {
@@ -396,7 +395,6 @@ function PricingPlan() {
           </div>
         </div>
       </div>
-      <CountdownTimer endDate={new Date()} />
     </Layout>
   );
 }

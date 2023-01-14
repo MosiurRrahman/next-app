@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Breadcrumb from "../components/breadcrumb/Breadcrumb";
+import ItemCounter from "../components/shop/ProductCount";
 import Layout from "../layout/Layout";
 
 function CartPage() {
@@ -46,7 +47,7 @@ function CartPage() {
                       <td data-label="Quantity">
                         <div className="quantity d-flex align-items-center">
                           <div className="quantity-nav nice-number d-flex align-items-center">
-                            <input type="number" defaultValue={1} min={1} />
+                            <ItemCounter />
                           </div>
                         </div>
                       </td>
@@ -73,7 +74,7 @@ function CartPage() {
                       <td data-label="Quantity">
                         <div className="quantity d-flex align-items-center">
                           <div className="quantity-nav nice-number d-flex align-items-center">
-                            <input type="number" defaultValue={1} min={1} />
+                            <ItemCounter />
                           </div>
                         </div>
                       </td>
@@ -98,7 +99,7 @@ function CartPage() {
                       <td data-label="Quantity">
                         <div className="quantity d-flex align-items-center">
                           <div className="quantity-nav nice-number d-flex align-items-center">
-                            <input type="number" defaultValue={1} min={1} />
+                            <ItemCounter />
                           </div>
                         </div>
                       </td>

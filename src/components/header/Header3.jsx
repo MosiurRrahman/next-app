@@ -120,13 +120,13 @@ function Header3() {
                 <Link legacyBehavior href="/">
                   <a>
                     {" "}
-                    <img alt="image" src="assets/images/header1-logo.svg" />
+                    <img alt="image" src="assets/images/header2-logo.svg" />
                   </a>
                 </Link>
               </div>
               <div className="menu-close-btn">
                 <i
-                  className="bi bi-x-lg text-white"
+                  className="bi bi-x-lg"
                   onClick={() =>
                     dispatch({ type: "mobileMenu", isMobileMenu: false })
                   }
@@ -161,7 +161,9 @@ function Header3() {
                   </li>
                   <li>
                     <Link legacyBehavior href="/index3">
-                      <a>Home Three</a>
+                      <a className={currentRoute === "/index3" ? "active" : ""}>
+                        Home Three
+                      </a>
                     </Link>
                   </li>
                 </ul>
@@ -231,6 +233,22 @@ function Header3() {
                   <li>
                     <Link legacyBehavior href="/team">
                       <a>Our Team</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link legacyBehavior href="/login">
+                      <a className={currentRoute === "/login" ? "active" : ""}>
+                        Login
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link legacyBehavior href="/sign-up">
+                      <a
+                        className={currentRoute === "/sign-up" ? "active" : ""}
+                      >
+                        sign up
+                      </a>
                     </Link>
                   </li>
                   <li>

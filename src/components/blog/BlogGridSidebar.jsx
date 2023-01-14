@@ -15,7 +15,7 @@ function BlogGridSidebar() {
           <div className="row g-lg-4 gy-5 justify-content-center">
             <div className="col-lg-8">
               <div className="row g-lg-4 gy-5 justify-content-center mb-70">
-                {sidebarData.map((elements) => {
+                {sidebarData.slice(0, 9).map((elements) => {
                   const { id, image, title, date, category } = elements;
                   return (
                     <div key={id} className="col-lg-6 col-md-6 col-sm-10">

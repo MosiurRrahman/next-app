@@ -7,7 +7,7 @@ function BlogGrid() {
     <div className="blog-grid-pages pt-120 mb-120">
       <div className="container">
         <div className="row g-lg-4 gy-5 justify-content-center mb-70">
-          {blogData.map((element) => {
+          {blogData.slice(0, 6).map((element) => {
             const { date, image, title, id, category } = element;
             return (
               <div key={id} className="col-lg-4 col-md-6 col-sm-10">

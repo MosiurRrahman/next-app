@@ -1,9 +1,14 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
 import Breadcrumb from "../components/breadcrumb/Breadcrumb";
 import Layout from "../layout/Layout";
 
+import "react-datepicker/dist/react-datepicker.css";
+import OtherServiceSlide from "../components/service/OtherServiceSlide";
+import ItemCounter from "../components/shop/ProductCount";
 function ServiceDetails() {
+  const [startDate, setStartDate] = useState(new Date());
   return (
     <Layout>
       <Breadcrumb pageName="Service Details" pageTitle="Service Details" />
@@ -155,7 +160,14 @@ function ServiceDetails() {
                       <div className="col-lg-12">
                         <div className="form-inner">
                           <label>Duration</label>
-                          <select id="duration">
+                          <select
+                            id="duration"
+                            style={{
+                              width: "100%",
+                              padding: "10px",
+                              borderRadius: "5px",
+                            }}
+                          >
                             <option>Choose an option</option>
                             <option>Full Day (over 5 hrs)</option>
                             <option>Half Day (under 5 hrs)</option>
@@ -165,18 +177,18 @@ function ServiceDetails() {
                       <div className="col-lg-12">
                         <div className="form-inner date">
                           <label>Date</label>
-                          <input
-                            autoComplete="off"
-                            type="text"
-                            id="datepicker"
-                            placeholder="DD/MM/YYYY"
+                          <DatePicker
+                            selected={startDate}
+                            onChange={(date) => setStartDate(date)}
+                            placeholderText="Check In"
+                            className="calendar"
                           />
                         </div>
                       </div>
                       <div className="shop-quantity d-flex flex-wrap align-items-center justify-content-start mb-20">
                         <div className="quantity d-flex align-items-center">
                           <div className="quantity-nav nice-number d-flex align-items-center">
-                            <input type="number" defaultValue={1} min={1} />
+                            <ItemCounter />
                           </div>
                         </div>
                         <Link legacyBehavior href="/cart">
@@ -666,146 +678,7 @@ function ServiceDetails() {
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col-lg-12 d-flex flex-wrap align-items-center justify-content-sm-between justify-content-start gap-4 mb-60">
-              <div className="inner-section-title">
-                <h2>Other Services</h2>
-              </div>
-              <div className="swiper-btn-wrap d-flex align-items-center">
-                <div className="slider-btn prev-btn-1">
-                  <i className="bi bi-arrow-left" />
-                </div>
-                <div className="slider-btn next-btn-1">
-                  <i className="bi bi-arrow-right" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="swiper home1-services-slider">
-              <div className="swiper-wrapper">
-                <div className="swiper-slide">
-                  <div className="services-card1">
-                    <img
-                      className="services-card-vec"
-                      src="assets/images/bg/services-card-vec.png"
-                      alt=""
-                    />
-                    <div className="icon">
-                      <img
-                        src="assets/images/icon/daycare-center2.svg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="content">
-                      <h3>
-                        <Link legacyBehavior href="/service-details">
-                          <a>Daycare </a>
-                        </Link>
-                      </h3>
-                      <p>
-                        Pellentesque maximus augue orciquista ut aliquet risus
-                        In hac habitasse.
-                      </p>
-                    </div>
-                    <Link legacyBehavior href="/service-details">
-                      <a className="more-btn">
-                        More Details
-                        <img src="assets/images/icon/btn-arrow1.svg" alt="" />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-                <div className="swiper-slide">
-                  <div className="services-card1 two">
-                    <img
-                      className="services-card-vec"
-                      src="assets/images/bg/services-card-vec.png"
-                      alt=""
-                    />
-                    <div className="icon">
-                      <img src="assets/images/icon/grooming2.svg" alt="" />
-                    </div>
-                    <div className="content">
-                      <h3>
-                        <Link legacyBehavior href="/service-details">
-                          <a>Grooming</a>
-                        </Link>
-                      </h3>
-                      <p>
-                        Pellentesque maximus augue orciquista ut aliquet risus
-                        In hac habitasse.
-                      </p>
-                    </div>
-                    <Link legacyBehavior href="/service-details">
-                      <a className="more-btn">
-                        More Details
-                        <img src="assets/images/icon/btn-arrow1.svg" alt="" />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-                <div className="swiper-slide">
-                  <div className="services-card1 three">
-                    <img
-                      className="services-card-vec"
-                      src="assets/images/bg/services-card-vec.png"
-                      alt=""
-                    />
-                    <div className="icon">
-                      <img src="assets/images/icon/boarding2.svg" alt="" />
-                    </div>
-                    <div className="content">
-                      <h3>
-                        <Link legacyBehavior href="/service-details">
-                          <a>Boarding</a>
-                        </Link>
-                      </h3>
-                      <p>
-                        Pellentesque maximus augue orciquista ut aliquet risus
-                        In hac habitasse.
-                      </p>
-                    </div>
-                    <Link legacyBehavior href="/service-details">
-                      <a className="more-btn">
-                        More Details
-                        <img src="assets/images/icon/btn-arrow1.svg" alt="" />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-                <div className="swiper-slide">
-                  <div className="services-card1 four">
-                    <img
-                      className="services-card-vec"
-                      src="assets/images/bg/services-card-vec.png"
-                      alt=""
-                    />
-                    <div className="icon">
-                      <img src="assets/images/icon/veterinary2.svg" alt="" />
-                    </div>
-                    <div className="content">
-                      <h3>
-                        <Link legacyBehavior href="/service-details">
-                          <a>veterinary</a>
-                        </Link>
-                      </h3>
-                      <p>
-                        Pellentesque maximus augue orciquista ut aliquet risus
-                        In hac habitasse.
-                      </p>
-                    </div>
-                    <Link legacyBehavior href="/service-details">
-                      <a className="more-btn">
-                        More Details
-                        <img src="assets/images/icon/btn-arrow1.svg" alt="" />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <OtherServiceSlide />
         </div>
       </div>
     </Layout>

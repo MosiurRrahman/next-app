@@ -41,29 +41,12 @@ function BillingDetails() {
             </div>
             <div className="col-12">
               <div className="form-inner">
-                <select style={{ display: "none" }}>
+                <select>
                   <option>Town / City</option>
                   <option>Dhaka</option>
                   <option>Saidpur</option>
                   <option>Newyork</option>
                 </select>
-                <div className="nice-select" tabIndex={0}>
-                  <span className="current">Town / City</span>
-                  <ul className="list">
-                    <li data-value="Town / City" className="option selected">
-                      Town / City
-                    </li>
-                    <li data-value="Dhaka" className="option">
-                      Dhaka
-                    </li>
-                    <li data-value="Saidpur" className="option">
-                      Saidpur
-                    </li>
-                    <li data-value="Newyork" className="option">
-                      Newyork
-                    </li>
-                  </ul>
-                </div>
               </div>
             </div>
             <div className="col-12">

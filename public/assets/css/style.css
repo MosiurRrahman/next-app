@@ -1393,7 +1393,7 @@ header.style-1.sticky {
   position: fixed;
   top: 0px;
   left: 0;
-  z-index: 99999;
+  z-index: 10;
   -webkit-animation: smooth-header 0.65s linear;
           animation: smooth-header 0.65s linear;
 }
@@ -1943,7 +1943,7 @@ header.style-2.sticky {
   position: fixed;
   top: 0px;
   left: 0;
-  z-index: 999;
+  z-index: 10;
   -webkit-animation: smooth-header 0.65s linear;
           animation: smooth-header 0.65s linear;
 }
@@ -2445,7 +2445,7 @@ header.style-3.sticky {
   position: fixed;
   top: 0px;
   left: 0;
-  z-index: 999;
+  z-index: 10;
   -webkit-animation: smooth-header 0.65s linear;
           animation: smooth-header 0.65s linear;
 }
@@ -4164,7 +4164,7 @@ a.ui-button:active,
   margin-bottom: 20px;
 }
 .h1-story-area .section-title1 span {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 .h1-story-area .story-content p {
   margin-bottom: 0;
@@ -4445,7 +4445,7 @@ a.ui-button:active,
   }
 }
 .h1-choose-area .section-title1 span {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 .h1-choose-area .choose-content {
   padding-top: 20px;
@@ -12836,4 +12836,74 @@ footer.style2 .social-area ul li:hover a i {
   padding-left: 30px;
   padding-right: 30px;
   margin-top: 25px;
+}
+
+.react-datepicker__day {
+  color: #000;
+  display: inline-block;
+  width: 2rem !important;
+  line-height: 1.9rem !important;
+  text-align: center;
+  padding: 2px;
+  background: #fff;
+  margin: 0.3rem !important;
+  font-family: var(--font-dosis);
+}
+
+.react-datepicker {
+  font-family: var(--font-dosis);
+  font-size: 0.8rem;
+  background-color: #000 !important;
+  border: 1px solid #aeaeae;
+}
+
+.react-datepicker__day--selected {
+  background: var(--gradient-color);
+}
+
+.react-datepicker__day-names {
+  margin-bottom: -8px;
+  background: #ddd;
+  font-family: var(--font-dosis);
+}
+
+.react-datepicker__header {
+  text-align: center;
+  background: var(--gradient-color);
+  border-top-left-radius: 0.3rem;
+  padding: 8px 0;
+  position: relative;
+}
+
+.react-datepicker__current-month {
+  margin-top: 0;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: var(--font-dosis);
+  padding-bottom: 10px;
+}
+
+.react-datepicker__navigation {
+  top: 10px !important;
+}
+
+.react-datepicker-popper {
+  z-index: 9 !important;
+}
+
+.react-datepicker__triangle {
+  display: none;
+}
+
+.morphext {
+  display: block;
+}
+
+.morphext > span {
+  display: none;
+}
+
+.morphext > .animated {
+  display: inline-block;
 }/*# sourceMappingURL=style.css.map */

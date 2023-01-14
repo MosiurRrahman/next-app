@@ -13,7 +13,6 @@ import gallaryData from "../../data/gallary_data.json";
 SwiperCore.use([Navigation, Pagination, Autoplay, EffectFade]);
 
 function Home1Gallary() {
-  console.log(Swiper);
   const [isOpenimg, setOpenimg] = useState({
     openingState: false,
     openingIndex: 0,

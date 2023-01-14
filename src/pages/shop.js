@@ -1,5 +1,4 @@
 import React from "react";
-import RangeSlider from "react-bootstrap/FormRange";
 import Breadcrumb from "../components/breadcrumb/Breadcrumb";
 import ShopCard from "../components/shop/ShopCard";
 import Layout from "../layout/Layout";
@@ -14,18 +13,6 @@ function Shop() {
           <div className="row">
             <div className="col-lg-3">
               <div className="shop-sidebar">
-                <div className="shop-widget">
-                  <h5 className="shop-widget-title">Price Range</h5>
-                  <div className="range-widget">
-                    <RangeSlider
-                      value={value}
-                      tooltip="auto"
-                      className="range-slider range-slider--primary"
-                      aria-valuenow={value}
-                      onChange={(e) => setValue(e.target.value)}
-                    />
-                  </div>
-                </div>
                 <div className="shop-widget">
                   <div className="check-box-item">
                     <h5 className="shop-widget-title">Category</h5>

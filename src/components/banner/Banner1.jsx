@@ -1,7 +1,9 @@
 import Link from "next/link";
 import React from "react";
+import Morphext from "../morphext/morphext";
 
 function Banner1() {
+  const phrases = ["Cart .", "Dog .", "Cat ."];
   return (
     <div className="hero-style-1">
       <div className="container-fluid">
@@ -20,7 +22,11 @@ function Banner1() {
                   <h1>
                     To Ensure Perfect
                     <br /> Service Of Your{" "}
-                    <span id="js-rotating">cat., dog.</span>
+                    <Morphext
+                      animation="fadeInLeft"
+                      speed="3000"
+                      phrases={phrases}
+                    />
                   </h1>
                 </div>
               </div>

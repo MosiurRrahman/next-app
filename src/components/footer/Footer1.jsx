@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 function Footer1() {
+  const currentRouter = useRouter().pathname;
   return (
     <footer>
       <div className="container">
@@ -57,9 +59,23 @@ function Footer1() {
                 <br />
                 your pet in, <span>our center</span>?
               </h2>
-              <div className="book-btn">
+              <div
+                className={
+                  currentRouter === "/index2"
+                    ? "book-btn2 d-flex justify-content-center text-center"
+                    : "book-btn"
+                }
+              >
                 <Link legacyBehavior href="/contact">
-                  <a className="primary-btn1">Book Now</a>
+                  <a
+                    className={
+                      currentRouter === "/index2"
+                        ? "primary-btn2"
+                        : "primary-btn1"
+                    }
+                  >
+                    Book Now
+                  </a>
                 </Link>
               </div>
             </div>

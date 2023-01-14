@@ -139,7 +139,7 @@ function Header1() {
               </div>
             </div>
             <ul className="menu-list">
-              <li className="menu-item-has-children active">
+              <li className="menu-item-has-children">
                 <Link href="#" legacyBehavior>
                   <a className="drop-down">Home</a>
                 </Link>
@@ -156,7 +156,9 @@ function Header1() {
                 >
                   <li>
                     <Link className="active" legacyBehavior href="/">
-                      <a>Home One</a>
+                      <a className={currentRoute === "/" ? "active" : ""}>
+                        Home One
+                      </a>
                     </Link>
                   </li>
                   <li>
@@ -171,7 +173,7 @@ function Header1() {
                   </li>
                 </ul>
               </li>
-              <li>
+              <li className={currentRoute === "/about" ? "active" : ""}>
                 <Link legacyBehavior href="/about">
                   <a>About</a>
                 </Link>
@@ -193,7 +195,13 @@ function Header1() {
                 >
                   <li>
                     <Link legacyBehavior href="/service-details">
-                      <a>Daycare</a>
+                      <a
+                        className={
+                          currentRoute === "/service-details" ? "active" : ""
+                        }
+                      >
+                        Daycare
+                      </a>
                     </Link>
                   </li>
                   <li>
@@ -230,22 +238,52 @@ function Header1() {
                 >
                   <li>
                     <Link legacyBehavior href="/pricing-plan">
-                      <a>Pricing Plan</a>
+                      <a
+                        className={
+                          currentRoute === "/pricing-plan" ? "active" : ""
+                        }
+                      >
+                        Pricing Plan
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link legacyBehavior href="/login">
+                      <a className={currentRoute === "/login" ? "active" : ""}>
+                        Login
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link legacyBehavior href="/sign-up">
+                      <a
+                        className={currentRoute === "/sign-up" ? "active" : ""}
+                      >
+                        sign up
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/team">
-                      <a>Our Team</a>
+                      <a className={currentRoute === "/team" ? "active" : ""}>
+                        Our Team
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/gallery">
-                      <a>Gallery</a>
+                      <a
+                        className={currentRoute === "/gallery" ? "active" : ""}
+                      >
+                        Gallery
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/faq">
-                      <a>Faq</a>
+                      <a className={currentRoute === "/faq" ? "active" : ""}>
+                        Faq
+                      </a>
                     </Link>
                   </li>
                   <li>
@@ -272,22 +310,38 @@ function Header1() {
                 >
                   <li>
                     <Link legacyBehavior href="/shop">
-                      <a>Shop</a>
+                      <a className={currentRoute === "/shop" ? "active" : ""}>
+                        Shop
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/shop-details">
-                      <a>Shop Details</a>
+                      <a
+                        className={
+                          currentRoute === "/shop-details" ? "active" : ""
+                        }
+                      >
+                        Shop Details
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/cart">
-                      <a>Cart</a>
+                      <a className={currentRoute === "/cart" ? "active" : ""}>
+                        Cart
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/check-out">
-                      <a>Check Out</a>
+                      <a
+                        className={
+                          currentRoute === "/check-out" ? "active" : ""
+                        }
+                      >
+                        Check Out
+                      </a>
                     </Link>
                   </li>
                 </ul>
@@ -309,27 +363,51 @@ function Header1() {
                 >
                   <li>
                     <Link legacyBehavior href="/blog-grid">
-                      <a>Blog Grid</a>
+                      <a
+                        className={
+                          currentRoute === "/blog-grid" ? "active" : ""
+                        }
+                      >
+                        Blog Grid
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/blog-grid-sidebar">
-                      <a>blog-grid-sidebar</a>
+                      <a
+                        className={
+                          currentRoute === "/blog-grid-sidebar" ? "active" : ""
+                        }
+                      >
+                        blog-grid-sidebar
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/blog-standard">
-                      <a>Blog Standard</a>
+                      <a
+                        className={
+                          currentRoute === "/blog-standard" ? "active" : ""
+                        }
+                      >
+                        Blog Standard
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/blog-details">
-                      <a>Blog Details</a>
+                      <a
+                        className={
+                          currentRoute === "/blog-details" ? "active" : ""
+                        }
+                      >
+                        Blog Details
+                      </a>
                     </Link>
                   </li>
                 </ul>
               </li>
-              <li>
+              <li className={currentRoute === "/contact" ? "active" : ""}>
                 <Link legacyBehavior href="/contact">
                   <a>Contact</a>
                 </Link>
