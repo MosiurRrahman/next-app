@@ -1,6 +1,6 @@
 import React from "react";
 
-function Home1testimonial() {
+function Testimonial1() {
   return (
     <>
       <div className="section-common testimonial-three-section pt-120">
@@ -75,4 +75,4 @@ function Home1testimonial() {
   );
 }
 
-export default Home1testimonial;
+export default Testimonial1;

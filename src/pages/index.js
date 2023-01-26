@@ -10,7 +10,7 @@ import Home1Footer from "../components/footer/Home1Footer";
 import Home1Header from "../components/header/Home1Header";
 import Home1Package from "../components/package/Home1Package";
 import Home1Portfolio from "../components/portfolio/Home1Portfolio";
-import Home1Testimonial from "../components/testimonial/Home1testimonial";
+import Testimonial1 from "../components/testimonial/Testimonial1";
 import Home1PageWrapper from "../components/wrapper/Home1PageWrapper";
 function Home() {
   return (
@@ -22,7 +22,7 @@ function Home() {
         <Home1aboutMe />
         <Home1Portfolio />
         <Home1Package />
-        <Home1Testimonial />
+        <Testimonial1 />
         <Home1Blog />
         <Home1Contact />
         <Home1Footer />
