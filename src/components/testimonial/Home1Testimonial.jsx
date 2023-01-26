@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 
 function Home1testimonial() {
@@ -20,10 +19,10 @@ function Home1testimonial() {
             </div>
             <div className="testimonial-three-desc">
               <p>
-                "I work with Alguneb Johnl on many projects, he always tolda
+                I work with Alguneb Johnl on many projects, he always tolda
                 autonai exceeds my expectations with his quality work and
                 fastestopa Sedanl convallis magna vitae eros sollicitudin
-                pulvinar service, very smoothai and simple communication."{" "}
+                pulvinar service, very smoothai and simple communication.
               </p>
             </div>
           </div>
@@ -37,10 +36,10 @@ function Home1testimonial() {
             </div>
             <div className="testimonial-three-desc">
               <p>
-                "I work with Alguneb Johnl on many projects, he always tolda
+                I work with Alguneb Johnl on many projects, he always tolda
                 autonai exceeds my expectations with his quality work and
                 fastestopa Sedanl convallis magna vitae eros sollicitudin
-                pulvinar service, very smoothai and simple communication."{" "}
+                pulvinar service, very smoothai and simple communication.
               </p>
             </div>
           </div>
@@ -54,10 +53,10 @@ function Home1testimonial() {
             </div>
             <div className="testimonial-three-desc">
               <p>
-                "I work with Alguneb Johnl on many projects, he always tolda
+                I work with Alguneb Johnl on many projects, he always tolda
                 autonai exceeds my expectations with his quality work and
                 fastestopa Sedanl convallis magna vitae eros sollicitudin
-                pulvinar service, very smoothai and simple communication."{" "}
+                pulvinar service, very smoothai and simple communication.
               </p>
             </div>
           </div>
