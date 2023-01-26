@@ -1,26 +1,74 @@
 [
   {
     "id": 1,
-    "home1Image": "assets/images/bg/h1-testi1.png",
-    "authorName": "Sebastian Ethan",
-    "review": "I highly recommend Scooby to anyone in need of pet careservices. Whether it's for regular grooming or boarding,you can trust that your pets will be in good hands."
+    "img": "assets/images/portfolio/port-slider1.png",
+    "category": "Fashion",
+    "categorySlug": "fashion"
   },
   {
     "id": 2,
-    "home1Image": "assets/images/bg/h1-testi2.png",
-    "authorName": "Anthony Dylan",
-    "review": "I highly recommend Scooby to anyone in need of pet careservices. Whether it's for regular grooming or boarding,you can trust that your pets will be in good hands."
+    "img": "assets/images/portfolio/port-slider2.png",
+    "category": "Fashion",
+    "categorySlug": "fashion"
   },
   {
     "id": 3,
-    "home1Image": "assets/images/bg/h1-testi3.png",
-    "authorName": "Maverick Elias",
-    "review": "I highly recommend Scooby to anyone in need of pet careservices. Whether it's for regular grooming or boarding,you can trust that your pets will be in good hands."
+    "img": "assets/images/portfolio/port-slider3.png",
+    "category": "Fashion",
+    "categorySlug": "fashion"
   },
   {
     "id": 4,
-    "home1Image": "assets/images/bg/h1-testi4.png",
-    "authorName": "Michael Mason",
-    "review": "I highly recommend Scooby to anyone in need of pet careservices. Whether it's for regular grooming or boarding,you can trust that your pets will be in good hands."
+    "img": "assets/images/portfolio/port-slider3.png",
+    "category": "Wedding",
+    "categorySlug": "wedding"
+  },
+  {
+    "id": 5,
+    "img": "assets/images/portfolio/port-slider3.png",
+    "category": "Wedding",
+    "categorySlug": "wedding"
+  },
+  {
+    "id": 6,
+    "img": "assets/images/portfolio/port-slider3.png",
+    "category": "Wedding",
+    "categorySlug": "wedding"
+  },
+  {
+    "id": 7,
+    "img": "assets/images/portfolio/port-slider3.png",
+    "category": "Nature",
+    "categorySlug": "nature"
+  },
+  {
+    "id": 8,
+    "img": "assets/images/portfolio/port-slider3.png",
+    "category": "Nature",
+    "categorySlug": "nature"
+  },
+  {
+    "id": 9,
+    "img": "assets/images/portfolio/port-slider3.png",
+    "category": "Nature",
+    "categorySlug": "nature"
+  },
+  {
+    "id": 10,
+    "img": "assets/images/portfolio/port-slider3.png",
+    "category": "Lifestyle",
+    "categorySlug": "lifestyle"
+  },
+  {
+    "id": 11,
+    "img": "assets/images/portfolio/port-slider3.png",
+    "category": "Lifestyle",
+    "categorySlug": "lifestyle"
+  },
+  {
+    "id": 12,
+    "img": "assets/images/portfolio/port-slider3.png",
+    "category": "Lifestyle",
+    "categorySlug": "lifestyle"
   }
 ]

@@ -1,52 +1,96 @@
 import Link from "next/link";
 import React from "react";
-import blodData from "../../data/blog.json";
+
 function Home1Blog() {
   return (
-    <div className="h1-blog-area mb-120">
-      <div className="container">
-        <div className="row mb-50">
-          <div className="col-lg-12 d-flex justify-content-center">
-            <div className="section-title1 text-center">
-              <span>
-                <img src="assets/images/icon/section-vec-l2.svg" alt="" />
-                Latest Blog
-                <img src="assets/images/icon/section-vec-r2.svg" alt="" />
-              </span>
-              <h2>valueable words from Customers</h2>
+    <div className="section-common blog-section pt-120">
+      <div className="row">
+        <div className="section-title-three text-center">
+          <div className="water-text">Blog Article</div>
+          <h2>Blog Article</h2>
+        </div>
+      </div>
+      <div className="row g-4">
+        <div className="col-12">
+          <div className="blog-one magnetic-item">
+            <div className="blog-one-image">
+              <img src="assets/images/blog/home1-blog1.png" alt="image" />
+            </div>
+            <div className="blog-one-content">
+              <ul className="blog-one-meta">
+                <li>June 21, 2022</li>
+                <li>By, Admin</li>
+                <li>Photo</li>
+              </ul>
+              <h3>
+                <Link
+                  legacyBehavior
+                  href="/blog-details"
+                  data-cursor="View<br>Details"
+                >
+                  <a> Ullamcorper viverrani arcu. Proin cursus volutpat.</a>
+                </Link>
+              </h3>
+              <p>
+                I started getting on into photography when my family moved from
+                Nevada to Ohio gong toubleta.
+              </p>
             </div>
           </div>
         </div>
-        <div className="row g-lg-4 gy-5 justify-content-center">
-          {blodData.slice(0, 3).map((item) => {
-            const { id, image, category, date, title } = item;
-            return (
-              <div key={id} className="col-lg-4 col-md-6 col-sm-10">
-                <div className="h1-blog-card">
-                  <div className="blog-img">
-                    <img className="img-fluid" src={image} alt="" />
-                    <div className="category">
-                      <Link legacyBehavior href="/blog-grid">
-                        <a>{category}</a>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="blog-content">
-                    <div className="blog-meta">
-                      <Link legacyBehavior href="/blog-grid">
-                        <a>{date}</a>
-                      </Link>
-                    </div>
-                    <h4>
-                      <Link legacyBehavior href="/blog-details">
-                        <a>{title}</a>
-                      </Link>
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+        <div className="col-12">
+          <div className="blog-one magnetic-item">
+            <div className="blog-one-image">
+              <img src="assets/images/blog/home1-blog2.png" alt="image" />
+            </div>
+            <div className="blog-one-content">
+              <ul className="blog-one-meta">
+                <li>June 21, 2022</li>
+                <li>By, Admin</li>
+                <li>Photo</li>
+              </ul>
+              <h3>
+                <Link
+                  legacyBehavior
+                  href="/blog-details"
+                  data-cursor="View<br>Details"
+                >
+                  <a>Cras lobortis, nisi nec rutrumni facilisis, lorem orci.</a>
+                </Link>
+              </h3>
+              <p>
+                I started getting on into photography when my family moved from
+                Nevada to Ohio gong toubleta.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="col-12">
+          <div className="blog-one magnetic-item">
+            <div className="blog-one-image">
+              <img src="assets/images/blog/home1-blog3.png" alt="image" />
+            </div>
+            <div className="blog-one-content">
+              <ul className="blog-one-meta">
+                <li>June 21, 2022</li>
+                <li>By, Admin</li>
+                <li>Photo</li>
+              </ul>
+              <h3>
+                <Link
+                  legacyBehavior
+                  href="/blog-details"
+                  data-cursor="View<br>Details"
+                >
+                  <a>Mauris in enim et velit commodo tempus eu eget.</a>
+                </Link>
+              </h3>
+              <p>
+                I started getting on into photography when my family moved from
+                Nevada to Ohio gong toubleta.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

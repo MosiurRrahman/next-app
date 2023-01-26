@@ -1,5 +1,5 @@
 import React from "react";
-import Footer1 from "../components/footer/Footer1";
+import CopyrightFooter from "../components/copyright/CopyrightFooter";
 import Header1 from "../components/header/Header1";
 
 function Layout({ children }) {
@@ -7,7 +7,7 @@ function Layout({ children }) {
     <>
       <Header1 />
       {children}
-      <Footer1 />
+      <CopyrightFooter />
     </>
   );
 }

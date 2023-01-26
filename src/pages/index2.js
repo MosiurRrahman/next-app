@@ -1,30 +1,32 @@
 import React from "react";
-import Banner2 from "../components/banner/Banner2";
+import Home2About from "../components/about/Home2About";
+import Home2Award from "../components/award/Home2Award";
+import Home2banner from "../components/banner/Home2banner";
 import Home2Blog from "../components/blog/Home2Blog";
-import Home2ChooseUs from "../components/chooseUs/Home2ChooseUs";
+import Sidebar from "../components/common/Sidebar";
 import Home2Contact from "../components/contact/Home2Contact";
-import Footer1 from "../components/footer/Footer1";
-import Header2 from "../components/header/Header2";
-import Home2Service from "../components/service/Home2Service";
-import Home2Team from "../components/team/Home2Team";
+import Home2Footer from "../components/footer/Home2Footer";
+import Header1 from "../components/header/Header1";
+import LeftSocial from "../components/home2/LeftSocial";
+import HomePortfolio2 from "../components/portfolio/HomePortfolio2";
 import Home2Testimonial from "../components/testimonial/Home2Testimonial";
-import WorkProcess from "../components/workProcess/WorkProcess";
 
-function HomePage2() {
+function HomeTwo() {
   return (
     <>
-      <Header2 />
-      <Banner2 />
-      <Home2Service />
-      <Home2ChooseUs />
-      <WorkProcess />
-      <Home2Contact />
+      <Header1 />
+      <Sidebar />
+      <LeftSocial />
+      <Home2banner />
+      <Home2About />
+      <HomePortfolio2 />
+      <Home2Award />
       <Home2Testimonial />
-      <Home2Team />
       <Home2Blog />
-      <Footer1 />
+      <Home2Contact />
+      <Home2Footer />
     </>
   );
 }
 
-export default HomePage2;
+export default HomeTwo;

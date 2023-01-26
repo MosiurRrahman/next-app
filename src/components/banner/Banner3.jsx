@@ -1,30 +1,33 @@
-import Link from "next/link";
 import React, { useMemo } from "react";
-import Marquee from "react-fast-marquee";
 import SwiperCore, {
   Autoplay,
   EffectFade,
+  Mousewheel,
   Navigation,
   Pagination,
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-SwiperCore.use([Navigation, Pagination, Autoplay, EffectFade]);
+SwiperCore.use([Navigation, Pagination, Autoplay, EffectFade, Mousewheel]);
 function Banner3() {
-  const bannerSlider = useMemo(() => {
+  const slider = useMemo(() => {
     return {
       slidesPerView: "auto",
-      spaceBetween: 12,
-      effect: "fade",
+      speed: 800,
+      spaceBetween: 10,
+      parallax: true,
       loop: true,
-      speed: 1500,
-      autoplay: {
-        delay: 3000,
+      autoplay: true,
+      mousewheel: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: "true",
       },
-      keyboard: {
-        enabled: true,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
       },
       pagination: {
-        el: ".h3-hero-slider-pagination",
+        el: ".swiper-pagination-num",
         clickable: true,
         renderBullet: function (index, className) {
           return (
@@ -35,145 +38,95 @@ function Banner3() {
     };
   }, []);
   return (
-    <>
-      <div className="hero3 mb-90">
-        <div className="background-text">
-          <Marquee pauseOnHover={true} gradient={false} speed={60}>
-            <h2 className="marquee_text">
-              <img src="assets/images/icon/marque-foot.svg" alt="image" />
-              <span>Get exciting Discount</span> Up To 40%
-              <img src="assets/images/icon/marque-foot.svg" alt="image" />
-              <span>On Your first buying</span> Up To 50%
-              <img src="assets/images/icon/marque-foot.svg" alt="image" />
-              <span>Get exciting Discount</span> Up To 30%
-            </h2>
-          </Marquee>
-        </div>
-        <Swiper {...bannerSlider} className="swiper hero3-slider">
+    <div className="banner-section-three bg-color2 position-relative">
+      <div className="container-fluid px-0">
+        <Swiper {...slider} className="swiper banner-three-slider">
           <div className="swiper-wrapper">
             <SwiperSlide className="swiper-slide">
-              <div className="hero-wrapper">
-                <div className="container">
-                  <div className="row align-items-center">
-                    <div className="col-lg-6">
-                      <div className="banner-content">
-                        <h6>Limited Offer</h6>
-                        <h1>Best Food For Your Loving Dog.</h1>
-                        <div className="btn-group">
-                          <Link legacyBehavior href="/shop">
-                            <a className="primary-btn5 btn-md">Shop Now</a>
-                          </Link>
-                          <Link legacyBehavior href="/shop-details">
-                            <a className="primary-btn6">View Details</a>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 d-flex justify-content-end">
-                      <div className="hero-img">
-                        <div className="offer-card">
-                          <img
-                            className="img-fluid"
-                            src="assets/images/bg/h3-banner-offer.png"
-                            alt=""
-                          />
-                        </div>
-                        <img
-                          className="img-fluid banner-imgas"
-                          src="assets/images/bg/h3-banner-img.png"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div className="banner-three-content">
+                <h2>Creative Beige Photography.</h2>
+                <p>
+                  Phasellus scelerisque turpis sed eros tristique, eu fringilla
+                  eros placerat. Pellentesque at maximus sapien, a dictum
+                  lectus.
+                </p>
+                <a
+                  href="portfolio-column-three.html"
+                  className="eg-btn btn--primary-two btn--lg"
+                >
+                  View Portfolio
+                </a>
               </div>
+              <img
+                src="assets/images/banner/banner-three-one.jpg"
+                alt="image"
+              />
             </SwiperSlide>
             <SwiperSlide className="swiper-slide">
-              <div className="hero-wrapper">
-                <div className="container">
-                  <div className="row align-items-center">
-                    <div className="col-lg-6">
-                      <div className="banner-content">
-                        <h6>Limited Offer</h6>
-                        <h1>Best Food For Your Loving Cat.</h1>
-                        <div className="btn-group">
-                          <Link legacyBehavior href="/shop">
-                            <a className="primary-btn5 btn-md">Shop Now</a>
-                          </Link>
-                          <Link legacyBehavior href="/shop-details">
-                            <a className="primary-btn6">View Details</a>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 d-flex justify-content-end">
-                      <div className="hero-img">
-                        <div className="offer-card">
-                          <img
-                            className="img-fluid"
-                            src="assets/images/bg/h3-banner-offer.png"
-                            alt=""
-                          />
-                        </div>
-                        <img
-                          className="img-fluid banner-imgas"
-                          src="assets/images/bg/h3-banner-img-cat.png"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div className="banner-three-content">
+                <h2>Creative Drone Photography.</h2>
+                <p>
+                  Phasellus scelerisque turpis sed eros tristique, eu fringilla
+                  eros placerat. Pellentesque at maximus sapien, a dictum
+                  lectus.
+                </p>
+                <a
+                  href="portfolio-column-three.html"
+                  className="eg-btn btn--primary-two btn--lg"
+                >
+                  View Portfolio
+                </a>
               </div>
+              <img
+                src="assets/images/banner/banner-three-four.jpg"
+                alt="image"
+              />
             </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <div className="hero-wrapper">
-                <div className="container">
-                  <div className="row align-items-center">
-                    <div className="col-lg-6">
-                      <div className="banner-content">
-                        <h6>Limited Offer</h6>
-                        <h1>Best Food For Your Loving Dog.</h1>
-                        <div className="btn-group">
-                          <Link legacyBehavior href="/shop">
-                            <a className="primary-btn5 btn-md">Shop Now</a>
-                          </Link>
-                          <Link legacyBehavior href="/shop-details">
-                            <a className="primary-btn6">View Details</a>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 d-flex justify-content-end">
-                      <div className="hero-img">
-                        <div className="offer-card">
-                          <img
-                            className="img-fluid"
-                            src="assets/images/bg/h3-banner-offer.png"
-                            alt=""
-                          />
-                        </div>
-                        <img
-                          className="img-fluid banner-imgas"
-                          src="assets/images/bg/h3-banner-img-dog.png"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <diSwiperSlidev className="swiper-slide">
+              <div className="banner-three-content">
+                <h2>Creative Travel Photography.</h2>
+                <p>
+                  Phasellus scelerisque turpis sed eros tristique, eu fringilla
+                  eros placerat. Pellentesque at maximus sapien, a dictum
+                  lectus.
+                </p>
+                <a
+                  href="portfolio-column-three.html"
+                  className="eg-btn btn--primary-two btn--lg"
+                >
+                  View Portfolio
+                </a>
               </div>
+              <img
+                src="assets/images/banner/banner-three-three.jpg"
+                alt="image"
+              />
+            </diSwiperSlidev>
+            <SwiperSlide className="swiper-slide">
+              <div className="banner-three-content">
+                <h2>Creative Nature Photography.</h2>
+                <p>
+                  Phasellus scelerisque turpis sed eros tristique, eu fringilla
+                  eros placerat. Pellentesque at maximus sapien, a dictum
+                  lectus.
+                </p>
+                <a
+                  href="portfolio-column-three.html"
+                  className="eg-btn btn--primary-two btn--lg"
+                >
+                  View Portfolio
+                </a>
+              </div>
+              <img
+                src="assets/images/banner/banner-three-two.png"
+                alt="image"
+              />
             </SwiperSlide>
           </div>
+          <div className="swiper-pagination swiper-pagination-num" />
         </Swiper>
-        <div className="right-sidebar">
-          <div className="slider-pagination-area">
-            <div className="h3-hero-slider-pagination" />
-          </div>
-        </div>
       </div>
-    </>
+    </div>
   );
 }
 

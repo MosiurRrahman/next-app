@@ -1,39 +1,34 @@
-import Home1About from "../components/about/Home1About";
-import Banner1 from "../components/banner/Banner1";
-import Home1Blog from "../components/blog/Home1Blog";
-import ChooseUs from "../components/chooseUs/ChooseUs";
-import FeatureCounter from "../components/feature/FeatureCounter";
-import Home1feature from "../components/feature/Home1feature";
-import Footer1 from "../components/footer/Footer1";
-import Home1Gallary from "../components/gallary/Home1Gallary";
-import Header1 from "../components/header/Header1";
-import Home1Newslatter from "../components/newslatter/Home1Newslatter";
-import Home1Partner from "../components/partner/Home1Partner";
-import Home1PricePlan from "../components/pricePlan/Home1PricePlan";
-import Home1Service from "../components/service/Home1Service";
-import Home1Team from "../components/team/Home1Team";
-import Home1Testimonial from "../components/testimonial/Home1Testimonial";
-import VideoBanner1 from "../components/video/VideoBanner1";
+/* eslint-disable react/no-unescaped-entities */
 
-export default function Home() {
+import React from "react";
+import Home1aboutMe from "../components/about/Home1aboutMe";
+import Home1Banner from "../components/banner/Home1Banner";
+import Home1Blog from "../components/blog/Home1Blog";
+import Sidebar from "../components/common/Sidebar";
+import Home1Contact from "../components/contact/Home1Contact";
+import Home1Footer from "../components/footer/Home1Footer";
+import Home1Header from "../components/header/Home1Header";
+import Home1Package from "../components/package/Home1Package";
+import Home1Portfolio from "../components/portfolio/Home1Portfolio";
+import Home1testimonial from "../components/testimonial/Home1testimonial";
+import Home1PageWrapper from "../components/wrapper/Home1PageWrapper";
+function Home() {
   return (
     <>
-      <Header1 />
-      <Banner1 />
-      <VideoBanner1 />
-      <Home1Service />
-      <Home1About />
-      <Home1feature />
-      <FeatureCounter />
-      <ChooseUs />
-      <Home1Partner />
-      <Home1PricePlan />
-      <Home1Testimonial />
-      <Home1Team />
-      <Home1Newslatter />
-      <Home1Blog />
-      <Home1Gallary />
-      <Footer1 />
+      <Home1PageWrapper>
+        <Home1Header />
+        <Sidebar />
+        <Home1Banner />
+        <Home1aboutMe />
+        <Home1Portfolio />
+        <Home1Package />
+        <Home1testimonial />
+        <Home1Blog />
+        <Home1Contact />
+        <Home1Footer />
+      </Home1PageWrapper>
     </>
   );
 }
+
+export default Home;

@@ -1,177 +1,78 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 function Home2Contact() {
+  const currentRoute = useRouter().pathname;
   return (
-    <div className="h2-contact-area mb-120">
-      <div className="container-fluid">
-        <div className="row justify-content-center">
-          <div className="col-lg-10">
-            <div className="row">
-              <div className="col-lg-4">
-                <div className="contact-wrap">
-                  <div className="section-title">
-                    <h2>Contact</h2>
+    <div
+      className={
+        currentRoute === "/index-bg-image"
+          ? "contact-section3 pb-120 pl-80 mb-44"
+          : "contact-section3 section-common2 pb-120 pl-80 mb-44"
+      }
+    >
+      <div className="container">
+        <div className="row">
+          <div className="col-12 text-center">
+            <div className="section-title-two">
+              <h2>Get In Touch</h2>
+            </div>
+          </div>
+        </div>
+        <div className="row justify-content-center align-items-center">
+          <div className="col-xl-7 col-lg-6">
+            <h3 className="form-title">Have Any Questions</h3>
+            <form className="contact-me-form">
+              <div className="row">
+                <div className="col-lg-6">
+                  <div className="form-inner">
+                    <input type="text" placeholder="Enter your name" />
                   </div>
-                  <form>
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <div className="form-inner user">
-                          <input type="text" placeholder="Enter your name" />
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div className="form-inner email">
-                          <input type="text" placeholder="Enter your email" />
-                        </div>
-                      </div>
-                      <div className="col-lg-12">
-                        <div className="form-inner querry">
-                          <input type="text" placeholder="Subject" />
-                        </div>
-                      </div>
-                      <div className="col-lg-12">
-                        <div className="form-inner">
-                          <textarea
-                            placeholder="Your message"
-                            defaultValue={""}
-                          />
-                        </div>
-                      </div>
-                      <div className="col-lg-12">
-                        <div className="form-inner">
-                          <button className="primary-btn3" type="submit">
-                            send Now
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
+                </div>
+                <div className="col-lg-6">
+                  <div className="form-inner">
+                    <input type="text" placeholder="Enter your email" />
+                  </div>
+                </div>
+                <div className="col-lg-12">
+                  <div className="form-inner">
+                    <input type="text" placeholder="Querry" />
+                  </div>
+                </div>
+                <div className="col-lg-12">
+                  <div className="form-inner">
+                    <textarea
+                      rows="6"
+                      placeholder="Write Your message"
+                    ></textarea>
+                  </div>
+                </div>
+                <div className="col-12">
+                  <button type="submit" className="eg-btn btn--primary btn--lg">
+                    Send Message
+                  </button>
                 </div>
               </div>
-              <div className="col-lg-4">
-                <div className="contact-img">
-                  <img
-                    className="img-fluid"
-                    src="assets/images/bg/h2-contact-img.png"
-                    alt="contact-img"
-                  />
-                </div>
+            </form>
+          </div>
+          <div className="col-xl-5 col-lg-6 ps-lg-4 ps-auto">
+            <div className="contact-content">
+              <h2>
+                <span>Let’s talk</span>About Your Photography.
+              </h2>
+              <p>
+                I started getting on into photography when my family moved from
+                oni Nevada to Ohio gong toubleta.I started getting on into
+                photographyai when my family moved from Nevada to.
+              </p>
+            </div>
+            <div className="phone-block">
+              <div className="phone-title">
+                Urgent? <span>Call Me</span>
               </div>
-              <div className="col-lg-4">
-                <div className="section-title">
-                  <h2>FAQ</h2>
-                </div>
-                <div className="accordion" id="accordionExample">
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingOne">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="false"
-                        aria-controls="collapseOne"
-                      >
-                        01. In et finibus lectus. Donec scelerisque tortor?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div className="accordion-body">
-                        Pellentesque maximus augue orci, quis congue purus
-                        iaculis id. Maecenas eudocl lorem quis massal molestie
-                        vulputate in sit amet diam. Cras eu odio sit amet ont
-                        tellus. Cras ut sollicitudin urna. Vivamus blandit,{" "}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                      >
-                        02. Rhoncus turpis porta non Curabitur interdum?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseTwo"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div className="accordion-body">
-                        Pellentesque maximus augue orci, quis congue purus
-                        iaculis id. Maecenas eudocl lorem quis massal molestie
-                        vulputate in sit amet diam. Cras eu odio sit amet ont
-                        tellus. Cras ut sollicitudin urna. Vivamus blandit,{" "}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingThree">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
-                      >
-                        03. Donec ac enim vitae ligula ultrices accum?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseThree"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingThree"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div className="accordion-body">
-                        Pellentesque maximus augue orci, quis congue purus
-                        iaculis id. Maecenas eudocl lorem quis massal molestie
-                        vulputate in sit amet diam. Cras eu odio sit amet ont
-                        tellus. Cras ut sollicitudin urna. Vivamus blandit,
-                      </div>
-                    </div>
-                  </div>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFour">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour"
-                      >
-                        04. Donec ac enim vitae ligula ultrices accum?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFour"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFour"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div className="accordion-body">
-                        Pellentesque maximus augue orci, quis congue purus
-                        iaculis id. Maecenas eudocl lorem quis massal molestie
-                        vulputate in sit amet diam. Cras eu odio sit amet ont
-                        tellus. Cras ut sollicitudin urna. Vivamus blandit,
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <h4>
+                <a href="tel:+012-3456-789102">+012-3456-789102</a>
+              </h4>
             </div>
           </div>
         </div>
