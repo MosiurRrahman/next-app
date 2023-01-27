@@ -40,14 +40,13 @@ function blogStandardOne() {
                           href="/blog-details"
                           data-cursor="Read Details"
                         >
-                          <a> {title1}</a>
+                          <a>{title1}</a>
                         </Link>
                       </h3>
                       <div className="read-more-btn">
                         <Link legacyBehavior href="/blog-details">
                           <a>
-                            {" "}
-                            Read Article{" "}
+                            Read Article
                             <img
                               src="assets/images/icons/button-arrow.svg"
                               alt="image"

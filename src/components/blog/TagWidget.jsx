@@ -27,19 +27,19 @@ function TagWidget() {
           <li>
             <img src="assets/images/icons/list-cicle.svg" alt="image" />
             <Link legacyBehavior href="/blog-details">
-              <a>Digita Tokenl</a>{" "}
+              <a>Digita Tokenl</a>
             </Link>
           </li>
           <li>
             <img src="assets/images/icons/list-cicle.svg" alt="image" />
             <Link legacyBehavior href="/blog-details">
-              <a>Blockchain NFT</a>{" "}
+              <a>Blockchain NFT</a>
             </Link>
           </li>
           <li>
             <img src="assets/images/icons/list-cicle.svg" alt="image" />
             <Link legacyBehavior href="/blog-details">
-              <a>Market Place</a>{" "}
+              <a>Market Place</a>
             </Link>
           </li>
           <li>
