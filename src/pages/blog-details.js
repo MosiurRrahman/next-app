@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import Link from "next/link";
 import React from "react";
 import Artical from "../components/blog/Artical";
 import SocialLink from "../components/blog/SocialLink";
@@ -96,22 +97,28 @@ function blogDetailsPage() {
                           <img
                             src="assets/images/icons/list-cicle.svg"
                             alt="image"
-                          />{" "}
-                          <a href="blog-details.html">Portfolio</a>
+                          />
+                          <Link legacyBehavior href="/blog-details">
+                            <a>Portfolio</a>
+                          </Link>
                         </li>
                         <li>
                           <img
                             src="assets/images/icons/list-cicle.svg"
                             alt="image"
-                          />{" "}
-                          <a href="blog-details.html">Crypto</a>
+                          />
+                          <Link legacyBehavior href="/blog-details">
+                            <a>Crypto</a>
+                          </Link>
                         </li>
                         <li>
                           <img
                             src="assets/images/icons/list-cicle.svg"
                             alt="image"
-                          />{" "}
-                          <a href="blog-details.html">Digital Token</a>
+                          />
+                          <Link legacyBehavior href="/blog-details">
+                            <a>Digital Token</a>
+                          </Link>
                         </li>
                       </ul>
                     </div>

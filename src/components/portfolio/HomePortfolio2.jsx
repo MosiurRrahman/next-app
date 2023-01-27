@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useMemo } from "react";
 import SwiperCore, {
@@ -374,12 +375,9 @@ function HomePortfolio2() {
         </div>
         <div className="row">
           <div className="col-12 text-center">
-            <a
-              href="portfolio-masonary.html"
-              className="eg-btn btn--primary btn--lg"
-            >
-              View Portfolio
-            </a>
+            <Link legacyBehavior href="/portfolio-masonary">
+              <a className="eg-btn btn--primary btn--lg">View Portfolio</a>
+            </Link>
           </div>
         </div>
       </div>

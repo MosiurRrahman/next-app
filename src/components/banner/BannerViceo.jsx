@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function BannerViceo() {
@@ -10,12 +11,11 @@ function BannerViceo() {
               <div className="video-wrapper-youtube">
                 <div className="banner-video-content">
                   <h1>Welcome to PicsZen !</h1>
-                  <a
-                    className="eg-btn btn--primary btn--lg"
-                    href="portfolio-column-four.html"
-                  >
-                    View Portfolio
-                  </a>
+                  <Link legacyBehavior href="/portfolio-column-four">
+                    <a className="eg-btn btn--primary btn--lg">
+                      View Portfolio
+                    </a>
+                  </Link>
                 </div>
                 <video
                   autoPlay

@@ -26,7 +26,6 @@ Template Name: PicsZen - Photography HTML Template
 22. Portfolio-section
 
 ================================================*/
-@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -56,6 +55,61 @@ Template Name: PicsZen - Photography HTML Template
   background: var(--white);
 }
 
+@font-face {
+  font-family: "Outfit";
+  src: url(../fonts/Outfit-Black.ttf) format("truetype");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url(../fonts/Outfit-ExtraBold.ttf) format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url(../fonts/Outfit-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url(../fonts/Outfit-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url(../fonts/Outfit-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url(../fonts/Outfit-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url(../fonts/Outfit-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Jost";
+  src: url(../fonts/Jost-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Jost";
+  src: url(../fonts/Jost-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Jost";
+  src: url(../fonts/Jost-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Jost";
+  src: url(../fonts/Jost-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
 /*================================================
 1. Mixins Css
 =================================================*/
@@ -3457,7 +3511,7 @@ header.style-2 .menu-list > li.menu-item-has-children:hover .submenu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   margin-bottom: 8px;
 }
 .award-list li span:first-child {
@@ -5819,7 +5873,7 @@ ul.social-four li a:hover i {
   align-items: center;
   flex-direction: row;
   gap: 20px;
-  align-items: start;
+  align-items: flex-start;
 }
 
 footer {

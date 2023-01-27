@@ -66,20 +66,21 @@ function Fixbar() {
       </div>
       <div className="mobile-logo-area d-flex justify-content-start align-items-center">
         <div className="header-logo">
-          <a href="index.html">
-            <img
-              alt="image"
-              className="img-fluid"
-              src="assets/images/bg/header-logo.svg"
-            />
-          </a>
+          <Link legacyBehavior href="/">
+            <a>
+              <img
+                alt="image"
+                className="img-fluid"
+                src="assets/images/bg/header-logo.svg"
+              />
+            </a>
+          </Link>
         </div>
       </div>
       <div className="sidebar-menu-area">
         <ul className="menu-list">
           <li className="menu-item-has-children menu-item">
             <a href="#" className="drop-down">
-              {" "}
               Home
             </a>
             <i className="bi bi-plus" onClick={() => handleMenu("home-one")} />
@@ -97,39 +98,54 @@ function Fixbar() {
                 </Link>
               </li>
               <li>
-                <a href="index2.html">Home Two</a>
+                <Link legacyBehavior href="/index2">
+                  <a>Home Two</a>
+                </Link>
               </li>
               <li>
-                <a href="index-pagination-slider.html">
-                  Home Pagination Slider
-                </a>
+                <Link legacyBehavior href="/index-pagination-slider">
+                  <a>Home Pagination Slider</a>
+                </Link>
               </li>
               <li>
-                <a href="index-masonary.html">Home Masonary</a>
+                <Link legacyBehavior href="/index-masonary">
+                  <a>Home Masonary</a>
+                </Link>
               </li>
               <li>
-                <a href="index-carousel.html">Home Carousel</a>
+                <Link legacyBehavior href="/index-carousel">
+                  <a>Home Carousel</a>
+                </Link>
               </li>
               <li>
-                <a href="index-portfolio.html">Home Portfolio</a>
+                <Link legacyBehavior href="/index-portfolio">
+                  <a>Home Portfolio</a>
+                </Link>
               </li>
               <li>
-                <a href="index-video.html">Home Video</a>
+                <Link legacyBehavior href="/index-video">
+                  <a>Home Video</a>
+                </Link>
               </li>
               <li>
-                <a href="index-center-slider.html">Home Center Slide</a>
+                <Link legacyBehavior href="/index-center-slider">
+                  <a>Home Center Slide</a>
+                </Link>
               </li>
               <li>
-                <a href="index-bg-image.html">Home Image Background</a>
+                <Link legacyBehavior href="/index-bg-image">
+                  <a>Home Image Background</a>
+                </Link>
               </li>
               <li>
-                <a href="index-fixed-sidebar.html">Home Fixed Sidebar</a>
+                <Link legacyBehavior href="/index-fixed-sidebar">
+                  <a>Home Fixed Sidebar</a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className="menu-item-has-children menu-item">
             <a href="#" className="drop-down">
-              {" "}
               About
             </a>
             <i className="bi bi-plus" onClick={() => handleMenu("about")} />
@@ -140,15 +156,21 @@ function Fixbar() {
               }
             >
               <li>
-                <a href="about-me.html">About Me</a>
+                <Link legacyBehavior href="/about-me">
+                  <a>About Me</a>
+                </Link>
               </li>
               <li>
-                <a href="about-us.html">About Us</a>
+                <Link legacyBehavior href="/about-us">
+                  <a>About Us</a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className="menu-item-has-children menu-item">
-            <a href="portfolio-column-four.html"> Portfolio</a>
+            <Link legacyBehavior href="/portfolio-column-four">
+              <a>Portfolio</a>
+            </Link>
             <i className="bi bi-plus" onClick={() => handleMenu("portfolio")} />
             <ul
               style={state.activeMenu === "portfolio" ? stylses : {}}
@@ -164,22 +186,29 @@ function Fixbar() {
                 </Link>
               </li>
               <li>
-                <a href="portfolio-column-three.html">Portfolio Grid 03</a>
+                <Link legacyBehavior href="/portfolio-column-three">
+                  <a>Portfolio Grid 03</a>
+                </Link>
               </li>
               <li>
-                <a href="portfolio-column-four.html">Portfolio Grid 04</a>
+                <Link legacyBehavior href="/portfolio-column-four">
+                  <a>Portfolio Grid 04</a>
+                </Link>
               </li>
               <li>
-                <a href="portfolio-text-down.html">Portfolio Text Down</a>
+                <Link legacyBehavior href="/portfolio-text-down">
+                  <a>Portfolio Text Down</a>
+                </Link>
               </li>
               <li>
-                <a href="portfolio-details.html">Portfolio Details</a>
+                <Link legacyBehavior href="/portfolio-details">
+                  <a>Portfolio Details</a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className="menu-item-has-children menu-item">
             <a href="#" className="drop-down">
-              {" "}
               Pages
             </a>
             <i className="bi bi-plus" onClick={() => handleMenu("page")} />
@@ -190,69 +219,104 @@ function Fixbar() {
               }
             >
               <li>
-                <a href="gallery-column-four.html">Gallery Column Four</a>
+                <Link legacyBehavior href="/gallery-column-four">
+                  <a>Gallery Column Four</a>
+                </Link>
               </li>
               <li>
-                <a href="gallery-fullwidth.html">Gallery Full Width</a>
+                <Link legacyBehavior href="/gallery-fullwidth">
+                  <a>Gallery Full Width</a>
+                </Link>
               </li>
               <li>
-                <a href="gallery-parallax.html">Gallery Parallax</a>
+                <Link legacyBehavior href="/gallery-parallax">
+                  <a>Gallery Parallax</a>
+                </Link>
               </li>
               <li>
-                <a href="pricing.html">Pricing</a>
+                <Link legacyBehavior href="/pricing">
+                  <a>Pricing</a>
+                </Link>
               </li>
               <li>
-                <a href="client.html">Client</a>
+                <Link legacyBehavior href="/client">
+                  <a>Client</a>
+                </Link>
               </li>
               <li>
-                <a href="service-one.html">Services</a>
+                <Link legacyBehavior href="/service-one">
+                  <a>Services</a>
+                </Link>
               </li>
               <li>
-                <a href="team-one.html">Team One</a>
+                <Link legacyBehavior href="/team-one">
+                  <a>Team One</a>
+                </Link>
               </li>
               <li>
-                <a href="team-two.html">Team Two</a>
+                <Link legacyBehavior href="/team-two">
+                  <a>Team Two</a>
+                </Link>
               </li>
               <li>
-                <a href="faq.html">Faq</a>
+                <Link legacyBehavior href="/faq">
+                  <a>Faq</a>
+                </Link>
               </li>
               <li>
-                <a href="testimonial.html">Testimonial</a>
+                <Link legacyBehavior href="/testimonial">
+                  <a>Testimonial</a>
+                </Link>
               </li>
               <li>
-                <a href="booking.html">Booking</a>
+                <Link legacyBehavior href="/booking">
+                  <a>Booking</a>
+                </Link>
               </li>
               <li>
-                <a href="error.html">Error</a>
+                <Link legacyBehavior href="/error">
+                  <a>Error</a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className="menu-item-has-children menu-item">
-            <a href="blog-grid-one.html">Blog</a>
+            <Link legacyBehavior href="/blog-grid-one">
+              <a>Blog</a>
+            </Link>
             <i className="bi bi-plus" onClick={() => handleMenu("blog")} />
             <ul
               className={state.activeMenu === "blog" ? "sub-menus" : "sub-menu"}
             >
               <li>
-                <a href="blog-grid-one.html">Blog Grid One</a>
+                <Link legacyBehavior href="/blog-grid-one">
+                  <a>Blog Grid One</a>
+                </Link>
               </li>
               <li>
-                <a href="blog-standard-one.html">Blog Standard 01</a>
+                <Link legacyBehavior href="/blog-standard-one">
+                  <a>Blog Standard 01</a>
+                </Link>
               </li>
               <li>
-                <a href="blog-standard-two.html">Blog Standard 02</a>
+                <Link legacyBehavior href="/blog-standard-two">
+                  <a>Blog Standard 02</a>
+                </Link>
               </li>
               <li>
-                <a href="blog-standard-three.html">Blog Standard 03</a>
+                <Link legacyBehavior href="/blog-standard-three">
+                  <a>Blog Standard 03</a>
+                </Link>
               </li>
               <li>
-                <a href="blog-details.html">Blog Details</a>
+                <Link legacyBehavior href="/blog-details">
+                  <a>Blog Details</a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className="menu-item-has-children menu-item">
             <a href="#" className="drop-down">
-              {" "}
               Contact
             </a>
             <i className="bi bi-plus" onClick={() => handleMenu("contact")} />

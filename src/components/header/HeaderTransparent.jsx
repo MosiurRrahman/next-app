@@ -14,13 +14,15 @@ function HeaderTransparent() {
     >
       <div className="container-fluid d-flex justify-content-between align-items-center">
         <div className="header-logo">
-          <a href="index.html">
-            <img
-              alt="image"
-              className="img-fluid"
-              src="assets/images/bg/header-logo.svg"
-            />
-          </a>
+          <Link legacyBehavior href="/index">
+            <a>
+              <img
+                alt="image"
+                className="img-fluid"
+                src="assets/images/bg/header-logo.svg"
+              />
+            </a>
+          </Link>
         </div>
         <ul className="menu-list">
           <li className="menu-item-has-children">

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useMemo } from "react";
 import SwiperCore, {
   Autoplay,
@@ -61,12 +62,13 @@ function Banner6() {
                     />
                     <div className="banner-six-content">
                       <h2>
-                        <a
-                          href="portfolio-details.html"
+                        <Link
+                          legacyBehavior
+                          href="/portfolio-details"
                           data-cursor="View Work"
                         >
-                          Creative Photography.
-                        </a>
+                          <a>Creative Photography.</a>
+                        </Link>
                       </h2>
                       <span>Photographer</span>
                     </div>
@@ -80,12 +82,13 @@ function Banner6() {
                     />
                     <div className="banner-six-content">
                       <h2>
-                        <a
-                          href="portfolio-details.html"
+                        <Link
+                          legacyBehavior
+                          href="/portfolio-details"
                           data-cursor="View Work"
                         >
-                          Travel Photography.
-                        </a>
+                          <a>Travel Photography.</a>
+                        </Link>
                       </h2>
                       <span>Photographer</span>
                     </div>
@@ -99,12 +102,13 @@ function Banner6() {
                     />
                     <div className="banner-six-content">
                       <h2>
-                        <a
-                          href="portfolio-details.html"
+                        <Link
+                          legacyBehavior
+                          href="/portfolio-details"
                           data-cursor="View Work"
                         >
-                          Nature Photography.
-                        </a>
+                          <a>Nature Photography.</a>
+                        </Link>
                       </h2>
                       <span>Photographer</span>
                     </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useMemo } from "react";
 import SwiperCore, {
   Autoplay,
@@ -97,9 +98,9 @@ function Banner4() {
                       <div className="banner-five-content">
                         <h4>Photo</h4>
                         <h2>
-                          <a href="portfolio-column-four.html">
-                            Wildlife Photography.
-                          </a>
+                          <Link legacyBehavior href="/portfolio-column-four">
+                            <a>Wildlife Photography.</a>
+                          </Link>
                         </h2>
                       </div>
                     </div>
@@ -113,9 +114,9 @@ function Banner4() {
                       <div className="banner-five-content">
                         <h4>Photo</h4>
                         <h2>
-                          <a href="portfolio-column-four.html">
-                            Nature Photography.
-                          </a>
+                          <Link legacyBehavior href="/portfolio-column-four">
+                            <a>Nature Photography.</a>
+                          </Link>
                         </h2>
                       </div>
                     </div>
@@ -129,9 +130,9 @@ function Banner4() {
                       <div className="banner-five-content">
                         <h4>Photo</h4>
                         <h2>
-                          <a href="portfolio-column-four.html">
-                            Travel Photography.
-                          </a>
+                          <Link legacyBehavior href="/portfolio-column-four">
+                            <a>Travel Photography.</a>
+                          </Link>
                         </h2>
                       </div>
                     </div>

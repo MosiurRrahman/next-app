@@ -29,8 +29,8 @@ function PortfolioColumFour() {
     <>
       <Layout>
         <Breadcrumb
-          pageName="portfoli Column Four"
-          pageTitle="portfoli Column Four"
+          pageName="Portfoli Column Four"
+          pageTitle="Portfoli Column Four"
         />
         <div className="our-portfilio-area bg-color2 pt-120 pb-120 mb-44">
           <div className="container">

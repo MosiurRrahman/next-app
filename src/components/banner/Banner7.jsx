@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import CircleType from "circletype";
+import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 function Banner7() {
   const circleInstance = useRef();
@@ -71,12 +72,11 @@ function Banner7() {
                   characters and personalities.
                 </p>
                 <div className="banner-two-btn">
-                  <a
-                    href="portfolio-slider.html"
-                    className="eg-btn btn--primary-two btn--lg"
-                  >
-                    View My Profile
-                  </a>
+                  <Link legacyBehavior href="/portfolio-slider">
+                    <a className="eg-btn btn--primary-two btn--lg">
+                      View My Profile
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>

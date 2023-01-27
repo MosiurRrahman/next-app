@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Breadcrumb from "../components/breadcrumb/Breadcrumb";
 import Layout from "../layout/Layout";
@@ -48,12 +49,13 @@ function portfolioTextDown() {
                   />
                   <div className="content">
                     <h3>
-                      <a
+                      <Link
+                        legacyBehavior
                         data-cursor="View<br>Details"
-                        href="portfolio-details.html"
+                        href="/portfolio-details"
                       >
-                        Floona Photoshoot
-                      </a>
+                        <a>Floona Photoshoot</a>
+                      </Link>
                     </h3>
                     <span>Commisson</span>
                   </div>
@@ -68,12 +70,13 @@ function portfolioTextDown() {
                   />
                   <div className="content">
                     <h3>
-                      <a
+                      <Link
+                        legacyBehavior
                         data-cursor="View<br>Details"
-                        href="portfolio-details.html"
+                        href="/portfolio-details"
                       >
-                        Simply The best
-                      </a>
+                        <a>Simply The best</a>
+                      </Link>
                     </h3>
                     <span>Editorial</span>
                   </div>
@@ -88,12 +91,13 @@ function portfolioTextDown() {
                   />
                   <div className="content">
                     <h3>
-                      <a
+                      <Link
+                        legacyBehavior
                         data-cursor="View<br>Details"
-                        href="portfolio-details.html"
+                        href="/portfolio-details"
                       >
-                        Interstellar Midnight
-                      </a>
+                        <a>Interstellar Midnight</a>
+                      </Link>
                     </h3>
                     <span>Personal</span>
                   </div>
@@ -108,12 +112,13 @@ function portfolioTextDown() {
                   />
                   <div className="content">
                     <h3>
-                      <a
+                      <Link
+                        legacyBehavior
                         data-cursor="View<br>Details"
-                        href="portfolio-details.html"
+                        href="/portfolio-details"
                       >
-                        Paradise Dream
-                      </a>
+                        <a>Paradise Dream</a>
+                      </Link>
                     </h3>
                     <span>Personal</span>
                   </div>
@@ -128,12 +133,13 @@ function portfolioTextDown() {
                   />
                   <div className="content">
                     <h3>
-                      <a
+                      <Link
+                        legacyBehavior
                         data-cursor="View<br>Details"
-                        href="portfolio-details.html"
+                        href="/portfolio-details"
                       >
-                        Honey Magazine
-                      </a>
+                        <a>Honey Magazine</a>
+                      </Link>
                     </h3>
                     <span>Sculpture</span>
                   </div>
@@ -148,12 +154,13 @@ function portfolioTextDown() {
                   />
                   <div className="content">
                     <h3>
-                      <a
+                      <Link
+                        legacyBehavior
                         data-cursor="View<br>Details"
-                        href="portfolio-details.html"
+                        href="/portfolio-details"
                       >
-                        Pretty Cool Vibes
-                      </a>
+                        <a>Pretty Cool Vibes</a>
+                      </Link>
                     </h3>
                     <span>Portraits</span>
                   </div>
@@ -168,12 +175,13 @@ function portfolioTextDown() {
                   />
                   <div className="content">
                     <h3>
-                      <a
+                      <Link
+                        legacyBehavior
                         data-cursor="View<br>Details"
-                        href="portfolio-details.html"
+                        href="/portfolio-details"
                       >
-                        Erik Couchering
-                      </a>
+                        <a>Erik Couchering</a>
+                      </Link>
                     </h3>
                     <span>Editorial</span>
                   </div>
@@ -188,12 +196,13 @@ function portfolioTextDown() {
                   />
                   <div className="content">
                     <h3>
-                      <a
+                      <Link
+                        legacyBehavior
                         data-cursor="View<br>Details"
-                        href="portfolio-details.html"
+                        href="/portfolio-details"
                       >
-                        Sunny Side Up
-                      </a>
+                        <a>Sunny Side Up</a>
+                      </Link>
                     </h3>
                     <span>Personal</span>
                   </div>
@@ -208,12 +217,13 @@ function portfolioTextDown() {
                   />
                   <div className="content">
                     <h3>
-                      <a
+                      <Link
+                        legacyBehavior
                         data-cursor="View<br>Details"
-                        href="portfolio-details.html"
+                        href="/portfolio-details"
                       >
-                        Ornament State
-                      </a>
+                        <a>Ornament State</a>
+                      </Link>
                     </h3>
                     <span>Commisson</span>
                   </div>

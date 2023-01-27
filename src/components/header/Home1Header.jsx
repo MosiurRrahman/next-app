@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Home1Header() {
@@ -5,13 +6,15 @@ function Home1Header() {
     <header className="header-area style-1">
       <div className="container-fluid d-flex justify-content-between align-items-center">
         <div className="header-logo">
-          <a href="index.html">
-            <img
-              alt="image"
-              className="img-fluid"
-              src="assets/images/bg/header-logo.svg"
-            />
-          </a>
+          <Link legacyBehavior href="/">
+            <a>
+              <img
+                alt="image"
+                className="img-fluid"
+                src="assets/images/bg/header-logo.svg"
+              />
+            </a>
+          </Link>
         </div>
         <div className="sidebar-button mobile-menu-btn">
           <span />

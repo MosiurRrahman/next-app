@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useMemo } from "react";
 import SwiperCore, {
   Autoplay,
@@ -50,12 +51,11 @@ function Banner3() {
                   eros placerat. Pellentesque at maximus sapien, a dictum
                   lectus.
                 </p>
-                <a
-                  href="portfolio-column-three.html"
-                  className="eg-btn btn--primary-two btn--lg"
-                >
-                  View Portfolio
-                </a>
+                <Link legacyBehavior href="/portfolio-column-three">
+                  <a className="eg-btn btn--primary-two btn--lg">
+                    View Portfolio
+                  </a>
+                </Link>
               </div>
               <img
                 src="assets/images/banner/banner-three-one.jpg"
@@ -70,12 +70,11 @@ function Banner3() {
                   eros placerat. Pellentesque at maximus sapien, a dictum
                   lectus.
                 </p>
-                <a
-                  href="portfolio-column-three.html"
-                  className="eg-btn btn--primary-two btn--lg"
-                >
-                  View Portfolio
-                </a>
+                <Link legacyBehavior href="/portfolio-column-three">
+                  <a className="eg-btn btn--primary-two btn--lg">
+                    View Portfolio
+                  </a>
+                </Link>
               </div>
               <img
                 src="assets/images/banner/banner-three-four.jpg"
@@ -90,12 +89,11 @@ function Banner3() {
                   eros placerat. Pellentesque at maximus sapien, a dictum
                   lectus.
                 </p>
-                <a
-                  href="portfolio-column-three.html"
-                  className="eg-btn btn--primary-two btn--lg"
-                >
-                  View Portfolio
-                </a>
+                <Link legacyBehavior href="/portfolio-column-three">
+                  <a className="eg-btn btn--primary-two btn--lg">
+                    View Portfolio
+                  </a>
+                </Link>
               </div>
               <img
                 src="assets/images/banner/banner-three-three.jpg"
@@ -110,12 +108,11 @@ function Banner3() {
                   eros placerat. Pellentesque at maximus sapien, a dictum
                   lectus.
                 </p>
-                <a
-                  href="portfolio-column-three.html"
-                  className="eg-btn btn--primary-two btn--lg"
-                >
-                  View Portfolio
-                </a>
+                <Link legacyBehavior href="/portfolio-column-three">
+                  <a className="eg-btn btn--primary-two btn--lg">
+                    View Portfolio
+                  </a>
+                </Link>
               </div>
               <img
                 src="assets/images/banner/banner-three-two.png"

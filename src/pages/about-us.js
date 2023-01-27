@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Breadcrumb from "../components/breadcrumb/Breadcrumb";
 import Counter from "../components/common/Counter";
@@ -25,12 +26,11 @@ function aboutUsPage() {
                   </div>
                 </div>
                 <div className="col-lg-4 text-lg-end text-center">
-                  <a
-                    className="eg-btn btn--primary btn--lg"
-                    href="booking.html"
-                  >
-                    Appointment Now
-                  </a>
+                  <Link legacyBehavior href="/booking">
+                    <a className="eg-btn btn--primary btn--lg">
+                      Appointment Now
+                    </a>
+                  </Link>
                 </div>
               </div>
               <div className="row align-items-center g-4">

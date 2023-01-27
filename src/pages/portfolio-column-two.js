@@ -28,7 +28,10 @@ function PortfolioColumnTwo() {
   return (
     <>
       <Layout>
-        <Breadcrumb pageName="" pageTitle="" />
+        <Breadcrumb
+          pageName="Portfolio Grid Two"
+          pageTitle="Portfolio Grid Two"
+        />
         <div className="our-portfilio-area bg-color2 pt-120 pb-120 mb-44">
           <div className="container">
             <div className="row justify-content-center g-4">

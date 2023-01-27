@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Banner8() {
@@ -13,12 +14,9 @@ function Banner8() {
                 Phasellus scelerisque turpis sed eros tristique, eu fringilla
                 eros placerat. Pellentesque at maximus sapien, a dictum lectus.
               </p>
-              <a
-                href="portfolio-column-two.html"
-                className="eg-btn btn--primary btn--lg"
-              >
-                View My Profile
-              </a>
+              <Link legacyBehavior href="/portfolio-column-two">
+                <a className="eg-btn btn--primary btn--lg">View My Profile</a>
+              </Link>
             </div>
           </div>
           <div className="col-xl-5 col-lg-5 col-md-10">
