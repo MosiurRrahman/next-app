@@ -1,52 +1,31 @@
-import React, { useState } from "react";
-import ModalVideo from "react-modal-video";
-import "react-modal-video/css/modal-video.css";
-import { Link } from "react-router-dom";
-function Breadcrumb(props) {
-  const [open, setOpen] = useState(false);
+import Link from "next/link";
+import React from "react";
+
+function Breadcrumb({ pageTitle, pageName }) {
   return (
-    <>
-      <section className="breadcrumbs">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <div className="breadcrumb-wrapper">
-                <div className="breadcrumb-cnt">
-                  <h1>{props.pageTitle}</h1>
-                  <span>
-                    <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
-                    <i className="bi bi-arrow-right" />
-                    {props.pageName}
-                  </span>
-                  <div className="breadcrumb-video">
-                    <img
-                      src={process.env.PUBLIC_URL + "/img/breadcrumb-video.jpg"}
-                      alt="breadcrumbImg"
-                    />
-                    <div className="video-inner">
-                      <div
-                        className="video-popup"
-                        onClick={() => setOpen(true)}
-                      >
-                        <i className="fas fa-play" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+    <section className="breadcrumbs">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="breadcrumb-wrapper">
+              <h2>{pageTitle}</h2>
+              <span>
+                <Link legacyBehavior href="/">
+                  <a>Home</a>
+                </Link>
+                <i className="bi bi-chevron-right" />
+                {pageName}
+              </span>
+              <div className="arrow-down">
+                <a href="#down">
+                  <i className="bi bi-chevron-down" />
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <React.Fragment>
-        <ModalVideo
-          channel={"youtube"}
-          videoId="T7SIxJOoQd8"
-          isOpen={open}
-          onClose={() => setOpen(false)}
-        ></ModalVideo>
-      </React.Fragment>
-    </>
+      </div>
+    </section>
   );
 }
 
