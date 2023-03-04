@@ -1,7 +1,6 @@
 import Banner1 from "../components/banner/Banner1";
 import Home1Blog from "../components/blog/Home1Blog";
 import Footer from "../components/footer/Footer";
-import Header1 from "../components/header/Header1";
 import HowItwork1 from "../components/howItWork/HowItwork1";
 import CreativeService from "../components/service/CreativeService";
 import HomeService from "../components/service/HomeService";
@@ -14,7 +13,7 @@ import WhyChooseUs from "../components/whyChooseUs/WhyChooseUs";
 export default function Home() {
   return (
     <>
-      <Header1 />
+      {/* <Header1 /> */}
       <Banner1 />
       <CreativeService />
       <PopularService />
