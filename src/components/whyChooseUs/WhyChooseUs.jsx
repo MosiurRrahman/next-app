@@ -156,12 +156,7 @@ function WhyChooseUs() {
                   data-wow-duration="1500ms"
                 >
                   <span className="counter">
-                    <CountUp
-                      start={0}
-                      end={2000}
-                      enableScrollSpy={true}
-                      duration={3}
-                    />
+                    <CountUp start={0} end={2000} duration={3} />
                   </span>
                   <span>+</span>
                   <h5>5 Star Received</h5>
