@@ -89,34 +89,40 @@ function Header1() {
       }
     >
       <div className="header-logo">
-        <a href="index.html">
-          <img
-            src={
-              currentRoute === "/"
-                ? "assets/images/logo.svg"
-                : currentRoute === "/index2"
-                ? "assets/images/home2/logo.svg"
-                : currentRoute === "/index3"
-                ? "assets/images/home3/logo.svg"
-                : "assets/images/home2/logo.svg"
-            }
-            alt=""
-          />
-        </a>
+        <Link legacyBehavior href="/">
+          <a>
+            <img
+              src={
+                currentRoute === "/"
+                  ? "assets/images/logo.svg"
+                  : currentRoute === "/index2"
+                  ? "assets/images/home2/logo.svg"
+                  : currentRoute === "/index3"
+                  ? "assets/images/home3/logo.svg"
+                  : "assets/images/home2/logo.svg"
+              }
+              alt=""
+            />
+          </a>
+        </Link>
       </div>
       <div className="main-menu">
         <nav className="main-nav">
           <div className="mobile-menu-logo">
-            <a href="index.html">
-              <img src="assets/images/logo.svg" alt="" />
-            </a>
+            <Link legacyBehavior href="/">
+              <a>
+                <img src="assets/images/logo.svg" alt="" />
+              </a>
+            </Link>
             <div className="remove">
               <i className="bi bi-plus-lg" />
             </div>
           </div>
           <ul>
             <li className="has-child active">
-              <a href="index.html">Home</a>
+              <Link legacyBehavior href="/">
+                <a>Home</a>
+              </Link>
               <i
                 className="bi bi-chevron-down"
                 onClick={() => handleMenu("home-one")}
