@@ -8,6 +8,12 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "build": {
+    "outdir": "./build"
+  },
+  "main": "index.js",
+  "author": "Your Name",
+  "license": "MIT",
   "dependencies": {
     "@tinymce/tinymce-react": "^4.3.0",
     "next": "13.1.6",
