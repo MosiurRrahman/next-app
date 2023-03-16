@@ -1,0 +1,40 @@
+import { useRouter } from "next/router";
+import React from "react";
+import CandidateMenu from "../components/candidates/candidateMenu";
+import FeaturedJobs from "../components/candidates/FeaturedJobs";
+import Footer from "../components/footer/Footer";
+import LayoutHeader from "../components/header/LayoutHeader";
+
+function CandidateLayout({ children }) {
+  const currentPath = useRouter().pathname;
+  return (
+    <>
+      <LayoutHeader />
+      <div className="dashboard-area pt-120 mb-120">
+        <div className="container">
+          <div className="row g-lg-4 gy-5 mb-90">
+            {currentPath === "/candidates-dashboard/view-resume" ? (
+              ""
+            ) : (
+              <div className="col-lg-3">
+                <div className="dashboard-sidebar">
+                  <CandidateMenu />
+                </div>
+              </div>
+            )}
+            {children}
+          </div>
+          {currentPath === "/candidates-dashboard/dashboard" ? (
+            <FeaturedJobs />
+          ) : (
+            ""
+          )}
+        </div>
+      </div>
+
+      <Footer />
+    </>
+  );
+}
+
+export default CandidateLayout;
