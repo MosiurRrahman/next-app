@@ -119,7 +119,7 @@ function Header5() {
                 </li>
                 <li>
                   <Link legacyBehavior href="/index5">
-                    <a  className="active"> Home Five</a>
+                    <a className="active"> Home Five</a>
                   </Link>
                 </li>
                 <li>
@@ -180,7 +180,7 @@ function Header5() {
                 }
               >
                 <li>
-                  <Link legacyBehavior href="/dashboard">
+                  <Link legacyBehavior href="/candidates-dashboard/dashboard">
                     <a>Candidate Dashboard</a>
                   </Link>
                 </li>

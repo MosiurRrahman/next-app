@@ -133,7 +133,7 @@ function DefaultContent() {
                   <td data-label="Apply Job">03/07/2022</td>
                   <td data-label="Company">
                     <Link legacyBehavior href="/company-details">
-                      0<a className="view-btn">Tech.Bath Com... </a>
+                      <a className="view-btn">Tech.Bath Com... </a>
                     </Link>
                   </td>
                   <td data-label="Status">

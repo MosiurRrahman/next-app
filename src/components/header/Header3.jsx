@@ -266,7 +266,7 @@ function Header3() {
                   }
                 >
                   <li>
-                    <Link legacyBehavior href="/dashboard">
+                    <Link legacyBehavior href="/candidates-dashboard/dashboard">
                       <a>Candidate Dashboard</a>
                     </Link>
                   </li>
