@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import React from "react";
-import CandidateMenu from "../components/candidates/candidateMenu";
+import CandidateMenu from "../components/candidates/CandidateMenu";
 import FeaturedJobs from "../components/candidates/FeaturedJobs";
 import Footer from "../components/footer/Footer";
 import LayoutHeader from "../components/header/LayoutHeader";
