@@ -14,7 +14,7 @@ function Banner3() {
                 </h1>
                 <p>
                   <span>2400</span> Peoples are daily search in this portal,
-                  <span>&nbsp;100</span> user added job portal!
+                  &nbsp;<span>100</span> user added job portal!
                 </p>
                 <div className="job-search-area">
                   <form>

@@ -27,7 +27,7 @@ function Bookmark() {
                     <div className="company-info">
                       <div className="logo">
                         <img
-                          src="assets/images/bg/company-logo/company-01.png"
+                          src="/assets/images/bg/company-logo/company-01.png"
                           alt=""
                         />
                       </div>
@@ -38,7 +38,7 @@ function Bookmark() {
                           </h6>
                           <span>
                             <img
-                              src="assets/images/icon/calender2.svg"
+                              src="/assets/images/icon/calender2.svg"
                               alt=""
                             />{" "}
                             1 days ago
@@ -46,11 +46,14 @@ function Bookmark() {
                         </div>
                         <ul>
                           <li>
-                            <img src="assets/images/icon/location.svg" alt="" />
+                            <img
+                              src="/assets/images/icon/location.svg"
+                              alt=""
+                            />
                             New-York, USA
                           </li>
                           <li>
-                            <img src="assets/images/icon/arrow2.svg" alt="" />
+                            <img src="/assets/images/icon/arrow2.svg" alt="" />
                             <p>
                               <span className="title">Salary:</span> $60-$90 /{" "}
                               <span className="time">Per Hour</span>
@@ -75,7 +78,7 @@ function Bookmark() {
                     <div className="company-info">
                       <div className="logo">
                         <img
-                          src="assets/images/bg/company-logo/company-02.png"
+                          src="/assets/images/bg/company-logo/company-02.png"
                           alt=""
                         />
                       </div>
@@ -86,7 +89,7 @@ function Bookmark() {
                           </h6>
                           <span>
                             <img
-                              src="assets/images/icon/calender2.svg"
+                              src="/assets/images/icon/calender2.svg"
                               alt=""
                             />{" "}
                             1 days ago
@@ -94,11 +97,14 @@ function Bookmark() {
                         </div>
                         <ul>
                           <li>
-                            <img src="assets/images/icon/location.svg" alt="" />
+                            <img
+                              src="/assets/images/icon/location.svg"
+                              alt=""
+                            />
                             Dhaka, Bangladesh
                           </li>
                           <li>
-                            <img src="assets/images/icon/arrow2.svg" alt="" />
+                            <img src="/assets/images/icon/arrow2.svg" alt="" />
                             <p>
                               <span className="title">Salary:</span> $80-$100 /{" "}
                               <span className="time">Per Hour</span>
@@ -123,7 +129,7 @@ function Bookmark() {
                     <div className="company-info">
                       <div className="logo">
                         <img
-                          src="assets/images/bg/company-logo/company-04.png"
+                          src="/assets/images/bg/company-logo/company-04.png"
                           alt=""
                         />
                       </div>
@@ -134,7 +140,7 @@ function Bookmark() {
                           </h6>
                           <span>
                             <img
-                              src="assets/images/icon/calender2.svg"
+                              src="/assets/images/icon/calender2.svg"
                               alt=""
                             />{" "}
                             2 days ago
@@ -142,11 +148,14 @@ function Bookmark() {
                         </div>
                         <ul>
                           <li>
-                            <img src="assets/images/icon/location.svg" alt="" />
+                            <img
+                              src="/assets/images/icon/location.svg"
+                              alt=""
+                            />
                             West London, UK
                           </li>
                           <li>
-                            <img src="assets/images/icon/arrow2.svg" alt="" />
+                            <img src="/assets/images/icon/arrow2.svg" alt="" />
                             <p>
                               <span className="title">Salary:</span> $30K-$40K /{" "}
                               <span className="time">Monthly</span>
@@ -171,7 +180,7 @@ function Bookmark() {
                     <div className="company-info">
                       <div className="logo">
                         <img
-                          src="assets/images/bg/company-logo/company-05.png"
+                          src="/assets/images/bg/company-logo/company-05.png"
                           alt=""
                         />
                       </div>
@@ -182,7 +191,7 @@ function Bookmark() {
                           </h6>
                           <span>
                             <img
-                              src="assets/images/icon/calender2.svg"
+                              src="/assets/images/icon/calender2.svg"
                               alt=""
                             />{" "}
                             1 week ago
@@ -190,11 +199,14 @@ function Bookmark() {
                         </div>
                         <ul>
                           <li>
-                            <img src="assets/images/icon/location.svg" alt="" />
+                            <img
+                              src="/assets/images/icon/location.svg"
+                              alt=""
+                            />
                             New-York, USA
                           </li>
                           <li>
-                            <img src="assets/images/icon/arrow2.svg" alt="" />
+                            <img src="/assets/images/icon/arrow2.svg" alt="" />
                             <p>
                               <span className="title">Salary:</span> $20-$50 /{" "}
                               <span className="time">Per Hour</span>
@@ -219,7 +231,7 @@ function Bookmark() {
                     <div className="company-info">
                       <div className="logo">
                         <img
-                          src="assets/images/bg/company-logo/company-03.png"
+                          src="/assets/images/bg/company-logo/company-03.png"
                           alt=""
                         />
                       </div>
@@ -230,7 +242,7 @@ function Bookmark() {
                           </h6>
                           <span>
                             <img
-                              src="assets/images/icon/calender2.svg"
+                              src="/assets/images/icon/calender2.svg"
                               alt=""
                             />{" "}
                             2 week ago
@@ -238,11 +250,14 @@ function Bookmark() {
                         </div>
                         <ul>
                           <li>
-                            <img src="assets/images/icon/location.svg" alt="" />
+                            <img
+                              src="/assets/images/icon/location.svg"
+                              alt=""
+                            />
                             New-York, USA
                           </li>
                           <li>
-                            <img src="assets/images/icon/arrow2.svg" alt="" />
+                            <img src="/assets/images/icon/arrow2.svg" alt="" />
                             <p>
                               <span className="title">Salary:</span> $40K-$60K /{" "}
                               <span className="time">Per Month</span>

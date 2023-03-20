@@ -9,7 +9,7 @@ function Settings() {
           <form className="profile-form">
             <div className="section-title2">
               <h5 className="d-flex align-items-baseline gap-1">
-                <img src="assets/images/icon/profile-settings.svg" alt="" />{" "}
+                <img src="/assets/images/icon/profile-settings.svg" alt="" />{" "}
                 Profile Settings{" "}
               </h5>
             </div>
@@ -25,7 +25,7 @@ function Settings() {
                   <div className="form-inner mb-25">
                     <label htmlFor="password">New Password*</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/lock-2.svg" alt="" />
+                      <img src="/assets/images/icon/lock-2.svg" alt="" />
                       <input
                         type="password"
                         name="password"
@@ -40,7 +40,7 @@ function Settings() {
                   <div className="form-inner mb-25">
                     <label htmlFor="password2">Confirm Password*</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/lock-2.svg" alt="" />
+                      <img src="/assets/images/icon/lock-2.svg" alt="" />
                       <input
                         type="password"
                         name="confirmpassword"
@@ -75,7 +75,7 @@ function Settings() {
                   <div className="form-inner mb-25">
                     <label htmlFor="pphonenumber">Primary Number*</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/phone-2.svg" alt="" />
+                      <img src="/assets/images/icon/phone-2.svg" alt="" />
                       <input
                         type="text"
                         id="pphonenumber"
@@ -89,7 +89,7 @@ function Settings() {
                   <div className="form-inner mb-25">
                     <label htmlFor="sphonenumber">Secondary Number*</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/phone-2.svg" alt="" />
+                      <img src="/assets/images/icon/phone-2.svg" alt="" />
                       <input
                         type="text"
                         id="sphonenumber"
@@ -103,7 +103,7 @@ function Settings() {
                   <div className="form-inner mb-25">
                     <label htmlFor="pemail">Primary Email*</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/email-2.svg" alt="" />
+                      <img src="/assets/images/icon/email-2.svg" alt="" />
                       <input
                         type="text"
                         id="pemail"
@@ -117,7 +117,7 @@ function Settings() {
                   <div className="form-inner mb-35">
                     <label htmlFor="semail">Secondary Email*</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/email-2.svg" alt="" />
+                      <img src="/assets/images/icon/email-2.svg" alt="" />
                       <input
                         type="text"
                         id="semail"
@@ -141,7 +141,7 @@ function Settings() {
                   <div className="form-inner mb-25">
                     <label htmlFor="location">Get Location*</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/map-2.svg" alt="" />
+                      <img src="/assets/images/icon/map-2.svg" alt="" />
                       <input
                         type="text"
                         id="location"

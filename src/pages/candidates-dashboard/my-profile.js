@@ -16,7 +16,7 @@ function MyProfile() {
                   <div className="form-inner mb-25">
                     <label>First Name*</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/user-2.svg" alt="" />
+                      <img src="/assets/images/icon/user-2.svg" alt="" />
                       <input type="text" placeholder="Mr. Robert" />
                     </div>
                   </div>
@@ -25,7 +25,7 @@ function MyProfile() {
                   <div className="form-inner mb-25">
                     <label>Your Age*</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/clock-2.svg " alt="" />
+                      <img src="/assets/images/icon/clock-2.svg " alt="" />
                       <input type="text" placeholder="21 Years" />
                     </div>
                   </div>
@@ -34,7 +34,7 @@ function MyProfile() {
                   <div className="form-inner mb-25">
                     <label>Current Location*</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/map-2.svg" alt="" />
+                      <img src="/assets/images/icon/map-2.svg" alt="" />
                       <input type="text" placeholder="Mirpur, Dhaka" />
                     </div>
                   </div>
@@ -43,7 +43,7 @@ function MyProfile() {
                   <div className="form-inner mb-25">
                     <label>Phone Number*</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/phone-2.svg" alt="" />
+                      <img src="/assets/images/icon/phone-2.svg" alt="" />
                       <input type="text" placeholder="+880-17 *** *** **" />
                     </div>
                   </div>
@@ -52,7 +52,7 @@ function MyProfile() {
                   <div className="form-inner mb-25">
                     <label>Email*</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/email-2.svg" alt="" />
+                      <img src="/assets/images/icon/email-2.svg" alt="" />
                       <input type="email" placeholder="info@example.com" />
                     </div>
                   </div>
@@ -61,7 +61,7 @@ function MyProfile() {
                   <div className="form-inner mb-25">
                     <label>Website Link*</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/website-2.svg" alt="" />
+                      <img src="/assets/images/icon/website-2.svg" alt="" />
                       <input type="text" placeholder="https://example.com" />
                     </div>
                   </div>
@@ -70,7 +70,7 @@ function MyProfile() {
                   <div className="form-inner mb-25">
                     <label>Current Job Place*</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/company-2.svg" alt="" />
+                      <img src="/assets/images/icon/company-2.svg" alt="" />
                       <input type="text" placeholder="Company Name" />
                     </div>
                   </div>
@@ -79,7 +79,7 @@ function MyProfile() {
                   <div className="form-inner mb-25">
                     <label>Designation*</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/designation-2.svg" alt="" />
+                      <img src="/assets/images/icon/designation-2.svg" alt="" />
                       <input type="text" placeholder="UI/UX Engineer" />
                     </div>
                   </div>
@@ -89,7 +89,7 @@ function MyProfile() {
                     <label>Qualification*</label>
                     <div className="input-area">
                       <img
-                        src="assets/images/icon/qualification-2.svg"
+                        src="/assets/images/icon/qualification-2.svg"
                         alt=""
                       />
                       <select className="select1">
@@ -106,7 +106,7 @@ function MyProfile() {
                   <div className="form-inner mb-25">
                     <label>Language*</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/language-2.svg" alt="" />
+                      <img src="/assets/images/icon/language-2.svg" alt="" />
                       <select className="select1">
                         <option value={0}>Bangla</option>
                         <option value={1}>English</option>
@@ -148,7 +148,7 @@ function MyProfile() {
                   <div className="form-inner mb-25">
                     <label>Facebook</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/facebook-2.svg" alt="" />
+                      <img src="/assets/images/icon/facebook-2.svg" alt="" />
                       <input
                         type="text"
                         placeholder="https://example-facebook.com"
@@ -160,7 +160,7 @@ function MyProfile() {
                   <div className="form-inner mb-25">
                     <label>Twitter</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/twiter-2.svg" alt="" />
+                      <img src="/assets/images/icon/twiter-2.svg" alt="" />
                       <input
                         type="text"
                         placeholder="https://example-twitter.com"
@@ -172,7 +172,7 @@ function MyProfile() {
                   <div className="form-inner mb-25">
                     <label>LinkedIn</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/linkedin-2.svg" alt="" />
+                      <img src="/assets/images/icon/linkedin-2.svg" alt="" />
                       <input
                         type="text"
                         placeholder="https://example-linkedin.com"
@@ -184,7 +184,7 @@ function MyProfile() {
                   <div className="form-inner mb-25">
                     <label>Pinterest</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/pinterest-2.svg" alt="" />
+                      <img src="/assets/images/icon/pinterest-2.svg" alt="" />
                       <input
                         type="text"
                         placeholder="https://example-pinterest.com"
@@ -196,7 +196,7 @@ function MyProfile() {
                   <div className="form-inner mb-25">
                     <label>Dribbble</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/dribble-2.svg" alt="" />
+                      <img src="/assets/images/icon/dribble-2.svg" alt="" />
                       <input
                         type="text"
                         placeholder="https://example-dribbble.com"
@@ -208,7 +208,7 @@ function MyProfile() {
                   <div className="form-inner mb-50">
                     <label>Behance</label>
                     <div className="input-area">
-                      <img src="assets/images/icon/behance-2.svg" alt="" />
+                      <img src="/assets/images/icon/behance-2.svg" alt="" />
                       <input
                         type="text"
                         placeholder="https://example-behance.com"

@@ -82,7 +82,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label htmlFor="firstname1">First Name*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/user-2.svg" alt="" />
+                          <img src="/assets/images/icon/user-2.svg" alt="" />
                           <input
                             type="text"
                             id="firstname1"
@@ -96,7 +96,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label htmlFor="lastname">Last Name*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/user-2.svg " alt="" />
+                          <img src="/assets/images/icon/user-2.svg " alt="" />
                           <input
                             type="text"
                             id="lastname"
@@ -119,7 +119,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label htmlFor="jobplace">Current Job Place*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/company-2.svg" alt="" />
+                          <img src="/assets/images/icon/company-2.svg" alt="" />
                           <input
                             type="text"
                             id="jobplace"
@@ -134,7 +134,7 @@ function EditProfile() {
                         <label htmlFor="desigation">Designation*</label>
                         <div className="input-area">
                           <img
-                            src="assets/images/icon/designation-2.svg"
+                            src="/assets/images/icon/designation-2.svg"
                             alt=""
                           />
                           <input
@@ -153,7 +153,7 @@ function EditProfile() {
                         </label>
                         <div className="input-area">
                           <img
-                            src="assets/images/icon/experiences-2.svg"
+                            src="/assets/images/icon/experiences-2.svg"
                             alt=""
                           />
                           <input
@@ -170,7 +170,7 @@ function EditProfile() {
                         <label>Qualification*</label>
                         <div className="input-area">
                           <img
-                            src="assets/images/icon/qualification-2.svg"
+                            src="/assets/images/icon/qualification-2.svg"
                             alt=""
                           />
                           <select className="select1">
@@ -187,7 +187,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label htmlFor="email1">Email*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/email-2.svg" alt="" />
+                          <img src="/assets/images/icon/email-2.svg" alt="" />
                           <input
                             type="text"
                             id="email1"
@@ -201,7 +201,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label htmlFor="phonenumber">Phone Number*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/phone-2.svg" alt="" />
+                          <img src="/assets/images/icon/phone-2.svg" alt="" />
                           <input
                             type="text"
                             id="phonenumber"
@@ -215,7 +215,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label htmlFor="website">Website Link*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/website-2.svg" alt="" />
+                          <img src="/assets/images/icon/website-2.svg" alt="" />
                           <input
                             type="text"
                             id="website"
@@ -229,7 +229,10 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label htmlFor="language">Language*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/language-2.svg" alt="" />
+                          <img
+                            src="/assets/images/icon/language-2.svg"
+                            alt=""
+                          />
                           <input
                             type="text"
                             id="language"
@@ -273,7 +276,7 @@ function EditProfile() {
                           <label htmlFor="fecebook">Facebook</label>
                           <div className="input-area">
                             <img
-                              src="assets/images/icon/facebook-2.svg"
+                              src="/assets/images/icon/facebook-2.svg"
                               alt=""
                             />
                             <input
@@ -289,7 +292,10 @@ function EditProfile() {
                         <div className="form-inner mb-25">
                           <label htmlFor="twitter">Twitter</label>
                           <div className="input-area">
-                            <img src="assets/images/icon/twiter-2.svg" alt="" />
+                            <img
+                              src="/assets/images/icon/twiter-2.svg"
+                              alt=""
+                            />
                             <input
                               type="text"
                               id="twitter"
@@ -304,7 +310,7 @@ function EditProfile() {
                           <label htmlFor="linkedin">LinkedIn</label>
                           <div className="input-area">
                             <img
-                              src="assets/images/icon/linkedin-2.svg"
+                              src="/assets/images/icon/linkedin-2.svg"
                               alt=""
                             />
                             <input
@@ -321,7 +327,7 @@ function EditProfile() {
                           <label htmlFor="pinterest">Pinterest</label>
                           <div className="input-area">
                             <img
-                              src="assets/images/icon/pinterest-2.svg"
+                              src="/assets/images/icon/pinterest-2.svg"
                               alt=""
                             />
                             <input
@@ -338,7 +344,7 @@ function EditProfile() {
                           <label htmlFor="dribble">Dribbble</label>
                           <div className="input-area">
                             <img
-                              src="assets/images/icon/dribble-2.svg"
+                              src="/assets/images/icon/dribble-2.svg"
                               alt=""
                             />
                             <input
@@ -355,7 +361,7 @@ function EditProfile() {
                           <label htmlFor="behance">Behance</label>
                           <div className="input-area">
                             <img
-                              src="assets/images/icon/behance-2.svg"
+                              src="/assets/images/icon/behance-2.svg"
                               alt=""
                             />
                             <input
@@ -393,7 +399,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label htmlFor="fathername">Father’s Name*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/user-2.svg" alt="" />
+                          <img src="/assets/images/icon/user-2.svg" alt="" />
                           <input
                             type="text"
                             id="fathername"
@@ -407,7 +413,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label htmlFor="mothername">Mother's Name*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/user-2.svg " alt="" />
+                          <img src="/assets/images/icon/user-2.svg " alt="" />
                           <input
                             type="text"
                             id="mothername"
@@ -421,7 +427,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label htmlFor="datepicker5">Date of Birth*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/calender2.svg" alt="" />
+                          <img src="/assets/images/icon/calender2.svg" alt="" />
                           <input
                             type="text"
                             id="datepicker5"
@@ -435,7 +441,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label htmlFor="nid">National Id*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/nid.svg" alt="" />
+                          <img src="/assets/images/icon/nid.svg" alt="" />
                           <input
                             type="text"
                             id="nid"
@@ -466,7 +472,7 @@ function EditProfile() {
                           </div>
                         </div>
                         <div className="input-area">
-                          <img src="assets/images/icon/home-2.svg" alt="" />
+                          <img src="/assets/images/icon/home-2.svg" alt="" />
                           <input
                             type="text"
                             id="preAddress"
@@ -480,7 +486,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label htmlFor="perAddress">Permanent Address*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/home-2.svg" alt="" />
+                          <img src="/assets/images/icon/home-2.svg" alt="" />
                           <input
                             type="text"
                             id="perAddress"
@@ -494,7 +500,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label>Marital Status*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/marital-2.svg" alt="" />
+                          <img src="/assets/images/icon/marital-2.svg" alt="" />
                           <select className="select1">
                             <option value={0}>Single</option>
                             <option value={1}>Married</option>
@@ -508,7 +514,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label>Gender*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/gender.svg " alt="" />
+                          <img src="/assets/images/icon/gender.svg " alt="" />
                           <select className="select1">
                             <option value={0}>Female</option>
                             <option value={1}>Male</option>
@@ -521,7 +527,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label>Religion*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/religion.svg" alt="" />
+                          <img src="/assets/images/icon/religion.svg" alt="" />
                           <select className="select1">
                             <option value={0}>Christianity</option>
                             <option value={1}>Islam</option>
@@ -536,7 +542,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label>Blood Group*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/blood.svg" alt="" />
+                          <img src="/assets/images/icon/blood.svg" alt="" />
                           <select className="select1">
                             <option value={0}>A+</option>
                             <option value={1}>A-</option>
@@ -554,7 +560,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label htmlFor="hight">Height*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/hight.svg" alt="" />
+                          <img src="/assets/images/icon/hight.svg" alt="" />
                           <input
                             type="text"
                             id="hight"
@@ -568,7 +574,7 @@ function EditProfile() {
                       <div className="form-inner mb-25">
                         <label htmlFor="weight">Weight*</label>
                         <div className="input-area">
-                          <img src="assets/images/icon/weight.svg" alt="" />
+                          <img src="/assets/images/icon/weight.svg" alt="" />
                           <input
                             type="text"
                             id="weight"
@@ -633,7 +639,7 @@ function EditProfile() {
                           <label>Education Level*</label>
                           <div className="input-area">
                             <img
-                              src="assets/images/icon/qualification-2.svg"
+                              src="/assets/images/icon/qualification-2.svg"
                               alt=""
                             />
                             <select className="select1">
@@ -650,7 +656,7 @@ function EditProfile() {
                         <div className="form-inner mb-25">
                           <label>My Major*</label>
                           <div className="input-area">
-                            <img src="assets/images/icon/major.svg" alt="" />
+                            <img src="/assets/images/icon/major.svg" alt="" />
                             <select className="select1">
                               <option value={0}>Science</option>
                               <option value={1}>Arts</option>
@@ -665,7 +671,7 @@ function EditProfile() {
                           </label>
                           <div className="input-area">
                             <img
-                              src="assets/images/icon/univercity.svg"
+                              src="/assets/images/icon/univercity.svg"
                               alt=""
                             />
                             <input
@@ -681,7 +687,7 @@ function EditProfile() {
                         <div className="form-inner mb-30">
                           <label htmlFor="gpa">Result/GPA**</label>
                           <div className="input-area">
-                            <img src="assets/images/icon/gpa-2.svg" alt="" />
+                            <img src="/assets/images/icon/gpa-2.svg" alt="" />
                             <input
                               type="text"
                               id="gpa"
@@ -696,7 +702,7 @@ function EditProfile() {
                           <label htmlFor="datepicker10">Starting Period*</label>
                           <div className="input-area">
                             <img
-                              src="assets/images/icon/calender2.svg"
+                              src="/assets/images/icon/calender2.svg"
                               alt=""
                             />
                             <input
@@ -713,7 +719,7 @@ function EditProfile() {
                           <label htmlFor="datepicker11">Ending Period*</label>
                           <div className="input-area">
                             <img
-                              src="assets/images/icon/calender2.svg"
+                              src="/assets/images/icon/calender2.svg"
                               alt=""
                             />
                             <input
@@ -769,7 +775,7 @@ function EditProfile() {
                           <label htmlFor="companies">Company Name*</label>
                           <div className="input-area">
                             <img
-                              src="assets/images/icon/company-2.svg "
+                              src="/assets/images/icon/company-2.svg "
                               alt=""
                             />
                             <input
@@ -786,7 +792,7 @@ function EditProfile() {
                           <label htmlFor="desigation">Designation*</label>
                           <div className="input-area">
                             <img
-                              src="assets/images/icon/designation-2.svg"
+                              src="/assets/images/icon/designation-2.svg"
                               alt=""
                             />
                             <select className="select1">
@@ -802,7 +808,7 @@ function EditProfile() {
                           <label htmlFor="datepicker6">Starting Period*</label>
                           <div className="input-area">
                             <img
-                              src="assets/images/icon/calender2.svg"
+                              src="/assets/images/icon/calender2.svg"
                               alt=""
                             />
                             <input
@@ -819,7 +825,7 @@ function EditProfile() {
                           <label htmlFor="datepicker7">Ending Period*</label>
                           <div className="input-area">
                             <img
-                              src="assets/images/icon/calender2.svg"
+                              src="/assets/images/icon/calender2.svg"
                               alt=""
                             />
                             <input

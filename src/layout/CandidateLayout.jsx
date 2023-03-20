@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import CandidateMenu from "../components/candidates/CandidateMenu";
 import FeaturedJobs from "../components/candidates/FeaturedJobs";
+import RecentActivies from "../components/candidates/RecentActivies";
 import Footer from "../components/footer/Footer";
 import LayoutHeader from "../components/header/LayoutHeader";
 
@@ -19,6 +20,7 @@ function CandidateLayout({ children }) {
               <div className="col-lg-3">
                 <div className="dashboard-sidebar">
                   <CandidateMenu />
+                  <RecentActivies />
                 </div>
               </div>
             )}

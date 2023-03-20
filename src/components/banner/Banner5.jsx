@@ -60,7 +60,8 @@ function Banner5() {
               <div className="hero-left">
                 <div className="hero-content">
                   <h1>
-                    Find Your <span>Dream Jobs</span> With Based On Your Skills
+                    Find Your &nbsp;<span>Dream Jobs</span> With Based On Your
+                    Skills
                   </h1>
                   <p>
                     Jobs are available on your skills, perfect jobs to make

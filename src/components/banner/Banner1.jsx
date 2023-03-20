@@ -57,7 +57,7 @@ function Banner1() {
           <div className="col-lg-12">
             <div className="hero-content">
               <h1>
-                Your Career’s<span>&nbsp;Opportunity.</span>
+                Your Career’s &nbsp;<span>Opportunity.</span>
               </h1>
               <p>
                 <span>2400</span> Peoples are daily search in this portal,&nbsp;

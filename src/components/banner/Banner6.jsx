@@ -62,7 +62,7 @@ function Banner6() {
             <div className="col-lg-12">
               <div className="hero-content">
                 <h1>
-                  1020+ <span>Category</span> Job’s Here
+                  1020+ &nbsp;<span>Category</span> Job’s Here
                 </h1>
                 <p>
                   Jobs are available on your skills, perfect jobs to make bright

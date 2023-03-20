@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useEffect, useReducer, useRef } from "react";
 const initialState = {
   activeMenu: "",
@@ -44,7 +45,7 @@ function Header1() {
     const { scrollY } = window;
     dispatch({ type: "setScrollY", payload: scrollY });
   };
-
+  const currentRoute = useRouter().pathname;
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -184,7 +185,7 @@ function Header1() {
               <ul className="menu-list">
                 <li className="menu-item-has-children active">
                   <Link legacyBehavior href="#" className="drop-down">
-                    Home
+                    <a>Home</a>
                   </Link>
                   <i
                     className="bi bi-plus dropdown-icon"
@@ -198,23 +199,53 @@ function Header1() {
                     }
                   >
                     <li>
-                      <Link legacyBehavior className="active" href="/">
-                        <a>Home One</a>
+                      <Link legacyBehavior href="/">
+                        <a className={currentRoute === "/" ? "active" : ""}>
+                          Home One
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link legacyBehavior href="/index2">
-                        <a>Home Two</a>
+                        <a
+                          className={currentRoute === "/index2" ? "active" : ""}
+                        >
+                          Home Two
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link legacyBehavior href="/index3">
-                        <a>Home Three</a>
+                        <a
+                          className={currentRoute === "/index3" ? "active" : ""}
+                        >
+                          Home Three
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link legacyBehavior href="/index4">
-                        <a>Home Four</a>
+                        <a
+                          className={currentRoute === "/index4" ? "active" : ""}
+                        >
+                          Home Four
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link legacyBehavior href="/index5">
+                        <a
+                          className={currentRoute === "/index5" ? "active" : ""}
+                        >
+                          Home Five
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link legacyBehavior href="/index6">
+                        <a className={currentRoute === "/" ? "active" : ""}>
+                          Home Six
+                        </a>
                       </Link>
                     </li>
                   </ul>

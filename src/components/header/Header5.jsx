@@ -63,7 +63,7 @@ function Header5() {
               <img
                 alt="image"
                 className="img-fluid"
-                src="assets/images/header5-logo.svg"
+                src="/assets/images/header5-logo.svg"
               />
             </a>
           </Link>
@@ -73,7 +73,7 @@ function Header5() {
             <div className="mobile-logo-wrap">
               <Link legacyBehavior href="/">
                 <a>
-                  <img alt="image" src="assets/images/header5-logo.svg" />
+                  <img alt="image" src="/assets/images/header5-logo.svg" />
                 </a>
               </Link>
             </div>
@@ -382,7 +382,7 @@ function Header5() {
                     <li>
                       <div className="icon">
                         <img
-                          src="assets/images/bg/company-logo/notifacion-1.png"
+                          src="/assets/images/bg/company-logo/notifacion-1.png"
                           alt=""
                         />
                       </div>
@@ -393,15 +393,15 @@ function Header5() {
                           </a>
                         </h6>
                         <span>
-                          <img src="assets/images/icon/clock-1.svg" alt="" /> 10
-                          min ago
+                          <img src="/assets/images/icon/clock-1.svg" alt="" />{" "}
+                          10 min ago
                         </span>
                       </div>
                     </li>
                     <li>
                       <div className="icon">
                         <img
-                          src="assets/images/bg/company-logo/notifacion-2.png"
+                          src="/assets/images/bg/company-logo/notifacion-2.png"
                           alt=""
                         />
                       </div>
@@ -412,15 +412,15 @@ function Header5() {
                           </a>
                         </h6>
                         <span>
-                          <img src="assets/images/icon/clock-1.svg" alt="" /> 10
-                          min ago
+                          <img src="/assets/images/icon/clock-1.svg" alt="" />{" "}
+                          10 min ago
                         </span>
                       </div>
                     </li>
                     <li>
                       <div className="icon">
                         <img
-                          src="assets/images/bg/company-logo/notifacion-3.png"
+                          src="/assets/images/bg/company-logo/notifacion-3.png"
                           alt=""
                         />
                       </div>
@@ -431,8 +431,8 @@ function Header5() {
                           </a>
                         </h6>
                         <span>
-                          <img src="assets/images/icon/clock-1.svg" alt="" /> 10
-                          min ago
+                          <img src="/assets/images/icon/clock-1.svg" alt="" />{" "}
+                          10 min ago
                         </span>
                       </div>
                     </li>

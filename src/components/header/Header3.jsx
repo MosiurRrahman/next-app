@@ -77,19 +77,19 @@ function Header3() {
         </p>
         <div className="top-bar-right">
           <div className="language-select">
-            <img src="assets/images/icon/flag-eng.svg" alt="image" />
+            <img src="/assets/images/icon/flag-eng.svg" alt="image" />
             <span>Language</span>
             <ul className="topbar-sublist">
               <li>
-                <img src="assets/images/icon/flag-germeny.svg" alt="image" />
+                <img src="/assets/images/icon/flag-germeny.svg" alt="image" />
                 <span>Germeny</span>
               </li>
               <li>
-                <img src="assets/images/icon/flag-french.svg" alt="image" />
+                <img src="/assets/images/icon/flag-french.svg" alt="image" />
                 <span>French</span>
               </li>
               <li>
-                <img src="assets/images/icon/flag-bangla.svg" alt="image" />
+                <img src="/assets/images/icon/flag-bangla.svg" alt="image" />
                 <span>Bengali</span>
               </li>
             </ul>
@@ -135,7 +135,7 @@ function Header3() {
                 <img
                   alt="image"
                   className="img-fluid"
-                  src="assets/images/header1-logo.svg"
+                  src="/assets/images/header1-logo.svg"
                 />
               </a>
             </Link>
@@ -145,7 +145,7 @@ function Header3() {
               <div className="mobile-logo-wrap">
                 <Link legacyBehavior href="/">
                   <a>
-                    <img alt="image" src="assets/images/header1-logo.svg" />
+                    <img alt="image" src="/assets/images/header1-logo.svg" />
                   </a>
                 </Link>
               </div>
@@ -469,7 +469,7 @@ function Header3() {
                       <li>
                         <div className="icon">
                           <img
-                            src="assets/images/bg/company-logo/notifacion-1.png"
+                            src="/assets/images/bg/company-logo/notifacion-1.png"
                             alt=""
                           />
                         </div>
@@ -480,7 +480,7 @@ function Header3() {
                             </a>
                           </h6>
                           <span>
-                            <img src="assets/images/icon/clock-1.svg" alt="" />{" "}
+                            <img src="/assets/images/icon/clock-1.svg" alt="" />{" "}
                             10 min ago
                           </span>
                         </div>
@@ -488,7 +488,7 @@ function Header3() {
                       <li>
                         <div className="icon">
                           <img
-                            src="assets/images/bg/company-logo/notifacion-2.png"
+                            src="/assets/images/bg/company-logo/notifacion-2.png"
                             alt=""
                           />
                         </div>
@@ -499,7 +499,7 @@ function Header3() {
                             </a>
                           </h6>
                           <span>
-                            <img src="assets/images/icon/clock-1.svg" alt="" />{" "}
+                            <img src="/assets/images/icon/clock-1.svg" alt="" />{" "}
                             10 min ago
                           </span>
                         </div>
@@ -507,7 +507,7 @@ function Header3() {
                       <li>
                         <div className="icon">
                           <img
-                            src="assets/images/bg/company-logo/notifacion-3.png"
+                            src="/assets/images/bg/company-logo/notifacion-3.png"
                             alt=""
                           />
                         </div>
@@ -518,7 +518,7 @@ function Header3() {
                             </a>
                           </h6>
                           <span>
-                            <img src="assets/images/icon/clock-1.svg" alt="" />{" "}
+                            <img src="/assets/images/icon/clock-1.svg" alt="" />{" "}
                             10 min ago
                           </span>
                         </div>

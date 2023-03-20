@@ -42,7 +42,7 @@ function Category1() {
                         <img src={img} alt="" />
                       </div>
                       <div className="sl-no">
-                        <h6>01</h6>
+                        <h6>{id}</h6>
                       </div>
                     </div>
                     <div className="category-content">

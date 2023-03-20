@@ -56,7 +56,7 @@ function Banner2() {
             <div className="col-lg-7 d-flex align-items-center">
               <div className="hero-content">
                 <h1>
-                  To Choose Your Level Best <span>Dream Career.</span>
+                  To Choose Your Level Best&nbsp; <span>Dream Career.</span>
                 </h1>
                 <p>
                   <span>2400</span> Peoples are daily search in this portal,{" "}

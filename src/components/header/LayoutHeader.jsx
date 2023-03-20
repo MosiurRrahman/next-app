@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useEffect, useReducer, useRef } from "react";
 const initialState = {
   activeMenu: "",
@@ -54,7 +55,7 @@ function LayoutHeader() {
   function handleMenu(menuName) {
     dispatch({ type: "TOGGLE", payload: menuName });
   }
-
+  const currentRoute = useRouter().pathname;
   useEffect(() => {
     const burger = document.querySelector(".mobile-menu-btn");
 
@@ -208,18 +209,34 @@ function LayoutHeader() {
                 <ul className="sub-menu">
                   <li>
                     <Link legacyBehavior href="/category">
-                      Job Category
+                      <a
+                        className={currentRoute === "/category" ? "active" : ""}
+                      >
+                        Job Category
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/job-listing1">
-                      <a>Job Listing 01</a>
+                      <a
+                        className={
+                          currentRoute === "/job-listing1" ? "active" : ""
+                        }
+                      >
+                        Job Listing 01
+                      </a>
                     </Link>
                   </li>
 
                   <li>
                     <Link legacyBehavior href="/job-details">
-                      <a>Job Details</a>
+                      <a
+                        className={
+                          currentRoute === "/job-details" ? "active" : ""
+                        }
+                      >
+                        Job Details
+                      </a>
                     </Link>
                   </li>
                 </ul>
@@ -232,37 +249,65 @@ function LayoutHeader() {
                 <ul className="sub-menu">
                   <li>
                     <Link legacyBehavior href="/candidates-dashboard/dashboard">
-                      <a>Candidate Dashboard</a>
+                      <a
+                        className={
+                          currentRoute === "/candidates-dashboard/dashboard"
+                            ? "active"
+                            : ""
+                        }
+                      >
+                        Candidate Dashboard
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/job-post">
-                      <a>Post A Jobs</a>
+                      <a
+                        className={currentRoute === "/job-post" ? "active" : ""}
+                      >
+                        Post A Jobs
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/pricing-plan">
-                      <a>Pricing Plan</a>
+                      <a
+                        className={
+                          currentRoute === "/pricing-plan" ? "active" : ""
+                        }
+                      >
+                        Pricing Plan
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/faq">
-                      <a>FAQ</a>
+                      <a className={currentRoute === "/faq" ? "active" : ""}>
+                        FAQ
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/error">
-                      <a>Error</a>
+                      <a className={currentRoute === "/error" ? "active" : ""}>
+                        Error
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/login">
-                      <a>Login</a>
+                      <a className={currentRoute === "/login" ? "active" : ""}>
+                        Login
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/register">
-                      <a>Register</a>
+                      <a
+                        className={currentRoute === "/register" ? "active" : ""}
+                      >
+                        Register
+                      </a>
                     </Link>
                   </li>
                 </ul>
@@ -273,22 +318,37 @@ function LayoutHeader() {
                 <ul className="sub-menu">
                   <li>
                     <Link legacyBehavior href="/company-listing1">
-                      <a>Company Listing 01</a>
+                      <a
+                        className={
+                          currentRoute === "/company-listing1" ? "active" : ""
+                        }
+                      >
+                        Company Listing 01
+                      </a>
                     </Link>
                   </li>
-                  <li>
-                    <Link legacyBehavior href="/company-listing2">
-                      <a>Company Listing 02</a>
-                    </Link>
-                  </li>
+
                   <li>
                     <Link legacyBehavior href="/company-details">
-                      <a>Company Details</a>
+                      <a>
+                        {" "}
+                        className=
+                        {currentRoute === "/compnay-details" ? "active" : ""}
+                        Company Details
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/company/company-dashboard">
-                      <a>Company Dashboard</a>
+                      <a
+                        className={
+                          currentRoute === "/company/company-dashboard"
+                            ? "active"
+                            : ""
+                        }
+                      >
+                        Company Dashboard
+                      </a>
                     </Link>
                   </li>
                 </ul>
@@ -299,29 +359,55 @@ function LayoutHeader() {
                 <ul className="sub-menu">
                   <li>
                     <Link legacyBehavior href="/blog-grid">
-                      <a>Blog Grid</a>
+                      <a
+                        className={
+                          currentRoute === "/bolg-grid" ? "active" : ""
+                        }
+                      >
+                        Blog Grid
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/blog-right-sidebar">
-                      <a>Blog Right Sidebar</a>
+                      <a
+                        className={
+                          currentRoute === "/blog-right-sidebar" ? "active" : ""
+                        }
+                      >
+                        Blog Right Sidebar
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/blog-standard">
-                      <a>Blog Standard</a>
+                      <a
+                        className={
+                          currentRoute === "/blog-standard" ? "active" : ""
+                        }
+                      >
+                        Blog Standard
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link legacyBehavior href="/blog-details">
-                      <a>Blog Details</a>
+                      <a
+                        className={
+                          currentRoute === "/blog-details" ? "active" : ""
+                        }
+                      >
+                        Blog Details
+                      </a>
                     </Link>
                   </li>
                 </ul>
               </li>
               <li>
                 <Link legacyBehavior href="/contact">
-                  <a>Contact</a>
+                  <a className={currentRoute === "/contact" ? "active" : ""}>
+                    Contact
+                  </a>
                 </Link>
               </li>
             </ul>

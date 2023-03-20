@@ -63,10 +63,10 @@ function Review1() {
             </div>
             <div className="swiper-btn1 d-flex align-items-center">
               <div className="left-btn prev-2">
-                <img src="assets/images/icon/explore-elliose.svg" alt="" />
+                <img src="/assets/images/icon/explore-elliose.svg" alt="" />
               </div>
               <div className="right-btn next-2">
-                <img src="assets/images/icon/explore-elliose.svg" alt="" />
+                <img src="/assets/images/icon/explore-elliose.svg" alt="" />
               </div>
             </div>
           </div>
@@ -78,11 +78,11 @@ function Review1() {
                 <div className="testimonial-card">
                   <div className="author-img">
                     <img
-                      src="assets/images/bg/testimonial-author1.png"
+                      src="/assets/images/bg/testimonial-author1.png"
                       alt=""
                     />
                     <div className="quat-icon">
-                      <img src="assets/images/icon/quat-icon.svg" alt="" />
+                      <img src="/assets/images/icon/quat-icon.svg" alt="" />
                     </div>
                   </div>
                   <div className="testimonial-content">
@@ -121,11 +121,11 @@ function Review1() {
                 <div className="testimonial-card">
                   <div className="author-img">
                     <img
-                      src="assets/images/bg/testimonial-author2.png"
+                      src="/assets/images/bg/testimonial-author2.png"
                       alt=""
                     />
                     <div className="quat-icon">
-                      <img src="assets/images/icon/quat-icon.svg" alt="" />
+                      <img src="/assets/images/icon/quat-icon.svg" alt="" />
                     </div>
                   </div>
                   <div className="testimonial-content">
