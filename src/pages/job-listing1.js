@@ -7,8 +7,7 @@ import Layout from "../layout/Layout";
 function JobListing1() {
   const currentPage = useRouter().pathname;
   useEffect(() => {
-    document.body.className =
-      currentPage === "/company-listing1" ? "bg-wight" : "";
+    document.body.className = currentPage === "/job-listing1" ? "bg-wight" : "";
   });
   const [isGrid, setIsGrid] = useState(true);
   const handleGridClick = () => {

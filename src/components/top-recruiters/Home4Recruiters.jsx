@@ -310,7 +310,7 @@ function Home4Recruiters() {
         <div className="row">
           <div className="col-lg-12 d-flex justify-content-center">
             <div className="explore-btn">
-              <Link legacyBehavior href="/job-listing2">
+              <Link legacyBehavior href="/job-listing1">
                 <a>
                   View All Recruiters{" "}
                   <span>

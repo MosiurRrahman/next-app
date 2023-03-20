@@ -244,11 +244,7 @@ function Header1() {
                         <a>Job Listing 01</a>
                       </Link>
                     </li>
-                    <li>
-                      <Link legacyBehavior href="/job-listing2">
-                        <a>Job Listing 02</a>
-                      </Link>
-                    </li>
+
                     <li>
                       <Link legacyBehavior href="/job-details">
                         <a>Job Details</a>

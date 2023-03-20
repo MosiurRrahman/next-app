@@ -15,19 +15,19 @@
     "id": 3,
     "image": "assets/images/icon/medical.svg",
     "jon_title": "Medical & Nurse",
-    "available_job": ""
+    "available_job": "22"
   },
   {
     "id": 4,
     "image": "assets/images/icon/marketing.svg",
     "jon_title": "Marketing & Sales",
-    "available_job": ""
+    "available_job": "15"
   },
   {
     "id": 5,
     "image": "assets/images/icon/design-job.svg",
     "jon_title": "Design Jobs",
-    "available_job": ""
+    "available_job": "17"
   },
   {
     "id": 6,
@@ -39,7 +39,7 @@
     "id": 7,
     "image": "assets/images/icon/devlopment.svg",
     "jon_title": "Development",
-    "available_job": ""
+    "available_job": "27"
   },
   {
     "id": 8,

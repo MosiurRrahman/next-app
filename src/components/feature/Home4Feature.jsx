@@ -16,7 +16,7 @@ function Home4Feature() {
               </p>
             </div>
             <div className="explore-btn">
-              <Link legacyBehavior href="/job-listing2">
+              <Link legacyBehavior href="/job-listing1">
                 <a>
                   Explore More
                   <span>
