@@ -1,6 +1,6 @@
 import React from "react";
 import Breadcrumb from "../components/common/Breadcrumb";
-import CompanyGallary from "../components/jobDetails/companyGallary";
+import CompanyGallary from "../components/jobDetails/CompanyGallary";
 import RelatedJobs from "../components/jobDetails/RelatedJobs";
 import Layout from "../layout/Layout";
 
