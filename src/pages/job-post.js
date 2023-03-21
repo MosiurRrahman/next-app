@@ -275,18 +275,18 @@ function JobPost() {
                         <div className="input-area">
                           <img src="assets/images/icon/search-2.svg" alt="" />
                           <CreatableSelect
-      components={components}
-      inputValue={inputValue}
-      isClearable
-      isMulti
-      menuIsOpen={false}
-      styles={customStyles}
-      onChange={(newValue) => setValue(newValue)}
-      onInputChange={(newValue) => setInputValue(newValue)}
-      onKeyDown={handleKeyDown}
-      placeholder="Type Tag and press enter..."
-      value={value}
-    />
+                            components={components}
+                            inputValue={inputValue}
+                            isClearable
+                            isMulti
+                            menuIsOpen={false}
+                            styles={customStyles}
+                            onChange={(newValue) => setValue(newValue)}
+                            onInputChange={(newValue) => setInputValue(newValue)}
+                            onKeyDown={handleKeyDown}
+                            placeholder="Type Tag and press enter..."
+                            value={value}
+                          />
                         </div>
                       </div>
                     </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Footer from "../components/footer/Footer";
 import LayoutHeader from "../components/header/LayoutHeader";
@@ -30,20 +31,24 @@ function JobDetailsForCompany() {
                   <div className="action-btn-group">
                     <ul>
                       <li>
-                        <a href="job-post.html">
+                        <Link legacyBehavior href="/job-post">
+                          <a>
                           <span>
                             <img src="assets/images/icon/edit2.svg" alt="" />
                           </span>
                           Edit
-                        </a>
+                          </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="job-post.html">
-                          <span>
+                        <Link legacyBehavior href="/job-post">
+                         <a>
+                         <span>
                             <img src="assets/images/icon/repost2.svg" alt="" />
                           </span>
                           Repost
-                        </a>
+                         </a>
+                        </Link>
                       </li>
                       <li>
                         <a href="#">
@@ -60,7 +65,8 @@ function JobDetailsForCompany() {
                   <div className="col-lg-12">
                     <div className="filter-button-group">
                       <div className="back-btn d-md-none d-block">
-                        <a href="company-dashboard.html">
+                        <Link legacyBehavior href="/comnpany/company-dashboard">
+                          <a>
                           <svg
                             width={20}
                             height={20}
@@ -83,7 +89,8 @@ function JobDetailsForCompany() {
                             </g>
                           </svg>
                           Back to dashboard
-                        </a>
+                          </a>
+                        </Link>
                       </div>
                       <ul className="nav nav-tabs" id="myTab" role="tablist">
                         <li className="nav-item" role="presentation">
@@ -137,7 +144,8 @@ function JobDetailsForCompany() {
                         </li>
                       </ul>
                       <div className="back-btn d-md-block d-none">
-                        <a href="company-dashboard.html">
+                        <Link legacyBehavior href="/company/company-dashboard">
+                          <a>
                           <svg
                             width={20}
                             height={20}
@@ -160,7 +168,8 @@ function JobDetailsForCompany() {
                             </g>
                           </svg>
                           Back to dashboard
-                        </a>
+                          </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

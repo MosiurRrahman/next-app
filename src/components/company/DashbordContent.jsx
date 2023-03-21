@@ -19,7 +19,7 @@ function DashbordContent() {
             <div className="action-btn-group">
               <ul>
                 <li>
-                  <Link legacyBehavior href="/company-profile">
+                  <Link legacyBehavior href="/company/company-profile">
                     <a>
                       <span>
                         <img src="/assets/images/icon/edit2.svg" alt="" />

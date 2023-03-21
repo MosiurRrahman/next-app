@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import CandidateLayout from "../../layout/CandidateLayout";
-
 function EditProfile() {
+  const [startDate, setStartDate] = useState(new Date());
   return (
     <CandidateLayout>
       <div className="col-lg-9">
@@ -428,11 +430,11 @@ function EditProfile() {
                         <label htmlFor="datepicker5">Date of Birth*</label>
                         <div className="input-area">
                           <img src="/assets/images/icon/calender2.svg" alt="" />
-                          <input
-                            type="text"
-                            id="datepicker5"
-                            name="datepicker5"
-                            placeholder="03/08/1986"
+                          <DatePicker
+                            selected={startDate}
+                            onChange={(date) => setStartDate(date)}
+                            placeholderText="Date of Birth"
+                            className="calendar"
                           />
                         </div>
                       </div>
@@ -705,12 +707,12 @@ function EditProfile() {
                               src="/assets/images/icon/calender2.svg"
                               alt=""
                             />
-                            <input
-                              type="text"
-                              id="datepicker10"
-                              name="ep"
-                              placeholder="DD/MM/YY"
-                            />
+                            <DatePicker
+                            selected={startDate}
+                            onChange={(date) => setStartDate(date)}
+                            placeholderText="Check In"
+                            className="calendar"
+                          />
                           </div>
                         </div>
                       </div>
@@ -722,12 +724,12 @@ function EditProfile() {
                               src="/assets/images/icon/calender2.svg"
                               alt=""
                             />
-                            <input
-                              type="text"
-                              id="datepicker11"
-                              name="ep"
-                              placeholder="DD/MM/YY"
-                            />
+                            <DatePicker
+                            selected={startDate}
+                            onChange={(date) => setStartDate(date)}
+                            placeholderText="Check In"
+                            className="calendar"
+                          />
                           </div>
                         </div>
                       </div>
@@ -811,12 +813,12 @@ function EditProfile() {
                               src="/assets/images/icon/calender2.svg"
                               alt=""
                             />
-                            <input
-                              type="text"
-                              id="datepicker6"
-                              name="stp"
-                              placeholder="DD/MM/YY"
-                            />
+                           <DatePicker
+                            selected={startDate}
+                            onChange={(date) => setStartDate(date)}
+                            placeholderText="Check In"
+                            className="calendar"
+                          />
                           </div>
                         </div>
                       </div>
@@ -828,12 +830,12 @@ function EditProfile() {
                               src="/assets/images/icon/calender2.svg"
                               alt=""
                             />
-                            <input
-                              type="text"
-                              id="datepicker7"
-                              name="ep"
-                              placeholder="DD/MM/YY"
-                            />
+                            <DatePicker
+                            selected={startDate}
+                            onChange={(date) => setStartDate(date)}
+                            placeholderText="Check In"
+                            className="calendar"
+                          />
                           </div>
                         </div>
                       </div>
