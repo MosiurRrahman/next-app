@@ -1,9 +1,75 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import CreatableSelect from 'react-select/creatable';
 import CandidateLayout from "../../layout/CandidateLayout";
+
+const components = {
+  DropdownIndicator: null,
+  IndicatorsContainer: () => null,
+  
+};
+const createOption = (label) => ({
+  label,
+  value: label,
+});
 function EditProfile() {
   const [startDate, setStartDate] = useState(new Date());
+  const [inputValue, setInputValue] = React.useState('');
+  const [value, setValue] = React.useState([]);
+
+  const handleKeyDown = (event) => {
+    if (!inputValue) return;
+    switch (event.key) {
+      case 'Enter':
+      case 'Tab':
+        setValue((prev) => [...prev, createOption(inputValue)]);
+        setInputValue('');
+        event.preventDefault();
+    }
+  };
+
+
+  const customStyles = {
+    control: (provided, state) => ({
+      ...provided,
+      border: '1px solid rgba(0, 167, 172, 0.12)',
+      
+      backgroundColor:"transparent",
+      boxShadow: 'none',
+      '&:hover': {
+        borderColor: 'none',
+      },
+    }),
+    menu: (provided, state) => ({
+      ...provided,
+      zIndex: 9999,
+    }),
+    multiValue: (provided, state) => ({
+      ...provided,
+      color: 'white',
+      backgroundColor: '#00a7ac',
+    }),
+    multiValueLabel: (provided, state) => ({
+      ...provided,
+      color: 'white',
+    }),
+    multiValueRemove: (provided, state) => ({
+      ...provided,
+      color: 'white',
+      ':hover': {
+        backgroundColor: '#dc3545',
+        color: 'white',
+      },
+    }),
+    ValueContainer: (provided, state) => ({
+      ...provided,
+      display: 'flex',
+      backgroundColor: '#343a40',
+      flexWrap:"nowrap",
+    }),
+    
+  };
   return (
     <CandidateLayout>
       <div className="col-lg-9">
@@ -596,11 +662,19 @@ function EditProfile() {
                         <div className="col-md-12">
                           <div className="form-inner mb-25">
                             <label>Special Skills*</label>
-                            <select
-                              className="js-example-basic-multiple "
-                              name="states[]"
-                              multiple="multiple"
-                            ></select>
+                            <CreatableSelect
+                            components={components}
+                            inputValue={inputValue}
+                            isClearable
+                            isMulti
+                            menuIsOpen={false}
+                            styles={customStyles}
+                            onChange={(newValue) => setValue(newValue)}
+                            onInputChange={(newValue) => setInputValue(newValue)}
+                            onKeyDown={handleKeyDown}
+                            placeholder="Type Tag and press enter..."
+                            value={value}
+                          />
                           </div>
                         </div>
                       </div>

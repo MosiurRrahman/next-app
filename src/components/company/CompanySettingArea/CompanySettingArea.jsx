@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 function CompanySettingArea() {
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const togglePasswordVisibility = () => {
+    setPasswordVisible((prevState) => !prevState);
+  };
   return (
     <div className="col-lg-12">
       <div className="form-wrapper">
@@ -25,12 +29,20 @@ function CompanySettingArea() {
                   <div className="input-area">
                     <img src="/assets/images/icon/lock-2.svg" alt="" />
                     <input
-                      type="password"
-                      name="password"
-                      id="password"
-                      placeholder="Password"
-                    />
-                    <i className="bi bi-eye-slash" id="togglePassword" />
+                                type={!passwordVisible ? "password" : "text"}
+                                name="password"
+                                id="password"
+                                placeholder="Password"
+                              />
+                                <i
+                                  onClick={() => togglePasswordVisibility()}
+                                  className={
+                                    !passwordVisible
+                                      ? "bi bi-eye-slash"
+                                      : "bi bi-eye-slash  bi-eye"
+                                  }
+                                  id="togglePassword"
+                                />
                   </div>
                 </div>
               </div>
@@ -40,12 +52,17 @@ function CompanySettingArea() {
                   <div className="input-area">
                     <img src="/assets/images/icon/lock-2.svg" alt="" />
                     <input
-                      type="password"
+                      type={!passwordVisible ? "password" : "text"}
                       name="confirmpassword"
                       id="password2"
                       placeholder="Confirm Password"
                     />
-                    <i className="bi bi-eye-slash" id="togglePassword2" />
+                    <i onClick={() => togglePasswordVisibility()}
+                  className={
+                    !passwordVisible
+                      ? "bi bi-eye-slash"
+                      : "bi bi-eye-slash  bi-eye"
+                  } />
                   </div>
                 </div>
               </div>

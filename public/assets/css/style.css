@@ -23413,4 +23413,12 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 
 .react-datepicker__day--selected {
   background: var(--primary-color1) !important;
+}
+
+.tox-notifications-container {
+  display: none !important;
+}
+
+.tox-statusbar {
+  display: none !important;
 }/*# sourceMappingURL=style.css.map */

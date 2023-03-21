@@ -1,8 +1,12 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../layout/Layout";
 
 function Login() {
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const togglePasswordVisibility = () => {
+    setPasswordVisible((prevState) => !prevState);
+  };
   return (
     <Layout>
       <div className="login-area pt-120 mb-120">
@@ -34,12 +38,20 @@ function Login() {
                       <div className="form-inner">
                         <label htmlFor="email">Password*</label>
                         <input
-                          type="password"
+                           type={!passwordVisible ? "password" : "text"}
                           name="password"
                           id="password"
                           placeholder="Password"
                         />
-                        <i className="bi bi-eye-slash" id="togglePassword" />
+                         <i
+                          onClick={() => togglePasswordVisibility()}
+                          className={
+                            !passwordVisible
+                              ? "bi bi-eye-slash"
+                              : "bi bi-eye-slash  bi-eye"
+                          }
+                          id="togglePassword"
+                        />
                       </div>
                     </div>
                     <div className="col-lg-12">

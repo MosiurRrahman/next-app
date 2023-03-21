@@ -11,24 +11,13 @@ const components = {
   IndicatorsContainer: () => null,
   
 };
-
 const createOption = (label) => ({
   label,
   value: label,
 });
 function JobPost() {
   const [startDate, setStartDate] = useState(new Date());
-  const [showInputBox, setShowInputBox] = useState(<div className="input-area  mb-25">
-  <img
-    src="assets/images/icon/salary-2.svg"
-    alt=""
-  />
-  <input
-    type="text"
-    name="job_fixed_price"
-    placeholder="Salary"
-  />
-</div>);
+  const [showInputBox, setShowInputBox] = useState("");
   const [inputValue, setInputValue] = React.useState('');
   const [value, setValue] = React.useState([]);
 

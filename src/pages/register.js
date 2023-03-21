@@ -2,7 +2,11 @@ import Link from "next/link";
 import React from "react";
 import Layout from "../layout/Layout";
 
-function register() {
+function Register() {
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const togglePasswordVisibility = () => {
+    setPasswordVisible((prevState) => !prevState);
+  };
   return (
     <Layout>
       <div className="register-area pt-120 mb-120">
@@ -124,13 +128,18 @@ function register() {
                             <div className="form-inner mb-25">
                               <label htmlFor="password">Password*</label>
                               <input
-                                type="password"
-                                name="password"
-                                id="password"
-                                placeholder="Password"
-                              />
+                              type={!passwordVisible ? "password" : "text"}
+                              name="password"
+                              id="password"
+                              placeholder="Password"
+                            />
                               <i
-                                className="bi bi-eye-slash"
+                                onClick={() => togglePasswordVisibility()}
+                                className={
+                                  !passwordVisible
+                                    ? "bi bi-eye-slash"
+                                    : "bi bi-eye-slash  bi-eye"
+                                }
                                 id="togglePassword"
                               />
                             </div>
@@ -141,15 +150,20 @@ function register() {
                                 Confirm Password*
                               </label>
                               <input
-                                type="password"
-                                name="confirmpassword"
-                                id="password2"
+                                type={!passwordVisible ? "password" : "text"}
+                                name="password"
+                                id="password"
                                 placeholder="Confirm Password"
                               />
-                              <i
-                                className="bi bi-eye-slash"
-                                id="togglePassword2"
-                              />
+                                <i
+                                  onClick={() => togglePasswordVisibility()}
+                                  className={
+                                    !passwordVisible
+                                      ? "bi bi-eye-slash"
+                                      : "bi bi-eye-slash  bi-eye"
+                                  }
+                                  id="togglePassword"
+                                />
                             </div>
                           </div>
                           <div className="col-md-12">
@@ -406,4 +420,4 @@ function register() {
   );
 }
 
-export default register;
+export default Register;
