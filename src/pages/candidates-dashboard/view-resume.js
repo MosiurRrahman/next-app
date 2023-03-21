@@ -8,7 +8,7 @@ function VieResume() {
       <div className="col-lg-10">
         <div className="resume-area">
           <div className="edit-resume-btn">
-            <Link legacyBehavior href="/edit-profile">
+            <Link legacyBehavior href="/candidates-dashboard/edit-profile">
               <a>
                 {" "}
                 Edit Resume

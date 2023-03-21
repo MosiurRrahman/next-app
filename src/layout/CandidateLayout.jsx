@@ -13,7 +13,13 @@ function CandidateLayout({ children }) {
       <LayoutHeader />
       <div className="dashboard-area pt-120 mb-120">
         <div className="container">
-          <div className="row g-lg-4 gy-5 mb-90">
+          <div
+            className={
+              currentPath === "/candidates-dashboard/view-resume"
+                ? "row justify-content-center g-lg-4 gy-5 mb-90"
+                : "row g-lg-4 gy-5 mb-90"
+            }
+          >
             {currentPath === "/candidates-dashboard/view-resume" ? (
               ""
             ) : (

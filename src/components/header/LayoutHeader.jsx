@@ -331,8 +331,6 @@ function LayoutHeader() {
                   <li>
                     <Link legacyBehavior href="/company-details">
                       <a>
-                        {" "}
-                        className=
                         {currentRoute === "/compnay-details" ? "active" : ""}
                         Company Details
                       </a>
