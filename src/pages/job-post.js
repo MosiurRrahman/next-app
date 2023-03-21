@@ -1,15 +1,90 @@
+import { Editor } from "@tinymce/tinymce-react";
 import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import "react-quill/dist/quill.snow.css";
+import CreatableSelect from 'react-select/creatable';
 import Breadcrumb from "../components/common/Breadcrumb";
 import Layout from "../layout/Layout";
+const components = {
+  DropdownIndicator: null,
+  IndicatorsContainer: () => null,
+  
+};
 
-import { Editor } from "@tinymce/tinymce-react";
-
+const createOption = (label) => ({
+  label,
+  value: label,
+});
 function JobPost() {
-  const [showInputBox, setShowInputBox] = useState("");
+  const [startDate, setStartDate] = useState(new Date());
+  const [showInputBox, setShowInputBox] = useState(<div className="input-area  mb-25">
+  <img
+    src="assets/images/icon/salary-2.svg"
+    alt=""
+  />
+  <input
+    type="text"
+    name="job_fixed_price"
+    placeholder="Salary"
+  />
+</div>);
+  const [inputValue, setInputValue] = React.useState('');
+  const [value, setValue] = React.useState([]);
+
+  const handleKeyDown = (event) => {
+    if (!inputValue) return;
+    switch (event.key) {
+      case 'Enter':
+      case 'Tab':
+        setValue((prev) => [...prev, createOption(inputValue)]);
+        setInputValue('');
+        event.preventDefault();
+    }
+  };
 
   const handleInputChange = (event) => {
     setShowInputBox(event.target.value);
+  };
+  const customStyles = {
+    control: (provided, state) => ({
+      ...provided,
+      border: 'none',
+      
+      backgroundColor:"transparent",
+      boxShadow: 'none',
+      '&:hover': {
+        borderColor: 'none',
+      },
+    }),
+    menu: (provided, state) => ({
+      ...provided,
+      zIndex: 9999,
+    }),
+    multiValue: (provided, state) => ({
+      ...provided,
+      color: 'white',
+      backgroundColor: '#00a7ac',
+    }),
+    multiValueLabel: (provided, state) => ({
+      ...provided,
+      color: 'white',
+    }),
+    multiValueRemove: (provided, state) => ({
+      ...provided,
+      color: 'white',
+      ':hover': {
+        backgroundColor: '#dc3545',
+        color: 'white',
+      },
+    }),
+    ValueContainer: (provided, state) => ({
+      ...provided,
+      display: 'flex',
+      backgroundColor: '#343a40',
+      flexWrap:"nowrap",
+    }),
+    
   };
   return (
     <Layout>
@@ -80,7 +155,7 @@ function JobPost() {
                                 id="fixedPrice1"
                                 name="showInputBox"
                                 defaultValue="fixedPrice"
-                                defaultChecked
+                                
                                 onChange={handleInputChange}
                               />
                               <label htmlFor="fixedPrice1">Fixed Salary</label>
@@ -91,6 +166,7 @@ function JobPost() {
                                 className="form-check-input"
                                 type="radio"
                                 id="rangePrice1"
+                                
                                 name="showInputBox"
                                 defaultValue="rangePrice"
                                 onChange={handleInputChange}
@@ -105,6 +181,7 @@ function JobPost() {
                                 id="negotiable1"
                                 name="showInputBox"
                                 defaultValue="negotiable"
+                                defaultChecked
                                 onChange={handleInputChange}
                               />
                               <label htmlFor="negotiable1">Negotiable</label>
@@ -114,6 +191,7 @@ function JobPost() {
                         </div>
                         <div className="row">
                           <div className="col-lg-12">
+                            
                             {showInputBox === "fixedPrice" && (
                               <div className="input-area  mb-25">
                                 <img
@@ -196,12 +274,19 @@ function JobPost() {
                         <label>Job Tag*</label>
                         <div className="input-area">
                           <img src="assets/images/icon/search-2.svg" alt="" />
-                          {/* <select class="js-example-basic-multiple">
-                                      </select> */}
-                          <select
-                            className="js-example-basic-multiple"
-                            data-placeholder="Select an option"
-                          ></select>
+                          <CreatableSelect
+      components={components}
+      inputValue={inputValue}
+      isClearable
+      isMulti
+      menuIsOpen={false}
+      styles={customStyles}
+      onChange={(newValue) => setValue(newValue)}
+      onInputChange={(newValue) => setInputValue(newValue)}
+      onKeyDown={handleKeyDown}
+      placeholder="Type Tag and press enter..."
+      value={value}
+    />
                         </div>
                       </div>
                     </div>
@@ -210,11 +295,11 @@ function JobPost() {
                         <label htmlFor="datepicker9">Deadline*</label>
                         <div className="input-area">
                           <img src="assets/images/icon/calender2.svg" alt="" />
-                          <input
-                            type="text"
-                            id="datepicker9"
-                            name="deadline"
-                            placeholder="MM/DD/YY"
+                          <DatePicker
+                            selected={startDate}
+                            onChange={(date) => setStartDate(date)}
+                            placeholderText="Check In"
+                            className="calendar"
                           />
                         </div>
                       </div>

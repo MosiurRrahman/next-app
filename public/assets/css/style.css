@@ -5959,46 +5959,6 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
   line-height: 18px;
   color: var(--title-color1);
 }
-.hero1 .hero-content .job-search-area form .form-inner .nice-select {
-  height: 60px;
-  background: #eff3f2;
-  font-family: var(--font-work-sans);
-  font-weight: 400;
-  font-size: 0.938rem;
-  line-height: 18px;
-  color: var(--title-color1);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  border: unset;
-  padding-left: 0;
-}
-.hero1 .hero-content .job-search-area form .form-inner .nice-select .list {
-  width: 100%;
-}
-.hero1 .hero-content .job-search-area form .form-inner .nice-select .list li {
-  font-family: var(--font-work-sans);
-  font-weight: 400;
-  font-size: 0.938rem;
-  line-height: 18px;
-  color: var(--title-color1);
-  display: flex;
-  align-items: center;
-}
-.hero1 .hero-content .job-search-area form .form-inner .nice-select::after {
-  border-bottom: 1px solid var(--primary-color1);
-  border-right: 1px solid var(--primary-color1);
-  height: 10px;
-  margin-top: -6px;
-  right: 27px;
-  top: 50%;
-  width: 10px;
-}
-.hero1 .hero-content .job-search-area form .form-inner .nice-select .option:hover,
-.hero1 .hero-content .job-search-area form .form-inner .nice-select .option.focus,
-.hero1 .hero-content .job-search-area form .form-inner .nice-select .option.selected.focus {
-  background-color: rgba(0, 167, 172, 0.1);
-}
 .hero1 .hero-content .job-search-area form .form-inner .primry-btn-2 {
   height: 100%;
   padding: 15px 30px;
@@ -8070,44 +8030,6 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 .form-wrapper form .form-inner .input-area:hover {
   border-color: rgba(0, 167, 172, 0.4);
 }
-.form-wrapper form .form-inner .nice-select {
-  height: 46px;
-  font-family: var(--font-work-sans);
-  font-weight: 400;
-  font-size: 0.875rem;
-  color: var(----text-color1);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  border: unset;
-  padding-left: 0;
-}
-.form-wrapper form .form-inner .nice-select .list {
-  width: 100%;
-}
-.form-wrapper form .form-inner .nice-select .list li {
-  font-family: var(--font-work-sans);
-  font-weight: 400;
-  font-size: 0.938rem;
-  line-height: 18px;
-  color: var(--title-color1);
-  display: flex;
-  align-items: center;
-}
-.form-wrapper form .form-inner .nice-select::after {
-  border-bottom: 1px solid var(--primary-color1);
-  border-right: 1px solid var(--primary-color1);
-  height: 8px;
-  margin-top: -6px;
-  right: 27px;
-  top: 50%;
-  width: 8px;
-}
-.form-wrapper form .form-inner .nice-select .option:hover,
-.form-wrapper form .form-inner .nice-select .option.focus,
-.form-wrapper form .form-inner .nice-select .option.selected.focus {
-  background-color: rgba(0, 167, 172, 0.1);
-}
 .form-wrapper form .form-inner .input-area2 {
   background: #ffffff;
   border-radius: 5px;
@@ -8214,11 +8136,6 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 }
 .form-wrapper form .forgot-pass:hover {
   color: var(--primary-color1);
-}
-.form-wrapper form button {
-  padding: 10px 30px;
-  width: 100%;
-  justify-content: center;
 }
 .form-wrapper form .login-difarent-way {
   padding-top: 30px;
@@ -16475,46 +16392,6 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
   line-height: 18px;
   color: var(--title-color1);
 }
-.hero2 .hero-wapper .hero-content .job-search-area form .form-inner .nice-select {
-  height: 60px;
-  background: #eff3f2;
-  font-family: var(--font-work-sans);
-  font-weight: 400;
-  font-size: 0.938rem;
-  line-height: 18px;
-  color: var(--title-color1);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  border: unset;
-  padding-left: 0;
-}
-.hero2 .hero-wapper .hero-content .job-search-area form .form-inner .nice-select .list {
-  width: 100%;
-}
-.hero2 .hero-wapper .hero-content .job-search-area form .form-inner .nice-select .list li {
-  font-family: var(--font-work-sans);
-  font-weight: 400;
-  font-size: 0.938rem;
-  line-height: 18px;
-  color: var(--title-color1);
-  display: flex;
-  align-items: center;
-}
-.hero2 .hero-wapper .hero-content .job-search-area form .form-inner .nice-select::after {
-  border-bottom: 1px solid var(--primary-color1);
-  border-right: 1px solid var(--primary-color1);
-  height: 10px;
-  margin-top: -6px;
-  right: 27px;
-  top: 50%;
-  width: 10px;
-}
-.hero2 .hero-wapper .hero-content .job-search-area form .form-inner .nice-select .option:hover,
-.hero2 .hero-wapper .hero-content .job-search-area form .form-inner .nice-select .option.focus,
-.hero2 .hero-wapper .hero-content .job-search-area form .form-inner .nice-select .option.selected.focus {
-  background-color: rgba(0, 167, 172, 0.1);
-}
 .hero2 .hero-wapper .hero-content .job-search-area form .form-inner .primry-btn-2 {
   height: 100%;
   padding: 15px 30px;
@@ -23461,4 +23338,79 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
   left: 0;
   right: 0;
   opacity: 1;
+}
+
+.react-datepicker__day {
+  color: #000;
+  display: inline-block;
+  width: 2rem !important;
+  line-height: 1.9rem !important;
+  text-align: center;
+  padding: 2px;
+  background: #fff;
+  margin: 0.3rem !important;
+  font-family: var(--font-dosis);
+}
+
+.react-datepicker {
+  font-family: var(--font-dosis);
+  font-size: 0.8rem;
+  background-color: #ddd !important;
+  border: 1px solid #aeaeae;
+}
+.react-datepicker .form-wrapper form button {
+  padding: unset;
+  width: unset;
+  justify-content: unset;
+}
+
+.react-datepicker__day--selected {
+  background: var(--gradient-color);
+}
+
+.react-datepicker__day-names {
+  margin-bottom: -8px;
+  background: #ddd;
+  font-family: var(--font-exo2);
+}
+
+.react-datepicker__header {
+  text-align: center;
+  background: var(--primary-color1) !important;
+  border-top-left-radius: 0.3rem;
+  padding: 8px 0;
+  position: relative;
+}
+
+.react-datepicker__current-month {
+  margin-top: 0;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: var(--font-exo2);
+  padding-bottom: 10px;
+}
+
+.react-datepicker__navigation {
+  top: 10px !important;
+}
+
+.react-datepicker-popper {
+  z-index: 9 !important;
+}
+
+.react-datepicker__triangle {
+  display: none !important;
+}
+
+.react-datepicker__navigation--previous {
+  top: 2px !important;
+}
+
+.react-datepicker__navigation--next {
+  top: 3px !important;
+}
+
+.react-datepicker__day--selected {
+  background: var(--primary-color1) !important;
 }/*# sourceMappingURL=style.css.map */
