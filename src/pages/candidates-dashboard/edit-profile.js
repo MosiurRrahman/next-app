@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import CreatableSelect from 'react-select/creatable';
+import EducatonRepeterForm from "../../components/candidates/EducatonRepeterForm";
 import CandidateLayout from "../../layout/CandidateLayout";
 
 const components = {
@@ -14,10 +15,11 @@ const createOption = (label) => ({
   value: label,
 });
 function EditProfile() {
-  const [startDate, setStartDate] = useState(new Date());
+ 
   const [inputValue, setInputValue] = React.useState('');
   const [value, setValue] = React.useState([]);
-
+  const [startDate, setStartDate] = React.useState(new Date());
+  const [startDate1, setStartDate1] = React.useState(new Date());
   const handleKeyDown = (event) => {
     if (!inputValue) return;
     switch (event.key) {
@@ -70,6 +72,7 @@ function EditProfile() {
     }),
     
   };
+
   return (
     <CandidateLayout>
       <div className="col-lg-9">
@@ -698,135 +701,20 @@ function EditProfile() {
                 role="tabpanel"
                 aria-labelledby="contact-tab"
               >
-                <form className="edit-profile-form profile-form">
-                  <div className="section-title2">
-                    <h5>Educational Qualification:</h5>
+                
+                <EducatonRepeterForm/>
+              <div className="row">
+              <div className="col-md-12">
+                  <div className="form-inner pt-30">
+                    <button
+                      className="primry-btn-2 lg-btn w-unset"
+                      type="submit"
+                    >
+                      Update Change
+                    </button>
                   </div>
-                  <div className="education-row">
-                    <div className="row">
-                      <div className="col-lg-12">
-                        <div className="info-title">
-                          <h6>Academic Information:</h6>
-                          <div className="dash" />
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="form-inner mb-25">
-                          <label>Education Level*</label>
-                          <div className="input-area">
-                            <img
-                              src="/assets/images/icon/qualification-2.svg"
-                              alt=""
-                            />
-                            <select className="select1">
-                              <option value={0}>Bachelor Degree in CSE</option>
-                              <option value={1}>IGCSE</option>
-                              <option value={2}>AS</option>
-                              <option value={4}>A Level</option>
-                              <option value={5}>Matriculated</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="form-inner mb-25">
-                          <label>My Major*</label>
-                          <div className="input-area">
-                            <img src="/assets/images/icon/major.svg" alt="" />
-                            <select className="select1">
-                              <option value={0}>Science</option>
-                              <option value={1}>Arts</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="form-inner mb-25">
-                          <label htmlFor="institute">
-                            Institute/University*
-                          </label>
-                          <div className="input-area">
-                            <img
-                              src="/assets/images/icon/univercity.svg"
-                              alt=""
-                            />
-                            <input
-                              type="text"
-                              id="institute"
-                              name="institute"
-                              placeholder="Type Your Institute Name..."
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="form-inner mb-30">
-                          <label htmlFor="gpa">Result/GPA**</label>
-                          <div className="input-area">
-                            <img src="/assets/images/icon/gpa-2.svg" alt="" />
-                            <input
-                              type="text"
-                              id="gpa"
-                              name="gpa"
-                              placeholder="4.75/5"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="form-inner mb-20">
-                          <label htmlFor="datepicker10">Starting Period*</label>
-                          <div className="input-area">
-                            <img
-                              src="/assets/images/icon/calender2.svg"
-                              alt=""
-                            />
-                            <DatePicker
-                            selected={startDate}
-                            onChange={(date) => setStartDate(date)}
-                            placeholderText="Check In"
-                            className="calendar"
-                          />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="form-inner mb-20">
-                          <label htmlFor="datepicker11">Ending Period*</label>
-                          <div className="input-area">
-                            <img
-                              src="/assets/images/icon/calender2.svg"
-                              alt=""
-                            />
-                            <DatePicker
-                            selected={startDate}
-                            onChange={(date) => setStartDate(date)}
-                            placeholderText="Check In"
-                            className="calendar"
-                          />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="add-remove-btn d-flex align-items-center justify-content-between mb-50">
-                    <div className="add-row">
-                      <button type="button" className="add-education-row">
-                        Add Education+
-                      </button>
-                    </div>
-                  </div>
-                  <div className="col-md-12">
-                    <div className="form-inner">
-                      <button
-                        className="primry-btn-2 lg-btn w-unset"
-                        type="submit"
-                      >
-                        Update Change
-                      </button>
-                    </div>
-                  </div>
-                </form>
+                </div>
+              </div>
               </div>
               <div
                 className="tab-pane fade"

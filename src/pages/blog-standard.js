@@ -157,8 +157,8 @@ function BlogStandard() {
                     resume building.
                   </p>
                   <div className="find-job-btn">
-                    <Link href="/blog-details">
-                      <a className="primry-btn-2 lg-btn "> Find Job</a>
+                    <Link legacyBehavior href="/blog-details">
+                      <a className="primry-btn-2 lg-btn">Find Job</a>
                     </Link>
                   </div>
                 </div>

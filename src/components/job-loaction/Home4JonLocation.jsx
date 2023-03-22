@@ -47,7 +47,7 @@ function Home4JonLocation() {
                   </h4>
                   <p>
                     Job Available: <span>33</span>
-                  </p>
+                  </p>j
                 </div>
               </div>
             </div>
