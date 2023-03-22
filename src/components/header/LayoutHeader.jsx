@@ -167,8 +167,17 @@ function LayoutHeader() {
                 <a href="#" className="drop-down">
                   Home
                 </a>
-                <i className="bi bi-plus dropdown-icon" />
-                <ul className="sub-menu">
+                <i
+                    className="bi bi-plus dropdown-icon"
+                    onClick={() => handleMenu("home-one")}
+                  />
+                  <ul
+                    className={
+                      state.activeMenu === "home-one"
+                        ? "sub-menu d-block"
+                        : "sub-menu"
+                    }
+                  >
                   <li>
                     <Link legacyBehavior href="/">
                       <a>Home One</a>
@@ -196,7 +205,7 @@ function LayoutHeader() {
                   </li>
                   <li>
                     <Link legacyBehavior href="/index6">
-                      <a className="active">Home Six</a>
+                      <a>Home Six</a>
                     </Link>
                   </li>
                 </ul>
@@ -205,8 +214,17 @@ function LayoutHeader() {
                 <a href="#" className="drop-down">
                   Find Jobs
                 </a>
-                <i className="bi bi-plus dropdown-icon" />
-                <ul className="sub-menu">
+                <i
+                    className="bi bi-plus dropdown-icon"
+                    onClick={() => handleMenu("job-category")}
+                  />
+                  <ul
+                    className={
+                      state.activeMenu === "job-category"
+                        ? "sub-menu d-block"
+                        : "sub-menu"
+                    }
+                  >
                   <li>
                     <Link legacyBehavior href="/category">
                       <a
@@ -245,8 +263,17 @@ function LayoutHeader() {
                 <a href="#" className="drop-down">
                   Pages
                 </a>
-                <i className="bi bi-plus dropdown-icon" />
-                <ul className="sub-menu">
+                <i
+                    className="bi bi-plus dropdown-icon"
+                    onClick={() => handleMenu("pages")}
+                  />
+                  <ul
+                    className={
+                      state.activeMenu === "pages"
+                        ? "sub-menu d-block"
+                        : "sub-menu"
+                    }
+                  >
                   <li>
                     <Link legacyBehavior href="/candidates-dashboard/dashboard">
                       <a
@@ -314,8 +341,17 @@ function LayoutHeader() {
               </li>
               <li className="menu-item-has-children">
                 <a href="#">Employers</a>
-                <i className="bi bi-plus dropdown-icon" />
-                <ul className="sub-menu">
+                <i
+                    className="bi bi-plus dropdown-icon"
+                    onClick={() => handleMenu("company")}
+                  />
+                  <ul
+                    className={
+                      state.activeMenu === "company"
+                        ? "sub-menu d-block"
+                        : "sub-menu"
+                    }
+                  >
                   <li>
                     <Link legacyBehavior href="/company-listing1">
                       <a
@@ -323,7 +359,7 @@ function LayoutHeader() {
                           currentRoute === "/company-listing1" ? "active" : ""
                         }
                       >
-                        Company Listing 01
+                        Company Listing
                       </a>
                     </Link>
                   </li>
@@ -353,8 +389,17 @@ function LayoutHeader() {
               </li>
               <li className="menu-item-has-children">
                 <a href="#">Blog</a>
-                <i className="bi bi-plus dropdown-icon" />
-                <ul className="sub-menu">
+                <i
+                    className="bi bi-plus dropdown-icon"
+                    onClick={() => handleMenu("blog")}
+                  />
+                  <ul
+                    className={
+                      state.activeMenu === "blog"
+                        ? "sub-menu d-block"
+                        : "sub-menu"
+                    }
+                  >
                   <li>
                     <Link legacyBehavior href="/blog-grid">
                       <a

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useEffect, useReducer, useRef } from "react";
 const initialState = {
   activeMenu: "",
@@ -52,7 +53,7 @@ function Header4() {
   function handleMenu(menuName) {
     dispatch({ type: "TOGGLE", payload: menuName });
   }
-
+  const currentRoute = useRouter().pathname
   useEffect(() => {
     const burger = document.querySelector(".mobile-menu-btn");
 
@@ -138,7 +139,9 @@ function Header4() {
                   </li>
                   <li>
                     <Link legacyBehavior href="/index4">
-                      <a>Home Four</a>
+                      <a className={
+                          currentRoute === "/index4" ? "active" : ""
+                        }>Home Four</a>
                     </Link>
                   </li>
                   <li>
@@ -265,12 +268,7 @@ function Header4() {
                 >
                   <li>
                     <Link legacyBehavior href="/company-listing1">
-                      <a>Company Listing 01</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link legacyBehavior href="/company-listing2">
-                      <a>Company Listing 02</a>
+                      <a>Company Listing</a>
                     </Link>
                   </li>
                   <li>
@@ -279,7 +277,7 @@ function Header4() {
                     </Link>
                   </li>
                   <li>
-                    <Link legacyBehavior href="/company-dashboard">
+                    <Link legacyBehavior href="/company/company-dashboard">
                       <a>Company Dashboard</a>
                     </Link>
                   </li>

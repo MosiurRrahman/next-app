@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useEffect, useReducer, useRef } from "react";
 const initialState = {
   activeMenu: "",
@@ -42,7 +43,7 @@ function Header3() {
     const { scrollY } = window;
     dispatch({ type: "setScrollY", payload: scrollY });
   };
-
+const currentRoute = useRouter().pathname
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -185,7 +186,9 @@ function Header3() {
                   </li>
                   <li>
                     <Link legacyBehavior href="/index3">
-                      <a>Home Three</a>
+                      <a className={
+                          currentRoute === "/index3" ? "active" : ""
+                        }>Home Three</a>
                     </Link>
                   </li>
                   <li>
@@ -317,12 +320,7 @@ function Header3() {
                 >
                   <li>
                     <Link legacyBehavior href="/company-listing1">
-                      <a>Company Listing 01</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link legacyBehavior href="/company-listing2">
-                      <a>Company Listing 02</a>
+                      <a>Company Listing</a>
                     </Link>
                   </li>
                   <li>
@@ -331,7 +329,7 @@ function Header3() {
                     </Link>
                   </li>
                   <li>
-                    <Link legacyBehavior href="/company-dashboard">
+                    <Link legacyBehavior href="/company/company-dashboard">
                       <a>Company Dashboard</a>
                     </Link>
                   </li>

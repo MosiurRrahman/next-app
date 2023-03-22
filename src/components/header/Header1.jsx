@@ -355,12 +355,7 @@ function Header1() {
                   >
                     <li>
                       <Link legacyBehavior href="/company-listing1">
-                        <a>Company Listing 01</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link legacyBehavior href="/company-listing2">
-                        <a>Company Listing 02</a>
+                        <a>Company Listing</a>
                       </Link>
                     </li>
                     <li>

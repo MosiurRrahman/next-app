@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useEffect, useReducer } from "react";
 const initialState = {
   activeMenu: "",
@@ -41,7 +42,7 @@ function Header5() {
   function handleMenu(menuName) {
     dispatch({ type: "TOGGLE", payload: menuName });
   }
-
+  const currentRoute = useRouter().pathname
   useEffect(() => {
     const burger = document.querySelector(".mobile-menu-btn");
 
@@ -55,6 +56,7 @@ function Header5() {
     });
   });
   return (
+
     <header className="header-area style-6">
       <div className="menu-area">
         <div className="header-logo">
@@ -119,7 +121,9 @@ function Header5() {
                 </li>
                 <li>
                   <Link legacyBehavior href="/index5">
-                    <a className="active"> Home Five</a>
+                    <a className={
+                          currentRoute === "/index5" ? "active" : ""
+                        }> Home Five</a>
                   </Link>
                 </li>
                 <li>
@@ -232,21 +236,17 @@ function Header5() {
               >
                 <li>
                   <Link legacyBehavior href="/company-listing1">
-                    <a>Company Listing 01</a>
+                    <a>Company Listing</a>
                   </Link>
                 </li>
-                <li>
-                  <Link legacyBehavior href="/company-listing2">
-                    <a>Company Listing 02</a>
-                  </Link>
-                </li>
+              
                 <li>
                   <Link legacyBehavior href="/company-details">
                     <a>Company Details</a>
                   </Link>
                 </li>
                 <li>
-                  <Link legacyBehavior href="/company-dashboard">
+                  <Link legacyBehavior href="/company/company-dashboard">
                     <a>Company Dashboard</a>
                   </Link>
                 </li>

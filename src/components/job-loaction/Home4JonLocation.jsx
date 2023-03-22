@@ -18,7 +18,7 @@ function Home4JonLocation() {
             <div className="explore-btn">
               <Link legacyBehavior href="/job-listing1">
                 <a>
-                  <a>View All Location</a>
+                  View All Location
                   <span>
                     <img src="assets/images/icon/explore-elliose.svg" alt="" />
                   </span>
