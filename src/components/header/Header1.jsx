@@ -7,6 +7,7 @@ const initialState = {
   menuOpen: false,
 };
 function reducer(state, action) {
+
   switch (action.type) {
     case "TOGGLE":
       if (state.activeMenu === action.payload) {
@@ -40,6 +41,7 @@ function reducer(state, action) {
 }
 function Header1() {
   const [state, dispatch] = useReducer(reducer, initialState);
+  
   const headerRef = useRef(null);
   const handleScroll = () => {
     const { scrollY } = window;
@@ -54,6 +56,7 @@ function Header1() {
   }, []);
   function handleMenu(menuName) {
     dispatch({ type: "TOGGLE", payload: menuName });
+
   }
 
   useEffect(() => {
@@ -243,7 +246,7 @@ function Header1() {
                     </li>
                     <li>
                       <Link legacyBehavior href="/index6">
-                        <a className={currentRoute === "/" ? "active" : ""}>
+                        <a className={currentRoute === "/index6" ? "active" : ""}>
                           Home Six
                         </a>
                       </Link>
@@ -410,10 +413,10 @@ function Header1() {
                 <div className="sign-in-btn mb-25">
                   <Link
                     legacyBehavior
-                    className="primry-btn-1 lg-btn"
+                    
                     href="/login"
                   >
-                    <a>
+                    <a className="primry-btn-1 lg-btn">
                       <svg
                         width={15}
                         height={15}
@@ -427,8 +430,8 @@ function Header1() {
                   </Link>
                 </div>
                 <div className="post-job-btn mb-30">
-                  <Link legacyBehavior className="primry-btn-2 lg-btn" href="#">
-                    <a>
+                  <Link legacyBehavior  href="#">
+                    <a className="primry-btn-2 lg-btn">
                       <svg
                         width={15}
                         height={13}

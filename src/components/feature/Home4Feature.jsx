@@ -89,6 +89,7 @@ function Home4Feature() {
                 </div>
               </div>
               <div className="job-type-apply">
+              <p><img src="assets/images/icon/company-4.svg" alt=""/> Job Applied: <span> 07 Person</span></p>
                 <div className="job-type">
                   <span className="light-green">Full Time</span>
                   <span className="light-blue">Part Time</span>
@@ -171,6 +172,7 @@ function Home4Feature() {
                 </div>
               </div>
               <div className="job-type-apply">
+              <p><img src="assets/images/icon/company-4.svg" alt=""/> Job Applied: <span> 05 Person</span></p>
                 <div className="job-type">
                   <span className="light-green">Full Time</span>
                   <span className="light-blue">Part Time</span>
@@ -252,6 +254,7 @@ function Home4Feature() {
                 </div>
               </div>
               <div className="job-type-apply">
+              <p><img src="assets/images/icon/company-4.svg" alt=""/> Job Applied: <span> 02 Person</span></p>
                 <div className="job-type">
                   <span className="light-blue">Part Time</span>
                 </div>
@@ -332,6 +335,7 @@ function Home4Feature() {
                 </div>
               </div>
               <div className="job-type-apply">
+              <p><img src="assets/images/icon/company-4.svg" alt=""/> Job Applied: <span> 08 Person</span></p>
                 <div className="job-type">
                   <span className="light-green">Full Time</span>
                   <span className="light-blue">Part Time</span>

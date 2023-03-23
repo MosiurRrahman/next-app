@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useReducer } from "react";
+import React, { useEffect, useReducer, useRef } from "react";
 const initialState = {
   activeMenu: "",
   menuOpen: false,
@@ -32,17 +32,30 @@ function reducer(state, action) {
       return { ...state, activeMenu: "blog", menuOpen: !state.menuOpen };
     case "PAGES":
       return { ...state, activeMenu: "pages", menuOpen: !state.menuOpen };
-
+    case "setScrollY":
+      return { ...state, scrollY: action.payload };
     default:
       return { ...state };
   }
 }
 function Header6() {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const headerRef = useRef(null);
+  const handleScroll = () => {
+    const { scrollY } = window;
+    dispatch({ type: "setScrollY", payload: scrollY });
+  };
+  const currentRoute = useRouter().pathname;
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   function handleMenu(menuName) {
     dispatch({ type: "TOGGLE", payload: menuName });
   }
-const currentRoute = useRouter().pathname
+
   useEffect(() => {
     const burger = document.querySelector(".mobile-menu-btn");
 
@@ -54,7 +67,7 @@ const currentRoute = useRouter().pathname
     menuClose.addEventListener("click", () => {
       nav.classList.remove("show-menu");
     });
-  });
+  });;
 
   return (
     <>
@@ -74,7 +87,12 @@ const currentRoute = useRouter().pathname
           sizes="20x20"
         />
       </Head>
-      <header className="header-area style-7">
+      <header  ref={headerRef}
+        className={
+          state.scrollY > 120
+            ? "header-area style-7 sticky"
+            : "header-area style-7"
+        } >
       <div className="menu-area">
         <div className="header-logo">
           <Link legacyBehavior href="/">

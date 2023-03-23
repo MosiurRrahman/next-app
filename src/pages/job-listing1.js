@@ -390,7 +390,11 @@ function JobListing1() {
                     </ul>
                   </div>
                 </div>
+               
               </div>
+              <div className="job-widget-btn">
+                            <Link legacyBehavior  href="#"><a className="primry-btn-2 lg-btn text-center">Go to Job Alert</a></Link>
+                        </div>
             </div>
             <div className="col-lg-8">
               <div className="job-listing-wrrap">
@@ -1484,6 +1488,38 @@ function JobListing1() {
                             </div>
                           </div>
                         </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-12 d-flex justify-content-center">
+                      <div className="pagination-area">
+                        <nav aria-label="...">
+                          <ul className="pagination">
+                            <li className="page-item disabled">
+                              <a className="page-link" href="#" tabIndex={-1} />
+                            </li>
+                            <li
+                              className="page-item active"
+                              aria-current="page"
+                            >
+                              <a className="page-link" href="#">
+                                01
+                              </a>
+                            </li>
+                            <li className="page-item">
+                              <a className="page-link" href="#">
+                                02
+                              </a>
+                            </li>
+                            <li className="page-item">
+                              <a className="page-link" href="#">
+                                03
+                              </a>
+                            </li>
+                            <li className="page-item">
+                              <a className="page-link" href="#" />
+                            </li>
+                          </ul>
+                        </nav>
                       </div>
                     </div>
                   </div>

@@ -9,7 +9,7 @@ function Home2LatesJob() {
           <div className="col-12 d-flex flex-wrap align-items-end justify-content-md-between justify-content-start gap-3">
             <div className="section-title1">
               <h2>
-                Gportia <span>Latest</span> Job
+                JOBES <span>Latest</span> Job
               </h2>
               <p>
                 To choose your trending job dream &amp; to make future bright.
@@ -75,9 +75,6 @@ function Home2LatesJob() {
                 </ul>
               </div>
               <div className="job-type-apply">
-                <div className="job-type">
-                  <span className="full-time">Full Time</span>
-                </div>
                 <div className="apply-btn">
                   <Link legacyBehavior href="/job-details">
                     <a>
@@ -138,9 +135,6 @@ function Home2LatesJob() {
                 </ul>
               </div>
               <div className="job-type-apply">
-                <div className="job-type">
-                  <span className="remote">Remote</span>
-                </div>
                 <div className="apply-btn">
                   <Link legacyBehavior href="/job-details">
                     <a>
@@ -205,9 +199,6 @@ function Home2LatesJob() {
                 </ul>
               </div>
               <div className="job-type-apply">
-                <div className="job-type">
-                  <span className="full-time">Full Time</span>
-                </div>
                 <div className="apply-btn">
                   <Link legacyBehavior href="/job-details">
                     <a>
@@ -269,9 +260,6 @@ function Home2LatesJob() {
                 </ul>
               </div>
               <div className="job-type-apply">
-                <div className="job-type">
-                  <span className="full-time">Full Time</span>
-                </div>
                 <div className="apply-btn">
                   <Link legacyBehavior href="/job-details">
                     <a>
@@ -333,9 +321,6 @@ function Home2LatesJob() {
                 </ul>
               </div>
               <div className="job-type-apply">
-                <div className="job-type">
-                  <span className="remote">Part Time</span>
-                </div>
                 <div className="apply-btn">
                   <Link legacyBehavior href="/job-details">
                     <a>
@@ -397,9 +382,6 @@ function Home2LatesJob() {
                 </ul>
               </div>
               <div className="job-type-apply">
-                <div className="job-type">
-                  <span className="full-time">Full Time</span>
-                </div>
                 <div className="apply-btn">
                   <Link legacyBehavior href="/job-details">
                     <a>

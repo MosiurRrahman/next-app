@@ -1,6 +1,30 @@
-import React from "react";
+
+import React, { useMemo } from "react";
 import CountUp from "react-countup";
+import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+SwiperCore.use([Navigation, Pagination, Autoplay, Navigation]);
 function Home3Feedback() {
+  const slider = useMemo(()=>{
+return {
+  spaceBetween: 20,
+	loop: true,
+	slidesPerView: "auto",
+	speed: 2000,
+  effect: 'fade',
+		autoplay: {
+			delay: 1500,
+		},
+    navigation: {
+      nextEl: ".next-6",
+      prevEl: ".prev-6",
+    },
+    pagination: {
+      el: ".swiper-pagination-g",
+      type: "fraction",
+    },
+}
+  },[])
   return (
     <div className="home3-user-feedback mb-120">
       <div className="container">
@@ -118,9 +142,9 @@ function Home3Feedback() {
             </div>
           </div>
           <div className="col-lg-6">
-            <div className="swiper user-feedback-slider3">
+            <Swiper {...slider} className="swiper user-feedback-slider3">
               <div className="swiper-wrapper">
-                <div className="swiper-slide">
+                <SwiperSlide className="swiper-slide">
                   <div className="user-feedback-wrap">
                     <div className="user-feedback-top">
                       <div className="author-area">
@@ -161,8 +185,8 @@ function Home3Feedback() {
                       charms of pleasure of the moment, so blinded by desire".
                     </p>
                   </div>
-                </div>
-                <div className="swiper-slide">
+                </SwiperSlide>
+                <SwiperSlide className="swiper-slide">
                   <div className="user-feedback-wrap">
                     <div className="user-feedback-top">
                       <div className="author-area">
@@ -203,8 +227,8 @@ function Home3Feedback() {
                       charms of pleasure of the moment, so blinded by desire".
                     </p>
                   </div>
-                </div>
-                <div className="swiper-slide">
+                </SwiperSlide>
+                <SwiperSlide className="swiper-slide">
                   <div className="user-feedback-wrap">
                     <div className="user-feedback-top">
                       <div className="author-area">
@@ -245,7 +269,7 @@ function Home3Feedback() {
                       charms of pleasure of the moment, so blinded by desire".
                     </p>
                   </div>
-                </div>
+                </SwiperSlide>
               </div>
               <div className="swiper-pagination-g" />
               <div className="swiper-btn-2">
@@ -256,7 +280,7 @@ function Home3Feedback() {
                   <i className="bi bi-chevron-right" />
                 </div>
               </div>
-            </div>
+            </Swiper>
           </div>
         </div>
       </div>

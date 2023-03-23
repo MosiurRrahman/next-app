@@ -8,7 +8,7 @@ function WorkProcess1() {
           <div className="col-12 d-flex justify-content-center">
             <div className="section-title1 text-center">
               <h2>
-                Gportia Working <span>Process</span>
+               JOBES  Working <span>Process</span>
               </h2>
               <p>
                 To choose your trending job dream &amp; to make future bright.

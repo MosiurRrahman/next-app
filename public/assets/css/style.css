@@ -23421,4 +23421,11 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 
 .tox-statusbar {
   display: none !important;
+}
+
+@media (max-width: 576px) {
+  .css-4s88x2-placeholder {
+    text-align: left;
+    margin-left: -8px;
+  }
 }/*# sourceMappingURL=style.css.map */

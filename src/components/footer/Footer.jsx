@@ -199,14 +199,14 @@ function Footer() {
             <div className="col-lg-6 d-flex  justify-content-lg-start justify-content-center">
               <div className="copyright-area">
                 <p>
-                  @Copyright 2023 <a href="#">GPORTIA</a> | Design By
-                  <a href="https://www.egenslab.com/">Egenslab</a>
+                  @Copyright 2023 <a href="#">JOBES</a> | Design By
+                  <a href="https://www.egenslab.com/">&nbsp;Egenslab</a>
                 </p>
               </div>
             </div>
             <div className="col-lg-6 d-flex justify-content-lg-end justify-content-center">
               <div className="social-area">
-                <h6>Follow Gportia:</h6>
+                <h6>Follow JOBES:</h6>
                 <ul>
                   <li>
                     <a href="https://www.facebook.com/">

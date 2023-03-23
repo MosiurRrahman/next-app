@@ -16387,6 +16387,7 @@ header.style-7 {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  
   .hero-wapper {
     overflow: hidden;
     position: relative;
@@ -23428,4 +23429,10 @@ header.style-7 {
 }
 .tox-statusbar{
   display: none !important;
+}
+.css-4s88x2-placeholder{
+  @include sm-down-device() {
+    text-align: left;
+    margin-left: -8px;
+  }
 }

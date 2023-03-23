@@ -64,7 +64,7 @@ function Home6Article() {
                   </div>
                 </div>
                 <h4>
-                  <Link legacyBehavior href="/blog-details.htm">
+                  <Link legacyBehavior href="/blog-details">
                     <a>
                       To Be Continue Redesign &amp; Build Up Your Career
                       Opportunity.

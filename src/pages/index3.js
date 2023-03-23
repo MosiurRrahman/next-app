@@ -1,5 +1,6 @@
 import Head from "next/head";
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useEffect } from "react";
 import Home3About from "../components/about/Home3About";
 import Home3Article from "../components/article/Home3Article";
 import Banner3 from "../components/banner/Banner3";
@@ -13,6 +14,10 @@ import Home2TrustedCompany from "../components/trusted-company/Home2TrustedCompa
 import Home3WorkProcess from "../components/work-process/Home3WorkProcess";
 
 function Index3() {
+  const currentPage = useRouter().pathname;
+  useEffect(() => {
+    document.body.className = currentPage === "/index4" ? "bg-wight" : "";
+  });
   return (
     <>
         <Head>
