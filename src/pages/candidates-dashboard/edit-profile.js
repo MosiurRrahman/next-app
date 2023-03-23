@@ -3,6 +3,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import CreatableSelect from 'react-select/creatable';
 import EducatonRepeterForm from "../../components/candidates/EducatonRepeterForm";
+import PersonalInfoRepeterForm from "../../components/candidates/PersonalInfoRepeterForm";
 import CandidateLayout from "../../layout/CandidateLayout";
 
 const components = {
@@ -722,126 +723,7 @@ function EditProfile() {
                 role="tabpanel"
                 aria-labelledby="professional-tab"
               >
-                <form className="edit-profile-form profile-form">
-                  <div className="section-title2">
-                    <h5>Employment Information:</h5>
-                  </div>
-                  <div className="experiences-row">
-                    <div className="row">
-                      <div className="col-lg-12">
-                        <div className="info-title">
-                          <h6>Add Your Experiences</h6>
-                          <div className="dash" />
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="form-inner mb-25">
-                          <label htmlFor="companies">Company Name*</label>
-                          <div className="input-area">
-                            <img
-                              src="/assets/images/icon/company-2.svg "
-                              alt=""
-                            />
-                            <input
-                              type="text"
-                              id="companies"
-                              name="companies"
-                              placeholder="Egenslab"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="form-inner mb-25">
-                          <label htmlFor="desigation">Designation*</label>
-                          <div className="input-area">
-                            <img
-                              src="/assets/images/icon/designation-2.svg"
-                              alt=""
-                            />
-                            <select className="select1">
-                              <option value={0}>Back-end developer</option>
-                              <option value={1}>Front-end developer</option>
-                              <option value={2}>Full-stack developer</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="form-inner mb-20">
-                          <label htmlFor="datepicker6">Starting Period*</label>
-                          <div className="input-area">
-                            <img
-                              src="/assets/images/icon/calender2.svg"
-                              alt=""
-                            />
-                           <DatePicker
-                            selected={startDate}
-                            onChange={(date) => setStartDate(date)}
-                            placeholderText="Check In"
-                            className="calendar"
-                          />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="form-inner mb-20">
-                          <label htmlFor="datepicker7">Ending Period*</label>
-                          <div className="input-area">
-                            <img
-                              src="/assets/images/icon/calender2.svg"
-                              alt=""
-                            />
-                            <DatePicker
-                            selected={startDate}
-                            onChange={(date) => setStartDate(date)}
-                            placeholderText="Check In"
-                            className="calendar"
-                          />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-12">
-                        <div className="form-agreement employment-check form-inner d-flex justify-content-between flex-wrap p-0">
-                          <div className="form-group two">
-                            <input type="checkbox" id="html5" />
-                            <label htmlFor="html5">
-                              Continuing Working Here
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-12">
-                        <div className="form-inner mb-20">
-                          <label htmlFor="description1">Responsibility**</label>
-                          <textarea
-                            name="description"
-                            id="description1"
-                            placeholder="Write Your Responsibility..."
-                            defaultValue={""}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="add-remove-btn d-flex align-items-center justify-content-between mb-50">
-                    <div className="add-row">
-                      <button type="button" className="add-experiences-row">
-                        Add New+{" "}
-                      </button>
-                    </div>
-                  </div>
-                  <div className="col-md-12">
-                    <div className="form-inner">
-                      <button
-                        className="primry-btn-2 lg-btn w-unset"
-                        type="submit"
-                      >
-                        Update Change
-                      </button>
-                    </div>
-                  </div>
-                </form>
+               <PersonalInfoRepeterForm/>
               </div>
             </div>
           </div>

@@ -139,7 +139,7 @@ function EducatonRepeterForm() {
                 <button className='remove-education-row remove' onClick={() => handleRemove(index, event)}>Remove Education Area</button>
             </div>
             )}
-        <div className="add-remove-btn d-flex align-items-center justify-content-between mb-50">
+        <div className="add-remove-btn d-flex align-items-center justify-content-between">
           <div className="add-row">
             <button onClick={handleAdd} type="button" className="add-education-row">
               Add Education+
