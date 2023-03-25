@@ -85,7 +85,7 @@ function Footer3() {
                     </Link>
                   </li>
                   <li>
-                    <Link legacyBehavior href="/dashboard">
+                    <Link legacyBehavior href="/candidates-dashboard/dashboard">
                       <a>
                         Candidate Dashboard <i className="bx bx-up-arrow-alt" />
                       </a>
@@ -132,7 +132,7 @@ function Footer3() {
                     </Link>
                   </li>
                   <li>
-                    <Link legacyBehavior href="/company-dashboard">
+                    <Link legacyBehavior href="/company/company-dashboard">
                       <a>
                         Employer Dashboard <i className="bx bx-up-arrow-alt" />
                       </a>

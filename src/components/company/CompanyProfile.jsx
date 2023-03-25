@@ -1,23 +1,58 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
-// Import React FilePond
-import { FilePond, registerPlugin } from 'react-filepond';
-
-// Import FilePond styles
-import 'filepond/dist/filepond.min.css';
-
-// Import the Image EXIF Orientation and Image Preview plugins
-// Note: These need to be installed separately
-// `npm i filepond-plugin-image-preview filepond-plugin-image-exif-orientation --save`
-import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
-import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
-import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
-
-// Register the plugins
-registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview)
 function CompanyProfiles() {
-  const [files1, setFiles1] = useState([])
-  const [files, setFiles] = useState([])
+  const [logoImage, setLogoImage] = useState("");
+  const [coverImage, setCoverImage] = useState("");
+
+  const logoFileInputRef = useRef(null);
+  const coverFileInputRef = useRef(null);
+
+  const handleLogoFileSelect = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+      setLogoImage(reader.result);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleCoverFileSelect = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+      setCoverImage(reader.result);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleLogoDrop = (e) => {
+    e.preventDefault();
+    const file = e.dataTransfer.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+      setLogoImage(reader.result);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleCoverDrop = (e) => {
+    e.preventDefault();
+    const file = e.dataTransfer.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+      setCoverImage(reader.result);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleLogoDragOver = (e) => {
+    e.preventDefault();
+  };
+
+  const handleCoverDragOver = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="col-lg-12">
       <div className="my-profile-inner ">
@@ -204,30 +239,68 @@ function CompanyProfiles() {
                     <div className="col-lg-6 devaider1 position-relative">
                       <div className="company-logo-area">
                         <h5>Company Logo: </h5>
-                        <FilePond
-                              files={files}
-                              onupdatefiles={setFiles}
-                              allowMultiple={true}
-                              maxFiles={3}
-                              server="/api"
-                              name="files" 
-                              labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
-                            />
+                        <div
+                          title="Drag and drop an image here"
+                          className="image-uploader drag-area"
+                        >
+                          <div
+                            className="dropzone"
+                            onDrop={handleLogoDrop}
+                            onDragOver={handleLogoDragOver}
+                            onClick={() => logoFileInputRef.current.click()}
+                          >
+                            {logoImage ? (
+                              <img
+                                src={logoImage}
+                                alt="preview"
+                                className="preview"
+                              />
+                            ) : (
+                              <p>Upload Logo Image</p>
+                            )}
+                          </div>
+                          <input
+                            type="file"
+                            accept="image/*"
+                            onChange={handleLogoFileSelect}
+                            ref={logoFileInputRef}
+                            style={{ display: "none" }}
+                          />
+                        </div>
                         <span>Maximum File Upload: 2 MB</span>
                       </div>
                     </div>
                     <div className="col-lg-6">
                       <div className="company-cover-photo-area">
                         <h5>Company Cover Photo: </h5>
-                        <FilePond
-                              files={files1}
-                              onupdatefiles={setFiles1}
-                              allowMultiple={true}
-                              maxFiles={3}
-                              server="/api"
-                              name="files" 
-                              labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
-                            />
+                        <div
+                          title="Drag and drop an image here"
+                          className="image-uploader drag-area"
+                        >
+                          <div
+                            className="dropzone "
+                            onDrop={handleCoverDrop}
+                            onDragOver={handleCoverDragOver}
+                            onClick={() => coverFileInputRef.current.click()}
+                          >
+                            {coverImage ? (
+                              <img
+                                src={coverImage}
+                                alt="preview"
+                                className="preview"
+                              />
+                            ) : (
+                              <p>Upload Cover Image</p>
+                            )}
+                          </div>
+                          <input
+                            type="file"
+                            accept="image/*"
+                            onChange={handleCoverFileSelect}
+                            ref={coverFileInputRef}
+                            style={{ display: "none" }}
+                          />
+                        </div>
                         {/* <div className="drag-area" id="dragArea2">
                           <p>Upload Logo</p>
                           <button type="button" className="upload-btn">

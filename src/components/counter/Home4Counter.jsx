@@ -12,7 +12,7 @@ function Home4Counter() {
               </div>
               <div className="coundown">
                 <div className="d-flex align-items-center gap-2">
-                  <h3 className="odometer">
+                  <h3 style={{ minHeight: "100px" }} className="odometer">
                     {" "}
                     <CountUp
                       start={0}
@@ -34,7 +34,7 @@ function Home4Counter() {
               </div>
               <div className="coundown">
                 <div className="d-flex align-items-center gap-2">
-                  <h3 className="odometer">
+                  <h3 style={{ minHeight: "100px" }} className="odometer">
                     {" "}
                     <CountUp
                       start={0}
@@ -56,7 +56,7 @@ function Home4Counter() {
               </div>
               <div className="coundown">
                 <div className="d-flex align-items-center gap-2">
-                  <h3 className="odometer">
+                  <h3 style={{ minHeight: "100px" }} className="odometer">
                     {" "}
                     <CountUp
                       start={0}
@@ -78,7 +78,7 @@ function Home4Counter() {
               </div>
               <div className="coundown">
                 <div className="d-flex align-items-center gap-2">
-                  <h3 className="odometer">
+                  <h3 style={{ minHeight: "100px" }} className="odometer">
                     {" "}
                     <CountUp
                       start={0}

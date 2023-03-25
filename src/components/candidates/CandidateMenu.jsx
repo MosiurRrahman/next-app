@@ -4,7 +4,7 @@ import React from "react";
 
 function CandidateMenu() {
   const currentPage = useRouter().pathname;
-  console.log();
+
   return (
     <div className="single-widget mb-60">
       <div className="dashboard-menu">

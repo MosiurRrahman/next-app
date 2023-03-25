@@ -49,13 +49,13 @@
   },
   {
     "id": 9,
-    "img": "Non-Profit Orag.",
+    "img": "assets/images/icon/non-profit-org.svg",
     "title": "Non-Profit Orag.",
     "job_available": 12
   },
   {
     "id": 10,
-    "img": "Non-Profit Orag.",
+    "img": "assets/images/icon/architect.svg",
     "title": "Architect Jobs",
     "job_available": 12
   }

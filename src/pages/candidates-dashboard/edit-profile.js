@@ -1,28 +1,25 @@
-
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import CreatableSelect from 'react-select/creatable';
+import CreatableSelect from "react-select/creatable";
 import EducatonRepeterForm from "../../components/candidates/EducatonRepeterForm";
 import PersonalInfoRepeterForm from "../../components/candidates/PersonalInfoRepeterForm";
 import CandidateLayout from "../../layout/CandidateLayout";
 
-
 const components = {
   DropdownIndicator: null,
   IndicatorsContainer: () => null,
-  
 };
 const createOption = (label) => ({
   label,
   value: label,
 });
 function EditProfile() {
-  const [files, setFiles] = useState([])
-  const [inputValue, setInputValue] = React.useState('');
+  const [files, setFiles] = useState([]);
+  const [inputValue, setInputValue] = React.useState("");
   const [value, setValue] = React.useState([]);
   const [startDate, setStartDate] = React.useState(new Date());
-  const [image, setImage] = useState('');
+  const [image, setImage] = useState("");
 
   const fileInputRef = useRef(null);
 
@@ -51,28 +48,27 @@ function EditProfile() {
   const handleDragOver = (e) => {
     e.preventDefault();
   };
-// image end
+  // image end
   const handleKeyDown = (event) => {
     if (!inputValue) return;
     switch (event.key) {
-      case 'Enter':
-      case 'Tab':
+      case "Enter":
+      case "Tab":
         setValue((prev) => [...prev, createOption(inputValue)]);
-        setInputValue('');
+        setInputValue("");
         event.preventDefault();
     }
   };
 
-
   const customStyles = {
     control: (provided, state) => ({
       ...provided,
-      border: '1px solid rgba(0, 167, 172, 0.12)',
-      
-      backgroundColor:"transparent",
-      boxShadow: 'none',
-      '&:hover': {
-        borderColor: 'none',
+      border: "1px solid rgba(0, 167, 172, 0.12)",
+
+      backgroundColor: "transparent",
+      boxShadow: "none",
+      "&:hover": {
+        borderColor: "none",
       },
     }),
     menu: (provided, state) => ({
@@ -81,28 +77,27 @@ function EditProfile() {
     }),
     multiValue: (provided, state) => ({
       ...provided,
-      color: 'white',
-      backgroundColor: '#00a7ac',
+      color: "white",
+      backgroundColor: "#00a7ac",
     }),
     multiValueLabel: (provided, state) => ({
       ...provided,
-      color: 'white',
+      color: "white",
     }),
     multiValueRemove: (provided, state) => ({
       ...provided,
-      color: 'white',
-      ':hover': {
-        backgroundColor: '#dc3545',
-        color: 'white',
+      color: "white",
+      ":hover": {
+        backgroundColor: "#dc3545",
+        color: "white",
       },
     }),
     ValueContainer: (provided, state) => ({
       ...provided,
-      display: 'flex',
-      backgroundColor: '#343a40',
-      flexWrap:"nowrap",
+      display: "flex",
+      backgroundColor: "#343a40",
+      flexWrap: "nowrap",
     }),
-    
   };
 
   return (
@@ -210,27 +205,34 @@ function EditProfile() {
                       </div>
                     </div>
                     <div className="col-xxl-2 col-lg-12">
-                    <div className="image-uploader">
                       <div
-                        className="dropzone"
-                        onDrop={handleDrop}
-                        onDragOver={handleDragOver}
-                        onClick={handleClick}
+                        title="Drag and drop an image here"
+                        className="image-uploader"
                       >
-                        {image ? (
-                          <img src={image} alt="preview" className="preview" />
-                        ) : (
-                          <p>Drag and drop an image here</p>
-                        )}
+                        <div
+                          className="dropzone drag-area"
+                          onDrop={handleDrop}
+                          onDragOver={handleDragOver}
+                          onClick={handleClick}
+                        >
+                          {image ? (
+                            <img
+                              src={image}
+                              alt="preview"
+                              className="preview"
+                            />
+                          ) : (
+                            <p>Upload Image</p>
+                          )}
+                        </div>
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={handleFileSelect}
+                          ref={fileInputRef}
+                          style={{ display: "none" }}
+                        />
                       </div>
-                      <input
-        type="file"
-        accept="image/*"
-        onChange={handleFileSelect}
-        ref={fileInputRef}
-        style={{ display: 'none' }}
-      />
-                    </div>
                     </div>
                     <div className="col-md-6">
                       <div className="form-inner mb-25">
@@ -712,18 +714,20 @@ function EditProfile() {
                           <div className="form-inner mb-25">
                             <label>Special Skills*</label>
                             <CreatableSelect
-                            components={components}
-                            inputValue={inputValue}
-                            isClearable
-                            isMulti
-                            menuIsOpen={false}
-                            styles={customStyles}
-                            onChange={(newValue) => setValue(newValue)}
-                            onInputChange={(newValue) => setInputValue(newValue)}
-                            onKeyDown={handleKeyDown}
-                            placeholder="Type Tag and press enter..."
-                            value={value}
-                          />
+                              components={components}
+                              inputValue={inputValue}
+                              isClearable
+                              isMulti
+                              menuIsOpen={false}
+                              styles={customStyles}
+                              onChange={(newValue) => setValue(newValue)}
+                              onInputChange={(newValue) =>
+                                setInputValue(newValue)
+                              }
+                              onKeyDown={handleKeyDown}
+                              placeholder="Type Tag and press enter..."
+                              value={value}
+                            />
                           </div>
                         </div>
                       </div>
@@ -747,20 +751,19 @@ function EditProfile() {
                 role="tabpanel"
                 aria-labelledby="contact-tab"
               >
-                
-                <EducatonRepeterForm/>
-              <div className="row">
-              <div className="col-md-12">
-                  <div className="form-inner pt-30">
-                    <button
-                      className="primry-btn-2 lg-btn w-unset"
-                      type="submit"
-                    >
-                      Update Change
-                    </button>
+                <EducatonRepeterForm />
+                <div className="row">
+                  <div className="col-md-12">
+                    <div className="form-inner pt-30">
+                      <button
+                        className="primry-btn-2 lg-btn w-unset"
+                        type="submit"
+                      >
+                        Update Change
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
               </div>
               <div
                 className="tab-pane fade"
@@ -768,7 +771,7 @@ function EditProfile() {
                 role="tabpanel"
                 aria-labelledby="professional-tab"
               >
-               <PersonalInfoRepeterForm/>
+                <PersonalInfoRepeterForm />
               </div>
             </div>
           </div>

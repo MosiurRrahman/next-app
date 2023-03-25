@@ -41,8 +41,6 @@ function Banner1() {
     }),
     container: (provided) => ({
       ...provided,
-      // paddingLeft: 55,
-      // marginTop: -12,
     }),
 
     dropdownIndicator: (provided) => ({
