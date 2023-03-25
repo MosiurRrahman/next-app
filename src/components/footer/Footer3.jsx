@@ -206,7 +206,7 @@ function Footer3() {
               <div className="copyright-area">
                 <p>
                   @Copyright 2023 <a href="#">JOBES</a> | Design By{" "}
-                  <a href="https://www.egenslab.com/">Egenslab</a>
+                  <a href="https://www.Egenstheme.com/">Egenstheme</a>
                 </p>
               </div>
             </div>

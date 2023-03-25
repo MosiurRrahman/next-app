@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import CandidateLayout from "../../layout/CandidateLayout";
 
@@ -34,7 +35,7 @@ function Bookmark() {
                       <div className="company-details">
                         <div className="top">
                           <h6>
-                            <a href="job-details.html">Senior UI/UX Designer</a>
+                            <Link legacyBehavior href="/job-details"><a>Senior UI/UX Designer</a></Link>
                           </h6>
                           <span>
                             <img
@@ -65,9 +66,11 @@ function Bookmark() {
                   </td>
                   <td data-label="Deadline">03/07/2022</td>
                   <td data-label="Company">
-                    <a className="company-btn" href="company-dashboard.html">
-                      Tech.Bath Com...{" "}
-                    </a>
+                    <Link legacyBehavior  href="/company-dashboard">
+                      <a className="company-btn">
+                      Tech.Bath Com...
+                      </a>
+                    </Link>
                   </td>
                   <td data-label="Action">
                     <button className="view-btn">Apply Now</button>
@@ -85,7 +88,7 @@ function Bookmark() {
                       <div className="company-details">
                         <div className="top">
                           <h6>
-                            <a href="job-details.html">React JS Developer</a>
+                            <Link legacyBehavior href="/job-details"><a>React JS Developer</a></Link>
                           </h6>
                           <span>
                             <img
@@ -116,9 +119,11 @@ function Bookmark() {
                   </td>
                   <td data-label="Deadline">07/07/2022</td>
                   <td data-label="Company">
-                    <a className="company-btn" href="company-details.html">
+                    <Link legacyBehavior href="/company-details">
+                      <a className="company-btn">
                       Gangster Group
-                    </a>
+                      </a>
+                    </Link>
                   </td>
                   <td data-label="Action">
                     <button className="view-btn">Apply Now</button>
@@ -136,7 +141,7 @@ function Bookmark() {
                       <div className="company-details">
                         <div className="top">
                           <h6>
-                            <a href="job-details.html">WordPress Developer</a>
+                            <Link legacyBehavior href="/job-details"><a>WordPress Developer</a></Link>
                           </h6>
                           <span>
                             <img
@@ -167,9 +172,10 @@ function Bookmark() {
                   </td>
                   <td data-label="Deadline">10/07/2022</td>
                   <td data-label="Company">
-                    <a className="company-btn" href="company-details.html">
-                      Zoomly.Co Ltd
-                    </a>
+                    <Link legacyBehavior  href="/company-details">
+                      
+                      <a className="company-btn">Zoomly.Co Ltd</a>
+                    </Link>
                   </td>
                   <td data-label="Action">
                     <button className="view-btn">Apply Now</button>
@@ -187,7 +193,7 @@ function Bookmark() {
                       <div className="company-details">
                         <div className="top">
                           <h6>
-                            <a href="job-details.html">Mern-Stack Developer</a>
+                            <Link legacyBehavior href="/job-details"><a>Mern-Stack Developer</a></Link>
                           </h6>
                           <span>
                             <img
@@ -218,9 +224,11 @@ function Bookmark() {
                   </td>
                   <td data-label="Deadline">13/07/2022</td>
                   <td data-label="Company">
-                    <a className="company-btn" href="company-details.html">
+                    <Link legacyBehavior  href="/company-details">
+                      <a className="company-btn">
                       Marko-land Ltd
-                    </a>
+                      </a>
+                    </Link>
                   </td>
                   <td data-label="Action">
                     <button className="view-btn">Apply Now</button>
@@ -238,7 +246,7 @@ function Bookmark() {
                       <div className="company-details">
                         <div className="top">
                           <h6>
-                            <a href="job-details.html">PHP Developer</a>
+                            <Link legacyBehavior href="/job-details"><a>PHP Developer</a></Link>
                           </h6>
                           <span>
                             <img
@@ -269,9 +277,11 @@ function Bookmark() {
                   </td>
                   <td data-label="Deadline">18/08/2022</td>
                   <td data-label="Company">
-                    <a className="company-btn" href="company-details.html">
+                    <Link legacyBehavior  href="/company-details">
+                      <a className="company-btn">
                       Bistro.Tech Group
-                    </a>
+                      </a>
+                    </Link>
                   </td>
                   <td data-label="Action">
                     <button className="view-btn">Apply Now</button>

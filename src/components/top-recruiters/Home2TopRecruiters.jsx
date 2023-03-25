@@ -181,7 +181,7 @@ function Home2TopRecruiters() {
                     </div>
                     <div className="name-location">
                       <h5>
-                        <Link legacyBehavior href="/company-listing1.htm">
+                        <Link legacyBehavior href="/company-listing1">
                           <a>Norland Company</a>
                         </Link>
                       </h5>

@@ -211,7 +211,7 @@ const currentRoute = useRouter().pathname
                         <li>
                           <Link legacyBehavior href="/index2">
                             <a className={
-                          currentRoute === "/bolg-grid" ? "active" : ""
+                          currentRoute === "/index2" ? "active" : ""
                         }>Home Two</a>
                           </Link>
                         </li>
@@ -354,7 +354,7 @@ const currentRoute = useRouter().pathname
                           </Link>
                         </li>
                         <li>
-                          <Link legacyBehavior href="/conpany/company-dashboard">
+                          <Link legacyBehavior href="/company/company-dashboard">
                             <a>Company Dashboard</a>
                           </Link>
                         </li>

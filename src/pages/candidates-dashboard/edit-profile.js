@@ -1,10 +1,12 @@
-import React from "react";
+
+import React, { useRef, useState } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import CreatableSelect from 'react-select/creatable';
 import EducatonRepeterForm from "../../components/candidates/EducatonRepeterForm";
 import PersonalInfoRepeterForm from "../../components/candidates/PersonalInfoRepeterForm";
 import CandidateLayout from "../../layout/CandidateLayout";
+
 
 const components = {
   DropdownIndicator: null,
@@ -16,11 +18,40 @@ const createOption = (label) => ({
   value: label,
 });
 function EditProfile() {
- 
+  const [files, setFiles] = useState([])
   const [inputValue, setInputValue] = React.useState('');
   const [value, setValue] = React.useState([]);
   const [startDate, setStartDate] = React.useState(new Date());
-  const [startDate1, setStartDate1] = React.useState(new Date());
+  const [image, setImage] = useState('');
+
+  const fileInputRef = useRef(null);
+
+  const handleFileSelect = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+      setImage(reader.result);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleClick = () => {
+    fileInputRef.current.click();
+  };
+  const handleDrop = (e) => {
+    e.preventDefault();
+    const file = e.dataTransfer.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+      setImage(reader.result);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleDragOver = (e) => {
+    e.preventDefault();
+  };
+// image end
   const handleKeyDown = (event) => {
     if (!inputValue) return;
     switch (event.key) {
@@ -178,14 +209,28 @@ function EditProfile() {
                         </div>
                       </div>
                     </div>
-                    <div className="col-xxl-2 col-lg-12 position-relative">
-                      <div className="drag-area">
-                        <p>Upload Images</p>
-                        <button type="button" className="upload-btn">
-                          <i className="bi bi-plus-lg" />
-                        </button>
-                        <input type="file" hidden />
+                    <div className="col-xxl-2 col-lg-12">
+                    <div className="image-uploader">
+                      <div
+                        className="dropzone"
+                        onDrop={handleDrop}
+                        onDragOver={handleDragOver}
+                        onClick={handleClick}
+                      >
+                        {image ? (
+                          <img src={image} alt="preview" className="preview" />
+                        ) : (
+                          <p>Drag and drop an image here</p>
+                        )}
                       </div>
+                      <input
+        type="file"
+        accept="image/*"
+        onChange={handleFileSelect}
+        ref={fileInputRef}
+        style={{ display: 'none' }}
+      />
+                    </div>
                     </div>
                     <div className="col-md-6">
                       <div className="form-inner mb-25">

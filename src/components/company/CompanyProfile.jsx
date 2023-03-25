@@ -1,6 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
+// Import React FilePond
+import { FilePond, registerPlugin } from 'react-filepond';
+
+// Import FilePond styles
+import 'filepond/dist/filepond.min.css';
+
+// Import the Image EXIF Orientation and Image Preview plugins
+// Note: These need to be installed separately
+// `npm i filepond-plugin-image-preview filepond-plugin-image-exif-orientation --save`
+import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
+import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
+import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
+
+// Register the plugins
+registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview)
 function CompanyProfiles() {
+  const [files1, setFiles1] = useState([])
+  const [files, setFiles] = useState([])
   return (
     <div className="col-lg-12">
       <div className="my-profile-inner ">
@@ -187,26 +204,38 @@ function CompanyProfiles() {
                     <div className="col-lg-6 devaider1 position-relative">
                       <div className="company-logo-area">
                         <h5>Company Logo: </h5>
-                        <div className="drag-area">
-                          <p>Upload Logo</p>
-                          <button type="button" className="upload-btn">
-                            <i className="bi bi-plus-lg" />
-                          </button>
-                          <input type="file" hidden />
-                        </div>
+                        <FilePond
+                              files={files}
+                              onupdatefiles={setFiles}
+                              allowMultiple={true}
+                              maxFiles={3}
+                              server="/api"
+                              name="files" 
+                              labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
+                            />
                         <span>Maximum File Upload: 2 MB</span>
                       </div>
                     </div>
                     <div className="col-lg-6">
                       <div className="company-cover-photo-area">
                         <h5>Company Cover Photo: </h5>
-                        <div className="drag-area" id="dragArea2">
+                        <FilePond
+                              files={files1}
+                              onupdatefiles={setFiles1}
+                              allowMultiple={true}
+                              maxFiles={3}
+                              server="/api"
+                              name="files" 
+                              labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
+                            />
+                        {/* <div className="drag-area" id="dragArea2">
                           <p>Upload Logo</p>
                           <button type="button" className="upload-btn">
                             <i className="bi bi-plus-lg" />
                           </button>
                           <input type="file" hidden />
-                        </div>
+                            
+                        </div> */}
                         <span>Maximum File Upload: 5 MB</span>
                       </div>
                     </div>

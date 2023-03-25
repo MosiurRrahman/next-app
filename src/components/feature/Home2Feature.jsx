@@ -32,7 +32,7 @@ function Home2Feature() {
                   <div className="company-details">
                     <div className="name-location">
                       <h5>
-                        <Link legacyBehavior href="/job-details.htm">
+                        <Link legacyBehavior href="/job-details">
                           <a>UI/UX Engineer</a>
                         </Link>
                       </h5>

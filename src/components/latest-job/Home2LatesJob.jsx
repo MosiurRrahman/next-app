@@ -103,7 +103,7 @@ function Home2LatesJob() {
                 <div className="company-details">
                   <div className="name-location">
                     <h5>
-                      <Link legacyBehavior href="/job-details.htm">
+                      <Link legacyBehavior href="/job-details">
                         <a>Assistant Laboratorist</a>
                       </Link>
                     </h5>

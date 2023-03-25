@@ -110,7 +110,7 @@ function Article1() {
                   </div>
                   <ul>
                     <li>
-                      <Link legacyBehavior href="/blog-grid.htm">
+                      <Link legacyBehavior href="/blog-grid">
                         <a>
                           <img src="assets/images/icon/comment.svg" alt="" />
                           11 Comments

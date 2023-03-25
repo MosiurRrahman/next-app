@@ -200,7 +200,7 @@ function Footer() {
               <div className="copyright-area">
                 <p>
                   @Copyright 2023 <a href="#">JOBES</a> | Design By
-                  <a href="https://www.egenslab.com/">&nbsp;Egenslab</a>
+                  <a href="https://www.Egenstheme.com/">&nbsp;Egenstheme</a>
                 </p>
               </div>
             </div>

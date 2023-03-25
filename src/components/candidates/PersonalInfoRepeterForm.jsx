@@ -41,8 +41,8 @@ function PersonalInfoRepeterForm() {
         <div className="form-inner mb-25">
           <label htmlFor="companies">Company Name*</label>
           <div className="input-area">
-            <img src="assets/images/icon/company-2.svg " alt="" />
-            <input type="text" id="companies" name="companies" placeholder="Egenslab" />
+            <img src="/assets/images/icon/company-2.svg " alt="" />
+            <input type="text" id="companies" name="companies" placeholder="Egenstheme" />
           </div>
         </div>
       </div>
@@ -50,7 +50,7 @@ function PersonalInfoRepeterForm() {
         <div className="form-inner mb-25">
           <label htmlFor="desigation">Designation*</label>
           <div className="input-area">
-            <img src="assets/images/icon/designation-2.svg" alt="" />
+            <img src="/assets/images/icon/designation-2.svg" alt="" />
             <select className="select1">
               <option value={0}>Back-end developer</option>
               <option value={1}>Front-end developer</option>
@@ -63,7 +63,7 @@ function PersonalInfoRepeterForm() {
         <div className="form-inner mb-20">
           <label htmlFor="datepicker6">Starting Period*</label>
           <div className="input-area">
-            <img src="assets/images/icon/calender2.svg" alt="" />
+            <img src="/assets/images/icon/calender2.svg" alt="" />
             <DatePicker
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
@@ -77,7 +77,7 @@ function PersonalInfoRepeterForm() {
         <div className="form-inner mb-20">
           <label htmlFor="datepicker7">Ending Period*</label>
           <div className="input-area">
-            <img src="assets/images/icon/calender2.svg" alt="" />
+            <img src="/assets/images/icon/calender2.svg" alt="" />
             <DatePicker
                   selected={startDate1}
                   onChange={(date) => setStartDate1(date)}
@@ -90,8 +90,8 @@ function PersonalInfoRepeterForm() {
       <div className="col-md-12">
         <div className="form-agreement employment-check form-inner d-flex justify-content-between flex-wrap p-0">
           <div className="form-group two">
-            <input type="checkbox" id="html5" />
-            <label htmlFor="html5">Continuing Working Here</label>
+            <input type="checkbox" id={field.value} />
+            <label htmlFor={field.value}>Continuing Working Here</label>
           </div>
         </div>
       </div>
@@ -120,9 +120,7 @@ function PersonalInfoRepeterForm() {
       </form>
   
     ))}
-    
-   
-  </div>
+   </div>
   )
 }
 

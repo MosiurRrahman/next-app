@@ -1040,7 +1040,7 @@
     newRow += '<div class="input-area">';
     newRow += '<img src="assets/images/icon/company-2.svg " alt="">';
     newRow +=
-      '<input type="text" id="companies" name="companies" placeholder="Egenslab">';
+      '<input type="text" id="companies" name="companies" placeholder="Egenstheme">';
     newRow += "</div>";
     newRow += "</div>";
     newRow += "</div>";

@@ -152,7 +152,7 @@ function Counter2() {
                     <CountUp
                       start={0}
                       end={20223}
-                      // enableScrollSpy={true}
+                      enableScrollSpy={true}
                       duration={3}
                     />
                   </h3>
@@ -480,7 +480,7 @@ function Counter2() {
                       start={0}
                       target={null}
                       end={500}
-                      // enableScrollSpy={true}
+                      enableScrollSpy={true}
                       duration={3}
                     />
                   </h3>
@@ -668,7 +668,7 @@ function Counter2() {
                       start={0}
                       end={105}
                       target={null}
-                      // enableScrollSpy={true}
+                      enableScrollSpy={true}
                       duration={3}
                     />
                   </h3>
