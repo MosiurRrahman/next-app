@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import Header1 from "../components/Header/Header1";
 import Footer from "../components/footer/Footer";
+import Header1 from "../components/header/Header1";
 import Topbar1 from "../components/topbar/Topbar1";
 
 function CustomError() {
