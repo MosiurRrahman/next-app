@@ -10,17 +10,17 @@ import WorkProcess6 from "../components/workprocess/WorkProcess6";
 
 import Video6 from "../components/video/Video6";
 
-import Header6 from "../components/Header/Header6";
+import Banner6 from "../components/banner/Banner6";
 import Customar6 from "../components/customar/Customar6";
+import Header6 from "../components/header/Header6";
 import Service6 from "../components/service/Service6";
 import ServiceMarque from "../components/service/serviceMarque";
-import Banner6 from "../components/banner/Banner6";
 
 function IndexStartup() {
   return (
     <>
       <Header6 />
-      <Banner6/>
+      <Banner6 />
       <Customar6 />
       <Service6 />
       <Video6 />

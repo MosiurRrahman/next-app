@@ -1,6 +1,6 @@
 import React from "react";
-import Header5 from "../components/Header/Header5";
 import Banner1 from "../components/banner/Banner1";
+import Header5 from "../components/header/Header5";
 
 function IndexBusinessConsult() {
   return (

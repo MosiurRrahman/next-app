@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header1 from "../components/Header/Header1";
 import About5 from "../components/about/About5";
 import Banner5 from "../components/banner/Banner5";
 import Index5Blog from "../components/blog/Index5Blog";
@@ -8,6 +7,7 @@ import Customar from "../components/clientSection/Customar";
 import Sidebar from "../components/common/Sidebar";
 import Contact5 from "../components/contact/Contact5";
 import Footer from "../components/footer/Footer";
+import Header1 from "../components/header/Header1";
 import Service5 from "../components/service/Service5";
 import Team5 from "../components/team/Team5";
 import Testimonial5 from "../components/testimonial/Testimonial5";
