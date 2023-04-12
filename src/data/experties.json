@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "img_1": "assets/images/team/team5-1.jpg",
+    "img_2": "assets/images/team/team2-1.png",
+    "img_3": "assets/images/team/team4-1.jpg",
+    "img_4": "assets/images/team/team6-1.jpg",
+    "name": "Mank Jackson",
+    "name_4": "Juliea Furarry",
+    "designation": "Senior Consulatnt",
+    "designation_3": "Head of SEO",
+    "designation_4": "Content Expert"
+  },
+  {
+    "id": 2,
+    "img_1": "assets/images/team/team5-2.jpg",
+    "img_2": "assets/images/team/team2-2.png",
+    "img_3": "assets/images/team/team4-2.jpg",
+    "img_4": "assets/images/team/team6-2.jpg",
+    "name": "Robert Hannry",
+    "name_4": "Frangoline Josefh",
+    "designation": "Principle Consultant",
+    "designation_3": "SEO Director",
+    "designation_4": "Marekting Expert"
+  },
+  {
+    "id": 3,
+    "img_1": "assets/images/team/team5-3.jpg",
+    "img_2": "assets/images/team/team2-3.png",
+    "img_3": "assets/images/team/team4-3.jpg",
+    "img_4": "assets/images/team/team6-3.jpg",
+    "name": "Jacoline Fary",
+    "name_4": "Jacoline Marry",
+    "designation": "Senior Consultant",
+    "designation_3": "SEO Expert",
+    "designation_4": "SEO Expert"
+  },
+  {
+    "id": 4,
+    "img_1": "assets/images/team/team5-4.jpg",
+    "img_2": "assets/images/team/team2-4.png",
+    "img_3": "assets/images/team/team4-4.jpg",
+    "img_4": "assets/images/team/team6-4.jpg",
+    "name": "Milar Stone",
+    "name_4": "Robert Jhonson",
+    "designation": "Principle Consultant",
+    "designation_3": "SEO Analyst",
+    "designation_4": "Video Editing"
+  },
+  {
+    "id": 5,
+    "img_1": "assets/images/team/team5-5.jpg",
+    "name": "Robert Mile",
+    "name_4": "Robert Mile",
+    "designation": "Senior Consulatnt"
+  },
+  {
+    "id": 6,
+    "img_1": "assets/images/team/team5-6.jpg",
+    "name": "Jessica Willi",
+    "name_4": "Jessica Willi",
+    "designation": "Principle Consultant"
+  },
+  {
+    "id": 7,
+    "img_1": "assets/images/team/team5-7.jpg",
+    "name": "Adam Warron",
+    "name_4": "Adam Warron",
+    "designation": "Senior Consultant"
+  },
+  {
+    "id": 8,
+    "img_1": "assets/images/team/team5-8.jpg",
+    "name": "Adam Warron",
+    "name_4": "Adam Warron",
+    "designation": "Senior Consultant"
+  }
+]

@@ -1,148 +1,244 @@
 import Link from "next/link";
-import React, { useState } from "react";
-import Select from "react-select";
-function Banner6() {
-  const [selectedOption, setSelectedOption] = useState(null);
-  const options = [
-    { value: "1", label: "UI/UX" },
-    { value: "2", label: "Marketing Coordinator" },
-    { value: "3", label: "Medical Assistant" },
-    { value: "4", label: "Project Manager" },
-    { value: "5", label: "Librarian" },
-    { value: "6", label: "Account Executive" },
-  ];
-  const customStyles = {
-    menu: (provided, state) => ({
-      ...provided,
-      width: state.selectProps.width,
-      borderBottom: "1px dotted pink",
-      color: state.selectProps.menuColor,
-      padding: 5,
-      zIndex: 2,
-    }),
-    control: (provided) => ({
-      ...provided,
-      height: 16,
-      width: "100%",
-      paddingRight: 5,
-      border: "0px solid red",
-      fontSize: 15,
-      fontWeight: "500",
-      backgroundColor: "none",
-      outline: "none",
-      boxShadow: "none",
-    }),
-    placeholder: (provided) => ({
-      ...provided,
-      color: "#061421",
-      fontWeight: "400",
-    }),
-    container: (provided) => ({
-      ...provided,
-      paddingLeft: -3,
-      textAlign: "left",
-      marginTop: -20,
-    }),
+import React, { useMemo } from "react";
+import SwiperCore, { Autoplay, EffectFade, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+SwiperCore.use([Navigation, Autoplay, EffectFade]);
 
-    dropdownIndicator: (provided) => ({
-      ...provided,
-      color: "#00a7ac",
-    }),
-  };
+function Banner6() {
+  const slider = useMemo(() => {
+    return {
+      slidesPerView: "auto",
+      speed: 1500,
+      spaceBetween: 0,
+      loop: true,
+      navigation: {
+        nextEl: ".banner-three-next",
+        prevEl: ".banner-three-prev",
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: true,
+      },
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+    };
+  }, []);
   return (
-    <div className="hero6">
-      <div className="hero-wapper">
-        <div className="scroll-btn">
-          <a href="#home6-category-area">
-            <img src="assets/images/icon/home6-scroll-icon.svg" alt="" />
-          </a>
+    <div
+      className="banner-six-section"
+      style={{
+        backgroundImage:
+          'url("assets/images/banner/banner-six/banner-six-bg.png")',
+      }}
+    >
+      <div className="slider-arrows banner-six-arrow d-lg-flex d-none justify-content-between gap-2">
+        <div
+          className="banner-three-prev swiper-prev-arrow"
+          tabIndex={0}
+          role="button"
+          aria-label="Previous slide"
+        >
+          <img src="assets/images/icons/arrow-prev-one.svg" alt="" />
         </div>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="hero-content">
-                <h1>
-                  1020+ &nbsp;<span>Category</span> Job’s Here
-                </h1>
-                <p>
-                  Jobs are available on your skills, perfect jobs to make bright
-                  future &amp; get your choose jobs become a strong.{" "}
-                </p>
-                <div className="job-search-area">
-                  <form>
-                    <div className="form-inner job-title">
-                      <input
-                        type="text"
-                        placeholder="What jobs are you looking for?"
+        <div
+          className="banner-three-next swiper-next-arrow"
+          tabIndex={0}
+          role="button"
+          aria-label="Next slide"
+        >
+          <img src="assets/images/icons/arrow-next-one.svg" alt="" />
+        </div>
+      </div>
+      <a href="#service" className="scroll-down-arrow">
+        <span className="dot" />
+        <img
+          src="assets/images/icons/scroll-down-arr.svg"
+          className="arrow-down"
+          alt=""
+        />
+      </a>
+      <div className="container-fluid">
+        <Swiper className="swiper banner-six-slider" {...slider}>
+          <div className="swiper-wrapper">
+            <SwiperSlide className="swiper-slide">
+              <div className="container-one">
+                <div className="row align-items-center justify-content-center">
+                  <div className="col-xl-7 col-lg-7">
+                    <div className="banner-six-content">
+                      <div className="banner-text-vector">
+                        <img src="assets/images/icons/vector-sun.svg" alt="" />
+                      </div>
+                      <h2>To Learn Trending Technology.</h2>
+                      <p>
+                        Many desktop publishing packages and web page editors
+                        now use Lorem Ipsum as their.
+                      </p>
+                      <div className="banner-six-button-grp">
+                        <a
+                          href="#service"
+                          className="eg-btn btn--lg btn--primary-outline style-four"
+                        >
+                          Get Started
+                        </a>
+                        <div className="review">
+                          <div className="number">
+                            <h3>500</h3>
+                          </div>
+                          <div className="icon">
+                            <ul className="star-list">
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-half" />
+                              </li>
+                            </ul>
+                            <span>Client Review</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-xl-5 col-lg-5 col-md-10 d-lg-flex d-none">
+                    <div className="banner-six-image">
+                      <img
+                        src="assets/images/banner/banner-six/banner6-1.png"
+                        alt="image"
                       />
                     </div>
-                    <div className="form-inner location">
-                      <Select
-                        theme={(theme) => ({
-                          ...theme,
-                          borderRadius: 0,
-                          padding: 0,
-                          colors: {
-                            ...theme.colors,
-                            primary25: "#f6f6f6",
-                            primary: "#00a7ac",
-                          },
-                        })}
-                        styles={customStyles}
-                        components={{
-                          IndicatorSeparator: () => null,
-                        }}
-                        width="250px"
-                        menuColor="#333"
-                        defaultValue={selectedOption}
-                        options={options}
-                        placeholder="Select Category"
-                      />
-                    </div>
-                    <div className="form-inner">
-                      <button type="submit" className="primry-btn-5 ">
-                        Search
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                <div className="suggest-tag">
-                  <h6>
-                    <i className="bi bi-bookmark-fill" />
-                    Suggested Tag:
-                  </h6>
-                  <ul>
-                    <li>
-                      <Link legacyBehavior href="/job-listing1">
-                        <a>Engineering,</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link legacyBehavior href="/job-listing1">
-                        <a>Marketing,</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link legacyBehavior href="/job-listing1">
-                        <a>UI/UX Design,</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link legacyBehavior href="/job-listing1">
-                        <a>Data Analyst,</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link legacyBehavior href="/job-listing1">
-                        <a>Programming</a>
-                      </Link>
-                    </li>
-                  </ul>
+                  </div>
                 </div>
               </div>
-            </div>
+            </SwiperSlide>
+            <SwiperSlide className="swiper-slide">
+              <div className="container-one">
+                <div className="row align-items-center justify-content-center">
+                  <div className="col-xl-7 col-lg-7">
+                    <div className="banner-six-content">
+                      <div className="banner-text-vector">
+                        <img src="assets/images/icons/vector-sun.svg" alt="" />
+                      </div>
+                      <h2>Develop a brand strategy.</h2>
+                      <p>
+                        Many desktop publishing packages and web page editors
+                        now use Lorem Ipsum as their.
+                      </p>
+                      <div className="banner-six-button-grp">
+                        <Link legacyBehavior href="/portfolio-full">
+                          <a className="eg-btn btn--lg btn--primary-outline style-four">
+                            Get Started
+                          </a>
+                        </Link>
+                        <div className="review">
+                          <div className="number">
+                            <h3>500</h3>
+                          </div>
+                          <div className="icon">
+                            <ul className="star-list">
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-half" />
+                              </li>
+                            </ul>
+                            <span>Client Review</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-xl-5 col-lg-5 col-md-10 d-lg-flex d-none">
+                    <div className="banner-six-image">
+                      <img
+                        src="assets/images/banner/banner-six/banner6-2.png"
+                        alt="image"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="swiper-slide">
+              <div className="container-one">
+                <div className="row align-items-center justify-content-center">
+                  <div className="col-xl-7 col-lg-7">
+                    <div className="banner-six-content">
+                      <div className="banner-text-vector">
+                        <img src="assets/images/icons/vector-sun.svg" alt="" />
+                      </div>
+                      <h2>To Learn Trending Technology.</h2>
+                      <p>
+                        Many desktop publishing packages and web page editors
+                        now use Lorem Ipsum as their.
+                      </p>
+                      <div className="banner-six-button-grp">
+                        <Link legacyBehavior href="/portfolio-full">
+                          <a className="eg-btn btn--lg btn--primary-outline style-four">
+                            Get Started
+                          </a>
+                        </Link>
+                        <div className="review">
+                          <div className="number">
+                            <h3>500</h3>
+                          </div>
+                          <div className="icon">
+                            <ul className="star-list">
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-fill" />
+                              </li>
+                              <li>
+                                <i className="bi bi-star-half" />
+                              </li>
+                            </ul>
+                            <span>Client Review</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-xl-5 col-lg-5 col-md-10 d-lg-flex d-none">
+                    <div className="banner-six-image">
+                      <img
+                        src="assets/images/banner/banner-six/banner6-3.png"
+                        alt="image"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
           </div>
-        </div>
+        </Swiper>
       </div>
     </div>
   );

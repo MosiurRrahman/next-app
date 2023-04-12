@@ -1,35 +1,41 @@
-import { useRouter } from "next/router";
-import { useEffect } from "react";
-import Article1 from "../components/article/Article1";
-import Banner1 from "../components/banner/Banner1";
-import Category1 from "../components/category/Category1";
-import Feature1 from "../components/feature/Feature1";
+import React, { useState } from "react";
+import Header1 from "../components/Header/Header1";
+import About5 from "../components/about/About5";
+import Banner5 from "../components/banner/Banner5";
+import Index5Blog from "../components/blog/Index5Blog";
+import CaseStudy5 from "../components/caseStudy/CaseStudy5";
+import Customar from "../components/clientSection/Customar";
+import Sidebar from "../components/common/Sidebar";
+import Contact5 from "../components/contact/Contact5";
 import Footer from "../components/footer/Footer";
-import Header1 from "../components/header/Header1";
-import JobLocation1 from "../components/job-loaction/JobLocation1";
-import Review1 from "../components/review/Review1";
-import TopRecruiters1 from "../components/top-recruiters/TopRecruiters";
-import TrustedCompany1 from "../components/trusted-company/TrustedCompany1";
-import WorkProcess1 from "../components/work-process/WorkProcess1";
+import Service5 from "../components/service/Service5";
+import Team5 from "../components/team/Team5";
+import Testimonial5 from "../components/testimonial/Testimonial5";
+import Topbar1 from "../components/topbar/Topbar1";
+import Video5 from "../components/video/Video5";
+import WorkProcess5 from "../components/workprocess/WorkProcess5";
 
-export default function Home() {
-  const currentPage = useRouter().pathname;
-  useEffect(() => {
-    document.body.className = currentPage === "/" ? "bg-wight" : "";
-  });
+function Home() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
+      <Topbar1 />
       <Header1 />
-      <Banner1 />
-      <Category1 />
-      <Feature1 />
-      <WorkProcess1 />
-      <JobLocation1 />
-      <Review1 />
-      <TrustedCompany1 />
-      <TopRecruiters1 />
-      <Article1 />
+      <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+      <Banner5 setSidebarOpen={setSidebarOpen} />
+      <About5 />
+      <Service5 />
+      <CaseStudy5 />
+      <Video5 />
+      <WorkProcess5 />
+      <Testimonial5 />
+      <Customar />
+      <Team5 />
+      <Contact5 />
+      <Index5Blog />
       <Footer />
     </>
   );
 }
+
+export default Home;

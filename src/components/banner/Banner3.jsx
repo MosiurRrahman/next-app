@@ -1,110 +1,228 @@
-import Link from "next/link";
-import React from "react";
+import React, { useMemo } from "react";
+import SwiperCore, {
+  Autoplay,
+  EffectFade,
+  Navigation,
+  Pagination,
+} from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+SwiperCore.use([Navigation, Autoplay, Pagination, EffectFade]);
 
 function Banner3() {
+  const slide = useMemo(() => {
+    return {
+      slidesPerView: 1,
+      speed: 1500,
+      spaceBetween: 0,
+      loop: true,
+      navigation: {
+        nextEl: ".banner-three-next",
+        prevEl: ".banner-three-prev",
+      },
+      pagination: {
+        el: ".banner-three-pagination",
+        type: "fraction",
+        formatFractionCurrent: function (number) {
+          if (number < 10) {
+            return "0" + number;
+          } else {
+            return number;
+          }
+        },
+        formatFractionTotal: function (number) {
+          if (number < 10) {
+            return "0" + number;
+          } else {
+            return number;
+          }
+        },
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: true,
+      },
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+    };
+  }, []);
   return (
-    <div className="hero3">
-      <div className="hero-wapper">
-        <div className="container-fluid">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <div className="hero-content">
-                <h1>
-                  To Choose <span>Right Jobs.</span>
-                </h1>
-                <p>
-                  <span>2400</span> Peoples are daily search in this portal,
-                  &nbsp;<span>100</span> user added job portal!
-                </p>
-                <div className="job-search-area">
-                  <form>
-                    <div className="form-inner job-title">
-                      <img src="assets/images/icon/job3.svg" alt="" />
-                      <input
-                        type="text"
-                        placeholder="What jobs are you looking for?"
-                      />
-                    </div>
-                    <div className="form-inner">
-                      <button type="submit" className="primry-btn-2">
-                        <img src="assets/images/icon/search-icon.svg" alt="" />
-                        Search
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                <div className="suggest-tag">
-                  <h6>
-                    <i className="bi bi-bookmark-fill" />
-                    Suggested Tag:
-                  </h6>
-                  <ul>
-                    <li>
-                      <Link legacyBehavior href="/job-listing1">
-                        <a>Engineering,</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link legacyBehavior href="/job-listing1">
-                        <a>Marketing,</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link legacyBehavior href="/job-listing1">
-                        <a>UI/UX Design,</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link legacyBehavior href="/job-listing1">
-                        <a>Data Analyst,</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link legacyBehavior href="/job-listing1">
-                        <a>Programming</a>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className="user-area">
-                  <ul>
-                    <li>
-                      <img src="assets/images/bg/user31.png" alt="" />
-                    </li>
-                    <li>
-                      <img src="assets/images/bg/user32.png" alt="" />
-                    </li>
-                    <li>
-                      <img src="assets/images/bg/user33.png" alt="" />
-                    </li>
-                    <li>
-                      <img src="assets/images/bg/user34.png" alt="" />
-                    </li>
-                    <li>
-                      <img src="assets/images/bg/user35.png" alt="" />
-                    </li>
-                    <li>
-                      <div className="total-user">
-                        <h6>21k</h6>
-                        <span>Users</span>
-                      </div>
-                    </li>
-                  </ul>
-                  <p>To Much People Have Connected With Us!</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="hero-img">
-                <img
-                  className="img-fluid"
-                  src="assets/images/bg/hero3-img-with-vec.png"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
+    <div className="banner-three-section postition-relative">
+      <div className="banner-three-shape1">
+        <img
+          src="assets/images/banner/banner-three/banner-three-shape1.svg"
+          alt="image"
+        />
+      </div>
+      <div className="banner-three-shape2">
+        <img
+          src="assets/images/banner/banner-three/banner-three-shape2.svg"
+          alt="image"
+        />
+      </div>
+      <div className="banner-three-shape3">
+        <img
+          src="assets/images/banner/banner-three/banner-three-shape3.svg"
+          alt="image"
+        />
+      </div>
+      <div className="banner-three-shape4">
+        <img
+          src="assets/images/banner/banner-three/banner-three-shape4.svg"
+          alt="image"
+        />
+      </div>
+      <div className="banner-three-shape5">
+        <img
+          src="assets/images/banner/banner-three/banner-three-shape5.svg"
+          alt="image"
+        />
+      </div>
+      <div className="banner-three-shape6">
+        <img
+          src="assets/images/banner/banner-three/banner-three-shape6.svg"
+          alt="image"
+        />
+      </div>
+      <div className="slider-arrows banner-three-arrow d-flex justify-content-between gap-4">
+        <div
+          className="banner-three-prev swiper-prev-arrow"
+          tabIndex={0}
+          role="button"
+          aria-label="Previous slide"
+        >
+          <img src="assets/images/icons/arr-left-3.svg" alt="" />
         </div>
+        <div className="banner-three-pagination" />
+        <div
+          className="banner-three-next swiper-next-arrow"
+          tabIndex={0}
+          role="button"
+          aria-label="Next slide"
+        >
+          <img src="assets/images/icons/arr-right-3.svg" alt="" />
+        </div>
+      </div>
+      <div className="container-fluid">
+        <Swiper {...slide} className="swiper banner-three-slider">
+          <div className="swiper-wrapper">
+            <SwiperSlide className="swiper-slide">
+              <div className="container">
+                <div className="row align-items-center justify-content-center">
+                  <div className="col-xl-7 col-lg-7">
+                    <div className="banner-three-content">
+                      <span>Technology Services</span>
+                      <h2>
+                        To Provide The Best <span>Technology. </span>
+                      </h2>
+                      <p>
+                        Many desktop publishing packages and web page editors
+                        now use Lorem Ipsum
+                      </p>
+                      <a
+                        href="portfolio-full.html"
+                        className="eg-btn btn--lg btn--primary-outline style-two"
+                      >
+                        Browse A Project
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col-xl-5 col-lg-5 col-md-10 d-lg-flex d-none">
+                    <div className="banner-three-image">
+                      <img
+                        src="assets/images/banner/banner-three/image1.png"
+                        alt="image"
+                      />
+                      <div className="banner-three-shape">
+                        <img
+                          src="assets/images/banner/banner-three/banenr3-img-shape.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="swiper-slide">
+              <div className="container">
+                <div className="row align-items-center justify-content-center">
+                  <div className="col-xl-7 col-lg-7">
+                    <div className="banner-three-content">
+                      <span>Technology Services</span>
+                      <h2>
+                        To Provide The Best <span>Solution. </span>
+                      </h2>
+                      <p>
+                        Many desktop publishing packages and web page editors
+                        now use Lorem Ipsum
+                      </p>
+                      <a
+                        href="portfolio-full.html"
+                        className="eg-btn btn--lg btn--primary-outline style-two"
+                      >
+                        Browse A Project
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col-xl-5 col-lg-5 col-md-10 d-lg-flex d-none">
+                    <div className="banner-three-image d-md-flex d-none">
+                      <img
+                        src="assets/images/banner/banner-three/image2.png"
+                        alt="image"
+                      />
+                      <div className="banner-three-shape">
+                        <img
+                          src="assets/images/banner/banner-three/banenr3-img-shape.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="swiper-slide">
+              <div className="container">
+                <div className="row align-items-center justify-content-center">
+                  <div className="col-xl-7 col-lg-7">
+                    <div className="banner-three-content">
+                      <span>Technology Services</span>
+                      <h2>
+                        To Provide The Best <span>Services. </span>
+                      </h2>
+                      <p>
+                        Many desktop publishing packages and web page editors
+                        now use Lorem Ipsum
+                      </p>
+                      <a
+                        href="portfolio-full.html"
+                        className="eg-btn btn--lg btn--primary-outline style-two"
+                      >
+                        Browse A Project
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col-xl-5 col-lg-5 col-md-10 d-lg-flex d-none">
+                    <div className="banner-three-image">
+                      <img
+                        src="assets/images/banner/banner-three/image3.png"
+                        alt="image"
+                      />
+                      <div className="banner-three-shape">
+                        <img
+                          src="assets/images/banner/banner-three/banenr3-img-shape.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+        </Swiper>
       </div>
     </div>
   );

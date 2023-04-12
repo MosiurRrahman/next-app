@@ -1,209 +1,239 @@
-import Link from "next/link";
-import React, { useState } from "react";
-import Select from "react-select";
-function Banner2() {
-  const [selectedOption, setSelectedOption] = useState(null);
-  const options = [
-    { value: "1", label: "UI/UX" },
-    { value: "2", label: "Marketing Coordinator" },
-    { value: "3", label: "Medical Assistant" },
-    { value: "4", label: "Project Manager" },
-    { value: "5", label: "Librarian" },
-    { value: "6", label: "Account Executive" },
-  ];
-  const customStyles = {
-    menu: (provided, state) => ({
-      ...provided,
-      width: state.selectProps.width,
-      borderBottom: "1px dotted pink",
-      color: state.selectProps.menuColor,
-      padding: 5,
-      zIndex: 2,
-    }),
-    control: (provided) => ({
-      ...provided,
-      height: 16,
-      width: "100%",
-      maxWidth: "450px",
-      marginTop: "-5px",
-      paddingRight: 5,
-      border: "0px solid red",
-      fontSize: 15,
-      fontWeight: "500",
-      backgroundColor: "none",
-      outline: "none",
-      boxShadow: "none",
-    }),
-    placeholder: (provided) => ({
-      ...provided,
-      color: "#061421",
-      fontWeight: "400",
-    }),
-    container: (provided) => ({
-      ...provided,
-    }),
+import React, { useMemo } from "react";
+import SwiperCore, {
+  Autoplay,
+  EffectFade,
+  Navigation,
+  Pagination,
+} from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+SwiperCore.use([Navigation, Autoplay, Pagination, EffectFade]);
 
-    dropdownIndicator: (provided) => ({
-      ...provided,
-      color: "#00a7ac",
-    }),
-  };
+function Banner2() {
+  const slider = useMemo(() => {
+    return {
+      slidesPerView: 1,
+      speed: 1500,
+      spaceBetween: 0,
+      loop: true,
+      navigation: {
+        nextEl: ".banner-three-next",
+        prevEl: ".banner-three-prev",
+      },
+      pagination: {
+        el: ".banner-two-pagination",
+        clickable: "true",
+      },
+      autoplay: {
+        delay: 3000, // Autoplay duration in milliseconds
+      },
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+    };
+  }, []);
   return (
-    <div className="hero2">
-      <div className="hero-wapper">
-        <div className="container-fluid px-0">
-          <div className="row">
-            <div className="col-lg-7 d-flex align-items-center">
-              <div className="hero-content">
-                <h1>
-                  To Choose Your Level Best&nbsp; <span>Dream Career.</span>
-                </h1>
-                <p>
-                  <span>2400</span> Peoples are daily search in this portal,{" "}
-                  <span>100</span> user added job portal!
-                </p>
-                <div className="job-search-area">
-                  <form>
-                    <div className="form-inner job-title">
-                      <input
-                        type="text"
-                        placeholder="What jobs are you looking for?"
-                      />
-                    </div>
-                    <div className="form-inner category">
-                      <Select
-                        theme={(theme) => ({
-                          ...theme,
-                          borderRadius: 0,
-                          padding: 0,
-                          colors: {
-                            ...theme.colors,
-                            primary25: "#f6f6f6",
-                            primary: "#00a7ac",
-                          },
-                        })}
-                        styles={customStyles}
-                        components={{
-                          IndicatorSeparator: () => null,
-                        }}
-                        width="250px"
-                        menuColor="#333"
-                        defaultValue={selectedOption}
-                        options={options}
-                        placeholder="Select Category"
-                      />
-                    </div>
-                    <div className="form-inner">
-                      <button type="submit" className="primry-btn-2 ">
-                        <img src="assets/images/icon/search-icon.svg" alt="" />{" "}
-                        Search
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                <div className="suggest-tag">
-                  <h6>
-                    <i className="bi bi-bookmark-fill" />
-                    Suggested Tag:
-                  </h6>
-                  <ul>
-                    <li>
-                      <Link legacyBehavior href="/job-listing1">
-                        <a>Engineering,</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link legacyBehavior href="/job-listing1">
-                        <a>Marketing,</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link legacyBehavior href="/job-listing1">
-                        <a>UI/UX Design,</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link legacyBehavior href="/job-listing1">
-                        <a>Data Analyst,</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link legacyBehavior href="/job-listing1">
-                        <a>Programming</a>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-5 d-flex jsutify-content-end">
-              <div className="banner-image-area">
-                <div className="banner-img-left">
-                  <div className="banner-img1">
-                    <img
-                      className="img-fluid"
-                      src="assets/images/bg/home2-banner-01.png"
-                      alt=""
-                    />
-                  </div>
-                  <div className="banner-img2">
-                    <img
-                      className="img-fluid"
-                      src="assets/images/bg/home2-banner-02.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="banner-img-center">
-                  <div className="banner-img3">
-                    <img
-                      className="img-fluid"
-                      src="assets/images/bg/home2-banner-03.png"
-                      alt=""
-                    />
-                  </div>
-                  <div className="banner-img4">
-                    <div className="user-area">
-                      <ul>
-                        <li>
-                          <img src="assets/images/bg/user31.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="assets/images/bg/user32.png" alt="" />
-                        </li>
-                        <li>
-                          <img src="assets/images/bg/user33.png" alt="" />
-                        </li>
-                        <li>
-                          <div className="total-user">
-                            <h6>21k</h6>
-                          </div>
-                        </li>
-                      </ul>
-                      <p>Peoples Joined!</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="banner-img-right">
-                  <div className="banner-img5">
-                    <div className="new-job-list">
-                      <h3>2400+</h3>
-                      <p>New Job Listed!</p>
-                    </div>
-                  </div>
-                  <div className="banner-img6">
-                    <img
-                      className="img-fluid"
-                      src="assets/images/bg/home2-banner-04.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div
+      className="banner-two-section position-relative"
+      style={{
+        background:
+          'linear-gradient(70deg, rgba(249, 249, 249, 0.78) 10%, rgba(255, 242, 232, 0.87) 80%),url("assets/images/banner/banner-two/banner-two-bg.png")',
+      }}
+    >
+      <div className="banner-two-pagination" />
+      <div className="banner-two-shape1">
+        <img src="assets/images/banner/banner-two/shape1.svg" alt="" />
       </div>
+      <div className="banner-two-shape2">
+        <img src="assets/images/banner/banner-two/shape2.svg" alt="" />
+      </div>
+      <div className="banner-two-shape3">
+        <img src="assets/images/banner/banner-two/shape3.svg" alt="" />
+      </div>
+      <div className="banner-two-shape4">
+        <img src="assets/images/banner/banner-two/shape4.svg" alt="" />
+      </div>
+      <Swiper {...slider} className="swiper banner-two-slider">
+        <div className="swiper-wrapper">
+          <SwiperSlide className="swiper-slide">
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-lg-6">
+                  <div className="banner-two-content">
+                    <h2>
+                      Grow Your <span>Business</span> Easily.{" "}
+                    </h2>
+                    <p>
+                      Many desktop publishing packages and web page editors now
+                      use Lorem Ipsum as their default.
+                    </p>
+                    <div className="button-group">
+                      <a
+                        href="#achievement"
+                        className="eg-btn btn--primary-outline2 btn--lg"
+                      >
+                        Get Started
+                      </a>
+                      <div className="video-button">
+                        <a
+                          href="https://www.youtube.com/watch?v=u31qwQUeGuM"
+                          className="video-popup"
+                        >
+                          <span className="video-play-icon">
+                            <img
+                              src="assets/images/icons/video-play-icon.svg"
+                              alt=""
+                            />
+                          </span>
+                          Success Story
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <div className="banner-two-image">
+                    <img
+                      src="assets/images/banner/banner-two/banner2-1.png"
+                      alt=""
+                    />
+                    <div className="banner-two-review">
+                      <img
+                        src="assets/images/banner/banner-two/banner-two-review.png"
+                        alt=""
+                      />
+                    </div>
+                    <div className="banner-two-project">
+                      <img
+                        src="assets/images/banner/banner-two/banenr-two-project.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="swiper-slide">
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-lg-6">
+                  <div className="banner-two-content">
+                    <h2>
+                      Grow Your <span>Business</span> Easily.{" "}
+                    </h2>
+                    <p>
+                      Many desktop publishing packages and web page editors now
+                      use Lorem Ipsum as their default.
+                    </p>
+                    <div className="button-group">
+                      <a
+                        href="#achievement"
+                        className="eg-btn btn--primary-outline2 btn--lg"
+                      >
+                        Get Started
+                      </a>
+                      <div className="video-button">
+                        <a
+                          href="https://www.youtube.com/watch?v=u31qwQUeGuM"
+                          className="video-popup"
+                        >
+                          <span className="video-play-icon">
+                            <img
+                              src="assets/images/icons/video-play-icon.svg"
+                              alt=""
+                            />
+                          </span>
+                          Success Story
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <div className="banner-two-image">
+                    <img
+                      src="assets/images/banner/banner-two/banner2-2.png"
+                      alt=""
+                    />
+                    <div className="banner-two-review">
+                      <img
+                        src="assets/images/banner/banner-two/banner-two-review.png"
+                        alt=""
+                      />
+                    </div>
+                    <div className="banner-two-project">
+                      <img
+                        src="assets/images/banner/banner-two/banenr-two-project.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="swiper-slide">
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-lg-6">
+                  <div className="banner-two-content">
+                    <h2>
+                      Grow Your <span>Business</span> Easily.{" "}
+                    </h2>
+                    <p>
+                      Many desktop publishing packages and web page editors now
+                      use Lorem Ipsum as their default.
+                    </p>
+                    <div className="button-group">
+                      <a
+                        href="#achievement"
+                        className="eg-btn btn--primary-outline2 btn--lg"
+                      >
+                        Get Started
+                      </a>
+                      <div className="video-button">
+                        <a
+                          href="https://www.youtube.com/watch?v=u31qwQUeGuM"
+                          className="video-popup"
+                        >
+                          <span className="video-play-icon">
+                            <img
+                              src="assets/images/icons/video-play-icon.svg"
+                              alt=""
+                            />
+                          </span>
+                          Success Story
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <div className="banner-two-image">
+                    <img
+                      src="assets/images/banner/banner-two/banner2-3.png"
+                      alt=""
+                    />
+                    <div className="banner-two-review">
+                      <img
+                        src="assets/images/banner/banner-two/banner-two-review.png"
+                        alt=""
+                      />
+                    </div>
+                    <div className="banner-two-project">
+                      <img
+                        src="assets/images/banner/banner-two/banenr-two-project.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        </div>
+      </Swiper>
     </div>
   );
 }

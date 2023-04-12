@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "img_2": "assets/images/casestudy/casestudy5-1.jpg",
+    "img_3": "assets/images/casestudy/case4-1.jpg",
+    "img_4": "assets/images/casestudy/recent-case1-1.png",
+    "tag_2": "SEO Marketing",
+    "tag_3": "Local SEO Marketing",
+    "tag_4": "Management",
+    "title_2": "Grow Your Business With Digital Marketing.",
+    "title_4": "Various versions have evolved over the years."
+  },
+  {
+    "id": 2,
+    "img_2": "assets/images/casestudy/casestudy5-2.jpg",
+    "img_3": "assets/images/casestudy/case4-2.jpg",
+    "img_4": "assets/images/casestudy/recent-case1-2.png",
+    "tag_2": "SEO Marketing",
+    "tag_3": "Paid Advertising",
+    "tag_4": "Strategy",
+    "title_2": "How to Improve Your Digital Stretegy.",
+    "title_4": "Best Choise To Change Business Progress."
+  },
+  {
+    "id": 3,
+    "img_2": "assets/images/casestudy/casestudy5-3.jpg",
+    "img_3": "assets/images/casestudy/case4-3.jpg",
+    "img_4": "assets/images/casestudy/recent-case1-1.png",
+    "tag_2": "SEO Marketing",
+    "tag_3": "Local SEO Marketing",
+    "tag_4": "Technology",
+    "title_2": "Grow Your Company with Development.",
+    "title_4": "To Improve Development Skills With TechGen."
+  },
+  {
+    "id": 4,
+    "img_2": "assets/images/casestudy/casestudy5-6.jpg",
+    "img_3": "assets/images/casestudy/case4-4.jpg",
+    "img_4": "assets/images/casestudy/recent-case1-2.png",
+    "tag_2": "SEO Marketing",
+    "tag_3": "Local SEO Marketing",
+    "tag_4": "Management",
+    "title_2": "Grow Your Business Policy in Branding.",
+    "title_4": "Various versions have evolved over the years."
+  },
+  {
+    "id": 5,
+    "img_2": "assets/images/casestudy/casestudy5-5.jpg",
+    "img_3": "assets/images/casestudy/case4-5.jpg",
+    "img_4": "assets/images/casestudy/recent-case1-1.png",
+    "tag_2": "SEO Marketing",
+    "tag_3": "Local SEO Marketing",
+    "tag_4": "Strategy",
+    "title_2": "Grow Your Business With Finance.",
+    "title_4": "Best Choise To Change Business Progress."
+  },
+  {
+    "id": 6,
+    "img_2": "assets/images/casestudy/casestudy5-6.jpg",
+    "img_3": "assets/images/casestudy/case4-6.jpg",
+    "img_4": "assets/images/casestudy/recent-case1-2.png",
+    "tag_2": "SEO Marketing",
+    "tag_3": "Local SEO Marketing",
+    "tag_4": "Technology",
+    "title_2": "Grow Your Business With Data Science.",
+    "title_4": "To Improve Development Skills With TechGen."
+  }
+]

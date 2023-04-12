@@ -1,112 +1,77 @@
+import Link from "next/link";
 import React from "react";
 
 function CategoryWidget() {
   return (
-    <div className="job-widget style-1 mb-20">
-      <div className="check-box-item">
-        <h5 className="job-widget-title">Category</h5>
-        <div className="checkbox-container">
-          <ul>
-            <li>
-              <label className="containerss">
-                <input type="checkbox" />
-                <span className="checkmark" />
-                <span className="text">Health Care</span>
-                <span className="qty">(10)</span>
-              </label>
-            </li>
-            <li>
-              <label className="containerss">
-                <input type="checkbox" />
-                <span className="checkmark" />
-                <span className="text">Account &amp; Finance</span>
-                <span className="qty">(05)</span>
-              </label>
-            </li>
-            <li>
-              <label className="containerss">
-                <input type="checkbox" />
-                <span className="checkmark" />
-                <span className="text">Transportation</span>
-                <span className="qty">(08)</span>
-              </label>
-            </li>
-            <li>
-              <label className="containerss">
-                <input type="checkbox" />
-                <span className="checkmark" />
-                <span className="text">Medical &amp; Finance</span>
-                <span className="qty">(12)</span>
-              </label>
-            </li>
-            <li>
-              <label className="containerss">
-                <input type="checkbox" />
-                <span className="checkmark" />
-                <span className="text">Development</span>
-                <span className="qty">(24)</span>
-              </label>
-            </li>
-            <li>
-              <label className="containerss">
-                <input type="checkbox" />
-                <span className="checkmark" />
-                <span className="text">Engineering</span>
-                <span className="qty">(10)</span>
-              </label>
-            </li>
-            <li>
-              <label className="containerss">
-                <input type="checkbox" />
-                <span className="checkmark" />
-                <span className="text">Receptionist</span>
-                <span className="qty">(20)</span>
-              </label>
-            </li>
-            <li>
-              <label className="containerss">
-                <input type="checkbox" />
-                <span className="checkmark" />
-                <span className="text">Non-Profit Org.</span>
-                <span className="qty">(03)</span>
-              </label>
-            </li>
-            <li>
-              <label className="containerss">
-                <input type="checkbox" />
-                <span className="checkmark" />
-                <span className="text">Health Care</span>
-                <span className="qty">(10)</span>
-              </label>
-            </li>
-            <li>
-              <label className="containerss">
-                <input type="checkbox" />
-                <span className="checkmark" />
-                <span className="text">Account &amp; Finance</span>
-                <span className="qty">(05)</span>
-              </label>
-            </li>
-            <li>
-              <label className="containerss">
-                <input type="checkbox" />
-                <span className="checkmark" />
-                <span className="text">Transportation</span>
-                <span className="qty">(08)</span>
-              </label>
-            </li>
-            <li>
-              <label className="containerss">
-                <input type="checkbox" />
-                <span className="checkmark" />
-                <span className="text">Medical &amp; Finance</span>
-                <span className="qty">(12)</span>
-              </label>
-            </li>
-          </ul>
+    <>
+      <div className="input-with-search">
+        <input type="text" placeholder="Search..." />
+        <div className="icon">
+          <i className="bi bi-search" />
         </div>
       </div>
-    </div>
+      <div className="blog-widget">
+        <h4 className="blog-widget-title">Category:</h4>
+        <ul className="category-list">
+          <li>
+            <Link legacyBehavior href="/blog-details">
+              <a>
+                <span>Digital Marketing</span>
+                <span>(02)</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link legacyBehavior href="/blog-details">
+              <a>
+                <span>Business Consult</span>
+                <span>(08)</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link legacyBehavior href="/blog-details">
+              <a>
+                <span>Technology</span>
+                <span>(01)</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link legacyBehavior href="/blog-details">
+              <a>
+                <span>SEO Marketing</span>
+                <span>(04)</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link legacyBehavior href="/blog-dtails">
+              <a>
+                <span>Business Strategy</span>
+                <span>(02)</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link legacyBehavior href="/blog-details">
+              <a>
+                <span>UI/UX Design</span>
+                <span>(05)</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link legacyBehavior href="/blog-details">
+              <a>
+                <span>Uncategorized</span>
+                <span>(09)</span>
+              </a>
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </>
   );
 }
 

@@ -1358,7 +1358,7 @@
 .bi-currency-exchange::before { content: "\f638"; }
 .bi-currency-pound::before { content: "\f639"; }
 .bi-currency-yen::before { content: "\f63a"; }
-.bi-dash-lg::before { content: "\f63b"; }
+.bi-dash::before { content: "\f63b"; }
 .bi-exclamation-lg::before { content: "\f63c"; }
 .bi-file-earmark-pdf-fill::before { content: "\f63d"; }
 .bi-file-earmark-pdf::before { content: "\f63e"; }
@@ -1376,7 +1376,7 @@
 .bi-piggy-bank::before { content: "\f64a"; }
 .bi-pin-map-fill::before { content: "\f64b"; }
 .bi-pin-map::before { content: "\f64c"; }
-.bi-plus-lg::before { content: "\f64d"; }
+.bi-plus::before { content: "\f64d"; }
 .bi-question-lg::before { content: "\f64e"; }
 .bi-recycle::before { content: "\f64f"; }
 .bi-reddit::before { content: "\f650"; }
