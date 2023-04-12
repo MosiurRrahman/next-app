@@ -1,51 +1,7 @@
 import Link from "next/link";
-import React, { useMemo } from "react";
-import SwiperCore, { Autoplay, EffectFade, Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-SwiperCore.use([Navigation, Autoplay, EffectFade]);
+import React from "react";
 
-function Footer3() {
-  const slider = useMemo(() => {
-    return {
-      slidesPerView: "auto",
-      speed: 1500,
-      spaceBetween: 20,
-      loop: true,
-      autoplay: {
-        delay: 1,
-        disableOnInteraction: true,
-      },
-      freeMode: true,
-      speed: 5000,
-      freeModeMomentum: false,
-      breakpoints: {
-        280: {
-          slidesPerView: 2,
-        },
-        386: {
-          slidesPerView: 3,
-        },
-        576: {
-          slidesPerView: 3,
-        },
-        768: {
-          slidesPerView: 4,
-        },
-        992: {
-          slidesPerView: 4,
-        },
-        1200: {
-          slidesPerView: 3,
-        },
-        1400: {
-          slidesPerView: 4,
-        },
-        1600: {
-          slidesPerView: 5,
-        },
-      },
-    };
-  }, []);
+function Footer5() {
   return (
     <>
       <div
@@ -70,25 +26,24 @@ function Footer3() {
           </div>
         </div>
       </div>
-      <footer className="footer-sibling-three">
+      <footer>
         <div className="container-fluid">
           <div className="row justify-content-center align-items-center">
             <div className="col-xl-4 order-sm-1 order-2">
               <div className="footer-info">
-                <div className="footer-logo">
-                  <img src="assets/images/bg/footer3-logo.svg" alt="image" />
-                </div>
+                <Link legacyBehavior href="/">
+                  <a className="footer-logo">
+                    <img src="assets/images/bg/footer4-logo.svg" alt="image" />
+                  </a>
+                </Link>
                 <span>
-                  <img
-                    src="assets/images/icons/title-vector3.svg"
-                    alt="image"
-                  />
+                  <img src="assets/images/icons/title-vector.svg" alt="image" />
                 </span>
                 <p>
                   Nor again is there anyone who loves or pursues or desires to
                   obtain pain.
                 </p>
-                <ul className="footer-social sibling-three">
+                <ul className="footer-social">
                   <li>
                     <a href="https://www.linkedin.com/">
                       <i className="bx bxl-linkedin" />
@@ -117,7 +72,7 @@ function Footer3() {
                 <div className="col-lg-4 col-md-4 col-sm-6">
                   <div className="footer-list-area">
                     <h3 className="footer-list-title">Our Services</h3>
-                    <ul className="footer-list sibling-three">
+                    <ul className="footer-list">
                       <li>
                         <a href="#">Website Design</a>
                       </li>
@@ -139,7 +94,7 @@ function Footer3() {
                 <div className="col-lg-5 col-md-5 col-sm-6">
                   <div className="footer-list-area">
                     <h3 className="footer-list-title">Office Address</h3>
-                    <ul className="footer-address-list sibling-three">
+                    <ul className="footer-address-list">
                       <li>
                         <div className="icon">
                           <i className="bi bi-envelope" />
@@ -164,7 +119,7 @@ function Footer3() {
                       </li>
                     </ul>
                     <a
-                      className="eg-btn btn--lg btn--primary-outline style-two"
+                      className="eg-btn btn--lg btn--primary-outline"
                       data-bs-toggle="modal"
                       href="#exampleModalToggle"
                       role="button"
@@ -176,7 +131,7 @@ function Footer3() {
                 <div className="col-lg-3 col-md-3 col-sm-6">
                   <div className="footer-list-area">
                     <h3 className="footer-list-title">More Info</h3>
-                    <ul className="footer-list sibling-three">
+                    <ul className="footer-list">
                       <li>
                         <Link legacyBehavior href="/contact">
                           <a>Contact Us</a>
@@ -200,62 +155,53 @@ function Footer3() {
                   <h3 className="footer-award-title">Achievements:</h3>
                 </div>
                 <div className="col-xxl-10 col-xl-9 col-lg-9">
-                  <Swiper
-                    {...slider}
+                  <div
                     className="swiper footer-award-slider"
                     data-cursor="Drag"
                   >
                     <div className="swiper-wrapper swiper-wrapper align-items-center">
-                      <SwiperSlide className="swiper-slide">
+                      <div className="swiper-slide">
                         <div className="achievement-single">
                           <img
                             src="assets/images/company/foot-award1.png"
                             alt=""
                           />
                         </div>
-                      </SwiperSlide>
-                      <SwiperSlide className="swiper-slide">
+                      </div>
+                      <div className="swiper-slide">
                         <div className="achievement-single">
                           <img
                             src="assets/images/company/foot-award2.png"
                             alt=""
                           />
                         </div>
-                      </SwiperSlide>
-                      <SwiperSlide className="swiper-slide">
+                      </div>
+                      <div className="swiper-slide">
                         <div className="achievement-single">
                           <img
                             src="assets/images/company/foot-award3.png"
                             alt=""
                           />
                         </div>
-                      </SwiperSlide>
-                      <SwiperSlide className="swiper-slide">
+                      </div>
+                      <div className="swiper-slide">
                         <div className="achievement-single">
                           <img
                             src="assets/images/company/foot-award4.png"
                             alt=""
                           />
                         </div>
-                      </SwiperSlide>
-                      <SwiperSlide className="swiper-slide">
+                      </div>
+                      <div className="swiper-slide">
                         <div className="achievement-single">
                           <img
                             src="assets/images/company/foot-award2.png"
                             alt=""
                           />
                         </div>
-                      </SwiperSlide>
-                      <SwiperSlide className="swiper-slide">
-                        <div className="achievement-single">
-                          <img
-                            src="assets/images/company/foot-award2.png"
-                            alt=""
-                          />
-                        </div>
-                      </SwiperSlide>
+                      </div>
                     </div>
-                  </Swiper>
+                  </div>
                 </div>
               </div>
             </div>
@@ -263,8 +209,8 @@ function Footer3() {
           <div className="row copyright-area">
             <div className="col-lg-12 text-center">
               <p>
-                ©copyright 2023 TechGen | Design By{" "}
-                <a href="#" className="linear-text-three">
+                © copyright 2023 TechGen | Design By{" "}
+                <a href="#" className="linear-text-two">
                   Egens Lab
                 </a>
               </p>
@@ -276,4 +222,4 @@ function Footer3() {
   );
 }
 
-export default Footer3;
+export default Footer5;

@@ -14,7 +14,6 @@ import Banner6 from "../components/banner/Banner6";
 import Customar6 from "../components/customar/Customar6";
 import Header6 from "../components/header/Header6";
 import Service6 from "../components/service/Service6";
-import ServiceMarque from "../components/service/ServiceMarque";
 
 function IndexStartup() {
   return (
@@ -24,7 +23,6 @@ function IndexStartup() {
       <Customar6 />
       <Service6 />
       <Video6 />
-      <ServiceMarque />
       <About6 />
       <WorkProcess6 />
       <CaseStudy6 />

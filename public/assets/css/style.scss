@@ -5482,7 +5482,7 @@ header.style-6 {
 =======================================*/
 
 .bread-crumb-section {
-  background-image: url("../images/bg/breadcrumb-bg.jpg");
+  // background-image: url("../images/bg/breadcrumb-bg.png");
   @include img-adjust();
   background-color: var(--bg-dark3);
   padding: 60px 25px;
@@ -8079,7 +8079,7 @@ header.style-6 {
     bottom: 0;
     left: -1px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: start;
     align-items: flex-end;
     flex-direction: row;
     padding-bottom: 25px;
@@ -8200,7 +8200,7 @@ header.style-6 {
       top: 30px;
       right: 30px;
       display: flex;
-      justify-content: flex-start;
+      justify-content: start;
       align-items: flex-end;
       flex-direction: column;
       padding-bottom: 25px;
@@ -8480,7 +8480,7 @@ header.style-6 {
     bottom: 90px;
     right: 60px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: start;
     align-items: flex-end;
     flex-direction: column;
     padding-bottom: 25px;
@@ -8751,7 +8751,7 @@ header.style-6 {
     bottom: 0;
     left: -1px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: start;
     align-items: flex-end;
     flex-direction: row;
     padding-bottom: 25px;
@@ -11744,7 +11744,7 @@ blockquote {
   }
   ul.tag-list {
     display: flex;
-    justify-content: flex-start;
+    justify-content: start;
     list-style: none;
     margin-bottom: 0;
     li {
@@ -12689,11 +12689,6 @@ footer {
 
 .customer-section-two {
   position: relative;
-}
-.customer-section-six {
-  .swiper-wrapper {
-    align-items: center;
-  }
 }
 
 .customer-five-wrapper {

@@ -81,7 +81,9 @@ function Header3() {
         <div className="topbar-left">
           <h6>
             Welcome Our IT Company, Subscribe Our{" "}
-            <a href="faq.html"> Newsletter</a>
+            <Link legacyBehavior href="/faq">
+              <a>Newsletter</a>
+            </Link>
           </h6>
         </div>
         <div className="topbar-right">
@@ -164,24 +166,28 @@ function Header3() {
       >
         <div className="container-fluid d-flex justify-content-between align-items-center px-0">
           <div className="header-logo">
-            <a href="index.html">
-              <img
-                alt="image"
-                className="img-fluid"
-                src="assets/images/bg/header3-logo.svg"
-              />
-            </a>
+            <Link legacyBehavior href="/">
+              <a>
+                <img
+                  alt="image"
+                  className="img-fluid"
+                  src="assets/images/bg/header3-logo.svg"
+                />
+              </a>
+            </Link>
           </div>
           <div className="main-nav">
             <div className="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
               <div className="mobile-logo-wrap">
-                <a href="index.html">
-                  <img
-                    alt="image"
-                    className="img-fluid"
-                    src="assets/images/bg/header3-logo.svg"
-                  />
-                </a>
+                <Link legacyBehavior href="/">
+                  <a>
+                    <img
+                      alt="image"
+                      className="img-fluid"
+                      src="assets/images/bg/header3-logo.svg"
+                    />
+                  </a>
+                </Link>
               </div>
               <div className="menu-close-btn">
                 <i className="bi bi-x-lg text-dark" />
@@ -475,12 +481,11 @@ function Header3() {
             </ul>
             {/* mobile-search-area */}
             <div className="d-flex justify-content-start align-items-center flex-row d-lg-none d-block mt-5">
-              <a
-                href="service-details.html"
-                className="eg-btn btn--md btn--primary-three d-flex d-lg-none"
-              >
-                Request a Quote
-              </a>
+              <Link legacyBehavior href="/service-details">
+                <a className="eg-btn btn--md btn--primary-three d-flex d-lg-none">
+                  Request a Quote
+                </a>
+              </Link>
             </div>
           </div>
           <div className="nav-right header-five-right d-flex jsutify-content-end align-items-center gap-sm-5 gap-4">
@@ -492,12 +497,11 @@ function Header3() {
                 <i className="bi bi-bag-check" />
               </a>
             </div>
-            <a
-              href="service-details.html"
-              className="eg-btn btn--md btn--primary-three d-xl-flex d-none"
-            >
-              Request a Quote
-            </a>
+            <Link legacyBehavior href="/service-details">
+              <a className="eg-btn btn--md btn--primary-three d-xl-flex d-none">
+                Request a Quote
+              </a>
+            </Link>
             <div className="header-phone">
               <div className="icon">
                 <i className="bx bx-phone-call" />

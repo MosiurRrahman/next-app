@@ -1,79 +1,67 @@
-import React, { useEffect, useMemo, useState } from "react";
-import SwiperCore, { Autoplay, EffectFade, Navigation, Thumbs } from "swiper";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-SwiperCore.use([Navigation, Autoplay, EffectFade, Thumbs]);
-const thumbs = {
-  swiper: null,
-};
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 
+// import required modules
+import { FreeMode, Navigation, Thumbs } from "swiper";
 function Banner1() {
-  // Swiper instance
-  const [swiper, updateSwiper] = useState(null);
-  // Swiper thumbsinstance
-  const [swiperThumbs, updateSwiperThumbs] = useState(null);
-  useEffect(() => {
-    if (swiper && swiperThumbs) {
-      swiper.controller.control = swiperThumbs;
-      swiperThumbs.controller.control = swiper;
-    }
-  }, [swiper, swiperThumbs]);
-  const sldider = useMemo(() => {
-    return {
-      getSwiper: updateSwiper,
-      spaceBetween: 0,
-      speed: 1500,
-      effect: "fade",
-      fadeEffect: {
-        crossFade: true,
-      },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: true,
-      },
-      navigation: {
-        nextEl: ".banner-one-next",
-        prevEl: ".banner-one-prev",
-      },
-    };
-  }, []);
-  const thumbs = useMemo(() => {
-    return {
-      getSwiper: updateSwiperThumbs,
-      spaceBetween: 10,
-      slidesPerView: 3,
-      speed: 1500,
-      freeMode: true,
-      watchSlidesProgress: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: true,
-      },
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const imageSlider = {
+    spaceBetween: 0,
+    speed: 1500,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true,
+    },
+    navigation: {
+      nextEl: ".banner-one-next",
+      prevEl: ".banner-one-prev",
+    },
+  };
+  const thumbs = {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    speed: 1500,
+    freeMode: true,
+    watchSlidesProgress: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true,
+    },
 
-      breakpoints: {
-        280: {
-          slidesPerView: 1,
-        },
-        386: {
-          slidesPerView: 1,
-        },
-        576: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        992: {
-          slidesPerView: 2,
-        },
-        1200: {
-          slidesPerView: 3,
-        },
-        1400: {
-          slidesPerView: 3,
-        },
+    breakpoints: {
+      280: {
+        slidesPerView: 1,
       },
-    };
-  }, []);
+      386: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+      1400: {
+        slidesPerView: 3,
+      },
+    },
+  };
+
   return (
     <div className="banner-one">
       <div className="banner-one-social">
@@ -130,7 +118,11 @@ function Banner1() {
           <i className="bi bi-arrow-right" />
         </div>
       </div>
-      <Swiper {...sldider} className="swiper banner-one-slider-big">
+      <Swiper
+        {...imageSlider}
+        onSwiper={setThumbsSwiper}
+        className="swiper banner-one-slider-big"
+      >
         <div className="swiper-wrapper">
           <SwiperSlide className="swiper-slide">
             <div className="banner-image">
@@ -323,7 +315,15 @@ function Banner1() {
         </div>
       </Swiper>
       <div className="container">
-        <Swiper {...thumbs} className="swiper banner-one-slider-small">
+        <Swiper
+          {...thumbs}
+          thumbs={{
+            swiper:
+              thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+          }}
+          modules={[FreeMode, Navigation, Thumbs]}
+          className="swiper banner-one-slider-small"
+        >
           <div className="swiper-wrapper d-flex justify-content-between">
             <SwiperSlide className="swiper-slide">
               <div className="banner-card-single">

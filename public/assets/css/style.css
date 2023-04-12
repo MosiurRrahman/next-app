@@ -4984,7 +4984,6 @@ header.style-6 .main-nav ul li.menu-item-has-children > i {
    12. Bread-crumb-section
 =======================================*/
 .bread-crumb-section {
-  background-image: url("../images/bg/breadcrumb-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--bg-dark3);
@@ -7770,7 +7769,7 @@ header.style-6 .main-nav ul li.menu-item-has-children > i {
   bottom: 0;
   left: -1px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
   align-items: flex-end;
   flex-direction: row;
   padding-bottom: 25px;
@@ -7880,7 +7879,7 @@ header.style-6 .main-nav ul li.menu-item-has-children > i {
   top: 30px;
   right: 30px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
   align-items: flex-end;
   flex-direction: column;
   padding-bottom: 25px;
@@ -8152,7 +8151,7 @@ header.style-6 .main-nav ul li.menu-item-has-children > i {
   bottom: 90px;
   right: 60px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
   align-items: flex-end;
   flex-direction: column;
   padding-bottom: 25px;
@@ -8404,7 +8403,7 @@ header.style-6 .main-nav ul li.menu-item-has-children > i {
   bottom: 0;
   left: -1px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
   align-items: flex-end;
   flex-direction: row;
   padding-bottom: 25px;
@@ -11552,7 +11551,7 @@ blockquote span.quote-author::before {
 }
 .blog-tag-area ul.tag-list {
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
   list-style: none;
   margin-bottom: 0;
 }
@@ -12512,10 +12511,6 @@ footer .branch-item.sibling-two .branch-phone h5 {
 
 .customer-section-two {
   position: relative;
-}
-
-.customer-section-six .swiper-wrapper {
-  align-items: center;
 }
 
 .customer-five-wrapper {

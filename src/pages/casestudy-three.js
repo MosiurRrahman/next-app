@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Breadcrumb from "../components/common/Breadcrumb";
-import caseStudyData from "../data/case-study-data.json";
+import caseStudyData from "../data/case-sudy-data.json";
 import MainLayout from "../layout/MainLayout";
 function CasestudyThree() {
   return (

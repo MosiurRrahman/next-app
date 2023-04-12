@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useMemo } from "react";
 import SwiperCore, {
   Autoplay,
@@ -120,12 +121,11 @@ function Banner3() {
                         Many desktop publishing packages and web page editors
                         now use Lorem Ipsum
                       </p>
-                      <a
-                        href="portfolio-full.html"
-                        className="eg-btn btn--lg btn--primary-outline style-two"
-                      >
-                        Browse A Project
-                      </a>
+                      <Link legacyBehavior href="/portfolio-full">
+                        <a className="eg-btn btn--lg btn--primary-outline style-two">
+                          Browse A Project
+                        </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="col-xl-5 col-lg-5 col-md-10 d-lg-flex d-none">
@@ -158,12 +158,11 @@ function Banner3() {
                         Many desktop publishing packages and web page editors
                         now use Lorem Ipsum
                       </p>
-                      <a
-                        href="portfolio-full.html"
-                        className="eg-btn btn--lg btn--primary-outline style-two"
-                      >
-                        Browse A Project
-                      </a>
+                      <Link legacyBehavior href="/portfolio-full">
+                        <a className="eg-btn btn--lg btn--primary-outline style-two">
+                          Browse A Project
+                        </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="col-xl-5 col-lg-5 col-md-10 d-lg-flex d-none">
@@ -196,12 +195,11 @@ function Banner3() {
                         Many desktop publishing packages and web page editors
                         now use Lorem Ipsum
                       </p>
-                      <a
-                        href="portfolio-full.html"
-                        className="eg-btn btn--lg btn--primary-outline style-two"
-                      >
-                        Browse A Project
-                      </a>
+                      <Link legacyBehavior href="/portfolio-full">
+                        <a className="eg-btn btn--lg btn--primary-outline style-two">
+                          Browse A Project
+                        </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="col-xl-5 col-lg-5 col-md-10 d-lg-flex d-none">

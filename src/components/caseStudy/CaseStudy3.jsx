@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useMemo } from "react";
 import SwiperCore, {
   Autoplay,
@@ -62,12 +63,11 @@ function CaseStudy3() {
               <p>To take a trivial example, which of us ever undertakes.</p>
             </div>
             <div className="d-flex justify-content-between align-items-center">
-              <a
-                href="portfolio-full.html"
-                className="eg-btn btn--primary-outline style-two btn--lg"
-              >
-                Browse All
-              </a>
+              <Link legacyBehavior href="/portfolio-full">
+                <a className="eg-btn btn--primary-outline style-two btn--lg">
+                  Browse All
+                </a>
+              </Link>
               <div className="slider-arrows arrow-style-two d-flex justify-content-lg-end justify-content-start gap-lg-4 gap-2">
                 <div
                   className="casestudy-three-prev swiper-prev-arrow"
@@ -104,12 +104,13 @@ function CaseStudy3() {
                           Modern Technology
                         </p>
                         <h4 className="casestudy-three-title">
-                          <a
-                            href="portfolio-details.html"
+                          <Link
+                            legacyBehavior
+                            href="/portfolio-details"
                             data-cursor="View Details"
                           >
-                            Modern Technoloy To Generate Update.{" "}
-                          </a>
+                            <a> Modern Technoloy To Generate Update. </a>
+                          </Link>
                         </h4>
                       </div>
                     </div>
@@ -127,12 +128,13 @@ function CaseStudy3() {
                           Modern Technology
                         </p>
                         <h4 className="casestudy-three-title">
-                          <a
-                            href="portfolio-details.html"
+                          <Link
+                            legacyBehavior
+                            href="/portfolio-details"
                             data-cursor="View Details"
                           >
-                            To Create Mobile App With React.{" "}
-                          </a>
+                            <a>To Create Mobile App With React</a>
+                          </Link>
                         </h4>
                       </div>
                     </div>
@@ -150,12 +152,13 @@ function CaseStudy3() {
                           Modern Technology
                         </p>
                         <h4 className="casestudy-three-title">
-                          <a
-                            href="blog-details.html"
+                          <Link
+                            legacyBehavior
+                            href="blog-details"
                             data-cursor="View Details"
                           >
-                            How To Grow Your Technology Strategy.
-                          </a>
+                            <a>How To Grow Your Technology Strategy.</a>
+                          </Link>
                         </h4>
                       </div>
                     </div>

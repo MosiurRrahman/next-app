@@ -1,6 +1,6 @@
 import React from "react";
 
-function ServiceMarque() {
+function IndexMarque() {
   return (
     <div className="marque-text-area">
       <div className="container fluid">
@@ -127,4 +127,4 @@ function ServiceMarque() {
   );
 }
 
-export default ServiceMarque;
+export default IndexMarque;

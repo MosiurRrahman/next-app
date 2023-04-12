@@ -1,4 +1,5 @@
 import React from "react";
+import Header2 from "../components/header/Header2";
 import Achievment2 from "../components/achievment/Achievment2";
 import Banner2 from "../components/banner/Banner2";
 import Blog2 from "../components/blog/Blog2";
@@ -7,7 +8,6 @@ import Chart2 from "../components/chart/Chart2";
 import Contact2 from "../components/contact/Contact2";
 import Customar2 from "../components/customar/Customar2";
 import Footer2 from "../components/footer/Footer2";
-import Header2 from "../components/header/Header2";
 import Service2 from "../components/service/Service2";
 import Stratgy2 from "../components/strategy/Stratgy2";
 import Team2 from "../components/team/Team2";
