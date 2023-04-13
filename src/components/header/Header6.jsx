@@ -1,9 +1,83 @@
-import React from "react";
-
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React, { useEffect, useReducer, useRef } from "react";
+const initialState = {
+  activeMenu: "",
+  menuOpen: false,
+  modalOpen: false,
+};
+function reducer(state, action) {
+  switch (action.type) {
+    case "TOGGLE":
+      if (state.activeMenu === action.payload) {
+        return { ...state, activeMenu: "", menuOpen: !state.menuOpen };
+      } else {
+        return {
+          ...state,
+          activeMenu: action.payload,
+          menuOpen: !state.menuOpen,
+        };
+      }
+    case "TOGGLE_MODAL":
+      return { ...state, modalOpen: !state.modalOpen };
+    case "HOME_ONE":
+      return { ...state, activeMenu: "home-one", menuOpen: !state.menuOpen };
+    case "JOB_CATEGORY":
+      return {
+        ...state,
+        activeMenu: "job-category",
+        menuOpen: !state.menuOpen,
+      };
+    case "COMPANY":
+      return { ...state, activeMenu: "company", menuOpen: !state.menuOpen };
+    case "BLOG":
+      return { ...state, activeMenu: "blog", menuOpen: !state.menuOpen };
+    case "PAGES":
+      return { ...state, activeMenu: "pages", menuOpen: !state.menuOpen };
+    case "setScrollY":
+      return { ...state, scrollY: action.payload };
+    default:
+      return { ...state };
+  }
+}
 function Header6() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const headerRef = useRef(null);
+  const handleScroll = () => {
+    const { scrollY } = window;
+    dispatch({ type: "setScrollY", payload: scrollY });
+  };
+  function handleMenu(menuName) {
+    dispatch({ type: "TOGGLE", payload: menuName });
+  }
+
+  function toggleModal() {
+    dispatch({ type: "TOGGLE_MODAL" });
+  }
+  const currentRoute = useRouter().pathname;
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const mobileBtn = document.querySelector(".mobile-menu-btn");
+
+    const nav = document.querySelector(".main-nav");
+    const menuClose = document.querySelector(".menu-close-btn");
+    mobileBtn.addEventListener("click", () => {
+      nav.classList.add("show-menu");
+    });
+    menuClose.addEventListener("click", () => {
+      nav.classList.remove("show-menu");
+    });
+  });
   return (
     <>
-      <div className="mobile-search">
+      <div className={`mobile-search ${state.modalOpen ? "slide" : ""}`}>
         <div className="container">
           <div className="row d-flex justify-content-center gy-4">
             <div className="col-md-10">
@@ -17,7 +91,10 @@ function Header6() {
               <div className="search-cross-btn style-two">
                 <i className="bi bi-search" />
               </div>
-              <div className="search-cross-btn style-two">
+              <div
+                className="search-cross-btn  style-two"
+                onClick={toggleModal}
+              >
                 <i className="bi bi-x-lg" />
               </div>
             </div>
@@ -25,27 +102,38 @@ function Header6() {
         </div>
       </div>
 
-      <header className="header-area style-6 pl-110 pr-110">
+      <header
+        ref={headerRef}
+        className={
+          state.scrollY > 120
+            ? "header-area style-6 pl-110 pr-110 sticky"
+            : "header-area style-6 pl-110 pr-110"
+        }
+      >
         <div className="container-fluid d-flex justify-content-between align-items-center px-0">
           <div className="header-logo">
-            <a href="index.html">
-              <img
-                alt="image"
-                className="img-fluid"
-                src="assets/images/bg/header6-logo.svg"
-              />
-            </a>
+            <Link legacyBehavior href="/">
+              <a>
+                <img
+                  alt="image"
+                  className="img-fluid"
+                  src="assets/images/bg/header6-logo.svg"
+                />
+              </a>
+            </Link>
           </div>
           <div className="main-nav">
             <div className="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
               <div className="mobile-logo-wrap">
-                <a href="index.html">
-                  <img
-                    alt="image"
-                    className="img-fluid"
-                    src="assets/images/bg/header6-logo.svg"
-                  />
-                </a>
+                <Link legacyBehavior href="/">
+                  <a>
+                    <img
+                      alt="image"
+                      className="img-fluid"
+                      src="assets/images/bg/header6-logo.svg"
+                    />
+                  </a>
+                </Link>
               </div>
               <div className="menu-close-btn">
                 <i className="bi bi-x-lg text-dark" />
@@ -53,34 +141,50 @@ function Header6() {
             </div>
             <ul className="menu-list">
               <li className="menu-item-has-children">
-                <a href="index.html" className="drop-down active">
-                  Home
-                </a>
-                <i className="bi bi-chevron-down dropdown-icon" />
-                <ul className="sub-menu">
+                <Link legacyBehavior href="/">
+                  <a className="drop-down active">Home</a>
+                </Link>
+
+                <i
+                  className="bi bi-chevron-down dropdown-icon"
+                  onClick={() => handleMenu("home-one")}
+                />
+                <ul
+                  className={
+                    state.activeMenu === "home-one"
+                      ? "sub-menu d-block"
+                      : "sub-menu"
+                  }
+                >
                   <li>
-                    <a href="index.html">Home Digital Agency</a>
+                    <Link legacyBehavior href="/">
+                      <a className="active">Home Digital Agency</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="index-digital-marketing.html">
-                      Home Digital Marketing
-                    </a>
+                    <Link legacyBehavior href="/index-digital-marketing">
+                      <a>Home Digital Marketing</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="index-technology.html">Home Technology</a>
+                    <Link legacyBehavior href="/index-technology">
+                      <a>Home Technology</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="index-seo.html">Home SEO</a>
+                    <Link legacyBehavior href="/index-seo">
+                      <a>Home SEO</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="index-business-consult.html">
-                      Home Business Consult
-                    </a>
+                    <Link legacyBehavior href="/index-business-consult">
+                      <a>Home Business Consult</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="index-startup.html" className="active">
-                      Home StartUp
-                    </a>
+                    <Link legacyBehavior href="/index-startup">
+                      <a>Home StartUp</a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -88,160 +192,262 @@ function Header6() {
                 <a href="#" className="drop-down">
                   Pages
                 </a>
-                <i className="bi bi-chevron-down dropdown-icon" />
-                <ul className="sub-menu">
+                <i
+                  className="bi bi-chevron-down dropdown-icon"
+                  onClick={() => handleMenu("pages")}
+                />
+                <ul
+                  className={
+                    state.activeMenu === "pages"
+                      ? "sub-menu d-block"
+                      : "sub-menu"
+                  }
+                >
                   <li>
-                    <a href="about.html">About Us</a>
+                    <Link legacyBehavior href="/about">
+                      <a>About Us</a>
+                    </Link>
                   </li>{" "}
                   <li>
-                    <a href="gallery.html">Gallery</a>
+                    <Link legacyBehavior href="/gallery">
+                      <a>Gallery</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="choose-us.html">Why Choose US</a>
+                    <Link legacyBehavior href="/choose-us">
+                      <a>Why Choose US</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="pricing.html">Pricing</a>
+                    <Link legacyBehavior href="/pricing">
+                      <a>Pricing</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="casestudy-one.html">Case Study</a>
+                    <Link legacyBehavior href="/casestudy-one">
+                      <a>Case Study</a>
+                    </Link>
                     <i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
                     <i className="d-lg-none d-flex bi bi-chevron-down dropdown-icon" />
                     <ul className="sub-menu">
                       <li>
-                        <a href="casestudy-one.html">Case Study One</a>
+                        <Link legacyBehavior href="/casestudy-one">
+                          <a>Case Study One</a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="casestudy-two.html">Case Study Two</a>
+                        <Link legacyBehavior href="/casestudy-two">
+                          <a>Case Study Two</a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="casestudy-three.html">Case Study Three</a>
+                        <Link legacyBehavior href="/casestudy-three">
+                          <a>Case Study Three</a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="casestudy-four.html">Case Study Four</a>
+                        <Link legacyBehavior href="/casestudy-four">
+                          <a>Case Study Four</a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="casestudy-details.html">Case Study Details</a>
+                        <Link legacyBehavior href="/casestudy-details">
+                          <a>Case Study Details</a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="experties.html">Expertise</a>
+                    <Link legacyBehavior href="/experties">
+                      <a>Expertise</a>
+                    </Link>
                     <i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
                     <i className="d-lg-none d-flex bi bi-chevron-down dropdown-icon" />
                     <ul className="sub-menu">
                       <li>
-                        <a href="experties.html">Expertise One</a>
+                        <Link legacyBehavior href="/experties">
+                          <a>Expertise One</a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="expertise-two.html">Expertise Two</a>
+                        <Link legacyBehavior href="/expertise-two">
+                          <a>Expertise Two</a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="expertise-three.html">Expertise Three</a>
+                        <Link legacyBehavior href="/expertise-three">
+                          <a>Expertise Three</a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="expertise-four.html">Expertise Four</a>
+                        <Link legacyBehavior href="/expertise-four">
+                          <a>Expertise Four</a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="faq.html">Faq</a>
+                    <Link legacyBehavior href="/faq">
+                      <a>Faq</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="error.html">Error</a>
-                  </li>
-                </ul>
-              </li>
-              <li className="menu-item-has-children">
-                <a href="services.html" className="drop-down">
-                  Services
-                </a>
-                <i className="bi bi-chevron-down dropdown-icon" />
-                <ul className="sub-menu">
-                  <li>
-                    <a href="services.html">Services One</a>
-                  </li>
-                  <li>
-                    <a href="services-two.html">Services Two</a>
-                  </li>
-                  <li>
-                    <a href="services-three.html">Services Three</a>
-                  </li>
-                  <li>
-                    <a href="services-four.html">Services Four</a>
-                  </li>
-                  <li>
-                    <a href="services-five.html">Services Five</a>
-                  </li>
-                  <li>
-                    <a href="service-details.html">Services Details</a>
+                    <Link legacyBehavior href="/error">
+                      <a>Error</a>
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="menu-item-has-children">
-                <a href="portfolio-full.html">Portfolio</a>
-                <i className="bi bi-chevron-down dropdown-icon" />
-                <ul className="sub-menu">
+                <Link legacyBehavior href="/services" className="drop-down">
+                  <a>Services</a>
+                </Link>
+                <i
+                  className="bi bi-chevron-down dropdown-icon"
+                  onClick={() => handleMenu("service")}
+                />
+                <ul
+                  className={
+                    state.activeMenu === "service"
+                      ? "sub-menu d-block"
+                      : "sub-menu"
+                  }
+                >
                   <li>
-                    <a href="portfolio-masonary.html">Portfolio Masonary</a>
+                    <Link legacyBehavior href="/services">
+                      <a>Services One</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="portfolio-full.html">Portfolio Full Width</a>
+                    <Link legacyBehavior href="/services-two">
+                      <a>Services Two</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="portfolio-details.html">Portfolio Details</a>
+                    <Link legacyBehavior href="/services-three">
+                      <a>Services Three</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link legacyBehavior href="/services-four">
+                      <a>Services Four</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link legacyBehavior href="/services-five">
+                      <a>Services Five</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link legacyBehavior href="/service-details">
+                      <a>Services Details</a>
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="menu-item-has-children">
-                <a href="blog-column-three.html">Blog</a>
-                <i className="bi bi-chevron-down dropdown-icon" />
-                <ul className="sub-menu">
+                <Link legacyBehavior href="/portfolio-full">
+                  <a>Portfolio</a>
+                </Link>
+                <i
+                  className="bi bi-chevron-down dropdown-icon"
+                  onClick={() => handleMenu("portfolio")}
+                />
+                <ul
+                  className={
+                    state.activeMenu === "portfolio"
+                      ? "sub-menu d-block"
+                      : "sub-menu"
+                  }
+                >
                   <li>
-                    <a href="blog-column-three.html">Blog Column Three</a>
+                    <Link legacyBehavior href="/portfolio-masonary">
+                      <a>Portfolio Masonary</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="blog-column-two.html">Blog Column Two</a>
+                    <Link legacyBehavior href="/portfolio-full">
+                      <a>Portfolio Full Width</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="blog-left-sidebar.html">Blog Left Sidebar</a>
+                    <Link legacyBehavior href="/portfolio-details">
+                      <a>Portfolio Details</a>
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li className="menu-item-has-children">
+                <Link legacyBehavior href="/blog-column-three">
+                  <a>Blog</a>
+                </Link>
+                <i
+                  className="bi bi-chevron-down dropdown-icon"
+                  onClick={() => handleMenu("blog")}
+                />
+                <ul
+                  className={
+                    state.activeMenu === "blog"
+                      ? "sub-menu d-block"
+                      : "sub-menu"
+                  }
+                >
+                  <li>
+                    <Link legacyBehavior href="/blog-column-three">
+                      <a>Blog Column Three</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="blog-right-sidebar.html">Blog Right Sidebar</a>
+                    <Link legacyBehavior href="/blog-column-two">
+                      <a>Blog Column Two</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="blog-details.html">Blog Details</a>
+                    <Link legacyBehavior href="/blog-left-sidebar">
+                      <a>Blog Left Sidebar</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link legacyBehavior href="/blog-right-sidebar">
+                      <a>Blog Right Sidebar</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link legacyBehavior href="/blog-details">
+                      <a>Blog Details</a>
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="contact.html">Contact</a>
+                <Link legacyBehavior href="/contact">
+                  <a>Contact</a>
+                </Link>
               </li>
             </ul>
             {/* mobile-search-area */}
             <div className="d-flex justify-content-start align-items-center flex-row d-lg-none d-block mt-5">
-              <a
-                href="service-details.html"
-                className="eg-btn btn--md btn--primary-four d-flex d-lg-none"
-              >
-                Request a Quote
-              </a>
+              <Link legacyBehavior href="/service-details">
+                <a className="eg-btn btn--md btn--primary-four d-flex d-lg-none">
+                  Request a Quote
+                </a>
+              </Link>
             </div>
           </div>
           <div className="nav-right header-five-right d-flex jsutify-content-end align-items-center gap-sm-5 gap-4">
             <div className="header-icons">
-              <a href="#" className="search-btn">
+              <a href="#" className="search-btn" onClick={toggleModal}>
                 <i className="bi bi-search" />
               </a>
               <a href="#" className="cart-icon">
                 <i className="bi bi-bag-check" />
               </a>
             </div>
-            <a
-              href="service-details.html"
-              className="eg-btn btn--md btn--primary-four d-xl-flex d-none"
-            >
-              Request a Quote
-            </a>
+            <Link legacyBehavior href="/service-details">
+              <a className="eg-btn btn--md btn--primary-four d-xl-flex d-none">
+                Request a Quote
+              </a>
+            </Link>
             <div className="header-phone style-six">
               <div className="icon">
                 <i className="bx bx-phone-call" />

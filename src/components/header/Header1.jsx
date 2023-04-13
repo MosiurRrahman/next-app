@@ -410,13 +410,15 @@ function Header1() {
             </div>
           </div>
           <div className="header-logo">
-            <a href="index.html">
-              <img
-                alt="image"
-                className="img-fluid"
-                src="assets/images/bg/header-five-logo.svg"
-              />
-            </a>
+            <Link legacyBehavior href="/">
+              <a>
+                <img
+                  alt="image"
+                  className="img-fluid"
+                  src="assets/images/bg/header-five-logo.svg"
+                />
+              </a>
+            </Link>
           </div>
           <div className="nav-right header-five-right d-flex jsutify-content-end align-items-center gap-5">
             <div className="header-email d-xxl-flex  d-none">

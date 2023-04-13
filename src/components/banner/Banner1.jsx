@@ -6,12 +6,29 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-// import required modules
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import SwiperCore, {
+  Autoplay,
+  EffectFade,
+  FreeMode,
+  Navigation,
+  Pagination,
+  Thumbs,
+} from "swiper";
+
+SwiperCore.use([
+  Navigation,
+  Autoplay,
+  Navigation,
+  Pagination,
+  FreeMode,
+  Thumbs,
+  EffectFade,
+]);
 function Banner1() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const imageSlider = {
     spaceBetween: 0,
+    slidesPerView: "auto",
     speed: 1500,
     effect: "fade",
     fadeEffect: {
@@ -28,7 +45,7 @@ function Banner1() {
   };
   const thumbs = {
     spaceBetween: 10,
-    slidesPerView: 3,
+    slidesPerView: "auto",
     speed: 1500,
     freeMode: true,
     watchSlidesProgress: true,
@@ -36,7 +53,10 @@ function Banner1() {
       delay: 3000,
       disableOnInteraction: true,
     },
-
+    navigation: {
+      nextEl: ".banner-one-next",
+      prevEl: ".banner-one-prev",
+    },
     breakpoints: {
       280: {
         slidesPerView: 1,
