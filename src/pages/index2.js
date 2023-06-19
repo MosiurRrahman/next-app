@@ -1,11 +1,11 @@
 import Banner4 from "@/components/bannner/Banner4";
-import Preloader from "@/components/common/Preloader";
 import Home4Contact from "@/components/contact/Home4Contact";
 import Experts4 from "@/components/expertes/Experts4";
 import Feature4 from "@/components/features/Feature4";
 import Footer2 from "@/components/footer/Footer2";
 import Header4 from "@/components/header/Header4";
-import Insight4 from "@/components/insight/insight4";
+import Insight4 from "@/components/insight/Insight4";
+
 import Partnar4 from "@/components/partner/Partnar4";
 import Pricing4 from "@/components/pricingplan/Pricing4";
 import Service4 from "@/components/services/Service4";
