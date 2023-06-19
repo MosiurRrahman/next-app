@@ -12,12 +12,12 @@ const useMagneticHover = () => {
         const offsetX = event.clientX - x;
         const offsetY = event.clientY - y;
 
-        if (Math.abs(offsetX) <= rect.width / 2 && Math.abs(offsetY) <= rect.height / 2) {
-          item.style.transform = `translate3d(${offsetX * 0.1}px, ${offsetY * 0.1}px, 0)`;
-          item.style.transition = 'transform 0.1s';
+        if (Math.abs(offsetX) <= rect.width / 3 && Math.abs(offsetY) <= rect.height / 3) {
+          item.style.transform = `translate3d(${offsetX * 0.05}px, ${offsetY * 0.05}px, 0)`;
+          item.style.transition = 'transform 0.3s ease';
         } else {
           item.style.transform = 'translate3d(0, 0, 0)';
-          item.style.transition = 'transform 0.1s';
+          item.style.transition = 'transform 0.3s ease';
         }
       });
     };
@@ -26,7 +26,7 @@ const useMagneticHover = () => {
       const item = document.querySelector('.magnetic-item');
 
       if (item) {
-        item.style.transition = 'transform 0.5s';
+        item.style.transition = 'transform 0.3s ease';
       }
     };
 
@@ -35,7 +35,7 @@ const useMagneticHover = () => {
 
       if (item) {
         item.style.transform = 'translate3d(0, 0, 0)';
-        item.style.transition = 'transform 0.5s';
+        item.style.transition = 'transform 0.3s ease';
         setTimeout(() => {
           item.style.transition = 'none';
         }, 300);
