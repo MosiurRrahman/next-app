@@ -1,137 +1,130 @@
-import Link from "next/link";
-import React, { useMemo } from "react";
-import SwiperCore, { Autoplay, EffectFade, Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-SwiperCore.use([Navigation, Autoplay, EffectFade]);
+import Link from 'next/link'
+import React from 'react'
 
 function CaseStudy6() {
-  const sldier = useMemo(() => {
-    return {
-      slidesPerView: 1,
-      speed: 1500,
-      spaceBetween: 10,
-      slidesPerView: 1,
-      // centerSlides: true,
-      mousewheel: {
-        releaseOnEdges: false,
-      },
-      loop: true,
-      autoplay: {
-        delay: 3000, // Autoplay duration in milliseconds
-      },
-      breakpoints: {
-        280: {
-          slidesPerView: 1,
-        },
-        386: {
-          slidesPerView: 1,
-        },
-        576: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 1,
-        },
-        992: {
-          slidesPerView: 2,
-        },
-        1200: {
-          slidesPerView: 2,
-        },
-        1400: {
-          slidesPerView: 2,
-        },
-      },
-    };
-  }, []);
   return (
-    <div className="casestudy-six-section pb-120">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-lg-10">
-            <div className="section-title-seven text-lg-start text-center mb-50">
-              <span>Portfolio</span>
-              <h2>Recent Portfolio</h2>
+    <div className="home6-case-study-section sec-mar">
+    <div className="container">
+      <div className="row mb-55">
+        <div className="col-lg-12 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+          <div className="section-title-6 text-center">
+            <span>Case Study</span>
+            <h2>Case Study</h2>
+          </div>
+        </div>
+      </div>
+      <div className="row g-lg-4 gy-5 border-rights">
+        <div className="col-lg-6">
+          <div className="case-left">
+            <div className="row g-lg-4 gy-5">
+              <div className="col-lg-12 col-md-6 border-bottom1">
+                <div className="home6-case-study">
+                  <div className="case-img magnetic-item">
+                    <img className="img-fluid" src="assets/img/home-6/home6-case-01.png" alt="" />
+                  </div>
+                  <div className="case-content pb-50">
+                    <span>CLOUD HOSTING</span>
+                    <h3><Link legacyBehavior href="/case-study-details"><a>Unlocking Scalability, Reliability, and Efficiency.</a></Link></h3>
+                    <p>Integer purus odio, placerat nec rhoncus in, ullamcorper necbomi doloroei. aptent taciti sociosqu.</p>
+                    <div className="learn-btn">
+                      <Link legacyBehavior href="/case-study-details">
+                        <a className="primary-btn9">
+                        <span>Learn More</span>
+                        <svg width={16} height={14} viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 0.5L15 7.5M15 7.5L8 13.5M15 7.5L1.30274e-07 7.5" />
+                        </svg>
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-12 col-md-6">
+                <div className="home6-case-study">
+                  <div className="case-img pt-50 magnetic-item">
+                    <img className="img-fluid" src="assets/img/home-6/home6-case-02.png" alt="" />
+                  </div>
+                  <div className="case-content">
+                    <span>MOBILE DEVELOPMENT</span>
+                    <h3><Link legacyBehavior href="/case-study-details"><a>Empowering Businesses through Cutting-Edge Mobile.</a></Link></h3>
+                    <p>Integer purus odio, placerat nec rhoncus in, ullamcorper necbomi doloroei. aptent taciti sociosqu.</p>
+                    <div className="learn-btn">
+                    <Link legacyBehavior href="/case-study-details">
+                        <a className="primary-btn9">
+                        <span>Learn More</span>
+                        <svg width={16} height={14} viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 0.5L15 7.5M15 7.5L8 13.5M15 7.5L1.30274e-07 7.5" />
+                        </svg>
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-12">
-            <Swiper {...sldier} className="swiper casestudy-six-slider">
-              <div className="swiper-wrapper">
-                <SwiperSlide className="swiper-slide">
-                  <div className="casestudy-three-single sibling-three">
-                    <Link
-                      legacyBehavior
-                      href="/portfolio-details"
-                      data-cursor="View Details"
-                    >
-                      <a className="big-arrow">
-                        <img
-                          src="assets/images/icons/big-arrow.svg"
-                          alt="image"
-                        />
-                      </a>
-                    </Link>
-                    <div className="casestudy-three-image">
-                      <img src="assets/images/casestudy/case6-1.jpg" alt="" />
-                      <div className="casestudy-three-content">
-                        <p className="casestudy-three-subtitle">
-                          SEO Marketing
-                        </p>
-                        <h4 className="casestudy-three-title">
-                          <Link
-                            legacyBehavior
-                            href="/portfolio-details"
-                            data-cursor="View Details"
-                          >
-                            <a>Grow Business Site With SEO.. </a>
-                          </Link>
-                        </h4>
-                      </div>
+        <div className="col-lg-6">
+          <div className="case-right">
+            <div className="row g-lg-4 gy-5">
+              <div className="col-lg-12 col-md-6 border-bottom2">
+                <div className="home6-case-study pb-50">
+                  <div className="case-img magnetic-item">
+                    <img className="img-fluid" src="assets/img/home-6/home6-case-03.png" alt="" />
+                  </div>
+                  <div className="case-content">
+                    <span>IT CONSULTING</span>
+                    <h3><Link legacyBehavior href="/case-study-details"><a>Empowering Business Performan through Expert.</a></Link></h3>
+                    <p>Integer purus odio, placerat nec rhoncus in, ullamcorper necbomi doloroei. aptent taciti sociosqu.</p>
+                    <div className="learn-btn">
+                    <Link legacyBehavior href="/case-study-details">
+                        <a className="primary-btn9">
+                        <span>Learn More</span>
+                        <svg width={16} height={14} viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 0.5L15 7.5M15 7.5L8 13.5M15 7.5L1.30274e-07 7.5" />
+                        </svg>
+                        </a>
+                      </Link>
                     </div>
                   </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                  <div className="casestudy-three-single sibling-three">
-                    <Link
-                      legacyBehavior
-                      href="/portfolio-details"
-                      data-cursor="View Details"
-                    >
-                      <a className="big-arrow">
-                        <img
-                          src="assets/images/icons/big-arrow.svg"
-                          alt="image"
-                        />
-                      </a>
-                    </Link>
-                    <div className="casestudy-three-image">
-                      <img src="assets/images/casestudy/case6-2.jpg" alt="" />
-                      <div className="casestudy-three-content">
-                        <p className="casestudy-three-subtitle">
-                          Content Writing
-                        </p>
-                        <h4 className="casestudy-three-title">
-                          <Link
-                            legacyBehavior
-                            href="/portfolio-details"
-                            data-cursor="View Details"
-                          >
-                            <a>Content Writing Change Strategy</a>
-                          </Link>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
+                </div>
               </div>
-            </Swiper>
+              <div className="col-lg-12 col-md-6">
+                <div className="home6-case-study">
+                  <div className="case-img pt-50 magnetic-item">
+                    <img className="img-fluid" src="assets/img/home-6/home6-case-04.png" alt="" />
+                  </div>
+                  <div className="case-content">
+                    <span>CLOUD HOSTING</span>
+                    <h3><Link legacyBehavior href="/case-study-details"><a>Unlocking Scalability, Reliability, and Efficiency.</a></Link></h3>
+                    <p>Integer purus odio, placerat nec rhoncus in, ullamcorper necbomi doloroei. aptent taciti sociosqu.</p>
+                    <div className="learn-btn">
+                    <Link legacyBehavior href="/case-study-details">
+                        <a className="primary-btn9">
+                        <span>Learn More</span>
+                        <svg width={16} height={14} viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 0.5L15 7.5M15 7.5L8 13.5M15 7.5L1.30274e-07 7.5" />
+                        </svg>
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12 d-flex justify-content-center">
+          <div className="view-btn">
+            <Link legacyBehavior href="/case-study"><a className="primary-btn3">View All Case</a></Link>
           </div>
         </div>
       </div>
     </div>
-  );
+  </div>
+  )
 }
 
-export default CaseStudy6;
+export default CaseStudy6

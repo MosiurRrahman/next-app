@@ -1,368 +1,209 @@
 import Link from "next/link";
-import React, { useMemo } from "react";
-import SwiperCore, { Autoplay, EffectFade, Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-SwiperCore.use([Navigation, Autoplay, EffectFade]);
+import React from "react";
 
 function CaseStudy5() {
-  const sldider = useMemo(() => {
-    return {
-      slidesPerView: "auto",
-      speed: 1500,
-      spaceBetween: 10,
-      centerSlides: true,
-      loop: true,
-      autoplay: {
-        delay: 3000, // Autoplay duration in milliseconds
-      },
-      breakpoints: {
-        280: {
-          slidesPerView: 1,
-          loop: true,
-        },
-        386: {
-          slidesPerView: 1,
-          loop: true,
-        },
-        576: {
-          slidesPerView: 2,
-          loop: true,
-        },
-        768: {
-          slidesPerView: 2,
-          loop: true,
-        },
-        992: {
-          slidesPerView: 2,
-          loop: true,
-        },
-        1200: {
-          slidesPerView: 3,
-          loop: true,
-        },
-        1400: {
-          slidesPerView: 3,
-          loop: true,
-        },
-      },
-    };
-  }, []);
   return (
-    <div className="casestudy-section-five pl-110 pb-120 overflow-hidden">
-      <div className="container-fluid">
-        <div className="row justify-content-start mb-40">
-          <div className="col-lg-10">
-            <div className="section-title-four style-two text-lg-start text-center ">
-              <span className="linear-text-two">Case Study</span>
-              <h2>
-                Our Recent<span className="linear-text-two">Case Study</span>
-              </h2>
+    <div className="home5-case-study mb-130">
+      <div className="container">
+        <div
+          className="row mb-55  wow animate fadeInUp"
+          data-wow-delay="200ms"
+          data-wow-duration="1500ms"
+        >
+          <div className="col-lg-12 d-flex align-items-center justify-content-between flex-wrap gap-4">
+            <div className="section-title-5">
+              <span>CASE STUDY</span>
+              <h2>Success Stories</h2>
+            </div>
+            <div className="view-all-btn">
+              <Link legacyBehavior href="/case-study">
+                <a className="primary-btn3">View All Case</a>
+              </Link>
             </div>
           </div>
         </div>
         <div className="row">
-          <div className="col-12">
-            <Swiper {...sldider} className="swiper casestudy-five-slider">
-              <div className="swiper-wrapper">
-                <SwiperSlide className="swiper-slide">
-                  <div className="casestudy-five-single">
-                    <div className="casestudy-five-image">
+          <div className="col-lg-12">
+            <div
+              className="single-case-study wow animate fadeInUp"
+              data-wow-delay="200ms"
+              data-wow-duration="1500ms"
+            >
+              <div className="row g-4">
+                <div className="col-lg-5 d-flex align-items-center">
+                  <div className="case-study-content">
+                    <span>Web Development</span>
+                    <h3>
+                      <Link legacyBehavior href="/case-study-details">
+                        <a>Building a Scalable Cloud Infrastructure</a>
+                      </Link>
+                    </h3>
+                  </div>
+                </div>
+                <div className="col-lg-7">
+                  <div className="case-study-img-and-btn">
+                    <div className="case-img magnetic-item">
                       <img
-                        src="assets/images/casestudy/casestudy5-1.jpg"
-                        alt="image"
+                        className="img-fluid"
+                        src="assets/img/home-5/home5-case-01.png"
+                        alt=""
                       />
                     </div>
-                    <div className="casestudy-five-content">
-                      <span className="category">SEO Marketing</span>
-                      <h4>
-                        <Link
-                          legacyBehavior
-                          href="/casestudy-details"
-                          data-cursor="View Details"
-                        >
-                          <a>Grow Your Business With Digital Marketing.</a>
-                        </Link>
-                      </h4>
-                      <div className="explore-button with-border">
-                        <Link legacyBehavior href="/casestudy-details">
-                          <a>
-                            <img
-                              src="assets/images/icons/button-arrow-linear.svg"
-                              alt="image"
-                            />
-                            Explore More
-                          </a>
-                        </Link>
-                      </div>
+                    <div className="learn-more-btn">
+                      <Link legacyBehavior href="/case-study-details">
+                        <a className="primary-btn8">
+                          <svg
+                            width={12}
+                            height={12}
+                            viewBox="0 0 13 13"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M0 1H12M12 1V13M12 1L0.5 12" />
+                          </svg>
+                          LEARN MORE
+                        </a>
+                      </Link>
                     </div>
                   </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                  <div className="casestudy-five-single">
-                    <div className="casestudy-five-image">
-                      <img
-                        src="assets/images/casestudy/casestudy5-2.jpg"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="casestudy-five-content">
-                      <span className="category">Digital Marketing</span>
-                      <h4>
-                        <Link
-                          legacyBehavior
-                          href="/casestudy-details"
-                          data-cursor="View Details"
-                        >
-                          <a>How to Improve Your Digital Stretegy.</a>
-                        </Link>
-                      </h4>
-                      <div className="explore-button with-border">
-                        <Link legacyBehavior href="/casestudy-details">
-                          <a>
-                            <img
-                              src="assets/images/icons/button-arrow-linear.svg"
-                              alt="image"
-                            />
-                            Explore More
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                  <div className="casestudy-five-single">
-                    <div className="casestudy-five-image">
-                      <img
-                        src="assets/images/casestudy/casestudy5-3.jpg"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="casestudy-five-content">
-                      <span className="category">Development</span>
-                      <h4>
-                        <Link
-                          legacyBehavior
-                          href="/casestudy-details"
-                          data-cursor="View Details"
-                        >
-                          <a>Grow Your Company with Development.</a>
-                        </Link>
-                      </h4>
-                      <div className="explore-button with-border">
-                        <Link legacyBehavior href="/casestudy-details">
-                          <a>
-                            <img
-                              src="assets/images/icons/button-arrow-linear.svg"
-                              alt="image"
-                            />
-                            Explore More
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                  <div className="casestudy-five-single">
-                    <div className="casestudy-five-image">
-                      <img
-                        src="assets/images/casestudy/casestudy5-2.jpg"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="casestudy-five-content">
-                      <span className="category">Branding</span>
-                      <h4>
-                        <Link
-                          legacyBehavior
-                          href="/casestudy-details"
-                          data-cursor="View Details"
-                        >
-                          <a> Grow Your Business Policy in Branding. </a>
-                        </Link>
-                      </h4>
-                      <div className="explore-button with-border">
-                        <Link legacyBehavior href="/casestudy-details">
-                          <a>
-                            <img
-                              src="assets/images/icons/button-arrow-linear.svg"
-                              alt="image"
-                            />
-                            Explore More
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                  <div className="casestudy-five-single">
-                    <div className="casestudy-five-image">
-                      <img
-                        src="assets/images/casestudy/casestudy5-3.jpg"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="casestudy-five-content">
-                      <span className="category">Development</span>
-                      <h4>
-                        <Link
-                          legacyBehavior
-                          href="/casestudy-details"
-                          data-cursor="View Details"
-                        >
-                          <a>Grow Your Company with Development.</a>
-                        </Link>
-                      </h4>
-                      <div className="explore-button with-border">
-                        <Link legacyBehavior href="/casestudy-details">
-                          <a>
-                            <img
-                              src="assets/images/icons/button-arrow-linear.svg"
-                              alt="image"
-                            />
-                            Explore More
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                  <div className="casestudy-five-single">
-                    <div className="casestudy-five-image">
-                      <img
-                        src="assets/images/casestudy/casestudy5-2.jpg"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="casestudy-five-content">
-                      <span className="category">Digital Marketing</span>
-                      <h4>
-                        <Link
-                          legacyBehavior
-                          href="/casestudy-details"
-                          data-cursor="View Details"
-                        >
-                          <a>How to Improve Your Digital Stretegy.</a>
-                        </Link>
-                      </h4>
-                      <div className="explore-button with-border">
-                        <Link legacyBehavior href="/casestudy-details">
-                          <a>
-                            <img
-                              src="assets/images/icons/button-arrow-linear.svg"
-                              alt="image"
-                            />
-                            Explore More
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                  <div className="casestudy-five-single">
-                    <div className="casestudy-five-image">
-                      <img
-                        src="assets/images/casestudy/casestudy5-3.jpg"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="casestudy-five-content">
-                      <span className="category">Development</span>
-                      <h4>
-                        <Link
-                          legacyBehavior
-                          href="/casestudy-details"
-                          data-cursor="View Details"
-                        >
-                          <a>Grow Your Company with Development.</a>
-                        </Link>
-                      </h4>
-                      <div className="explore-button with-border">
-                        <Link legacyBehavior href="/casestudy-details">
-                          <a>
-                            <img
-                              src="assets/images/icons/button-arrow-linear.svg"
-                              alt="image"
-                            />
-                            Explore More
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                  <div className="casestudy-five-single">
-                    <div className="casestudy-five-image">
-                      <img
-                        src="assets/images/casestudy/casestudy5-2.jpg"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="casestudy-five-content">
-                      <span className="category">Branding</span>
-                      <h4>
-                        <Link
-                          legacyBehavior
-                          href="/casestudy-details"
-                          data-cursor="View Details"
-                        >
-                          <a> Grow Your Business Policy in Branding. </a>
-                        </Link>
-                      </h4>
-                      <div className="explore-button with-border">
-                        <Link legacyBehavior href="/casestudy-details">
-                          <a>
-                            <img
-                              src="assets/images/icons/button-arrow-linear.svg"
-                              alt="image"
-                            />
-                            Explore More
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                  <div className="casestudy-five-single">
-                    <div className="casestudy-five-image">
-                      <img
-                        src="assets/images/casestudy/casestudy5-3.jpg"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="casestudy-five-content">
-                      <span className="category">Development</span>
-                      <h4>
-                        <Link
-                          legacyBehavior
-                          href="/casestudy-details"
-                          data-cursor="View Details"
-                        >
-                          <a>Grow Your Company with Development.</a>
-                        </Link>
-                      </h4>
-                      <div className="explore-button with-border">
-                        <Link legacyBehavior href="/casestudy-details">
-                          <a>
-                            <img
-                              src="assets/images/icons/button-arrow-linear.svg"
-                              alt="image"
-                            />
-                            Explore More
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
+                </div>
               </div>
-            </Swiper>
+            </div>
+            <div
+              className="single-case-study wow animate fadeInUp"
+              data-wow-delay="300ms"
+              data-wow-duration="1500ms"
+            >
+              <div className="row g-4">
+                <div className="col-lg-5 d-flex align-items-center">
+                  <div className="case-study-content">
+                    <span>Software development</span>
+                    <h3>
+                      <Link legacyBehavior href="/case-study-details">
+                        <a>Leveraging Data Analytics for Business Insights</a>
+                      </Link>
+                    </h3>
+                  </div>
+                </div>
+                <div className="col-lg-7">
+                  <div className="case-study-img-and-btn">
+                    <div className="case-img magnetic-item">
+                      <img
+                        className="img-fluid"
+                        src="assets/img/home-5/home5-case-02.png"
+                        alt=""
+                      />
+                    </div>
+                    <div className="learn-more-btn">
+                      <Link legacyBehavior href="/case-study-details">
+                        <a className="primary-btn8">
+                          <svg
+                            width={12}
+                            height={12}
+                            viewBox="0 0 13 13"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M0 1H12M12 1V13M12 1L0.5 12" />
+                          </svg>
+                          LEARN MORE
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="single-case-study wow animate fadeInUp"
+              data-wow-delay="400ms"
+              data-wow-duration="1500ms"
+            >
+              <div className="row g-4">
+                <div className="col-lg-5 d-flex align-items-center">
+                  <div className="case-study-content">
+                    <span>Digital marketing</span>
+                    <h3>
+                      <Link legacyBehavior href="/case-study-details">
+                        <a>Optimizing IT Infrastructure for Cost Efficiency</a>
+                      </Link>
+                    </h3>
+                  </div>
+                </div>
+                <div className="col-lg-7">
+                  <div className="case-study-img-and-btn">
+                    <div className="case-img magnetic-item">
+                      <img
+                        className="img-fluid"
+                        src="assets/img/home-5/home5-case-03.png"
+                        alt=""
+                      />
+                    </div>
+                    <div className="learn-more-btn">
+                      <Link legacyBehavior href="/case-study-details">
+                        <a className="primary-btn8">
+                          <svg
+                            width={12}
+                            height={12}
+                            viewBox="0 0 13 13"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M0 1H12M12 1V13M12 1L0.5 12" />
+                          </svg>
+                          LEARN MORE
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="single-case-study wow animate fadeInUp"
+              data-wow-delay="500ms"
+              data-wow-duration="1500ms"
+            >
+              <div className="row g-4">
+                <div className="col-lg-5 d-flex align-items-center">
+                  <div className="case-study-content">
+                    <span>Data analytics</span>
+                    <h3>
+                      <Link legacyBehavior href="/case-study-details">
+                        <a>Enhancing Customer Engagement</a>
+                      </Link>
+                    </h3>
+                  </div>
+                </div>
+                <div className="col-lg-7">
+                  <div className="case-study-img-and-btn">
+                    <div className="case-img magnetic-item">
+                      <img
+                        className="img-fluid"
+                        src="assets/img/home-5/home5-case-04.png"
+                        alt=""
+                      />
+                    </div>
+                    <div className="learn-more-btn">
+                      <Link legacyBehavior href="/case-study-details">
+                        <a className="primary-btn8">
+                          <svg
+                            width={12}
+                            height={12}
+                            viewBox="0 0 13 13"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M0 1H12M12 1V13M12 1L0.5 12" />
+                          </svg>
+                          LEARN MORE
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
