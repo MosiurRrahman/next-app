@@ -7,7 +7,9 @@ import "../../public/assets/css/style2.css";
 import 'node_modules/react-modal-video/css/modal-video.css';
 import { useEffect } from "react";
 import Head from "next/head";
+import useMagneticHover from "@/hooks/useMagneticHover";
 export default function App({ Component, pageProps }) {
+  useMagneticHover();
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap");
   }, []);
