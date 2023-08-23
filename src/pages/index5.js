@@ -2,11 +2,11 @@ import React, { useEffect } from 'react'
 import { useRouter } from 'next/router';
 import Topbar from '../components/Home5/Topbar'
 import Header from '../components/Home5/Header'
-import Banner from '../components/home5/Banner/index.jsx';
-import FeaturedCar from '../components/home5/FeaturedCar/index.jsx';
-import Brand from '../components/home5/Brand/index.jsx';
-import WhyDrivco from '../components/home5/WhyDrivco/index';
-import HowItWork from '../components/home5/HowItWork/index';
+// import Banner from '../components/home5/Banner/index.jsx';
+// import FeaturedCar from '../components/home5/FeaturedCar/index.jsx';
+// import Brand from '../components/home5/Brand/index.jsx';
+// import WhyDrivco from '../components/home5/WhyDrivco/index';
+// import HowItWork from '../components/home5/HowItWork/index';
 import TopUseCar from '../components/home5/TopUseCar/index';
 import UpCommingCar from '../components/home5/UpCommingCar/index';
 import Partnar from '../components/home5/Partnar/index';
@@ -27,12 +27,12 @@ function HomePage5() {
     <>
      <Topbar/> 
      <Header/>
-     <Banner/>
-     <FeaturedCar/>
-     <Brand/>
-     <WhyDrivco/>
+     {/* <Banner/> */}
+     {/* <FeaturedCar/> */}
+     {/* <Brand/> */}
+     {/* <WhyDrivco/> */}
      <TopUseCar/>
-     <HowItWork/>
+     {/* <HowItWork/> */}
      <UpCommingCar/>
      <Partnar/>
      <CompareCar/>
