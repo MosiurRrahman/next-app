@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import { useRouter } from 'next/router';
 import Topbar from '../components/Home5/Topbar'
 import Header from '../components/Home5/Header'
-import Banner from '../components/home5/Banner/index';
-import FeaturedCar from '../components/home5/FeaturedCar/index';
-import Brands from '../components/home5/Brand/index';
+import Banner from '../components/home5/Banner/index.jsx';
+import FeaturedCar from '../components/home5/FeaturedCar/index.jsx';
+import Brand from '../components/home5/Brand/index.jsx';
 import WhyDrivco from '../components/home5/WhyDrivco/index';
 import HowItWork from '../components/home5/HowItWork/index';
 import TopUseCar from '../components/home5/TopUseCar/index';
@@ -29,7 +29,7 @@ function HomePage5() {
      <Header/>
      <Banner/>
      <FeaturedCar/>
-     <Brands/>
+     <Brand/>
      <WhyDrivco/>
      <TopUseCar/>
      <HowItWork/>
