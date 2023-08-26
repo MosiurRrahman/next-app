@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Index() {
+function index() {
   return (
     <div className="home5-why-drivco-area pt-90 pb-90 mb-100">
   <div className="container">
@@ -59,4 +59,4 @@ function Index() {
   )
 }
 
-export default Index
+export default index

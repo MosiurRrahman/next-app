@@ -3,7 +3,7 @@ import MainLayout from "../layout/MainLayout";
 import OfferCategoryFiler from "../utils/OfferCategoryFiler";
 import SelectComponent from "../utils/SelectComponent";
 import CustomarFeedback from "../utils/CustomarFeedback";
-
+import Link from 'next/link'
 function Shoppage() {
   return (
     <MainLayout>
@@ -33,13 +33,13 @@ function Shoppage() {
                     <h6 className="product-widget-title mb-20">Product Category</h6>
                     <div className="checkbox-container">
                         <ul className="wp-block-categoris-cloud">
-                        <li><a href="shop.html" className="active"><span>Car Servicing</span> <span className="number-of-categoris">(30)</span></a></li>
-                        <li><a href="shop.html" className="active"><span>Car Buying Advice</span> <span className="number-of-categoris">(18)</span> </a></li>
-                        <li><a href="shop.html" className="active"><span>Car Rental</span> <span className="number-of-categoris">(21)</span></a></li>
-                        <li><a href="shop.html" className="active"><span>Driving</span> <span className="number-of-categoris">(25)</span></a></li>
-                        <li><a href="shop.html" className="active"><span>Brand Car</span> <span className="number-of-categoris">(29)</span></a></li>
-                        <li><a href="shop.html" className="active"><span>Tata</span> <span className="number-of-categoris">(2,554)</span></a></li>
-                        <li><a href="shop.html" className="active"><span>Hyundai</span> <span className="number-of-categoris">(1,556)</span></a></li>
+                        <li><Link legacyBehavior href="/shop"><a className="active"><span>Car Servicing</span> <span className="number-of-categoris">(30)</span></a></Link></li>
+                        <li><Link legacyBehavior href="/shop"><a className="active"><span>Car Buying Advice</span> <span className="number-of-categoris">(18)</span> </a></Link></li>
+                        <li><Link legacyBehavior href="/shop"><a className="active"><span>Car Rental</span> <span className="number-of-categoris">(21)</span></a></Link></li>
+                        <li><Link legacyBehavior href="/shop"><a className="active"><span>Driving</span> <span className="number-of-categoris">(25)</span></a></Link></li>
+                        <li><Link legacyBehavior href="/shop"><a className="active"><span>Brand Car</span> <span className="number-of-categoris">(29)</span></a></Link></li>
+                        <li><Link legacyBehavior href="/shop"><a className="active"><span>Tata</span> <span className="number-of-categoris">(2,554)</span></a></Link></li>
+                        <li><Link legacyBehavior href="/shop"><a className="active"><span>Hyundai</span> <span className="number-of-categoris">(1,556)</span></a></Link></li>
                         </ul>
                     </div>
                     </div>
@@ -156,7 +156,7 @@ function Shoppage() {
                             <div className="price">
                             <h6>$214.00</h6>
                             </div>
-                            <h6><a href="product-details.html">Steering Rack Advance Auto Parts.</a></h6>
+                            <h6><Link legacyBehavior href="/product-details"><a>Steering Rack Advance Auto Parts.</a></Link></h6>
                         </div>
                         </li>
                         <li className="recent-product">
@@ -167,7 +167,7 @@ function Shoppage() {
                             <div className="price">
                             <h6>$214.00</h6>
                             </div>
-                            <h6><a href="product-details.html">New Oil Filter Fit For Ys400.</a></h6>
+                            <h6><Link legacyBehavior href="/product-details"><a>New Oil Filter Fit For Ys400.</a></Link></h6>
                         </div>
                         </li>
                         <li className="recent-product">
@@ -178,7 +178,7 @@ function Shoppage() {
                             <div className="price">
                             <h6>$214.00</h6>
                             </div>
-                            <h6><a href="product-details.html">Tech master Carbon ceramic brakes.</a></h6>
+                            <h6><Link legacyBehavior href="/product-details"><a>Tech master Carbon ceramic brakes.</a></Link></h6>
                         </div>
                         </li>
                     </ul>
@@ -216,7 +216,7 @@ function Shoppage() {
                         </ul>
                         <span>(4.5)</span>
                         </div>
-                        <h6><a href="product-details.html">Steering Rack Advance Auto Parts is a retailer.</a>
+                        <h6><Link legacyBehavior href="/product-details"><a>Steering Rack Advance Auto Parts is a retailer.</a></Link>
                         </h6>
                         <div className="content-btm">
                         <div className="price">
@@ -254,7 +254,7 @@ function Shoppage() {
                         </ul>
                         <span>(4.5)</span>
                         </div>
-                        <h6><a href="product-details.html">Jekit 355*32mm assembled brake disks.</a>
+                        <h6><Link legacyBehavior href="/product-details"><a>Jekit 355*32mm assembled brake disks.</a></Link>
                         </h6>
                         <div className="content-btm">
                         <div className="price">
@@ -292,7 +292,7 @@ function Shoppage() {
                         </ul>
                         <span>(4.5)</span>
                         </div>
-                        <h6><a href="product-details.html">Pump Water Audi Seat Skoda Vw Skf Vkpc 81620.</a>
+                        <h6><Link legacyBehavior href="/product-details"><a>Pump Water Audi Seat Skoda Vw Skf Vkpc 81620.</a></Link>
                         </h6>
                         <div className="content-btm">
                         <div className="price">
@@ -330,7 +330,7 @@ function Shoppage() {
                         </ul>
                         <span>(4.5)</span>
                         </div>
-                        <h6><a href="product-details.html">CNR spark plug Motorcycle Engine Parts Spark Plug</a>
+                        <h6><Link legacyBehavior href="/product-details"><a>CNR spark plug Motorcycle Engine Parts Spark Plug</a></Link>
                         </h6>
                         <div className="content-btm">
                         <div className="price">
@@ -368,7 +368,7 @@ function Shoppage() {
                         </ul>
                         <span>(4.5)</span>
                         </div>
-                        <h6><a href="product-details.html">Tech master New Brand Carbon ceramic brakes. </a>
+                        <h6><Link legacyBehavior href="/product-details"><a>Tech master New Brand Carbon ceramic brakes. </a></Link>
                         </h6>
                         <div className="content-btm">
                         <div className="price">
@@ -406,7 +406,7 @@ function Shoppage() {
                         </ul>
                         <span>(4.5)</span>
                         </div>
-                        <h6><a href="product-details.html">WJB WA512187 - Rear Wheel Hub Bearing Assembly.</a>
+                        <h6><Link legacyBehavior href="/product-details"><a>WJB WA512187 - Rear Wheel Hub Bearing Assembly.</a></Link>
                         </h6>
                         <div className="content-btm">
                         <div className="price">
@@ -444,7 +444,7 @@ function Shoppage() {
                         </ul>
                         <span>(4.5)</span>
                         </div>
-                        <h6><a href="product-details.html">Comficent_GB Car Turbo Air Freshener Turbo Car.</a>
+                        <h6><Link legacyBehavior href="/product-details"><a>Comficent_GB Car Turbo Air Freshener Turbo Car.</a></Link>
                         </h6>
                         <div className="content-btm">
                         <div className="price">
@@ -482,7 +482,7 @@ function Shoppage() {
                         </ul>
                         <span>(4.5)</span>
                         </div>
-                        <h6><a href="product-details.html">New Oil Filter Fit For Ys400 Ys700 Msu 500 Utv700.</a>
+                        <h6><Link legacyBehavior href="/product-details"><a>New Oil Filter Fit For Ys400 Ys700 Msu 500 Utv700.</a></Link>
                         </h6>
                         <div className="content-btm">
                         <div className="price">
@@ -520,7 +520,7 @@ function Shoppage() {
                         </ul>
                         <span>(4.5)</span>
                         </div>
-                        <h6><a href="product-details.html">CNBF Dlying Auto Parts Brake Disc Rotor.</a>
+                        <h6><Link legacyBehavior href="/product-details"><a>CNBF Dlying Auto Parts Brake Disc Rotor.</a></Link>
                         </h6>
                         <div className="content-btm">
                         <div className="price">

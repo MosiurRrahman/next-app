@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import SelectComponent from "@/src/utils/SelectComponent";
-
+import Link from "next/link";
 SwiperCore.use([Pagination, Autoplay, EffectFade, Navigation]);
 
 function index() {
@@ -17,20 +17,17 @@ function index() {
     const selideSettings = useMemo(()=>{
         return{
             slidesPerView: 3,
-		speed: 1500,
-		spaceBetween: 15,
+            speed: 1500,
+            spaceBetween: 15,
 
-		loop: false,
-		autoplay: {
-			delay: 3000, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
-		},
-		navigation: {
-			nextEl: ".next-10",
-			prevEl: ".prev-10",
-		},
-        }
-    })
+            loop: false,
+            autoplay: false,
+            navigation: {
+              nextEl: ".next-10",
+              prevEl: ".prev-10",
+            },
+                }
+            })
     const swiperSlideItems = [
         {
           iconSrc: 'assets/img/home4/icon/check.svg',
@@ -87,29 +84,34 @@ function index() {
         </div>
         <div className="row row-cols-lg-3 row-cols-md-4 row-cols-sm-3 row-cols-2 g-4 justify-content-center">
           <div className="col">
-            <a href="#" className="car-category text-center">
-              <div className="icon">
-                <img src="assets/img/home2/icon/suzuki.svg" alt="" />
-              </div>
-              <div className="content">
-                <h6>Available Cars</h6>
-                <span>(5463)</span>
-              </div>
-            </a>
+            <Link legacyBehavior href="/single-brand-category">
+              <a  className="car-category text-center">
+                <div className="icon">
+                  <img src="assets/img/home2/icon/suzuki.svg" alt="" />
+                </div>
+                <div className="content">
+                  <h6>Available Cars</h6>
+                  <span>(5463)</span>
+                </div>
+              </a>
+            </Link>
           </div>
           <div className="col">
-            <a href="#" className="car-category text-center">
-              <div className="icon">
-                <img src="assets/img/home2/icon/toyota.svg" alt="" />
-              </div>
-              <div className="content">
-                <h6>Available Cars</h6>
-                <span>(5463)</span>
-              </div>
-            </a>
+            <Link legacyBehavior href="/single-brand-category">
+              <a className="car-category text-center">
+                <div className="icon">
+                  <img src="assets/img/home2/icon/toyota.svg" alt="" />
+                </div>
+                <div className="content">
+                  <h6>Available Cars</h6>
+                  <span>(5463)</span>
+                </div>
+              </a>
+            </Link>
           </div>
           <div className="col">
-            <a href="#" className="car-category text-center">
+            <Link legacyBehavior href="/single-brand-category">
+              <a className="car-category text-center">
               <div className="icon">
                 <img src="assets/img/home2/icon/tesla.svg" alt="" />
               </div>
@@ -117,10 +119,12 @@ function index() {
                 <h6>Available Cars</h6>
                 <span>(5463)</span>
               </div>
-            </a>
+              </a>
+            </Link>
           </div>
           <div className="col">
-            <a href="#" className="car-category text-center">
+            <Link legacyBehavior href="/single-brand-category" className="car-category text-center">
+              <a className="car-category text-center">
               <div className="icon">
                 <img src="assets/img/home2/icon/mazda.svg" alt="" />
               </div>
@@ -128,10 +132,12 @@ function index() {
                 <h6>Available Cars</h6>
                 <span>(5463)</span>
               </div>
-            </a>
+              </a>
+            </Link>
           </div>
           <div className="col">
-            <a href="#" className="car-category text-center">
+            <Link legacyBehavior href="/single-brand-category">
+              <a className="car-category text-center">
               <div className="icon">
                 <img src="assets/img/home2/icon/audi.svg" alt="" />
               </div>
@@ -139,10 +145,12 @@ function index() {
                 <h6>Available Cars</h6>
                 <span>(5463)</span>
               </div>
-            </a>
+              </a>
+            </Link>
           </div>
           <div className="col">
-            <a href="#" className="car-category text-center">
+            <Link legacyBehavior href="/single-brand-category">
+              <a className="car-category text-center">
               <div className="icon">
                 <img src="assets/img/home2/icon/tata.svg" alt="" />
               </div>
@@ -150,10 +158,12 @@ function index() {
                 <h6>Available Cars</h6>
                 <span>(5463)</span>
               </div>
-            </a>
+              </a>
+            </Link>
           </div>
           <div className="col">
-            <a href="#" className="car-category text-center">
+            <Link legacyBehavior href="/single-brand-category">
+              <a className="car-category text-center">
               <div className="icon">
                 <img src="assets/img/home2/icon/mercedes.svg" alt="" />
               </div>
@@ -161,10 +171,12 @@ function index() {
                 <h6>Available Cars</h6>
                 <span>(5463)</span>
               </div>
-            </a>
+              </a>
+            </Link>
           </div>
           <div className="col">
-            <a href="#" className="car-category text-center">
+            <Link legacyBehavior href="/single-brand-category">
+            <a className="car-category text-center">
               <div className="icon">
                 <img src="assets/img/home2/icon/mitsubidhi.svg" alt="" />
               </div>
@@ -173,9 +185,11 @@ function index() {
                 <span>(5463)</span>
               </div>
             </a>
+            </Link>
           </div>
           <div className="col">
-            <a href="#" className="car-category text-center">
+            <Link legacyBehavior href="/single-brand-category">
+            <a className="car-category text-center">
               <div className="icon">
                 <img src="assets/img/home2/icon/nissan.svg" alt="" />
               </div>
@@ -184,10 +198,11 @@ function index() {
                 <span>(5463)</span>
               </div>
             </a>
+            </Link>
           </div>
         </div>
         <div className="explore-btn">
-          <a href="#">Explore All Category <i className="bi bi-arrow-right" /></a>
+          <Link legacyBehavior href="/brand-category"><a>Explore All Category <i className="bi bi-arrow-right" /></a></Link>
         </div>
       </div>
       <div className="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
@@ -210,23 +225,22 @@ function index() {
                   <Swiper {...selideSettings} className="swiper categoty-filter-slider">
                     <div className="swiper-wrapper">
                     {swiperSlideItems.map((item, index) => (
-        <SwiperSlide
-          key={index}
-          className={`swiper-slide select-wrap ${activeIndex === index ? 'selected' : ''}`}
-          onClick={() => handleSlideClick(index)}
-        >
-          <div className="single-category">
-            <div className="check-icon">
-              <img src={item.iconSrc} alt={item.iconAlt} />
-            </div>
-            <div className="icon">
-              <img src={item.categoryIconSrc} alt={item.categoryIconAlt} />
-            </div>
-            <h6>{item.category}</h6>
-          </div>
-        </SwiperSlide>
-      ))}
-                  
+                      <SwiperSlide
+                        key={index}
+                        className={`swiper-slide select-wrap ${activeIndex === index ? 'selected' : ''}`}
+                        onClick={() => handleSlideClick(index)}
+                      >
+                        <div className="single-category">
+                          <div className="check-icon">
+                            <img src={item.iconSrc} alt={item.iconAlt} />
+                          </div>
+                          <div className="icon">
+                            <img src={item.categoryIconSrc} alt={item.categoryIconAlt} />
+                          </div>
+                          <h6>{item.category}</h6>
+                        </div>
+                      </SwiperSlide>
+                    ))}
                     </div>
                   </Swiper>
                 </div>

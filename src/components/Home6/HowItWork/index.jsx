@@ -1,6 +1,8 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import ModalVideo from 'react-modal-video';
+import 'react-modal-video/css/modal-video.css';
 function index() {
+  const [isOpen, setOpen] = useState(false);
   return (
     <div className="how-it-work-section style-3 mb-100">
     <div className="container">
@@ -11,7 +13,7 @@ function index() {
             <p>Here are some of the featured cars in different categories</p>
           </div>
           <div className="video-btn">
-            <a className="video-popup" href="https://www.youtube.com/watch?v=u31qwQUeGuM&pp=ygURcGxhY2Vob2xkZXIgdmlkZW8%3D"><i className="bi bi-play-circle" /> Watch video</a>
+            <a onClick={() => setOpen(true)} style={{cursor:"pointer"}} className="video-popup" ><i className="bi bi-play-circle" /> Watch video</a>
           </div>
         </div>
       </div>
@@ -95,6 +97,15 @@ function index() {
         </div>
       </div>
     </div>
+    <React.Fragment>
+      <ModalVideo
+				channel="youtube"
+				youtube={{ mute: 0, autoplay: 0 }}
+				isOpen={isOpen}
+				videoId="L61p2uyiMSo"
+				onClose={() => setOpen(false)} 
+			/>
+    </React.Fragment>
   </div>
   
   )

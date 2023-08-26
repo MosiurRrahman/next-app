@@ -24466,4 +24466,8 @@ button {
 .marquee_text2 {
   display: flex;
   gap: 50px;
+}
+
+.slider-btn {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

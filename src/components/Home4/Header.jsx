@@ -83,127 +83,127 @@ function Header() {
     <ul className="menu-list">
     <li className={`menu-item-has-children ${ currentRoute === "/" ? "active" : ""}`}>
             <a href="#" className={`drop-down ${state.activeMenu === "home-one" ? "active" : ""}`}>Home</a><i  onClick={() => toggleMenu("home-one")} className={`bi bi-${state.activeMenu === "home-one" ?"dash":"plus"} dropdown-icon`} />
-            <ul className={`sub-menu ${ state.activeMenu === "home-one" ? "d-block" : ""}`}>
+          <ul className={`sub-menu ${ state.activeMenu === "home-one" ? "d-block" : ""}`}>
           <li><Link legacyBehavior href="/"><a>Home 01</a></Link></li>
           <li><Link legacyBehavior href="/index2"><a>Home 02</a></Link></li>
           <li><Link legacyBehavior href="/index3"><a>Home 03</a></Link></li>
-          <li><Link legacyBehavior href="/index4"><a>Home 04</a></Link></li>
+          <li><Link legacyBehavior href="/index4"><a className="active">Home 04</a></Link></li>
           <li><Link legacyBehavior href="/index5"><a>Home 05</a></Link></li>
           <li><Link legacyBehavior href="/index6"><a>Home 06</a></Link></li>
         </ul>
       </li>
       <li className="position-inherit">
-        <a href="#" className="drop-down">NEW CAR</a>
-        <i onClick={() => toggleMenu("new-car")} className={`bi bi-${state.activeMenu === "new-car" ?"dash":"plus"} dropdown-icon`} />
+            <a href="#" className="drop-down">NEW CAR</a>
+            <i onClick={() => toggleMenu("new-car")} className={`bi bi-${state.activeMenu === "new-car" ?"dash":"plus"} dropdown-icon`} />
             <div className={`mega-menu ${state.activeMenu === "new-car"?"d-block":""}`}>
-          <ul className="menu-row">
-            <li className="menu-single-item">
-              <h6>Browse by Brand</h6>
-              <ul>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Merchedes Benz (10) <img src="assets/img/menu-icon/merchedes.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Volkswagen (10) <img src="assets/img/menu-icon/volkswagen.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Ferrari (10) <img src="assets/img/menu-icon/ferrari.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Mazda (10) <img src="assets/img/menu-icon/mazda.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Mitsubishi (10) <img src="assets/img/menu-icon/mitsubishi.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Lamborghini (10) <img src="assets/img/menu-icon/lamborghini.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Tesla (10) <img src="assets/img/menu-icon/tesla.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Toyota (10) <img src="assets/img/menu-icon/toyota.svg" alt="" /></a></Link></li>
-                <li className="explore-more-btn">
-                  <Link legacyBehavior href="/brand-category"><a>Explore More <i className="bi bi-arrow-right" /></a></Link>
+              <ul className="menu-row">
+                <li className="menu-single-item">
+                  <h6>Browse by Brand</h6>
+                  <ul>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Merchedes Benz (10) <img src="assets/img/menu-icon/merchedes.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Volkswagen (10) <img src="assets/img/menu-icon/volkswagen.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Ferrari (10) <img src="assets/img/menu-icon/ferrari.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Mazda (10) <img src="assets/img/menu-icon/mazda.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Mitsubishi (10) <img src="assets/img/menu-icon/mitsubishi.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Lamborghini (10) <img src="assets/img/menu-icon/lamborghini.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Tesla (10) <img src="assets/img/menu-icon/tesla.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Toyota (10) <img src="assets/img/menu-icon/toyota.svg" alt="" /></a></Link></li>
+                    <div className="explore-more-btn">
+                      <Link legacyBehavior href="/brand-category"><a>Explore More <i className="bi bi-arrow-right" /></a></Link>
+                    </div>
+                  </ul>
+                </li>
+                <li className="menu-single-item">
+                  <h6>Popular Models</h6>
+                  <ul>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Toyota Camry</a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Ford Mustang</a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Volkswagen Golf</a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Mercedes C-Class</a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Audi A4</a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Jeep Wrangler</a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Mazda CX-5</a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Chevrolet Corvette</a></Link></li>
+                    <div className="explore-more-btn">
+                      <Link legacyBehavior href="/brand-category"><a>Explore More <i className="bi bi-arrow-right" /></a></Link>
+                    </div>
+                  </ul>
+                </li>
+                <li className="menu-single-item">
+                  <h6>Popular Cities </h6>
+                  <ul>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Panama City (10)<img src="assets/img/menu-icon/panama.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Sydne City (10)<img src="assets/img/menu-icon/sydne.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Melbourne City (10)<img src="assets/img/menu-icon/melbourne.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>New Delhi (10)<img src="assets/img/menu-icon/delhi.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>New York (10)<img src="assets/img/menu-icon/newYork.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Menchester City (10)<img src="assets/img/menu-icon/menchester.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>City of Greece (10)<img src="assets/img/menu-icon/greece.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>City of Abu-dabi (10)<img src="assets/img/menu-icon/abudabi.svg" alt="" /></a></Link></li>
+                    <div className="explore-more-btn">
+                      <Link legacyBehavior href="/brand-category"><a>Explore More <i className="bi bi-arrow-right" /></a></Link>
+                    </div>
+                  </ul>
                 </li>
               </ul>
-            </li>
-            <li className="menu-single-item">
-              <h6>Popular Models</h6>
-              <ul>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Toyota Camry</a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Ford Mustang</a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Volkswagen Golf</a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Mercedes C-Class</a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Audi A4</a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Jeep Wrangler</a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Mazda CX-5</a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Chevrolet Corvette</a></Link></li>
-                <li className="explore-more-btn">
-                  <Link legacyBehavior href="/brand-category"><a>Explore More <i className="bi bi-arrow-right" /></a></Link>
-                </li>
-              </ul>
-            </li>
-            <li className="menu-single-item">
-              <h6>Popular Cities </h6>
-              <ul>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Panama City (10)<img src="assets/img/menu-icon/panama.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Sydne City (10)<img src="assets/img/menu-icon/sydne.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Melbourne City (10)<img src="assets/img/menu-icon/melbourne.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>New Delhi (10)<img src="assets/img/menu-icon/delhi.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>New York (10)<img src="assets/img/menu-icon/newYork.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Menchester City (10)<img src="assets/img/menu-icon/menchester.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>City of Greece (10)<img src="assets/img/menu-icon/greece.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>City of Abu-dabi (10)<img src="assets/img/menu-icon/abudabi.svg" alt="" /></a></Link></li>
-                <li className="explore-more-btn">
-                  <Link legacyBehavior href="/brand-category"><a>Explore More <i className="bi bi-arrow-right" /></a></Link>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li className="position-inherit">
-        <a href="#" className="drop-down">USED CAR</a>
-        <i onClick={() => toggleMenu("use-car")} className={`bi bi-${state.activeMenu === "use-car" ?"dash":"plus"} dropdown-icon`} />
+            </div>
+          </li>
+          <li className="position-inherit">
+            <a href="#" className="drop-down">USED CAR</a>
+            <i onClick={() => toggleMenu("use-car")} className={`bi bi-${state.activeMenu === "use-car" ?"dash":"plus"} dropdown-icon`} />
             <div className={`mega-menu ${state.activeMenu === "use-car"?"d-block":""}`}>
-          <ul className="menu-row">
-            <li className="menu-single-item">
-              <h6>Browse by Brand</h6>
-              <ul>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Merchedes Benz (10) <img src="assets/img/menu-icon/merchedes.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Volkswagen (10) <img src="assets/img/menu-icon/volkswagen.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Ferrari (10) <img src="assets/img/menu-icon/ferrari.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Mazda (10) <img src="assets/img/menu-icon/mazda.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Mitsubishi (10) <img src="assets/img/menu-icon/mitsubishi.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Lamborghini (10) <img src="assets/img/menu-icon/lamborghini.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Tesla (10) <img src="assets/img/menu-icon/tesla.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Toyota (10) <img src="assets/img/menu-icon/toyota.svg" alt="" /></a></Link></li>
-                <li className="explore-more-btn">
-                  <Link legacyBehavior href="/brand-category"><a>Explore More <i className="bi bi-arrow-right" /></a></Link>
+              <ul className="menu-row">
+                <li className="menu-single-item">
+                  <h6>Browse by Brand</h6>
+                  <ul>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Merchedes Benz (10) <img src="assets/img/menu-icon/merchedes.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Volkswagen (10) <img src="assets/img/menu-icon/volkswagen.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Ferrari (10) <img src="assets/img/menu-icon/ferrari.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Mazda (10) <img src="assets/img/menu-icon/mazda.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Mitsubishi (10) <img src="assets/img/menu-icon/mitsubishi.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Lamborghini (10) <img src="assets/img/menu-icon/lamborghini.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Tesla (10) <img src="assets/img/menu-icon/tesla.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Toyota (10) <img src="assets/img/menu-icon/toyota.svg" alt="" /></a></Link></li>
+                    <div className="explore-more-btn">
+                      <Link legacyBehavior href="/brand-category"><a>Explore More <i className="bi bi-arrow-right" /></a></Link>
+                    </div>
+                  </ul>
+                </li>
+                <li className="menu-single-item">
+                  <h6>Popular Models</h6>
+                  <ul>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Toyota Camry</a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Ford Mustang</a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Volkswagen Golf</a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Mercedes C-Class</a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Audi A4</a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Jeep Wrangler</a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Mazda CX-5</a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Chevrolet Corvette</a></Link></li>
+                    <div className="explore-more-btn">
+                      <Link legacyBehavior href="/brand-category"><a>Explore More <i className="bi bi-arrow-right" /></a></Link>
+                    </div>
+                  </ul>
+                </li>
+                <li className="menu-single-item">
+                  <h6>Popular Cities </h6>
+                  <ul>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Panama City (10)<img src="assets/img/menu-icon/panama.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Sydne City (10)<img src="assets/img/menu-icon/sydne.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Melbourne City (10)<img src="assets/img/menu-icon/melbourne.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>New Delhi (10)<img src="assets/img/menu-icon/delhi.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>New York (10)<img src="assets/img/menu-icon/newYork.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>Menchester City (10)<img src="assets/img/menu-icon/menchester.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>City of Greece (10)<img src="assets/img/menu-icon/greece.svg" alt="" /></a></Link></li>
+                    <li><Link legacyBehavior href="/single-brand-category"><a>City of Abu-dabi (10)<img src="assets/img/menu-icon/abudabi.svg" alt="" /></a></Link></li>
+                    <div className="explore-more-btn">
+                      <Link legacyBehavior href="/brand-category"><a>Explore More <i className="bi bi-arrow-right" /></a></Link>
+                    </div>
+                  </ul>
                 </li>
               </ul>
-            </li>
-            <li className="menu-single-item">
-              <h6>Popular Models</h6>
-              <ul>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Toyota Camry</a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Ford Mustang</a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Volkswagen Golf</a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Mercedes C-Class</a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Audi A4</a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Jeep Wrangler</a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Mazda CX-5</a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Chevrolet Corvette</a></Link></li>
-                <li className="explore-more-btn">
-                  <Link legacyBehavior href="/brand-category"><a>Explore More <i className="bi bi-arrow-right" /></a></Link>
-                </li>
-              </ul>
-            </li>
-            <li className="menu-single-item">
-              <h6>Popular Cities </h6>
-              <ul>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Panama City (10)<img src="assets/img/menu-icon/panama.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Sydne City (10)<img src="assets/img/menu-icon/sydne.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Melbourne City (10)<img src="assets/img/menu-icon/melbourne.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>New Delhi (10)<img src="assets/img/menu-icon/delhi.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>New York (10)<img src="assets/img/menu-icon/newYork.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>Menchester City (10)<img src="assets/img/menu-icon/menchester.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>City of Greece (10)<img src="assets/img/menu-icon/greece.svg" alt="" /></a></Link></li>
-                <li><Link legacyBehavior href="/single-brand-category"><a>City of Abu-dabi (10)<img src="assets/img/menu-icon/abudabi.svg" alt="" /></a></Link></li>
-                <li className="explore-more-btn">
-                  <Link legacyBehavior href="/brand-category"><a>Explore More <i className="bi bi-arrow-right" /></a></Link>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </li>
+            </div>
+          </li>
       <li className="menu-item-has-children">
           <a href="#" className="drop-down">Pages</a><i onClick={() => toggleMenu("pages")} className={`bi bi-${state.activeMenu === "pages" ?"dash":"plus"} dropdown-icon`} />
           <ul className={`sub-menu ${ state.activeMenu === "pages" ? "d-block" : ""}`}>

@@ -105,29 +105,9 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-01.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-01.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-01.png" alt="image" />
-                              </div>
                               <div className="swiper-slide">
                                 <img src="assets/img/home6/product-img-01.png" alt="image" />
                               </div>
@@ -172,29 +152,9 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-02.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-02.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-02.png" alt="image" />
-                              </div>
                               <div className="swiper-slide">
                                 <img src="assets/img/home6/product-img-02.png" alt="image" />
                               </div>
@@ -239,29 +199,9 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-03.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-03.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-03.png" alt="image" />
-                              </div>
                               <div className="swiper-slide">
                                 <img src="assets/img/home6/product-img-03.png" alt="image" />
                               </div>
@@ -306,29 +246,9 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-04.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-04.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-04.png" alt="image" />
-                              </div>
                               <div className="swiper-slide">
                                 <img src="assets/img/home6/product-img-04.png" alt="image" />
                               </div>
@@ -373,29 +293,9 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-05.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-05.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-05.png" alt="image" />
-                              </div>
                               <div className="swiper-slide">
                                 <img src="assets/img/home6/product-img-05.png" alt="image" />
                               </div>
@@ -440,18 +340,7 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
                               <div className="swiper-slide">
@@ -508,29 +397,9 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-01.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-01.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-01.png" alt="image" />
-                              </div>
                               <div className="swiper-slide">
                                 <img src="assets/img/home6/product-img-01.png" alt="image" />
                               </div>
@@ -575,29 +444,9 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-02.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-02.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-02.png" alt="image" />
-                              </div>
                               <div className="swiper-slide">
                                 <img src="assets/img/home6/product-img-02.png" alt="image" />
                               </div>
@@ -642,29 +491,9 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-03.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-03.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-03.png" alt="image" />
-                              </div>
                               <div className="swiper-slide">
                                 <img src="assets/img/home6/product-img-03.png" alt="image" />
                               </div>
@@ -709,29 +538,9 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-04.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-04.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-04.png" alt="image" />
-                              </div>
                               <div className="swiper-slide">
                                 <img src="assets/img/home6/product-img-04.png" alt="image" />
                               </div>
@@ -776,29 +585,9 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-05.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-05.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-05.png" alt="image" />
-                              </div>
                               <div className="swiper-slide">
                                 <img src="assets/img/home6/product-img-05.png" alt="image" />
                               </div>
@@ -843,18 +632,7 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
                               <div className="swiper-slide">
@@ -911,29 +689,9 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-01.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-01.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-01.png" alt="image" />
-                              </div>
                               <div className="swiper-slide">
                                 <img src="assets/img/home6/product-img-01.png" alt="image" />
                               </div>
@@ -978,29 +736,9 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-02.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-02.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-02.png" alt="image" />
-                              </div>
                               <div className="swiper-slide">
                                 <img src="assets/img/home6/product-img-02.png" alt="image" />
                               </div>
@@ -1045,29 +783,9 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-03.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-03.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-03.png" alt="image" />
-                              </div>
                               <div className="swiper-slide">
                                 <img src="assets/img/home6/product-img-03.png" alt="image" />
                               </div>
@@ -1112,29 +830,9 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-04.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-04.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-04.png" alt="image" />
-                              </div>
                               <div className="swiper-slide">
                                 <img src="assets/img/home6/product-img-04.png" alt="image" />
                               </div>
@@ -1179,29 +877,9 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-05.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-05.png" alt="image" />
-                              </div>
-                              <div className="swiper-slide">
-                                <img src="assets/img/home6/product-img-05.png" alt="image" />
-                              </div>
                               <div className="swiper-slide">
                                 <img src="assets/img/home6/product-img-05.png" alt="image" />
                               </div>
@@ -1246,18 +924,7 @@ function index() {
                               </path>
                             </svg>
                           </a>
-                          <div className="slider-btn-group">
-                            <div className="product-stand-next swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                              </svg>
-                            </div>
-                            <div className="product-stand-prev swiper-arrow">
-                              <svg width={8} height={13} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                              </svg>
-                            </div>
-                          </div>
+                                
                           <div className="swiper product-img-slider">
                             <div className="swiper-wrapper">
                               <div className="swiper-slide">

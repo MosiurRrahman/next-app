@@ -191,7 +191,7 @@ function CustomarFeedback() {
                 </div>
                 <div className="view-btn-area">
                   <p>Thousand of People Reviews to Us</p>
-                  <a className="view-btn" href="customer-review.html">View All Review</a>
+                  <Link  legacyBehaviour  href="/customer-review"><a className="view-btn">View All Review</a></Link>
                 </div>
                 <div className="slider-btn next-4 d-md-flex d-none">
                   <svg width={11} height={19} viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">

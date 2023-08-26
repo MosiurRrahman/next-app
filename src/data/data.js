@@ -754,9 +754,9 @@ export const breadcrumbData = [
   {
     id:3,
     path:"/car-deatils",
-    sub_title:"About Us",
-    title:"Our Brief History",
-    img_src:"assets/img/inner-page/inner-banner-img.png"
+    sub_title:"$34,637.00",
+    title:"Lamborghini Aventador",
+    img_src:"assets/img/inner-page/car-dt-banner-img.png"
   },
   {
     id:4,
@@ -855,6 +855,20 @@ export const breadcrumbData = [
     sub_title:"Product Checkout",
     title:"Processed Checkout",
     img_src:"assets/img/inner-page/product-dt-bannner-img.png"
+  },
+  {
+    id:17,
+    path:"/compare",
+    sub_title:"Compare Cars",
+    title:"Find The Best Car",
+    img_src:"assets/img/inner-page/inner-banner-img.png"
+  },
+  {
+    id:18,
+    path:"/car-auction-details",
+    sub_title:"$34,637.00",
+    title:"Lamborghini Aventador",
+    img_src:"assets/img/inner-page/car-dt-banner-img.png"
   },
 ]
 
