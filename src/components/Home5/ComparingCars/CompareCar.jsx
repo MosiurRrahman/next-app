@@ -1,6 +1,6 @@
 import React from 'react'
 
-function index() {
+function CompareCar() {
   return (
     <div className="home5-compare-car-section mb-100">
     <div className="modal compare-modal fade" id="compareModal01" tabIndex={-1} aria-labelledby="compareModal01Label" aria-hidden="true">
@@ -246,4 +246,4 @@ function index() {
   )
 }
 
-export default index
+export default CompareCar

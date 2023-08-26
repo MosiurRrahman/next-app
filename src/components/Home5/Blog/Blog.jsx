@@ -1,6 +1,6 @@
 import React from 'react'
 
-function index() {
+function Blog() {
   return (
     <div className="news-section five mb-100">
     <div className="container">
@@ -134,4 +134,4 @@ function index() {
   )
 }
 
-export default index
+export default Blog

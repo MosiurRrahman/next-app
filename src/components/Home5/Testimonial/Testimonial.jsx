@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 SwiperCore.use([Pagination, Autoplay, EffectFade, Navigation]);
 
 
-function index() {
+function Testimonial() {
     const slideSettings = useMemo(()=>{
         return {
             slidesPerView: 3,
@@ -167,4 +167,4 @@ function index() {
   )
 }
 
-export default index
+export default Testimonial

@@ -11,6 +11,10 @@ import WhyDrivco from '../components/Home5/WhyDrivco/WhyChooseUs'
 import TopUseCar from '../components/Home5/TopUseCar/TopUseCar'
 import UpCommingCar from '../components/Home5/UpCommingCar/UpCommingCar'
 import Partner from "../components/Home5/Partnar/Partner";
+import CompareCar from "../components/Home5/ComparingCars/CompareCar";
+import CustomarReview from "../components/Home5/Testimonial/Testimonial";
+import Blog from "../components/Home5/Blog/Blog";
+import Footer from "../components/Home5/Footer";
 function HomePage5() {
   const router = useRouter();
   const currentRoute = router.pathname;
@@ -31,6 +35,10 @@ function HomePage5() {
       <TopUseCar/>
       <UpCommingCar/>
       <Partner/>
+      <CompareCar/>
+      <CustomarReview/>
+      <Blog/>
+      <Footer/>
     </>
   );
 }
