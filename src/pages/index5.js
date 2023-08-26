@@ -5,9 +5,6 @@ import Header from "../components/Home5/Header";
 import Banner from '../components/Home5/Banner/index'
 import CarFeature from '../components/Home5/FeaturedCar/index'
 import BrandCategory from '../components/Home5/Brand/index'
-import Whychoose from '../components/Home5/WhyDrivco/index'
-import RecentCar from '../components/Home5/RecentCar/index'
-import HowItWork from '../components/Home5/HowItWork/index'
 function HomePage5() {
   const router = useRouter();
   const currentRoute = router.pathname;
@@ -22,7 +19,7 @@ function HomePage5() {
       <Banner/>
       <CarFeature/>
       <BrandCategory/>
-      <Whychoose/>
+      {/* <Whychoose/> */}
       {/* <RecentCar/>
       <HowItWork/> */}
     </>
