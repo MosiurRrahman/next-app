@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useReducer, useRef } from "react";
-import CardMenu from "../Header/CardMenu";
+import CardMenu from "./CardMenu";
 
 const initialState = {
   activeMenu: "",
