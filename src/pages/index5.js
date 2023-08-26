@@ -8,6 +8,9 @@ import BrandCategory from '../components/Home5/Brand/index'
 import RecentCar from '../components/Home5/RecentCar/index'
 import HowItWork from '../components/Home5/HowItWork/index'
 import WhyDrivco from '../components/Home5/WhyDrivco/WhyChooseUs'
+import TopUseCar from '../components/Home5/TopUseCar/TopUseCar'
+import UpCommingCar from '../components/Home5/UpCommingCar/UpCommingCar'
+import Partner from "../components/Home5/Partnar/Partner";
 function HomePage5() {
   const router = useRouter();
   const currentRoute = router.pathname;
@@ -25,6 +28,9 @@ function HomePage5() {
       <WhyDrivco/>
       <RecentCar/>
       <HowItWork/>
+      <TopUseCar/>
+      <UpCommingCar/>
+      <Partner/>
     </>
   );
 }

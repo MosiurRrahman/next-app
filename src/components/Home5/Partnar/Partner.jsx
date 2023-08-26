@@ -1,7 +1,7 @@
 import React from 'react'
 import Marquee from 'react-fast-marquee'
 
-function index() {
+function Partner() {
   return (
     <div className="trusted-partner-section mb-100">
   <div className="container">
@@ -37,4 +37,4 @@ function index() {
   )
 }
 
-export default index
+export default Partner

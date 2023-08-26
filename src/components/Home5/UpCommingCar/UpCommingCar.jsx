@@ -3,7 +3,7 @@ import SwiperCore, { Autoplay, EffectFade, Navigation, Pagination } from "swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 SwiperCore.use([Pagination, Autoplay, EffectFade, Navigation]);
 
-function index() {
+function UpCommingCar() {
     const slideSettings = useMemo(()=>{
         return {
             speed: 1500,
@@ -591,4 +591,4 @@ function index() {
   )
 }
 
-export default index
+export default UpCommingCar

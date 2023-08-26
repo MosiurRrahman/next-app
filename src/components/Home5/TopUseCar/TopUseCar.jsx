@@ -7,7 +7,7 @@ import SwiperCore, { Autoplay, EffectFade, Navigation, Pagination } from "swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 SwiperCore.use([Pagination, Autoplay, EffectFade, Navigation]);
 
-function index() {
+function TopUseCar() {
   const setting = {
     rows: 2,
 		dots: false,
@@ -727,4 +727,4 @@ function index() {
   )
 }
 
-export default index
+export default TopUseCar
