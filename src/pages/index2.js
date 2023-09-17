@@ -1,42 +1,36 @@
 import React from "react";
-import Footer1 from "../components/Footer/Footer1";
-import Header from "../components/Home2/Header";
-import Banner from "../components/Home2/Banner";
-import TestSlider from "../components/Home2/TestSlider";
-import DreamCar from "../components/Home2/DreamCar";
-import FeatureCars from "../components/Home2/FeaturedCars/index";
-import InerBanner from "../components/Home2/InnerBanner";
-import RecentLaunchCars from "../components/Home2/RecentLaunchedCars";
-import BroseUsedCar from "../components/Home2/BrowseUsedCar";
-import HowItWorks from "../components/Home2/HowDoesItWork";
-import UpCommingsCar from "../components/Home2/UpcomingCars";
-import OurTrustedPartner from "../components/Home2/OurTrustedPartners";
-import CompareCarWtihBrand from "../components/Home2/ComparingCarWithBrand";
-import Testimonial from "../components/Home2/Testimonial";
-import Blog from "../components/Home2/Blog";
-import Modals from "../components/Home1/Modals";
+import Banner2 from "../components/banner/Banner2";
+import PopularCategory from "../components/home2/PopularCategory";
+import FeatureProduct from "../components/home2/FeatureProduct";
+import ProductBanner from "../components/home2/ProductBanner";
+import SuggestSection from "../components/home2/SuggestSection";
+import OfferBanner from "../components/home2/OfferBanner";
+import TopSellingProduct from "../components/home2/TopSellingProduct";
+import BrandSection from "../components/home2/BrandSection";
+import Testimonial from "../components/home2/Testimonial";
+import Newsletter from "../components/home2/Newsletter";
+import LatestArticle from "../components/home2/LatestArticle";
+import BannerFooter from "../components/home2/BannerFooter";
+import ProductViewModal from "../components/common/ProductViewModal";
 
-function HomePage2() {
+const HomePageTwo = () => {
   return (
     <>
-      <Modals />
-      <Header />
-      <Banner />
-      <TestSlider />
-      <DreamCar />
-      <FeatureCars />
-      <InerBanner />
-      <RecentLaunchCars />
-      <BroseUsedCar />
-      <HowItWorks />
-      <UpCommingsCar />
-      <OurTrustedPartner />
-      <CompareCarWtihBrand />
+      <ProductViewModal />
+      <Banner2 />
+      <PopularCategory />
+      <FeatureProduct />
+      <ProductBanner />
+      <SuggestSection />
+      <OfferBanner />
+      <TopSellingProduct />
+      <BrandSection />
       <Testimonial />
-      <Blog />
-      <Footer1 />
+      <Newsletter />
+      <LatestArticle />
+      <BannerFooter />
     </>
   );
-}
+};
 
-export default HomePage2;
+export default HomePageTwo;
