@@ -33,7 +33,7 @@ const ProductThumbBottom = () => {
       prevEl: ".exclusive-prev-btn",
     },
         }
-    })
+      },[])
   return (
     <>
       <div className="shop-details-top-section mt-110 mb-110"> 

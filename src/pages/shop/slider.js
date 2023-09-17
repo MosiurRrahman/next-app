@@ -48,7 +48,7 @@ const Slider = () => {
             },
             },
         }
-    })
+      },[])
     const faceNav = {
         navigation: {
             nextEl: ".face-next",

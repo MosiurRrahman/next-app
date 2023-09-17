@@ -49,7 +49,7 @@ const BestBrand = () => {
         },
       },
       }
-    })
+    },[])
   return (
     <div className={`best-brand-section mb-110 ${currentPath === "/about-us"? "style-2":""}`}>
       <div className="container-fluid">

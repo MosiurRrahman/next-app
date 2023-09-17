@@ -98,7 +98,7 @@ const CategoryOnTop = () => {
           },
         },
       }
-    })
+    },[])
   return (
     <>
      <div className="category-on-top-section">

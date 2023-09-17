@@ -53,7 +53,7 @@ const NewestProduct = () => {
         },
       },
     }
-  })
+  },[])
   return (
     <>
     <div className="newest-product-section mb-110">

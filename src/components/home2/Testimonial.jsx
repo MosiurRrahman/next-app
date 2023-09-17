@@ -48,7 +48,7 @@ const Testimonial = () => {
               },
             },
         }
-    })
+      },[])
 
   return (
     <div className="testimonial-section mb-110">

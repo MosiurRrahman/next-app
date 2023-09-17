@@ -26,7 +26,7 @@ const Banner = () => {
         clickable: true,
       },
     };
-  });
+  },[])
   return (
     <>
       <div className="banner-section">

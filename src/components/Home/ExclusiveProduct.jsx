@@ -27,7 +27,7 @@ const ExclusiveProduct = () => {
         prevEl: ".exclusive-prev-btn",
       },
       }
-  })
+    },[])
   return (
     <div className="exclusive-product-section mb-110">
       <img src="/assets/img/home1/icon/vector-3.svg" alt="" className="vector3" />

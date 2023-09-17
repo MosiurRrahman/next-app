@@ -49,7 +49,7 @@ const InstagramSection = () => {
         },
       },
     }
-  })
+  },[])
   return (
     <>
     <div className="instagram-section mb-110">

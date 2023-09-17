@@ -56,7 +56,7 @@ const ProductFullWidth = () => {
       },
     },
         }
-    })
+      },[])
   return (
     <>
       <div className="product-full-width-section mb-90"> 

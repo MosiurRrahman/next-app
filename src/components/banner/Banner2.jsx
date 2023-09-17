@@ -26,7 +26,7 @@ const Banner2 = () => {
         clickable: true,
       },
     };
-  });
+  },[])
   return (
     <div className="banner-2-section mb-110 ">
       <div className="container-fluid p-0">

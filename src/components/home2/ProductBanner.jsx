@@ -27,7 +27,7 @@ const ProductBanner = () => {
             prevEl: ".pd-banner-prev-btn",
           },
         }
-    })
+      },[])
 
     
   return (
