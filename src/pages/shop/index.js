@@ -9,7 +9,7 @@ import Slider from '@mui/material/Slider';
 function valuetext(value) {
   return `${value}°C`;
 }
-const index = () => {
+const ShopPage = () => {
   const [isOpenSiebar, setIsOpenSidebar] = useState(false);
   const sidebarRef = useRef(null);
   const endTime = "2023-10-23";
@@ -1018,4 +1018,4 @@ const index = () => {
   )
 }
 
-export default index
+export default ShopPage
