@@ -117,7 +117,7 @@ const BlogGridLefSidebarPage = () => {
           </div>
           <div className="col-lg-8 order-lg-2 order-1">
             <div className="row g-4 mb-80">
-            {articleCardData.slice(0,6).map((e)=><div className="col-md-6">
+            {articleCardData.slice(0,6).map((e)=><div key={e.id} className="col-md-6">
                 <div className="article-card">
                   <div className="article-image">
                     <Link legacyBehavior href="/blog-details">

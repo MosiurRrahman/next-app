@@ -63,7 +63,7 @@ const SpecialOffer = () => {
       },
     ],
     }
-  })
+  },[])
   return (
     <div className="special-offer-section mb-110"> 
       <div className="container">
