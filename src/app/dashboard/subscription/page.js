@@ -2,7 +2,7 @@
 import { useSidebar } from '@/context/SidebarContext';
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   const { isOpen } = useSidebar();
   return (
     <div className={`main-content ${isOpen?"slide":""}`}>
@@ -323,4 +323,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

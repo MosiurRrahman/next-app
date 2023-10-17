@@ -3,7 +3,7 @@ import { useSidebar } from '@/context/SidebarContext';
 import SelectComponent from '@/uitils/SelectComponent'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   const { isOpen } = useSidebar();
 
   return (
@@ -305,4 +305,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
