@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
 "use client"
+import React, { useState } from 'react'
 import Breadcrumb from '@/components/common/Breadcrumb'
 import Footer from '@/components/common/Footer'
 import Header from '@/components/common/Header'
