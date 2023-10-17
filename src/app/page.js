@@ -14,6 +14,13 @@ import Home1Team from "@/components/view/team/Home1Team";
 import Home1Testimonial from "@/components/view/testimonial/Home1Testimonial";
 import Home1WhyChoose from "@/components/view/whyChoose/Home1WhyChoose";
 
+export const metadata = {
+  title: "Neckle - Real Estate Next Template",
+  description: "Global Description",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
 export default function Home() {
   return (
     <>

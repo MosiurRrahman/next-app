@@ -14,10 +14,14 @@ import SwiperCore, {
 SwiperCore.use([Pagination, Autoplay, EffectFade, Navigation]);
 import Lightbox from "yet-another-react-lightbox";
 import {Fullscreen,Share,Video } from "yet-another-react-lightbox/plugins";
-
 import "yet-another-react-lightbox/styles.css";
 import Home1Testimonial from '@/components/view/testimonial/Home1Testimonial';
 import Home1Blog from '@/components/view/blog/Home1Blog';
+
+
+
+
+
 function Page() {
   const [isOpen, setOpen] = useState(false);
   const [isOpenimg, setOpenimg] = useState({

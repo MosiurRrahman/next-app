@@ -1,13 +1,21 @@
 
-"use client"
-import Breadcrumb from "@/components/common/Breadcrumb";
-import Footer from "@/components/common/Footer";
-import Header from "@/components/common/Header";
-import PartnerSlide from "@/components/view/Partner/PartnerSlide";
-import SelectComponent from "@/uitils/SelectComponent";
+
 import Link from "next/link";
 import React from "react";
-import Marquee from "react-fast-marquee";
+import Breadcrumb from "@/components/common/Breadcrumb";
+import PartnerSlide from "@/components/view/Partner/PartnerSlide";
+import SelectComponent from "@/uitils/SelectComponent";
+
+
+
+export const metadata = {
+  title: "Neckle - Real Estate Next Template",
+  description: "Global Description",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
+
 const Page = () => {
 
   return (
@@ -18,49 +26,49 @@ const Page = () => {
         pageTitle="Property Listing System"
       />
       <div className="home6-search-area two mb-100">
-  <div className="container">
-    <form>
-      <div className="row row-cols-xl-5 row-cols-md-3 row-cols-sm-2 row-cols-1 g-4 justify-content-center">
-        <div className="col">
-          <div className="form-inner">
-            <label>Property Type*</label>
-            <SelectComponent options={["For Sale","Devlopment","For Rent"]} placeholder={"Select"} />
-          </div>
-        </div>
-        <div className="col">
-          <div className="form-inner">
-            <label>Location*</label>
-            <SelectComponent options={["Panama City","Chicago City","New Delhi","Sydne City"]} placeholder={"Select"} />
+        <div className="container">
+          <form>
+            <div className="row row-cols-xl-5 row-cols-md-3 row-cols-sm-2 row-cols-1 g-4 justify-content-center">
+              <div className="col">
+                <div className="form-inner">
+                  <label>Property Type*</label>
+                  <SelectComponent options={["For Sale","Devlopment","For Rent"]} placeholder={"Select"} />
+                </div>
+              </div>
+              <div className="col">
+                <div className="form-inner">
+                  <label>Location*</label>
+                  <SelectComponent options={["Panama City","Chicago City","New Delhi","Sydne City"]} placeholder={"Select"} />
 
-          </div>
+                </div>
+              </div>
+              <div className="col">
+                <div className="form-inner">
+                  <label>Min. Bed*</label>
+                  <SelectComponent options={["03 Beds","04 Beds","05 Beds","05 Beds"]} placeholder={"Select"} />
+                
+                </div>
+              </div>
+              <div className="col">
+                <div className="form-inner">
+                  <label>Price*</label>
+                  <SelectComponent options={["$4,345 - $12,456","$7,345 - $17,456","$9,345 - $19,456"]} placeholder={"Select"} />
+                
+                </div>
+              </div>
+              <div className="col d-flex align-items-end">
+                <div className="form-inner d-flex align-items-center justify-content-md-between">
+                  <button className="primary-btn3" type="submit">
+                    Sale
+                  </button>
+                  <button className="primary-btn6" type="submit">
+                    Rent
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
-        <div className="col">
-          <div className="form-inner">
-            <label>Min. Bed*</label>
-            <SelectComponent options={["03 Beds","04 Beds","05 Beds","05 Beds"]} placeholder={"Select"} />
-          
-          </div>
-        </div>
-        <div className="col">
-          <div className="form-inner">
-            <label>Price*</label>
-            <SelectComponent options={["$4,345 - $12,456","$7,345 - $17,456","$9,345 - $19,456"]} placeholder={"Select"} />
-           
-          </div>
-        </div>
-        <div className="col d-flex align-items-end">
-          <div className="form-inner d-flex align-items-center justify-content-md-between">
-            <button className="primary-btn3" type="submit">
-              Sale
-            </button>
-            <button className="primary-btn6" type="submit">
-              Rent
-            </button>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
       </div>
       <div className="product-page no-sidebar mb-100">
         <div className="container">

@@ -20,6 +20,9 @@ export default function RootLayout({ children }) {
   });
   return (
     <html lang="en">
+      <head>
+      <link rel="icon" href="/public/assets/img/sm-logo.svg" sizes="any" />
+      </head>
       <body className={`${pathname === "/index5" ? "home-5" : ""}`}>
         {children}
         <Script src="../../public/assets/js/bootstrap.min.js" />

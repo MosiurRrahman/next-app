@@ -1,3 +1,4 @@
+import React from "react";
 import Footer from "@/components/common/Footer";
 import DreamPropertySearch from "@/components/home/DreamPropertySearch";
 import Banner2 from "@/components/view/Banner/Banner2";
@@ -10,7 +11,13 @@ import Home2rcenetPropertyTab from "@/components/view/recentProperty/Home2rcenet
 import Home2RecomendadeApertment from "@/components/view/recommendedApartment/Home2RecomendadeApertment";
 import Home2Testimonial from "@/components/view/testimonial/Home2Testimonial";
 import Home2WhyChoose from "@/components/view/whyChoose/Home2WhyChoose";
-import React from "react";
+export const metadata = {
+  title: "Neckle - Real Estate Next Template",
+  description: "Global Description",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
 
 const Page = () => {
   return (

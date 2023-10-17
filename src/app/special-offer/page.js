@@ -1,36 +1,44 @@
 "use client"
+import Link from 'next/link'
+import React, { useEffect, useState } from 'react'
 import Breadcrumb from '@/components/common/Breadcrumb'
 import Footer from '@/components/common/Footer'
 import Header from '@/components/common/Header'
 import Topbar from '@/components/common/Topbar'
 import SelectComponent from '@/uitils/SelectComponent'
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+
+export const metadata = {
+    title: "Neckle - Real Estate Next Template",
+    description: "Global Description",
+    icons: {
+      icon: "/assets/img/sm-logo.svg",
+    },
+  };
 
 const Page = () => {
+
     const [isGridView, setIsGridView] = useState(true);
     useEffect(()=>{
         const saveView = localStorage.getItem('viewPreference');
         if(saveView==="list"){
             setIsGridView(false);
         }
-  },[])
+        },[])
+
     const handleGridClick = () => {
         setIsGridView(true);
         localStorage.setItem("viewPreference", "grid")
       };
     
-      const handleListClick = () => {
-        setIsGridView(false);
-        localStorage.setItem("viewPreference","list")
-      };
-      
-      const handleOptionChange = (option) => {
-        setActiveOption(option);
-      };
+    const handleListClick = () => {
+    setIsGridView(false);
+    localStorage.setItem("viewPreference","list")
+    };
+    
+    const handleOptionChange = (option) => {
+    setActiveOption(option);
+    };
   
-
-
 
   return (
     <>

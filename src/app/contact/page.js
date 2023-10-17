@@ -4,6 +4,15 @@ import Header from "@/components/common/Header";
 import Topbar from "@/components/common/Topbar";
 import React from "react";
 
+
+export const metadata = {
+  title: "Neckle - Real Estate Next Template",
+  description: "Global Description",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
+
 const Page = () => {
   return (
     <>

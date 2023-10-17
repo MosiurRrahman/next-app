@@ -1,3 +1,4 @@
+import React from 'react'
 import Home4About from '@/components/about/Home4About'
 import Home4PropertyByCity from '@/components/home/Home4PropertyByCity'
 import Home4Banner from '@/components/view/Banner/Home4Banner'
@@ -9,7 +10,13 @@ import Home4RecentProperty from '@/components/view/recentProperty/Home4RecentPro
 import Home4Team from '@/components/view/team/Home4Team'
 import Home4Testimonial from '@/components/view/testimonial/Home4Testimonial'
 import Home4WhyChoose from '@/components/view/whyChoose/Home4WhyChoose'
-import React from 'react'
+export const metadata = {
+  title: "Neckle - Real Estate Next Template",
+  description: "Global Description",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
 
 const Page = () => {
   return (

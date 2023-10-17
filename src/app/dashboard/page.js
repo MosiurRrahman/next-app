@@ -3,6 +3,7 @@ import { useSidebar } from '@/context/SidebarContext';
 import Link from 'next/link'
 import React, { Suspense } from 'react'
 
+
 const Page = () => {
     const { isOpen } = useSidebar();
 

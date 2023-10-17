@@ -5,6 +5,14 @@ import Topbar from '@/components/common/Topbar'
 import Link from 'next/link'
 import React from 'react'
 
+export const metadata = {
+  title: "Neckle - Real Estate Next Template",
+  description: "Global Description",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
+
 const Page = () => {
   return (
     <>

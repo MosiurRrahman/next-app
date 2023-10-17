@@ -388,15 +388,15 @@ const Home2Header = () => {
         <div className="topbar-header">
         <div className="top-bar style-2">
             <div className="company-logo">
-            <a href="index.html"><img src="assets/img/home2/icon/home2-logo.svg" alt="" /></a>
+            <Link legacyBehavior href="/"><a><img src="assets/img/home2/icon/home2-logo.svg" alt="" /></a></Link>
             </div>
             <div className="top-bar-items">
             <ul>
                 <li>
-                <a href="poperty-listing-no-sidebar.html">Newly Listed Home</a>
+                <Link legacyBehavior href="/poperty-list"><a>Newly Listed Home</a></Link>
                 </li>
                 <li>
-                <a href="poperty-listing-no-sidebar.html">Lowest Price</a>
+                <Link legacyBehavior href="/poperty-list"><a>Lowest Price</a></Link>
                 </li>
             </ul>
             </div>
@@ -418,7 +418,7 @@ const Home2Header = () => {
         </div>
         <header ref={headerRef} className={`header-area style-2 ${state.scrollY > 10 ?"sticky":""}`}>
             <div className="header-logo d-lg-none d-flex">
-            <a href="index.html"><img alt="image" className="img-fluid" src="assets/img/home2/icon/home2-logo.svg" /></a>
+            <Link legacyBehavior href="/"><a><img alt="image" className="img-fluid" src="assets/img/home2/icon/home2-logo.svg" /></a></Link>
             </div>
             <div className="menu-button sidebar-button mobile-menu-btn" onClick={toggleLeftSidebar}>
             <svg width={15} height={12} viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg">
@@ -429,7 +429,7 @@ const Home2Header = () => {
             <div className="main-menu">
             <div className="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
                 <div className="mobile-logo-wrap">
-                <a href="index.html"><img alt="image" src="assets/img/home2/icon/home2-logo.svg" /></a>
+                <Link legacyBehavior href="/"><a><img alt="image" src="assets/img/home2/icon/home2-logo.svg" /></a></Link>
                 </div>
             </div>
             <ul className="menu-list">
@@ -441,32 +441,32 @@ const Home2Header = () => {
                     <li className="menu-single-item">
                         <h6>Apartment Types</h6>
                         <ul>
-                        <li><a href="poperty-listing-no-sidebar.html">Houses (10)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Industires (13)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Home Twon (33)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Development (15)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Health Care (20)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Office (10)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Banglow (10)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Hotel (10)</a></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Houses (10)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Industires (13)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Home Twon (33)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Development (15)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Health Care (20)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Office (10)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Banglow (10)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Hotel (10)</a></Link></li>
                         <li className="explore-more-btn">
-                            <a href="poperty-listing-no-sidebar.html">Explore More <i className="bi bi-arrow-right-short" /></a>
+                            <Link legacyBehavior href="/poperty-list"><a>Explore More <i className="bi bi-arrow-right-short" /></a></Link>
                         </li>
                         </ul>
                     </li>
                     <li className="menu-single-item">
                         <h6>Popular Cities </h6>
                         <ul>
-                        <li><a href="poperty-listing-no-sidebar.html">Panama City (10)<img src="assets/img/menu-icon/panama.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Sydne City (10)<img src="assets/img/menu-icon/sydne.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Melbourne City (10)<img src="assets/img/menu-icon/melbourne.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">New Delhi (10)<img src="assets/img/menu-icon/delhi.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">New York (10)<img src="assets/img/menu-icon/newYork.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Menchester City (10)<img src="assets/img/menu-icon/menchester.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">City of Greece (10)<img src="assets/img/menu-icon/greece.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">City of Abu-dabi (10)<img src="assets/img/menu-icon/abudabi.svg" alt="" /></a></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Panama City (10)<img src="assets/img/menu-icon/panama.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Sydne City (10)<img src="assets/img/menu-icon/sydne.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Melbourne City (10)<img src="assets/img/menu-icon/melbourne.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>New Delhi (10)<img src="assets/img/menu-icon/delhi.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>New York (10)<img src="assets/img/menu-icon/newYork.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Menchester City (10)<img src="assets/img/menu-icon/menchester.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>City of Greece (10)<img src="assets/img/menu-icon/greece.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>City of Abu-dabi (10)<img src="assets/img/menu-icon/abudabi.svg" alt="" /></a></Link></li>
                         <li className="explore-more-btn">
-                            <a href="poperty-listing-no-sidebar.html">Explore More <i className="bi bi-arrow-right-short" /></a>
+                            <Link legacyBehavior href="/poperty-list"><a>Explore More <i className="bi bi-arrow-right-short" /></a></Link>
                         </li>
                         </ul>
                     </li>
@@ -479,13 +479,13 @@ const Home2Header = () => {
                         </span>
                         <div className="insight-wrap">
                             <div className="insights-content">
-                            <h6><a href="blog-details.html">The Rise of Remote Work: How It's Shaping Real Estate Trends</a></h6>
+                            <h6><Link legacyBehavior href="/blog/details"><a>The Rise of Remote Work: How It's Shaping Real Estate Trends</a></Link></h6>
                             </div>
                             <div className="insights-img">
-                            <a href="blog-details.html"><img src="assets/img/home1/insights-img.png" alt="" /></a>
+                            <Link legacyBehavior href="/blog/details"><a><img src="assets/img/home1/insights-img.png" alt="" /></a></Link>
                             </div>
                             <div className="explore-more-btn">
-                            <a href="blog-details">Read Insight <i className="bi bi-arrow-right-short" /></a>
+                            <Link legacyBehavior href="/blog/details"><a>Read Insight <i className="bi bi-arrow-right-short" /></a></Link>
                             </div>
                         </div>
                         </div>
@@ -501,32 +501,32 @@ const Home2Header = () => {
                     <li className="menu-single-item">
                         <h6>Apartment Types</h6>
                         <ul>
-                        <li><a href="poperty-listing-no-sidebar.html">Houses (10)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Industires (13)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Home Twon (33)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Development (15)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Health Care (20)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Office (10)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Banglow (10)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Hotel (10)</a></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Houses (10)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Industires (13)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Home Twon (33)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Development (15)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Health Care (20)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Office (10)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Banglow (10)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Hotel (10)</a></Link></li>
                         <li className="explore-more-btn">
-                            <a href="poperty-listing-no-sidebar.html">Explore More <i className="bi bi-arrow-right-short" /></a>
+                            <Link legacyBehavior href="/poperty-list"><a>Explore More <i className="bi bi-arrow-right-short" /></a></Link>
                         </li>
                         </ul>
                     </li>
                     <li className="menu-single-item">
                         <h6>Popular Cities </h6>
                         <ul>
-                        <li><a href="poperty-listing-no-sidebar.html">Panama City (10)<img src="assets/img/menu-icon/panama.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Sydne City (10)<img src="assets/img/menu-icon/sydne.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Melbourne City (10)<img src="assets/img/menu-icon/melbourne.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">New Delhi (10)<img src="assets/img/menu-icon/delhi.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">New York (10)<img src="assets/img/menu-icon/newYork.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Menchester City (10)<img src="assets/img/menu-icon/menchester.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">City of Greece (10)<img src="assets/img/menu-icon/greece.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">City of Abu-dabi (10)<img src="assets/img/menu-icon/abudabi.svg" alt="" /></a></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Panama City (10)<img src="assets/img/menu-icon/panama.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Sydne City (10)<img src="assets/img/menu-icon/sydne.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Melbourne City (10)<img src="assets/img/menu-icon/melbourne.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>New Delhi (10)<img src="assets/img/menu-icon/delhi.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>New York (10)<img src="assets/img/menu-icon/newYork.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Menchester City (10)<img src="assets/img/menu-icon/menchester.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>City of Greece (10)<img src="assets/img/menu-icon/greece.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>City of Abu-dabi (10)<img src="assets/img/menu-icon/abudabi.svg" alt="" /></a></Link></li>
                         <li className="explore-more-btn">
-                            <a href="poperty-listing-no-sidebar.html">Explore More <i className="bi bi-arrow-right-short" /></a>
+                            <Link legacyBehavior href="/poperty-list"><a>Explore More <i className="bi bi-arrow-right-short" /></a></Link>
                         </li>
                         </ul>
                     </li>
@@ -539,13 +539,13 @@ const Home2Header = () => {
                         </span>
                         <div className="insight-wrap">
                             <div className="insights-content">
-                            <h6><a href="blog-details.html">The Rise of Remote Work: How It's Shaping Real Estate Trends</a></h6>
+                            <h6><Link legacyBehavior href="/blog/details"><a>The Rise of Remote Work: How It's Shaping Real Estate Trends</a></Link></h6>
                             </div>
                             <div className="insights-img">
-                            <a href="blog-details.html"><img src="assets/img/home1/insights-img.png" alt="" /></a>
+                            <Link legacyBehavior href="/blog/details"><a><img src="assets/img/home1/insights-img.png" alt="" /></a></Link>
                             </div>
                             <div className="explore-more-btn">
-                            <a href="blog-details">Read Insight <i className="bi bi-arrow-right-short" /></a>
+                            <Link legacyBehavior href="/blog/details"><a>Read Insight <i className="bi bi-arrow-right-short" /></a></Link>
                             </div>
                         </div>
                         </div>
@@ -561,32 +561,32 @@ const Home2Header = () => {
                     <li className="menu-single-item">
                         <h6>Apartment Types</h6>
                         <ul>
-                        <li><a href="poperty-listing-no-sidebar.html">Houses (10)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Industires (13)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Home Twon (33)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Development (15)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Health Care (20)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Office (10)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Banglow (10)</a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Hotel (10)</a></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Houses (10)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Industires (13)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Home Twon (33)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Development (15)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Health Care (20)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Office (10)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Banglow (10)</a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Hotel (10)</a></Link></li>
                         <li className="explore-more-btn">
-                            <a href="poperty-listing-no-sidebar.html">Explore More <i className="bi bi-arrow-right-short" /></a>
+                            <Link legacyBehavior href="/poperty-list"><a>Explore More <i className="bi bi-arrow-right-short" /></a></Link>
                         </li>
                         </ul>
                     </li>
                     <li className="menu-single-item">
                         <h6>Popular Cities </h6>
                         <ul>
-                        <li><a href="poperty-listing-no-sidebar.html">Panama City (10)<img src="assets/img/menu-icon/panama.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Sydne City (10)<img src="assets/img/menu-icon/sydne.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Melbourne City (10)<img src="assets/img/menu-icon/melbourne.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">New Delhi (10)<img src="assets/img/menu-icon/delhi.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">New York (10)<img src="assets/img/menu-icon/newYork.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">Menchester City (10)<img src="assets/img/menu-icon/menchester.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">City of Greece (10)<img src="assets/img/menu-icon/greece.svg" alt="" /></a></li>
-                        <li><a href="poperty-listing-no-sidebar.html">City of Abu-dabi (10)<img src="assets/img/menu-icon/abudabi.svg" alt="" /></a></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Panama City (10)<img src="assets/img/menu-icon/panama.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Sydne City (10)<img src="assets/img/menu-icon/sydne.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Melbourne City (10)<img src="assets/img/menu-icon/melbourne.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>New Delhi (10)<img src="assets/img/menu-icon/delhi.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>New York (10)<img src="assets/img/menu-icon/newYork.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>Menchester City (10)<img src="assets/img/menu-icon/menchester.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>City of Greece (10)<img src="assets/img/menu-icon/greece.svg" alt="" /></a></Link></li>
+                        <li><Link legacyBehavior href="/poperty-list"><a>City of Abu-dabi (10)<img src="assets/img/menu-icon/abudabi.svg" alt="" /></a></Link></li>
                         <li className="explore-more-btn">
-                            <a href="poperty-listing-no-sidebar.html">Explore More <i className="bi bi-arrow-right-short" /></a>
+                            <Link legacyBehavior href="/poperty-list"><a>Explore More <i className="bi bi-arrow-right-short" /></a></Link>
                         </li>
                         </ul>
                     </li>
@@ -599,10 +599,10 @@ const Home2Header = () => {
                         </span>
                         <div className="insight-wrap">
                             <div className="insights-content">
-                            <h6><a href="blog-details.html">The Rise of Remote Work: How It's Shaping Real Estate Trends</a></h6>
+                            <h6><Link legacyBehavior href="/blog-details"><a>The Rise of Remote Work: How It's Shaping Real Estate Trends</a></Link></h6>
                             </div>
                             <div className="insights-img">
-                            <a href="blog-details.html"><img src="assets/img/home1/insights-img.png" alt="" /></a>
+                            <Link legacyBehavior href="/blog/details"><a><img src="assets/img/home1/insights-img.png" alt="" /></a></Link>
                             </div>
                             <div className="explore-more-btn">
                             <a href="blog-details">Read Insight <i className="bi bi-arrow-right-short" /></a>
@@ -614,7 +614,7 @@ const Home2Header = () => {
                 </div>
                 </li>
                 <li>
-                <a href="contact.html" className="drop-down">CONTACT US</a>
+                <Link legacyBehavior href="/contact"><a  className="drop-down">CONTACT US</a></Link>
                 </li>
             </ul>
             </div>
@@ -631,15 +631,17 @@ const Home2Header = () => {
                 <path fillRule="evenodd" clipRule="evenodd" d="M14.4311 12.759C15.417 11.4291 16 9.78265 16 8C16 3.58169 12.4182 0 8 0C3.58169 0 0 3.58169 0 8C0 12.4182 3.58169 16 8 16C10.3181 16 12.4058 15.0141 13.867 13.4387C14.0673 13.2226 14.2556 12.9957 14.4311 12.759ZM13.9875 12C14.7533 10.8559 15.1999 9.48009 15.1999 8C15.1999 4.02355 11.9764 0.799983 7.99991 0.799983C4.02355 0.799983 0.799983 4.02355 0.799983 8C0.799983 9.48017 1.24658 10.8559 2.01245 12C2.97866 10.5566 4.45301 9.48194 6.17961 9.03214C5.34594 8.45444 4.79998 7.49102 4.79998 6.39995C4.79998 4.63266 6.23271 3.19993 8 3.19993C9.76729 3.19993 11.2 4.63266 11.2 6.39995C11.2 7.49093 10.654 8.45444 9.82039 9.03206C11.5469 9.48194 13.0213 10.5565 13.9875 12ZM13.4722 12.6793C12.3495 10.8331 10.3188 9.59997 8.00008 9.59997C5.68126 9.59997 3.65049 10.8331 2.52776 12.6794C3.84829 14.2222 5.80992 15.2 8 15.2C10.1901 15.2 12.1517 14.2222 13.4722 12.6793ZM8 8.79998C9.32551 8.79998 10.4 7.72554 10.4 6.39995C10.4 5.07444 9.32559 3.99992 8 3.99992C6.6744 3.99992 5.59997 5.07452 5.59997 6.40003C5.59997 7.72554 6.67449 8.79998 8 8.79998Z" />
                 </svg>                 
             </button>         
-            <a className="primary-btn3 d-lg-flex d-none" href="dashboard-add-property.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width={14} height={14} viewBox="0 0 14 14">
-                <g clipPath="url(#clip0_485_1365)">
-                    <path d="M7 13.125C5.37555 13.125 3.81763 12.4797 2.66897 11.331C1.52031 10.1824 0.875 8.62445 0.875 7C0.875 5.37555 1.52031 3.81763 2.66897 2.66897C3.81763 1.52031 5.37555 0.875 7 0.875C8.62445 0.875 10.1824 1.52031 11.331 2.66897C12.4797 3.81763 13.125 5.37555 13.125 7C13.125 8.62445 12.4797 10.1824 11.331 11.331C10.1824 12.4797 8.62445 13.125 7 13.125ZM7 14C8.85652 14 10.637 13.2625 11.9497 11.9497C13.2625 10.637 14 8.85652 14 7C14 5.14348 13.2625 3.36301 11.9497 2.05025C10.637 0.737498 8.85652 0 7 0C5.14348 0 3.36301 0.737498 2.05025 2.05025C0.737498 3.36301 0 5.14348 0 7C0 8.85652 0.737498 10.637 2.05025 11.9497C3.36301 13.2625 5.14348 14 7 14Z" />
-                    <path d="M7 3.5C7.11603 3.5 7.22731 3.54609 7.30936 3.62814C7.39141 3.71019 7.4375 3.82147 7.4375 3.9375V6.5625H10.0625C10.1785 6.5625 10.2898 6.60859 10.3719 6.69064C10.4539 6.77269 10.5 6.88397 10.5 7C10.5 7.11603 10.4539 7.22731 10.3719 7.30936C10.2898 7.39141 10.1785 7.4375 10.0625 7.4375H7.4375V10.0625C7.4375 10.1785 7.39141 10.2898 7.30936 10.3719C7.22731 10.4539 7.11603 10.5 7 10.5C6.88397 10.5 6.77269 10.4539 6.69064 10.3719C6.60859 10.2898 6.5625 10.1785 6.5625 10.0625V7.4375H3.9375C3.82147 7.4375 3.71019 7.39141 3.62814 7.30936C3.54609 7.22731 3.5 7.11603 3.5 7C3.5 6.88397 3.54609 6.77269 3.62814 6.69064C3.71019 6.60859 3.82147 6.5625 3.9375 6.5625H6.5625V3.9375C6.5625 3.82147 6.60859 3.71019 6.69064 3.62814C6.77269 3.54609 6.88397 3.5 7 3.5Z" />
-                </g>
-                </svg>
-                ADD PROPERTY
-            </a>
+            <Link legacyBehavior href="/dashboard/add-property">
+                <a className="primary-btn3 d-lg-flex d-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width={14} height={14} viewBox="0 0 14 14">
+                    <g clipPath="url(#clip0_485_1365)">
+                        <path d="M7 13.125C5.37555 13.125 3.81763 12.4797 2.66897 11.331C1.52031 10.1824 0.875 8.62445 0.875 7C0.875 5.37555 1.52031 3.81763 2.66897 2.66897C3.81763 1.52031 5.37555 0.875 7 0.875C8.62445 0.875 10.1824 1.52031 11.331 2.66897C12.4797 3.81763 13.125 5.37555 13.125 7C13.125 8.62445 12.4797 10.1824 11.331 11.331C10.1824 12.4797 8.62445 13.125 7 13.125ZM7 14C8.85652 14 10.637 13.2625 11.9497 11.9497C13.2625 10.637 14 8.85652 14 7C14 5.14348 13.2625 3.36301 11.9497 2.05025C10.637 0.737498 8.85652 0 7 0C5.14348 0 3.36301 0.737498 2.05025 2.05025C0.737498 3.36301 0 5.14348 0 7C0 8.85652 0.737498 10.637 2.05025 11.9497C3.36301 13.2625 5.14348 14 7 14Z" />
+                        <path d="M7 3.5C7.11603 3.5 7.22731 3.54609 7.30936 3.62814C7.39141 3.71019 7.4375 3.82147 7.4375 3.9375V6.5625H10.0625C10.1785 6.5625 10.2898 6.60859 10.3719 6.69064C10.4539 6.77269 10.5 6.88397 10.5 7C10.5 7.11603 10.4539 7.22731 10.3719 7.30936C10.2898 7.39141 10.1785 7.4375 10.0625 7.4375H7.4375V10.0625C7.4375 10.1785 7.39141 10.2898 7.30936 10.3719C7.22731 10.4539 7.11603 10.5 7 10.5C6.88397 10.5 6.77269 10.4539 6.69064 10.3719C6.60859 10.2898 6.5625 10.1785 6.5625 10.0625V7.4375H3.9375C3.82147 7.4375 3.71019 7.39141 3.62814 7.30936C3.54609 7.22731 3.5 7.11603 3.5 7C3.5 6.88397 3.54609 6.77269 3.62814 6.69064C3.71019 6.60859 3.82147 6.5625 3.9375 6.5625H6.5625V3.9375C6.5625 3.82147 6.60859 3.71019 6.69064 3.62814C6.77269 3.54609 6.88397 3.5 7 3.5Z" />
+                    </g>
+                    </svg>
+                    ADD PROPERTY
+                </a>
+            </Link>
             </div>
         </header>
         </div>
