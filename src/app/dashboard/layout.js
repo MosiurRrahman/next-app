@@ -7,7 +7,7 @@ import { SidebarProvider, useSidebar } from "@/context/SidebarContext";
 export default function ClientLayout({ children }) {
   return (
     <SidebarProvider>
-      <LayoutContent children={children} />
+      <LayoutContent>{children}</LayoutContent>
     </SidebarProvider>
   );
 }
