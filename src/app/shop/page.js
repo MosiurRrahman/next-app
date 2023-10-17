@@ -5,7 +5,7 @@ import Link from 'next/link'
 import React from 'react'
 import PartnerSlide from '@/components/view/Partner/PartnerSlide';
 
-const page = () => {
+const Page = () => {
   const handleAddToCartClick = () => {
     // Add item to cart logic here
 

@@ -11,7 +11,7 @@ import Home6Team from '@/components/view/team/Home6Team'
 import Home6Testimonial from '@/components/view/testimonial/Home6Testimonial'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <Home6Banner />

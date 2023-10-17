@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
     <>
      <div className="checkout-page pt-100 mb-100">

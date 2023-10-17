@@ -5,7 +5,7 @@ import Topbar from '@/components/common/Topbar'
 import Link from 'next/link'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
     <>
      <Topbar/>

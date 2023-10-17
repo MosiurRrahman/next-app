@@ -7,7 +7,7 @@ import SelectComponent from '@/uitils/SelectComponent'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
-const page = () => {
+const Page = () => {
     const [isGridView, setIsGridView] = useState(true);
     useEffect(()=>{
         const saveView = localStorage.getItem('viewPreference');
@@ -1009,4 +1009,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

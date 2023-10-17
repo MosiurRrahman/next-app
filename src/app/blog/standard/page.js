@@ -2,7 +2,7 @@ import Breadcrumb from '@/components/common/Breadcrumb'
 import Link from 'next/link'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
     <>
     <Breadcrumb pageName="standard" pageTitle="Blog Standard"/>

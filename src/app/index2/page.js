@@ -12,7 +12,7 @@ import Home2Testimonial from "@/components/view/testimonial/Home2Testimonial";
 import Home2WhyChoose from "@/components/view/whyChoose/Home2WhyChoose";
 import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <Banner2 />

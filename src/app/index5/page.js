@@ -10,7 +10,7 @@ import Home5Testimonial from "@/components/view/testimonial/Home5Testimonial";
 import Home5WhyChoose from "@/components/view/whyChoose/Home5WhyChoose";
 import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <Home5Banner />

@@ -11,7 +11,7 @@ import Home4Testimonial from '@/components/view/testimonial/Home4Testimonial'
 import Home4WhyChoose from '@/components/view/whyChoose/Home4WhyChoose'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
 
     <>

@@ -11,7 +11,7 @@ import Home3team from "@/components/view/team/Home3team";
 import Home3Testimonial from "@/components/view/testimonial/Home3Testimonial";
 import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <Home3Banner />
