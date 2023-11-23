@@ -1010,7 +1010,6 @@ body.tt-magic-cursor #magic-cursor {
         height: 0;
         border-radius: 50%;
         background-color: var(--primary-color);
-        -webkit-transform: translate(-50%, -50%);
         transition: all 0.6s;   
         z-index: -1;
     }
@@ -1596,7 +1595,7 @@ body.tt-magic-cursor #magic-cursor {
         }
         @include lg-down-device(){
             border: none;
-            justify-content: end;
+            justify-content: flex-end;
         }
         .nav-right {
             gap: 30px;
@@ -2444,7 +2443,7 @@ body.tt-magic-cursor #magic-cursor {
         }
         @include lg-down-device(){
             border: none;
-            justify-content: end;
+            justify-content: flex-end;
         }
         .header-logo{
             background-color: transparent;
@@ -3707,7 +3706,7 @@ body.tt-magic-cursor #magic-cursor {
     .menu-wrap{
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-content: flex-end;
         width: 100%;
         padding: 0px 10px;
         gap: 50px;
@@ -3723,7 +3722,7 @@ body.tt-magic-cursor #magic-cursor {
         }
         @include lg-down-device(){
             border: none;
-            justify-content: end;
+            justify-content: flex-end;
         }
         .nav-right {
             gap: 30px;
@@ -5806,7 +5805,7 @@ body.tt-magic-cursor #magic-cursor {
         width: 100%;
         display: flex;
         align-items: end;
-        justify-content: end;
+        justify-content: flex-end;
         padding: 50px 40px;
         @include lg-down-device(){
             padding: 30px 20px;
@@ -6502,7 +6501,6 @@ footer{
                     }
                     input[type=checkbox] + label:before {
                         content: "";
-                        -webkit-appearance: none;
                         background: #FFFFFF;
                         border-radius: 2px;
                         height: 14px;
@@ -6648,7 +6646,7 @@ footer{
             display: flex;
             align-items: center;
             flex-wrap: wrap;
-            justify-content: end;
+            justify-content: flex-end;
             gap: 10px;
             padding: 15px 50px;
             @include xxl-device{
@@ -7847,7 +7845,7 @@ footer{
             padding: 25px 40px 30px;
             display: inline-flex;
             flex-direction: column;
-            justify-content: end;
+            justify-content: flex-end;
             @include md-down-device(){
             padding: 20px 25px 25px;
             }
@@ -7910,7 +7908,7 @@ footer{
             padding: 60px 118px;
             display: inline-flex;
             align-items: flex-end;
-            justify-content: end;
+            justify-content: flex-end;
             @include md-down-device(){
                 padding: 30px 25px;
             }
@@ -7923,7 +7921,7 @@ footer{
                 padding: 25px 40px 30px;
                 display: inline-flex;
                 flex-direction: column;
-                justify-content: end;
+                justify-content: flex-end;
                 @include md-down-device(){
                 padding: 20px 25px 25px;
                 }
@@ -8665,7 +8663,7 @@ footer{
             transform: unset;
             padding: 60px;
             display: flex ;
-            justify-content: end;
+            justify-content: flex-end;
             flex-direction: column;
             transition: .5s;
             @include md-down-device(){
@@ -8735,7 +8733,7 @@ footer{
             transform: unset;
             padding: 50px 40px;
             display: flex ;
-            justify-content: end;
+            justify-content: flex-end;
             flex-direction: column;
             transition: .5s;
             @include lg-device(){
@@ -8807,7 +8805,7 @@ footer{
             transform: unset;
             padding: 50px 40px 20px 0;
             display: flex ;
-            justify-content: end;
+            justify-content: flex-end;
             flex-direction: column;
             transition: .5s;
             @include md-down-device(){
@@ -9017,7 +9015,7 @@ footer{
         padding: 60px;
         display: inline-flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: flex-end;
         opacity: 0;
         transition: 0.35s;
         @include lg-down-device(){
@@ -10039,7 +10037,7 @@ footer{
         @include md-down-device(){
             flex-direction: column;
             width: unset;
-            justify-content: start;
+            justify-content: flex-start;
             align-items: start;
             padding: 60px 20px;
         }
@@ -10156,7 +10154,7 @@ footer{
         border: 1px solid rgba(255, 255, 255, 0.08);
         padding: 18px 50px;
         gap: 40px;
-        justify-content: end;
+        justify-content: flex-end;
         @include xxl-device(){
             padding: 18px 30px;
             gap: 20px;
@@ -11012,7 +11010,7 @@ footer{
                     width: 50%;
                     &:last-child{
                         border-right: unset;
-                        justify-content: end;
+                        justify-content: flex-end;
                     
                     }
                     @include xxl-down-device(){
@@ -11031,7 +11029,7 @@ footer{
                         width: 100%;
                         border-right: none;
                         &:last-child{
-                            justify-content: start;
+                            justify-content: flex-start;
                         
                         }
                     }
@@ -13822,7 +13820,7 @@ footer{
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: flex-end;
         @include sm-down-device(){
             padding: 30px 20px;
         }
@@ -15679,7 +15677,7 @@ footer{
         height: 100%;
         display: inline-flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: flex-end;
         @include sm-down-device(){
             padding: 30px 20px;
         }
