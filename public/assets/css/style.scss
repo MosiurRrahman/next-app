@@ -89,55 +89,7 @@ Version: 1.0
     --paragraph-color: #566064;
     --primary-color: #2E448D;
 }
-/*================================================
-1. fonts familly Css
-=================================================*/
 
-@font-face {
-    font-family: "Montserrat";
-    src: url(../fonts/Montserrat-Black.ttf) format("truetype");
-    font-weight: 900;
-  }
-  @font-face {
-    font-family: "Montserrat";
-    src: url(../fonts/Montserrat-ExtraBold.ttf) format("truetype");
-    font-weight: 800;
-  }
-  @font-face {
-    font-family: "Montserrat";
-    src: url(../fonts/Montserrat-Bold.ttf) format("truetype");
-    font-weight: 700;
-  }
-  @font-face {
-    font-family: "Montserrat";
-    src: url(../fonts/Montserrat-SemiBold.ttf) format("truetype");
-    font-weight: 600;
-  }
-  @font-face {
-    font-family: "Montserrat";
-    src: url(../fonts/Montserrat-Medium.ttf) format("truetype");
-    font-weight: 500;
-  }
-  @font-face {
-    font-family: "Montserrat";
-    src: url(../fonts/Montserrat-Regular.ttf) format("truetype");
-    font-weight: 400;
-  }
-  @font-face {
-    font-family: "Montserrat";
-    src: url(../fonts/Montserrat-Light.ttf) format("truetype");
-    font-weight: 300;
-  }
-  @font-face {
-    font-family: "Montserrat";
-    src: url(../fonts/Montserrat-Light.ttf) format("truetype");
-    font-weight: 300;
-  }
-  @font-face {
-    font-family: "Marcellus";
-    src: url(../fonts/Marcellus-Regular.ttf) format("truetype");
-    font-weight: 300;
-  }
 
 * {
     margin: 0;
@@ -1010,6 +962,7 @@ body.tt-magic-cursor #magic-cursor {
         height: 0;
         border-radius: 50%;
         background-color: var(--primary-color);
+        -webkit-transform: translate(-50%, -50%);
         transition: all 0.6s;   
         z-index: -1;
     }
@@ -1595,7 +1548,7 @@ body.tt-magic-cursor #magic-cursor {
         }
         @include lg-down-device(){
             border: none;
-            justify-content: flex-end;
+            justify-content: end;
         }
         .nav-right {
             gap: 30px;
@@ -2443,7 +2396,7 @@ body.tt-magic-cursor #magic-cursor {
         }
         @include lg-down-device(){
             border: none;
-            justify-content: flex-end;
+            justify-content: end;
         }
         .header-logo{
             background-color: transparent;
@@ -3706,7 +3659,7 @@ body.tt-magic-cursor #magic-cursor {
     .menu-wrap{
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: end;
         width: 100%;
         padding: 0px 10px;
         gap: 50px;
@@ -3722,7 +3675,7 @@ body.tt-magic-cursor #magic-cursor {
         }
         @include lg-down-device(){
             border: none;
-            justify-content: flex-end;
+            justify-content: end;
         }
         .nav-right {
             gap: 30px;
@@ -5805,7 +5758,7 @@ body.tt-magic-cursor #magic-cursor {
         width: 100%;
         display: flex;
         align-items: end;
-        justify-content: flex-end;
+        justify-content: end;
         padding: 50px 40px;
         @include lg-down-device(){
             padding: 30px 20px;
@@ -6501,6 +6454,7 @@ footer{
                     }
                     input[type=checkbox] + label:before {
                         content: "";
+                        -webkit-appearance: none;
                         background: #FFFFFF;
                         border-radius: 2px;
                         height: 14px;
@@ -6646,7 +6600,7 @@ footer{
             display: flex;
             align-items: center;
             flex-wrap: wrap;
-            justify-content: flex-end;
+            justify-content: end;
             gap: 10px;
             padding: 15px 50px;
             @include xxl-device{
@@ -7650,7 +7604,7 @@ footer{
             @include lg-down-device(){
                 gap: 25px;
             }
-            .js-marquee{
+            .marquee_text2{
                 display: flex;
                 align-items: center;
                 gap: 50px;
@@ -7673,6 +7627,28 @@ footer{
                 }
             }
         }   
+    }
+}
+.marquee_text2{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-right: 0 !important;
+    @include lg-down-device(){
+        gap: 25px;
+    }
+    a{
+        color: #FFF;
+        font-family: var(--font-montserrat);
+        font-size: 25px;
+        font-weight: 500; 
+        transition: 0.35s; 
+        &:hover{
+            color: #CACACA;
+        }
+    } 
+    svg{
+        fill: #596977;
     }
 }
 /*=====================================
@@ -7845,7 +7821,7 @@ footer{
             padding: 25px 40px 30px;
             display: inline-flex;
             flex-direction: column;
-            justify-content: flex-end;
+            justify-content: end;
             @include md-down-device(){
             padding: 20px 25px 25px;
             }
@@ -7908,7 +7884,7 @@ footer{
             padding: 60px 118px;
             display: inline-flex;
             align-items: flex-end;
-            justify-content: flex-end;
+            justify-content: end;
             @include md-down-device(){
                 padding: 30px 25px;
             }
@@ -7921,7 +7897,7 @@ footer{
                 padding: 25px 40px 30px;
                 display: inline-flex;
                 flex-direction: column;
-                justify-content: flex-end;
+                justify-content: end;
                 @include md-down-device(){
                 padding: 20px 25px 25px;
                 }
@@ -8663,7 +8639,7 @@ footer{
             transform: unset;
             padding: 60px;
             display: flex ;
-            justify-content: flex-end;
+            justify-content: end;
             flex-direction: column;
             transition: .5s;
             @include md-down-device(){
@@ -8733,7 +8709,7 @@ footer{
             transform: unset;
             padding: 50px 40px;
             display: flex ;
-            justify-content: flex-end;
+            justify-content: end;
             flex-direction: column;
             transition: .5s;
             @include lg-device(){
@@ -8805,7 +8781,7 @@ footer{
             transform: unset;
             padding: 50px 40px 20px 0;
             display: flex ;
-            justify-content: flex-end;
+            justify-content: end;
             flex-direction: column;
             transition: .5s;
             @include md-down-device(){
@@ -9015,7 +8991,7 @@ footer{
         padding: 60px;
         display: inline-flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: end;
         opacity: 0;
         transition: 0.35s;
         @include lg-down-device(){
@@ -10037,7 +10013,7 @@ footer{
         @include md-down-device(){
             flex-direction: column;
             width: unset;
-            justify-content: flex-start;
+            justify-content: start;
             align-items: start;
             padding: 60px 20px;
         }
@@ -10154,7 +10130,7 @@ footer{
         border: 1px solid rgba(255, 255, 255, 0.08);
         padding: 18px 50px;
         gap: 40px;
-        justify-content: flex-end;
+        justify-content: end;
         @include xxl-device(){
             padding: 18px 30px;
             gap: 20px;
@@ -11010,7 +10986,7 @@ footer{
                     width: 50%;
                     &:last-child{
                         border-right: unset;
-                        justify-content: flex-end;
+                        justify-content: end;
                     
                     }
                     @include xxl-down-device(){
@@ -11029,7 +11005,7 @@ footer{
                         width: 100%;
                         border-right: none;
                         &:last-child{
-                            justify-content: flex-start;
+                            justify-content: start;
                         
                         }
                     }
@@ -13820,7 +13796,7 @@ footer{
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: end;
         @include sm-down-device(){
             padding: 30px 20px;
         }
@@ -15677,7 +15653,7 @@ footer{
         height: 100%;
         display: inline-flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: end;
         @include sm-down-device(){
             padding: 30px 20px;
         }
@@ -15851,3 +15827,8 @@ footer{
     }
 }
 
+
+.marquee_text2{
+    display: flex;
+    gap: 60px;
+}
