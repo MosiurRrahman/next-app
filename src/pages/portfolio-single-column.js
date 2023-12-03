@@ -11,7 +11,7 @@ const PortfolioSingleColumnpage = () => {
             <div className="col-md-12">
               {data.slice(0,5).map((i) => {
                 return (
-                  <div className="eg-card4 two mb-60">
+                  <div key={i.id} className="eg-card4 two mb-60">
                     <div className="row g-0">
                       <div className="col-md-6">
                         <div className="card-img mb-0">

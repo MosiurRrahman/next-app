@@ -11,7 +11,7 @@ const PortfolioThreeColumnPage = () => {
           <div className="row g-lg-4 gy-5 mb-70">
             {data.map((i) => {
               return (
-                <div className="col-lg-4 col-md-6">
+                <div key={i.id} className="col-lg-4 col-md-6">
                   <div className="eg-card3 four">
                     <div className="card-img">
                       <img src={i.col_3_img} alt="" />
