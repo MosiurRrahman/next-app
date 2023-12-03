@@ -67,9 +67,9 @@ const setting = useMemo(()=>{
                             <Link legacyBehavior href="/portfolio-two-column"><a>Technology</a></Link>
                           </div>
                           <h4>
-                            <a href="/portfolio-details">
-                              Information Technology (IT)
-                            </a>
+                            <Link legacyBehavior href="/portfolio-details">
+                              <a>Information Technology (IT)</a>
+                            </Link>
                           </h4>
                         </div>
                         <Link legacyBehavior
@@ -105,9 +105,9 @@ const setting = useMemo(()=>{
                             <Link legacyBehavior href="/portfolio-two-column"><a>Business</a></Link>
                           </div>
                           <h4>
-                            <a href="/portfolio-details">
-                              International Business
-                            </a>
+                            <Link legacyBehavior href="/portfolio-details">
+                              <a>International Business</a>
+                            </Link>
                           </h4>
                         </div>
                         <Link legacyBehavior
@@ -143,9 +143,9 @@ const setting = useMemo(()=>{
                             <Link legacyBehavior href="/portfolio-two-column"><a>Marketing</a></Link>
                           </div>
                           <h4>
-                            <a href="/portfolio-details">
-                              Marketing Research
-                            </a>
+                            <Link legacyBehavior href="/portfolio-details">
+                              <a>Marketing Research</a>
+                            </Link>
                           </h4>
                         </div>
                         <Link legacyBehavior
@@ -181,7 +181,7 @@ const setting = useMemo(()=>{
                             <Link legacyBehavior href="/portfolio-two-column"><a>Business</a></Link>
                           </div>
                           <h4>
-                            <a href="/portfolio-details">Human Resources</a>
+                            <Link legacyBehavior href="/portfolio-details"><a>Human Resources</a></Link>
                           </h4>
                         </div>
                         <Link legacyBehavior
@@ -217,9 +217,9 @@ const setting = useMemo(()=>{
                             <Link legacyBehavior href="/portfolio-two-column"><a>Consulting</a></Link>
                           </div>
                           <h4>
-                            <a href="/portfolio-details">
-                              Finance Consulting
-                            </a>
+                            <Link legacyBehavior href="/portfolio-details">
+                              <a>Finance Consulting</a>
+                            </Link>
                           </h4>
                         </div>
                         <Link legacyBehavior
@@ -255,9 +255,9 @@ const setting = useMemo(()=>{
                             <Link legacyBehavior href="/portfolio-two-column"><a>Technology</a></Link>
                           </div>
                           <h4>
-                            <a href="/portfolio-details">
-                              Information Technology (IT)
-                            </a>
+                            <Link legacyBehavior href="/portfolio-details">
+                              <a>Information Technology (IT)</a>
+                            </Link>
                           </h4>
                         </div>
                         <Link legacyBehavior
@@ -293,9 +293,9 @@ const setting = useMemo(()=>{
                             <Link legacyBehavior href="/portfolio-two-column"><a>Business</a></Link>
                           </div>
                           <h4>
-                            <a href="/portfolio-details">
-                              International Business
-                            </a>
+                            <Link legacyBehavior href="/portfolio-details">
+                              <a>International Business</a>
+                            </Link>
                           </h4>
                         </div>
                         <Link legacyBehavior
@@ -331,9 +331,9 @@ const setting = useMemo(()=>{
                             <Link legacyBehavior href="/portfolio-two-column"><a>Marketing</a></Link>
                           </div>
                           <h4>
-                            <a href="/portfolio-details">
-                              Marketing Research
-                            </a>
+                            <Link legacyBehavior href="/portfolio-details">
+                              <a>Marketing Research</a>
+                            </Link>
                           </h4>
                         </div>
                         <Link legacyBehavior
@@ -369,7 +369,7 @@ const setting = useMemo(()=>{
                             <Link legacyBehavior href="/portfolio-two-column"><a>Business</a></Link>
                           </div>
                           <h4>
-                            <a href="/portfolio-details">Human Resources</a>
+                            <Lnik legacyBehavior href="/portfolio-details"><a>Human Resources</a></Lnik>
                           </h4>
                         </div>
                         <Link legacyBehavior
@@ -405,9 +405,9 @@ const setting = useMemo(()=>{
                             <Link legacyBehavior href="/portfolio-two-column"><a>Consulting</a></Link>
                           </div>
                           <h4>
-                            <a href="/portfolio-details">
-                              Finance Consulting
-                            </a>
+                            <Link legacyBehavior href="/portfolio-details">
+                              <a>Finance Consulting</a>
+                            </Link>
                           </h4>
                         </div>
                         <Link legacyBehavior

@@ -10,7 +10,7 @@ const PortfolioTwoColumnPage = () => {
           <div className="row g-md-4 gy-5 mb-70">
             {data.slice(0,6).map((i) => {
               return (
-                <div className="col-md-6">
+                <div key={i.id} className="col-md-6">
                   <div className="eg-card4">
                     <div className="card-img">
                       <img src={i.img} alt="" />
