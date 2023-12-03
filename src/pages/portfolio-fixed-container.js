@@ -369,7 +369,7 @@ const setting = useMemo(()=>{
                             <Link legacyBehavior href="/portfolio-two-column"><a>Business</a></Link>
                           </div>
                           <h4>
-                            <Lnik legacyBehavior href="/portfolio-details"><a>Human Resources</a></Lnik>
+                            <Link legacyBehavior href="/portfolio-details"><a>Human Resources</a></Link>
                           </h4>
                         </div>
                         <Link legacyBehavior
