@@ -1,14 +1,7 @@
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import BlogStandardPage from "./pages/blog-standard";
-import About from "./pages/About";
-import "../src/assets/css/bootstrap-icons.css";
-import "../src/assets/css/bootstrap.min.css";
-import "../src/assets/css/boxicons.min.css";
-import "../src/assets/css/fontawesome.min.css";
-import "../src/assets/css/nice-select.css";
-import "../src/assets/css/swiper-bundle.min.css";
-import "../src/assets/css/style.css";
+import About from "./pages/about";
 import Contact from "./pages/contact";
 import ReturnExchange from "./pages/return-ecchange";
 import CustomerReview from "./pages/customer-review";
@@ -26,6 +19,13 @@ import CarListingLeftSidebar from "./pages/car-listing-left-sidebar";
 import CarListingRightSidebar from "./pages/car-listing-right-sidebar";
 import CarListingNoSidebarPage from "./pages/car-listing-no-sidebar";
 import SpecialOffer from "./pages/special-offer";
+import "../src/assets/css/bootstrap-icons.css";
+import "../src/assets/css/bootstrap.min.css";
+import "../src/assets/css/boxicons.min.css";
+import "../src/assets/css/fontawesome.min.css";
+import "../src/assets/css/nice-select.css";
+import "../src/assets/css/swiper-bundle.min.css";
+import "../src/assets/css/style.css";
 
 function App() {
   return (
