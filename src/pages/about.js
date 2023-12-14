@@ -1,12 +1,13 @@
 import React from 'react'
-import MainLayout from '../components/layout/MainLayout'
+import Layout from '../layout/Layout'
+import Breadcrumb from '../components/common/Breadcrumb'
 
-const AboutPage = () => {
+const About = () => {
   return (
-    <MainLayout>
-      
-    </MainLayout>
+    <Layout>
+      <Breadcrumb/>
+    </Layout>
   )
 }
 
-export default AboutPage
+export default About
