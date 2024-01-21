@@ -10,7 +10,7 @@ import Home1FacilitySlide from "@/components/facilitySlide/Home1FacilitySlide";
 import Home1Fecilities2 from "@/components/facilitySlide/Home1Fecilities2";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
-import Home1popularTour from "@/components/popularTour/Home1popularTour";
+// import Home1popularTour from "@/components/popularTour/Home1popularTour";
 import Home1Testimonail from "@/components/testimonial/Home1Testimonail";
 import Topbar2 from "@/components/topbar/Topbar2";
 import Home1TourPackage from "@/components/tourPackage/Home1TourPackage";
@@ -37,7 +37,7 @@ export default function Home() {
       <Home1FacilitySlide />
       <Home1TourPackage />
       <Home1WhyChoose />
-      <Home1popularTour />
+      {/* <Home1popularTour /> */}
       <Home1Activities />
       <Home1Banner2 />
       <Home1Testimonail />
