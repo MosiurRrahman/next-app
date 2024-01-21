@@ -47,7 +47,7 @@ const Home3DestinationSlide = () => {
 			},
 		}
     }
-  })
+  },[])
   return (
     <>
      <div className="tour-type-tab-slider-section mb-120">

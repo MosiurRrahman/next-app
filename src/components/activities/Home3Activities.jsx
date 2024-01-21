@@ -20,7 +20,7 @@ const Home3Activities = () => {
         prevEl: ".activities-tab-img-prev",
       },
       }
-    })
+    },[])
   return (
     <>
      <div className="activities-section mb-120">

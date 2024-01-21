@@ -53,7 +53,7 @@ const Home1Testimonail = () => {
         },
       },
     };
-  });
+  },[])
   return (
     <div className="testimonial-section">
       <div className="container">

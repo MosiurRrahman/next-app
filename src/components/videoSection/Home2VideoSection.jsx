@@ -21,7 +21,7 @@ const Home2VideoSection = () => {
         prevEl: ".banner5-slider-prev",
       },
       }
-    })
+    },[])
   return (
     <>
 

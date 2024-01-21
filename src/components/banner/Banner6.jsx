@@ -47,7 +47,7 @@ const Banner6 = () => {
                 },
             }
           }
-        })
+        },[])
   return (
     <>
       <div className="home6-banner-area mb-120">

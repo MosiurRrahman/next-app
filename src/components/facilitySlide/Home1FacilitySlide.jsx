@@ -22,7 +22,7 @@ const Home1FacilitySlide = () => {
 			prevEl: ".franctional-slider-prev-btn",
 		},
       }
-    })
+    },[])
   return (
     <>
      <div className="franctional-slider-section">

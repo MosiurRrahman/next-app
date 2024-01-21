@@ -26,7 +26,7 @@ const Home1Fecilities2 = () => {
                 clickable: true,
             },
           }
-        })
+        },[])
   return (
     <>
        <div className="tour-facilites-section mb-120">

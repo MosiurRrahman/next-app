@@ -55,7 +55,7 @@ const Home1popularTour = () => {
         },
       },
     };
-  });
+  },[])
   return (
     <div className="package-card-tab-section">
       <img

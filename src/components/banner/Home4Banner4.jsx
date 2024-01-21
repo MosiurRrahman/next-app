@@ -49,7 +49,7 @@ const Home4Banner4 = () => {
         },
       }
       }
-    })
+    },[])
   return (
     <>
      <div className="home4-banner3-with-package-slider ">

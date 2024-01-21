@@ -28,7 +28,7 @@ const Home4Banner = () => {
         prevEl: ".home4-banner-prev",
       },
       }
-    })
+    },[])
   return (
     <>
      <div className="home4-banner-area">

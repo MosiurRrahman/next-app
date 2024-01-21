@@ -26,7 +26,7 @@ const Home5Facilities = () => {
                 prevEl: ".home1-banner-prev",
             },
           }
-        })
+        },[])
   return (
     <>
      <div className="tour-facilites-section mb-120">

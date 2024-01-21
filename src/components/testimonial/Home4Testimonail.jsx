@@ -48,7 +48,7 @@ const Home4Testimonail = () => {
         },
       }
       }
-    })
+    },[])
   return (
     <>
      <div className="home4-testimonial-section mb-120">

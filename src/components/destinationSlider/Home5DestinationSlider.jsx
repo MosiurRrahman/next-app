@@ -47,7 +47,7 @@ const Home5DestinationSlider = () => {
 			},
 		}
           }
-        })
+        },[])
   return (
     <>
      <div className="home5-destination-card-slider-section mb-120">

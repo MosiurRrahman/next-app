@@ -47,7 +47,7 @@ const Home3Team = () => {
             },
           }
           }
-        })
+        },[])
   return (
     <>
      <div className="home3-teams-section mb-120">

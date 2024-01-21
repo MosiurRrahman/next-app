@@ -47,7 +47,7 @@ const Home3Facilities = () => {
 			},
 		}
       }
-    })
+    },[])
   return (
     <>
      <div className="tour-facilites-section mb-120">

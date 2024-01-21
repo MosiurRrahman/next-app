@@ -26,7 +26,7 @@ const Home5Banner = () => {
 			prevEl: ".home5-banner-prev",
 		},
       }
-    })
+    },[])
   return (
     <>
      <div className="home5-banner-area mb-120">

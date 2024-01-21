@@ -50,7 +50,7 @@ const Home2ThrillingTour = () => {
 			},
 		}
       }
-    })
+    },[])
   return (
     <>
     <div className="tour-pack-section">

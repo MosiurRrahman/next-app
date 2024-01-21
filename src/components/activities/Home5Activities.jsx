@@ -46,7 +46,7 @@ const Home5Activities = () => {
 			},
 		}
           }
-        })
+        },[])
   return (
     <>
      <div className="home5-activity-card-slider-section mb-120">

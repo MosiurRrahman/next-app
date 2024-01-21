@@ -46,7 +46,7 @@ const Home6DestinationSlide = () => {
             },
           }
           }
-        })
+        },[])
   return (
     <>
      <div className="home6-activity-card-slider-section mb-120"> 

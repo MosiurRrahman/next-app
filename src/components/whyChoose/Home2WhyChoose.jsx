@@ -22,7 +22,7 @@ const Home2WhyChoose = () => {
 		// 	swiper: swiper6,
 		// },
           }
-        })
+        },[])
   return (
     <>
      <div className="feature-card-section mb-120">

@@ -53,7 +53,7 @@ const Home1Vise = () => {
 			},
 		}
     };
-  });
+  },[])
   return (
     <>
       <div className="visa-section mb-120">

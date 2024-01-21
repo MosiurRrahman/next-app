@@ -45,7 +45,7 @@ const Home2Destinationslide = () => {
           },
         }
       }
-    })
+    },[])
   return (
     <>
      <div className="destination-card2-slider-section mb-120">

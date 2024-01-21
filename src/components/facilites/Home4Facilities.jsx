@@ -27,7 +27,7 @@ const Home4Facilities = () => {
         clickable: true,
       },
       }
-    })
+    },[])
   return (
     <>
     <div className="home4-tour-pack-section tour-facilites-section pt-120 mb-120">

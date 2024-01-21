@@ -49,7 +49,7 @@ const Home2Testimonial = () => {
 			},
 		}
       }
-    })
+    },[])
   return (
     <>
       <div className="home2-testimonial-section mb-120">

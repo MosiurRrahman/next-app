@@ -50,7 +50,7 @@ const Home6TourPackage = () => {
 			},
 		}
           }
-        })
+        },[])
   return (
     <>
      <div className="home6-tourpack-section mb-120">

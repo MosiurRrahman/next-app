@@ -29,7 +29,7 @@ const Banner1 = () => {
         prevEl: ".home1-banner-prev",
       },
     };
-  });
+  },[])
   return (
     <>
       <div className="home1-banner-area">

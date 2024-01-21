@@ -25,7 +25,7 @@ const Home5Testimonial = () => {
 			prevEl: ".home5-testimonal-slider-prev",
 		},
           }
-        })
+        },[])
   return (
     <>
      <div className="home5-testimonal-slider-section mb-120">

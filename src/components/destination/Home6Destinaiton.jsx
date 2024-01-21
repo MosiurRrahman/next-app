@@ -49,7 +49,7 @@ const Home6Destinaiton = () => {
             },
           }
           }
-        })
+        },[])
   return (
     <>
      <div className="home6-destination-card-slider-section mb-120">

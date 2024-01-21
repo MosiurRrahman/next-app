@@ -33,7 +33,7 @@ const Page = () => {
         clickable: true,
       },
     };
-  });
+  },[])
   return (
     <>
       <Breadcrumb pagename="Room & Suits" pagetitle="Room & Suits" />

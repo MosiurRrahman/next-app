@@ -45,7 +45,7 @@ const Home4Vissa = () => {
         },
       }
       }
-    })
+    },[])
   return (
     <>
      <div className="home4-visa-application-section mb-120">

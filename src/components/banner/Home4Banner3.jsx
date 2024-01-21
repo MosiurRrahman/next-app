@@ -27,7 +27,7 @@ const Home4Banner3 = () => {
         prevEl: ".home4-tab-with-img-prev",
       },
       }
-    })
+    },[])
   return (
     <>
      <div className="home4-tab-with-slider-section mb-120">

@@ -49,7 +49,7 @@ const Home6Team = () => {
 			},
 		}
           }
-        })
+        },[])
   return (
     <>
     <div className="home6-teams-section mb-120">

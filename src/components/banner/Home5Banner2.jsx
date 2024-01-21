@@ -26,7 +26,7 @@ const Home5Banner2 = () => {
 			clickable: true,
 		},
           }
-        })
+        },[])
   return (
     <>
      <div className="home5-banner2-section mb-120">
