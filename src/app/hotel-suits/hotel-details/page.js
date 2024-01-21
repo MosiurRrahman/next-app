@@ -6,7 +6,7 @@ import ReactDatePicker from "react-datepicker";
 import QuantityCounter from "@/uitils/QuantityCounter";
 import Lightbox from "yet-another-react-lightbox";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
-const page = () => {
+const Page = () => {
   const [dateRange, setDateRange] = useState([null, null]);
   const [startDate, endDate] = dateRange;
   const [isOpenModalVideo, setOpenModalVideo] = useState(false);
@@ -1476,4 +1476,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

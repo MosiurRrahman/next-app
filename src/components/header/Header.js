@@ -530,7 +530,7 @@ const Header = () => {
                     {destinaiton_sidebar_data.map((data) => {
                       const { id, img, tour_palce, tour_type, place } = data;
                       return (
-                        <SwiperSlide className="swiper-slide">
+                        <SwiperSlide key={id} className="swiper-slide">
                           <div className="destination-card2">
                             <Link
                               href="/destination/destination-details"

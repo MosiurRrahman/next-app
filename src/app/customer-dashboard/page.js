@@ -4,7 +4,7 @@ import Footer from '@/components/footer/Footer'
 import Header from '@/components/header/Header'
 import React, { useEffect } from 'react'
 import '../../../public/assets/css/dashboard.css'
-const page = () => {
+const Page = () => {
   const handleContainerClick = (event) => {
     const target = event.target;
 
@@ -530,4 +530,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

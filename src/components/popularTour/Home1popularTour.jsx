@@ -223,7 +223,7 @@ const Home1popularTour = () => {
                                     <ul className="location-list">
                                       {location_list.map((e) => {
                                         return (
-                                          <li>
+                                          <li key={e}>
                                             <Link href="/package-grid">
                                               {e}
                                             </Link>
@@ -243,9 +243,9 @@ const Home1popularTour = () => {
                                   </h5>
                                   <div className="location-area">
                                     <ul className="location-list">
-                                      {place_list.map((e) => {
+                                      {place_list.map((e ,index) => {
                                         return (
-                                          <li>
+                                          <li key={index}>
                                             <Link href="/package-grid">
                                               {e}
                                             </Link>
@@ -356,7 +356,7 @@ const Home1popularTour = () => {
                                     <ul className="location-list">
                                       {location_list.map((e) => {
                                         return (
-                                          <li>
+                                          <li key={index}>
                                             <Link href="/package-grid">
                                               {e}
                                             </Link>
@@ -489,7 +489,7 @@ const Home1popularTour = () => {
                                     <ul className="location-list">
                                       {location_list.map((e) => {
                                         return (
-                                          <li>
+                                          <li key={index}>
                                             <Link href="/package-grid">
                                               {e}
                                             </Link>
@@ -511,7 +511,7 @@ const Home1popularTour = () => {
                                     <ul className="location-list">
                                       {place_list.map((e) => {
                                         return (
-                                          <li>
+                                          <li key={index}>
                                             <Link href="/package-grid">
                                               {e}
                                             </Link>
@@ -622,7 +622,7 @@ const Home1popularTour = () => {
                                     <ul className="location-list">
                                       {location_list.map((e) => {
                                         return (
-                                          <li>
+                                          <li key={index}>
                                             <Link href="/package-grid">
                                               {e}
                                             </Link>
@@ -644,7 +644,7 @@ const Home1popularTour = () => {
                                     <ul className="location-list">
                                       {place_list.map((e) => {
                                         return (
-                                          <li>
+                                          <li key={index}>
                                             <Link href="/package-grid">
                                               {e}
                                             </Link>
@@ -755,7 +755,7 @@ const Home1popularTour = () => {
                                     <ul className="location-list">
                                       {location_list.map((e) => {
                                         return (
-                                          <li>
+                                          <li key={index}>
                                             <Link href="/package-grid">
                                               {e}
                                             </Link>
@@ -777,7 +777,7 @@ const Home1popularTour = () => {
                                     <ul className="location-list">
                                       {place_list.map((e) => {
                                         return (
-                                          <li>
+                                          <li key={index}>
                                             <Link href="/package-grid">
                                               {e}
                                             </Link>

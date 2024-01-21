@@ -13,7 +13,7 @@ import RoomSidebar from "@/components/sidebar/RoomSidebar";
 import Link from "next/link";
 
 
-const page = () => {
+const Page = () => {
   const settings = useMemo(() => {
     return {
       slidesPerView: "auto",
@@ -1198,4 +1198,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

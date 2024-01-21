@@ -10,7 +10,7 @@ import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Topbar from "@/components/topbar/Topbar";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
-const page = () => {
+const Page = () => {
   const [isOpenModalVideo, setOpenModalVideo] = useState(false);
   const [isOpenimg, setOpenimg] = useState({
     openingState: false,
@@ -890,4 +890,4 @@ onClick={() => setOpenModalVideo(true)}><i className="bi bi-play-circle" /> Watc
   )
 }
 
-export default page
+export default Page
