@@ -35,7 +35,7 @@ const CreativeAgencyPage = () => {
       <Home4award />
       <Home4Team />
       <Home4Testimonial />
-      <Home4Blog />
+      <Home4Blog/>
       <Home4Footer />
     </>
   );

@@ -18,7 +18,7 @@ const ScrollProgress = () => {
     return () => {
       window.removeEventListener("scroll", toggleVisible);
     };
-  }, []); // Empty dependency array ensures this effect runs only once on mount
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
