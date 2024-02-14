@@ -142,6 +142,89 @@ body.dark{
 }
 
 
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(../fonts/hankenGrotesk-Black.ttf) format("truetype");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(../fonts/hankenGrotesk-ExtraBold.ttf) format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(../fonts/hankenGrotesk-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(../fonts/hankenGrotesk-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(../fonts/hankenGrotesk-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(../fonts/hankenGrotesk-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(../fonts/hankenGrotesk-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(../fonts/hankenGrotesk-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+
+
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-Black.ttf) format("truetype");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-ExtraBold.ttf) format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+
 /*================================================
 02. Mixins Css
 =================================================*/
@@ -8060,6 +8143,7 @@ header.style-3 {
           font-weight: 500;
           line-height: 1.3;
           margin-bottom: 0;
+          padding-right: 20px;
         }
       }
     }
@@ -10851,6 +10935,9 @@ header.style-3 {
 .experience-logo-area{
   .logo-area{
     overflow: hidden;
+    .rfm-child{
+      margin: 0 90px;
+    }
     .marquee_text2{
       background-color: #222222;
       padding: 25px 0;

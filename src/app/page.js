@@ -13,9 +13,9 @@ import Home1Solution from "@/components/solution/Home1Solution";
 import Home1Testimonial from "@/components/testimonial/Home1Testimonial";
 import Home1WorkProcess from "@/components/workProcess/Home1WorkProcess";
 export const metadata = {
-  title: "TripRex - Tour & Travel Agency  NextJs Template",
+  title: "Zenfy - Software, SaaS & Digital Agency Template",
   description:
-    "TripRex is a NextJs Template for Tour and Travel Agency purpose",
+    "Zenfy - Software, SaaS & Digital Agency Template",
   icons: {
     icon: "/assets/img/sm-logo.svg",
   },
