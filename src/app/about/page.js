@@ -1,5 +1,6 @@
 "use client";
-import Home5Partnerships from "@/components/Partnerships/Home5Partnerships";
+import React, { useMemo } from "react";
+
 import Home4award from "@/components/award/Home4award";
 import Home5Blog from "@/components/blog/Home5Blog";
 import CountUp from "react-countup";
@@ -7,7 +8,6 @@ import MainLayout from "@/components/layout/MainLayout";
 import Home5Team from "@/components/team/Home5Team";
 import Home5whyChoose from "@/components/why-choose/Home5whyChoose";
 
-import React, { useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
   Autoplay,
