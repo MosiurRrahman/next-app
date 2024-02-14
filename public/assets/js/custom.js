@@ -1,178 +1,186 @@
 (function ($) {
 	"use strict";
+  // Get Device width
+  let device_width = window.innerWidth;
 
-	$('.sidebar-toggle-button').on("click", function () {
-		$(this).toggleClass('active');
-		$('.dashboard-sidebar-wrapper').toggleClass('slide');
-		$('.main-content').toggleClass('slide');
-		$('.dashboard-footer').toggleClass('slide');
-	});
-
-
-	// Preloader
-	jQuery(window).on('load', function () {
-		$(".egns-preloader").delay(1600).fadeOut("slow");
-	});
-	$('.preloader-close-btn').on("click", function () {
-		$('.egns-preloader').addClass('close');
-	});
-	// transport Tab
-	$(function () {
-		$('.transport-type ul li').on('click', function () {
-			$('.transport-type ul li').removeClass('active'); // Remove active class from all list items
-			if ($(this).hasClass('privet')) {
-				$('#forPrivet').show();
-				$('#forPublic').hide();
-			}
-			else if ($(this).hasClass('public')) {
-				$('#forPublic').show();
-				$('#forPrivet').hide();
-			}
-			else {
-				$('#StripePayment').hide();
-				$('#OfflinePayment').hide();
-			}
+	if ($(window).width() > 1024) {
+		gsap.config({
+			nullTargetWarn: false,
+			trialWarn: false,
 		});
+	};
+	$(document).on('mouseenter mouseleave mousemove', '[data-tooltip-tit]', function (e) {
+		if (e.type === 'mouseenter') {
+			createTooltip($(this));
+		} else if (e.type === 'mouseleave') {
+			removeTooltip();
+		} else if (e.type === 'mousemove') {
+			updateTooltipPosition(e);
+		}
 	});
-
-	// timer start
-	$("[data-countdown]").each(function () {
-		var $deadline = new Date($(this).data("countdown")).getTime();
-		var $dataDays = $(this).children("[data-days]");
-		var $dataHours = $(this).children("[data-hours]");
-		var $dataMinutes = $(this).children("[data-minutes]");
-		var $dataSeconds = $(this).children("[data-seconds]");
-		var x = setInterval(function () {
-			var now = new Date().getTime();
-			var t = $deadline - now;
-			var days = Math.floor(t / (1000 * 60 * 60 * 24));
-			var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-			var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-			var seconds = Math.floor((t % (1000 * 60)) / 1000);
-			$dataDays.html(`${days} <span>Days</span> <span>D</span>`);
-			$dataHours.html(`${hours} <span>Hours</span> <span>H</span>`);
-			$dataMinutes.html(`${minutes} <span>Minutes</span> <span>M</span>`);
-			$dataSeconds.html(`${seconds} <span>Seconds</span> <span>S</span>`);
-			if (t <= 0) {
-				clearInterval(x);
-				$dataDays.html("00 <span>Days</span> <span>D</span>");
-				$dataHours.html("00 <span>Hours</span> <span>H</span>");
-				$dataMinutes.html("00 <span>Minutes</span> <span>M</span>");
-				$dataSeconds.html("00 <span>Seconds</span> <span>S</span>");
-			}
-		}, 1000);
-	});
-
-	// Home2 Activites 
-	$(".slider-and-tab-section .tab-sidebar ul li").on({
-		click: function () {
-			var index = $(this).index();
-			$(".activities-slider-group li").removeClass("active");
-			$(".activities-slider-group li:eq(" + index + ")").addClass("active");
+	$(document).on({
+		mouseenter: function () {
+			// When mouse enters the element with the attribute 'data-tooltip-sub'
+			// Create a new div with class 'div-tooltip-sub' and set its text content
+			$('<div class="div-tooltip-sub"></div>').text($(this).attr('data-tooltip-sub')).appendTo('.portfolio-info-flow-section').fadeIn();
 		},
-	});
+		mouseleave: function () {
+			// When mouse leaves the element
+			// Remove the div with class 'div-tooltip-sub'
+			$('.div-tooltip-sub').remove();
+		},
+		mousemove: function (e) {
+			// When mouse moves over the element
+			// Set the position of the div with class 'div-tooltip-sub' based on mouse coordinates
+			$('.div-tooltip-sub').css({ top: e.pageY + (-20), left: e.pageX + 10 });
+		}
+	}, '[data-tooltip-sub]');
+	function createTooltip(element) {
+		$('<div class="div-tooltip-tit"></div>').text(element.attr('data-tooltip-tit')).appendTo('.portfolio-info-flow-section').fadeIn();
+	}
+	function removeTooltip() {
+		$('.div-tooltip-tit').remove();
+	}
+	function updateTooltipPosition(e) {
+		$('.div-tooltip-tit').css({ top: e.pageY + 13, left: e.pageX + 10 });
+	}
+
+
+	// Horizontal Scrolling
+	if (device_width > 1200) {
+
+		var workflow_section_3 = document.querySelector('.horizontal-scrolling-wrapper');
+		if (workflow_section_3) {
+	
+		  let duration = 1,
+			sections = gsap.utils.toArray(".single-scroll"),
+			sectionIncrement = duration / (sections.length - 1),
+			tl = gsap.timeline({
+			  scrollTrigger: {
+				trigger: ".horizontal-scrolling-wrapper",
+				pin: true,
+				scrub: 1,
+				start: "-80px top",
+				end: "+=5000"
+			  }
+			});
+	
+		  tl.to(sections, {
+			xPercent: -100 * (sections.length - 1),
+			duration: duration,
+			ease: "none"
+		  });
+	
+		  sections.forEach((section, index) => {
+			let tween = gsap.from(section, {
+			  opacity: 0,
+			  scale:1,
+			  duration: 0.5,
+			  force3D: true,
+			  paused: true
+			});
+			addSectionCallbacks(tl, {
+			  start: sectionIncrement * (index - 0.99),
+			  end: sectionIncrement * (index + 0.99),
+			  onEnter: () => tween.play(),
+			  onLeave: () => tween.reverse(),
+			  onEnterBack: () => tween.play(),
+			  onLeaveBack: () => tween.reverse()
+			});
+			index || tween.progress(1);
+		  });
+	
+		  function addSectionCallbacks(timeline, { start, end, param, onEnter, onLeave, onEnterBack, onLeaveBack }) {
+			let trackDirection = animation => {
+			  let onUpdate = animation.eventCallback("onUpdate"),
+				prevTime = animation.time();
+			  animation.direction = animation.reversed() ? -1 : 1;
+			  animation.eventCallback("onUpdate", () => {
+				let time = animation.time();
+				if (prevTime !== time) {
+				  animation.direction = time < prevTime ? -1 : 1;
+				  prevTime = time;
+				}
+				onUpdate && onUpdate.call(animation);
+			  });
+			},
+			  empty = v => v;
+			timeline.direction || trackDirection(timeline);
+			start >= 0 && timeline.add(() => ((timeline.direction < 0 ? onLeaveBack : onEnter) || empty)(param), start);
+			end <= timeline.duration() && timeline.add(() => ((timeline.direction < 0 ? onEnterBack : onLeave) || empty)(param), end);
+		  }
+		}
+	  }
 
 	// star-rating
-	$('.star-icon').each(function () {
-		let self = $(this);
-		$(this).on('mouseenter', function () {
+	$('.star-icon').each(function() {
+		 let self=$(this);
+		 $(this).on('mouseenter', function(){
 			$(this).prevAll().addBack().css("color", "#FBB03B");
-		});
-
-		$(this).on('mouseout', function () {
+		 });
+		 
+		 $(this).on('mouseout', function(){
 			if (!$(this).parent().attr("data-rating")) {
 				$(this).prevAll().addBack().css("color", "#787878");
-			} else {
-				$(this).siblings().addBack().each(function (index) {
-					index + 1 <= $(this).parent().attr("data-rating") ?
-						$(this).css("color", "#FBB03B") : $(this).css("color", "#787878");
+			  } else {
+				$(this).siblings().addBack().each(function(index) {
+				  index + 1 <= $(this).parent().attr("data-rating") ? 
+					$(this).css("color", "#FBB03B") : $(this).css("color", "#787878");
 				});
-			}
-		});
-		$(this).on('click', function () {
+			  }
+		 });
+		 $(this).on('click', function(){
 			$(this).parent().attr("data-rating", $(this).prevAll().length + 1);
-		});
+		 });
 
 	});
 
-	// calender
-	$(function () {
-		$('input[name="inOut"]').daterangepicker({
-			singleDatePicker: true,
-			showDropdowns: true,
-			minYear: 2023,
-			maxYear: 2025,
-			locale: {
-				format: 'DD-MMM-YYYY'
-			}
-		}, function (start, end, label) {
-			var years = moment().diff(start, 'years');
-		});
+	jQuery('.dropdown-icon2').on('click', function () {
+        jQuery(this).toggleClass('active').next('.submenu-list').slideToggle();
+        jQuery(this).parent().siblings().children('.submenu-list').slideUp();
+        jQuery(this).parent().siblings().children('.active').removeClass('active');
+    });
 
-		$('input[name="daterange"]').daterangepicker({
-			opens: 'left',
-			minYear: '2023',
-			maxYear: '2025',
-			locale: {
-				format: 'DD-MMM'
-			}
-		}, function (start, end, label) {
-			console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-		});
-	});
+	  // Menu Text Animation
+	  document.querySelectorAll('.main-menu > li > a').forEach(button => button.innerHTML = '<div class="menu-text"><span>' + button.textContent.split('').join('</span><span>') + '</span></div>');
+
+	  setTimeout(() => {
+		var menu_text = document.querySelectorAll(".menu-text span")
+		menu_text.forEach((item) => {
+		  var font_sizes = window.getComputedStyle(item, null);
+		  let font_size = font_sizes.getPropertyValue("font-size");
+		  let size_in_number = parseInt(font_size.replace("px", ""));
+		  let new_size = parseInt(size_in_number / 3)
+		  new_size = new_size + "px"
+		  if (item.innerHTML == " ") {
+			item.style.width = new_size
+		  }
+		})
+	  }, 1000)
 
 	// FancyBox Js
 	$('[data-fancybox="popup-video"]').fancybox({
 		buttons: [
-			"close",
+		  "close",
 		],
 		loop: false,
 		protect: true,
-	});
+	  });
 	$('[data-fancybox="gallery-01"]').fancybox({
 		buttons: [
-			"close",
+		  "close",
 		],
 		loop: false,
 		protect: true,
-	});
+	  });
 	$('.video1').fancybox({
 		buttons: [
-			"close",
+		  "close",
 		],
 		loop: false,
 		protect: true,
-	});
-	$('.video2').fancybox({
-		buttons: [
-			"close",
-		],
-		loop: false,
-		protect: true,
-	});
-	$('.video3').fancybox({
-		buttons: [
-			"close",
-		],
-		loop: false,
-		protect: true,
-	});
-	$('.video4').fancybox({
-		buttons: [
-			"close",
-		],
-		loop: false,
-		protect: true,
-	});
-	$('.video5').fancybox({
-		buttons: [
-			"close",
-		],
-		loop: false,
-		protect: true,
-	});
-
-
+	  });
+	  	  
 
 	// sidebar
 	$('.sidebar-btn2').on("click", function () {
@@ -182,6 +190,13 @@
 		$('.header-sidebar').removeClass('slide');
 	});
 
+	$('.sidebar-btn').on("click", function () {
+        $('.sidebar-menu').addClass('active');
+    });
+	$('.sidebar-menu-close').on("click", function () {
+        $('.sidebar-menu').removeClass('active');
+    });
+
 	jQuery('.dropdown-icon').on('click', function () {
 		// alert()
 		// $(this).next('.mob-submenu').slideToggle();
@@ -189,21 +204,34 @@
 		jQuery(this).parent().siblings().children('ul, .mega-menu').slideUp();
 		jQuery(this).parent().siblings().children('.active').removeClass('active');
 	});
-	jQuery('.dropdown5').on('click', function () {
-		// alert()
-		// $(this).next('.mob-submenu').slideToggle();
-		jQuery(this).toggleClass('active').next('.checkbox-container ul').slideToggle();
-		jQuery(this).parent().siblings().children('.checkbox-container ul').slideUp();
-		jQuery(this).parent().siblings().children('.active').removeClass('active');
-	});
 
 	// sticky header
 
 	window.addEventListener('scroll', function () {
-		const header = document.querySelector('header.header-area, .dashboard-sidebar-wrapper');
-		header.classList.toggle("sticky", window.scrollY > 0);
+		const header = document.querySelector('header.header-area');
+		header.classList.toggle("sticky", window.scrollY > 200);
 	});
 
+	//Cart Menu Quantity button toggle
+	$(".qty-btn").on("click", function (e) {
+	e.stopPropagation();
+	// Toggle "active" class for the current quantity button and its related elements
+	$(this).next(".quantity-area").toggleClass("active");
+
+	// Remove "active" class from other quantity buttons and related elements
+	$(".quantity-area")
+		.not($(this).next(".quantity-area"))
+		.removeClass("active");
+	});
+	$(document).on("click", function (e) {
+	if (
+		!$(e.target).closest(".quantity-area")
+		.length
+	) {
+		// Remove "active" class from all quantity buttons and related elements
+		$(".quantity-area").removeClass("active");
+	}
+	});
 
 	//Counter up
 	$('.counter').counterUp({
@@ -211,14 +239,53 @@
 		time: 1000
 	});
 
+	// scroll up button
+	document.addEventListener("DOMContentLoaded", function(event) {
+		
+	let offset = 50;
+	let circleContainer = document.querySelector(".circle-container");
+	let circlePath = document.querySelector('.circle-container path');
+	let pathLength = circlePath.getTotalLength();
+	circlePath.style.transition = circlePath.style.WebkitTransition = 'none';
+	circlePath.style.strokeDasharray = pathLength;
+	circlePath.style.strokeDashoffset = pathLength;
+	circlePath.getBoundingClientRect();
+	circlePath.style.transition = circlePath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+
+	let updateLoader = () => {
+
+		let scrollTop = window.scrollY;
+		let docHeight = document.body.offsetHeight;
+		let winHeight = window.innerHeight;
+		let height = docHeight - winHeight;
+		let progress = pathLength - (scrollTop * pathLength / height);
+		circlePath.style.strokeDashoffset = progress;
+
+		if (scrollTop > offset) {
+		circleContainer.classList.add("active");
+		} else {
+		circleContainer.classList.remove("active");
+		}
+			
+	}
+	circleContainer.onclick = function(){
+	window.scrollTo({ top: 0, behavior: 'smooth'});
+	}
+
+	window.onscroll = () => {
+	updateLoader();
+	}
+	updateLoader();
+	});
+
 	//home1-banner-slider
-	var swiper = new Swiper(".home1-banner-slider", {
+	var swiper = new Swiper(".banner-img-slider", {
 		slidesPerView: 1,
 		speed: 2500,
 		spaceBetween: 25,
 		effect: 'fade',             // Use the fade effect
 		fadeEffect: {
-			crossFade: true,           // Enable cross-fade transition
+		  crossFade: true,           // Enable cross-fade transition
 		},
 		autoplay: {
 			delay: 3000, // Autoplay duration in milliseconds
@@ -228,427 +295,56 @@
 			nextEl: ".home1-banner-next",
 			prevEl: ".home1-banner-prev",
 		},
-	});
-	var swiper = new Swiper(".home3-banner-slider", {
+	}); 
+	var swiper = new Swiper(".portfolio-slider", {
 		slidesPerView: 1,
 		speed: 1500,
 		spaceBetween: 25,
-		effect: 'fade',
 		loop: true,
-		fadeEffect: {
-			crossFade: true,           // Enable cross-fade transition
-		},
 		autoplay: {
 			delay: 2500, // Autoplay duration in milliseconds
 			disableOnInteraction: false,
 		},
 		pagination: {
-			el: ".progress-pagination",
-			type: "progressbar",
-		},
-		navigation: {
-			nextEl: ".home3-banner-next",
-			prevEl: ".home3-banner-prev",
-		},
-	});
-	var swiper = new Swiper(".home4-banner-img-slider", {
-		slidesPerView: 1,
-		speed: 1500,
-		spaceBetween: 25,
-		effect: 'fade',
-		loop: true,
-		fadeEffect: {
-			crossFade: true,           // Enable cross-fade transition
-		},
-		autoplay: {
-			delay: 2500, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
-		},
-		navigation: {
-			nextEl: ".home4-banner-next",
-			prevEl: ".home4-banner-prev",
-		},
-	});
-	//home1-facility-slider(franctional-slider)
-	var swiper = new Swiper(".franctional-slider", {
-		slidesPerView: 1,
-		speed: 1500,
-		spaceBetween: 25,
-		loop: true,
-		// autoplay: {
-		// 	delay: 2500, // Autoplay duration in milliseconds
-		// 	disableOnInteraction: false,
-		// },
-		pagination: {
-			el: '.franctional-slider-pagi1',
-			type: "fraction",
-		},
-		navigation: {
-			nextEl: ".franctional-slider-next-btn",
-			prevEl: ".franctional-slider-prev-btn",
-		},
-	});
-	var swiper = new Swiper(".package-card-tab-slider", {
-		slidesPerView: 1,
-		speed: 1500,
-		spaceBetween: 25,
-		loop: true,
-		autoplay: {
-			delay: 2500, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
-		},
-		navigation: {
-			nextEl: ".package-card-tab-next",
-			prevEl: ".package-card-tab-prev",
-		},
-
-		breakpoints: {
-			280: {
-				slidesPerView: 1,
-			},
-			386: {
-				slidesPerView: 1,
-			},
-			576: {
-				slidesPerView: 1,
-				spaceBetween: 15,
-			},
-			768: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			992: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			1200: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			1400: {
-				slidesPerView: 3,
-			},
-		}
-	});
-	var swiper = new Swiper(".testimonial-card-slider", {
-		slidesPerView: 1,
-		speed: 1500,
-		spaceBetween: 25,
-		loop: true,
-		autoplay: {
-			delay: 2500, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
-		},
-		navigation: {
-			nextEl: ".testimonial-card-tab-next",
-			prevEl: ".testimonial-card-tab-prev",
-		},
-
-		breakpoints: {
-			280: {
-				slidesPerView: 1,
-			},
-			386: {
-				slidesPerView: 1,
-			},
-			576: {
-				slidesPerView: 1,
-				spaceBetween: 15,
-			},
-			768: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			992: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			1200: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			1400: {
-				slidesPerView: 3,
-			},
-		}
-	});
-	var swiper = new Swiper(".package-card2-slider", {
-		slidesPerView: 1,
-		speed: 1500,
-		spaceBetween: 25,
-		// autoplay: {
-		// 	delay: 2500, // Autoplay duration in milliseconds
-		// 	disableOnInteraction: false,
-		// },
-		navigation: {
-			nextEl: ".package-card2-next",
-			prevEl: ".package-card2-prev",
-		},
-
-		breakpoints: {
-			280: {
-				slidesPerView: 1,
-			},
-			386: {
-				slidesPerView: 1,
-			},
-			576: {
-				slidesPerView: 1,
-				spaceBetween: 15,
-			},
-			768: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			992: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			1200: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			1400: {
-				slidesPerView: 3,
-			},
-		}
-	});
-	var swiper = new Swiper(".destination-card2-slider", {
-		slidesPerView: 1,
-		speed: 1500,
-		spaceBetween: 25,
-		navigation: {
-			nextEl: ".destination-card2-next",
-			prevEl: ".destination-card2-prev",
-		},
-
-		breakpoints: {
-			280: {
-				slidesPerView: 1,
-			},
-			386: {
-				slidesPerView: 1,
-			},
-			576: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			768: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			992: {
-				slidesPerView: 4,
-				spaceBetween: 15,
-			},
-			1200: {
-				slidesPerView: 4,
-				spaceBetween: 15,
-			},
-			1400: {
-				slidesPerView: 4,
-			},
-		}
-	});
-	var swiper = new Swiper(".destination-sidebar-slider", {
-		slidesPerView: 1,
-		speed: 1500,
-		spaceBetween: 25,
-		loop: true,
-		autoplay: {
-			delay: 2500, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
-		},
-		navigation: {
-			nextEl: ".destination-sidebar-next",
-			prevEl: ".destination-sidebar-prev",
-		},
-
-		breakpoints: {
-			280: {
-				slidesPerView: 1,
-			},
-			386: {
-				slidesPerView: 1,
-			},
-			576: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			768: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			992: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			1200: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			1400: {
-				slidesPerView: 2,
-			},
-		}
-	});
-	var swiper = new Swiper(".package-card-slider", {
-		slidesPerView: 1,
-		speed: 2000,
-		spaceBetween: 25,
-		// autoplay: {
-		// 	delay: 2500, // Autoplay duration in milliseconds
-		// 	disableOnInteraction: false,
-		// },
-		navigation: {
-			nextEl: ".package-card-slider-next",
-			prevEl: ".package-card-slider-prev",
-		},
-
-		breakpoints: {
-			280: {
-				slidesPerView: 1,
-			},
-			386: {
-				slidesPerView: 1,
-			},
-			576: {
-				slidesPerView: 1,
-				spaceBetween: 15,
-			},
-			768: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			992: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			1200: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			1400: {
-				slidesPerView: 3,
-			},
-		}
-	});
-	var swiper = new Swiper(".hotel-card-slider", {
-		slidesPerView: 1,
-		speed: 2000,
-		spaceBetween: 25,
-		// autoplay: {
-		// 	delay: 2500, // Autoplay duration in milliseconds
-		// 	disableOnInteraction: false,
-		// },
-		navigation: {
-			nextEl: ".package-card-slider-next",
-			prevEl: ".package-card-slider-prev",
-		},
-
-		breakpoints: {
-			280: {
-				slidesPerView: 1,
-			},
-			386: {
-				slidesPerView: 1,
-			},
-			576: {
-				slidesPerView: 1,
-				spaceBetween: 15,
-			},
-			768: {
-				slidesPerView: 1,
-				spaceBetween: 24,
-			},
-			992: {
-				slidesPerView: 2,
-				spaceBetween: 24,
-			},
-			1200: {
-				slidesPerView: 2,
-				spaceBetween: 24,
-			},
-			1400: {
-				slidesPerView: 3,
-			},
-		}
-	});
-	var swiper = new Swiper(".activities-img-slider", {
-		slidesPerView: 1,
-		speed: 1500,
-		spaceBetween: 25,
-		effect: 'fade',             // Use the fade effect
-		loop: true,
-		fadeEffect: {
-			crossFade: true,           // Enable cross-fade transition
-		},
-		autoplay: {
-			delay: 2500, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
-		},
-		pagination: {
-			el: ".swiper-pagination5",
+			el: ".swiper-pagination",
 			clickable: true,
 		},
+		breakpoints: {
+			280: {
+				slidesPerView: 1,
+			},
+			386: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 1,
+				spaceBetween: 15,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 15,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 15,
+			},
+			1200: {
+				slidesPerView: 3,
+				spaceBetween: 15,
+			},
+			1400: {
+				slidesPerView: 3,
+			},
+		}
 	});
-	var swiper = new Swiper(".hotel-img-slider", {
+	var swiper = new Swiper(".process-slider", {
 		slidesPerView: 1,
 		speed: 1500,
 		spaceBetween: 25,
-		effect: 'fade',             // Use the fade effect
 		loop: true,
-		fadeEffect: {
-			crossFade: true,           // Enable cross-fade transition
-		},
-		autoplay: {
-			delay: 2500, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
-		},
-		pagination: {
-			el: ".swiper-pagination5",
-			clickable: true,
-		},
-	});
-	var swiper5 = new Swiper(".banner4-card-slide", {
-		spaceBetween: 10,
-		slidesPerView: 1,
-		freeMode: true,
-		watchSlidesProgress: true,
-		speed: 1500,
-		allowTouchMove: false,
-		effect: 'fade',
-		fadeEffect: {
-			crossFade: true,           // Enable cross-fade transition
-		},
-		thumbs: {
-			swiper: swiper6,
-		},
-	});
-	var swiper6 = new Swiper(".package-card3-slide", {
-		spaceBetween: 10,
-		speed: 1500,
-		draggable: false,
 		navigation: {
-			nextEl: ".banner4-slider-next",
-			prevEl: ".banner4-slider-prev",
-		},
-		thumbs: {
-			swiper: swiper5,
-		},
-	});
-	var swiper = new Swiper(".home2-testimonial-card-slider", {
-		slidesPerView: 1,
-		speed: 2500,
-		spaceBetween: 25,
-		loop: true,
-		// autoplay: {
-		// 	delay: 2500, // Autoplay duration in milliseconds
-		// 	disableOnInteraction: false,
-		// },
-		navigation: {
-			nextEl: ".testimonial-card-slider-next",
-			prevEl: ".testimonial-card-slider-prev",
+			nextEl: ".process-slider-next",
+			prevEl: ".process-slider-prev",
 		},
 
 		breakpoints: {
@@ -663,290 +359,34 @@
 				spaceBetween: 15,
 			},
 			768: {
-				slidesPerView: 1,
+				slidesPerView: 2,
 				spaceBetween: 15,
 			},
 			992: {
-				slidesPerView: 1,
-				spaceBetween: 15,
+				slidesPerView: 2,
+				spaceBetween: 20,
 			},
 			1200: {
-				slidesPerView: 1,
+				slidesPerView: 3,
 				spaceBetween: 15,
 			},
 			1400: {
-				slidesPerView: 1,
+				slidesPerView: 3,
 			},
 		}
 	});
-	var swiper = new Swiper(".teams-card-slider", {
-			slidesPerView: 1,
-			speed: 1500,
-			spaceBetween: 25,
-			// autoplay: {
-			// 	delay: 2500, // Autoplay duration in milliseconds
-			// 	disableOnInteraction: false,
-			// },
-			navigation: {
-				nextEl: ".teams-card-next",
-				prevEl: ".teams-card-prev",
-			},
-
-			breakpoints: {
-				280: {
-					slidesPerView: 1,
-				},
-				386: {
-					slidesPerView: 1,
-				},
-				576: {
-					slidesPerView: 2,
-					spaceBetween: 15,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 15,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 15,
-				},
-				1200: {
-					slidesPerView: 4,
-					spaceBetween: 15,
-				},
-				1400: {
-					slidesPerView: 4,
-				},
-			}
-	});
-	var swiper = new Swiper(".banner5-slider", {
-		slidesPerView: 1,
-		speed: 1500,
-		spaceBetween: 25,
-		loop: true,
-		// autoplay: {
-		// 	delay: 2500, // Autoplay duration in milliseconds
-		// 	disableOnInteraction: false,
-		// },
-		navigation: {
-			nextEl: ".banner5-slider-next",
-			prevEl: ".banner5-slider-prev",
-		},
-	});
-	var activities = new Swiper(".activities-tab-img-slider", {
-		slidesPerView: 1,
-		speed: 2000,
-		spaceBetween: 0,
-		autoplay: {
-			delay: 2500, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
-		},
-		navigation: {
-			nextEl: ".activities-tab-img-next",
-			prevEl: ".activities-tab-img-prev",
-		},
-	});
-	var activities = new Swiper(".tour-tab-slider", {
+	var swiper = new Swiper(".case-study-slider", {
 		slidesPerView: 1,
 		speed: 1500,
 		spaceBetween: 30,
-		navigation: {
-			nextEl: ".tour-tab-slider-next",
-			prevEl: ".tour-tab-slider-prev",
-		},
-		breakpoints: {
-			280: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			386: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			576: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			768: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			992: {
-				slidesPerView: 4,
-				spaceBetween: 15,
-			},
-			1200: {
-				slidesPerView: 5,
-				spaceBetween: 15,
-			},
-			1400: {
-				slidesPerView: 5,
-			},
-		}
-	});
-	var swiper = new Swiper(".home3-testimonial-card-slider", {
-		slidesPerView: 1,
-		speed: 2500,
-		spaceBetween: 25,
-		autoplay: {
-			delay: 2500, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
-		},
-		pagination: {
-			el: ".swiper-pagination5",
-			clickable: true,
-		},
-
-		breakpoints: {
-			280: {
-				slidesPerView: 1,
-			},
-			386: {
-				slidesPerView: 1,
-			},
-			576: {
-				slidesPerView: 1,
-				spaceBetween: 15,
-			},
-			768: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			992: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			1200: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			1400: {
-				slidesPerView: 3,
-			},
-		}
-	});
-	var swiper = new Swiper(".instagram-slider", {
-		slidesPerView: 1,
-		speed: 2500,
-		spaceBetween: 2,
-		autoplay: {
-			delay: 2500, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
-		},
-		pagination: {
-			el: ".swiper-pagination5",
-			clickable: true,
-		},
-
-		breakpoints: {
-			280: {
-				slidesPerView: 1,
-			},
-			386: {
-				slidesPerView: 1,
-			},
-			576: {
-				slidesPerView: 2,
-			},
-			768: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			992: {
-				slidesPerView: 4,
-			},
-			1200: {
-				slidesPerView: 5,
-			},
-			1400: {
-				slidesPerView: 5,
-			},
-		}
-	});
-	var swiper = new Swiper(".home4-destination-card-slider", {
-		slidesPerView: 1,
-		speed: 2000,
-		spaceBetween: 25,
-		navigation: {
-			nextEl: ".home4-destination-card-next",
-			prevEl: ".home4-destination-card-prev",
-		},
-
-		breakpoints: {
-			280: {
-				slidesPerView: 1,
-			},
-			386: {
-				slidesPerView: 1,
-			},
-			576: {
-				slidesPerView: 1,
-				spaceBetween: 15,
-			},
-			768: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			992: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			1200: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			1400: {
-				slidesPerView: 3,
-			},
-		}
-	});
-	var swiper = new Swiper(".home4-banner2-slider", {
-		slidesPerView: 1,
-		speed: 2000,
-		spaceBetween: 25,
-		effect: 'fade',             // Use the fade effect
-		fadeEffect: {
-			crossFade: true,           // Enable cross-fade transition
-		},
-		autoplay: {
-			delay: 2500, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
-		},
-		navigation: {
-			nextEl: ".home4-banner2-slider-next",
-			prevEl: ".home4-banner2-slider-prev",
-		},
-	});
-	var swiper = new Swiper(".home4-tab-with-img-slider", {
-		slidesPerView: 1,
-		speed: 1500,
-		spaceBetween: 25,
-		effect: 'fade',             // Use the fade effect
 		loop: true,
-		fadeEffect: {
-			crossFade: true,           // Enable cross-fade transition
-		},
-		autoplay: {
-			delay: 2000, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
-		},
-		navigation: {
-			nextEl: ".home4-tab-with-img-next",
-			prevEl: ".home4-tab-with-img-prev",
-		},
-	});
-	var swiper = new Swiper(".package-card-slider2", {
-		slidesPerView: 1,
-		speed: 2000,
-		spaceBetween: 25,
 		// autoplay: {
 		// 	delay: 2500, // Autoplay duration in milliseconds
 		// 	disableOnInteraction: false,
 		// },
 		navigation: {
-			nextEl: ".package-card-slider2-next",
-			prevEl: ".package-card-slider2-prev",
+			nextEl: ".case-study-slider-next",
+			prevEl: ".case-study-slider-prev",
 		},
 
 		breakpoints: {
@@ -965,45 +405,8 @@
 				spaceBetween: 15,
 			},
 			992: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			1200: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			1400: {
-				slidesPerView: 3,
-			},
-		}
-	});
-	var swiper = new Swiper(".package-card4-slider", {
-		slidesPerView: 1,
-		speed: 2000,
-		spaceBetween: 25,
-		navigation: {
-			nextEl: ".package-card4-slider-next",
-			prevEl: ".package-card4-slider-prev",
-		},
-
-		breakpoints: {
-			280: {
 				slidesPerView: 1,
-			},
-			386: {
-				slidesPerView: 1,
-			},
-			576: {
-				slidesPerView: 1,
-				spaceBetween: 15,
-			},
-			768: {
-				slidesPerView: 1,
-				spaceBetween: 15,
-			},
-			992: {
-				slidesPerView: 2,
-				spaceBetween: 15,
+				spaceBetween: 20,
 			},
 			1200: {
 				slidesPerView: 2,
@@ -1014,71 +417,22 @@
 			},
 		}
 	});
-	var swiper = new Swiper(".home4-testimonial-card-slider", {
-		slidesPerView: 1,
-		speed: 2500,
-		spaceBetween: 25,
-		// autoplay: {
-		// 	delay: 2500, // Autoplay duration in milliseconds
-		// 	disableOnInteraction: false,
-		// },
-		navigation: {
-			nextEl: ".home4-testimonial-card-slider-next",
-			prevEl: ".home4-testimonial-card-slider-prev",
-		},
-
-		breakpoints: {
-			280: {
-				slidesPerView: 1,
-			},
-			386: {
-				slidesPerView: 1,
-			},
-			576: {
-				slidesPerView: 1,
-				spaceBetween: 15,
-			},
-			768: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			992: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			1200: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			1400: {
-				slidesPerView: 3,
-			},
-		}
-	});
-	var swiper = new Swiper(".home5-banner-slider", {
+	var swiper = new Swiper(".home1-testimonial-slider", {
 		slidesPerView: 1,
 		speed: 1500,
-		spaceBetween: 25,
+		spaceBetween: 30,
+		loop: true,
 		effect: 'fade',             // Use the fade effect
 		fadeEffect: {
-			crossFade: true,           // Enable cross-fade transition
+		  crossFade: true           // Enable cross-fade transition
 		},
 		autoplay: {
 			delay: 2500, // Autoplay duration in milliseconds
 			disableOnInteraction: false,
 		},
 		navigation: {
-			nextEl: ".home5-banner-next",
-			prevEl: ".home5-banner-prev",
-		},
-	});
-	var swiper = new Swiper(".activity-card-slider", {
-		slidesPerView: 1,
-		speed: 2000,
-		spaceBetween: 25,
-		navigation: {
-			nextEl: ".activity-card-slider-next",
-			prevEl: ".activity-card-slider-prev",
+			nextEl: ".case-study-slider-next",
+			prevEl: ".case-study-slider-prev",
 		},
 
 		breakpoints: {
@@ -1089,34 +443,39 @@
 				slidesPerView: 1,
 			},
 			576: {
-				slidesPerView: 2,
+				slidesPerView: 1,
 				spaceBetween: 15,
 			},
 			768: {
-				slidesPerView: 2,
+				slidesPerView: 1,
 				spaceBetween: 15,
 			},
 			992: {
-				slidesPerView: 3,
-				spaceBetween: 15,
+				slidesPerView: 1,
+				spaceBetween: 20,
 			},
 			1200: {
-				slidesPerView: 4,
+				slidesPerView: 1,
 				spaceBetween: 15,
 			},
 			1400: {
-				slidesPerView: 4,
+				slidesPerView: 1,
 			},
 		}
 	});
-	var swiper = new Swiper(".destination-card3-slider", {
+	var swiper = new Swiper(".home2-process-slider", {
 		slidesPerView: 1,
 		speed: 1500,
-		spaceBetween: 25,
+		spaceBetween: 30,
+		grabCursor: true,
 		// loop: true,
+		// autoplay: {
+		// 	delay: 2500, // Autoplay duration in milliseconds
+		// 	disableOnInteraction: false,
+		// },
 		navigation: {
-			nextEl: ".destination-card3-slider-next",
-			prevEl: ".destination-card3-slider-prev",
+			nextEl: ".home2-process-next",
+			prevEl: ".home2-process-prev",
 		},
 
 		breakpoints: {
@@ -1131,12 +490,12 @@
 				spaceBetween: 15,
 			},
 			768: {
-				slidesPerView: 3,
+				slidesPerView: 2,
 				spaceBetween: 15,
 			},
 			992: {
-				slidesPerView: 4,
-				spaceBetween: 15,
+				slidesPerView: 3,
+				spaceBetween: 20,
 			},
 			1200: {
 				slidesPerView: 4,
@@ -1147,36 +506,19 @@
 			},
 		}
 	});
-	var swiper = new Swiper(".home5-banner2-slider", {
+	var swiper = new Swiper(".home2-case-study-slider", {
 		slidesPerView: 1,
 		speed: 1500,
 		spaceBetween: 25,
-		effect: 'fade',             // Use the fade effect
-		fadeEffect: {
-			crossFade: true,           // Enable cross-fade transition
-		},
-		autoplay: {
-			delay: 2500, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
-		},
-		pagination: {
-			el: ".swiper-pagination5",
-			clickable: true,
-		},
-	});
-	var swiper = new Swiper(".home5-teams-card-slider", {
-		slidesPerView: 1,
-		speed: 1500,
-		spaceBetween: 25,
+		loop: true,
 		// autoplay: {
 		// 	delay: 2500, // Autoplay duration in milliseconds
 		// 	disableOnInteraction: false,
 		// },
 		pagination: {
-			el: ".teams-pagination",
+			el: ".swiper-pagination",
 			clickable: true,
 		},
-
 		breakpoints: {
 			280: {
 				slidesPerView: 1,
@@ -1185,7 +527,7 @@
 				slidesPerView: 1,
 			},
 			576: {
-				slidesPerView: 2,
+				slidesPerView: 1,
 				spaceBetween: 15,
 			},
 			768: {
@@ -1205,74 +547,79 @@
 			},
 		}
 	});
-	var swiper = new Swiper(".home5-testimonal-slider", {
-		slidesPerView: 1,
-		speed: 2500,
-		spaceBetween: 25,
-		effect: 'fade',             // Use the fade effect
+	var swiper = new Swiper(".home2-testimonial-slider", {
+        slidesPerView: 1,
+        speed: 1500,
+        spaceBetween: 25,
+        loop: true,
+        effect: 'fade',             // Use the fade effect
 		fadeEffect: {
-			crossFade: true,           // Enable cross-fade transition
+		  crossFade: true           // Enable cross-fade transition
 		},
-		autoplay: {
-			delay: 2500, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
+        autoplay: {
+         delay: 4000, // Autoplay duration in milliseconds
+         disableOnInteraction: false,
+        },
+        navigation: {
+			nextEl: ".next-2",
+			prevEl: ".prev-2",
 		},
-		navigation: {
-			nextEl: ".home5-testimonal-slider-next",
-			prevEl: ".home5-testimonal-slider-prev",
-		},
-	});
-	var swiper = new Swiper(".home6-banner-slider", {
+    });
+	var swiper = new Swiper(".home3-testimonial-slider", {
 		slidesPerView: 1,
 		speed: 1500,
 		spaceBetween: 30,
 		// autoplay: {
-		// 	delay: 3000, // Autoplay duration in milliseconds
+		// 	delay: 2500, // Autoplay duration in milliseconds
+		// 	disableOnInteraction: false,
+		// },
+		pagination: {
+            el: '.franctional-pagi2',
+            type: "fraction",
+        },
+		navigation: {
+			nextEl: ".home3-testimonial-next",
+			prevEl: ".home3-testimonial-prev",
+		},
+		breakpoints: {
+			280: {
+				slidesPerView: 1,
+			},
+			386: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 1,
+				spaceBetween: 15,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 15,
+			},
+			992: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			1200: {
+				slidesPerView: 3,
+				spaceBetween: 15,
+			},
+			1400: {
+				slidesPerView: 3,
+			},
+		}
+	});
+	var swiper = new Swiper(".home4-teams-slider", {
+		slidesPerView: 1,
+		speed: 1500,
+		spaceBetween: 30,
+		// autoplay: {
+		// 	delay: 2500, // Autoplay duration in milliseconds
 		// 	disableOnInteraction: false,
 		// },
 		navigation: {
-			nextEl: ".home6-banner-slider-next",
-			prevEl: ".home6-banner-slider-prev",
-		},
-		pagination: {
-			el: '.franctional-slider-pagi1',
-			type: "fraction",
-		},
-		breakpoints: {
-			280: {
-				slidesPerView: 1,
-			},
-			386: {
-				slidesPerView: 1,
-			},
-			576: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			768: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			992: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			1200: {
-				slidesPerView: 4,
-				spaceBetween: 15,
-			},
-			1400: {
-				slidesPerView: 4,
-			},
-		}
-	});
-	var swiper = new Swiper(".home6-destination-card-slider", {
-		slidesPerView: 1,
-		speed: 2000,
-		spaceBetween: 15,
-		navigation: {
-			nextEl: ".activity-card-slider-next",
-			prevEl: ".activity-card-slider-prev",
+			nextEl: ".home4-team-slider-next",
+			prevEl: ".home4-team-slider-prev",
 		},
 
 		breakpoints: {
@@ -1292,7 +639,7 @@
 			},
 			992: {
 				slidesPerView: 3,
-				spaceBetween: 15,
+				spaceBetween: 20,
 			},
 			1200: {
 				slidesPerView: 4,
@@ -1300,446 +647,291 @@
 			},
 			1400: {
 				slidesPerView: 4,
-			},
-			1700: {
-				slidesPerView: 5,
-			},
+			},s
 		}
 	});
-	var swiper = new Swiper(".home6-package-card-slider", {
-		slidesPerView: 1,
-		speed: 2000,
-		spaceBetween: 20,
-		autoplay: {
-			delay: 2500, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
-		},
-		navigation: {
-			nextEl: ".home6-package-card-next",
-			prevEl: ".home6-package-card-prev",
-		},
-
-		breakpoints: {
-			280: {
-				slidesPerView: 1,
-			},
-			386: {
-				slidesPerView: 1,
-			},
-			576: {
-				slidesPerView: 1,
-				spaceBetween: 15,
-			},
-			768: {
-				slidesPerView: 2,
-				spaceBetween: 15,
-			},
-			992: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
-			1200: {
-				slidesPerView: 4,
-				spaceBetween: 15,
-			},
-			1400: {
-				slidesPerView: 4,
-			},
-		}
-	});
-	var swiper = new Swiper(".home6-testimonial-slider", {
+	var swiper = new Swiper(".partnership-slider", {
 		slidesPerView: 1,
 		speed: 1500,
-		spaceBetween: 25,
-		effect: 'fade',             // Use the fade effect
-		fadeEffect: {
-			crossFade: true,           // Enable cross-fade transition
-		},
-		autoplay: {
-			delay: 2500, // Autoplay duration in milliseconds
-			disableOnInteraction: false,
-		},
-		navigation: {
-			nextEl: ".home6-testimonial-next",
-			prevEl: ".home6-testimonial-prev",
-		},
-	});
-	var activities = new Swiper(".activities-nav-slider", {
-		slidesPerView: 1,
-		speed: 1500,
-		spaceBetween: 0,
-		navigation: {
-			nextEl: ".home6-activities-nav-next",
-			prevEl: ".home6-activities-nav-prev",
-		},
+		spaceBetween: 30,
+		grabCursor: true,
+
 		breakpoints: {
 			280: {
 				slidesPerView: 1,
 			},
 			386: {
+				slidesPerView: 1,
+			},
+			576: {
 				slidesPerView: 2,
 				spaceBetween: 15,
 			},
-			576: {
-				slidesPerView: 3,
-				spaceBetween: 15,
-			},
 			768: {
-				slidesPerView: 3,
+				slidesPerView: 2,
 				spaceBetween: 15,
 			},
 			992: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			1200: {
 				slidesPerView: 4,
 				spaceBetween: 15,
 			},
-			1200: {
-				slidesPerView: 5,
-				spaceBetween: 15,
-			},
 			1400: {
-				slidesPerView: 5,
+				slidesPerView: 4,
 			},
 		}
 	});
-	// Product Slider
-	const sliders = document.querySelectorAll('.product-img-slider');
-	sliders.forEach((slider) => {
-		const nextBtn = slider.parentElement.querySelector('.product-stand-next');
-		const prevBtn = slider.parentElement.querySelector('.product-stand-prev');
-
-		const swiper = new Swiper(slider, {
-			slidesPerView: 1,
-			speed: 1500,
-			spaceBetween: 10,
-			loop: true,
-			autoplay: false,
-			navigation: {
-				nextEl: nextBtn,
-				prevEl: prevBtn,
-			},
-		});
-		nextBtn.addEventListener('click', () => {
-			swiper.slideNext();
-		});
-
-		prevBtn.addEventListener('click', () => {
-			swiper.slidePrev();
-		});
-	});
-
-
-	// =================
-	// Country Card 
-	// =================
-
-	// Initialize the first child as active on page load
-	$('.country-area ul li:first-child').addClass('active');
-	// Mouse enter event for country-area div
-
-	// Mouse leave event for country-area div
-	$('.country-area').on("mouseleave", function () {
-		// Remove active class from all li elements except the first child
-		$('.country-area ul li:not(:first-child)').removeClass('active');
-		// Add active class to the first child
-		$('.country-area ul li:first-child').addClass('active');
-	});
-	// Hover event for li elements
-	$('.country-area ul li').on(
-		{
-			mouseenter: function () {
-				// Add active class to the current li and remove from siblings
-				$(this).addClass('active').siblings().removeClass('active');
-			}
-		}
-	);
-
+	//wow js 
+    jQuery(window).on('load', function () {
+        new WOW().init();
+        window.wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true,
+            offset: 80
+        })
+        window.wow.init();
+    });
 	//Quantity Increment
 	$(".quantity__minus").on("click", function (e) {
-		e.preventDefault();
-		var input = $(this).siblings(".quantity__input");
-		var value = parseInt(input.val());
-		if (value > 1) {
-			value--;
+	   e.preventDefault();
+	   var input = $(this).siblings(".quantity__input");
+	   var value = parseInt(input.val());
+	   if (value > 1) {
+		 value--;
+	   }
+	   input.val(value.toString().padStart(2, "0"));
+	 });
+	 $(".quantity__plus").on("click", function (e) {
+	   e.preventDefault();
+	   var input = $(this).siblings(".quantity__input");
+	   var value = parseInt(input.val());
+	   value++;
+	   input.val(value.toString().padStart(2, "0"));
+	 });
+
+	// ====================
+	// Progrees Bar
+	// ====================
+	var skillPers = document.querySelectorAll(".experience-bar-per");
+
+	skillPers.forEach(function(skillPer) {
+	var per = parseFloat(skillPer.getAttribute("data-per"));
+	skillPer.style.width = per + "%";
+	
+	var animatedValue = 0; 
+	var startTime = null;
+	
+	function animate(timestamp) {
+		if (!startTime) startTime = timestamp;
+		var progress = timestamp - startTime;
+		var stepPercentage = progress / 1000; // Dividing by duration in milliseconds (1000ms = 1s)
+		
+		if (stepPercentage < 1) {
+		animatedValue = per * stepPercentage;
+		skillPer.setAttribute("data-per", Math.floor(animatedValue) + "%");
+		requestAnimationFrame(animate);
+		} else {
+		animatedValue = per;
+		skillPer.setAttribute("data-per", Math.floor(animatedValue) + "%");
 		}
-		input.val(value.toString().padStart(2, "0"));
-	});
-	$(".quantity__plus").on("click", function (e) {
-		e.preventDefault();
-		var input = $(this).siblings(".quantity__input");
-		var value = parseInt(input.val());
-		value++;
-		input.val(value.toString().padStart(2, "0"));
+	}
+	requestAnimationFrame(animate);
+	}); 
+
+	// services Images
+	const serviceImgItem = document.querySelectorAll(".sevices-wrap .single-services ");
+	console.log(serviceImgItem);
+	function followImageCursor(event, serviceImgItem) {
+	  const contentBox = serviceImgItem.getBoundingClientRect();
+	  const dx = event.clientX - contentBox.x;
+	  const dy = event.clientY - contentBox.y;
+	  serviceImgItem.children[2].style.transform = `translate(${dx}px, ${dy}px)`;
+	}
+  
+	serviceImgItem.forEach((item, i) => {
+	  item.addEventListener("mousemove", (event) => {
+		setInterval(followImageCursor(event, item), 100);
+	  });
 	});
 
-	//Quantity Increment Guest
-	$(".guest-quantity__minus").on("click", function (e) {
-		let type = $(this).data('type');
-		e.preventDefault();
-		var input = $(this).siblings(".quantity__input");
-		var value = parseInt(input.val());
+	const serviceImgItem2 = document.querySelectorAll(".sevices-wrap2 .single-services");
+	console.log(serviceImgItem2);
+	function followImageCursor(event, serviceImgItem2) {
+	  const contentBox = serviceImgItem2.getBoundingClientRect();
+	  const dx = event.clientX - contentBox.x;
+	  const dy = event.clientY - contentBox.y;
+	  serviceImgItem2.children[2].style.transform = `translate(${dx}px, ${dy}px) rotate(12deg)`;
+	}
+  
+	serviceImgItem2.forEach((item, i) => {
+	  item.addEventListener("mousemove", (event) => {
+		setInterval(followImageCursor(event, item), 100);
+	  });
+	});
 
-		if (type == 'adult') {
-			if (value > 1) {
-				value--;
-				$("#adult-qty").text(value.toString())
-				//    $("#adullt_select_qty").val(value.toString());
-			}
-		} else if (type == 'child') {
-			if (value > 0) {
-				value--;
-				$("#child-qty").text(value.toString())
-				// $("#child_seelct_qty").val(value.toString());
-			}
+	// Payment Method
+	$(function() {
+		$('.choose-payment-method ul li').on('click', function() {
+		$('.choose-payment-method ul li').removeClass('active'); // Remove active class from all list items
+		if ($(this).hasClass('stripe')) {
+			$('#StripePayment').show();
+			$('#OfflinePayment').hide();
+			$(this).addClass('active'); // Add active class to the clicked list item
 		}
-		input.val(value == 0 ? value : value.toString());
-	});
-
-	$(".guest-quantity__plus").on("click", function (e) {
-		e.preventDefault();
-		let type = $(this).data('type');
-		var input = $(this).siblings(".quantity__input");
-		var value = parseInt(input.val());
-		value++;
-		if (type == 'adult') {
-			$("#adult-qty").text(value.toString())
-			//   $("#adullt_select_qty").val(value.toString());
-		} else if (type == 'child') {
-			$("#child-qty").text(value.toString())
-			// $("#child_seelct_qty").val(value.toString());
+		else if ($(this).hasClass('paypal')) {
+			$('#OfflinePayment').hide();
+			$('#StripePayment').hide();
+			$(this).addClass('active'); // Add active class to the clicked list item
 		}
-		input.val(value.toString());
-	});
-
-	//Cart Menu Quantity button toggle
-	$(document).ready(function () {
-		$(".qty-btn").on("click", function (e) {
-			e.stopPropagation();
-			// Toggle "active" class for the current quantity button and its related elements
-			$(this).next(".quantity-area").toggleClass("active");
-
-			// Remove "active" class from other quantity buttons and related elements
-			$(".quantity-area")
-				.not($(this).next(".quantity-area"))
-				.removeClass("active");
-		});
-		$(document).on("click", function (e) {
-			if (
-				!$(e.target).closest(".quantity-area")
-					.length
-			) {
-				// Remove "active" class from all quantity buttons and related elements
-				$(".quantity-area").removeClass("active");
-			}
-		});
-	});
-
-	/* ---------------------------------------------
-   Sliders
-   --------------------------------------------- */
-
-	document.querySelector('.sidebar-button').addEventListener('click', () =>
-		document.querySelector('.main-menu').classList.toggle('show-menu'));
-
-	$('.menu-close-btn').on("click", function () {
-		$('.main-menu').removeClass('show-menu');
-	});
-
-	// sidebar
-	$('.right-sidebar-button').on("click", function () {
-		$('.right-sidebar-menu').addClass('show-right-menu');
-	});
-	$('.right-sidebar-close-btn').on("click", function () {
-		$('.right-sidebar-menu').removeClass('show-right-menu');
-	});
-
-	// Handle click on the input item
-	$('.select-input').on("click", function () {
-		$('.custom-select-wrap').toggleClass('active');
-	});
-	//Destination-dropdown
-	$(document).on("click", '.destination-dropdown-icon', function (e) {
-		e.stopPropagation();
-		$(this).next(".destination-wrap").toggleClass("active");
-		$(this).parents('.destination-column').siblings().children('.destination-dropdown-card').children('.destination-wrap').removeClass('active');
-	});
-	$(document).on("click", function (e) {
-		if (!$(e.target).closest(".destination-wrap").length) {
-			$(".destination-wrap").removeClass("active");
+		else if ($(this).hasClass('offline')) {
+			$('#OfflinePayment').show();
+			$('#StripePayment').hide();
+			$(this).addClass('active'); // Add active class to the clicked list item
 		}
-	});
-
-	$('.searchbox-input').each(function () {
-		var $container = $(this);
-		$container.find('.option-list li').on("click", function () {
-			var destinationText = $(this).find('.destination h6, h6').text();
-			$container.find('.select-input input').val(destinationText);
-			$container.find('.custom-select-wrap').removeClass('active');
-		});
-		$(document).on("click", function (event) {
-			if (!$(event.target).closest($container).length) {
-				$container.find('.custom-select-wrap').removeClass('active');
-			}
-		});
-		$container.find('.custom-select-search-area input').on('input', function () {
-			var searchText = $(this).val().toLowerCase();
-			$container.find('.option-list li').each(function () {
-				var destinationText = $(this).find('.destination h6').text().toLowerCase();
-				if (destinationText.includes(searchText)) {
-					$(this).show();
-				} else {
-					$(this).hide();
-				}
-			});
+		else {
+			$('#StripePayment').hide();
+			$('#OfflinePayment').hide();
+		}
 		});
 	});
 
-	//select2
-	$(".deatination_drop").select2({
-		closeOnSelect: true,
-		width: 'resolve'
-	});
-
+	// Round Text Animation
 	const element = document.querySelectorAll(".badge__char");
-	const step = 360 / element.length;
+	const step = 360/element.length;
 
 	element.forEach((elem, i) => {
-		elem.style.setProperty('--char-rotate', (i * step) + 'deg');
+	elem.style.setProperty('--char-rotate', (i * step) + 'deg');
 	})
 
 	const foo = (360 / 7);
 
 	for (let i = 0; i <= 7; i++) {
-		console.log((i * foo) + 'deg');
+	console.log((i * foo) + 'deg');
 	}
 
-	$('.location-area').each(function () {
-		var dealName = $(this).children('.location-list');
-
-		if (dealName.width() >= $(this).width()) {
-			dealName.addClass('scrollTextAni');
-		}
+	// Button Bounce animation
+	let arr1 = gsap.utils.toArray("#btn_wrapper")
+	let arr2 = gsap.utils.toArray(".btn_wrapper")
+	const all_buttons = arr1.concat(arr2);
+	all_buttons.forEach((btn) => {
+	if (!(btn.classList.contains("banner-btn"))) {
+		gsap.from(btn, {
+		scrollTrigger: {
+			trigger: btn,
+			start: "top center+=150",
+			markers: false,
+		},
+		opacity: 0,
+		y: -70,
+		ease: "bounce",
+		duration: 1.5,
+		})
+	}
 	})
 
-	// Payment Mathord
-	$(function () {
-		$('.choose-payment-method ul li').on('click', function () {
-			$('.choose-payment-method ul li').removeClass('active'); // Remove active class from all list items
-			if ($(this).hasClass('stripe')) {
-				$('#StripePayment').show();
-				$('#OfflinePayment').hide();
-				$(this).addClass('active'); // Add active class to the clicked list item
-			}
-			else if ($(this).hasClass('paypal')) {
-				$('#OfflinePayment').hide();
-				$('#StripePayment').hide();
-				$(this).addClass('active'); // Add active class to the clicked list item
-			}
-			else if ($(this).hasClass('offline')) {
-				$('#OfflinePayment').show();
-				$('#StripePayment').hide();
-				$(this).addClass('active'); // Add active class to the clicked list item
-			}
-			else {
-				$('#StripePayment').hide();
-				$('#OfflinePayment').hide();
-			}
-		});
+	// Dark Light
+	const dayNight = document.querySelector(".tt-style-switch");
+
+	const toggleDarkMode = () => {
+	const body = document.body;
+	const icon = dayNight.querySelector("i");
+	body.classList.toggle("dark");
+	
+	icon.classList.toggle("bi-brightness-low-fill", body.classList.contains("dark"));
+	icon.classList.toggle("bi-moon", !body.classList.contains("dark"));
+
+	localStorage.setItem("zenfy_theme", body.classList.contains("dark") ? "dark" : "");
+	};
+
+	dayNight.addEventListener("click", toggleDarkMode);
+
+	window.addEventListener("load", () => {
+	const savedTheme = localStorage.getItem("zenfy_theme");
+	if (savedTheme === "dark") {
+		toggleDarkMode();
+	}
 	});
+
+    // Slick Slider
+	$(".slider").slick({
+		infinite: true,
+		centerMode: false,
+		arrows: false,
+		dots: false,
+		autoplay: false,
+		speed: 800,
+		slidesToScroll: 1,
+		vertical: true,
+		verticalSwiping: true,	
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		
+	});
+	
+	//ticking machine
+	var percentTime;
+	var tick;
+	var time = .5;
+	var progressBarIndex = 0;
+	
+	$('.progressBarContainer .progressBar').each(function(index) {
+		var progress = "<div class='inProgress inProgress" + index + "'></div>";
+		$(this).html(progress);
+	});
+	
+	function startProgressbar() {
+		resetProgressbar();
+		percentTime = 0;
+		tick = setInterval(interval, 10);
+	}
+	
+	function interval() {
+		if (($('.slider .slick-track div[data-slick-index="' + progressBarIndex + '"]').attr("aria-hidden")) === "true") {
+			progressBarIndex = $('.slider .slick-track div[aria-hidden="false"]').data("slickIndex");
+			startProgressbar();
+		} else {
+			percentTime += 1 / (time + 5);
+			$('.inProgress' + progressBarIndex).css({
+				width: percentTime + "%"
+			});
+			if (percentTime >= 100) {
+				$('.single-item').slick('slickNext');
+				progressBarIndex++;
+				if (progressBarIndex > 2) {
+					progressBarIndex = 0;
+				}
+				startProgressbar();
+			}
+		}
+	}
+	
+	function resetProgressbar() {
+		$('.inProgress').css({
+			width: 0 + '%'
+		});
+		clearInterval(tick);
+	}
+	startProgressbar();
 
 	/* ---------------------------------------------
-		 NiceSelect
+		Text animation Morphext
 	--------------------------------------------- */
-
-	$("select").niceSelect();
-
-	//list grid view 
-	jQuery(document).ready(function ($) {
-		$(".lists").on("click", function (event) {
-			event.preventDefault();
-			$(".list-grid-product-wrap")
-				.addClass("list-group-wrapper")
-				.removeClass("grid-group-wrapper");
-		});
-		$(".grid").on("click", function (event) {
-			event.preventDefault();
-			$(".list-grid-product-wrap")
-				.removeClass("list-group-wrapper")
-				.addClass("grid-group-wrapper");
-		});
-	});
-	$(".grid-view li").on("click", function () {
-		$(this).addClass("active").siblings().removeClass("active");
-	});
-
-
-	var startedFromIndexPage = false;
-
-	$(document).on("click", '.StartSlideShowFirstImage', function () {
-
-		startedFromIndexPage = true;
-		$('a[data-fancybox="images"]').first().trigger('click');
-		$.fancybox.getInstance().SlideShow.toggle();
-	})
-
-	$('[data-fancybox="images"]').fancybox({
-		fullScreen: {
-			autoStart: true,
-		},
-		buttons: ['slideShow', 'share', 'close'],
-		onSlideShowChange: function (instance, current, active) {
-			console.info('SlideShow active? ' + active);
-			if (active && !startedFromIndexPage) {
-				instance.next();
-			}
-			startedFromIndexPage = false;
-		}
-	});
-
-
-
-
-	//Dashboard Old Password* (M abid)
-	const togglePassword4 = document.getElementById('togglePassword4');
-
-	const password4 = document.querySelector('#password4');
-
-	if (togglePassword4) {
-		togglePassword4.addEventListener('click', function (e) {
-			// toggle the type attribute
-			const type = password4.getAttribute('type') === 'password' ? 'text' : 'password';
-			password4.setAttribute('type', type);
-			// toggle the eye / eye slash icon
-			this.classList.toggle('bi-eye');
+	const text_type = document.querySelector('.text-type');
+	if(text_type){
+		var typing=new Typed(".text-type", {
+			strings: ["Digital Marketing", "Email Marketing", "SEO Optimization"],
+			typeSpeed: 120,
+			backSpeed: 70,
+			loop: true,
 		});
 	}
-	//Dashboard New Password* (M abid)
-	const togglePassword5 = document.getElementById('togglePassword5');
 
-	const password5 = document.querySelector('#password5');
-
-	if (togglePassword5) {
-		togglePassword5.addEventListener('click', function (e) {
-			// toggle the type attribute
-			const type = password5.getAttribute('type') === 'password' ? 'text' : 'password';
-			password5.setAttribute('type', type);
-			// toggle the eye / eye slash icon
-			this.classList.toggle('bi-eye');
-		});
-	}
-	// Dashboard Confirm Password* (M abid)
-	const togglePassword6 = document.getElementById('togglePassword6');
-
-	const password6 = document.querySelector('#password6');
-
-	if (togglePassword6) {
-		togglePassword6.addEventListener('click', function (e) {
-			// toggle the type attribute
-			const type = password6.getAttribute('type') === 'password' ? 'text' : 'password';
-			password6.setAttribute('type', type);
-			// toggle the eye / eye slash icon
-			this.classList.toggle('bi-eye');
-		});
-	}
 
 }(jQuery));
 

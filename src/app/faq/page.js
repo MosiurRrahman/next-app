@@ -1,206 +1,487 @@
-import Breadcrumb from "@/components/common/Breadcrumb";
-import Newslatter from "@/components/common/Newslatter";
-import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
-import Topbar from "@/components/topbar/Topbar";
-import Link from "next/link";
+import MainLayout from "@/components/layout/MainLayout";
 import React from "react";
 
-const page = () => {
+const FaqPage = () => {
   return (
-    <>
-      <Topbar />
-      <Header />
-      <Breadcrumb pagename="FAQ" pagetitle="FAQ"/>
-      <div className="faq-section pt-120 mb-120">
+    <MainLayout>
+      <div className="faq-section scroll-margin pt-120 mb-120" id="faq-section">
         <div className="container">
-            <div className="row g-lg-4 gy-5">
-            <div className="col-lg-4">
-                <div className="banner-and-inquiry-form">
-                <div className="banner2-card four">
-                    <img src="/assets/img/home1/banner2-card-img2.png" alt="" />
-                    <div className="banner2-content-wrap">
-                    <div className="banner2-content">
-                        <span>Savings worldwide</span>
-                        <h3>50% Off</h3>
-                        <p>For Your First Book</p>
-                    </div>
-                    <Link href="/package" className="primary-btn1">Book Now</Link>
-                    </div>
-                </div>
-                </div>
+          <div className="row g-4 mb-120">
+            <div className="col-lg-4 d-flex justify-content-lg-center align-items-lg-center">
+              <div className="verticle-text">
+                <h2>General</h2>
+              </div>
             </div>
             <div className="col-lg-8">
-                <div className="faq-content-wrap mb-80">
-                <div className="faq-content-title mb-50">
-                    <h3>General
-                    <svg xmlns="http://www.w3.org/2000/svg" width={23} height={23} viewBox="0 0 23 23">
-                        <path opacity="0.2" d="M12.1406 3.31569L13.6613 1.28328C14.2277 0.526342 15.4311 0.905329 15.4615 1.85022L15.5502 4.60677C15.5714 5.26711 16.2158 5.72572 16.8467 5.52947L19.16 4.80985C20.0802 4.52359 20.8331 5.57662 20.2644 6.35473L18.8298 8.3179C18.4362 8.85663 18.6705 9.62248 19.2982 9.84869L21.6962 10.7128C22.5984 11.038 22.5699 12.3236 21.6542 12.6085L19.3662 13.3202C18.7146 13.5229 18.453 14.3043 18.8511 14.8585L20.246 16.8005C20.8121 17.5885 20.0372 18.6398 19.117 18.3324L16.6866 17.5204C16.039 17.304 15.3697 17.786 15.3697 18.4688V21.026C15.3697 21.9843 14.1519 22.3938 13.5729 21.6301L11.9573 19.4993C11.5506 18.9629 10.7409 18.9734 10.3482 19.5201L8.84725 21.6096C8.29002 22.3854 7.06631 22.0131 7.03559 21.0584L6.94981 18.3932C6.92856 17.7329 6.28416 17.2743 5.65329 17.4705L3.39578 18.1728C2.47005 18.4608 1.71725 17.3951 2.29806 16.6188L3.63735 14.8289C4.04321 14.2865 3.80363 13.506 3.16335 13.2847L0.734445 12.4451C-0.163318 12.1348 -0.163315 10.8652 0.734448 10.5549L3.16335 9.71533C3.80363 9.49403 4.04321 8.71352 3.63735 8.1711L2.17821 6.22099C1.60964 5.46111 2.32026 4.41074 3.23712 4.65581L5.87202 5.36011C6.507 5.52984 7.13025 5.0513 7.13025 4.39403V1.87955C7.13025 0.93114 8.32718 0.515473 8.91501 1.25974L10.5552 3.3364C10.9622 3.85179 11.7471 3.84154 12.1406 3.31569Z" />
-                    </svg>
-                    </h3>
+              <div className="faq-content style-2">
+                <div className="accordion" id="accordionGeneral">
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="faqheadingOne">
+                      <button
+                        className="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqcollapseOne"
+                        aria-expanded="true"
+                        aria-controls="faqcollapseOne"
+                      >
+                        01. What is Task Management and how does it work?
+                      </button>
+                    </h2>
+                    <div
+                      id="faqcollapseOne"
+                      className="accordion-collapse collapse show"
+                      aria-labelledby="faqheadingOne"
+                      data-bs-parent="#accordionGeneral"
+                    >
+                      <div className="accordion-body">
+                        Aptent taciti sociosqu ad litora torquent per conubia
+                        nostra, per inci only Integer purus onthis felis non
+                        aliquam.Mauris nec just vitae ann auctor tol euismod sit
+                        amet non ipsul growing this
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="faqheadingTwo">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqcollapseTwo"
+                        aria-expanded="false"
+                        aria-controls="faqcollapseTwo"
+                      >
+                        02. Is Zenfy suitable for my business?
+                      </button>
+                    </h2>
+                    <div
+                      id="faqcollapseTwo"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="faqheadingTwo"
+                      data-bs-parent="#accordionGeneral"
+                    >
+                      <div className="accordion-body">
+                        Aptent taciti sociosqu ad litora torquent per conubia
+                        nostra, per inceptos only Integer purus onthis placerat
+                        felis non aliquam.Mauris nec justo vitae ante auctor tol
+                        euismod sit amet non ipsul growing this Praesent commodo
+                        at massa eget suscipit. Utani vitae enim velit.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="faqheadingThree">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqcollapseThree"
+                        aria-expanded="false"
+                        aria-controls="faqcollapseThree"
+                      >
+                        03. the system requirements using Task Management?
+                      </button>
+                    </h2>
+                    <div
+                      id="faqcollapseThree"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="faqheadingThree"
+                      data-bs-parent="#accordionGeneral"
+                    >
+                      <div className="accordion-body">
+                        Aptent taciti sociosqu ad litora torquent per conubia
+                        nostra, per inceptos only Integer purus onthis placerat
+                        felis non aliquam.Mauris nec justo vitae ante auctor tol
+                        euismod sit amet non ipsul growing this Praesent commodo
+                        at massa eget suscipit. Utani vitae enim velit.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="faqheadingFour">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqcollapseFour"
+                        aria-expanded="false"
+                        aria-controls="faqcollapseFour"
+                      >
+                        04. How can I upgrade my subscription?
+                      </button>
+                    </h2>
+                    <div
+                      id="faqcollapseFour"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="faqheadingFour"
+                      data-bs-parent="#accordionGeneral"
+                    >
+                      <div className="accordion-body">
+                        Aptent taciti sociosqu ad litora torquent per conubia
+                        nostra, per inceptos only Integer purus onthis placerat
+                        felis non aliquam.Mauris nec justo vitae ante auctor tol
+                        euismod sit amet non ipsul growing this Praesent commodo
+                        at massa eget suscipit. Utani vitae enim velit.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="faqheadingFive">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqcollapseFive"
+                        aria-expanded="false"
+                        aria-controls="faqcollapseFive"
+                      >
+                        05. What measures are in protect user privacy?
+                      </button>
+                    </h2>
+                    <div
+                      id="faqcollapseFive"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="faqheadingFive"
+                      data-bs-parent="#accordionGeneral"
+                    >
+                      <div className="accordion-body">
+                        Aptent taciti sociosqu ad litora torquent per conubia
+                        nostra, per inceptos only Integer purus onthis placerat
+                        felis non aliquam.Mauris nec justo vitae ante auctor tol
+                        euismod sit amet non ipsul growing this Praesent commodo
+                        at massa eget suscipit. Utani vitae enim velit.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="faqheadingSix">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqcollapseSix"
+                        aria-expanded="false"
+                        aria-controls="faqcollapseSix"
+                      >
+                        06. I'm Find technical issues. What should I do?
+                      </button>
+                    </h2>
+                    <div
+                      id="faqcollapseSix"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="faqheadingSix"
+                      data-bs-parent="#accordionGeneral"
+                    >
+                      <div className="accordion-body">
+                        Aptent taciti sociosqu ad litora torquent per conubia
+                        nostra, per inceptos only Integer purus onthis placerat
+                        felis non aliquam.Mauris nec justo vitae ante auctor tol
+                        euismod sit amet non ipsul growing this Praesent commodo
+                        at massa eget suscipit. Utani vitae enim velit.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="faqheadingSeven">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqcollapseSeven"
+                        aria-expanded="false"
+                        aria-controls="faqcollapseSeven"
+                      >
+                        07. How can I reach customer support?
+                      </button>
+                    </h2>
+                    <div
+                      id="faqcollapseSeven"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="faqheadingSeven"
+                      data-bs-parent="#accordionGeneral"
+                    >
+                      <div className="accordion-body">
+                        Aptent taciti sociosqu ad litora torquent per conubia
+                        nostra, per inceptos only Integer purus onthis placerat
+                        felis non aliquam.Mauris nec justo vitae ante auctor tol
+                        euismod sit amet non ipsul growing this Praesent commodo
+                        at massa eget suscipit. Utani vitae enim velit.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="faqheadingEight">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqcollapseEight"
+                        aria-expanded="false"
+                        aria-controls="faqcollapseEight"
+                      >
+                        08. a community forum for Task Management users?
+                      </button>
+                    </h2>
+                    <div
+                      id="faqcollapseEight"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="faqheadingEight"
+                      data-bs-parent="#accordionGeneral"
+                    >
+                      <div className="accordion-body">
+                        Aptent taciti sociosqu ad litora torquent per conubia
+                        nostra, per inceptos only Integer purus onthis placerat
+                        felis non aliquam.Mauris nec justo vitae ante auctor tol
+                        euismod sit amet non ipsul growing this Praesent commodo
+                        at massa eget suscipit. Utani vitae enim velit.
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="faq-content">
-                    <div className="accordion" id="accordionTravel">
-                    <div className="accordion-item">
-                        <h2 className="accordion-header" id="travelheadingOne">
-                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#travelcollapseOne" aria-expanded="true" aria-controls="travelcollapseOne">
-                            01.  How do I book a trip on your website?
-                        </button>
-                        </h2>
-                        <div id="travelcollapseOne" className="accordion-collapse collapse show" aria-labelledby="travelheadingOne" data-bs-parent="#accordionTravel">
-                        <div className="accordion-body">
-                            Aptent taciti sociosqu ad litora torquent per conubia nostra, per inci only Integer purus onthis felis non aliquam.Mauris nec just vitae ann auctor tol euismod sit amet non ipsul growing this.
-                        </div>
-                        </div>
-                    </div>
-                    <div className="accordion-item">
-                        <h2 className="accordion-header" id="travelheadingTwo">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#travelcollapseTwo" aria-expanded="false" aria-controls="travelcollapseTwo">
-                            02. What payment methods do you accept?
-                        </button>
-                        </h2>
-                        <div id="travelcollapseTwo" className="accordion-collapse collapse" aria-labelledby="travelheadingTwo" data-bs-parent="#accordionTravel">
-                        <div className="accordion-body">
-                            Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos only Integer purus onthis
-                            placerat felis non aliquam.Mauris nec justo vitae ante auctor tol euismod sit amet non ipsul growing this 
-                            Praesent commodo at massa eget suscipit. Utani vitae enim velit.
-                        </div>
-                        </div>
-                    </div>
-                    <div className="accordion-item">
-                        <h2 className="accordion-header" id="travelheadingThree">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#travelcollapseThree" aria-expanded="false" aria-controls="travelcollapseThree">
-                            03. Can I make changes to my reservation after booking?
-                        </button>
-                        </h2>
-                        <div id="travelcollapseThree" className="accordion-collapse collapse" aria-labelledby="travelheadingThree" data-bs-parent="#accordionTravel">
-                        <div className="accordion-body">
-                            Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos only Integer purus onthis
-                            placerat felis non aliquam.Mauris nec justo vitae ante auctor tol euismod sit amet non ipsul growing this 
-                            Praesent commodo at massa eget suscipit. Utani vitae enim velit.
-                        </div>
-                        </div>
-                    </div>
-                    <div className="accordion-item">
-                        <h2 className="accordion-header" id="travelheadingFour">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#travelcollapseFour" aria-expanded="false" aria-controls="travelcollapseFour">
-                            04. What is your cancellation policy?
-                        </button>
-                        </h2>
-                        <div id="travelcollapseFour" className="accordion-collapse collapse" aria-labelledby="travelheadingFour" data-bs-parent="#accordionTravel">
-                        <div className="accordion-body">
-                            Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos only Integer purus onthis
-                            placerat felis non aliquam.Mauris nec justo vitae ante auctor tol euismod sit amet non ipsul growing this 
-                            Praesent commodo at massa eget suscipit. Utani vitae enim velit.
-                        </div>
-                        </div>
-                    </div> 
-                    <div className="accordion-item">
-                        <h2 className="accordion-header" id="travelheadingFive">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#travelcollapseFive" aria-expanded="false" aria-controls="travelcollapseFive">
-                            05. Do you offer group booking discounts?
-                        </button>
-                        </h2>
-                        <div id="travelcollapseFive" className="accordion-collapse collapse" aria-labelledby="travelheadingFive" data-bs-parent="#accordionTravel">
-                        <div className="accordion-body">
-                            Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos only Integer purus onthis
-                            placerat felis non aliquam.Mauris nec justo vitae ante auctor tol euismod sit amet non ipsul growing this 
-                            Praesent commodo at massa eget suscipit. Utani vitae enim velit.
-                        </div>
-                        </div>
-                    </div> 
-                    </div>
-                </div>
-                </div>
-                <div className="faq-content-wrap">
-                <div className="faq-content-title mb-50">
-                    <h3>Travel Tips
-                    <svg xmlns="http://www.w3.org/2000/svg" width={23} height={23} viewBox="0 0 23 23">
-                        <path opacity="0.2" d="M12.1406 3.31569L13.6613 1.28328C14.2277 0.526342 15.4311 0.905329 15.4615 1.85022L15.5502 4.60677C15.5714 5.26711 16.2158 5.72572 16.8467 5.52947L19.16 4.80985C20.0802 4.52359 20.8331 5.57662 20.2644 6.35473L18.8298 8.3179C18.4362 8.85663 18.6705 9.62248 19.2982 9.84869L21.6962 10.7128C22.5984 11.038 22.5699 12.3236 21.6542 12.6085L19.3662 13.3202C18.7146 13.5229 18.453 14.3043 18.8511 14.8585L20.246 16.8005C20.8121 17.5885 20.0372 18.6398 19.117 18.3324L16.6866 17.5204C16.039 17.304 15.3697 17.786 15.3697 18.4688V21.026C15.3697 21.9843 14.1519 22.3938 13.5729 21.6301L11.9573 19.4993C11.5506 18.9629 10.7409 18.9734 10.3482 19.5201L8.84725 21.6096C8.29002 22.3854 7.06631 22.0131 7.03559 21.0584L6.94981 18.3932C6.92856 17.7329 6.28416 17.2743 5.65329 17.4705L3.39578 18.1728C2.47005 18.4608 1.71725 17.3951 2.29806 16.6188L3.63735 14.8289C4.04321 14.2865 3.80363 13.506 3.16335 13.2847L0.734445 12.4451C-0.163318 12.1348 -0.163315 10.8652 0.734448 10.5549L3.16335 9.71533C3.80363 9.49403 4.04321 8.71352 3.63735 8.1711L2.17821 6.22099C1.60964 5.46111 2.32026 4.41074 3.23712 4.65581L5.87202 5.36011C6.507 5.52984 7.13025 5.0513 7.13025 4.39403V1.87955C7.13025 0.93114 8.32718 0.515473 8.91501 1.25974L10.5552 3.3364C10.9622 3.85179 11.7471 3.84154 12.1406 3.31569Z" />
-                    </svg>
-                    </h3>
-                </div>
-                <div className="faq-content">
-                    <div className="accordion" id="accordionTravel2">
-                    <div className="accordion-item">
-                        <h2 className="accordion-header" id="tripheadingOne">
-                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tripcollapseOne" aria-expanded="true" aria-controls="tripcollapseOne">
-                            01.  What is your payment schedule and process?
-                        </button>
-                        </h2>
-                        <div id="tripcollapseOne" className="accordion-collapse collapse show" aria-labelledby="tripheadingOne" data-bs-parent="#accordionTravel2">
-                        <div className="accordion-body">
-                            Aptent taciti sociosqu ad litora torquent per conubia nostra, per inci only Integer purus onthis felis non aliquam.Mauris nec just vitae ann auctor tol euismod sit amet non ipsul growing this.
-                        </div>
-                        </div>
-                    </div>
-                    <div className="accordion-item">
-                        <h2 className="accordion-header" id="tripheadingTwo">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tripcollapseTwo" aria-expanded="false" aria-controls="tripcollapseTwo">
-                            02. Are there any additional fees or surcharges?
-                        </button>
-                        </h2>
-                        <div id="tripcollapseTwo" className="accordion-collapse collapse" aria-labelledby="tripheadingTwo" data-bs-parent="#accordionTravel2">
-                        <div className="accordion-body">
-                            Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos only Integer purus onthis
-                            placerat felis non aliquam.Mauris nec justo vitae ante auctor tol euismod sit amet non ipsul growing this 
-                            Praesent commodo at massa eget suscipit. Utani vitae enim velit.
-                        </div>
-                        </div>
-                    </div>
-                    <div className="accordion-item">
-                        <h2 className="accordion-header" id="tripheadingThree">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tripcollapseThree" aria-expanded="false" aria-controls="tripcollapseThree">
-                            03. Can I transfer my reservation to another person?
-                        </button>
-                        </h2>
-                        <div id="tripcollapseThree" className="accordion-collapse collapse" aria-labelledby="tripheadingThree" data-bs-parent="#accordionTravel2">
-                        <div className="accordion-body">
-                            Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos only Integer purus onthis
-                            placerat felis non aliquam.Mauris nec justo vitae ante auctor tol euismod sit amet non ipsul growing this 
-                            Praesent commodo at massa eget suscipit. Utani vitae enim velit.
-                        </div>
-                        </div>
-                    </div>
-                    <div className="accordion-item">
-                        <h2 className="accordion-header" id="tripheadingFour">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tripcollapseFour" aria-expanded="false" aria-controls="tripcollapseFour">
-                            04. Can I request a private tour for my group?
-                        </button>
-                        </h2>
-                        <div id="tripcollapseFour" className="accordion-collapse collapse" aria-labelledby="tripheadingFour" data-bs-parent="#accordionTravel2">
-                        <div className="accordion-body">
-                            Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos only Integer purus onthis
-                            placerat felis non aliquam.Mauris nec justo vitae ante auctor tol euismod sit amet non ipsul growing this 
-                            Praesent commodo at massa eget suscipit. Utani vitae enim velit.
-                        </div>
-                        </div>
-                    </div> 
-                    <div className="accordion-item">
-                        <h2 className="accordion-header" id="tripheadingFive">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tripcollapseFive" aria-expanded="false" aria-controls="tripcollapseFive">
-                            05. Do you offer special rates for group bookings?
-                        </button>
-                        </h2>
-                        <div id="tripcollapseFive" className="accordion-collapse collapse" aria-labelledby="tripheadingFive" data-bs-parent="#accordionTravel2">
-                        <div className="accordion-body">
-                            Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos only Integer purus onthis
-                            placerat felis non aliquam.Mauris nec justo vitae ante auctor tol euismod sit amet non ipsul growing this 
-                            Praesent commodo at massa eget suscipit. Utani vitae enim velit.
-                        </div>
-                        </div>
-                    </div> 
-                    </div>
-                </div>
-                </div>
+              </div>
             </div>
+          </div>
+          <div className="row g-4">
+            <div className="col-lg-4 d-flex justify-content-lg-center align-items-lg-center">
+              <div className="verticle-text">
+                <h2>Payment</h2>
+              </div>
             </div>
+            <div className="col-lg-8">
+              <div className="faq-content style-2">
+                <div className="accordion" id="accordionPayment">
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="faqheading2One">
+                      <button
+                        className="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqcollapse2One"
+                        aria-expanded="true"
+                        aria-controls="faqcollapse2One"
+                      >
+                        01. What is Task Management and how does it work?
+                      </button>
+                    </h2>
+                    <div
+                      id="faqcollapse2One"
+                      className="accordion-collapse collapse show"
+                      aria-labelledby="faqheading2One"
+                      data-bs-parent="#accordionPayment"
+                    >
+                      <div className="accordion-body">
+                        Aptent taciti sociosqu ad litora torquent per conubia
+                        nostra, per inci only Integer purus onthis felis non
+                        aliquam.Mauris nec just vitae ann auctor tol euismod sit
+                        amet non ipsul growing this
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="faqheading2Two">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqcollapse2Two"
+                        aria-expanded="false"
+                        aria-controls="faqcollapse2Two"
+                      >
+                        02. Is Zenfy suitable for my business?
+                      </button>
+                    </h2>
+                    <div
+                      id="faqcollapse2Two"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="faqheading2Two"
+                      data-bs-parent="#accordionPayment"
+                    >
+                      <div className="accordion-body">
+                        Aptent taciti sociosqu ad litora torquent per conubia
+                        nostra, per inceptos only Integer purus onthis placerat
+                        felis non aliquam.Mauris nec justo vitae ante auctor tol
+                        euismod sit amet non ipsul growing this Praesent commodo
+                        at massa eget suscipit. Utani vitae enim velit.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="faqheading2Three">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqcollapse2Three"
+                        aria-expanded="false"
+                        aria-controls="faqcollapse2Three"
+                      >
+                        03. the system requirements using Task Management?
+                      </button>
+                    </h2>
+                    <div
+                      id="faqcollapse2Three"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="faqheading2Three"
+                      data-bs-parent="#accordionPayment"
+                    >
+                      <div className="accordion-body">
+                        Aptent taciti sociosqu ad litora torquent per conubia
+                        nostra, per inceptos only Integer purus onthis placerat
+                        felis non aliquam.Mauris nec justo vitae ante auctor tol
+                        euismod sit amet non ipsul growing this Praesent commodo
+                        at massa eget suscipit. Utani vitae enim velit.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="faqheading2Four">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqcollapse2Four"
+                        aria-expanded="false"
+                        aria-controls="faqcollapse2Four"
+                      >
+                        04. How can I upgrade my subscription?
+                      </button>
+                    </h2>
+                    <div
+                      id="faqcollapse2Four"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="faqheading2Four"
+                      data-bs-parent="#accordionPayment"
+                    >
+                      <div className="accordion-body">
+                        Aptent taciti sociosqu ad litora torquent per conubia
+                        nostra, per inceptos only Integer purus onthis placerat
+                        felis non aliquam.Mauris nec justo vitae ante auctor tol
+                        euismod sit amet non ipsul growing this Praesent commodo
+                        at massa eget suscipit. Utani vitae enim velit.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="faqheading2Five">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqcollapse2Five"
+                        aria-expanded="false"
+                        aria-controls="faqcollapse2Five"
+                      >
+                        05. What measures are in protect user privacy?
+                      </button>
+                    </h2>
+                    <div
+                      id="faqcollapse2Five"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="faqheading2Five"
+                      data-bs-parent="#accordionPayment"
+                    >
+                      <div className="accordion-body">
+                        Aptent taciti sociosqu ad litora torquent per conubia
+                        nostra, per inceptos only Integer purus onthis placerat
+                        felis non aliquam.Mauris nec justo vitae ante auctor tol
+                        euismod sit amet non ipsul growing this Praesent commodo
+                        at massa eget suscipit. Utani vitae enim velit.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="faqheading2Six">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqcollapse2Six"
+                        aria-expanded="false"
+                        aria-controls="faqcollapse2Six"
+                      >
+                        06. I'm Find technical issues. What should I do?
+                      </button>
+                    </h2>
+                    <div
+                      id="faqcollapse2Six"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="faqheading2Six"
+                      data-bs-parent="#accordionPayment"
+                    >
+                      <div className="accordion-body">
+                        Aptent taciti sociosqu ad litora torquent per conubia
+                        nostra, per inceptos only Integer purus onthis placerat
+                        felis non aliquam.Mauris nec justo vitae ante auctor tol
+                        euismod sit amet non ipsul growing this Praesent commodo
+                        at massa eget suscipit. Utani vitae enim velit.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="faqheading2Seven">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqcollapse2Seven"
+                        aria-expanded="false"
+                        aria-controls="faqcollapse2Seven"
+                      >
+                        07. How can I reach customer support?
+                      </button>
+                    </h2>
+                    <div
+                      id="faqcollapse2Seven"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="faqheading2Seven"
+                      data-bs-parent="#accordionPayment"
+                    >
+                      <div className="accordion-body">
+                        Aptent taciti sociosqu ad litora torquent per conubia
+                        nostra, per inceptos only Integer purus onthis placerat
+                        felis non aliquam.Mauris nec justo vitae ante auctor tol
+                        euismod sit amet non ipsul growing this Praesent commodo
+                        at massa eget suscipit. Utani vitae enim velit.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="faqheading2Eight">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqcollapse2Eight"
+                        aria-expanded="false"
+                        aria-controls="faqcollapse2Eight"
+                      >
+                        08. a community forum for Task Management users?
+                      </button>
+                    </h2>
+                    <div
+                      id="faqcollapse2Eight"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="faqheading2Eight"
+                      data-bs-parent="#accordionPayment"
+                    >
+                      <div className="accordion-body">
+                        Aptent taciti sociosqu ad litora torquent per conubia
+                        nostra, per inceptos only Integer purus onthis placerat
+                        felis non aliquam.Mauris nec justo vitae ante auctor tol
+                        euismod sit amet non ipsul growing this Praesent commodo
+                        at massa eget suscipit. Utani vitae enim velit.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <Newslatter />
-      <Footer />
-    </>
+    </MainLayout>
   );
 };
 
-export default page;
+export default FaqPage;

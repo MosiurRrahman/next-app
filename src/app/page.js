@@ -1,21 +1,17 @@
-import About1 from "@/components/about/About1";
-import Home1Activities from "@/components/activities/Home1Activities";
-import Banner1 from "@/components/banner/Banner1";
-import Banner1Bottom from "@/components/banner/Banner1Bottom";
-import Home1Banner2 from "@/components/banner/Home1Banner2";
+import Home1About from "@/components/about/Home1About";
+import Home1Approach from "@/components/approachSection/Home1Approach";
+import Home1Banner from "@/components/banner/Home1Banner";
 import Home1Blog from "@/components/blog/Home1Blog";
-import Newslatter from "@/components/common/Newslatter";
-import Destination1 from "@/components/destination/Destination1";
-import Home1FacilitySlide from "@/components/facilitySlide/Home1FacilitySlide";
-import Home1Fecilities2 from "@/components/facilitySlide/Home1Fecilities2";
+import BannerWithCaseStudySlider from "@/components/caseStudy/BannerWithCaseStudySlider";
+import Home1Contact from "@/components/contact/Home1Contact";
 import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
-// import Home1popularTour from "@/components/popularTour/Home1popularTour";
-import Home1Testimonail from "@/components/testimonial/Home1Testimonail";
-import Topbar2 from "@/components/topbar/Topbar2";
-import Home1TourPackage from "@/components/tourPackage/Home1TourPackage";
-import Home1Vise from "@/components/visaComponents/Home1Vise";
-import Home1WhyChoose from "@/components/whyChoose/Home1WhyChoose";
+import Header1 from "@/components/header/Header1";
+import Home1BannerMarquee from "@/components/marquee/Home1BannerMarquee";
+import LogoMarquee from "@/components/marquee/LogoMarquee";
+import Home1Portfolio from "@/components/portfolio/Home1Portfolio";
+import Home1Solution from "@/components/solution/Home1Solution";
+import Home1Testimonial from "@/components/testimonial/Home1Testimonial";
+import Home1WorkProcess from "@/components/workProcess/Home1WorkProcess";
 export const metadata = {
   title: "TripRex - Tour & Travel Agency  NextJs Template",
   description:
@@ -27,23 +23,19 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <Topbar2 />
-      <Header />
-      <Banner1 />
-      <Banner1Bottom />
-      <About1 />
-      <Destination1 />
-      <Home1Fecilities2 />
-      <Home1FacilitySlide />
-      <Home1TourPackage />
-      <Home1WhyChoose />
-      {/* <Home1popularTour /> */}
-      <Home1Activities />
-      <Home1Banner2 />
-      <Home1Testimonail />
+      <Header1 />
+      <Home1Banner />
+      <Home1BannerMarquee />
+      <Home1About />
+      <Home1Solution />
+      <Home1Portfolio />
+      <Home1WorkProcess />
+      <BannerWithCaseStudySlider />
+      <Home1Approach />
+      <LogoMarquee />
+      <Home1Testimonial />
       <Home1Blog />
-      <Home1Vise />
-      <Newslatter />
+      <Home1Contact />
       <Footer />
     </>
   );

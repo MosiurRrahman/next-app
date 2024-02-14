@@ -1,163 +1,528 @@
-import Breadcrumb from "@/components/common/Breadcrumb";
-import blogData from "../../../data/blog.json";
+import MainLayout from "@/components/layout/MainLayout";
 import Link from "next/link";
-import Topbar from "@/components/topbar/Topbar";
-import Header from "@/components/header/Header";
-import Newslatter from "@/components/common/Newslatter";
-import Footer from "@/components/footer/Footer";
+import React from "react";
 
-const page = () => {
+const BlogStandardPage = () => {
   return (
-    <>
-      <Topbar />
-      <Header />  
-      <Breadcrumb pagename="Blog Standard" pagetitle="Blog Standard" />
-      <div className="blog-standard-section pt-120 mb-120">
+    <MainLayout>
+      <div
+        className="blog-standard-section scroll-margin pt-120 mb-120"
+        id="blog-grid"
+      >
         <div className="container">
-          <div className="row justify-content-center">
-            {blogData.slice(0,3).map((data) => {
-              const {
-                id,
-                date,
-                month,
-                description,
-                standard_img,
-                standard_title,
-                read_time,
-                blog_view,
-                comment,
-              } = data;
-              return (
-                <div key={id} className="col-lg-10 mb-70">
-                  <div className="blog-st-card two">
-                    <div className="blog-img-wrap">
-                      <Link href="/blog-details/blog" className="card-img">
-                        <img src={standard_img} alt="" />
-                      </Link>
-                      <Link href="/blog" className="date">
-                        <span>
-                          <strong>{date}</strong> <br /> {month}
-                        </span>
-                      </Link>
-                    </div>
-                    <div className="blog-content">
-                      <div className="blog-meta">
-                        <ul>
-                          <li>
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width={12}
-                              height={16}
-                              viewBox="0 0 12 16"
-                            >
-                              <path d="M7.80968 15.0679C9.5273 12.1176 8.80817 8.40483 6.09966 6.24033C6.09808 6.23911 6.0965 6.23758 6.09523 6.23666L6.10694 6.26482L6.10504 6.28594C6.63276 7.63466 6.55873 9.11531 5.91047 10.3857L5.45362 11.2813L5.31347 10.2917C5.21824 9.62039 4.95659 8.98001 4.55353 8.43177H4.48994L4.4564 8.33993C4.46115 9.3657 4.23778 10.3762 3.7996 11.3294C3.22474 12.5768 3.30922 14.0152 4.02581 15.1778L4.52031 15.9804L3.63066 15.6168C2.16361 15.0171 0.990804 13.8618 0.412783 12.4473C-0.234842 10.8678 -0.114934 9.03633 0.733906 7.54925C1.17652 6.77572 1.48657 5.95443 1.65583 5.10773L1.82129 4.27787L2.24334 5.01804C2.44487 5.37098 2.59326 5.75301 2.68532 6.15432L2.69481 6.16381L2.70462 6.22809L2.71379 6.22533C3.97804 4.6002 4.73545 2.57805 4.84586 0.530486L4.87434 0L5.33435 0.290191C7.21173 1.47391 8.51552 3.37301 8.91827 5.5069L8.92744 5.55067L8.93219 5.5574L8.95275 5.52924C9.3207 5.05906 9.51496 4.4998 9.51496 3.91115V2.99956L10.0835 3.72626C11.4053 5.41537 12.083 7.51068 11.9919 9.62651C11.8799 12.117 10.4761 14.3029 8.23648 15.4873L7.26678 16L7.80968 15.0679Z" />
-                            </svg>
-                            {blog_view} View
-                          </li>
-                          <li>
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width={16}
-                              height={16}
-                              viewBox="0 0 16 16"
-                            >
-                              <g>
-                                <path d="M8 0C3.60594 0 0 3.60594 0 8C0 12.3941 3.60594 16 8 16C12.3941 16 16 12.3941 16 8C16 3.60594 12.3941 0 8 0ZM11.646 3.69106C11.8291 3.508 12.1259 3.508 12.3089 3.69106C12.492 3.87413 12.492 4.17091 12.3089 4.35397C12.1259 4.53703 11.8291 4.53703 11.646 4.35397C11.463 4.17091 11.463 3.87413 11.646 3.69106ZM7.53125 2.375C7.53125 2.11591 7.74091 1.90625 8 1.90625C8.25909 1.90625 8.46875 2.11591 8.46875 2.375V3.3125C8.46875 3.57159 8.25909 3.78125 8 3.78125C7.74091 3.78125 7.53125 3.57159 7.53125 3.3125V2.375ZM2.375 8.46875C2.11591 8.46875 1.90625 8.25909 1.90625 8C1.90625 7.74091 2.11591 7.53125 2.375 7.53125H3.3125C3.57159 7.53125 3.78125 7.74091 3.78125 8C3.78125 8.25909 3.57159 8.46875 3.3125 8.46875H2.375ZM4.35397 12.3089C4.17091 12.492 3.87413 12.492 3.69106 12.3089C3.508 12.1259 3.508 11.8291 3.69106 11.646C3.87413 11.4629 4.17091 11.4629 4.35397 11.646C4.53703 11.8291 4.53703 12.1259 4.35397 12.3089ZM4.35397 4.35397C4.17091 4.53703 3.87413 4.53703 3.69106 4.35397C3.508 4.17091 3.508 3.87413 3.69106 3.69106C3.87413 3.508 4.17091 3.508 4.35397 3.69106C4.53703 3.87413 4.53703 4.17091 4.35397 4.35397ZM8.46875 13.625C8.46875 13.8841 8.25909 14.0938 8 14.0938C7.74091 14.0938 7.53125 13.8841 7.53125 13.625V12.6875C7.53125 12.4284 7.74091 12.2188 8 12.2188C8.25909 12.2188 8.46875 12.4284 8.46875 12.6875V13.625ZM11.1439 11.1439C10.9608 11.327 10.6642 11.327 10.4811 11.1439L7.66856 8.33141C7.58069 8.24353 7.53125 8.1245 7.53125 8V5.1875C7.53125 4.92841 7.74091 4.71875 8 4.71875C8.25909 4.71875 8.46875 4.92841 8.46875 5.1875V7.80591L11.1439 10.4811C11.327 10.6642 11.327 10.9608 11.1439 11.1439ZM12.3089 12.3089C12.1259 12.492 11.8291 12.492 11.646 12.3089C11.463 12.1259 11.463 11.8291 11.646 11.646C11.8291 11.4629 12.1259 11.4629 12.3089 11.646C12.492 11.8291 12.492 12.1259 12.3089 12.3089ZM14.0938 8C14.0938 8.25909 13.8841 8.46875 13.625 8.46875H12.6875C12.4284 8.46875 12.2188 8.25909 12.2188 8C12.2188 7.74091 12.4284 7.53125 12.6875 7.53125H13.625C13.8841 7.53125 14.0938 7.74091 14.0938 8Z" />
-                              </g>
-                            </svg>
-                            {read_time} Min reads
-                          </li>
-                          <li>
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width={16}
-                              height={16}
-                              viewBox="0 0 16 16"
-                            >
-                              <g>
-                                <path d="M14.5672 14.9619C14.5917 15.0728 14.5913 15.1878 14.5658 15.2986C14.5403 15.4093 14.4905 15.513 14.42 15.6021C14.3494 15.6912 14.2599 15.7635 14.158 15.8136C14.056 15.8638 13.9441 15.8906 13.8305 15.8922C13.7133 15.8916 13.5977 15.8643 13.4925 15.8124L12.1483 15.1555C10.8921 15.6143 9.51644 15.6277 8.2515 15.1936C6.98655 14.7595 5.90904 13.9042 5.19922 12.7708C6.15026 12.8941 7.11661 12.8159 8.03545 12.5413C8.95429 12.2667 9.80505 11.8018 10.5324 11.1768C11.2598 10.5518 11.8476 9.78079 12.2575 8.91379C12.6674 8.0468 12.8902 7.10326 12.9116 6.14449C12.9119 5.70944 12.8674 5.27551 12.7787 4.84961C13.6879 5.29062 14.4611 5.96909 15.0165 6.81329C15.572 7.65749 15.8891 8.63608 15.9342 9.64561C15.9643 10.4111 15.8346 11.1744 15.5535 11.887C15.2724 12.5996 14.846 13.2459 14.3014 13.7847L14.5672 14.9619Z" />
-                                <path d="M6.0757 0.216195C4.48484 0.198449 2.95187 0.812289 1.81293 1.92312C0.673981 3.03395 0.0220199 4.5511 1.29169e-06 6.1419C-0.000538167 6.94954 0.167902 7.74837 0.494497 8.48703C0.821091 9.22569 1.29861 9.88786 1.89638 10.431L1.65183 11.7365C1.63148 11.8461 1.63545 11.9588 1.66346 12.0668C1.69147 12.1747 1.74285 12.2751 1.81395 12.361C1.88505 12.4469 1.97414 12.5161 2.07493 12.5638C2.17572 12.6114 2.28575 12.6364 2.39724 12.6368C2.52333 12.6366 2.64739 12.6052 2.75837 12.5453L4.19679 11.7726C4.8041 11.9674 5.43791 12.067 6.0757 12.068C7.66662 12.0857 9.19965 11.4718 10.3386 10.3609C11.4776 9.25002 12.1295 7.73277 12.1514 6.1419C12.1294 4.5511 11.4774 3.03395 10.3385 1.92312C9.19953 0.812289 7.66656 0.198449 6.0757 0.216195ZM3.79731 7.05136C3.64711 7.05136 3.50027 7.00681 3.37538 6.92336C3.25049 6.83991 3.15314 6.7213 3.09566 6.58253C3.03818 6.44375 3.02314 6.29105 3.05244 6.14373C3.08175 5.99641 3.15408 5.86109 3.26029 5.75487C3.36651 5.64866 3.50183 5.57633 3.64915 5.54702C3.79647 5.51772 3.94917 5.53276 4.08795 5.59024C4.22672 5.64772 4.34533 5.74507 4.42878 5.86996C4.51223 5.99485 4.55678 6.14169 4.55678 6.29189C4.55678 6.49332 4.47676 6.68649 4.33433 6.82891C4.19191 6.97134 3.99874 7.05136 3.79731 7.05136ZM6.0757 7.05136C5.92549 7.05136 5.77866 7.00681 5.65377 6.92336C5.52887 6.83991 5.43153 6.7213 5.37405 6.58253C5.31657 6.44375 5.30153 6.29105 5.33083 6.14373C5.36013 5.99641 5.43247 5.86109 5.53868 5.75487C5.64489 5.64866 5.78022 5.57633 5.92754 5.54702C6.07486 5.51772 6.22756 5.53276 6.36633 5.59024C6.50511 5.64772 6.62372 5.74507 6.70717 5.86996C6.79062 5.99485 6.83516 6.14169 6.83516 6.29189C6.83516 6.49332 6.75515 6.68649 6.61272 6.82891C6.47029 6.97134 6.27712 7.05136 6.0757 7.05136ZM8.35409 7.05136C8.20388 7.05136 8.05704 7.00681 7.93215 6.92336C7.80726 6.83991 7.70992 6.7213 7.65244 6.58253C7.59495 6.44375 7.57991 6.29105 7.60922 6.14373C7.63852 5.99641 7.71085 5.86109 7.81707 5.75487C7.92328 5.64866 8.0586 5.57633 8.20592 5.54702C8.35324 5.51772 8.50595 5.53276 8.64472 5.59024C8.78349 5.64772 8.90211 5.74507 8.98556 5.86996C9.06901 5.99485 9.11355 6.14169 9.11355 6.29189C9.11355 6.49332 9.03354 6.68649 8.89111 6.82891C8.74868 6.97134 8.55551 7.05136 8.35409 7.05136Z" />
-                              </g>
-                            </svg>
-                            {comment} Comment
-                          </li>
-                        </ul>
+          <div className="row g-lg-4 gy-5">
+            <div className="col-lg-8">
+              <div
+                className="blog-card2 style-3 mb-50 wow animate fadeInDown"
+                data-wow-delay="200ms"
+                data-wow-duration="1500ms"
+              >
+                <div className="blog-card-img-wrap">
+                  <Link href="/blog/blog-details" className="card-img">
+                    <img src="/assets/img/home4/blog-img1.jpg" alt="" />
+                  </Link>
+                  <Link href="/blog" className="date">
+                    <span>
+                      <strong>15</strong> January
+                    </span>
+                  </Link>
+                </div>
+                <div className="blog-card-content-wrap">
+                  <div className="blog-card-content">
+                    <div className="blog-meta">
+                      <ul className="category">
+                        <li>
+                          <Link href="/blog">Development</Link>
+                        </li>
+                      </ul>
+                      <div className="blog-comment">
+                        <span>Comment (20)</span>
                       </div>
-                      <h2>
-                        <Link href="/blog/blog-details">{standard_title}</Link>
-                      </h2>
-                      <p>{description}</p>
+                    </div>
+                    <h4>
                       <Link href="/blog/blog-details">
-                        View Post
-                        <span>
+                        Decoding the Cloud And Deep Dive Told Creative Design
+                        For Work.
+                      </Link>
+                    </h4>
+                    <p>
+                      Welcome to Zenfy, where digital innovation meets arg
+                      strategic excellence. As a dynamic force in thereal on
+                      digital marketing, we are dedicated.There are many
+                      variations of simply free text passages of available bumo
+                      the majority have suffered alteration in some form, by
+                      injected humanjort randomised words which don't slightly.
+                    </p>
+                  </div>
+                  <div className="star-btn">
+                    <a href="#">
+                      <div className="bg">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={136}
+                          height={90}
+                          viewBox="0 0 136 90"
+                        >
+                          <path d="M66.4566 1.09581C67.4534 0.731877 68.5466 0.731878 69.5434 1.09581L76.72 3.71616C77.5489 4.0188 78.4384 4.11757 79.3135 4.00413L87.4541 2.94882C88.5725 2.80382 89.7047 3.0841 90.6263 3.73416L95.7198 7.32676C96.5294 7.89783 97.4783 8.23958 98.4661 8.31592L106.177 8.91181C107.512 9.01497 108.732 9.70716 109.505 10.8003L111.973 14.2907C112.681 15.2926 113.704 16.0288 114.88 16.3822L120.746 18.1466C122.366 18.6337 123.575 19.9876 123.878 21.6515L124.28 23.8681C124.563 25.4218 125.499 26.7793 126.852 27.5948L130.028 29.5102C131.794 30.575 132.61 32.7035 132.009 34.6758L131.703 35.6784C131.154 37.4793 131.565 39.4358 132.791 40.8644L133.825 42.0689C135.272 43.7549 135.272 46.2451 133.825 47.9311L132.791 49.1356C131.564 50.5642 131.154 52.5207 131.703 54.3216L132.009 55.3242C132.61 57.2965 131.794 59.425 130.028 60.4898L126.851 62.4052C125.499 63.2207 124.563 64.5782 124.28 66.1319L123.878 68.3485C123.575 70.0124 122.366 71.3663 120.746 71.8534L114.88 73.6178C113.704 73.9712 112.681 74.7074 111.973 75.7093L109.505 79.1997C108.732 80.2928 107.512 80.985 106.177 81.0882L98.4661 81.6841C97.4783 81.7604 96.5294 82.1022 95.7198 82.6732L90.6263 86.2658C89.7047 86.9159 88.5725 87.1962 87.4541 87.0512L79.3135 85.9959C78.4384 85.8824 77.5489 85.9812 76.72 86.2838L69.5434 88.9042C68.5466 89.2681 67.4534 89.2681 66.4566 88.9042L59.28 86.2838C58.4511 85.9812 57.5616 85.8824 56.6865 85.9959L48.5459 87.0512C47.4275 87.1962 46.2953 86.9159 45.3737 86.2658L40.2802 82.6732C39.4706 82.1022 38.5217 81.7604 37.5339 81.6841L29.8227 81.0882C28.4878 80.985 27.2682 80.2928 26.4952 79.1997L24.0271 75.7093C23.3186 74.7074 22.2955 73.9712 21.1205 73.6178L15.2539 71.8534C13.6344 71.3663 12.4248 70.0124 12.1224 68.3485L11.7197 66.132C11.4374 64.5782 10.5009 63.2207 9.14851 62.4052L5.97213 60.4898C4.20646 59.425 3.39029 57.2965 3.99142 55.3242L4.297 54.3216C4.8459 52.5207 4.43549 50.5642 3.20917 49.1356L2.17516 47.9311C0.727774 46.2451 0.727773 43.7549 2.17516 42.0689L3.20917 40.8644C4.43549 39.4358 4.8459 37.4793 4.297 35.6784L3.99142 34.6758C3.39029 32.7035 4.20646 30.575 5.97213 29.5102L9.14851 27.5948C10.5009 26.7793 11.4374 25.4218 11.7197 23.8681L12.1224 21.6515C12.4248 19.9876 13.6344 18.6337 15.2539 18.1466L21.1205 16.3822C22.2955 16.0288 23.3186 15.2926 24.0271 14.2907L26.4952 10.8003C27.2682 9.70716 28.4878 9.01497 29.8227 8.91181L37.5339 8.31592C38.5217 8.23958 39.4706 7.89783 40.2802 7.32676L45.3737 3.73416C46.2953 3.0841 47.4275 2.80382 48.5459 2.94882L56.6865 4.00413C57.5616 4.11757 58.4511 4.0188 59.28 3.71616L66.4566 1.09581Z" />
+                        </svg>
+                      </div>
+                      <div className="details-button">
+                        Read More
+                        <svg viewBox="0 0 13 20">
+                          <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="blog-card2 style-3 mb-50 wow animate fadeInDown"
+                data-wow-delay="400ms"
+                data-wow-duration="1500ms"
+              >
+                <div className="blog-card-img-wrap">
+                  <Link href="/blog/blog-details" className="card-img">
+                    <img src="/assets/img/home4/blog-img2.jpg" alt="" />
+                  </Link>
+                  <Link href="/blog" className="date">
+                    <span>
+                      <strong>20</strong> March
+                    </span>
+                  </Link>
+                </div>
+                <div className="blog-card-content-wrap">
+                  <div className="blog-card-content">
+                    <div className="blog-meta">
+                      <ul className="category">
+                        <li>
+                          <Link href="/blog">Graphic Design</Link>
+                        </li>
+                      </ul>
+                      <div className="blog-comment">
+                        <span>Comment (15)</span>
+                      </div>
+                    </div>
+                    <h4>
+                      <Link href="/blog/blog-details">
+                        Beyond then Canvas Exploring Innovative Design Trends.
+                      </Link>
+                    </h4>
+                    <p>
+                      Introducing to Zenfy, the intersection of arg strategic
+                      excellence with digital innovation. We are committed to
+                      being a dynamic force in the field of digital
+                      marketing.The bulk of the simply free text sections that
+                      are provided have been altered in some way, usually by
+                      adding humanjort randomised words that don't change much.
+                    </p>
+                  </div>
+                  <div className="star-btn">
+                    <a href="#">
+                      <div className="bg">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={136}
+                          height={90}
+                          viewBox="0 0 136 90"
+                        >
+                          <path d="M66.4566 1.09581C67.4534 0.731877 68.5466 0.731878 69.5434 1.09581L76.72 3.71616C77.5489 4.0188 78.4384 4.11757 79.3135 4.00413L87.4541 2.94882C88.5725 2.80382 89.7047 3.0841 90.6263 3.73416L95.7198 7.32676C96.5294 7.89783 97.4783 8.23958 98.4661 8.31592L106.177 8.91181C107.512 9.01497 108.732 9.70716 109.505 10.8003L111.973 14.2907C112.681 15.2926 113.704 16.0288 114.88 16.3822L120.746 18.1466C122.366 18.6337 123.575 19.9876 123.878 21.6515L124.28 23.8681C124.563 25.4218 125.499 26.7793 126.852 27.5948L130.028 29.5102C131.794 30.575 132.61 32.7035 132.009 34.6758L131.703 35.6784C131.154 37.4793 131.565 39.4358 132.791 40.8644L133.825 42.0689C135.272 43.7549 135.272 46.2451 133.825 47.9311L132.791 49.1356C131.564 50.5642 131.154 52.5207 131.703 54.3216L132.009 55.3242C132.61 57.2965 131.794 59.425 130.028 60.4898L126.851 62.4052C125.499 63.2207 124.563 64.5782 124.28 66.1319L123.878 68.3485C123.575 70.0124 122.366 71.3663 120.746 71.8534L114.88 73.6178C113.704 73.9712 112.681 74.7074 111.973 75.7093L109.505 79.1997C108.732 80.2928 107.512 80.985 106.177 81.0882L98.4661 81.6841C97.4783 81.7604 96.5294 82.1022 95.7198 82.6732L90.6263 86.2658C89.7047 86.9159 88.5725 87.1962 87.4541 87.0512L79.3135 85.9959C78.4384 85.8824 77.5489 85.9812 76.72 86.2838L69.5434 88.9042C68.5466 89.2681 67.4534 89.2681 66.4566 88.9042L59.28 86.2838C58.4511 85.9812 57.5616 85.8824 56.6865 85.9959L48.5459 87.0512C47.4275 87.1962 46.2953 86.9159 45.3737 86.2658L40.2802 82.6732C39.4706 82.1022 38.5217 81.7604 37.5339 81.6841L29.8227 81.0882C28.4878 80.985 27.2682 80.2928 26.4952 79.1997L24.0271 75.7093C23.3186 74.7074 22.2955 73.9712 21.1205 73.6178L15.2539 71.8534C13.6344 71.3663 12.4248 70.0124 12.1224 68.3485L11.7197 66.132C11.4374 64.5782 10.5009 63.2207 9.14851 62.4052L5.97213 60.4898C4.20646 59.425 3.39029 57.2965 3.99142 55.3242L4.297 54.3216C4.8459 52.5207 4.43549 50.5642 3.20917 49.1356L2.17516 47.9311C0.727774 46.2451 0.727773 43.7549 2.17516 42.0689L3.20917 40.8644C4.43549 39.4358 4.8459 37.4793 4.297 35.6784L3.99142 34.6758C3.39029 32.7035 4.20646 30.575 5.97213 29.5102L9.14851 27.5948C10.5009 26.7793 11.4374 25.4218 11.7197 23.8681L12.1224 21.6515C12.4248 19.9876 13.6344 18.6337 15.2539 18.1466L21.1205 16.3822C22.2955 16.0288 23.3186 15.2926 24.0271 14.2907L26.4952 10.8003C27.2682 9.70716 28.4878 9.01497 29.8227 8.91181L37.5339 8.31592C38.5217 8.23958 39.4706 7.89783 40.2802 7.32676L45.3737 3.73416C46.2953 3.0841 47.4275 2.80382 48.5459 2.94882L56.6865 4.00413C57.5616 4.11757 58.4511 4.0188 59.28 3.71616L66.4566 1.09581Z" />
+                        </svg>
+                      </div>
+                      <div className="details-button">
+                        Read More
+                        <svg viewBox="0 0 13 20">
+                          <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="blog-card2 style-3 mb-60 wow animate fadeInDown"
+                data-wow-delay="800ms"
+                data-wow-duration="1500ms"
+              >
+                <div className="blog-card-img-wrap">
+                  <Link href="/blog/blog-details" className="card-img">
+                    <img src="/assets/img/home4/blog-img4.jpg" alt="" />
+                  </Link>
+                  <Link href="/blog" className="date">
+                    <span>
+                      <strong>05</strong> May
+                    </span>
+                  </Link>
+                </div>
+                <div className="blog-card-content-wrap">
+                  <div className="blog-card-content">
+                    <div className="blog-meta">
+                      <ul className="category">
+                        <li>
+                          <Link href="/blog">Development</Link>
+                        </li>
+                      </ul>
+                      <div className="blog-comment">
+                        <span>Comment (25)</span>
+                      </div>
+                    </div>
+                    <h4>
+                      <Link href="/blog/blog-details">
+                        Challenges creating strucui a multi-brand system.
+                      </Link>
+                    </h4>
+                    <p>
+                      Zenfy is a place where exceptional strategic planning and
+                      digital innovation come together. We are committed to
+                      being a force to be reckoned with in digital marketing.A
+                      significant number of the readily available free text
+                      passages have had some sort of alteration.
+                    </p>
+                  </div>
+                  <div className="star-btn">
+                    <a href="#">
+                      <div className="bg">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={136}
+                          height={90}
+                          viewBox="0 0 136 90"
+                        >
+                          <path d="M66.4566 1.09581C67.4534 0.731877 68.5466 0.731878 69.5434 1.09581L76.72 3.71616C77.5489 4.0188 78.4384 4.11757 79.3135 4.00413L87.4541 2.94882C88.5725 2.80382 89.7047 3.0841 90.6263 3.73416L95.7198 7.32676C96.5294 7.89783 97.4783 8.23958 98.4661 8.31592L106.177 8.91181C107.512 9.01497 108.732 9.70716 109.505 10.8003L111.973 14.2907C112.681 15.2926 113.704 16.0288 114.88 16.3822L120.746 18.1466C122.366 18.6337 123.575 19.9876 123.878 21.6515L124.28 23.8681C124.563 25.4218 125.499 26.7793 126.852 27.5948L130.028 29.5102C131.794 30.575 132.61 32.7035 132.009 34.6758L131.703 35.6784C131.154 37.4793 131.565 39.4358 132.791 40.8644L133.825 42.0689C135.272 43.7549 135.272 46.2451 133.825 47.9311L132.791 49.1356C131.564 50.5642 131.154 52.5207 131.703 54.3216L132.009 55.3242C132.61 57.2965 131.794 59.425 130.028 60.4898L126.851 62.4052C125.499 63.2207 124.563 64.5782 124.28 66.1319L123.878 68.3485C123.575 70.0124 122.366 71.3663 120.746 71.8534L114.88 73.6178C113.704 73.9712 112.681 74.7074 111.973 75.7093L109.505 79.1997C108.732 80.2928 107.512 80.985 106.177 81.0882L98.4661 81.6841C97.4783 81.7604 96.5294 82.1022 95.7198 82.6732L90.6263 86.2658C89.7047 86.9159 88.5725 87.1962 87.4541 87.0512L79.3135 85.9959C78.4384 85.8824 77.5489 85.9812 76.72 86.2838L69.5434 88.9042C68.5466 89.2681 67.4534 89.2681 66.4566 88.9042L59.28 86.2838C58.4511 85.9812 57.5616 85.8824 56.6865 85.9959L48.5459 87.0512C47.4275 87.1962 46.2953 86.9159 45.3737 86.2658L40.2802 82.6732C39.4706 82.1022 38.5217 81.7604 37.5339 81.6841L29.8227 81.0882C28.4878 80.985 27.2682 80.2928 26.4952 79.1997L24.0271 75.7093C23.3186 74.7074 22.2955 73.9712 21.1205 73.6178L15.2539 71.8534C13.6344 71.3663 12.4248 70.0124 12.1224 68.3485L11.7197 66.132C11.4374 64.5782 10.5009 63.2207 9.14851 62.4052L5.97213 60.4898C4.20646 59.425 3.39029 57.2965 3.99142 55.3242L4.297 54.3216C4.8459 52.5207 4.43549 50.5642 3.20917 49.1356L2.17516 47.9311C0.727774 46.2451 0.727773 43.7549 2.17516 42.0689L3.20917 40.8644C4.43549 39.4358 4.8459 37.4793 4.297 35.6784L3.99142 34.6758C3.39029 32.7035 4.20646 30.575 5.97213 29.5102L9.14851 27.5948C10.5009 26.7793 11.4374 25.4218 11.7197 23.8681L12.1224 21.6515C12.4248 19.9876 13.6344 18.6337 15.2539 18.1466L21.1205 16.3822C22.2955 16.0288 23.3186 15.2926 24.0271 14.2907L26.4952 10.8003C27.2682 9.70716 28.4878 9.01497 29.8227 8.91181L37.5339 8.31592C38.5217 8.23958 39.4706 7.89783 40.2802 7.32676L45.3737 3.73416C46.2953 3.0841 47.4275 2.80382 48.5459 2.94882L56.6865 4.00413C57.5616 4.11757 58.4511 4.0188 59.28 3.71616L66.4566 1.09581Z" />
+                        </svg>
+                      </div>
+                      <div className="details-button">
+                        Read More
+                        <svg viewBox="0 0 13 20">
+                          <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div
+                  className="col-lg-12 d-flex justify-content-center wow animate fadeInUp"
+                  data-wow-delay="400ms"
+                  data-wow-duration="1500ms"
+                >
+                  <div className="pagination-area">
+                    <ul className="paginations">
+                      <li className="page-item active">
+                        <a href="#">01</a>
+                      </li>
+                      <li className="page-item">
+                        <a href="#">02</a>
+                      </li>
+                      <li className="page-item">
+                        <a href="#">03</a>
+                      </li>
+                      <li className="page-item paginations-button">
+                        <a href="#">
+                          NXT
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width={14}
                             height={12}
                             viewBox="0 0 14 12"
-                            fill="none"
+                          >
+                            <path d="M0.020025 6.33628C0.0901115 6.5271 0.25031 6.73476 0.400496 6.83017C0.550683 6.91997 0.946172 6.92558 5.76715 6.95364L10.9736 6.98171L9.08627 8.77205C7.85974 9.93381 7.16889 10.6297 7.11883 10.7476C6.94862 11.1517 7.10381 11.6961 7.44423 11.8981C7.63947 12.0216 8.01494 12.0328 8.18014 11.9318C8.24022 11.8925 9.53682 10.6803 11.0687 9.23226C12.941 7.45876 13.8722 6.53833 13.9273 6.42047C14.0775 6.05567 13.9923 5.65719 13.697 5.3429C13.2014 4.82656 8.1451 0.140237 8.00993 0.0728886C7.79466 -0.0337464 7.60943 -0.0225217 7.36413 0.100951C6.96864 0.302995 6.79843 0.909129 7.0137 1.31883C7.06376 1.41424 7.96988 2.301 9.02619 3.28316C10.0775 4.27093 10.9436 5.09034 10.9436 5.11279C10.9486 5.14085 8.61068 5.15769 5.74713 5.15769L0.550683 5.15769L0.385478 5.28116C0.135167 5.47759 0.0250308 5.67964 0.00500557 5.98271C-0.00500609 6.12863 -2.49531e-07 6.29139 0.020025 6.33628Z" />
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-lg-4 wow animate fadeInRight"
+              data-wow-delay="400ms"
+              data-wow-duration="1500ms"
+            >
+              <div className="sidebar-area">
+                <div className="single-widget mb-30">
+                  <h5 className="widget-title">Search Here</h5>
+                  <form>
+                    <div className="search-box">
+                      <input type="text" placeholder="Search Here" />
+                      <button type="submit">
+                        <i className="bx bx-search" />
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div className="single-widget mb-30">
+                  <h5 className="widget-title">Category</h5>
+                  <ul className="category-list">
+                    <li>
+                      <Link href="/blog/blog-sidebar">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={13}
+                            height={14}
+                            viewBox="0 0 13 14"
                           >
                             <path
-                              d="M2.07617 8.73272L12.1899 2.89355"
-                              strokeLinecap="round"
-                            />
-                            <path
-                              d="M10.412 7.59764L12.1908 2.89295L7.22705 2.08105"
-                              strokeLinecap="round"
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M11.0354 1.65188L0 12.6867L0.814262 13.501L11.8491 2.46556V10.0955H13V0.500977H3.40552V1.65188H11.0354Z"
                             />
                           </svg>
+                          Digital Marketing
                         </span>
+                        <span>(20)</span>
                       </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog/blog-sidebar">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={13}
+                            height={14}
+                            viewBox="0 0 13 14"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M11.0354 1.65188L0 12.6867L0.814262 13.501L11.8491 2.46556V10.0955H13V0.500977H3.40552V1.65188H11.0354Z"
+                            />
+                          </svg>
+                          Creative Agency
+                        </span>
+                        <span>(15)</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog/blog-sidebar">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={13}
+                            height={14}
+                            viewBox="0 0 13 14"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M11.0354 1.65188L0 12.6867L0.814262 13.501L11.8491 2.46556V10.0955H13V0.500977H3.40552V1.65188H11.0354Z"
+                            />
+                          </svg>
+                          Web Design
+                        </span>
+                        <span>(25)</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog/blog-sidebar">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={13}
+                            height={14}
+                            viewBox="0 0 13 14"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M11.0354 1.65188L0 12.6867L0.814262 13.501L11.8491 2.46556V10.0955H13V0.500977H3.40552V1.65188H11.0354Z"
+                            />
+                          </svg>
+                          Web Development
+                        </span>
+                        <span>(30)</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog/blog-sidebar">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={13}
+                            height={14}
+                            viewBox="0 0 13 14"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M11.0354 1.65188L0 12.6867L0.814262 13.501L11.8491 2.46556V10.0955H13V0.500977H3.40552V1.65188H11.0354Z"
+                            />
+                          </svg>
+                          Content Marketing
+                        </span>
+                        <span>(32)</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog/blog-sidebar">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={13}
+                            height={14}
+                            viewBox="0 0 13 14"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M11.0354 1.65188L0 12.6867L0.814262 13.501L11.8491 2.46556V10.0955H13V0.500977H3.40552V1.65188H11.0354Z"
+                            />
+                          </svg>
+                          App Development
+                        </span>
+                        <span>(35)</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog/blog-sidebar">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={13}
+                            height={14}
+                            viewBox="0 0 13 14"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M11.0354 1.65188L0 12.6867L0.814262 13.501L11.8491 2.46556V10.0955H13V0.500977H3.40552V1.65188H11.0354Z"
+                            />
+                          </svg>
+                          UI/UX Design
+                        </span>
+                        <span>(38)</span>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="single-widget mb-30">
+                  <h5 className="widget-title">Popular Post </h5>
+                  <div className="recent-post-widget mb-20">
+                    <div className="recent-post-img">
+                      <Link href="/blog/blog-details">
+                        <img
+                          src="/assets/img/innerpage/popular-post-img1.png"
+                          alt=""
+                        />
+                      </Link>
+                    </div>
+                    <div className="recent-post-content">
+                      <Link href="/blog">20 January, 2024</Link>
+                      <h6>
+                        <Link href="/blog/blog-details">
+                          Looking Inspiration Traveling The World.
+                        </Link>
+                      </h6>
+                    </div>
+                  </div>
+                  <div className="recent-post-widget mb-20">
+                    <div className="recent-post-img">
+                      <Link href="/blog/blog-details">
+                        <img
+                          src="/assets/img/innerpage/popular-post-img2.png"
+                          alt=""
+                        />
+                      </Link>
+                    </div>
+                    <div className="recent-post-content">
+                      <Link href="/blog">12 January, 2024</Link>
+                      <h6>
+                        <Link href="/blog/blog-details">
+                          Challenges creating a multi-brand system.
+                        </Link>
+                      </h6>
+                    </div>
+                  </div>
+                  <div className="recent-post-widget mb-20">
+                    <div className="recent-post-img">
+                      <Link href="/blog/blog-details">
+                        <img
+                          src="/assets/img/innerpage/popular-post-img3.png"
+                          alt=""
+                        />
+                      </Link>
+                    </div>
+                    <div className="recent-post-content">
+                      <Link href="/blog">04 January, 2024</Link>
+                      <h6>
+                        <Link href="/blog/blog-details">
+                          Decoding the Cloud And Deep Dive Creative.
+                        </Link>
+                      </h6>
                     </div>
                   </div>
                 </div>
-              );
-            })}
-
-            <div className="row">
-              <div className="col-lg-12">
-                <nav className="inner-pagination-area">
-                  <ul className="pagination-list">
+                <div className="single-widget mb-30">
+                  <h5 className="widget-title">New Tags</h5>
+                  <ul className="tag-list">
                     <li>
-                      <a href="#" className="shop-pagi-btn">
-                        <i className="bi bi-chevron-left" />
+                      <Link href="/blog">Creative</Link>
+                    </li>
+                    <li>
+                      <Link href="/blog">Web Design</Link>
+                    </li>
+                    <li>
+                      <Link href="/blog">Software</Link>
+                    </li>
+                    <li>
+                      <Link href="/blog">Industry</Link>
+                    </li>
+                    <li>
+                      <Link href="/blog">Marketing</Link>
+                    </li>
+                    <li>
+                      <Link href="/blog">Product</Link>
+                    </li>
+                    <li>
+                      <Link href="/blog">Optimization</Link>
+                    </li>
+                    <li>
+                      <Link href="/blog">Graphic</Link>
+                    </li>
+                    <li>
+                      <Link href="/blog">Natural</Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="single-widget">
+                  <h5 className="widget-title">Social Share</h5>
+                  <ul className="social-list">
+                    <li>
+                      <a href="https://www.linkedin.com/">
+                        <i className="bi bi-linkedin" />
+                        <span>LinkedIn</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">1</a>
-                    </li>
-                    <li>
-                      <a href="#" className="active">
-                        2
+                      <a href="https://www.facebook.com/">
+                        <i className="bi bi-facebook" />
+                        <span>Facebook</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">3</a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="bi bi-three-dots" />
+                      <a href="https://twitter.com/">
+                        <i className="bi bi-twitter-x" />
+                        <span>Twitter</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">6</a>
-                    </li>
-                    <li>
-                      <a href="#" className="shop-pagi-btn">
-                        <i className="bi bi-chevron-right" />
+                      <a href="https://www.instagram.com/">
+                        <i className="bi bi-instagram" />
+                        <span>Instagram</span>
                       </a>
                     </li>
                   </ul>
-                </nav>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <Newslatter />
-      <Footer />
-    </>
+    </MainLayout>
   );
 };
 
-export default page;
+export default BlogStandardPage;

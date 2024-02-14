@@ -7,100 +7,163 @@
         "subMenu": [
             {
                 "id": "1",
-                "label": "Home 01",
-                "link": "/"
+                "label": "Light Version",
+                "link": "/",
+                "icon": true,
+                "subMenu": [
+                    {
+                        "id": "1",
+                        "label": "Startup Agency",
+                        "link": "/"
+                    },
+                    {
+                        "id": "2",
+                        "label": "Digital Marketing Agency",
+                        "link": "/digital-marketing"
+                    },
+                    {
+                        "id": "3",
+                        "label": "Saas Product",
+                        "link": "/saas"
+                    },
+                    {
+                        "id": "4",
+                        "label": "Creative Agency",
+                        "link": "/creative-agency"
+                    },
+                    {
+                        "id": "5",
+                        "label": "It Solution",
+                        "link": "/it-solution"
+                    }
+                ]
             },
             {
-                "id": "2",
-                "label": "Home 02",
-                "link": "/index2"
-            },
-            {
-                "id": "3",
-                "label": "Home 03",
-                "link": "/index3"
-            },
-            {
-                "id": "4",
-                "label": "Home 04",
-                "link": "/index4"
-            },
-            {
-                "id": "5",
-                "label": "Home 05",
-                "link": "/index5"
-            },
-            {
-                "id": "6",
-                "label": "Home 06",
-                "link": "/index6"
+                "id": "1",
+                "label": "Dark Version",
+                "link": "/",
+                "icon": true,
+                "subMenu": [
+                    {
+                        "id": "1",
+                        "label": "Startup Agency",
+                        "link": "/startup-agency-dark"
+                    },
+                    {
+                        "id": "2",
+                        "label": "Digital Marketing Agency",
+                        "link": "/digital-marketing-dark"
+                    },
+                    {
+                        "id": "3",
+                        "label": "Saas Product",
+                        "link": "/saas-dark"
+                    },
+                    {
+                        "id": "4",
+                        "label": "Creative Agency",
+                        "link": "/creative-agency-dark"
+                    },
+                    {
+                        "id": "5",
+                        "label": "It Solution",
+                        "link": "/it-solution-dark"
+                    }
+                ]
             }
         ]
     },
     {
         "id": "2",
-        "label": "About",
-        "link": "/about",
-        "icon": false
-    },
-    {
-        "id": "3",
-        "label": "Tours",
-        "link": "/package",
+        "label": "Services",
+        "link": "/service",
         "icon": true,
         "subMenu": [
             {
                 "id": "1",
-                "label": "Package Grid",
-                "link": "/package"
+                "label": "Service style 01",
+                "link": "/service"
             },
             {
                 "id": "2",
-                "label": "Package Sidebar",
-                "link": "/package/package-category"
+                "label": "Service style 02",
+                "link": "/service/service2"
+            },
+            {
+                "id": "3",
+                "label": "Service style 03",
+                "link": "/service/service3"
+            },
+            {
+                "id": "4",
+                "label": "Service style 04",
+                "link": "/service/service4"
+            },
+            {
+                "id": "4",
+                "label": "service details",
+                "link": "/service/service-details"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "label": "Case Study",
+        "link": "/case-study",
+        "icon": true,
+        "subMenu": [
+            {
+                "id": "1",
+                "label": "Case Study Style 01",
+                "link": "/case-study"
+            },
+            {
+                "id": "2",
+                "label": "Case Study Style 02",
+                "link": "/case-study/case-study2"
             },
             {
                 "id": "3",
                 "label": "Package Top Search",
-                "link": "/package/package-top-search"
-            },
-            {
-                "id": "4",
-                "label": "Package Category",
-                "link": "/package/package-details"
+                "link": "/case-study/case-study-details"
             }
         ]
     },
     {
         "id": "4",
-        "label": "Destination",
-        "link": "/destination",
+        "label": "Blog",
+        "link": "/blog",
         "icon": true,
         "subMenu": [
             {
                 "id": "1",
-                "label": "Destination Style 01",
-                "link": "/destination/style2"
+                "label": "Blog Grid",
+                "link": "/blog"
             },
             {
                 "id": "2",
-                "label": "Destination Style 02",
-                "link": "//destination/style3"
+                "label": "Blog Grid Sidebar",
+                "link": "/blog/blog-grid-sidebar"
             },
             {
                 "id": "3",
-                "label": "destination3",
-                "link": "/destination/style4"
+                "label": "Blog List",
+                "link": "/blog/blog-list"
             },
             {
                 "id": "4",
-                "label": "destination4",
-                "link": "/destination/style5"
+                "label": "Blog Standard",
+                "link": "/blog/blog-standard"
             },
             {
                 "id": "5",
-                "label": "destination5",
-                "link": "/destination/style5"
+                "label": "Blog Details Style 01",
+                "link": "/blog/blog-details"
+            },
+            {
+                "id": "6",
+                "label": "Blog Details Style 02",
+                "link": "/blog/blog-details2"
             }
         ]
     },
@@ -112,154 +175,79 @@
         "subMenu": [
             {
                 "id": "1",
-                "label": "Dashboard",
-                "link": "/dashboard",
-                "icon": true,
-                "subMenu": [
-                    {
-                        "id": "1",
-                        "label": "Admin Dashboard",
-                        "link": "/admin-dashboard"
-                    },
-                    {
-                        "id": "2",
-                        "label": "Customar Dashboard",
-                        "link": "/customer-dashboard"
-                    }
-                ]
+                "label": "About",
+                "link": "/about"
             },
             {
                 "id": "2",
-                "label": "Hotel",
-                "link": "/hotel-suits",
-                "icon": true,
-                "subMenu": [
-                    {
-                        "id": "1",
-                        "label": "Hotel",
-                        "link": "/hotel-suits"
-                    },
-                    {
-                        "id": "2",
-                        "label": "Hotel Details",
-                        "link": "/hotel-details"
-                    }
-                ]
+                "label": "Industry",
+                "link": "/industry"
             },
             {
                 "id": "3",
-                "label": "Activities",
-                "link": "/activities",
+                "label": "Portfolio",
+                "link": "/portfolio",
                 "icon": true,
                 "subMenu": [
                     {
                         "id": "1",
-                        "label": "Activities",
-                        "link": "/activities"
+                        "label": "Portfolio Grid",
+                        "link": "/portfolio"
                     },
                     {
                         "id": "2",
-                        "label": "Activities-Details",
-                        "link": "/activities/activities-details"
+                        "label": "Portfolio Masonary",
+                        "link": "/portfolio/portfolio-masonary"
+                    },
+                    {
+                        "id": "3",
+                        "label": "Portfolio Info Flow",
+                        "link": "/portfolio/portfolio-info-flow"
+                    },
+                    {
+                        "id": "4",
+                        "label": "Portfolio List",
+                        "link": "/portfolio/portfolio-list"
+                    },
+                    {
+                        "id": "5",
+                        "label": "portfolio-Details",
+                        "link": "/portfolio/portfolio-details"
                     }
                 ]
             },
             {
                 "id": "4",
-                "label": "Transport",
-                "link": "/transport",
+                "label": "Our Team",
+                "link": "/team",
                 "icon": true,
                 "subMenu": [
                     {
                         "id": "1",
-                        "label": "Transport",
-                        "link": "/transport"
+                        "label": "Team Style 01",
+                        "link": "/team"
                     },
                     {
                         "id": "2",
-                        "label": "Transport-Details",
-                        "link": "/transport/transport-details"
+                        "label": "Team Style 01",
+                        "link": "/team2"
                     }
                 ]
             },
             {
                 "id": "5",
-                "label": "Visa",
-                "link": "/visa",
-                "icon": true,
-                "subMenu": [
-                    {
-                        "id": "1",
-                        "label": "Visa",
-                        "link": "/visa"
-                    },
-                    {
-                        "id": "2",
-                        "label": "Visa-Details",
-                        "link": "/visa/visa-details"
-                    }
-                ]
+                "label": "Features",
+                "link": "/features"
             },
             {
                 "id": "6",
-                "label": "Blog",
-                "link": "/blog",
-                "icon": true,
-                "subMenu": [
-                    {
-                        "id": "1",
-                        "label": "Blog",
-                        "link": "/blog"
-                    },
-                    {
-                        "id": "2",
-                        "label": "Blog Standard",
-                        "link": "/blog/blog-standard"
-                    },
-                    {
-                        "id": "3",
-                        "label": "Blog Grid Sidebar",
-                        "link": "/blog/blog-grid-sidebar"
-                    },
-                    {
-                        "id": "4",
-                        "label": "Blog Standard Sidebar",
-                        "link": "/blog/blog-standard-sidebar"
-                    },
-                    {
-                        "id": "5",
-                        "label": "Blog Details",
-                        "link": "/blog/blog-details"
-                    }
-                ]
+                "label": "Pricing-Plan",
+                "link": "/pricing-plan"
             },
             {
                 "id": "7",
-                "label": "Tour Guide",
-                "link": "/guide",
-                "icon": true,
-                "subMenu": [
-                    {
-                        "id": "1",
-                        "label": "Tour Guide Style 01",
-                        "link": "/guide/style2"
-                    },
-                    {
-                        "id": "2",
-                        "label": "Tour Guide Style 02",
-                        "link": "/guide/style3"
-                    },
-                    {
-                        "id": "3",
-                        "label": "Tour Guide Style 03",
-                        "link": "/guide/style4"
-                    },
-                    {
-                        "id": "4",
-                        "label": "Tour Guide Style 04",
-                        "link": "/guide/style6"
-                    }
-                ]
+                "label": "Faqs",
+                "link": "/faq"
             },
             {
                 "id": "8",
@@ -275,29 +263,19 @@
                     {
                         "id": "2",
                         "label": "Product-Details",
-                        "link": "/shop/product-details"
+                        "link": "/product-details"
                     },
                     {
                         "id": "3",
                         "label": "Cart",
-                        "link": "/shop/cart"
+                        "link": "/cart"
                     },
                     {
                         "id": "4",
                         "label": "Checkout",
-                        "link": "/shop/checkout"
+                        "link": "/checkout"
                     }
                 ]
-            },
-            {
-                "id": "9",
-                "label": "Gallery",
-                "link": "/gallery"
-            },
-            {
-                "id": "10",
-                "label": "Faqs",
-                "link": "/faq"
             }
         ]
     },
