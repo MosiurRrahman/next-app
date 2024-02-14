@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const Home4blog = () => {
+const Home4Blog = () => {
   return (
     <>
       <div className="home4-blog-section mb-130">
@@ -262,4 +262,4 @@ const Home4blog = () => {
   );
 };
 
-export default Home4blog;
+export default Home4Blog;

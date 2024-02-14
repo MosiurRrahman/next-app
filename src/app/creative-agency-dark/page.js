@@ -2,7 +2,7 @@
 import Home4About from "@/components/about/Home4About";
 import Home4award from "@/components/award/Home4award";
 import Home4Banner from "@/components/banner/Home4Banner";
-import Home4blog from "@/components/blog/Home4blog";
+import Home4Blog from "@/components/blog/Home4Blog";
 import Home4Contact from "@/components/contact/Home4Contact";
 import Home4experience from "@/components/experience/Home4experience";
 import Home4Footer from "@/components/footer/Home4Footer";
@@ -35,7 +35,7 @@ const CreativeAgencyPage = () => {
       <Home4award />
       <Home4Team />
       <Home4Testimonial />
-      <Home4blog />
+      <Home4Blog />
       <Home4Footer />
     </>
   );
