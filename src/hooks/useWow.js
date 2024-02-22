@@ -1,29 +1,37 @@
-// useWow.js
-
 import { useEffect } from 'react';
-import WOW from 'wowjs';
 
 const useWow = () => {
   useEffect(() => {
-    const wow = new WOW.WOW({
-      boxClass: 'wow',
-      animateClass: 'animated',
-      offset: 80,
-      mobile: true,
-      live: true,
-    });
-    wow.init();
-
-    const handleRouteChange = () => {
-      wow.sync();
+    const initWow = () => {
+      import('wowjs').then((module) => {
+        const WOW = module.default;
+        const wow = new WOW.WOW({
+          boxClass: 'wow',
+          animateClass: 'animated',
+          offset: 80,
+          mobile: true,
+          live: true,
+        });
+        wow.init();
+      });
     };
 
-    // Listen for route changes
-    document.addEventListener('routeChangeComplete', handleRouteChange);
+    if (typeof window !== 'undefined') {
+      initWow();
 
-    return () => {
-      document.removeEventListener('routeChangeComplete', handleRouteChange);
-    };
+      const handleRouteChange = () => {
+        if (typeof window.WOW !== 'undefined') {
+          window.WOW.sync();
+        }
+      };
+
+      // Listen for route changes
+      document.addEventListener('routeChangeComplete', handleRouteChange);
+
+      return () => {
+        document.removeEventListener('routeChangeComplete', handleRouteChange);
+      };
+    }
   }, []);
 };
 
