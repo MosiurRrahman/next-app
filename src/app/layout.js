@@ -14,26 +14,11 @@ import "yet-another-react-lightbox/styles.css";
 import "../../public/assets/css/style.css";
 import ScrollProgress from "@/components/common/ScrollProgress";
 import ThemeSwitch from "@/components/common/Theme";
-import useWow from "@/hooks/useWow";
-import { useRouter } from "next/navigation";
+// import useWow from "@/hooks/useWow";
+
 export default function RootLayout({ children }) {
-  useWow(); 
+  // useWow(); 
 
-  const router = useRouter();
-
-  useEffect(() => {
-    if (router.events) {
-      const handleRouteChange = (url) => {
-        console.log('Route changed:', url);
-      };
-
-      router.events.on('routeChangeComplete', handleRouteChange);
-
-      return () => {
-        router.events.off('routeChangeComplete', handleRouteChange);
-      };
-    }
-  }, [router.events]);
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
