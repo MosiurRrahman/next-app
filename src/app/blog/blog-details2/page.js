@@ -4,7 +4,7 @@ import useWow from "@/hooks/useWow";
 import Link from "next/link";
 import React from "react";
 
-const page = () => {
+const BlogPage = () => {
   useWow();
   return (
     <MainLayout>
@@ -814,4 +814,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default BlogPage;
