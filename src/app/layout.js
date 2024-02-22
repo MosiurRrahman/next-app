@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import { Inter, Roboto_Mono, Hanken_Grotesk} from 'next/font/google'
+import { Inter, Hanken_Grotesk} from 'next/font/google'
 import "../../public/assets/css/bootstrap-icons.css";
 import "../../public/assets/css/boxicons.min.css";
 import "../../public/assets/css/swiper-bundle.min.css";
