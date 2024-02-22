@@ -26,6 +26,7 @@ const hankenGrotesk = Hanken_Grotesk({
   subsets: ['latin'],
   weight: ['400','500',"600", '700',"800","900"],
   variable: '--font-hankenGrotesk',
+  fallback:true,
   display: 'swap',
 })
 export default function RootLayout({ children }) {
