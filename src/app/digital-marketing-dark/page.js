@@ -13,9 +13,11 @@ import Home2pricingPlan from "@/components/pricing-plan/Home2pricingPlan";
 import Home2service from "@/components/service/Home2service";
 import Home2Testimonial from "@/components/testimonial/Home2Testimonial";
 import Home2WorkProcess from "@/components/workProcess/Home2WorkProcess";
+import useWow from "@/hooks/useWow";
 import { useEffect } from "react";
 
 const DigitalMarketingHomePageDark = () => {
+  useWow()
   useEffect(() => {
     document.body.classList.add("dark");
   }, []);

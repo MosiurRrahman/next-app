@@ -1,3 +1,4 @@
+"use client"
 import Home3Banner from "@/components/banner/Home3Banner";
 import Home3Blog from "@/components/blog/Home3Blog";
 import Home3countdown from "@/components/countdown/Home3countdown";
@@ -12,14 +13,11 @@ import Home3ProjectManagement from "@/components/projectManagement/Home3ProjectM
 import Home3Testimonial from "@/components/testimonial/Home3Testimonial";
 import Home3Tools from "@/components/tools/Home3Tools";
 import Home3WorkProcess from "@/components/workProcess/Home3WorkProcess";
-export const metadata = {
-  title: "Zenfy - Software, SaaS & Digital Agency Template",
-  icons: {
-    icon: "/assets/img/sm-logo.svg",
-  },
-};
+import useWow from "@/hooks/useWow";
+
 
 const SaasPage = () => {
+  useWow()
   return (
     <>
       <Header2 />

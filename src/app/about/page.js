@@ -16,9 +16,11 @@ import SwiperCore, {
   Pagination,
 } from "swiper";
 import Link from "next/link";
+import useWow from "@/hooks/useWow";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 const Aboutpage = () => {
+  useWow()
   const settings = useMemo(() => {
     return {
       slidesPerView: "auto",

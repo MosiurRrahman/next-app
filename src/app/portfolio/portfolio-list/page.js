@@ -1,8 +1,11 @@
+"use client"
 import MainLayout from "@/components/layout/MainLayout";
+import useWow from "@/hooks/useWow";
 import Link from "next/link";
 import React from "react";
 
 const PortfolioListPage = () => {
+  useWow()
   return (
     <MainLayout>
       <div

@@ -1,3 +1,4 @@
+"use client"
 import Home2About from "@/components/about/Home2About";
 import Home2Banner from "@/components/banner/Home2Banner";
 import Home2Blog from "@/components/blog/Home2Blog";
@@ -12,15 +13,12 @@ import Home2pricingPlan from "@/components/pricing-plan/Home2pricingPlan";
 import Home2service from "@/components/service/Home2service";
 import Home2Testimonial from "@/components/testimonial/Home2Testimonial";
 import Home2WorkProcess from "@/components/workProcess/Home2WorkProcess";
+import useWow from "@/hooks/useWow";
 
-export const metadata = {
-  title: "Zenfy - Software, SaaS & Digital Agency Template",
-  icons: {
-    icon: "/assets/img/sm-logo.svg",
-  },
-};
+
 
 const DigitalMarketingHomePage = () => {
+  useWow()
   return (
     <>
       <Header1 />

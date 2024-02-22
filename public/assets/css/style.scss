@@ -171,15 +171,36 @@ body.dark{
   src: url(../fonts/HankenGrotesk-Regular.ttf) format("truetype");
   font-weight: 400;
 }
+
 @font-face {
-  font-family: "Hanken Grotesk";
-  src: url(../fonts/HankenGrotesk-Black.ttf) format("truetype");
+  font-family: "Inter";
+  src: url(../fonts/Inter-Black.ttf) format("truetype");
   font-weight: 900;
 }
 @font-face {
-  font-family: "Hanken Grotesk";
-  src: url(../fonts/HankenGrotesk-Black.ttf) format("truetype");
-  font-weight: 900;
+  font-family: "Inter";
+  src: url(../fonts/Inter-ExtraBold.ttf) format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-Regular.ttf) format("truetype");
+  font-weight: 400;
 }
 /*================================================
 02. Mixins Css
@@ -4436,7 +4457,6 @@ header.style-3 {
             display: flex;
             align-items: baseline;
             gap: 10px;
-            margin-bottom: 10px;
             h5{
               span{
                 font-size: 40px;

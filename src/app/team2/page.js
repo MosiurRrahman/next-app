@@ -1,7 +1,10 @@
+"use client"
 import MainLayout from "@/components/layout/MainLayout";
+import useWow from "@/hooks/useWow";
 import React from "react";
 
 const Team2Page = () => {
+  useWow()
   return (
     <MainLayout>
       <div className="team-card-section pt-120 mb-120" id="team-section">

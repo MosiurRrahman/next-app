@@ -13,12 +13,14 @@ import Home1Portfolio from "@/components/portfolio/Home1Portfolio";
 import Home1Solution from "@/components/solution/Home1Solution";
 import Home1Testimonial from "@/components/testimonial/Home1Testimonial";
 import Home1WorkProcess from "@/components/workProcess/Home1WorkProcess";
+import useWow from "@/hooks/useWow";
 import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
     document.body.classList.add("dark");
   }, []);
+  useWow()
   return (
     <>
       <Header1 />

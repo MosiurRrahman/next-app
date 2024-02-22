@@ -1,4 +1,6 @@
+"use client"
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
 
 const Home2Banner = () => {
   return (
@@ -29,6 +31,20 @@ const Home2Banner = () => {
                 </span>
                 <h1>
                   Explore Our Zenfy To See The Future Of{" "}
+                  <TypeAnimation
+                    preRenderFirstString={true}
+                    sequence={[
+                      500,
+                      'Digital Marketing', // initially rendered starting point
+                      1000,
+                      'Email Marketing"',
+                      1000,
+                      'SEO Optimization',
+                      1000,
+                    ]}
+                    speed={50}
+                    repeat={Infinity}
+  />
                   <span className="text-type" />
                 </h1>
                 <p>

@@ -13,9 +13,11 @@ import Home5Team from "@/components/team/Home5Team";
 import Home5Testimonial from "@/components/testimonial/Home5Testimonial";
 import Home5whyChoose from "@/components/why-choose/Home5whyChoose";
 import Home5Workprocess from "@/components/workProcess/Home5Workprocess";
+import useWow from "@/hooks/useWow";
 import { useEffect } from "react";
 
 const ItSolutionpage = () => {
+  useWow()
   useEffect(() => {
     document.body.classList.add("dark");
   }, []);

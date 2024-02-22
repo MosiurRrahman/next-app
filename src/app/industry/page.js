@@ -1,7 +1,10 @@
+"use client"
 import MainLayout from "@/components/layout/MainLayout";
+import useWow from "@/hooks/useWow";
 import React from "react";
 
 const IndustryPage = () => {
+  useWow()
   return (
     <MainLayout>
       <div

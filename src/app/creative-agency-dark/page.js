@@ -13,10 +13,12 @@ import Home4Service from "@/components/service/Home4Service";
 import Home4Team from "@/components/team/Home4Team";
 import Home4Testimonial from "@/components/testimonial/Home4Testimonial";
 import Home4Process from "@/components/workProcess/Home4Process";
+import useWow from "@/hooks/useWow";
 
 import React, { useEffect } from "react";
 
 const CreativeAgencyPage = () => {
+  useWow()
   useEffect(() => {
     document.body.classList.add("dark");
   }, []);

@@ -1,9 +1,12 @@
 "use client";
 import MainLayout from "@/components/layout/MainLayout";
 import useFollowCursor from "@/hooks/useFollowCursor";
+import useWow from "@/hooks/useWow";
 import Link from "next/link";
 
 const Service2Page = () => {
+ 
+  useWow()
   useFollowCursor(".sevices-wrap .single-services", 12);
   return (
     <MainLayout>

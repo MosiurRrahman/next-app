@@ -1,10 +1,13 @@
 "use client";
 import MainLayout from "@/components/layout/MainLayout";
 import useFollowCursor from "@/hooks/useFollowCursor";
+import useWow from "@/hooks/useWow";
 import Link from "next/link";
 import React from "react";
 
 const ServicePage3 = () => {
+
+  useWow()
   // Use the custom hook with your desired selector and rotation
   useFollowCursor(".sevices-wrap .single-services", 12);
   return (

@@ -1,8 +1,11 @@
+"use client"
 import MainLayout from "@/components/layout/MainLayout";
+import useWow from "@/hooks/useWow";
 import Link from "next/link";
 import React from "react";
 
 const ShopPage = () => {
+  useWow()
   return (
     <MainLayout>
       <div className="shop-page scroll-margin pt-120 pb-120" id="shop">

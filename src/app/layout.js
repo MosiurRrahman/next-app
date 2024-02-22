@@ -15,7 +15,7 @@ import "yet-another-react-lightbox/styles.css";
 import "../../public/assets/css/style.css";
 import ScrollProgress from "@/components/common/ScrollProgress";
 import ThemeSwitch from "@/components/common/Theme";
-// import useWow from "@/hooks/useWow";
+import useWow from "@/hooks/useWow";
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
@@ -27,8 +27,9 @@ const hankenGrotesk = Hanken_Grotesk({
   variable: '--font-hankenGrotesk',
   display: 'swap',
 })
+console.log(hankenGrotesk)
 export default function RootLayout({ children }) {
-  // useWow(); 
+  useWow(); 
 
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");

@@ -1,14 +1,11 @@
+"use client"
 import MainLayout from "@/components/layout/MainLayout";
+import useWow from "@/hooks/useWow";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Zenfy - Software, SaaS & Digital Agency Template",
-  icons: {
-    icon: "/assets/img/sm-logo.svg",
-  },
-};
 
 const Blogpage = () => {
+  useWow()
   return (
     <MainLayout>
       <div

@@ -2,9 +2,10 @@
 import React, { useEffect } from "react";
 import MainLayout from "@/components/layout/MainLayout";
 import Link from "next/link";
-import useFollowCursor from "@/hooks/useFollowCursor";
+import useWow from "@/hooks/useWow";
 
 const PortfolioInfoFlow = () => {
+  useWow()
   useEffect(() => {
     const infoflow1TextItem = document.querySelectorAll(".infoflow-wrap");
     console.log(infoflow1TextItem);

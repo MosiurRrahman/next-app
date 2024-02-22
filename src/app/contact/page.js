@@ -1,7 +1,10 @@
+"use client"
 import MainLayout from "@/components/layout/MainLayout";
+import useWow from "@/hooks/useWow";
 import React from "react";
 
-const page = () => {
+const ContactPage = () => {
+  useWow()
   return (
     <MainLayout>
       <div className="contact-page scroll-margin pt-120 mb-120" id="contact">
@@ -297,4 +300,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ContactPage;

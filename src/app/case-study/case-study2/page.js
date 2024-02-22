@@ -3,8 +3,11 @@ import CountUp from "react-countup";
 import MainLayout from "@/components/layout/MainLayout";
 import Link from "next/link";
 import React from "react";
+import useWow from "@/hooks/useWow";
 
 const CaseStudyPage = () => {
+
+  useWow()
   return (
     <MainLayout>
       <div
