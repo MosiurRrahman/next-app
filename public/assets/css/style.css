@@ -147,7 +147,7 @@ body.dark.style-2 {
 }
 @font-face {
   font-family: "Hanken Grotesk";
-  src: url(../fonts/HankenGrotesk-Black.ttf) format("truetype");
+  src: url(../fonts/HankenGrotesk-Bold.ttf) format("truetype");
   font-weight: 700;
 }
 @font-face {
@@ -164,56 +164,6 @@ body.dark.style-2 {
   font-family: "Hanken Grotesk";
   src: url(../fonts/HankenGrotesk-Regular.ttf) format("truetype");
   font-weight: 400;
-}
-@font-face {
-  font-family: "Hanken Grotesk";
-  src: url(../fonts/HankenGrotesk-Light.ttf) format("truetype");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Hanken Grotesk";
-  src: url(../fonts/HankenGrotesk-Light.ttf) format("truetype");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Inter";
-  src: url(../fonts/Inter-Black.ttf) format("truetype");
-  font-weight: 900;
-}
-@font-face {
-  font-family: "Inter";
-  src: url(../fonts/Inter-ExtraBold.ttf) format("truetype");
-  font-weight: 800;
-}
-@font-face {
-  font-family: "Inter";
-  src: url(../fonts/Inter-Bold.ttf) format("truetype");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Inter";
-  src: url(../fonts/Inter-SemiBold.ttf) format("truetype");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Inter";
-  src: url(../fonts/Inter-Medium.ttf) format("truetype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Inter";
-  src: url(../fonts/Inter-Regular.ttf) format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Inter";
-  src: url(../fonts/Inter-Light.ttf) format("truetype");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Inter";
-  src: url(../fonts/Inter-Light.ttf) format("truetype");
-  font-weight: 300;
 }
 /*================================================
 02. Mixins Css
@@ -8301,7 +8251,6 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
   font-weight: 500;
   line-height: 1.3;
   margin-bottom: 0;
-  padding-right: 20px;
 }
 .home2-testimonial-section .testimonial-wrap {
   background-color: #F7F7FA;
@@ -11274,9 +11223,6 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
 
 .experience-logo-area .logo-area {
   overflow: hidden;
-}
-.experience-logo-area .logo-area .rfm-child {
-  margin: 0 90px;
 }
 .experience-logo-area .logo-area .marquee_text2 {
   background-color: #222222;
