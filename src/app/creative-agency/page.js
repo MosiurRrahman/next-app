@@ -1,3 +1,4 @@
+"use client"
 import Home4About from "@/components/about/Home4About";
 import Home4award from "@/components/award/Home4award";
 import Home4Banner from "@/components/banner/Home4Banner";
@@ -12,15 +13,19 @@ import Home4Service from "@/components/service/Home4Service";
 import Home4Team from "@/components/team/Home4Team";
 import Home4Testimonial from "@/components/testimonial/Home4Testimonial";
 import Home4Process from "@/components/workProcess/Home4Process";
+import { useEffect } from "react";
 
-export const metadata = {
-  title: "Zenfy - Software, SaaS & Digital Agency Template",
-  icons: {
-    icon: "/assets/img/sm-logo.svg",
-  },
-};
 
 const CreativeAgencyPage = () => {
+  useEffect(() => {
+    // Add class to the body element
+    document.body.classList.add('style-2');
+
+    // Clean up function to remove the class when the component unmounts
+    return () => {
+      document.body.classList.remove('style-2');
+    };
+  }, []); // Empty dependency array ensures this effect runs only once
   return (
     <>
       <Header3 />
@@ -35,7 +40,6 @@ const CreativeAgencyPage = () => {
       <Home4award />
       <Home4Team />
       <Home4Testimonial />
-      {/* <Home4Blog/> */}
       <Home4Footer />
     </>
   );

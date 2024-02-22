@@ -34,7 +34,7 @@ const CaseStudyPage = () => {
                   <div className="number">
                     <span>+</span>
                     <h5 className="counter">
-                      <CountUp end={40} delay={5} />
+                      <CountUp end={40} delay={2} />
                     </h5>
                     <span>%</span>
                   </div>
@@ -88,7 +88,7 @@ const CaseStudyPage = () => {
                   <div className="number">
                     <span>+</span>
                     <h5 className="counter">
-                      <CountUp end={38} delay={5} />
+                      <CountUp end={38} delay={2} />
                     </h5>
                     <span>%</span>
                   </div>
@@ -142,7 +142,7 @@ const CaseStudyPage = () => {
                   <div className="number">
                     <span>+</span>
                     <h5 className="counter">
-                      <CountUp end={50} delay={5} />
+                      <CountUp end={50} delay={2} />
                     </h5>
                     <span>%</span>
                   </div>
@@ -196,7 +196,7 @@ const CaseStudyPage = () => {
                   <div className="number">
                     <span>+</span>
                     <h5 className="counter">
-                      <CountUp end={40} delay={5} />
+                      <CountUp end={40} delay={2} />
                     </h5>
                     <span>%</span>
                   </div>
@@ -250,7 +250,7 @@ const CaseStudyPage = () => {
                   <div className="number">
                     <span>+</span>
                     <h5 className="counter">
-                      <CountUp end={40} delay={5} />
+                      <CountUp end={40} delay={2} />
                     </h5>
                     <span>%</span>
                   </div>
@@ -304,7 +304,7 @@ const CaseStudyPage = () => {
                   <div className="number">
                     <span>+</span>
                     <h5 className="counter">
-                      <CountUp end={50} delay={5} />
+                      <CountUp end={50} delay={2} />
                     </h5>
                     <span>%</span>
                   </div>
@@ -358,7 +358,7 @@ const CaseStudyPage = () => {
                   <div className="number">
                     <span>+</span>
                     <h5 className="counter">
-                      <CountUp end={48} delay={5} />{" "}
+                      <CountUp end={48} delay={2} />{" "}
                     </h5>
                     <span>%</span>
                   </div>
@@ -412,7 +412,7 @@ const CaseStudyPage = () => {
                   <div className="number">
                     <span>+</span>
                     <h5 className="counter">
-                      <CountUp end={38} delay={5} />
+                      <CountUp end={38} delay={2} />
                     </h5>
                     <span>%</span>
                   </div>
@@ -466,7 +466,7 @@ const CaseStudyPage = () => {
                   <div className="number">
                     <span>+</span>
                     <h5 className="counter">
-                      <CountUp end={31} delay={5} />
+                      <CountUp end={31} delay={2} />
                     </h5>
                     <span>%</span>
                   </div>

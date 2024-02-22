@@ -149,32 +149,15 @@ const ProductDetailsPage = () => {
                 </div>
                 <div className="quantity-area">
                   <h6>Quantity</h6>
-                  <div className="quantity">
-                    <a
-                      className="quantity__minus"
-                      style={{ cursor: "pointer" }}
-                      onClick={decrement}
-                    >
-                      <span>
-                        <i className="bi bi-dash" />
-                      </span>
-                    </a>
-                    <input
-                      name="quantity"
-                      type="text"
-                      className="quantity__input"
-                      value={quantity}
-                      onChange={handleInputChange}
-                    />
-                    <a
-                      className="quantity__plus"
-                      style={{ cursor: "pointer" }}
-                      onClick={increment}
-                    >
-                      <i className="bi bi-plus" />
-                    </a>
+                  <div className="quantity-counter">
+                    <a  className="quantity__minus" style={{cursor:"pointer"}}><i className="bx bx-minus" onClick={decrement} /></a>
+                    <input name="quantity" type="text" className="quantity__input" value={quantity}
+                                      onChange={handleInputChange}  />
+                    <a className="quantity__plus" style={{cursor:"pointer"}}><i className="bx bx-plus" onClick={increment} /></a>
                   </div>
                 </div>
+
+            
                 <div className="product-details-btn">
                   <Link
                     href="/cart"

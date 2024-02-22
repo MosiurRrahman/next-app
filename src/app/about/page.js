@@ -1,6 +1,5 @@
 "use client";
 import React, { useMemo } from "react";
-
 import Home4award from "@/components/award/Home4award";
 import Home5Blog from "@/components/blog/Home5Blog";
 import CountUp from "react-countup";
@@ -20,7 +19,7 @@ import useWow from "@/hooks/useWow";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 const Aboutpage = () => {
-  useWow()
+  useWow();
   const settings = useMemo(() => {
     return {
       slidesPerView: "auto",

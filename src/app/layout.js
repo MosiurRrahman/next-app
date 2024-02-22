@@ -16,6 +16,7 @@ import "../../public/assets/css/style.css";
 import ScrollProgress from "@/components/common/ScrollProgress";
 import ThemeSwitch from "@/components/common/Theme";
 import useWow from "@/hooks/useWow";
+
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
@@ -27,7 +28,6 @@ const hankenGrotesk = Hanken_Grotesk({
   variable: '--font-hankenGrotesk',
   display: 'swap',
 })
-console.log(hankenGrotesk)
 export default function RootLayout({ children }) {
   useWow(); 
 
@@ -36,6 +36,10 @@ export default function RootLayout({ children }) {
   }, []);
   return (
     <html lang="en" className={`${inter.variable} ${hankenGrotesk.variable}`}>
+      <head>
+      <link rel="icon" href="/public/assets/img/sm-logo.svg" type="image/x-icon" sizes="16x16"/>
+      <title>Zenfy - Software, SaaS &amp; Digital Agency Template</title>
+      </head>
       <body>
         <ScrollProgress />
         <ThemeSwitch />

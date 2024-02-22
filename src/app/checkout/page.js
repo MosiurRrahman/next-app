@@ -3,10 +3,25 @@ import MainLayout from "@/components/layout/MainLayout";
 import useQuantityCounter from "@/hooks/useQuantityCounter";
 import Link from "next/link";
 import React from "react";
-
-const CheckoutPage = () => {
+const Counter = () => {
   const { quantity, increment, decrement, handleInputChange } =
     useQuantityCounter(1);
+  return (
+    <>
+    <div className="quantity-area">
+  <div className="quantity">
+    <a className="quantity__minus" style={{cursor:"pointer"}}><span><i className="bi bi-dash" onClick={decrement} /></span></a>
+    <input name="quantity" type="text" className="quantity__input" value={quantity}
+                                      onChange={handleInputChange} />
+    <a className="quantity__plus" style={{cursor:"pointer"}}><span><i onClick={increment} className="bi bi-plus" /></span></a>
+  </div>
+</div>
+
+    </>
+  )
+}
+const CheckoutPage = () => {
+
   return (
     <MainLayout>
       <div className="checkout-page scroll-margin pt-120 pb-120" id="shop">
@@ -122,31 +137,7 @@ const CheckoutPage = () => {
                                       </Link>
                                     </h6>
                                   </div>
-                                  <div className="quantity">
-                                    <a
-                                      className="quantity__minus"
-                                      style={{ cursor: "pointer" }}
-                                      onClick={decrement}
-                                    >
-                                      <span>
-                                        <i className="bi bi-dash" />
-                                      </span>
-                                    </a>
-                                    <input
-                                      name="quantity"
-                                      type="text"
-                                      className="quantity__input"
-                                      value={quantity}
-                                      onChange={handleInputChange}
-                                    />
-                                    <a
-                                      className="quantity__plus"
-                                      style={{ cursor: "pointer" }}
-                                      onClick={increment}
-                                    >
-                                      <i className="bi bi-plus" />
-                                    </a>
-                                  </div>
+                                  <Counter/>
                                 </div>
                               </div>
                             </div>
@@ -175,31 +166,7 @@ const CheckoutPage = () => {
                                       <a href="#">Dove Beauty Cream</a>
                                     </h6>
                                   </div>
-                                  <div className="quantity">
-                                    <a
-                                      className="quantity__minus"
-                                      style={{ cursor: "pointer" }}
-                                      onClick={decrement}
-                                    >
-                                      <span>
-                                        <i className="bi bi-dash" />
-                                      </span>
-                                    </a>
-                                    <input
-                                      name="quantity"
-                                      type="text"
-                                      className="quantity__input"
-                                      value={quantity}
-                                      onChange={handleInputChange}
-                                    />
-                                    <a
-                                      className="quantity__plus"
-                                      style={{ cursor: "pointer" }}
-                                      onClick={increment}
-                                    >
-                                      <i className="bi bi-plus" />
-                                    </a>
-                                  </div>
+                                  <Counter/>
                                 </div>
                               </div>
                             </div>
@@ -309,3 +276,10 @@ const CheckoutPage = () => {
 };
 
 export default CheckoutPage;
+
+
+
+
+
+
+
