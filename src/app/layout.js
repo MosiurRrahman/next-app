@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import { Inter, Hanken_Grotesk} from 'next/font/google'
 import "../../public/assets/css/bootstrap-icons.css";
 import "../../public/assets/css/boxicons.min.css";
 import "../../public/assets/css/swiper-bundle.min.css";
@@ -16,19 +15,7 @@ import "../../public/assets/css/style.css";
 import ScrollProgress from "@/components/common/ScrollProgress";
 import ThemeSwitch from "@/components/common/Theme";
 // import useWow from "@/hooks/useWow";
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
- 
-const hankenGrotesk = Hanken_Grotesk({
-  subsets: ['latin'],
-  weight: ['400','500',"600", '700',"800","900"],
-  variable: '--font-hankenGrotesk',
-  fallbackFonts:true,
-  display: 'swap',
-})
+
 export default function RootLayout({ children }) {
   // useWow(); 
 
@@ -36,7 +23,7 @@ export default function RootLayout({ children }) {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
   return (
-    <html lang="en" className={`${inter.variable} ${hankenGrotesk.variable}`}>
+    <html lang="en">
       <body>
         <ScrollProgress />
         <ThemeSwitch />
