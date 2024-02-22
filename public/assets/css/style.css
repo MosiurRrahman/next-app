@@ -84,7 +84,6 @@ Version: 1.0
 /*===========================
      01.COMMON CSS 
 ===========================*/
-@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -4548,7 +4547,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
   transform: unset;
   padding: 40px 40px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   flex-direction: column;
   transition: 0.5s;
 }
@@ -4647,7 +4646,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
   height: 380px;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   padding: 0 80px;
 }
 @media (min-width: 1400px) and (max-width: 1599px) {
@@ -7151,7 +7150,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
   .home2-service-section .sevices-wrap .single-services .icon {
     padding: 0;
     margin-bottom: 15px;
-    justify-content: start;
+    justify-content: flex-start;
     border-right: unset;
   }
 }
@@ -8094,7 +8093,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
 .home2-case-study-section .pagination-area {
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
 }
 .home2-case-study-section .pagination-area .swiper-pagination {
   position: relative;
@@ -9567,7 +9566,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
   background-repeat: no-repeat;
   border-radius: 0 10px 10px 0;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   height: 100%;
   padding: 55px 0 0 55px;
 }
@@ -10163,7 +10162,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
 @media (min-width: 576px) and (max-width: 768px) {
   .home3-tools-section .tools-card {
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
   }
 }
 .home3-tools-section .tools-card .icon {
@@ -10799,7 +10798,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
     background-color: unset;
     padding: 0;
     margin-bottom: 15px;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     border-right: unset;
   }
@@ -11305,7 +11304,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
   padding: 20px 25px;
   border-radius: 10px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   flex-direction: column;
   z-index: 9;
   transition: 0.5s;
@@ -11996,7 +11995,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
 @media (max-width: 767px) {
   .home4-award-section .sevices-wrap2 .single-services {
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
   }
 }
 @media (max-width: 576px) {
@@ -12436,7 +12435,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
 }
 @media (max-width: 576px) {
   .home4-testimonial-section .testimonial-wrap .slider-btn-area {
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 .home4-testimonial-section .testimonial-wrap .slider-btn-area .dash {
@@ -13425,7 +13424,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
   height: 75%;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .home4-footer-section .contact-area h6 {
   color: var(--primary-color1);
@@ -13634,7 +13633,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
 ========================================*/
 .sub-title5 {
   display: inline-flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
   gap: 8px;
   color: var(--text-color);
@@ -14798,7 +14797,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
   padding: 0;
   list-style: none;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
   padding-bottom: 20px;
   gap: 22px;
@@ -14930,13 +14929,13 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
 .home5-testimonial-section .testimonial-left {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   position: relative;
   z-index: 1;
 }
 @media (max-width: 576px) {
   .home5-testimonial-section .testimonial-left {
-    justify-content: start;
+    justify-content: flex-start;
   }
 }
 .home5-testimonial-section .testimonial-left svg {
@@ -15082,7 +15081,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
 }
 @media (max-width: 576px) {
   .home5-testimonial-section .testimonial-wrap .slider-btn-area {
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 .home5-testimonial-section .testimonial-wrap .slider-btn-area .dash {
@@ -18657,7 +18656,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
 .blog-details .blog-details-content .post-tags-social .social {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 20px;
 }
 @media (max-width: 767px) {

@@ -86,7 +86,7 @@ Version: 1.0
 /*===========================
      01.COMMON CSS 
 ===========================*/
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
@@ -4611,7 +4611,7 @@ header.style-3 {
       transform: unset;
       padding: 40px 40px;
       display: flex ;
-      justify-content: end;
+      justify-content: flex-end;
       flex-direction: column;
       transition: .5s;
       @include xxl-down-device(){
@@ -4698,7 +4698,7 @@ header.style-3 {
       height: 380px;
       display: flex;
       justify-content: center;
-      align-items: end;
+      align-items: flex-end;
       padding: 0 80px;
       @include xxl-device(){
         padding: 0 30px;
@@ -7079,7 +7079,7 @@ header.style-3 {
           @include md-down-device() {
             padding: 0;
             margin-bottom: 15px;
-            justify-content: start;
+            justify-content: flex-start;
             border-right: unset;
           }
   
@@ -7948,7 +7948,7 @@ header.style-3 {
   .pagination-area{
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     .swiper-pagination{
       position: relative;
       display: inline-flex;
@@ -9325,7 +9325,7 @@ header.style-3 {
         background-repeat: no-repeat;
         border-radius: 0 10px 10px 0;
         display: flex;
-        align-items: end;
+        align-items: flex-end;
         height: 100%;
         padding: 55px 0 0 55px;
         @include lg-device(){
@@ -9887,7 +9887,7 @@ header.style-3 {
     }
     @include sm-device(){
       flex-direction: column;
-      align-items: start;
+      align-items: flex-start;
     }
     .icon{
       border: 1px solid rgba(var(--title-color-opc), 0.05);
@@ -10463,7 +10463,7 @@ header.style-3 {
           background-color: unset;
           padding: 0;
           margin-bottom: 15px;
-          align-items: start;
+          align-items: flex-start;
           justify-content: space-between;
           border-right: unset;
         }
@@ -10950,7 +10950,7 @@ header.style-3 {
       padding: 20px 25px;
       border-radius: 10px;
       display: flex ;
-      justify-content: end;
+      justify-content: flex-end;
       flex-direction: column;
       z-index: 9;
       transition: .5s;
@@ -11583,7 +11583,7 @@ header.style-3 {
       }
       @include md-down-device() {
         flex-direction: column;
-        align-items: start;
+        align-items: flex-start;
       }
       @include sm-down-device(){
         padding: 30px 20px;
@@ -11995,7 +11995,7 @@ header.style-3 {
           bottom: 50px;
         }
         @include sm-down-device(){
-          justify-content: end;
+          justify-content: flex-end;
         }
         .dash{
             width: 100%;
@@ -12910,7 +12910,7 @@ header.style-3 {
     height: 75%;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     h6{
       color: var(--primary-color1);
       font-family: var(--font-inter);
@@ -13150,7 +13150,7 @@ header.style-3 {
 ========================================*/
 .sub-title5{
   display: inline-flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
   gap: 8px;
   color: var(--text-color);
@@ -14286,7 +14286,7 @@ header.style-3 {
       padding: 0;
       list-style: none;
       display: flex;
-      align-items: end;
+      align-items: flex-end;
       justify-content: center;
       padding-bottom: 20px;
       gap: 22px;
@@ -14403,11 +14403,11 @@ header.style-3 {
   .testimonial-left{
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     position: relative;
     z-index: 1;
     @include sm-down-device(){
-      justify-content: start;
+      justify-content: flex-start;
     }
     svg{
       stroke: #0B0C0C;
@@ -14539,7 +14539,7 @@ header.style-3 {
           bottom: 50px;
         }
         @include sm-down-device(){
-          justify-content: end;
+          justify-content: flex-end;
         }
         .dash{
             width: 100%;
@@ -18057,7 +18057,7 @@ header.style-3 {
       .social {
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-content: flex-end;
         gap: 20px;
 
         @include md-down-device() {
