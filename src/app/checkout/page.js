@@ -287,7 +287,7 @@ const CheckoutPage = () => {
                             className="primary-btn3 btn-hover"
                           >
                             Place Your Order
-                            <span style={{top: '50.5px', left: '83.75px'}} />
+                            <span style={{ top: "50.5px", left: "83.75px" }} />
                           </button>
                         </div>
                       </div>

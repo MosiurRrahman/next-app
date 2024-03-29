@@ -1,6 +1,4 @@
-
-
-"use client"
+"use client";
 import "../../public/assets/css/bootstrap-icons.css";
 import "../../public/assets/css/boxicons.min.css";
 import "../../public/assets/css/swiper-bundle.min.css";
@@ -27,8 +25,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {children}
-      <SmoothPageScroll/>
-      <ScrollTopBtn/>
+        <SmoothPageScroll />
+        <ScrollTopBtn />
       </body>
     </html>
   );

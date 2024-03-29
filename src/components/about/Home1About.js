@@ -32,7 +32,7 @@ const animateTextLines = () => {
   });
 };
 const Home1About = () => {
-  animateTextLines()
+  animateTextLines();
   //useScrollAnimation
   useScrollZoomAnimationImg();
   return (

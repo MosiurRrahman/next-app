@@ -1,43 +1,47 @@
-"use client"
+"use client";
 import Link from "next/link";
 import React, { useEffect } from "react";
 
-const Home1solutionSection = ({style="home1-solution-section"}) => {
-    useEffect(() => {
-        // Function to handle click event using event delegation
-        const handleClick = (e) => {
-          const accordionItem = e.target.closest('.accordion-item');
-          if (!accordionItem) return; // If clicked element is not an accordion item, exit
-          
-          // Get the index of the clicked accordion item
-          const index = Array.from(accordionItem.parentElement.children).indexOf(accordionItem);
-          
-          // Remove 'active' class from all image list items
-          document.querySelectorAll('.solution-img-wrapper li').forEach((item) => {
-            item.classList.remove('active');
-          });
-          
-          // Add 'active' class to the corresponding image list item
-          const imageListItem = document.querySelector(`.solution-img-wrapper li:nth-child(${index + 1})`);
-          if (imageListItem) {
-            imageListItem.classList.add('active');
-          }
-        };
-      
-        // Attach click event listener to the parent element if it exists
-        const accordionFlush = document.querySelector('.accordion-flush');
-        if (accordionFlush) {
-          accordionFlush.addEventListener('click', handleClick);
-        }
-      
-        // Cleanup function to remove event listener when component unmounts
-        return () => {
-          if (accordionFlush) {
-            accordionFlush.removeEventListener('click', handleClick);
-          }
-        };
-      }, []); // Empty dependency array to ensure effect runs only once
-      
+const Home1solutionSection = ({ style = "home1-solution-section" }) => {
+  useEffect(() => {
+    // Function to handle click event using event delegation
+    const handleClick = (e) => {
+      const accordionItem = e.target.closest(".accordion-item");
+      if (!accordionItem) return; // If clicked element is not an accordion item, exit
+
+      // Get the index of the clicked accordion item
+      const index = Array.from(accordionItem.parentElement.children).indexOf(
+        accordionItem
+      );
+
+      // Remove 'active' class from all image list items
+      document.querySelectorAll(".solution-img-wrapper li").forEach((item) => {
+        item.classList.remove("active");
+      });
+
+      // Add 'active' class to the corresponding image list item
+      const imageListItem = document.querySelector(
+        `.solution-img-wrapper li:nth-child(${index + 1})`
+      );
+      if (imageListItem) {
+        imageListItem.classList.add("active");
+      }
+    };
+
+    // Attach click event listener to the parent element if it exists
+    const accordionFlush = document.querySelector(".accordion-flush");
+    if (accordionFlush) {
+      accordionFlush.addEventListener("click", handleClick);
+    }
+
+    // Cleanup function to remove event listener when component unmounts
+    return () => {
+      if (accordionFlush) {
+        accordionFlush.removeEventListener("click", handleClick);
+      }
+    };
+  }, []); // Empty dependency array to ensure effect runs only once
+
   return (
     <div className={`home1-solution-section ${style}`}>
       <div className="vector d-lg-flex d-none">

@@ -1,13 +1,12 @@
 import React from "react";
 
-const Breadcrumb = ({bgImg="1",title="02"}) => {
+const Breadcrumb = ({ bgImg = "1", title = "02" }) => {
   return (
     <>
       <div
         className="breadcrumb-section"
         style={{
-          backgroundImage:`linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/assets/img/innerpage/breadcrumb-bg${bgImg}.jpg)`
-         
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/assets/img/innerpage/breadcrumb-bg${bgImg}.jpg)`,
         }}
       >
         <svg

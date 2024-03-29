@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import useCustomSelect from "@/hooks/useCustomSelect";
 import React, { useEffect, useRef } from "react";
 const SelectComponent = ({ options, placeholder, open, customClass }) => {

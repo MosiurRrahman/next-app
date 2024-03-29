@@ -103,7 +103,7 @@ const CaseStudyPage2 = () => {
                       >
                         <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"></path>
                       </svg>
-                      <span style={{top: '50.5px', left: '83.75px'}} />
+                      <span style={{ top: "50.5px", left: "83.75px" }} />
                     </Link>
                   </div>
                 </div>
@@ -144,7 +144,7 @@ const CaseStudyPage2 = () => {
                       >
                         <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"></path>
                       </svg>
-                      <span style={{top: '50.5px', left: '83.75px'}} />
+                      <span style={{ top: "50.5px", left: "83.75px" }} />
                     </Link>
                   </div>
                 </div>
@@ -185,7 +185,7 @@ const CaseStudyPage2 = () => {
                       >
                         <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"></path>
                       </svg>
-                      <span style={{top: '50.5px', left: '83.75px'}} />
+                      <span style={{ top: "50.5px", left: "83.75px" }} />
                     </Link>
                   </div>
                 </div>
@@ -226,7 +226,7 @@ const CaseStudyPage2 = () => {
                       >
                         <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"></path>
                       </svg>
-                      <span style={{top: '50.5px', left: '83.75px'}} />
+                      <span style={{ top: "50.5px", left: "83.75px" }} />
                     </Link>
                   </div>
                 </div>
@@ -267,7 +267,7 @@ const CaseStudyPage2 = () => {
                       >
                         <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"></path>
                       </svg>
-                      <span style={{top: '50.5px', left: '83.75px'}} />
+                      <span style={{ top: "50.5px", left: "83.75px" }} />
                     </Link>
                   </div>
                 </div>
@@ -308,7 +308,7 @@ const CaseStudyPage2 = () => {
                       >
                         <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"></path>
                       </svg>
-                      <span style={{top: '50.5px', left: '83.75px'}} />
+                      <span style={{ top: "50.5px", left: "83.75px" }} />
                     </Link>
                   </div>
                 </div>

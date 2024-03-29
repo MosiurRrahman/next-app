@@ -18,7 +18,7 @@ function ScrollTopBtn() {
   return (
     <div
       className="circle-container"
-      onClick={() => window.scrollTo({ top: 0, behavior:"smooth" })}
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
       <svg
         className="circle-progress svg-content"

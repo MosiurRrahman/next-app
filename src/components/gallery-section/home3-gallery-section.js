@@ -23,7 +23,6 @@ const Home3GallerySection = () => {
       //   delay: 2500, // Autoplay duration in milliseconds
       //   disableOnInteraction: false,
       // },
-      
 
       breakpoints: {
         280: {
@@ -81,7 +80,7 @@ const Home3GallerySection = () => {
     {
       id: 5,
       imageBig: "/assets/img/home3/gallery-img-05.png",
-    }
+    },
   ];
 
   return (
@@ -125,7 +124,7 @@ const Home3GallerySection = () => {
               <SwiperSlide key={index}>
                 <div className="single-gallery-img">
                   <a
-                  style={{cursor:"pointer"}}
+                    style={{ cursor: "pointer" }}
                     onClick={() => openLightbox(index)}
                     data-fancybox="gallery"
                     data-caption="Caption Images 1"
@@ -146,7 +145,6 @@ const Home3GallerySection = () => {
         index={selectedIndex}
         onClose={closeLightbox}
         slides={images.map((image) => ({ src: image.imageBig }))}
-        
       />
     </>
   );

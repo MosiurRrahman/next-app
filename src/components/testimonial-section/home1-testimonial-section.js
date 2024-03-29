@@ -38,7 +38,6 @@ const Home1TestimonialSection = () => {
     };
   }, []);
 
-
   return (
     <div className="testimonial-section mb-130">
       <div className="vector-2 d-lg-flex d-none">

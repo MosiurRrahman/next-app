@@ -1,8 +1,8 @@
 // hooks/useScrollAnimation.js
 
-import { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const useScrollZoomAnimationImg = () => {
   useEffect(() => {
