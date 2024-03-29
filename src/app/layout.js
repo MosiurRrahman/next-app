@@ -10,13 +10,13 @@ import "../../public/assets/css/slick.css";
 import "../../public/assets/css/bootstrap.min.css";
 import "yet-another-react-lightbox/styles.css";
 import "../../public/assets/css/style.css";
-import useMagneticHover from "@/hooks/useMagneticHover";
+// import useMagneticHover from "@/hooks/useMagneticHover";
 import SmoothPageScroll from "@/utils/SmoothPageScroll";
 import ScrollTopBtn from "@/utils/ScrollTopBtn";
 import { useEffect } from "react";
 
 export default function RootLayout({ children }) {
-  useMagneticHover();
+  // useMagneticHover();
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
     require("../../public/assets/js/gsap.min");
