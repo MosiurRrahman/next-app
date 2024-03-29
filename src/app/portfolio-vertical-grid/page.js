@@ -5,23 +5,23 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 
 const VertucalGird = () => {
-  useEffect(() => {
-    const infoflow1TextItem = document.querySelectorAll(
-      ".single-shocase-carosule"
-    );
-    function followImageCursor(event, infoflow1TextItem) {
-      const contentBox = infoflow1TextItem.getBoundingClientRect();
-      const dx = event.clientX - contentBox.x;
-      const dy = event.clientY - contentBox.y;
-      infoflow1TextItem.children[2].style.transform = `translate(${dx}px, ${dy}px)`;
-    }
+  // useEffect(() => {
+  //   const infoflow1TextItem = document.querySelectorAll(
+  //     ".single-shocase-carosule"
+  //   );
+  //   function followImageCursor(event, infoflow1TextItem) {
+  //     const contentBox = infoflow1TextItem.getBoundingClientRect();
+  //     const dx = event.clientX - contentBox.x;
+  //     const dy = event.clientY - contentBox.y;
+  //     infoflow1TextItem.children[2].style.transform = `translate(${dx}px, ${dy}px)`;
+  //   }
 
-    infoflow1TextItem.forEach((item, i) => {
-      item.addEventListener("mousemove", (event) => {
-        setInterval(followImageCursor(event, item), 100);
-      });
-    });
-  }, []);
+  //   infoflow1TextItem.forEach((item, i) => {
+  //     item.addEventListener("mousemove", (event) => {
+  //       setInterval(followImageCursor(event, item), 100);
+  //     });
+  //   });
+  // }, []);
   return (
     <>
       <Header />

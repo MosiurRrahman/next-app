@@ -3,44 +3,44 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 
 const Home4ServicesSection = () => {
-  useEffect(() => {
-    const serviceAreas = document.querySelectorAll(
-      ".home4-services-area .services-hover"
-    );
+  // useEffect(() => {
+  //   const serviceAreas = document.querySelectorAll(
+  //     ".home4-services-area .services-hover"
+  //   );
 
-    // Function to toggle active class and slideToggle on mouse enter
-    const handleMouseEnter = function () {
-      this.classList.toggle("active");
-      const serviceBottomWrap = this.querySelector(".service-bottom-wrap");
-      if (serviceBottomWrap) {
-        serviceBottomWrap.style.display =
-          serviceBottomWrap.style.display === "none" ? "block" : "none";
-      }
-    };
+  //   // Function to toggle active class and slideToggle on mouse enter
+  //   const handleMouseEnter = function () {
+  //     this.classList.toggle("active");
+  //     const serviceBottomWrap = this.querySelector(".service-bottom-wrap");
+  //     if (serviceBottomWrap) {
+  //       serviceBottomWrap.style.display =
+  //         serviceBottomWrap.style.display === "none" ? "block" : "none";
+  //     }
+  //   };
 
-    // Function to slideUp and remove active class on mouse leave
-    const handleMouseLeave = function () {
-      const serviceBottomWrap = this.querySelector(".service-bottom-wrap");
-      if (serviceBottomWrap) {
-        serviceBottomWrap.style.display = "none";
-      }
-      this.classList.remove("active");
-    };
+  //   // Function to slideUp and remove active class on mouse leave
+  //   const handleMouseLeave = function () {
+  //     const serviceBottomWrap = this.querySelector(".service-bottom-wrap");
+  //     if (serviceBottomWrap) {
+  //       serviceBottomWrap.style.display = "none";
+  //     }
+  //     this.classList.remove("active");
+  //   };
 
-    // Attach mouseenter and mouseleave event listeners to each service area
-    serviceAreas.forEach((serviceArea) => {
-      serviceArea.addEventListener("mouseenter", handleMouseEnter);
-      serviceArea.addEventListener("mouseleave", handleMouseLeave);
-    });
+  //   // Attach mouseenter and mouseleave event listeners to each service area
+  //   serviceAreas.forEach((serviceArea) => {
+  //     serviceArea.addEventListener("mouseenter", handleMouseEnter);
+  //     serviceArea.addEventListener("mouseleave", handleMouseLeave);
+  //   });
 
-    // Cleanup function to remove event listeners when component unmounts
-    return () => {
-      serviceAreas.forEach((serviceArea) => {
-        serviceArea.removeEventListener("mouseenter", handleMouseEnter);
-        serviceArea.removeEventListener("mouseleave", handleMouseLeave);
-      });
-    };
-  }, []);
+  //   // Cleanup function to remove event listeners when component unmounts
+  //   return () => {
+  //     serviceAreas.forEach((serviceArea) => {
+  //       serviceArea.removeEventListener("mouseenter", handleMouseEnter);
+  //       serviceArea.removeEventListener("mouseleave", handleMouseLeave);
+  //     });
+  //   };
+  // }, []);
   return (
     <div className="home4-services-area">
       <div className="container-lg container-fluid">

@@ -3,60 +3,60 @@ import { useState, useEffect } from "react";
 import gsap from "gsap";
 
 const Home2ProcessSection = () => {
-  useEffect(() => {
-    const allProcesses = document.querySelectorAll(
-      ".home2-process-wrapper .single-process-static"
-    );
-    if (allProcesses.length > 0) {
-      const allButLastProcess = Array.from(allProcesses).slice(0, -1);
-      const totalProcesses = allProcesses.length;
-      // Calculate the circumference of the circle
-      const radius = 150; // Same as your SVG's radius
-      const circumference = 2 * Math.PI * radius;
+  // useEffect(() => {
+  //   const allProcesses = document.querySelectorAll(
+  //     ".home2-process-wrapper .single-process-static"
+  //   );
+  //   if (allProcesses.length > 0) {
+  //     const allButLastProcess = Array.from(allProcesses).slice(0, -1);
+  //     const totalProcesses = allProcesses.length;
+  //     // Calculate the circumference of the circle
+  //     const radius = 150; // Same as your SVG's radius
+  //     const circumference = 2 * Math.PI * radius;
 
-      // Select elements
-      const progressBar = document.querySelector(".progress-bar");
-      const pct = document.querySelector(".pct");
+  //     // Select elements
+  //     const progressBar = document.querySelector(".progress-bar");
+  //     const pct = document.querySelector(".pct");
 
-      // Set the initial stroke-dasharray and stroke-dashoffset to circumference
-      progressBar.style.strokeDasharray = `${circumference} ${circumference}`;
-      progressBar.style.strokeDashoffset = circumference;
+  //     // Set the initial stroke-dasharray and stroke-dashoffset to circumference
+  //     progressBar.style.strokeDasharray = `${circumference} ${circumference}`;
+  //     progressBar.style.strokeDashoffset = circumference;
 
-      // Assuming you have a place to display the current page/total, e.g., <p id="pageIndicator">1/4</p>
-      const pageIndicator = document.getElementById("pageIndicator");
-      if (pageIndicator) pageIndicator.textContent = `1/${totalProcesses}`;
+  //     // Assuming you have a place to display the current page/total, e.g., <p id="pageIndicator">1/4</p>
+  //     const pageIndicator = document.getElementById("pageIndicator");
+  //     if (pageIndicator) pageIndicator.textContent = `1/${totalProcesses}`;
 
-      const actl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".home2-process-wrapper",
-          start: "top 250px",
-          scrub: 1,
-          ease: "linear",
-          markers: false,
-          onUpdate: (self) => {
-            const progress = self.progress; // 0 to 1
-            const offset = circumference - progress * circumference;
-            progressBar.style.strokeDashoffset = offset;
-            pct.textContent = `${Math.round(progress * 100)}%`;
+  //     const actl = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: ".home2-process-wrapper",
+  //         start: "top 250px",
+  //         scrub: 1,
+  //         ease: "linear",
+  //         markers: false,
+  //         onUpdate: (self) => {
+  //           const progress = self.progress; // 0 to 1
+  //           const offset = circumference - progress * circumference;
+  //           progressBar.style.strokeDashoffset = offset;
+  //           pct.textContent = `${Math.round(progress * 100)}%`;
 
-            // Calculate the current page based on scroll progress
-            const currentPage = Math.min(
-              Math.ceil(progress * totalProcesses),
-              totalProcesses
-            );
-            if (pageIndicator)
-              pageIndicator.textContent = `${currentPage}/${totalProcesses}`;
-          },
-        },
-      });
-      gsap.to(".progress-bar", {
-        strokeDashoffset: 0, // Animate from full circumference to 0 to fill the circle
-        duration: 5, // Duration in seconds
-        ease: "linear", // Use an easing function to make the animation smooth
-        // You can control the progress dynamically by adjusting the end value of strokeDashoffset
-      });
-    }
-  }, []); // Empty dependency array to ensure effect runs only once
+  //           // Calculate the current page based on scroll progress
+  //           const currentPage = Math.min(
+  //             Math.ceil(progress * totalProcesses),
+  //             totalProcesses
+  //           );
+  //           if (pageIndicator)
+  //             pageIndicator.textContent = `${currentPage}/${totalProcesses}`;
+  //         },
+  //       },
+  //     });
+  //     gsap.to(".progress-bar", {
+  //       strokeDashoffset: 0, // Animate from full circumference to 0 to fill the circle
+  //       duration: 5, // Duration in seconds
+  //       ease: "linear", // Use an easing function to make the animation smooth
+  //       // You can control the progress dynamically by adjusting the end value of strokeDashoffset
+  //     });
+  //   }
+  // }, []); // Empty dependency array to ensure effect runs only once
   return (
     <>
       <div className="home2-process-section mb-130">

@@ -2,37 +2,37 @@
 import React, { useEffect } from "react";
 
 const Home3AwardSection = () => {
-  useEffect(() => {
-    const handleMouseEnter = (e) => {
-      const target = e.target;
-      const tr = target.closest("tr");
-      if (!tr) return;
+  // useEffect(() => {
+  //   const handleMouseEnter = (e) => {
+  //     const target = e.target;
+  //     const tr = target.closest("tr");
+  //     if (!tr) return;
 
-      const index = Array.from(tr.parentElement.children).indexOf(tr);
+  //     const index = Array.from(tr.parentElement.children).indexOf(tr);
 
-      const imageListItems = document.querySelectorAll(".award-img-group li");
-      imageListItems.forEach((item) => {
-        item.classList.remove("active");
-      });
+  //     const imageListItems = document.querySelectorAll(".award-img-group li");
+  //     imageListItems.forEach((item) => {
+  //       item.classList.remove("active");
+  //     });
 
-      const imageListItem = document.querySelector(
-        `.award-img-group li:nth-child(${index + 1})`
-      );
-      if (imageListItem) {
-        imageListItem.classList.add("active");
-      }
-    };
+  //     const imageListItem = document.querySelector(
+  //       `.award-img-group li:nth-child(${index + 1})`
+  //     );
+  //     if (imageListItem) {
+  //       imageListItem.classList.add("active");
+  //     }
+  //   };
 
-    document.querySelectorAll(".award-table tbody tr").forEach((tr) => {
-      tr.addEventListener("mouseenter", handleMouseEnter);
-    });
+  //   document.querySelectorAll(".award-table tbody tr").forEach((tr) => {
+  //     tr.addEventListener("mouseenter", handleMouseEnter);
+  //   });
 
-    return () => {
-      document.querySelectorAll(".award-table tbody tr").forEach((tr) => {
-        tr.removeEventListener("mouseenter", handleMouseEnter);
-      });
-    };
-  }, []);
+  //   return () => {
+  //     document.querySelectorAll(".award-table tbody tr").forEach((tr) => {
+  //       tr.removeEventListener("mouseenter", handleMouseEnter);
+  //     });
+  //   };
+  // }, []);
   return (
     <>
       <div className="home3-award-section">
