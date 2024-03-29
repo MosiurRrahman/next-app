@@ -1,7 +1,6 @@
 "use client"
 import { useState, useEffect } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const Home2ProcessSection = () => {
     useEffect(() => {
