@@ -1,39 +1,38 @@
+"use client";
+import Footer from "@/components/Footer/Footer";
 import Home1About from "@/components/about/Home1About";
-import Home1Approach from "@/components/approachSection/Home1Approach";
-import Home1Banner from "@/components/banner/Home1Banner";
-import Home1Blog from "@/components/blog/Home1Blog";
-import BannerWithCaseStudySlider from "@/components/caseStudy/BannerWithCaseStudySlider";
-import Home1Contact from "@/components/contact/Home1Contact";
-import Footer from "@/components/footer/Footer";
-import Header1 from "@/components/header/Header1";
-import Home1BannerMarquee from "@/components/marquee/Home1BannerMarquee";
-import LogoMarquee from "@/components/marquee/LogoMarquee";
-import Home1Portfolio from "@/components/portfolio/Home1Portfolio";
-import Home1Solution from "@/components/solution/Home1Solution";
-import Home1Testimonial from "@/components/testimonial/Home1Testimonial";
-import Home1WorkProcess from "@/components/workProcess/Home1WorkProcess";
+import Home1AwardSection from "@/components/award-section/home1-award-section";
+import Home1BannerSection from "@/components/banner-section/home1-banner-section";
+import Home1BlogSection from "@/components/blog-section/home1-blog-section";
+import Home1ContactSection from "@/components/contact-section/home1-contact-section";
+import Header from "@/components/header/Header";
+import Home1ProcessSection from "@/components/process-section/home1-process-section";
+import Home1solutionSection from "@/components/solution-section/Home1solution-section";
+import Home1TestimonialSection from "@/components/testimonial-section/home1-testimonial-section";
+import HomeworkSection from "@/components/work-section/Homework-section";
 
-export const metadata = {
-  icons: {
-    icon: "/assets/img/sm-logo.svg",
-  },
-}
+
 export default function Home() {
+
   return (
     <>
-      <Header1 />
-      <Home1Banner />
-      <Home1BannerMarquee />
-      <Home1About />
-      <Home1Solution />
-      <Home1Portfolio />
-      <Home1WorkProcess />
-      <BannerWithCaseStudySlider />
-      <Home1Approach />
-      <LogoMarquee />
-      <Home1Testimonial />
-      <Home1Blog />
-      <Home1Contact />
+      <Header />
+      <main className="page-content">
+        <div className="line_wrap">
+          <div className="line_item first-line" />
+          <div className="line_item center-line" />
+          <div className="line_item last-line" />
+        </div>
+        <Home1BannerSection />
+        <Home1About />
+        <Home1solutionSection style="pb-130"/>
+        <HomeworkSection />
+        <Home1ProcessSection />
+        <Home1TestimonialSection />
+        <Home1AwardSection />
+        <Home1BlogSection />
+        <Home1ContactSection />
+      </main>
       <Footer />
     </>
   );
