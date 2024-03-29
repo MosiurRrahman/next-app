@@ -19,7 +19,6 @@ export default function RootLayout({ children }) {
   // useMagneticHover();
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
-    require("../../public/assets/js/gsap.min");
   }, []);
   return (
     <html lang="en">
