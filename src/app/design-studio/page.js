@@ -2,6 +2,7 @@ import Footer4 from "@/components/Footer/Footer4";
 import Home4About from "@/components/about/Home4About";
 import Home4AwardSection from "@/components/award-section/home4-award-section";
 import Home4BannerSection from "@/components/banner-section/home4-banner-section";
+import Home4BlogSection from "@/components/blog-section/home4-blog-section";
 import Home4ContactSection from "@/components/contact-section/home4-contact-section";
 import Header4 from "@/components/header/Header4";
 import Home4ProcessSection from "@/components/process-section/home4-process-section";
@@ -24,6 +25,8 @@ const DesignStudio = () => {
       <Home4TestimonialSection />
       <Home4TeamSection />
       <Home4AwardSection />
+
+      <Home4BlogSection/>
       <Home4ContactSection />
       <Footer4 />
     </>
