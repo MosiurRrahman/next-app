@@ -5,7 +5,7 @@ import HandleQuantity from "@/utils/HandleQuantity";
 import Link from "next/link";
 import React, { useState } from "react";
 
-const page = () => {
+const CheckoutPage = () => {
   const [activeOption, setActiveOption] = useState("paypal");
   const handleOptionChange = (option) => {
     setActiveOption(option);
@@ -523,4 +523,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default CheckoutPage ;
