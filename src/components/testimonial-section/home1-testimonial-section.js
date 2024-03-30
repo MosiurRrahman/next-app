@@ -38,6 +38,14 @@ const Home1TestimonialSection = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const element = document.querySelectorAll(".badge__char");
+    const step = 360 / element.length;
+
+    element.forEach((elem, i) => {
+      elem.style.setProperty("--char-rotate", i * step + "deg");
+    });
+  }, []);
   return (
     <div className="testimonial-section mb-130">
       <div className="vector-2 d-lg-flex d-none">

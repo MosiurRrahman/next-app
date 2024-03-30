@@ -11,7 +11,9 @@ import Home1solutionSection from "@/components/solution-section/Home1solution-se
 import Home1TestimonialSection from "@/components/testimonial-section/home1-testimonial-section";
 import HomeworkSection from "@/components/work-section/Homework-section";
 
+
 export default function Home() {
+
   return (
     <>
       <Header />
@@ -23,7 +25,7 @@ export default function Home() {
         </div>
         <Home1BannerSection />
         <Home1About />
-        <Home1solutionSection style="pb-130" />
+        <Home1solutionSection style="pb-130"/>
         <HomeworkSection />
         <Home1ProcessSection />
         <Home1TestimonialSection />

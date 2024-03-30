@@ -1,16 +1,7 @@
 {
   "extends": "next/core-web-vitals",
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-
   "rules": {
     "@next/next/no-img-element": "off",
-    "react/no-unescaped-entities": 0,
-    "semi": 2
+    "react/no-unescaped-entities": 0
   }
 }

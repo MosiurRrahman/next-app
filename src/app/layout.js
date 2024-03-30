@@ -1,4 +1,6 @@
-"use client";
+
+
+"use client"
 import "../../public/assets/css/bootstrap-icons.css";
 import "../../public/assets/css/boxicons.min.css";
 import "../../public/assets/css/swiper-bundle.min.css";
@@ -10,20 +12,22 @@ import "../../public/assets/css/slick.css";
 import "../../public/assets/css/bootstrap.min.css";
 import "yet-another-react-lightbox/styles.css";
 import "../../public/assets/css/style.css";
-// import useMagneticHover from "@/hooks/useMagneticHover";
-
+import useMagneticHover from "@/hooks/useMagneticHover";
+import SmoothPageScroll from "@/utils/SmoothPageScroll";
+import ScrollTopBtn from "@/utils/ScrollTopBtn";
+import { useEffect } from "react";
 
 export default function RootLayout({ children }) {
-  // useMagneticHover();
-  // useEffect(() => {
-  //   require("bootstrap/dist/js/bootstrap.bundle.min.js");
-  // }, []);
+  useMagneticHover();
+  useEffect(() => {
+    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+  }, []);
   return (
     <html lang="en">
       <body>
         {children}
-        {/* <SmoothPageScroll />
-        <ScrollTopBtn /> */}
+      <SmoothPageScroll/>
+      <ScrollTopBtn/>
       </body>
     </html>
   );
