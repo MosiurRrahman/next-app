@@ -1263,7 +1263,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
     &.four{
         display: flex;
         justify-content: space-between;
-        align-items: end;
+        align-items: flex-end;
         gap: 30px;
         @include lg-down-device(){
             flex-wrap: wrap;
@@ -1299,7 +1299,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
             }
         }
         .dash-and-paragraph{
-            align-items: start;
+            align-items: flex-start;
             svg{
                 width: 100%;
                 fill: var(--border-color2);
@@ -1950,7 +1950,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
         }
         @include lg-down-device(){
             border: none;
-            justify-content: end;
+            justify-content: flex-end;
         }
         .nav-right {
             gap: 105px;
@@ -2062,7 +2062,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
                     display: flex;
                     margin-left: 50px;
                     flex-direction: column;
-                    align-items: end;
+                    align-items: flex-end;
                     visibility: visible;
     
                     justify-content: center;
@@ -2889,7 +2889,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
         }
         @include lg-down-device(){
             border: none;
-            justify-content: end;
+            justify-content: flex-end;
         }
      
     }
@@ -3593,7 +3593,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
         }
         @include lg-down-device(){
             border: none;
-            justify-content: end;
+            justify-content: flex-end;
         }
         .nav-right {
             gap: 105px;
@@ -3645,7 +3645,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
                     display: flex;
                     margin-left: 50px;
                     flex-direction: column;
-                    align-items: end;
+                    align-items: flex-end;
                     visibility: visible;
     
                     justify-content: center;
@@ -4283,7 +4283,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
         }
         @include lg-down-device(){
             border: none;
-            justify-content: end;
+            justify-content: flex-end;
         }
         .nav-right {
             gap: 105px;
@@ -4345,7 +4345,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
                     display: flex;
                     margin-left: 50px;
                     flex-direction: column;
-                    align-items: end;
+                    align-items: flex-end;
                     visibility: visible;
     
                     justify-content: center;
@@ -6306,7 +6306,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
             display: flex;
             flex-direction: column;
             transition: 0.45s;
-            justify-content: end;
+            justify-content: flex-end;
             @include sm-down-device(){
                 padding: 25px 20px;
             }
@@ -7017,7 +7017,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
                             fill: var(--title-color);
                         }
                         @include md-down-device(){
-                            justify-content: end;
+                            justify-content: flex-end;
                             svg{
                                 opacity: 1;
                             }
@@ -7614,7 +7614,7 @@ footer{
                     flex-wrap: wrap;
                 }
                 @include sm-down-device(){
-                    justify-content: start;
+                    justify-content: flex-start;
                 }
                 .single-contact{
                     padding-right: 85px;
@@ -8066,7 +8066,7 @@ footer{
                     display: flex;
                     align-items: center;
                     flex-wrap: wrap;
-                    // justify-content: end;
+                    // justify-content: flex-end;
                     gap: 15px; 
                     @include lg-down-device(){
                         justify-content: center;
@@ -9561,7 +9561,7 @@ footer{
     min-height: 85vh;
     display: flex;
     position: relative;
-    align-items: end;
+    align-items: flex-end;
     margin-bottom: 255px;
     @include lg-down-device(){
         margin-bottom: 170px;
@@ -10966,7 +10966,7 @@ footer{
               border-right: 1px solid #333;
               transition: 0.5s;
               display: flex;
-              align-items: start;
+              align-items: flex-start;
               justify-content: center;
               position: relative;
               padding: 60px 0;
@@ -10974,7 +10974,7 @@ footer{
                 padding: 30px 15px;
               }
               @include md-down-device(){
-                justify-content: start;
+                justify-content: flex-start;
                 border: none;
                 padding-bottom: 0;
               }
@@ -11071,14 +11071,14 @@ footer{
             .button-area{
                 padding: 60px 0;
                 display: flex;
-                justify-content: end;
+                justify-content: flex-end;
                 padding-left: 25px;
                 @include lg-down-device(){
                     padding: 30px 15px;
                 }
                 @include md-down-device(){
                     padding: 20px 15px 30px;
-                    justify-content: start;
+                    justify-content: flex-start;
                 }
                 a{
                     padding: 13px 24px;
@@ -11729,7 +11729,7 @@ footer{
                             margin-top: 8px;
                         }
                         @include md-down-device(){
-                            justify-content: end;
+                            justify-content: flex-end;
                             svg{
                                 opacity: 1;
                             }
@@ -12715,7 +12715,7 @@ footer{
                     line-height: 1;
                     padding: 13px 20px;
                     display: inline-flex;
-                    justify-content: end;
+                    justify-content: flex-end;
                     margin-bottom: 20px;
                 }
                 P{
@@ -12912,6 +12912,12 @@ footer{
 .home4-services-area{
     background: #1A1A1A;
     padding: 100px 0;
+    // .services-hover.active{
+         
+    //     display: block;
+    //     transition: display 0.3s ease;
+        
+    // }
     .paragraph{
         p{
             max-width: 424px;     
@@ -13064,6 +13070,10 @@ footer{
             position: static;
             transition: none;
             display: none;
+            &.active{
+                        display: block;
+        transition: display 0.3s ease;
+            }
         }
         .services-btm{
             display: grid;
@@ -13301,7 +13311,7 @@ footer{
     }
     .slider-btn-area{
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         padding: 0px 88px 0px;   
         margin-top: -88px; 
         position: relative;
@@ -13575,7 +13585,7 @@ footer{
     .slider-btn-area{
         display: inline-flex;
         align-items: center;
-        justify-content: end;
+        justify-content: flex-end;
         margin-top: -80px;
         background: #1A1A1A;
         z-index: 1;
@@ -13622,7 +13632,7 @@ footer{
 .home4-blog-section{
     .paragraph-and-btn{
         display: flex;
-        align-items: end;
+        align-items: flex-end;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 20px;
@@ -13866,7 +13876,7 @@ footer{
     }
     .banner-content-and-img{
         display: flex;
-        align-items: end;
+        align-items: flex-end;
         gap: 110px;
         margin-top: -140px;
         @include xl-down-device(){
@@ -14189,7 +14199,7 @@ footer{
     }
     .section-title{
         display: flex;
-        align-items: end;
+        align-items: flex-end;
         justify-content: space-between;
         gap: 20px;
         flex-wrap: wrap;
@@ -14967,7 +14977,7 @@ footer{
                         display: flex;
                         transition: 0.35s;
                         @include md-down-device(){
-                            justify-content: end;
+                            justify-content: flex-end;
                             svg{
                                 opacity: 1;
                             }
@@ -15025,7 +15035,7 @@ footer{
 ========================================*/
 .home5-blog-section{
     .paragraph-and-btn-area{
-        align-items: end;
+        align-items: flex-end;
          a{
             color: var(--title-color);
             font-family: var(--font-unbounded);
@@ -18259,7 +18269,7 @@ footer{
         .ineteractive-single-item{
             display: flex;
             height: 100%;
-            align-items: end;
+            align-items: flex-end;
             position: relative;
             padding: 100px 45px 80px;
             transition: opacity .75s;
@@ -18879,7 +18889,7 @@ footer{
                      line-height: 1;
                      padding: 13px 20px;
                      display: inline-flex;
-                     justify-content: end;
+                     justify-content: flex-end;
                      margin-bottom: 20px;
                  }
                  P{
@@ -19032,9 +19042,9 @@ footer{
             }
             .details-btn-wrap{
                 display: flex;
-                justify-content: end;
+                justify-content: flex-end;
                 @include lg-down-device(){
-                    justify-content: start;
+                    justify-content: flex-start;
                 }
                 .primary-btn4{
                     padding: 12px 25px;
@@ -20614,7 +20624,7 @@ footer{
             }
             .social-area{
                 flex-direction: column;
-                align-items: end;
+                align-items: flex-end;
                 left: unset;
                 right: 15px;
                 width: unset;
@@ -22119,7 +22129,7 @@ footer{
     .product-description-and-review-area{
         .nav2{
             gap: 45px;
-            justify-content: start;
+            justify-content: flex-start;
             width: 100%;
             line-height: 1;
             border-bottom: 1px solid var(--border-color2);

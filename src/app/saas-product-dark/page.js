@@ -1,3 +1,4 @@
+"use client"
 import Footer6 from "@/components/Footer/Footer6";
 import Home6BannerSection from "@/components/banner-section/home6-banner-section";
 import Home6BlogSection from "@/components/blog-section/home6-blog-section";
@@ -8,10 +9,12 @@ import Home6IntegrationSection from "@/components/integration-section/home6-inte
 import Home6PerformanceSection from "@/components/performance-section/home6-performance-section";
 import Home6ProjecManagement from "@/components/project-management-section/home6-project-management";
 import Home6TestimonialSection from "@/components/testimonial-section/home6-testimonial-section";
-import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 
-const Sasspage = () => {
+const SaasPage = () => {
+  useEffect(() => {
+    document.body.classList.add("dark");
+  }, []);
   return (
     <>
       <Header6 />
@@ -28,4 +31,4 @@ const Sasspage = () => {
   );
 };
 
-export default Sasspage;
+export default SaasPage;

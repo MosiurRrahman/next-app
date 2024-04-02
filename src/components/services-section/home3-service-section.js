@@ -1,7 +1,32 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Home3ServiceSection = () => {
+  const followImageCursor = (event, serviceImgItem) => {
+    const contentBox = serviceImgItem.getBoundingClientRect();
+    const dx = event.clientX - contentBox.x;
+    const dy = event.clientY - contentBox.y;
+    serviceImgItem.children[2].style.transform = `translate(${dx}px, ${dy}px) rotate(20deg)`;
+  };
+
+  useEffect(() => {
+    const serviceImgItems = document.querySelectorAll(
+      ".sevices-wrap .single-services"
+    );
+
+    const handleMouseMove = (event) => {
+      serviceImgItems.forEach((item) => {
+        followImageCursor(event, item);
+      });
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
   return (
     <>
        <div className="home3-services-section mb-130">

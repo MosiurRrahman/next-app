@@ -1,3 +1,4 @@
+"use client"
 import Footer4 from "@/components/Footer/Footer4";
 import Home4About from "@/components/about/Home4About";
 import Home4AwardSection from "@/components/award-section/home4-award-section";
@@ -11,9 +12,12 @@ import Home4TeamSection from "@/components/team-section/home4-team-section";
 import Home4TestimonialSection from "@/components/testimonial-section/home4-testimonial-section";
 import Home4WorkSection from "@/components/work-section/home4-work-section";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 
-const DesignStudio = () => {
+const DesignStudioDark = () => {
+  useEffect(() => {
+    document.body.classList.add("dark");
+  }, []);
   return (
     <>
       <Header4 />
@@ -25,11 +29,11 @@ const DesignStudio = () => {
       <Home4TestimonialSection />
       <Home4TeamSection />
       <Home4AwardSection />
-      <Home4BlogSection/>
+      <Home4BlogSection />
       <Home4ContactSection />
       <Footer4 />
     </>
   );
 };
 
-export default DesignStudio;
+export default DesignStudioDark;

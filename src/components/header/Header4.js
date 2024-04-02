@@ -24,16 +24,16 @@ const Header4 = () => {
           </div>
         </div>
         <ul className="menu-list">
-          <li className="menu-item-has-children active">
+          <li className="menu-item-has-children ">
             <Link href="#" className="drop-down">Home</Link><i className="bi bi-plus dropdown-icon" />
             <ul className="sub-menu">
-              <li className="active"><Link href="/">Light Version</Link>
+              <li className=""><Link href="/">Light Version</Link>
                 <i className="bi bi-chevron-right dropdown-icon" />
                 <ul className="sub-menu">
                   <li><Link href="/">Digital Agency</Link></li>
                   <li><Link href="/software-agency">Software Agency</Link></li>
                   <li><Link href="/marketing-agency ">Marketing Agency</Link></li>
-                  <li className="active"><Link href="/design-studio">Design Studio</Link></li>
+                  <li className=""><Link href="/design-studio">Design Studio</Link></li>
                   <li><Link href="/personal-portfolio">Personal Portfolio</Link></li>
                   <li><Link href="/saas-product">SaaS Product</Link></li>
                 </ul>

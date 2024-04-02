@@ -9,7 +9,7 @@ const page = () => {
   return (
     <>
      <InnerPageHeader/>
-     <Breadcrumb/>
+     <Breadcrumb bgImg='3' title2="SMART SERVICE" title='WE PROVIDE'/>
      <div className="blog-standard-section pt-130 mb-130">
   <div className="container-lg container-fluid">
     <div className="row g-lg-4 gy-5">

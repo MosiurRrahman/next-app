@@ -1,3 +1,4 @@
+"use client"
 import Home3About from "@/components/about/Home3About";
 import Home3AwardSection from "@/components/award-section/home3-award-section";
 import Home3BannerSection from "@/components/banner-section/home3-banner-section";
@@ -11,15 +12,17 @@ import Home3TeamSection from "@/components/team-section/home3-team-section";
 import Home3TestimonialSection from "@/components/testimonial-section/home3-testimonial-section";
 import Home3WorkSection from "@/components/work-section/home3-work-section";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 
 const MarketingAgency = () => {
+  useEffect(() => {
+    document.body.classList.add("dark");
+  }, []);
   return (
     <>
       <Header3 />
       <Home3BannerSection />
       <Home3About />
-
       <Home3TestimonialSection />
       <Home3WorkSection />
       <Home3ServiceSection />

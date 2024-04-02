@@ -10,10 +10,13 @@ import Home1ProcessSection from "@/components/process-section/home1-process-sect
 import Home1solutionSection from "@/components/solution-section/Home1solution-section";
 import Home1TestimonialSection from "@/components/testimonial-section/home1-testimonial-section";
 import HomeworkSection from "@/components/work-section/Homework-section";
+import { useEffect } from "react";
 
 
 export default function Home() {
-
+  useEffect(() => {
+    document.body.classList.add("home1-bg");
+  }, []);
   return (
     <>
       <Header />

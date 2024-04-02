@@ -66,7 +66,7 @@ const Home2CounterArea = () => {
             <div className="col-lg-12">
               <div className="banner-content text-animation">
                 <h6>
-                  <span />
+                  <span style={{ top: '50.5px', left: '83.75px' }} />
                   Innovative Idea
                 </h6>
                 <h2>

@@ -1,10 +1,37 @@
 
+"use client"
 import Footer3 from '@/components/Footer/Footer3'
 import Header from '@/components/header/Header'
 import Link from 'next/link'
-import React from 'react'
-
+import React, { useState } from 'react'
+import portfolioShowcaseData from '../../data/portfolio-showcase.json'
 const PortfolioShowCasePage = () => {
+  const [items, setItems] = useState(portfolioShowcaseData);
+  const [CategoryActiveSlug, setCategoryActiveSlug] = useState(null);
+
+  const [isOpenimg, setOpenimg] = useState({
+    openingState: false,
+    openingIndex: 0,
+  });
+  const filterItem = (catagoryItem) => {
+    setCategoryActiveSlug(catagoryItem);
+    const updateItems = portfolioShowcaseData.filter((curentElemet) => {
+      return curentElemet.categorySlug === catagoryItem;
+    });
+    setItems(updateItems);
+  };
+  const setAllItems = (allItems) => {
+    setCategoryActiveSlug(allItems);
+    return setItems(portfolioShowcaseData);
+  };
+
+  const categoryCard = new Map([
+    ...portfolioShowcaseData.map((categoryData) => [
+      categoryData.category,
+      categoryData.categorySlug,
+    ]),
+  ]);
+  
   return (
     <>
      <Header/>
@@ -52,148 +79,66 @@ const PortfolioShowCasePage = () => {
     </div>
   </div>
 </div>
+
+
+
+
+
 <div className="pf-shoecase-page pt-130 mb-130">
   <div className="container-lg container-fluid">
     <div className="row">
       <div className="col-lg-12">
         <div className="filters filter-button-group">
           <ul>
-            <li className="active" data-filter="*">All</li>
-            <li data-filter=".Branding">Branding</li>
-            <li data-filter=".UiUx">UI/UX</li>
-            <li data-filter=".Web">Web</li>
-            <li data-filter=".Graphics">Graphics</li>
+          <li
+                    onClick={() => setAllItems("all")}
+                    className={
+                      CategoryActiveSlug == "all" || CategoryActiveSlug == null
+                        ? "active"
+                        : ""
+                    }
+                    data-filter="*"
+                  >
+                    All
+                  </li>
+                  {[...categoryCard].map((key) => {
+                    return (
+                      <li
+                        key={key[1]}
+                        onClick={() => filterItem(`${key[1]}`)}
+                        className={key[1] == CategoryActiveSlug ? "active" : ""}
+                      >
+                        {key[0]}
+                      </li>
+                    );
+                  })}
           </ul>
         </div>
       </div>
     </div>
     <div className="row g-4 grid mb-70">
-      <div className="col-lg-4 col-sm-6 grid-item UiUx Web Graphics ">
-        <div className="single-portfolio-sw">
-          <div className="pf-shw-img">
-            <img src="assets/img/innerpage/ph-sw-01.jpg" alt="" />
-          </div>
-          <div className="pf-shw-content-wrap">
-            <a className="publish-date" href="#">©2024</a>
-            <div className="pf-shw-content text-center">
-              <h4><Link href="/portfolio-details"> Digital <br /> Masterpieces</Link></h4>
-              <Link href="/portfolio-showcase">UI/UX Design</Link>
+      {
+        items.slice(0,9).map((element, index)=>{
+          return (
+      <div key={element.id} className="col-lg-4 col-sm-6 grid-item UiUx Web Graphics ">
+              <div className="single-portfolio-sw">
+                <div className="pf-shw-img">
+                  <img src={element.img} alt="" />
+                </div>
+                <div className="pf-shw-content-wrap">
+                  <a className="publish-date" href="#">©2024</a>
+                  <div className="pf-shw-content text-center">
+                    <h4><Link href="/portfolio-details"> Digital <br /> Masterpieces</Link></h4>
+                    <Link href="/portfolio-showcase">{element.tag}</Link>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="col-lg-4 col-sm-6 grid-item Branding ">
-        <div className="single-portfolio-sw">
-          <div className="pf-shw-img">
-            <img src="assets/img/innerpage/ph-sw-02.jpg" alt="" />
-          </div>
-          <div className="pf-shw-content-wrap">
-            <a className="publish-date" href="#">©2024</a>
-            <div className="pf-shw-content text-center">
-              <h4><Link href="/product-details"> Branding <br /> Design </Link></h4>
-              <Link href="/portfolio-showcase">Branding</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="col-lg-4 col-sm-6 grid-item UiUx Graphics ">
-        <div className="single-portfolio-sw">
-          <div className="pf-shw-img">
-            <img src="assets/img/innerpage/ph-sw-03.jpg" alt="" />
-          </div>
-          <div className="pf-shw-content-wrap">
-            <a className="publish-date" href="#">©2024</a>
-            <div className="pf-shw-content text-center">
-              <h4><Link href="/portfolio-details"> Digital <br /> Solutions</Link></h4>
-              <Link href="/portfolio-showcase">Creative</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="col-lg-4 col-sm-6 grid-item Web UiUx ">
-        <div className="single-portfolio-sw">
-          <div className="pf-shw-img">
-            <img src="assets/img/innerpage/ph-sw-04.jpg" alt="" />
-          </div>
-          <div className="pf-shw-content-wrap">
-            <a className="publish-date" href="#">©2024</a>
-            <div className="pf-shw-content text-center">
-              <h4><Link href="/portfolio-details"> Modern Design <br /> Solutions</Link></h4>
-              <Link href="/portfolio-showcase">Modern</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="col-lg-4 col-sm-6 grid-item Branding Web ">
-        <div className="single-portfolio-sw">
-          <div className="pf-shw-img">
-            <img src="assets/img/innerpage/ph-sw-05.jpg" alt="" />
-          </div>
-          <div className="pf-shw-content-wrap">
-            <a className="publish-date" href="#">©2024</a>
-            <div className="pf-shw-content text-center">
-              <h4><Link href="/portfolio-details"> Sculpting the <br /> Future</Link></h4>
-              <Link href="/portfolio-showcase">Creative</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="col-lg-4 col-sm-6 grid-item Graphics UiUx ">
-        <div className="single-portfolio-sw">
-          <div className="pf-shw-img">
-            <img src="assets/img/innerpage/ph-sw-06.jpg" alt="" />
-          </div>
-          <div className="pf-shw-content-wrap">
-            <a className="publish-date" href="#">©2024</a>
-            <div className="pf-shw-content text-center">
-              <h4><Link href="/portfolio-details"> Digital <br /> Solutions</Link></h4>
-              <Link href="/portfolio-showcase">Design</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="col-lg-4 col-sm-6 grid-item UiUx Web ">
-        <div className="single-portfolio-sw">
-          <div className="pf-shw-img">
-            <img src="assets/img/innerpage/ph-sw-07.jpg" alt="" />
-          </div>
-          <div className="pf-shw-content-wrap">
-            <a className="publish-date" href="#">©2024</a>
-            <div className="pf-shw-content text-center">
-              <h4><Link href="/portfolio-details"> Branding <br /> Design</Link></h4>
-              <Link href="/portfolio-showcase">Branding</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="col-lg-4 col-sm-6 grid-item Branding ">
-        <div className="single-portfolio-sw">
-          <div className="pf-shw-img">
-            <img src="assets/img/innerpage/ph-sw-08.jpg" alt="" />
-          </div>
-          <div className="pf-shw-content-wrap">
-            <a className="publish-date" href="#">©2024</a>
-            <div className="pf-shw-content text-center">
-              <h4><Link href="/portfolio-details"> Modern Design <br /> Solutions</Link></h4>
-              <Link href="/portfolio-showcase">Modern</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="col-lg-4 col-sm-6 grid-item UiUx ">
-        <div className="single-portfolio-sw">
-          <div className="pf-shw-img">
-            <img src="assets/img/innerpage/ph-sw-09.jpg" alt="" />
-          </div>
-          <div className="pf-shw-content-wrap">
-            <a className="publish-date" href="#">©2024</a>
-            <div className="pf-shw-content text-center">
-              <h4><Link href="/portfolio-details"> Digital <br /> Masterpieces</Link></h4>
-              <Link href="/portfolio-showcase">UI/UX Design</Link>
-            </div>
-          </div>
-        </div>
-      </div>
+          )
+        })
+      }
+      
+      
     </div>
     <div className="row">
       <div className="col-lg-12">

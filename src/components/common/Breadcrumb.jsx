@@ -1,6 +1,9 @@
+"use client"
 import React from "react";
-
-const Breadcrumb = ({bgImg="1",title="02"}) => {
+import { usePathname } from "next/navigation";
+const Breadcrumb = ({bgImg="1",title="02", title2, }) => {
+  const pathname = usePathname();
+  const formattedPathname = pathname.startsWith("/") ? pathname.substring(1) : pathname;
   return (
     <>
       <div
@@ -30,7 +33,7 @@ const Breadcrumb = ({bgImg="1",title="02"}) => {
                 <div className="col-lg-5">
                   <div className="section-title white">
                     <h1>
-                      WE PROVIDE <span>SMART SERVICE</span>
+                     {title} <span>{title2}</span>
                     </h1>
                   </div>
                 </div>
@@ -56,7 +59,7 @@ const Breadcrumb = ({bgImg="1",title="02"}) => {
               <li>
                 <a href="/">Home</a>
               </li>
-              <li>{`Service Style-${title}`}</li>
+              <li>{formattedPathname}</li>
             </ul>
           </div>
         </div>

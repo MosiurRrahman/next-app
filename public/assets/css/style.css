@@ -1203,7 +1203,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
 .section-title.four {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   gap: 30px;
 }
 @media (max-width: 991px) {
@@ -1242,7 +1242,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
   }
 }
 .section-title.six .dash-and-paragraph {
-  align-items: start;
+  align-items: flex-start;
 }
 .section-title.six .dash-and-paragraph svg {
   width: 100%;
@@ -1916,7 +1916,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
 @media (max-width: 991px) {
   .header-area.style-1 .menu-wrap {
     border: none;
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 .header-area.style-1 .menu-wrap .nav-right {
@@ -2035,7 +2035,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
     display: flex;
     margin-left: 50px;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     visibility: visible;
     justify-content: center;
     position: relative;
@@ -2760,7 +2760,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
 @media (max-width: 991px) {
   .header-area.style-2 .logo-and-menu {
     border: none;
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 .header-area.style-2 .nav-right {
@@ -3418,7 +3418,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
 @media (max-width: 991px) {
   .header-area.style-4 .menu-wrap {
     border: none;
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 .header-area.style-4 .menu-wrap .nav-right {
@@ -3473,7 +3473,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
     display: flex;
     margin-left: 50px;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     visibility: visible;
     justify-content: center;
     position: relative;
@@ -4037,7 +4037,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
 @media (max-width: 991px) {
   .header-area.style-5 .menu-wrap {
     border: none;
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 .header-area.style-5 .menu-wrap .nav-right {
@@ -4102,7 +4102,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
     display: flex;
     margin-left: 50px;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     visibility: visible;
     justify-content: center;
     position: relative;
@@ -5945,7 +5945,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
   display: flex;
   flex-direction: column;
   transition: 0.45s;
-  justify-content: end;
+  justify-content: flex-end;
 }
 @media (max-width: 576px) {
   .work-section .single-work .work-content {
@@ -6642,7 +6642,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
 }
 @media (max-width: 767px) {
   .award-section .award-table tbody tr td a {
-    justify-content: end;
+    justify-content: flex-end;
   }
   .award-section .award-table tbody tr td a svg {
     opacity: 1;
@@ -7272,7 +7272,7 @@ footer .footer-top .footer-logo-contact-wrap .footer-contact {
 }
 @media (max-width: 576px) {
   footer .footer-top .footer-logo-contact-wrap .footer-contact {
-    justify-content: start;
+    justify-content: flex-start;
   }
 }
 footer .footer-top .footer-logo-contact-wrap .footer-contact .single-contact {
@@ -9208,7 +9208,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
   min-height: 85vh;
   display: flex;
   position: relative;
-  align-items: end;
+  align-items: flex-end;
   margin-bottom: 255px;
 }
 @media (max-width: 991px) {
@@ -10647,7 +10647,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
   border-right: 1px solid #333;
   transition: 0.5s;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
   padding: 60px 0;
@@ -10659,7 +10659,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
 }
 @media (max-width: 767px) {
   .home3-services-section .sevices-wrap .single-services .icon {
-    justify-content: start;
+    justify-content: flex-start;
     border: none;
     padding-bottom: 0;
   }
@@ -10767,7 +10767,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
 .home3-services-section .sevices-wrap .single-services .button-area {
   padding: 60px 0;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding-left: 25px;
 }
 @media (max-width: 991px) {
@@ -10778,7 +10778,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
 @media (max-width: 767px) {
   .home3-services-section .sevices-wrap .single-services .button-area {
     padding: 20px 15px 30px;
-    justify-content: start;
+    justify-content: flex-start;
   }
 }
 .home3-services-section .sevices-wrap .single-services .button-area a {
@@ -11273,7 +11273,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
 }
 @media (max-width: 767px) {
   .home3-award-section .award-table tbody tr td a {
-    justify-content: end;
+    justify-content: flex-end;
   }
   .home3-award-section .award-table tbody tr td a svg {
     opacity: 1;
@@ -12295,7 +12295,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
   line-height: 1;
   padding: 13px 20px;
   display: inline-flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-bottom: 20px;
 }
 .home4-work-section .section-title .dash-and-paragraph .btn-and-paragraph P {
@@ -12661,6 +12661,10 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
   transition: none;
   display: none;
 }
+.home4-services-area .services-card4 .service-bottom-wrap.active {
+  display: block;
+  transition: display 0.3s ease;
+}
 .home4-services-area .services-card4 .services-btm {
   display: grid;
   grid-template-columns: 25% 50% 25%;
@@ -12885,7 +12889,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
 }
 .home4-testimonial-section .slider-btn-area {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding: 0px 88px 0px;
   margin-top: -88px;
   position: relative;
@@ -13169,7 +13173,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
 .home4-award-section .slider-btn-area {
   display: inline-flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   margin-top: -80px;
   background: #1A1A1A;
   z-index: 1;
@@ -13217,7 +13221,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
 ========================================*/
 .home4-blog-section .paragraph-and-btn {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
@@ -13485,7 +13489,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
 }
 .home5-banner-area .banner-content-and-img {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   gap: 110px;
   margin-top: -140px;
 }
@@ -13854,7 +13858,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
 }
 .home5-work-section .section-title {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
@@ -14705,7 +14709,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
 }
 @media (max-width: 767px) {
   .home5-award-section .award-table tbody tr td a {
-    justify-content: end;
+    justify-content: flex-end;
   }
   .home5-award-section .award-table tbody tr td a svg {
     opacity: 1;
@@ -14759,7 +14763,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
  54. Home5 Blog Section
 ========================================*/
 .home5-blog-section .paragraph-and-btn-area {
-  align-items: end;
+  align-items: flex-end;
 }
 .home5-blog-section .paragraph-and-btn-area a {
   color: var(--title-color);
@@ -18208,7 +18212,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
 .interactive-banner-section .interactive-list .ineteractive-single-item {
   display: flex;
   height: 100%;
-  align-items: end;
+  align-items: flex-end;
   position: relative;
   padding: 100px 45px 80px;
   transition: opacity 0.75s;
@@ -18886,7 +18890,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
   line-height: 1;
   padding: 13px 20px;
   display: inline-flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-bottom: 20px;
 }
 .portfolio-page-area .section-title .dash-and-paragraph .btn-and-paragraph P {
@@ -19046,11 +19050,11 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
 }
 .portfolio-page-area.portfolio-showcase-horizental .single-work .details-btn-wrap {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 @media (max-width: 991px) {
   .portfolio-page-area.portfolio-showcase-horizental .single-work .details-btn-wrap {
-    justify-content: start;
+    justify-content: flex-start;
   }
 }
 .portfolio-page-area.portfolio-showcase-horizental .single-work .details-btn-wrap .primary-btn4 {
@@ -20770,7 +20774,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
 }
 .team-card-1.two .team-img .social-area {
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
   left: unset;
   right: 15px;
   width: unset;
@@ -22339,7 +22343,7 @@ footer.home6-footer .footer-btm .terms-condition p a:hover {
 }
 .product-details-page .product-description-and-review-area .nav2 {
   gap: 45px;
-  justify-content: start;
+  justify-content: flex-start;
   width: 100%;
   line-height: 1;
   border-bottom: 1px solid var(--border-color2);

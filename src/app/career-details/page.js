@@ -1,6 +1,7 @@
 import Footer3 from "@/components/Footer/Footer3";
 import Breadcrumb from "@/components/common/Breadcrumb";
 import Home3GallerySection from "@/components/gallery-section/home3-gallery-section";
+import Header from "@/components/header/Header";
 import InnerPageHeader from "@/components/header/InnerPageHeader";
 import Link from "next/link";
 import React from "react";
@@ -8,194 +9,77 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <InnerPageHeader />
-      <Breadcrumb />
+      <Header style="innerpage2" />
       <div
-        className="modal fade job-form-modal"
-        id="exampleModal"
-        tabIndex={-1}
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
+        className="breadcrumb-section style-2"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(248, 248, 248, 0.5), rgba(248, 248, 248, 0.5)), url(assets/img/innerpage/breadcrumb-bg6.jpg)",
+        }}
       >
-        <div className="modal-dialog modal-dialog-centered modal-xl">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h3 className="modal-title" id="exampleModalLabel">
-                Apply to the position of Digital Marketer
-              </h3>
-            </div>
-            <button
-              type="button"
-              className="modal-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              close
-              <span>
-                <i className="bi bi-x-lg" />
-              </span>
-            </button>
-            <div className="modal-body">
-              <form>
-                <div className="single-info mb-30">
-                  <h5 className="info-title">Personal Info</h5>
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <div className="form-inner mb-25">
-                        <label>First Name</label>
-                        <input
-                          type="text"
-                          placeholder="Mr. Daniel"
-                          aria-autocomplete="list"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="form-inner mb-25">
-                        <label>Last Name</label>
-                        <input
-                          type="text"
-                          placeholder="Scoot"
-                          aria-autocomplete="list"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="form-inner mb-25">
-                        <label>Your Email*</label>
-                        <input type="email" placeholder="example@gamil.com" />
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="form-inner mb-25">
-                        <label>Phone Number</label>
-                        <input type="text" placeholder="+920- 5566 **** ****" />
-                      </div>
-                    </div>
+        <svg
+          className="vector"
+          xmlns="http://www.w3.org/2000/svg"
+          width={300}
+          height={374}
+          viewBox="0 0 300 374"
+          fill="none"
+        >
+          <path
+            d="M49.999 359.57C49.999 530.694 188.228 669.14 358.399 669.14C528.57 669.14 666.799 530.694 666.799 359.57C666.799 188.445 528.57 50 358.399 50C188.228 50 49.999 188.445 49.999 359.57Z"
+            strokeWidth={100}
+          />
+        </svg>
+        <div className="container-lg container-fluid">
+          <div className="banner-wrapper">
+            <div className="banner-content">
+              <div className="row align-items-center gy-5">
+                <div className="col-lg-7">
+                  <div className="section-title">
+                    <h1>
+                      Apply Senior <span>Digital Marketer.</span>
+                    </h1>
                   </div>
-                </div>
-                <div className="single-info mb-30">
-                  <h5 className="info-title">Career Info</h5>
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <div className="form-inner mb-25">
-                        <label>Current Job Place</label>
-                        <input
-                          type="text"
-                          placeholder="Egenslab"
-                          aria-autocomplete="list"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="form-inner mb-25">
-                        <label>Current Position</label>
-                        <input
-                          type="text"
-                          placeholder="Junior Ui/Ux Designer"
-                          aria-autocomplete="list"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="form-inner mb-25">
-                        <label>Experiences*</label>
-                        <input type="text" placeholder="Type Years" />
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="form-inner mb-25">
-                        <label>Current Salary</label>
-                        <input type="text" placeholder="Type amount" />
-                      </div>
-                    </div>
-                    <div className="col-lg-6 mb-25">
-                      <div className="form-inner">
-                        <label>Applied Position*</label>
-                        <select>
-                          <option>Digital Marketer</option>
-                          <option>UX/UI Designer</option>
-                          <option>Frontend Developer</option>
-                          <option>Software Engineer</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="form-inner mb-25">
-                        <label>Expecetd Salary*</label>
-                        <input type="text" placeholder="Type amount" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="single-info mb-50">
-                  <h5 className="info-title">Key Documents</h5>
-                  <div className="row">
-                    <div className="col-md-12">
-                      <div className="form-inner mb-25">
-                        <label>Cover Letter*</label>
-                        <textarea
-                          placeholder="Write cover letter"
-                          defaultValue={""}
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="form-inner mb-25">
-                        <label>Upload Your CV*</label>
-                        <div className="file-upload-area">
-                          <div className="icon">
-                            <img
-                              src="assets/img/innerpage/vector/pdf-icon2.svg"
-                              alt=""
-                            />
-                          </div>
-                          <input type="file" className="custom-upload" />
-                          <div className="check-icon">
-                            <i className="bi bi-check" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="form-inner2">
-                        <div className="form-check">
-                          <input
-                            className="form-check-input"
-                            type="checkbox"
-                            defaultValue
-                            id="contactCheck"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="contactCheck"
-                          >
-                            I have read &amp; accepted Terms &amp; Conditions.
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="form-inner">
-                  <button
-                    className="primary-btn5 black btn-hover"
-                    type="submit"
-                  >
-                    Submit Now
+                  <div className="dash-and-paragraph">
                     <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 338 44"
+                    >
+                      <path d="M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM337.001 3L337.163 3.47297C337.394 3.3937 337.534 3.15889 337.494 2.9178C337.454 2.67671 337.245 2.5 337.001 2.5V3ZM324.001 44L324.222 38.2307L319.115 40.924L324.001 44ZM3 3.5H337.001V2.5H3V3.5ZM336.839 2.52703C328.657 5.33201 323.03 10.8388 320.343 17.6231C317.657 24.4031 317.923 32.4183 321.444 40.223L322.356 39.8117C318.933 32.2249 318.697 24.4919 321.272 17.9914C323.846 11.4951 329.241 6.18899 337.163 3.47297L336.839 2.52703Z" />
+                    </svg>
+                    <p>
+                      Offer a wide range of services to help businesses
+                      establish.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-lg-5 d-flex justify-content-xxl-center">
+                  <a
+                    className="circle-btn btn-hover"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
                       width={12}
                       height={12}
                       viewBox="0 0 12 12"
-                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"></path>
-                    </svg>
-                    <span style={{top: '50.5px', left: '83.75px'}} />
-                  </button>
+                    </svg>{" "}
+                    Apply <br /> Position
+                    <span />
+                  </a>
                 </div>
-              </form>
+              </div>
             </div>
+            <ul className="breadcrumb-list">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>Digital Marketer</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -403,7 +287,7 @@ const page = () => {
                     >
                       <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"></path>
                     </svg>
-                    <span style={{top: '50.5px', left: '83.75px'}} />
+                    <span />
                   </Link>
                   <strong>Or</strong>
                   <div className="contact">
@@ -443,6 +327,7 @@ const page = () => {
           </div>
         </div>
       </div>
+
       <Home3GallerySection />
 
       <Footer3 />

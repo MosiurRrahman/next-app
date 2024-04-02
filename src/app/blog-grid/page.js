@@ -1,14 +1,15 @@
 import Footer from '@/components/Footer/Footer'
 import Breadcrumb from '@/components/common/Breadcrumb'
 import Header from '@/components/header/Header'
+import InnerPageHeader from '@/components/header/InnerPageHeader'
 import Link from 'next/link'
 import React from 'react'
 
 const page = () => {
   return (
     <>
-     <Header/>
-     <Breadcrumb/>
+    <InnerPageHeader/>
+     <Breadcrumb bgImg='3' title2="Blog Grid" title='Our Latest'/>
      <div className="blog-grid-section pt-130 mb-130">
   <div className="container-lg container-fluid">
     <div className="row gy-5 mb-70">

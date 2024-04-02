@@ -11,7 +11,11 @@ const Home4ServicesSection = () => {
       this.classList.toggle('active');
       const serviceBottomWrap = this.querySelector('.service-bottom-wrap');
       if (serviceBottomWrap) {
-        serviceBottomWrap.style.display = serviceBottomWrap.style.display === 'none' ? 'block' : 'none';
+        // Set display to block to reveal the element
+        serviceBottomWrap.style.display = 'block';
+        // Smoothly adjust the height
+        serviceBottomWrap.style.transition = 'height 0.4s';
+        serviceBottomWrap.style.height = serviceBottomWrap.scrollHeight + 'px';
       }
     };
 
@@ -19,7 +23,12 @@ const Home4ServicesSection = () => {
     const handleMouseLeave = function () {
       const serviceBottomWrap = this.querySelector('.service-bottom-wrap');
       if (serviceBottomWrap) {
-        serviceBottomWrap.style.display = 'none';
+        // Smoothly transition the height back to zero
+        serviceBottomWrap.style.height = '0';
+        // Set display to none after the transition completes
+        setTimeout(() => {
+          serviceBottomWrap.style.display = 'none';
+        }, 100); // Adjust the timeout to match the transition duration
       }
       this.classList.remove('active');
     };
@@ -38,6 +47,7 @@ const Home4ServicesSection = () => {
       });
     };
   }, []);
+
   return (
     <div className="home4-services-area">
     <div className="container-lg container-fluid">

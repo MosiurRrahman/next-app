@@ -2,35 +2,20 @@
 import React, { useEffect } from 'react'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"; // Import ScrollTrigger from the correct location
+import useSVGDrawingAnimation from '@/hooks/useSVGDrawingAnimation';
 
 // Register ScrollTrigger with GSAP
 gsap.registerPlugin(ScrollTrigger);
 const Home6ProjecManagement = () => {
-    useEffect(() => {
-        const drawLine2 = gsap.timeline();
-        
-        // Define the SVG path animation
-        drawLine2.fromTo(
-            "#route-2",
-            { drawSVG: "0%" },
-            { duration: 6, drawSVG: "100%" }
-        );
+   
+    useSVGDrawingAnimation("solution-section", "triangle");
 
-        // Create a ScrollTrigger to trigger animation at a certain scroll position
-        ScrollTrigger.create({
-            trigger: "#solution-section",
-            animation: drawLine2,
-            start: "top center", // Trigger animation when the top of the trigger element hits the center of the viewport
-            end: "bottom center", // End animation when the bottom of the trigger element hits the center of the viewport
-            scrub: 4, // Smoothly scrub through the animation over a duration of 4
-        });
 
-    }, []);
   return (
     <>
       <div className="home6-project-management-section mb-130" id="solution-section">
-    <svg className="scroll-svg" viewBox="0 0 1578 1063" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path id="route-2" d="M10.5 10C99.5 153 388.2 168.8 787 172C1185.8 175.2 1426.17 281.667 1496.5 334.5C1611.5 420.886 1574.58 547.5 684.5 547.5C-208 547.5 -60.5 999 486.5 900C958.47 814.579 1497 872 1567.5 1053" strokeWidth={20} strokeLinecap="round" />
+    <svg  className="scroll-svg" viewBox="0 0 1578 1063" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="triangle"  d="M10.5 10C99.5 153 388.2 168.8 787 172C1185.8 175.2 1426.17 281.667 1496.5 334.5C1611.5 420.886 1574.58 547.5 684.5 547.5C-208 547.5 -60.5 999 486.5 900C958.47 814.579 1497 872 1567.5 1053" strokeWidth={20} strokeLinecap="round" />
     </svg>
     <div className="container-lg container-fluid">
         <div className="row mb-70">

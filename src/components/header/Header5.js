@@ -24,17 +24,17 @@ const Header5 = () => {
             </div>
           </div>
           <ul className="menu-list">
-            <li className="menu-item-has-children active">
+            <li className="menu-item-has-children ">
               <a href="#" className="drop-down">Home</a><i className="bi bi-plus dropdown-icon" />
               <ul className="sub-menu">
-                <li className="active"><Link href="/">Light Version</Link>
+                <li className=""><Link href="/">Light Version</Link>
                   <i className="bi bi-chevron-right dropdown-icon" />
                   <ul className="sub-menu">
                     <li><Link href="/">Digital Agency</Link></li>
                     <li><Link href="/software-agency">Software Agency</Link></li>
                     <li><Link href="/marketing-agency ">Marketing Agency</Link></li>
                     <li><Link href="/design-studio">Design Studio</Link></li>
-                    <li className="active"><Link href="/personal-portfolio">Personal Portfolio</Link>
+                    <li className=""><Link href="/personal-portfolio">Personal Portfolio</Link>
                     </li>
                     <li><Link href="/saas-product">SaaS Product</Link></li>
                   </ul>
@@ -43,11 +43,11 @@ const Header5 = () => {
                   <i className="bi bi-chevron-right dropdown-icon" />
                   <ul className="sub-menu">
                     <li><Link href="/digital-agency-dark">Digital Agency</Link></li>
-                    <li><Link href="/software-agency">Software Agency</Link></li>
-                    <li><Link href="/marketing-agency ">Marketing Agency</Link></li>
-                    <li><Link href="/design-studio">Design Studio</Link></li>
-                    <li><Link href="/personal-portfolio">Personal Portfolio</Link></li>
-                    <li><Link href="/saas-product">SaaS Product</Link></li>
+                    <li><Link href="/software-agency-dark">Software Agency</Link></li>
+                    <li><Link href="/marketing-agency-dark ">Marketing Agency</Link></li>
+                    <li><Link href="/design-studio-dark">Design Studio</Link></li>
+                    <li><Link href="/personal-portfolio-dark">Personal Portfolio</Link></li>
+                    <li><Link href="/saas-product-dark">SaaS Product</Link></li>
                   </ul>
                 </li>
               </ul>

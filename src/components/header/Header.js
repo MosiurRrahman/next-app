@@ -15,8 +15,8 @@ const Header = ( {style=""}) => {
  <Sidebar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
     <header className={`header-area style-1 ${style}`}>
       <div className="header-logo">
-        <Link href="/"><img alt="image" className="img-fluid light" src="/assets/img/black-logo.svg" /></Link>
         <Link href="/"><img alt="image" className="img-fluid dark" src="/assets/img/white-logo.svg" /></Link>
+        <Link href="/"><img alt="image" className="img-fluid light" src="/assets/img/black-logo.svg" /></Link>
       </div>
       <div className="menu-wrap">
         <div className="main-menu">
@@ -26,16 +26,16 @@ const Header = ( {style=""}) => {
             </div>
           </div>
           <ul className="menu-list">
-            <li className="menu-item-has-children active">
+            <li className="menu-item-has-children ">
               <a href="#" className="drop-down">Home</a><i className="bi bi-plus dropdown-icon" />
               <svg xmlns="http://www.w3.org/2000/svg" width={18} height={10} viewBox="0 0 18 10">
                 <path d="M18 4.95V10H13.0154V8.62143H15.7362L10.6962 3.50714L6.59769 7.65714L0 0.978571L0.962308 0L6.59769 5.71429L10.6962 1.56429L16.6154 7.57857V4.95H18Z" />
               </svg>
               <ul className="sub-menu">
-                <li className="active"><Link href="/">Light Version</Link>
+                <li className=""><Link href="/">Light Version</Link>
                   <i className="bi bi-chevron-right dropdown-icon" />
                   <ul className="sub-menu">
-                    <li className="active"><Link href="/">Digital Agency</Link></li>
+                    <li className=""><Link href="/">Digital Agency</Link></li>
                     <li><Link href="/software-agency">Software Agency</Link></li>
                     <li><Link href="/marketing-agency ">Marketing Agency</Link></li>
                     <li><Link href="/design-studio">Design Studio</Link></li>
