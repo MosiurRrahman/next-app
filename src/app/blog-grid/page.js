@@ -1,9 +1,16 @@
 import Footer from '@/components/Footer/Footer'
 import Breadcrumb from '@/components/common/Breadcrumb'
-import Header from '@/components/header/Header'
 import InnerPageHeader from '@/components/header/InnerPageHeader'
 import Link from 'next/link'
 import React from 'react'
+
+
+export const metadata = {
+  title: "Axleo - Digital Agency Creative Portfolio Template",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
 
 const page = () => {
   return (

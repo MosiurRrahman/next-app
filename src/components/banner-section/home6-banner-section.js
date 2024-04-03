@@ -3,7 +3,10 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import Marquee from 'react-fast-marquee';
 import ModalVideo from "react-modal-video";
+
 const Home6BannerSection = () => {
+
+  
   const [isOpen, setOpen] = useState(false);
   useEffect(() => {
     const handleScroll = () => {

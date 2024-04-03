@@ -13,6 +13,15 @@ import Home4WorkSection from "@/components/work-section/home4-work-section";
 import Link from "next/link";
 import React from "react";
 
+export const metadata = {
+  title: "Axleo - Digital Agency Creative Portfolio Template",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
+
+
+
 const DesignStudio = () => {
   return (
     <>
@@ -25,7 +34,7 @@ const DesignStudio = () => {
       <Home4TestimonialSection />
       <Home4TeamSection />
       <Home4AwardSection />
-      <Home4BlogSection/>
+      <Home4BlogSection />
       <Home4ContactSection />
       <Footer4 />
     </>

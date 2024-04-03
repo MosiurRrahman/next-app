@@ -1,15 +1,18 @@
-"use client";
 import Footer3 from "@/components/Footer/Footer3";
 import Header from "@/components/header/Header";
+import ChoosePaymentMethod from "@/utils/ChoosePaymentMethod";
 import HandleQuantity from "@/utils/HandleQuantity";
 import Link from "next/link";
-import React, { useState } from "react";
+
+
+export const metadata = {
+  title: "Axleo - Digital Agency Creative Portfolio Template",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
 
 const CheckoutPage = () => {
-  const [activeOption, setActiveOption] = useState("paypal");
-  const handleOptionChange = (option) => {
-    setActiveOption(option);
-  };
   return (
     <>
       <Header />
@@ -200,94 +203,13 @@ const CheckoutPage = () => {
                               </li>
                             </ul>
                           </div>
-                          <div className="choose-payment-method">
-                            <h6>Select Payment Method</h6>
-                            <div className="payment-option">
-                              <ul>
-                                <li
-                                  onClick={() => handleOptionChange("paypal")}
-                                  className={`paypal ${
-                                    activeOption === "paypal" ? "active" : ""
-                                  }`}
-                                >
-                                  <img
-                                    src="assets/img/innerpage/vector/payPal.svg"
-                                    alt=""
-                                  />
-                                  <div className="checked">
-                                    <i className="bi bi-check" />
-                                  </div>
-                                </li>
-                                <li
-                                  className={`stripe ${
-                                    activeOption === "stripe" ? "active" : ""
-                                  }`}
-                                  onClick={() => handleOptionChange("stripe")}
-                                >
-                                  <img
-                                    src="assets/img/innerpage/vector/stripe.svg"
-                                    alt=""
-                                  />
-                                  <div className="checked">
-                                    <i className="bi bi-check" />
-                                  </div>
-                                </li>
-                                <li
-                                  className={`offline ${
-                                    activeOption === "offline" ? "active" : ""
-                                  }`}
-                                  onClick={() => handleOptionChange("offline")}
-                                >
-                                  <img
-                                    src="assets/img/innerpage/vector/offline.svg"
-                                    alt=""
-                                  />
-                                  <div className="checked">
-                                    <i className="bi bi-check" />
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                            <div
-                              div
-                              className="pt-25"
-                              id="StripePayment"
-                              style={{
-                                display:
-                                  activeOption === "stripe" ? "block" : "none",
-                              }}
-                            >
-                              <div className="row g-4">
-                                <div className="col-md-12">
-                                  <div className="form-inner">
-                                    <label>Card Number</label>
-                                    <input
-                                      type="text"
-                                      placeholder="1234 1234 1234 1234"
-                                    />
-                                  </div>
-                                </div>
-                                <div className="col-md-6">
-                                  <div className="form-inner">
-                                    <label>Expiry</label>
-                                    <input type="text" placeholder="MM/YY" />
-                                  </div>
-                                </div>
-                                <div className="col-md-6">
-                                  <div className="form-inner">
-                                    <label>CVC</label>
-                                    <input type="text" placeholder="CVC" />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                          <ChoosePaymentMethod />
                           <button
                             type="submit"
                             className="primary-btn3 btn-hover"
                           >
                             Place Your Order
-                            <span style={{top: '50.5px', left: '83.75px'}} />
+                            <span style={{ top: "50.5px", left: "83.75px" }} />
                           </button>
                         </div>
                       </div>
@@ -523,4 +445,4 @@ const CheckoutPage = () => {
   );
 };
 
-export default CheckoutPage ;
+export default CheckoutPage;

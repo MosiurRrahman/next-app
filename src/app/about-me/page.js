@@ -6,6 +6,13 @@ import Header5 from '@/components/header/Header5'
 import Home5ServiceSection from '@/components/services-section/home5-service-section'
 import React from 'react'
 
+export const metadata = {
+    title: "Axleo - Digital Agency Creative Portfolio Template",
+    icons: {
+      icon: "/assets/img/sm-logo.svg",
+    },
+};
+
 const AboutMe = () => {
   return (
     <>

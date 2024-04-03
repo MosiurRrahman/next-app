@@ -91,7 +91,7 @@ const OfferGallaryPage = () => {
             {items.map((element, index) => {
               return (
                 <div
-                  id={element.id}
+                  key={element.id}
                   className="col-lg-4 col-sm-6 grid-item activites office"
                 >
                   <div className="single-gallery-img">

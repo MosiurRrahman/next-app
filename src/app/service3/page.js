@@ -8,6 +8,13 @@ import Home2TestimonialSection from "@/components/testimonial-section/home2-test
 import Link from "next/link";
 import React from "react";
 
+export const metadata = {
+  title: "Axleo - Digital Agency Creative Portfolio Template",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
+
 const Service3Page = () => {
   return (
     <>

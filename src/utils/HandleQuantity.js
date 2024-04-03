@@ -1,5 +1,6 @@
 
 
+"use client"
 import React, { useReducer } from 'react';
 
 // Reducer function to manage quantity state

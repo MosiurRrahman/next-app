@@ -7,6 +7,13 @@ import Home1ProcessSection from "@/components/process-section/home1-process-sect
 import Home1solutionSection from "@/components/solution-section/Home1solution-section";
 import React from "react";
 
+export const metadata = {
+  title: "Axleo - Digital Agency Creative Portfolio Template",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
+
 const service2 = () => {
   return (
     <>

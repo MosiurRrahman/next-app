@@ -11,6 +11,16 @@ import Home2ServicesSection from "@/components/services-section/home2-services-s
 import Home2TechnologySection from "@/components/technology-section/home2-technology-section";
 import Home2TestimonialSection from "@/components/testimonial-section/home2-testimonial-section";
 
+
+
+
+export const metadata = {
+  title: "Axleo - Digital Agency Creative Portfolio Template",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
+
 const SoftwareAgencyPage = () => {
   return (
     <>

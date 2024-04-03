@@ -1,4 +1,3 @@
-"use client";
 import Footer from "@/components/Footer/Footer";
 import Home1About from "@/components/about/Home1About";
 import Home1AwardSection from "@/components/award-section/home1-award-section";
@@ -10,13 +9,14 @@ import Home1ProcessSection from "@/components/process-section/home1-process-sect
 import Home1solutionSection from "@/components/solution-section/Home1solution-section";
 import Home1TestimonialSection from "@/components/testimonial-section/home1-testimonial-section";
 import HomeworkSection from "@/components/work-section/Homework-section";
-import { useEffect } from "react";
 
-
+export const metadata = {
+  title: "Axleo - Digital Agency Creative Portfolio Template",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
 export default function Home() {
-  useEffect(() => {
-    document.body.classList.add("home1-bg");
-  }, []);
   return (
     <>
       <Header />
@@ -28,7 +28,7 @@ export default function Home() {
         </div>
         <Home1BannerSection />
         <Home1About />
-        <Home1solutionSection style="pb-130"/>
+        <Home1solutionSection style="pb-130" />
         <HomeworkSection />
         <Home1ProcessSection />
         <Home1TestimonialSection />

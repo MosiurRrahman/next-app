@@ -7,6 +7,14 @@ import Link from "next/link";
 import React from "react";
 import Marquee from "react-fast-marquee";
 
+
+export const metadata = {
+  title: "Axleo - Digital Agency Creative Portfolio Template",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
+
 const ServicePage = () => {
   return (
     <>

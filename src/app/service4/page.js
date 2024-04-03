@@ -6,11 +6,17 @@ import Home3ServiceSection from "@/components/services-section/home3-service-sec
 import Link from "next/link";
 import React from "react";
 
+export const metadata = {
+  title: "Axleo - Digital Agency Creative Portfolio Template",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
+
 const Service4page = () => {
   return (
     <>
       <InnerPageHeader />
-
       <Breadcrumb bgImg="4" title2="SMART SERVICE" title="WE PROVIDE" />
       <div className="home3-working-process-section pt-130 mb-130">
         <div className="container-lg container-fluid">
@@ -121,7 +127,6 @@ const Service4page = () => {
         </div>
       </div>
       <Home3ServiceSection />
-
       <div className="contact-section mb-130">
         <div className="container-lg container-fluid">
           <div className="row g-lg-4 gy-5">
@@ -162,7 +167,6 @@ const Service4page = () => {
         </div>
       </div>
       <Home3GallerySection />
-
       <Footer3 />
     </>
   );

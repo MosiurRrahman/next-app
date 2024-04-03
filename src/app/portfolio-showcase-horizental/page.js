@@ -106,7 +106,7 @@ const PortfolioShowcaseHorizental = () => {
                       </p>
                       <ul>
                         {element.horizontal_tag.map((e, i)=> <li key={i}>
-                          <Lnik href="/portfolio-showcase">{e}</Lnik>
+                          <Link href="/portfolio-showcase">{e}</Link>
                         </li>)}
                         
                       </ul>
