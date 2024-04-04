@@ -11,6 +11,14 @@ import Home5WorkSection from "@/components/work-section/home5-work-section";
 import Link from "next/link";
 import React from "react";
 
+
+export const metadata = {
+  title: "Axleo - Digital Agency Creative Portfolio Template",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
+
 const PersonalPortfolio = () => {
   return (
     <>

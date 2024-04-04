@@ -1,9 +1,29 @@
+"use client"
 import Footer3 from '@/components/Footer/Footer3'
 import Header from '@/components/header/Header'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const PortfolioInteractiveLink = () => {
+  useEffect(() => {
+    const interactiveImgItem = document.querySelectorAll(
+      ".single-interactive-link"
+    );
+    function followImagesCursor(event, interactiveImgItem) {
+      const contentBox = interactiveImgItem.getBoundingClientRect();
+      const dx = event.clientX - contentBox.x;
+      const dy = event.clientY - contentBox.y;
+      interactiveImgItem.children[1].style.transform = `translate(${dx}px, ${dy}px)`;
+    }
+  
+    interactiveImgItem.forEach((item, i) => {
+      item.addEventListener("mousemove", (event) => {
+        setInterval(followImagesCursor(event, item), 100);
+      });
+    });
+  
+  }, [])
+  
   return (
     <>
      <Header/>

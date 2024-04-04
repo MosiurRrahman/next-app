@@ -1,7 +1,14 @@
+import Footer3 from '@/components/Footer/Footer3'
 import Header from '@/components/header/Header'
 import InnerPageHeader from '@/components/header/InnerPageHeader'
 import Link from 'next/link'
 import React from 'react'
+export const metadata = {
+  title: "Axleo - Digital Agency Creative Portfolio Template",
+  icons: {
+    icon: "/assets/img/sm-logo.svg",
+  },
+};
 
 const OurTeam2 = () => {
   return (
@@ -318,7 +325,7 @@ const OurTeam2 = () => {
     </div>
   </div>
 
-
+  <Footer3 />
     </>
   )
 }

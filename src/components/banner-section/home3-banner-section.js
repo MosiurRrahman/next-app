@@ -1,6 +1,11 @@
-import React from 'react'
+
+"use client"
+import React, { useEffect } from 'react'
 
 const Home3BannerSection = () => {
+  useEffect(() => {
+    document.body.classList.add("home1-bg");
+  }, []);
   return (
     <>
        <div className="home3-banner-area">

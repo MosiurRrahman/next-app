@@ -188,8 +188,6 @@ const ShowcaseSlider = () => {
           </div>
         </Swiper>
       </div>
-
-      <Footer3 />
     </>
   );
 };

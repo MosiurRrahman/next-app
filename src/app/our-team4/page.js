@@ -3,7 +3,13 @@ import Home3GallerySection from '@/components/gallery-section/home3-gallery-sect
 import Header from '@/components/header/Header'
 import Link from 'next/link'
 import React from 'react'
-
+export const metadata = {
+    title: "Axleo - Digital Agency Creative Portfolio Template",
+    icons: {
+      icon: "/assets/img/sm-logo.svg",
+    },
+  };
+  
 const OurTeam4 = () => {
   return (
     <>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import portfolioShowcaseData from "../../data/portfolio-showcase.json";
 import Footer3 from "@/components/Footer/Footer3";
 import Header from "@/components/header/Header";
@@ -31,6 +31,27 @@ const PortfolioShowcaseHorizental = () => {
       categoryData.categorySlug,
     ]),
   ]);
+
+
+
+    useEffect(() => {
+      const workImgItem = document.querySelectorAll(
+        ".portfolio-showcase-horizental .single-work"
+      );
+      function followImageCursor(event, workImgItem) {
+        const contentBox = workImgItem.getBoundingClientRect();
+        const dx = event.clientX - contentBox.x;
+        const dy = event.clientY - contentBox.y;
+        workImgItem.children[2].style.transform = `translate(${dx}px, ${dy}px)`;
+      }
+    
+      workImgItem.forEach((item, i) => {
+        item.addEventListener("mousemove", (event) => {
+          setInterval(followImageCursor(event, item), 100);
+        });
+      });
+    
+    }, []);
   return (
     <>
       <Header />
@@ -129,7 +150,7 @@ const PortfolioShowcaseHorizental = () => {
                           >
                             <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"></path>
                           </svg>
-                          <span />
+                          <span style={{ top: '50.5px', left: '83.75px' }} />
                         </Link>
                       </div>
                     </div>
@@ -151,7 +172,7 @@ const PortfolioShowcaseHorizental = () => {
                     <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"></path>
                   </svg>{" "}
                   Load More <strong>Portfolio</strong>
-                  <span />
+                  <span style={{ top: '50.5px', left: '83.75px' }} />
                 </button>
               </div>
             </div>
