@@ -3,7 +3,34 @@ import Home3GallerySection from '@/components/gallery-section/home3-gallery-sect
 import Header from '@/components/header/Header'
 import React from 'react'
 import Link from 'next/link';
+import React, { useEffect, useMemo, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, {
+  Autoplay,
+  EffectFade,
+  Navigation,
+  Pagination,
+} from "swiper";
+SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 const CareerPage = () => {
+  const settings = useMemo(()=>{
+    return {
+      speed: 1500,
+        spaceBetween: 30,
+        autoplay: {
+          delay: 2500, // Autoplay duration in milliseconds
+          disableOnInteraction: false,
+        },
+        effect: "fade", // Use the fade effect
+        fadeEffect: {
+          crossFade: true, // Enable cross-fade transition
+        },
+        pagination: {
+          el: ".career-pagination",
+          clickable: "true",
+        },
+    }
+  },[])
   return (
     <>
 
@@ -69,31 +96,31 @@ const CareerPage = () => {
                 </div>
               </div>
             </div>
-            <div className="swiper career-img-slider">
+            <Swiper {...settings} className="swiper career-img-slider">
               <div className="swiper-wrapper">
-                <div className="swiper-slide">
+                <SwiperSlide className="swiper-slide">
                   <div className="career-img">
                     <img src="assets/img/innerpage/career-img1.jpg" alt="" />
                   </div>
-                </div>
-                <div className="swiper-slide">
+                </SwiperSlide>
+                <SwiperSlide className="swiper-slide">
                   <div className="career-img">
                     <img src="assets/img/innerpage/career-img2.jpg" alt="" />
                   </div>
-                </div>
-                <div className="swiper-slide">
+                </SwiperSlide>
+                <SwiperSlide className="swiper-slide">
                   <div className="career-img">
                     <img src="assets/img/innerpage/career-img3.jpg" alt="" />
                   </div>
-                </div>
-                <div className="swiper-slide">
+                </SwiperSlide>
+                <SwiperSlide className="swiper-slide">
                   <div className="career-img">
                     <img src="assets/img/innerpage/career-img4.jpg" alt="" />
                   </div>
-                </div>
+                </SwiperSlide>
               </div>
               <div className="career-pagination" />
-            </div>
+            </Swiper>
             <div className="review-and-counter-area">
               <a href="https://clutch.co/" className="review-area">
                 <div className="review-name">
