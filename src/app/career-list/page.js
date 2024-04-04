@@ -2,7 +2,7 @@
 import Footer3 from '@/components/Footer/Footer3'
 import Home3GallerySection from '@/components/gallery-section/home3-gallery-section'
 import Header from '@/components/header/Header'
-import React from 'react'
+
 import Link from 'next/link';
 import React, { useEffect, useMemo, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
