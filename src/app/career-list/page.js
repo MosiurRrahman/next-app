@@ -1,5 +1,4 @@
 import Footer3 from "@/components/Footer/Footer3";
-
 import Home3GallerySection from "@/components/gallery-section/home3-gallery-section";
 import Header from "@/components/header/Header";
 import InnerPageHeader from "@/components/header/InnerPageHeader";
