@@ -1,7 +1,7 @@
 
 "use client";
 import { useCountdownTimer } from "@/customHooks/useCountdownTimer";
-
+import Link from "next/link";
 const Home6HighlightAuction = () => {
   const { days, hours, minutes, seconds } = useCountdownTimer("2024-10-23 12:00:00")
   return (

@@ -194,7 +194,7 @@ const Home7Banner2 = () => {
                     </div>
                   </div>
                 </SwiperSlide>
-                <SwiperSlidediv className="swiper-slide">
+                <SwiperSlide className="swiper-slide">
                   <div className="single-banner" style={{ backgroundImage: 'url(../assets/img/home7/home7-banner2-bg4.png), linear-gradient(180deg, rgba(210, 235, 229, 1) 0%, rgba(210, 235, 229, 1) 100%)' }}>
                     <div className="row">
                       <div className="col-xl-7 col-lg-10 col-md-6 d-flex align-items-center">
@@ -238,7 +238,7 @@ const Home7Banner2 = () => {
                       </div>
                     </div>
                   </div>
-                </SwiperSlidediv>
+                </SwiperSlide>
               </div>
             </Swiper>
           </div>

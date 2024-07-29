@@ -8,7 +8,7 @@ import Footer5 from "@/components/footer/Footer5";
 import InnerPageHeader5 from "@/components/header/InnerPageHeader5";
 import Breadcrumb5 from "@/components/common/Breadcrumb5";
 const products = auctionCardData["products"];
-const page = () => {
+const AuctionGridPage = () => {
   const [activeColumn, setActiveColumn] = useState(4);
   const [currentPage, setCurrentPage] = useState(1);
   const [sortedProducts, setSortedProducts] = useState(products);
@@ -406,4 +406,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default AuctionGridPage;

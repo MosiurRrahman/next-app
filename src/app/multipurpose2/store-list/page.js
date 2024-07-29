@@ -71,7 +71,7 @@ const StoreListPage = () => {
                           {
                             phone.map((e)=>{
                               return (
-                                <h6><a href={`tel:${e}`}>{e}</a></h6>
+                                <h6 key={e}><a href={`tel:${e}`}>{e}</a></h6>
                               )
                             })
                           }
