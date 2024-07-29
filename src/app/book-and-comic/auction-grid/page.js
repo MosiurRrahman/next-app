@@ -6,9 +6,9 @@ import auctionCardData from "../../../data/auction-card.json";
 import SelectComponent from '@/components/common/SelectComponent';
 import InnerPageHeader6 from '@/components/header/InnerPageHeader6';
 import Breadcrumb6 from '@/components/common/Breadcrumb6';
-import Footer6 from '@/components/footer/Footer5';
+import Footer5 from '@/components/footer/Footer5';
 const products = auctionCardData["products"]
-const page = () => {
+const AuctionGrid = () => {
     const [activeColumn, setActiveColumn] = useState(4);
     const [currentPage, setCurrentPage] = useState(1);
     const [sortedProducts, setSortedProducts] = useState(products);
@@ -406,9 +406,9 @@ const page = () => {
           </div>
         </div>
       </div>
-     <Footer6/> 
+     <Footer5/> 
     </>
   )
 }
 
-export default page
+export default AuctionGrid

@@ -99,7 +99,7 @@ const StoreListPage = () => {
                           <div className="content">
                             {phone.map((e) => {
                               return (
-                                <h6>
+                                <h6 key={e}>
                                   <a href={`tel:${e}`}>{e}</a>
                                 </h6>
                               );
