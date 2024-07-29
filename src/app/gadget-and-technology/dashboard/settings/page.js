@@ -2,7 +2,7 @@ import Breadcrumb5 from "@/components/common/Breadcrumb5";
 import InnerpageFooter5 from "@/components/footer/InnerpageFooter5";
 import InnerPageHeader5 from "@/components/header/InnerPageHeader5";
 import React from "react";
-
+import Link from "next/link"
 const SettingsPage = () => {
   return (
     <>
