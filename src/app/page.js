@@ -1,41 +1,35 @@
-import Footer from "@/components/Footer/Footer";
-import Home1About from "@/components/about/Home1About";
-import Home1AwardSection from "@/components/award-section/home1-award-section";
-import Home1BannerSection from "@/components/banner-section/home1-banner-section";
-import Home1BlogSection from "@/components/blog-section/home1-blog-section";
-import Home1ContactSection from "@/components/contact-section/home1-contact-section";
-import Header from "@/components/header/Header";
-import Home1ProcessSection from "@/components/process-section/home1-process-section";
-import Home1solutionSection from "@/components/solution-section/Home1solution-section";
-import Home1TestimonialSection from "@/components/testimonial-section/home1-testimonial-section";
-import HomeworkSection from "@/components/work-section/Homework-section";
 
-export const metadata = {
-  title: "Axleo - Digital Agency Creative Portfolio Template",
-  icons: {
-    icon: "/assets/img/sm-logo.svg",
-  },
-};
+import Home1About from "@/components/about-section/Home1About";
+import Home1Banner from "@/components/banner/Home1Banner";
+import Home1Banner2 from "@/components/banner/Home1Banner2";
+import Home1Blog from "@/components/blog/Home1Blog";
+import Home1Category from "@/components/category/Home1Category";
+import Home1Faq from "@/components/faq/Home1Faq";
+import Footer from "@/components/footer/Footer";
+import Header from "@/components/header/Header";
+import Home1LatestAuction from "@/components/latest-auction/Home1LatestAuction";
+import Home1LiveAuction from "@/components/live-auction/Home1LiveAuction";
+import Home1LogoSection from "@/components/logo-section/Home1LogoSection";
+import Home1ProcessSection from "@/components/process-section/Home1ProcessSection";
+import Home1Testimonial from "@/components/testimonial/Home1Testimonial";
+import Home1UpcomingAuction from "@/components/upcoming-auction/Home1UpcomingAuction";
+
 export default function Home() {
   return (
     <>
       <Header />
-      <main className="page-content">
-        <div className="line_wrap">
-          <div className="line_item first-line" />
-          <div className="line_item center-line" />
-          <div className="line_item last-line" />
-        </div>
-        <Home1BannerSection />
-        <Home1About />
-        <Home1solutionSection style="pb-130" />
-        <HomeworkSection />
-        <Home1ProcessSection />
-        <Home1TestimonialSection />
-        <Home1AwardSection />
-        <Home1BlogSection />
-        <Home1ContactSection />
-      </main>
+      <Home1Banner />
+      <Home1LiveAuction />
+      <Home1Category />
+      <Home1LatestAuction />
+      <Home1Banner2 />
+      <Home1About />
+      <Home1UpcomingAuction />
+      <Home1ProcessSection />
+      <Home1LogoSection />
+      <Home1Faq />
+      <Home1Testimonial />
+      <Home1Blog />
       <Footer />
     </>
   );
