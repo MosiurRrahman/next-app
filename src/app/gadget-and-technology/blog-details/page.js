@@ -300,10 +300,10 @@ const CarAuctionBlogDetails = () => {
                       </Link>
                     </li>
                     <li>
-                      <link href="/gadget-and-technology/blog-sidebar">
+                      <Link href="/gadget-and-technology/blog-sidebar">
                         Books &amp; Comic
                         <span>(40)</span>
-                      </link>
+                      </Link>
                     </li>
                   </ul>
                 </div>

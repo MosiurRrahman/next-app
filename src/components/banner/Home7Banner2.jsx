@@ -7,6 +7,7 @@ import SwiperCore, {
   Pagination,
 } from "swiper";
 import Link from "next/link";
+import { useMemo } from "react";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 const Home7Banner2 = () => {

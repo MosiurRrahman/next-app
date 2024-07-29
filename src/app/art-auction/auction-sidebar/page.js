@@ -317,7 +317,7 @@ const AuctionSidebarPage = () => {
                 <h5 className="widget-title">Highest Bidding</h5>
                 <div className="highest-bidding-widget mb-20">
                   <div className="highest-bidding-img">
-                    <link href="/art-auction/auction-details"><img src="/assets/img/inner-pages/highest-bidding-img1.jpg" alt="" /></link>
+                    <Link href="/art-auction/auction-details"><img src="/assets/img/inner-pages/highest-bidding-img1.jpg" alt="" /></Link>
                   </div>
                   <div className="highest-bidding-content">
                     <h6><Link href="/art-auction/auction-details">Poutsicle Hydratingani Stain offering.</Link></h6>
