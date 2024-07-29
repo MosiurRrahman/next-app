@@ -3,7 +3,7 @@ import Home5About from "@/components/about-section/Home5About";
 import Home2Blog from "@/components/blog/Home2Blog";
 import Breadcrumb7 from "@/components/common/Breadcrumb7";
 import Home2Faq from "@/components/faq/Home2Faq";
-import InnerPageFooter7 from "@/components/footer/innerPageFooter7";
+import InnerPageFooter7 from "@/components/footer/InnerPageFooter7";
 import Header7 from "@/components/header/Header7";
 import Home2ProcessSection from "@/components/process-section/Home2ProcessSection";
 import Home2Testimonial from "@/components/testimonial/Home2Testimonial";

@@ -6,7 +6,7 @@ const products = auctionCardData["products"]
 import { useEffect, useState } from "react";
 import Header7 from "@/components/header/Header7";
 import Breadcrumb7 from "@/components/common/Breadcrumb7";
-import InnerPageFooter7 from "@/components/footer/innerPageFooter7";
+import InnerPageFooter7 from "@/components/footer/InnerPageFooter7";
 import Link from "next/link";
 const AuctionSidebarPage = () => {
 

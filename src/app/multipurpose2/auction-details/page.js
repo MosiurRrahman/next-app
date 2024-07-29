@@ -13,7 +13,7 @@ import { useCountdownTimer } from '@/customHooks/useCountdownTimer';
 import AuctionCard from '@/components/auction/auction-card';
 import Header7 from "@/components/header/Header7";
 import Breadcrumb7 from "@/components/common/Breadcrumb7";
-import InnerPageFooter7 from "@/components/footer/innerPageFooter7";
+import InnerPageFooter7 from "@/components/footer/InnerPageFooter7";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 const AuctionDetailsPage = () => {

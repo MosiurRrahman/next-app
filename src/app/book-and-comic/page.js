@@ -1,5 +1,5 @@
 import Home6PopularAuction from "@/components/auction/Home6PopularAuction";
-import Home6HighlightAuction from "@/components/auction/home6HighlightAuction";
+// import Home6HighlightAuction from "@/components/auction/home6HighlightAuction";
 import Banner6 from "@/components/banner/Banner6";
 import Home6Banner2 from "@/components/banner/Home6Banner2";
 import Home6Blog from "@/components/blog/Home6Blog";
@@ -21,7 +21,7 @@ const page = () => {
       <Home6Category />
       <Home6PopularAuction />
       <Home6ProcessSection />
-      <Home6HighlightAuction />
+      {/* <Home6HighlightAuction /> */}
       <Home6Banner2 />
       <Home6Featured />
       <Home6Testimonial />

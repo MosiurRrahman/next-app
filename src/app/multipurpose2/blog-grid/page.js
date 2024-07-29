@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Footer7 from "@/components/footer/Footer7";
 import Breadcrumb7 from "@/components/common/Breadcrumb7";
 import Header7 from "@/components/header/Header7";
-import InnerPageFooter7 from "@/components/footer/innerPageFooter7";
+import InnerPageFooter7 from "@/components/footer/InnerPageFooter7";
 const CarAuctionBlogGrid = () => {
     const blogGridData = blogData["blog_grid"]
   return (
