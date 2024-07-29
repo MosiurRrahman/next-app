@@ -13,31 +13,36 @@ import "../../public/assets/css/bootstrap.min.css";
 // import "yet-another-react-lightbox/styles.css";
 import "../../public/assets/css/style.css";
 
-import { Playfair_Display, DM_Sans } from 'next/font/google'
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import useHoverEffect from "../customHooks/useHoverEffect";
- 
+import ScrollTopBtn from "../components/common/ScrollTopBtn.jsx";
+
 const playfair_display = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-playfair',
-  display: 'swap',
-  styles: ['normal', 'italic'],
-  weights: ['400', '500', '600', '700'],
-})
- 
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+  styles: ["normal", "italic"],
+  weights: ["400", "500", "600", "700"],
+});
+
 const dm_mono = DM_Sans({
-  subsets: ['latin'],
-  variable: '--font-dmsans',
-  display: 'swap',
-  weights: ['400', '500', '600', '700','800'],
-})
+  subsets: ["latin"],
+  variable: "--font-dmsans",
+  display: "swap",
+  weights: ["400", "500", "600", "700", "800"],
+});
 export default function RootLayout({ children }) {
-  useHoverEffect('.btn-hover');
+  useHoverEffect(".btn-hover");
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
   return (
-    <html lang="en"  /* className={`${playfair_display.variable} ${dm_mono.variable}`}*/   >
-      <body>{children}</body>
+    <html
+      lang="en" /* className={`${playfair_display.variable} ${dm_mono.variable}`}*/
+    >
+      <body>
+        {children} <ScrollTopBtn />
+      </body>
     </html>
   );
 }

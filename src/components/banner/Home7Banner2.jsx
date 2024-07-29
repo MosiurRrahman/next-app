@@ -246,7 +246,6 @@ const Home7Banner2 = () => {
         </div>
         <div className="paginations1" />
       </div>
-
     </>
   )
 }
