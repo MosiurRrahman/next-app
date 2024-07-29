@@ -11,11 +11,12 @@ import SwiperCore, {
 
 import { useCountdownTimer } from "@/customHooks/useCountdownTimer";
 import AuctionCard from "@/components/auction/auction-card";
-import Footer5 from "@/components/footer/Footer5";
+
 import InnerPageHeader5 from "@/components/header/InnerPageHeader5";
 import Breadcrumb5 from "@/components/common/Breadcrumb5";
-import Footer5 from "@/components/footer/Footer5";
+
 import Link from "next/link";
+import Footer5 from "@/components/footer/Footer5";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 const AuctionDetailsPage = () => {
