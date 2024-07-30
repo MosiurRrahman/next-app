@@ -168,7 +168,7 @@ const ChangePasswordPage = () => {
                     </div>
                     <button className="primary-btn btn-hover two">
                       Change Password
-                      <span />
+                     <span style={{top: '40.5px', left: '84.2344px'}} />
                     </button>
                   </form>
                 </div>

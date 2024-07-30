@@ -1,7 +1,10 @@
+"use client"
+import { useCountdownTimer } from '@/customHooks/useCountdownTimer';
 import Link from 'next/link'
 import React from 'react'
 
 const Home3HighestBidding = () => {
+  const { days, hours, minutes, seconds } = useCountdownTimer("2024-10-23 12:00:00");
   return (
     <>
       <div className="home3-highest-Bidding-section mb-110">
@@ -69,19 +72,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-23 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -134,19 +137,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-05 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -199,19 +202,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-08-28 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -264,19 +267,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-15 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -329,19 +332,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-12 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -394,19 +397,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-18 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -459,19 +462,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-12 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -524,19 +527,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-18 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -606,19 +609,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-23 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -671,19 +674,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-05 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -736,19 +739,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-08-28 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -801,19 +804,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-15 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -866,19 +869,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-12 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -931,19 +934,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-18 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -996,19 +999,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-12 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -1061,19 +1064,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-18 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -1143,19 +1146,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-23 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -1208,19 +1211,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-05 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -1273,19 +1276,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-08-28 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -1338,19 +1341,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-15 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -1403,19 +1406,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-12 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -1468,19 +1471,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-18 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -1533,19 +1536,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-12 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -1598,19 +1601,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-18 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -1680,19 +1683,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-23 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -1745,19 +1748,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-05 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -1810,19 +1813,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-08-28 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -1875,19 +1878,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-15 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -1940,19 +1943,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-12 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -2005,19 +2008,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-18 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -2070,19 +2073,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-12 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -2135,19 +2138,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-18 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -2217,19 +2220,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-23 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -2282,19 +2285,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-05 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -2347,19 +2350,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-08-28 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -2412,19 +2415,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-15 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -2477,19 +2480,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-12 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -2542,19 +2545,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-18 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -2607,19 +2610,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-12 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>
@@ -2672,19 +2675,19 @@ const Home3HighestBidding = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-18 12:00:00">
-                          <li className="times" data-days={0}>00</li>
+                          <li className="times" data-days={0}>{days}<span>Days</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>00</li>
+                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>00</li>
+                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>00</li>
+                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                         </ul>
                       </div>
                     </div>

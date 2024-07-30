@@ -17,7 +17,7 @@ const Home4Blog = () => {
                 <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                   <circle cx={5} cy={5} r={5} />
                 </svg>
-                <span />
+               <span style={{top: '40.5px', left: '84.2344px'}} />
               </Link>
             </div>
           </div>

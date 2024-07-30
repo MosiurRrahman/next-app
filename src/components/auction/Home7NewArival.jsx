@@ -8,9 +8,11 @@ import SwiperCore, {
   Pagination,
 } from "swiper";
 import Link from "next/link";
+import { useCountdownTimer } from "@/customHooks/useCountdownTimer";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 const Home7NewArival = () => {
+  const { days, hours, minutes, seconds } = useCountdownTimer("2024-10-23 12:00:00");
   const settings = useMemo(() => {
     return {
       slidesPerView: "auto",
@@ -113,19 +115,19 @@ const Home7NewArival = () => {
                           </ul>
                           <div className="countdown-timer">
                             <ul data-countdown="2024-10-20 12:00:00">
-                              <li className="times" data-days={0}>00</li>
+                              <li className="times" data-days={0}>{days}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-hours={0}>00</li>
+                              <li className="times" data-hours={0}>{hours}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-minutes={0}>00</li>
+                              <li className="times" data-minutes={0}>{minutes}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-seconds={0}>00</li>
+                              <li className="times" data-seconds={0}>{seconds}</li>
                             </ul>
                           </div>
                         </div>
@@ -178,19 +180,19 @@ const Home7NewArival = () => {
                           </ul>
                           <div className="countdown-timer">
                             <ul data-countdown="2024-10-23 12:00:00">
-                              <li className="times" data-days={0}>00</li>
+                              <li className="times" data-days={0}>{days}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-hours={0}>00</li>
+                              <li className="times" data-hours={0}>{hours}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-minutes={0}>00</li>
+                              <li className="times" data-minutes={0}>{minutes}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-seconds={0}>00</li>
+                              <li className="times" data-seconds={0}>{seconds}</li>
                             </ul>
                           </div>
                         </div>
@@ -243,19 +245,19 @@ const Home7NewArival = () => {
                           </ul>
                           <div className="countdown-timer">
                             <ul data-countdown="2024-11-03 12:00:00">
-                              <li className="times" data-days={0}>00</li>
+                              <li className="times" data-days={0}>{days}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-hours={0}>00</li>
+                              <li className="times" data-hours={0}>{hours}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-minutes={0}>00</li>
+                              <li className="times" data-minutes={0}>{minutes}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-seconds={0}>00</li>
+                              <li className="times" data-seconds={0}>{seconds}</li>
                             </ul>
                           </div>
                         </div>
@@ -306,19 +308,19 @@ const Home7NewArival = () => {
                           </ul>
                           <div className="countdown-timer">
                             <ul data-countdown="2024-10-23 12:00:00">
-                              <li className="times" data-days={0}>00</li>
+                              <li className="times" data-days={0}>{days}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-hours={0}>00</li>
+                              <li className="times" data-hours={0}>{hours}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-minutes={0}>00</li>
+                              <li className="times" data-minutes={0}>{minutes}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-seconds={0}>00</li>
+                              <li className="times" data-seconds={0}>{seconds}</li>
                             </ul>
                           </div>
                         </div>
@@ -371,19 +373,19 @@ const Home7NewArival = () => {
                           </ul>
                           <div className="countdown-timer">
                             <ul data-countdown="2024-10-23 12:00:00">
-                              <li className="times" data-days={0}>00</li>
+                              <li className="times" data-days={0}>{days}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-hours={0}>00</li>
+                              <li className="times" data-hours={0}>{hours}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-minutes={0}>00</li>
+                              <li className="times" data-minutes={0}>{minutes}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-seconds={0}>00</li>
+                              <li className="times" data-seconds={0}>{seconds}</li>
                             </ul>
                           </div>
                         </div>
@@ -434,19 +436,19 @@ const Home7NewArival = () => {
                           </ul>
                           <div className="countdown-timer">
                             <ul data-countdown="2024-10-23 12:00:00">
-                              <li className="times" data-days={0}>00</li>
+                              <li className="times" data-days={0}>{days}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-hours={0}>00</li>
+                              <li className="times" data-hours={0}>{hours}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-minutes={0}>00</li>
+                              <li className="times" data-minutes={0}>{minutes}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-seconds={0}>00</li>
+                              <li className="times" data-seconds={0}>{seconds}</li>
                             </ul>
                           </div>
                         </div>
@@ -499,19 +501,19 @@ const Home7NewArival = () => {
                           </ul>
                           <div className="countdown-timer">
                             <ul data-countdown="2024-10-18 12:00:00">
-                              <li className="times" data-days={0}>00</li>
+                              <li className="times" data-days={0}>{days}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-hours={0}>00</li>
+                              <li className="times" data-hours={0}>{hours}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-minutes={0}>00</li>
+                              <li className="times" data-minutes={0}>{minutes}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-seconds={0}>00</li>
+                              <li className="times" data-seconds={0}>{seconds}</li>
                             </ul>
                           </div>
                         </div>
@@ -541,7 +543,7 @@ const Home7NewArival = () => {
                 <svg width={11} height={11} viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9.22781 7.97482L1.25294 -4.57764e-05L0 1.25289L7.97487 9.22776H1.25294V11H11V1.25289H9.22781V7.97482Z" />
                 </svg>
-                <span />
+               <span style={{top: '40.5px', left: '84.2344px'}} />
               </Link>
             </div>
           </div>

@@ -1,9 +1,19 @@
 import Link from 'next/link'
 import React from 'react'
+import SingleSearchBox from '../common/SingleSearchBox';
 
-const AuctionFilterSidebar = () => {
+const AuctionFilterSidebar = ({isMenuOpen}) => {
+  const condition = ["New", "Used", "Refurbished"];
+  const countries = ["Spain", "France", "Brazil", "Bangladesh"];
+  const period = [
+    "Today  (110)",
+    "Yesterday (115)",
+    "Last 7 Days (515)",
+    "Last 30 Days (945)",
+  ];
+  const sales = ["Online", "In-Store", "Phone Order", "Email Order"];
   return (
-    <div className="filter-sidebar">
+    <div className={`filter-sidebar ${isMenuOpen?"slide":""}`}>
       <div className="auction-sidebar">
         <form>
           <div className="single-widget mb-30">
@@ -15,33 +25,13 @@ const AuctionFilterSidebar = () => {
             </div>
           </div>
           <div className="single-widget mb-30">
-            <div className="single-search-box">
-              <div className="searchbox-input">
-                <label>Sales</label>
-                <div className="custom-select-dropdown">
-                  <div className="select-input">
-                    <input type="text" readOnly defaultValue="Online" />
-                    <i className="bi bi-chevron-down" />
-                  </div>
-                  <div className="custom-select-wrap two">
-                    <ul className="option-list">
-                      <li className="single-item">
-                        <h6>Online</h6>
-                      </li>
-                      <li className="single-item">
-                        <h6>In-Store</h6>
-                      </li>
-                      <li className="single-item">
-                        <h6>Phone Order</h6>
-                      </li>
-                      <li className="single-item">
-                        <h6>Email Order</h6>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <SingleSearchBox
+                      placeholder="Online"
+                      options={sales}
+                      label="Sales"
+                      style="two"
+                    />
+           
           </div>
           <div className="single-widget mb-30">
             <h5 className="widget-title">Category</h5>
@@ -93,88 +83,31 @@ const AuctionFilterSidebar = () => {
             </div>
           </div>
           <div className="single-widget mb-30">
-            <div className="single-search-box">
-              <div className="searchbox-input">
-                <label>Country</label>
-                <div className="custom-select-dropdown">
-                  <div className="select-input">
-                    <input type="text" readOnly defaultValue="Spain" />
-                    <i className="bi bi-chevron-down" />
-                  </div>
-                  <div className="custom-select-wrap two">
-                    <ul className="option-list">
-                      <li className="single-item">
-                        <h6>Spain</h6>
-                      </li>
-                      <li className="single-item">
-                        <h6>France</h6>
-                      </li>
-                      <li className="single-item">
-                        <h6>Brazil</h6>
-                      </li>
-                      <li className="single-item">
-                        <h6>Bangladesh</h6>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <SingleSearchBox
+                      placeholder="Country"
+                      options={countries}
+                      label="Country"
+                      style="two"
+                    />
+            
           </div>
           <div className="single-widget mb-30">
-            <div className="single-search-box">
-              <div className="searchbox-input">
-                <label>Period</label>
-                <div className="custom-select-dropdown">
-                  <div className="select-input">
-                    <input type="text" readOnly defaultValue="Today  (110)" />
-                    <i className="bi bi-chevron-down" />
-                  </div>
-                  <div className="custom-select-wrap two">
-                    <ul className="option-list">
-                      <li className="single-item">
-                        <h6>Today (110)</h6>
-                      </li>
-                      <li className="single-item">
-                        <h6>Yesterday (115)</h6>
-                      </li>
-                      <li className="single-item">
-                        <h6>Last 7 Days (515)</h6>
-                      </li>
-                      <li className="single-item">
-                        <h6>Last 30 Days (945)</h6>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <SingleSearchBox
+                      placeholder="Today  (110)"
+                      options={period}
+                      label="Period"
+                      style="two"
+                    />
+           
           </div>
           <div className="single-widget mb-30">
-            <div className="single-search-box">
-              <div className="searchbox-input">
-                <label>Condition</label>
-                <div className="custom-select-dropdown">
-                  <div className="select-input">
-                    <input type="text" readOnly defaultValue="New" />
-                    <i className="bi bi-chevron-down" />
-                  </div>
-                  <div className="custom-select-wrap two">
-                    <ul className="option-list">
-                      <li className="single-item">
-                        <h6>New</h6>
-                      </li>
-                      <li className="single-item">
-                        <h6>Used</h6>
-                      </li>
-                      <li className="single-item">
-                        <h6>Refurbished</h6>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <SingleSearchBox
+                      placeholder="New"
+                      options={condition}
+                      label="Condition"
+                      style="two"
+                    />
+                 
           </div>
           <div className="single-widget mb-30">
             <h5 className="widget-title">Price</h5>

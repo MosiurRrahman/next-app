@@ -12,8 +12,12 @@ import Footer6 from "@/components/footer/Footer5";
 import Header5 from "@/components/header/Header5";
 import Home5ProcessSection from "@/components/process-section/Home5ProcessSection";
 import Home5Testimonial from "@/components/testimonial/Home5Testimonial";
-import React from "react";
 
+export const metadata = {
+  icons: {
+    icon: "/assets/img/fav-icon.svg",
+  },
+}
 const page = () => {
   return (
     <>

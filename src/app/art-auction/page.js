@@ -10,7 +10,11 @@ import Footer4 from '@/components/footer/Footer4'
 import Header4 from '@/components/header/Header4'
 import Home4processSection from '@/components/process-section/Home4processSection'
 import Home4Testimonial from '@/components/testimonial/Home4Testimonial'
-import React from 'react'
+export const metadata = {
+  icons: {
+    icon: "/assets/img/fav-icon.svg",
+  },
+}
 
 const page = () => {
   return (

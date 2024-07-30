@@ -1,14 +1,15 @@
 
-import Breadcrumb6 from "@/components/common/Breadcrumb6";
-import Footer6 from "@/components/footer/Footer5";
-import InnerPageHeader6 from "@/components/header/InnerPageHeader6";
+
+import Breadcrumb5 from "@/components/common/Breadcrumb5";
+import InnerpageFooter5 from "@/components/footer/InnerpageFooter5";
+import InnerPageHeader5 from "@/components/header/InnerPageHeader5";
 import React from "react";
 
 const FaqPage = () => {
   return (
     <>
-      <InnerPageHeader6 />
-      <Breadcrumb6 currentPage="FAQ" pagetitle="FAQ" />
+      <InnerPageHeader5 />
+      <Breadcrumb5 currentPage="FAQ" pagetitle="FAQ" />
       <div className="faq-section pt-110 mb-110">
         <div className="container">
           <div
@@ -793,7 +794,7 @@ const FaqPage = () => {
           </div>
         </div>
       </div>
-      <Footer6 />
+      <InnerpageFooter5 />
     </>
   );
 };

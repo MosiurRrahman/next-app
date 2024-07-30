@@ -1,22 +1,36 @@
-
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import storeData from "../../../data/sotre-data.json"
-import InnerPageHeader6 from '@/components/header/InnerPageHeader6'
-import Breadcrumb6 from '@/components/common/Breadcrumb6'
 import Footer6 from '@/components/footer/Footer5'
 import InnerPageHeader5 from '@/components/header/InnerPageHeader5'
 import Breadcrumb5 from '@/components/common/Breadcrumb5'
 import Link from 'next/link'
+import { useCountdownTimer } from '@/customHooks/useCountdownTimer'
+import SingleSearchBox from '@/components/common/SingleSearchBox'
 
 
 const sellerList = storeData["sellerList"]
 const StoreListPage = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { days, hours, minutes, seconds } = useCountdownTimer("2024-10-23 12:00:00");
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+  const condition = ["New", "Used", "Refurbished"];
+  const countries = ["Spain", "France", "Brazil", "Bangladesh"];
+  const period = [
+    "Today  (110)",
+    "Yesterday (115)",
+    "Last 7 Days (515)",
+    "Last 30 Days (945)",
+  ];
+  const sales = ["Online", "In-Store", "Phone Order", "Email Order"];
   return (
 <>
  <InnerPageHeader5/>
  <Breadcrumb5 pagetitle="Seller Details" currentPage="Seller Details" />
 
- <div className="filter-sidebar">
+ <div className={`filter-sidebar ${isMenuOpen?"slide":""}`}>
     <div className="auction-sidebar">
       <form>
         <div className="single-widget mb-30">
@@ -26,33 +40,13 @@ const StoreListPage = () => {
           </div>
         </div>
         <div className="single-widget mb-30">
-          <div className="single-search-box">
-            <div className="searchbox-input">
-              <label>Sales</label>
-              <div className="custom-select-dropdown">
-                <div className="select-input">
-                  <input type="text" readOnly defaultValue="Online" />
-                  <i className="bi bi-chevron-down" />
-                </div>
-                <div className="custom-select-wrap two">
-                  <ul className="option-list">
-                    <li className="single-item">
-                      <h6>Online</h6>
-                    </li>
-                    <li className="single-item">
-                      <h6>In-Store</h6>
-                    </li>
-                    <li className="single-item">
-                      <h6>Phone Order</h6>
-                    </li>
-                    <li className="single-item">
-                      <h6>Email Order</h6>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+          <SingleSearchBox
+                      placeholder="Online"
+                      options={sales}
+                      label="Sales"
+                      style="two"
+                    />
+         
         </div>
         <div className="single-widget mb-30">
           <h5 className="widget-title">Category</h5>
@@ -104,88 +98,31 @@ const StoreListPage = () => {
           </div>
         </div>
         <div className="single-widget mb-30">
-          <div className="single-search-box">
-            <div className="searchbox-input">
-              <label>Country</label>
-              <div className="custom-select-dropdown">
-                <div className="select-input">
-                  <input type="text" readOnly defaultValue="Spain" />
-                  <i className="bi bi-chevron-down" />
-                </div>
-                <div className="custom-select-wrap two">
-                  <ul className="option-list">
-                    <li className="single-item">
-                      <h6>Spain</h6>
-                    </li>
-                    <li className="single-item">
-                      <h6>France</h6>
-                    </li>
-                    <li className="single-item">
-                      <h6>Brazil</h6>
-                    </li>
-                    <li className="single-item">
-                      <h6>Bangladesh</h6>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+          <SingleSearchBox
+                      placeholder="Country"
+                      options={countries}
+                      label="Country"
+                      style="two"
+                    />
+         
         </div>
         <div className="single-widget mb-30">
-          <div className="single-search-box">
-            <div className="searchbox-input">
-              <label>Period</label>
-              <div className="custom-select-dropdown">
-                <div className="select-input">
-                  <input type="text" readOnly defaultValue="Today  (110)" />
-                  <i className="bi bi-chevron-down" />
-                </div>
-                <div className="custom-select-wrap two">
-                  <ul className="option-list">
-                    <li className="single-item">
-                      <h6>Today  (110)</h6>
-                    </li>
-                    <li className="single-item">
-                      <h6>Yesterday (115)</h6>
-                    </li>
-                    <li className="single-item">
-                      <h6>Last 7 Days (515)</h6>
-                    </li>
-                    <li className="single-item">
-                      <h6>Last 30 Days (945)</h6>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+        <SingleSearchBox
+                      placeholder="Today  (110)"
+                      options={period}
+                      label="Period"
+                      style="two"
+                    />
+          
         </div>
         <div className="single-widget mb-30">
-          <div className="single-search-box">
-            <div className="searchbox-input">
-              <label>Condition</label>
-              <div className="custom-select-dropdown">
-                <div className="select-input">
-                  <input type="text" readOnly defaultValue="New" />
-                  <i className="bi bi-chevron-down" />
-                </div>
-                <div className="custom-select-wrap two">
-                  <ul className="option-list">
-                    <li className="single-item">
-                      <h6>New</h6>
-                    </li>
-                    <li className="single-item">
-                      <h6>Used</h6>
-                    </li>
-                    <li className="single-item">
-                      <h6>Refurbished</h6>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+        <SingleSearchBox
+                      placeholder="New"
+                      options={condition}
+                      label="Condition"
+                      style="two"
+                    />
+          
         </div>
         <div className="single-widget mb-30">
           <h5 className="widget-title">Price</h5>
@@ -348,7 +285,7 @@ const StoreListPage = () => {
       <div className="auction-grid-title-section mb-40">
         <h6>Showing 1–12 of 101 results</h6>
         <div className="filter-selector">
-          <div className="filter">
+          <div className="filter" onClick={toggleMenu}>
             <div className="filter-icon">
               <svg width={18} height={18} viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_456_25)">
@@ -448,19 +385,19 @@ const StoreListPage = () => {
                 </ul>
                 <div className="countdown-timer">
                   <ul data-countdown="2024-10-23 12:00:00">
-                    <li className="times" data-days={0}>00</li>
+                    <li className="times" data-days={0}>{days}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-hours={0}>00</li>
+                    <li className="times" data-hours={0}>{hours}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-minutes={0}>00</li>
+                    <li className="times" data-minutes={0}>{minutes}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-seconds={0}>00</li>
+                    <li className="times" data-seconds={0}>{seconds}</li>
                   </ul>
                 </div>
               </div>
@@ -523,19 +460,19 @@ const StoreListPage = () => {
                 </ul>
                 <div className="countdown-timer">
                   <ul data-countdown="2024-08-02 12:00:00">
-                    <li className="times" data-days={0}>00</li>
+                    <li className="times" data-days={0}>{days}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-hours={0}>00</li>
+                    <li className="times" data-hours={0}>{hours}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-minutes={0}>00</li>
+                    <li className="times" data-minutes={0}>{minutes}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-seconds={0}>00</li>
+                    <li className="times" data-seconds={0}>{seconds}</li>
                   </ul>
                 </div>
               </div>
@@ -599,19 +536,19 @@ const StoreListPage = () => {
                 </ul>
                 <div className="countdown-timer">
                   <ul data-countdown="2024-09-25 12:00:00">
-                    <li className="times" data-days={0}>00</li>
+                    <li className="times" data-days={0}>{days}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-hours={0}>00</li>
+                    <li className="times" data-hours={0}>{hours}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-minutes={0}>00</li>
+                    <li className="times" data-minutes={0}>{minutes}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-seconds={0}>00</li>
+                    <li className="times" data-seconds={0}>{seconds}</li>
                   </ul>
                 </div>
               </div>
@@ -675,19 +612,19 @@ const StoreListPage = () => {
                 </ul>
                 <div className="countdown-timer">
                   <ul data-countdown="2024-09-12 12:00:00">
-                    <li className="times" data-days={0}>00</li>
+                    <li className="times" data-days={0}>{days}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-hours={0}>00</li>
+                    <li className="times" data-hours={0}>{hours}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-minutes={0}>00</li>
+                    <li className="times" data-minutes={0}>{minutes}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-seconds={0}>00</li>
+                    <li className="times" data-seconds={0}>{seconds}</li>
                   </ul>
                 </div>
               </div>
@@ -750,19 +687,19 @@ const StoreListPage = () => {
                 </ul>
                 <div className="countdown-timer">
                   <ul data-countdown="2024-10-05 12:00:00">
-                    <li className="times" data-days={0}>00</li>
+                    <li className="times" data-days={0}>{days}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-hours={0}>00</li>
+                    <li className="times" data-hours={0}>{hours}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-minutes={0}>00</li>
+                    <li className="times" data-minutes={0}>{minutes}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-seconds={0}>00</li>
+                    <li className="times" data-seconds={0}>{seconds}</li>
                   </ul>
                 </div>
               </div>
@@ -825,19 +762,19 @@ const StoreListPage = () => {
                 </ul>
                 <div className="countdown-timer">
                   <ul data-countdown="2024-08-05 12:00:00">
-                    <li className="times" data-days={0}>00</li>
+                    <li className="times" data-days={0}>{days}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-hours={0}>00</li>
+                    <li className="times" data-hours={0}>{hours}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-minutes={0}>00</li>
+                    <li className="times" data-minutes={0}>{minutes}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-seconds={0}>00</li>
+                    <li className="times" data-seconds={0}>{seconds}</li>
                   </ul>
                 </div>
               </div>
@@ -900,19 +837,19 @@ const StoreListPage = () => {
                 </ul>
                 <div className="countdown-timer">
                   <ul data-countdown="2024-08-25 12:00:00">
-                    <li className="times" data-days={0}>00</li>
+                    <li className="times" data-days={0}>{days}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-hours={0}>00</li>
+                    <li className="times" data-hours={0}>{hours}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-minutes={0}>00</li>
+                    <li className="times" data-minutes={0}>{minutes}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-seconds={0}>00</li>
+                    <li className="times" data-seconds={0}>{seconds}</li>
                   </ul>
                 </div>
               </div>
@@ -975,19 +912,19 @@ const StoreListPage = () => {
                 </ul>
                 <div className="countdown-timer">
                   <ul data-countdown="2024-07-15 12:00:00">
-                    <li className="times" data-days={0}>00</li>
+                    <li className="times" data-days={0}>{days}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-hours={0}>00</li>
+                    <li className="times" data-hours={0}>{hours}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-minutes={0}>00</li>
+                    <li className="times" data-minutes={0}>{minutes}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-seconds={0}>00</li>
+                    <li className="times" data-seconds={0}>{seconds}</li>
                   </ul>
                 </div>
               </div>
@@ -1050,19 +987,19 @@ const StoreListPage = () => {
                 </ul>
                 <div className="countdown-timer">
                   <ul data-countdown="2024-07-10 12:00:00">
-                    <li className="times" data-days={0}>00</li>
+                    <li className="times" data-days={0}>{days}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-hours={0}>00</li>
+                    <li className="times" data-hours={0}>{hours}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-minutes={0}>00</li>
+                    <li className="times" data-minutes={0}>{minutes}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-seconds={0}>00</li>
+                    <li className="times" data-seconds={0}>{seconds}</li>
                   </ul>
                 </div>
               </div>
@@ -1126,19 +1063,19 @@ const StoreListPage = () => {
                 </ul>
                 <div className="countdown-timer">
                   <ul data-countdown="2024-07-10 12:00:00">
-                    <li className="times" data-days={0}>00</li>
+                    <li className="times" data-days={0}>{days}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-hours={0}>00</li>
+                    <li className="times" data-hours={0}>{hours}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-minutes={0}>00</li>
+                    <li className="times" data-minutes={0}>{minutes}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-seconds={0}>00</li>
+                    <li className="times" data-seconds={0}>{seconds}</li>
                   </ul>
                 </div>
               </div>
@@ -1202,19 +1139,19 @@ const StoreListPage = () => {
                 </ul>
                 <div className="countdown-timer">
                   <ul data-countdown="2024-07-25 12:00:00">
-                    <li className="times" data-days={0}>00</li>
+                    <li className="times" data-days={0}>{days}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-hours={0}>00</li>
+                    <li className="times" data-hours={0}>{hours}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-minutes={0}>00</li>
+                    <li className="times" data-minutes={0}>{minutes}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-seconds={0}>00</li>
+                    <li className="times" data-seconds={0}>{seconds}</li>
                   </ul>
                 </div>
               </div>
@@ -1277,19 +1214,19 @@ const StoreListPage = () => {
                 </ul>
                 <div className="countdown-timer">
                   <ul data-countdown="2024-07-20 12:00:00">
-                    <li className="times" data-days={0}>00</li>
+                    <li className="times" data-days={0}>{days}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-hours={0}>00</li>
+                    <li className="times" data-hours={0}>{hours}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-minutes={0}>00</li>
+                    <li className="times" data-minutes={0}>{minutes}</li>
                     <li className="colon">
                       :
                     </li>
-                    <li className="times" data-seconds={0}>00</li>
+                    <li className="times" data-seconds={0}>{seconds}</li>
                   </ul>
                 </div>
               </div>
@@ -1330,7 +1267,7 @@ const StoreListPage = () => {
             <svg width={11} height={11} viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
               <path fillRule="evenodd" clipRule="evenodd" d="M10.0266 9.33856L0.689022 0.000487831L-3.01181e-08 0.68951L9.33807 10.0271L2.88172 10.0271L2.88172 11.001L11.0005 11.001L11.0005 2.88221L10.0266 2.88221L10.0266 9.33856Z" />
             </svg>
-            <span />
+           <span style={{top: '40.5px', left: '84.2344px'}} />
           </a>
         </div>
       </div>

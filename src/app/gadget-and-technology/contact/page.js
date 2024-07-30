@@ -120,7 +120,7 @@ const ContactPage = () => {
                       <div className="form-inner">
                         <button className="primary-btn btn-hover" type="submit">
                           Submit Now
-                          <span />
+                         <span style={{top: '40.5px', left: '84.2344px'}} />
                         </button>
                       </div>
                     </div>

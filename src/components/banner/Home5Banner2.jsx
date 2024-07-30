@@ -88,7 +88,7 @@ const Home5Banner2 = () => {
                                                         </div>
                                                         <Link className="primary-btn4 btn-hover" href="/gadget-and-technology/auction-details">
                                                             Bid Now
-                                                            <span />
+                                                           <span style={{top: '40.5px', left: '84.2344px'}} />
                                                         </Link>
                                                     </div>
                                                 </div>
@@ -140,7 +140,7 @@ const Home5Banner2 = () => {
                                                         </div>
                                                         <Link className="primary-btn4 btn-hover" href="/gadget-and-technology/auction-details">
                                                             Bid Now
-                                                            <span />
+                                                           <span style={{top: '40.5px', left: '84.2344px'}} />
                                                         </Link>
                                                     </div>
                                                 </div>
@@ -195,7 +195,7 @@ const Home5Banner2 = () => {
                                                         </div>
                                                         <Link className="primary-btn4 btn-hover" href="/gadget-and-technology/auction-details">
                                                             Bid Now
-                                                            <span />
+                                                           <span style={{top: '40.5px', left: '84.2344px'}} />
                                                         </Link>
                                                     </div>
                                                 </div>

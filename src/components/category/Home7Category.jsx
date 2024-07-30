@@ -17,7 +17,7 @@ const Home7Category = () => {
                 <svg width={11} height={11} viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9.22781 7.97482L1.25294 -4.57764e-05L0 1.25289L7.97487 9.22776H1.25294V11H11V1.25289H9.22781V7.97482Z" />
                 </svg>
-                <span />
+               <span style={{top: '40.5px', left: '84.2344px'}} />
               </Link>
             </div>
           </div>

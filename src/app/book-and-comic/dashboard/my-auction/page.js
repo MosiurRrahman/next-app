@@ -1,11 +1,14 @@
 
+"use client"
 import Breadcrumb6 from '@/components/common/Breadcrumb6'
 import Footer6 from '@/components/footer/Footer5'
 import Header6 from '@/components/header/Header5'
+import { useCountdownTimer } from '@/customHooks/useCountdownTimer'
 import Link from 'next/link'
 import React from 'react'
 
 const MyAuctionPage = () => {
+  const { days, hours, minutes, seconds } = useCountdownTimer("2024-10-23 12:00:00");
   return (
     <>
      <Header6/>
@@ -161,19 +164,19 @@ const MyAuctionPage = () => {
                           </ul>
                           <div className="countdown-timer">
                             <ul data-countdown="2024-10-23 12:00:00">
-                              <li className="times" data-days={0}>00</li>
+                              <li className="times" data-days={0}>{days}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-hours={0}>00</li>
+                              <li className="times" data-hours={0}>{hours}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-minutes={0}>00</li>
+                              <li className="times" data-minutes={0}>{minutes}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-seconds={0}>00</li>
+                              <li className="times" data-seconds={0}>{seconds}</li>
                             </ul>
                           </div>
                         </div>
@@ -236,19 +239,19 @@ const MyAuctionPage = () => {
                           </ul>
                           <div className="countdown-timer">
                             <ul data-countdown="2024-08-02 12:00:00">
-                              <li className="times" data-days={0}>00</li>
+                              <li className="times" data-days={0}>{days}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-hours={0}>00</li>
+                              <li className="times" data-hours={0}>{hours}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-minutes={0}>00</li>
+                              <li className="times" data-minutes={0}>{minutes}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-seconds={0}>00</li>
+                              <li className="times" data-seconds={0}>{seconds}</li>
                             </ul>
                           </div>
                         </div>
@@ -312,19 +315,19 @@ const MyAuctionPage = () => {
                           </ul>
                           <div className="countdown-timer">
                             <ul data-countdown="2024-09-25 12:00:00">
-                              <li className="times" data-days={0}>00</li>
+                              <li className="times" data-days={0}>{days}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-hours={0}>00</li>
+                              <li className="times" data-hours={0}>{hours}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-minutes={0}>00</li>
+                              <li className="times" data-minutes={0}>{minutes}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-seconds={0}>00</li>
+                              <li className="times" data-seconds={0}>{seconds}</li>
                             </ul>
                           </div>
                         </div>
@@ -388,19 +391,19 @@ const MyAuctionPage = () => {
                           </ul>
                           <div className="countdown-timer">
                             <ul data-countdown="2024-09-12 12:00:00">
-                              <li className="times" data-days={0}>00</li>
+                              <li className="times" data-days={0}>{days}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-hours={0}>00</li>
+                              <li className="times" data-hours={0}>{hours}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-minutes={0}>00</li>
+                              <li className="times" data-minutes={0}>{minutes}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-seconds={0}>00</li>
+                              <li className="times" data-seconds={0}>{seconds}</li>
                             </ul>
                           </div>
                         </div>
@@ -463,19 +466,19 @@ const MyAuctionPage = () => {
                           </ul>
                           <div className="countdown-timer">
                             <ul data-countdown="2024-10-05 12:00:00">
-                              <li className="times" data-days={0}>00</li>
+                              <li className="times" data-days={0}>{days}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-hours={0}>00</li>
+                              <li className="times" data-hours={0}>{hours}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-minutes={0}>00</li>
+                              <li className="times" data-minutes={0}>{minutes}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-seconds={0}>00</li>
+                              <li className="times" data-seconds={0}>{seconds}</li>
                             </ul>
                           </div>
                         </div>
@@ -538,19 +541,19 @@ const MyAuctionPage = () => {
                           </ul>
                           <div className="countdown-timer">
                             <ul data-countdown="2024-08-05 12:00:00">
-                              <li className="times" data-days={0}>00</li>
+                              <li className="times" data-days={0}>{days}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-hours={0}>00</li>
+                              <li className="times" data-hours={0}>{hours}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-minutes={0}>00</li>
+                              <li className="times" data-minutes={0}>{minutes}</li>
                               <li className="colon">
                                 :
                               </li>
-                              <li className="times" data-seconds={0}>00</li>
+                              <li className="times" data-seconds={0}>{seconds}</li>
                             </ul>
                           </div>
                         </div>

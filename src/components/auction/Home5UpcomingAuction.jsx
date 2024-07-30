@@ -55,7 +55,7 @@ const Home5UpcomingAuction = () => {
   }, [])
   return (
     <>
-      <div className="home5-upcomig-auction-section mb-120">
+      <div className="home5-upcomig-auction-section">
         <div className="container">
           <div className="row mb-50 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
             <div className="col-lg-12 d-flex align-items-center justify-content-between flex-wrap gap-3">

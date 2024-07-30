@@ -1,4 +1,4 @@
-"use client"
+
 import Home2PopularAuction from "@/components/auction/Home2PopularAuction";
 import Home2Banner from "@/components/banner/Home2Banner";
 import Home2Banner2 from "@/components/banner/Home2Banner2";
@@ -13,11 +13,15 @@ import Home2LogoSection from "@/components/logo-section/Home2LogoSection";
 import Home2ProcessSection from "@/components/process-section/Home2ProcessSection";
 import Home2Testimonial from "@/components/testimonial/Home2Testimonial";
 import Home2UpcomingAuction from "@/components/upcoming-auction/Home2UpcomingAuction";
-import useHoverEffect from "@/customHooks/useHoverEffect";
-import React from "react";
 
+import React from "react";
+export const metadata = {
+  icons: {
+    icon: "/assets/img/fav-icon.svg",
+  },
+}
 const HomePage = () => {
-  useHoverEffect('.btn-hover');
+
   return (
     <>
       <Header />

@@ -147,7 +147,7 @@ const SettingsPage = () => {
                           </div>
                           <button className="primary-btn btn-hover two black-bg">
                             Verify Email
-                            <span />
+                           <span style={{top: '40.5px', left: '84.2344px'}} />
                           </button>
                         </div>
                       </div>
@@ -162,14 +162,14 @@ const SettingsPage = () => {
                           </div>
                           <button className="primary-btn btn-hover two black-bg">
                             Verify Phone
-                            <span />
+                           <span style={{top: '40.5px', left: '84.2344px'}} />
                           </button>
                         </div>
                       </div>
                     </div>
                     <button className="primary-btn btn-hover two">
                       Save Changes
-                      <span />
+                     <span style={{top: '40.5px', left: '84.2344px'}} />
                     </button>
                   </form>
                 </div>

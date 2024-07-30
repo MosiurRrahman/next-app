@@ -57,11 +57,11 @@ const TermsConditionPage = () => {
               <div className="btn-area">
                 <button type="submit" className="primary-btn two btn-hover">
                   Accept
-                  <span />
+                 <span style={{top: '40.5px', left: '84.2344px'}} />
                 </button>
                 <button type="submit" className="primary-btn two btn-hover black-bg">
                   Decline
-                  <span />
+                 <span style={{top: '40.5px', left: '84.2344px'}} />
                 </button>
               </div>
             </div>

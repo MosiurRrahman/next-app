@@ -11,7 +11,11 @@ import Home3Featured from "@/components/featured/Home3Featured";
 import Footer3 from "@/components/footer/Footer3";
 import Header3 from "@/components/header/Header3";
 import Home3Testimonial from "@/components/testimonial/Home3Testimonial";
-import React from "react";
+export const metadata = {
+  icons: {
+    icon: "/assets/img/fav-icon.svg",
+  },
+}
 
 const page = () => {
   return (

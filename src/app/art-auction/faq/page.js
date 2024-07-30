@@ -1,15 +1,15 @@
 
-import Breadcrumb3 from '@/components/common/Breadcrumb3'
-import Footer3 from '@/components/footer/Footer3'
-import Header3 from '@/components/header/Header3'
+import Breadcrumb4 from '@/components/common/Breadcrumb4'
+import Footer4 from '@/components/footer/Footer4'
+import Header4 from '@/components/header/Header4'
 import React from 'react'
 
 const FaqPage = () => {
   return (
     <>
-      <Header3 />
+      <Header4 />
       {/* Start Breadcrumb section */}
-      <Breadcrumb3 currentPage="FAQ" pagetitle="FAQ" />
+      <Breadcrumb4 currentPage="FAQ" pagetitle="FAQ" />
       <div className="faq-section pt-110 mb-110">
         <div className="container">
           <div className="row mb-60 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -335,7 +335,7 @@ const FaqPage = () => {
       </div>
       {/* End Faq section */}
       {/* Start Footer section */}
-      <Footer3 />
+      <Footer4 />
       {/* End Footer section */}
     </>
 

@@ -80,7 +80,7 @@ const StoreListPage = () => {
                     <Link className="primary-btn btn-hover" href="/store-details">
                       View Store
                       <i className="bi bi-arrow-right" />
-                      <span />
+                     <span style={{top: '40.5px', left: '84.2344px'}} />
                     </Link>
                   </div>
                   </div>

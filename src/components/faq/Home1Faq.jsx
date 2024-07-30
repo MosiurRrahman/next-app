@@ -45,7 +45,7 @@ const Home1Faq = () => {
                   </div>
                   <Link className="primary-btn btn-hover black-bg" href="/about">
                     Send Now
-                    <span />
+                   <span style={{top: '40.5px', left: '84.2344px'}} />
                   </Link>
                 </form>
               </div>

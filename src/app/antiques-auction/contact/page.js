@@ -1,13 +1,12 @@
-import Breadcrumb5 from "@/components/common/Breadcrumb5";
-import InnerpageFooter5 from "@/components/footer/InnerpageFooter5";
-import InnerPageHeader5 from "@/components/header/InnerPageHeader5";
-import React from "react";
+import Breadcrumb3 from "@/components/common/Breadcrumb3";
+import Footer3 from "@/components/footer/Footer3";
+import Header3 from "@/components/header/Header3";
 
 const Contactpage = () => {
   return (
     <>
-      <InnerPageHeader5 />
-      <Breadcrumb5 pagetitle="Contact Us" currentPage="Contact Us" />
+      <Header3 />
+      <Breadcrumb3 pagetitle="Contact Us" currentPage="Contact Us" />
       <div className="contact-page pt-110 mb-110">
         <div className="container">
           <div className="row g-lg-4 gy-5 align-items-center">
@@ -120,7 +119,7 @@ const Contactpage = () => {
                       <div className="form-inner">
                         <button className="primary-btn btn-hover" type="submit">
                           Submit Now
-                          <span />
+                         <span style={{top: '40.5px', left: '84.2344px'}} />
                         </button>
                       </div>
                     </div>
@@ -139,7 +138,7 @@ const Contactpage = () => {
           referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
-      <InnerpageFooter5 />
+      <Footer3 />
     </>
   );
 };

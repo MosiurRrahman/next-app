@@ -14,6 +14,7 @@ import AuctionCard from '@/components/auction/auction-card';
 import InnerPageHeader6 from "@/components/header/InnerPageHeader6";
 import Breadcrumb6 from "@/components/common/Breadcrumb6";
 import Footer6 from "@/components/footer/Footer5";
+import HandleQuantity from "@/components/common/HandleQuantity";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 const AuctionDetailsPage = () => {
@@ -221,14 +222,11 @@ const AuctionDetailsPage = () => {
                 <div className="quantity-area">
                   <h6>Your Max Bid:</h6>
                   <div className="quantity-counter-and-btn-area">
-                    <div className="quantity-counter">
-                      <a href="#" className="quantity__minus"><i className="bx bx-minus" /></a>
-                      <input name="quantity" type="text" className="quantity__input" defaultValue={2900} />
-                      <a href="#" className="quantity__plus"><i className="bx bx-plus" /></a>
-                    </div>
+                  <HandleQuantity/>
+                   
                     <Link className="primary-btn btn-hover" href="/book-and-comic/auction-grid">
                       Place Bid
-                      <span />
+                     <span style={{top: '40.5px', left: '84.2344px'}} />
                     </Link>
                   </div>
                 </div>
@@ -496,7 +494,7 @@ const AuctionDetailsPage = () => {
                                 <div className="form-inner two">
                                   <button className="primary-btn btn-hover" type="submit">
                                     Submit
-                                    <span />
+                                   <span style={{top: '40.5px', left: '84.2344px'}} />
                                   </button>
                                 </div>
                               </div>

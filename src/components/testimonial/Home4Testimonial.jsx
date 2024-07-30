@@ -13,40 +13,20 @@ const Home4Testimonial = () => {
   const setttings = useMemo(() => {
     return {
       slidesPerView: "auto",
-      speed: 1500,
-      spaceBetween: 25,
-      autoplay: {
-        delay: 2500, // Autoplay duration in milliseconds
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".auction-slider-next",
-        prevEl: ".auction-slider-prev",
-      },
-
-      breakpoints: {
-        280: {
-          slidesPerView: 1,
-        },
-        386: {
-          slidesPerView: 1,
-        },
-        576: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        992: {
-          slidesPerView: 3,
-        },
-        1200: {
-          slidesPerView: 4,
-        },
-        1400: {
-          slidesPerView: 4,
-        },
-      },
+		speed: 1500,
+		spaceBetween: 25,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true           // Enable cross-fade transition
+		},
+		autoplay: {
+			delay: 2500, // Autoplay duration in milliseconds
+			disableOnInteraction: false,
+		},
+		navigation: {
+		  nextEl: ".home3-testimonial-slider-next",
+		  prevEl: ".home3-testimonial-slider-prev",
+		},
     }
   }, [])
   return (

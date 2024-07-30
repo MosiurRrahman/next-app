@@ -11,13 +11,13 @@ const Home1LogoSection = () => {
           </div>
           <div className="logo-area">
             <div className="marquee_text">
-              <Marquee>
-                <a href="#"><img src="assets/img/home1/company-logo-01.png" alt="" /></a>
-                <a href="#"><img src="assets/img/home1/company-logo-02.png" alt="" /></a>
-                <a href="#"><img src="assets/img/home1/company-logo-03.png" alt="" /></a>
-                <a href="#"><img src="assets/img/home1/company-logo-04.png" alt="" /></a>
-                <a href="#"><img src="assets/img/home1/company-logo-05.png" alt="" /></a>
-                <a href="#"><img src="assets/img/home1/company-logo-06.png" alt="" /></a>
+              <Marquee  loop={0}>
+                <a href="#" style={{marginRight:"70px"}}><img src="assets/img/home1/company-logo-01.png" alt="" /></a>
+                <a href="#" style={{marginRight:"70px"}}><img src="assets/img/home1/company-logo-02.png" alt="" /></a>
+                <a href="#" style={{marginRight:"70px"}}><img src="assets/img/home1/company-logo-03.png" alt="" /></a>
+                <a href="#" style={{marginRight:"70px"}}><img src="assets/img/home1/company-logo-04.png" alt="" /></a>
+                <a href="#" style={{marginRight:"70px"}}><img src="assets/img/home1/company-logo-05.png" alt="" /></a>
+                <a href="#" style={{marginRight:"70px"}}><img src="assets/img/home1/company-logo-06.png" alt="" /></a>
               </Marquee>
             </div>
           </div>

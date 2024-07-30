@@ -13,7 +13,11 @@ import Home1LogoSection from "@/components/logo-section/Home1LogoSection";
 import Home1ProcessSection from "@/components/process-section/Home1ProcessSection";
 import Home1Testimonial from "@/components/testimonial/Home1Testimonial";
 import Home1UpcomingAuction from "@/components/upcoming-auction/Home1UpcomingAuction";
-
+export const metadata = {
+  icons: {
+    icon: "/assets/img/fav-icon.svg",
+  },
+}
 export default function Home() {
   return (
     <>

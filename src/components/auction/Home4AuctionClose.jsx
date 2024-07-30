@@ -8,9 +8,11 @@ import SwiperCore, {
 } from "swiper";
 import Link from "next/link";
 import { useMemo } from "react";
+import { useCountdownTimer } from "@/customHooks/useCountdownTimer";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 const Home4AuctionClose = () => {
+  const { days, hours, minutes, seconds } = useCountdownTimer("2024-10-23 12:00:00");
   const setttings = useMemo(() => {
     return {
       slidesPerView: "auto",
@@ -109,19 +111,19 @@ const Home4AuctionClose = () => {
                         </ul>
                         <div className="countdown-timer">
                           <ul data-countdown="2024-10-23 12:00:00">
-                            <li className="times" data-days={0}>00</li>
+                            <li className="times" data-days={0}>{days}<span>Days</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-hours={0}>00</li>
+                            <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-minutes={0}>00</li>
+                            <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-seconds={0}>00</li>
+                            <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                           </ul>
                         </div>
                       </div>
@@ -174,19 +176,19 @@ const Home4AuctionClose = () => {
                         </ul>
                         <div className="countdown-timer">
                           <ul data-countdown="2024-10-08 12:00:00">
-                            <li className="times" data-days={0}>00</li>
+                            <li className="times" data-days={0}>{days}<span>Days</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-hours={0}>00</li>
+                            <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-minutes={0}>00</li>
+                            <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-seconds={0}>00</li>
+                            <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                           </ul>
                         </div>
                       </div>
@@ -237,19 +239,19 @@ const Home4AuctionClose = () => {
                         </ul>
                         <div className="countdown-timer">
                           <ul data-countdown="2024-08-05 12:00:00">
-                            <li className="times" data-days={0}>00</li>
+                            <li className="times" data-days={0}>{days}<span>Days</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-hours={0}>00</li>
+                            <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-minutes={0}>00</li>
+                            <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-seconds={0}>00</li>
+                            <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                           </ul>
                         </div>
                       </div>
@@ -302,19 +304,19 @@ const Home4AuctionClose = () => {
                         </ul>
                         <div className="countdown-timer">
                           <ul data-countdown="2024-10-26 12:00:00">
-                            <li className="times" data-days={0}>00</li>
+                            <li className="times" data-days={0}>{days}<span>Days</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-hours={0}>00</li>
+                            <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-minutes={0}>00</li>
+                            <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-seconds={0}>00</li>
+                            <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                           </ul>
                         </div>
                       </div>
@@ -365,19 +367,19 @@ const Home4AuctionClose = () => {
                         </ul>
                         <div className="countdown-timer">
                           <ul data-countdown="2024-10-23 12:00:00">
-                            <li className="times" data-days={0}>00</li>
+                            <li className="times" data-days={0}>{days}<span>Days</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-hours={0}>00</li>
+                            <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-minutes={0}>00</li>
+                            <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-seconds={0}>00</li>
+                            <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                           </ul>
                         </div>
                       </div>
@@ -430,19 +432,19 @@ const Home4AuctionClose = () => {
                         </ul>
                         <div className="countdown-timer">
                           <ul data-countdown="2024-10-08 12:00:00">
-                            <li className="times" data-days={0}>00</li>
+                            <li className="times" data-days={0}>{days}<span>Days</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-hours={0}>00</li>
+                            <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-minutes={0}>00</li>
+                            <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-seconds={0}>00</li>
+                            <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                           </ul>
                         </div>
                       </div>
@@ -493,19 +495,19 @@ const Home4AuctionClose = () => {
                         </ul>
                         <div className="countdown-timer">
                           <ul data-countdown="2024-10-08 12:00:00">
-                            <li className="times" data-days={0}>00</li>
+                            <li className="times" data-days={0}>{days}<span>Days</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-hours={0}>00</li>
+                            <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-minutes={0}>00</li>
+                            <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
                             <li className="colon">
                               :
                             </li>
-                            <li className="times" data-seconds={0}>00</li>
+                            <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
                           </ul>
                         </div>
                       </div>
@@ -532,7 +534,7 @@ const Home4AuctionClose = () => {
                 <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                   <circle cx={5} cy={5} r={5} />
                 </svg>
-                <span />
+               <span style={{top: '40.5px', left: '84.2344px'}} />
               </Link>
             </div>
           </div>

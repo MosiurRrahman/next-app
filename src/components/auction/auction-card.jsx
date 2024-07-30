@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
 import { useCountdownTimer } from "@/customHooks/useCountdownTimer";
-
+import { usePathname } from "next/navigation";
 const AuctionCard = ({ item }) => {
+  const pathName = usePathname()
   const {
     auctionDetailsUrl,
     imageUrl,
@@ -107,7 +108,7 @@ const AuctionCard = ({ item }) => {
         </div>
         <div className="auction-card-content">
           <h6>
-            <a href={auctionDetailsUrl}>{title}</a>
+            <Link href={auctionDetailsUrl}>{title}</Link>
           </h6>
           <div className="price-and-code-area">
             <div className="price">
@@ -119,14 +120,7 @@ const AuctionCard = ({ item }) => {
             </div>
           </div>
           <div className="author-and-btn-area">
-            <a href={author.profileUrl} className="author-area">
-              <div className="author-img">
-                <img src={author.imageUrl} alt="" />
-              </div>
-              <div className="author-content">
-                <h6>{author.name}</h6>
-              </div>
-            </a>
+          
             <Link href="/auction-details" className="bid-btn">
               {status === "live" ? "Bid now" : status === "upcoming" ? "Notify Me" : "Bid now"}
             </Link>

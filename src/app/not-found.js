@@ -19,7 +19,7 @@ const FileNotFound = () => {
                   <div className="back-btn d-flex justify-content-center">
                     <Link className="primary-btn btn-hover" href="/adjh">
                       Go home
-                      <span />
+                     <span style={{top: '40.5px', left: '84.2344px'}} />
                     </Link>
                   </div>
                 </div>

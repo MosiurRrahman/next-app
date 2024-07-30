@@ -13,7 +13,10 @@ const AuctionGrid = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [sortedProducts, setSortedProducts] = useState(products);
     const [displayedProducts, setDisplayedProducts] = useState([]);
-  
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const toggleMenu = () => {
+      setIsMenuOpen(!isMenuOpen);
+    };
     const sortOptions = [
       "Default Sorting",
       "Price Low to High",
@@ -70,7 +73,7 @@ const AuctionGrid = () => {
     <>
      <InnerPageHeader6/>
      <Breadcrumb6 currentPage={"Auction Grid"} pagetitle={"Auction Grid"}/>
-     <AuctionFilterSidebar/>
+     <AuctionFilterSidebar isMenuOpen={isMenuOpen}/>
       <div className="auction-grid-section pt-110 mb-110">
         <div className="container">
           <div className="auction-grid-title-section mb-40">
@@ -82,7 +85,7 @@ const AuctionGrid = () => {
             </h6>
             <div className="filter-selector">
               <div className="filter">
-                <div className="filter-icon">
+                <div className="filter-icon" onClick={toggleMenu}>
                   <svg
                     width={18}
                     height={18}

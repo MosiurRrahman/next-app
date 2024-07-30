@@ -92,6 +92,7 @@ Version: 1.0
 /*===========================
      01.COMMON CSS 
 ===========================*/
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 :root {
   --font-dmsans: "DM Sans", sans-serif;
   --font-playfair: "Playfair Display", sans-serif;
@@ -2626,7 +2627,7 @@ video {
     display: flex;
     margin-left: 50px;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     visibility: visible;
     justify-content: center;
     position: relative;
@@ -3085,7 +3086,7 @@ header.style-1 .nav-right .mobile-menu-btn {
     display: flex;
     margin-left: 50px;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     visibility: visible;
     justify-content: center;
     position: relative;
@@ -4161,7 +4162,7 @@ header.style-2 .nav-left .form-inner .search-btn:hover::after {
 header.style-2 .nav-right {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 75px;
 }
 @media (min-width: 1400px) and (max-width: 1599px) {
@@ -4194,7 +4195,7 @@ header.style-2 .nav-right .mobile-menu-btn {
     display: flex;
     margin-left: 50px;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     visibility: visible;
     justify-content: center;
     position: relative;
@@ -5060,7 +5061,7 @@ header.style-3 .nav-right .mobile-menu-btn {
     display: flex;
     margin-left: 50px;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     visibility: visible;
     justify-content: center;
     position: relative;
@@ -5939,7 +5940,7 @@ header.style-4 .nav-right .mobile-menu-btn {
     display: flex;
     margin-left: 50px;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     visibility: visible;
     justify-content: center;
     position: relative;
@@ -8579,6 +8580,11 @@ header.style-4.two .login-btn::before {
   line-height: 32px;
   margin-bottom: 30px;
 }
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .home1-process-section .process-wrapper .process-card .process-card-content h3 {
+    font-size: 27px;
+  }
+}
 .home1-process-section .process-wrapper .process-card .process-card-content ul {
   padding: 0;
   margin: 0;
@@ -8637,7 +8643,7 @@ header.style-4.two .login-btn::before {
     top: 46%;
     right: -30px;
     width: 30px;
-    justify-content: end;
+    justify-content: flex-end;
     background-color: transparent;
     width: unset;
   }
@@ -8647,7 +8653,7 @@ header.style-4.two .login-btn::before {
     top: 52%;
     right: -30px;
     width: 30px;
-    justify-content: end;
+    justify-content: flex-end;
     background-color: transparent;
     width: unset;
   }
@@ -10246,7 +10252,7 @@ footer .footer-wrapper .footer-menu-wrap .footer-logo-area .social-area .social-
 }
 @media (max-width: 576px) {
   footer .footer-wrapper .footer-menu-wrap .footer-logo-area .social-area .social-list {
-    justify-content: start;
+    justify-content: flex-start;
   }
 }
 footer .footer-wrapper .footer-menu-wrap .footer-logo-area .social-area .social-list li {
@@ -10914,7 +10920,7 @@ footer.style-7 .footer-wrapper .footer-menu-wrap .footer-logo-area::after {
   }
 }
 footer.style-7 .footer-wrapper .footer-menu-wrap .footer-logo-area .social-area .social-list {
-  justify-content: start;
+  justify-content: flex-start;
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
   footer.style-7 .footer-wrapper .footer-menu-wrap .footer-logo-area .social-area .social-list {
@@ -11140,7 +11146,7 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
   }
 }
 .home2-banner-section .banner-wrapper .banner-content {
-  max-width: 636px;
+  max-width: 650px;
   width: 100%;
 }
 .home2-banner-section .banner-wrapper .banner-content .sub-title {
@@ -12716,7 +12722,7 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
 }
 .home2-footer-top-area .footer-top-wrapper {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
 }
 .home2-footer-top-area .footer-top-wrapper .footer-top-content {
@@ -13523,7 +13529,7 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
   border-radius: 5px;
   padding: 20px;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 .category-card3 .category-bg .category-content-wrap .category-content {
   padding: 9px 20px;
@@ -14014,7 +14020,7 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
 }
 
 .home3-testimonial-section .testimonial-slider-area .slider-btn-grp {
-  justify-content: end;
+  justify-content: flex-end;
   gap: 35px;
   margin-top: -55px;
   position: relative;
@@ -14400,7 +14406,7 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
   }
 }
 .home4-banner-section .banner-wrapper .banner-content-and-counter-area .banner-content {
-  max-width: 780px;
+  max-width: 810px;
   width: 100%;
   padding-left: 18%;
   margin-bottom: 150px;
@@ -14735,7 +14741,7 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
 }
 @media (max-width: 1399px) {
   .home4-banner-section .banner-wrapper .banner-img-wrap .banner-img {
-    justify-content: start;
+    justify-content: flex-start;
   }
 }
 .home4-banner-section .banner-wrapper .banner-img-wrap .slider-btn-and-pagination {
@@ -14978,7 +14984,7 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
   padding: 35px;
 }
@@ -16102,7 +16108,7 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
   }
 }
 .home5-banner-section .banner-wrapper .banner-content {
-  max-width: 600px;
+  max-width: 660px;
   width: 100%;
   position: relative;
 }
@@ -20242,7 +20248,7 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
 }
 .breadcrumb-section.two .banner-content .breadcrumb-list {
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 10px;
 }
 .breadcrumb-section.two .banner-content .breadcrumb-list li {
@@ -20295,7 +20301,7 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
 }
 .breadcrumb-section.three .banner-content .breadcrumb-list {
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 10px;
   position: relative;
   padding-top: 30px;
@@ -20373,7 +20379,7 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
 .breadcrumb-section.four .banner-content .breadcrumb-list {
   display: inline-flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 6px;
   line-height: 1;
   padding: 9px 12px;
@@ -20607,6 +20613,18 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
   color: var(--white-color);
+}
+.inner-pagination-area .paginations .page-item.paginations-button.disabled {
+  transform: rotate(130deg);
+}
+.inner-pagination-area .paginations .page-item.paginations-button.disabled a svg {
+  fill: none;
+  stroke: rgba(63, 68, 75, 0.5);
+  transition: 0.5s;
+}
+.inner-pagination-area .paginations .page-item.paginations-button.disabled a:hover svg {
+  stroke: var(--white-color);
+  transform: rotate(26deg);
 }
 .inner-pagination-area .paginations .page-item.paginations-button a svg {
   fill: none;
@@ -21698,7 +21716,7 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
 @media (max-width: 576px) {
   .dashboard-section .dashboard-wrapper .dashboard-content-wrap .profile-info-wrap {
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     margin-bottom: 25px;
     padding-bottom: 25px;
   }
@@ -22274,7 +22292,7 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
 }
 .dashboard-section .dashboard-wrapper .dashboard-content-wrap .edit-info-area .edit-info-form .verify-area {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   gap: 30px;
 }
 @media (max-width: 991px) {
@@ -24255,7 +24273,7 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
   .auction-details-description-area .auction-details-description-tab .description-content ul {
     gap: 20px;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     padding-top: 20px;
     margin-bottom: 30px;
   }
@@ -25241,7 +25259,7 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
 }
 .store-card .store-card-content .profile-area {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   gap: 12px;
   margin-top: -50px;
   position: relative;
@@ -25459,7 +25477,7 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
   .store-details-section .store-details-profile-area .profile-info-wrap .profile-area {
     text-align: start;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     gap: 15px;
     margin-bottom: 10px;
   }
@@ -25587,4 +25605,27 @@ footer.style-7 .footer-wrapper.two .footer-menu-wrap {
     font-size: 12px;
     padding: 7px 14px;
   }
+}
+
+.rfm-marquee-container .rfm-child {
+  margin: 0 40px;
+}
+.rfm-marquee-container .rfm-marqueer {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+@media (max-width: 1499px) {
+  .rfm-marquee-container .rfm-marqueer {
+    gap: 50px;
+  }
+}
+@media (max-width: 576px) {
+  .rfm-marquee-container .rfm-marqueer {
+    gap: 50px;
+  }
+}
+
+.slider-btn {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

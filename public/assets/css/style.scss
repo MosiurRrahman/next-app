@@ -93,7 +93,7 @@ Version: 1.0
      01.COMMON CSS 
 ===========================*/
 
-// @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 // DM Sans import start
 
 
@@ -2810,7 +2810,7 @@ video {
           display: flex;
           margin-left: 50px;
           flex-direction: column;
-          align-items: end;
+          align-items: flex-end;
           visibility: visible;
   
           justify-content: center;
@@ -3310,7 +3310,7 @@ header.style-1 {
             display: flex;
             margin-left: 50px;
             flex-direction: column;
-            align-items: end;
+            align-items: flex-end;
             visibility: visible;
 
             justify-content: center;
@@ -4559,7 +4559,7 @@ header.style-2 {
   .nav-right {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 75px;
     @include xxl-device(){
       gap: 40px;
@@ -4582,7 +4582,7 @@ header.style-2 {
         display: flex;
         margin-left: 50px;
         flex-direction: column;
-        align-items: end;
+        align-items: flex-end;
         visibility: visible;
 
         justify-content: center;
@@ -5514,7 +5514,7 @@ header.style-3 {
         display: flex;
         margin-left: 50px;
         flex-direction: column;
-        align-items: end;
+        align-items: flex-end;
         visibility: visible;
 
         justify-content: center;
@@ -6458,7 +6458,7 @@ header.style-4 {
         display: flex;
         margin-left: 50px;
         flex-direction: column;
-        align-items: end;
+        align-items: flex-end;
         visibility: visible;
 
         justify-content: center;
@@ -9061,6 +9061,9 @@ header.style-4 {
           font-weight: 700;
           line-height: 32px;
           margin-bottom: 30px;
+          @include xl-device(){
+            font-size: 27px;
+          }
         }
         ul{
           padding: 0;
@@ -9114,7 +9117,7 @@ header.style-4 {
             top: 46%;
             right: -30px;
             width: 30px;
-            justify-content: end;
+            justify-content: flex-end;
             background-color: transparent;
             width: unset;
           }
@@ -9122,7 +9125,7 @@ header.style-4 {
             top: 52%;
             right: -30px;
             width: 30px;
-            justify-content: end;
+            justify-content: flex-end;
             background-color: transparent;
             width: unset;
           }
@@ -10588,7 +10591,7 @@ footer{
               gap: 20px;
             }
             @include sm-down-device(){
-              justify-content: start;
+              justify-content: flex-start;
             }
             li{
               display: block;
@@ -11440,7 +11443,7 @@ footer{
               }
             }
             .social-list{
-              justify-content: start;
+              justify-content: flex-start;
               @include xl-device(){
                 gap: 20px;
               }
@@ -11652,7 +11655,7 @@ footer{
       gap: 50px;
     }
     .banner-content{
-      max-width: 636px;
+      max-width: 650px;
       width: 100%;
       .sub-title{
         color: var(--white-color);
@@ -13067,7 +13070,7 @@ footer{
   }
   .footer-top-wrapper{
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: space-between;
     .footer-top-content{
       max-width: 550px;
@@ -13768,7 +13771,7 @@ footer{
       border-radius: 5px; 
       padding: 20px;
       display: flex;
-      align-items: end;
+      align-items: flex-end;
       .category-content{
         padding: 9px 20px;
         background-color: var(--white-color);
@@ -14231,7 +14234,7 @@ footer{
 .home3-testimonial-section{
   .testimonial-slider-area{
     .slider-btn-grp{
-      justify-content: end;
+      justify-content: flex-end;
       gap: 35px;
       margin-top: -55px;
       position: relative;
@@ -14573,7 +14576,7 @@ footer{
         padding-top: 70px;
       }
       .banner-content{
-        max-width: 780px;
+        max-width: 810px;
         width: 100%;
         padding-left: 18%;
         margin-bottom: 150px;
@@ -14840,7 +14843,7 @@ footer{
         justify-content: center;
         height: 100%;
         @include xxl-down-device(){
-          justify-content: start;
+          justify-content: flex-start;
         }
       }
       .slider-btn-and-pagination{
@@ -15054,7 +15057,7 @@ footer{
       width: 100%;
       height: 100%;
       display: flex;
-      align-items: end;
+      align-items: flex-end;
       justify-content: center;
       padding: 35px;
       @include sm-down-device(){
@@ -16069,7 +16072,7 @@ footer{
       padding: 30px 10px 10px;
     }
     .banner-content{
-      max-width: 600px;
+      max-width: 660px;
       width: 100%;
       position: relative;
       .sub-title{
@@ -19711,7 +19714,7 @@ footer{
       }
       .breadcrumb-list{
         align-items: center;
-        justify-content: start;
+        justify-content: flex-start;
         gap: 10px;
         li{
           color: var(--white-color);
@@ -19758,7 +19761,7 @@ footer{
       }
       .breadcrumb-list{
         align-items: center;
-        justify-content: start;
+        justify-content: flex-start;
         gap: 10px;
         position: relative;
         padding-top: 30px;
@@ -19826,7 +19829,7 @@ footer{
       .breadcrumb-list{
         display: inline-flex;
         align-items: center;
-        justify-content: start;
+        justify-content: flex-start;
         gap: 6px;
         line-height: 1;
         padding: 9px 12px;
@@ -20049,6 +20052,22 @@ footer{
         }
       }
       &.paginations-button{
+        &.disabled{
+          transform: rotate(130deg);
+          a{
+            svg{
+              fill: none;
+              stroke: rgba( #3F444B, 0.5);
+              transition: 0.5s;
+            }
+            &:hover{
+              svg{
+                stroke: var(--white-color);
+                transform: rotate(26deg);
+              }
+            }
+          }
+        }
         a{
           svg{
             fill: none;
@@ -21069,7 +21088,7 @@ footer{
         margin-bottom: 35px;
         @include sm-down-device(){
           flex-direction: column;
-          align-items: start;
+          align-items: flex-start;
           margin-bottom: 25px;
           padding-bottom: 25px;
         }
@@ -21613,7 +21632,7 @@ footer{
           }
           .verify-area{
             display: flex;
-            align-items: end;
+            align-items: flex-end;
             gap: 30px;
             @include lg-down-device(){
               gap: 20px;
@@ -23429,7 +23448,7 @@ footer{
         @include sm-down-device(){
           gap: 20px;
           flex-direction: column;
-          align-items: start;
+          align-items: flex-start;
           padding-top: 20px;
           margin-bottom: 30px;
         }
@@ -24333,7 +24352,7 @@ footer{
     }
     .profile-area{
       display: flex;
-      align-items: end;
+      align-items: flex-end;
       gap: 12px;
       margin-top: -50px;
       position: relative;
@@ -24548,7 +24567,7 @@ footer{
         @include lg-down-device(){
           text-align: start;
           display: flex;
-          align-items: end;
+          align-items: flex-end;
           gap: 15px;
           margin-bottom: 10px;
         }
@@ -24667,4 +24686,25 @@ footer{
       }
     }
   }
+}
+
+
+.rfm-marquee-container {
+  .rfm-child{
+    margin: 0 40px;
+  }
+  .rfm-marqueer{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    @include fifteen-down-device(){
+      gap: 50px;
+    }
+    @include sm-down-device(){
+      gap: 50px;
+    }
+  }
+}
+.slider-btn{
+cursor: pointer;
 }

@@ -121,7 +121,7 @@ const Home1About = () => {
                       <path fillRule="evenodd" clipRule="evenodd" d="M10.0266 9.33856L0.689022 0.000487831L-3.01181e-08 0.68951L9.33807 10.0271L2.88172 10.0271L2.88172 11.001L11.0005 11.001L11.0005 2.88221L10.0266 2.88221L10.0266 9.33856Z">
                       </path>
                     </svg>
-                    <span />
+                   <span style={{top: '40.5px', left: '84.2344px'}} />
                   </Link>
                 </div>
               </div>
