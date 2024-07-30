@@ -14,6 +14,7 @@ import AuctionCard from '@/components/auction/auction-card';
 import InnerPageHeader6 from "@/components/header/InnerPageHeader6";
 import Breadcrumb6 from "@/components/common/Breadcrumb6";
 import Footer6 from "@/components/footer/Footer5";
+import HandleQuantity from "@/components/common/HandleQuantity";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 const AuctionDetails2Page = () => {
