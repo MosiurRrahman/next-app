@@ -10,177 +10,221 @@ const CategoryPage = () => {
 <>
   <Header7/>
   <Breadcrumb7 pagetitle={"Category"} currentPage={"Category"}/>
-  <div className="category-grid-section pt-110 mb-110">
+    <div className="category-grid-section pt-110 mb-110">
     <div className="container">
-      <div className="row gy-5 row-cols-xxl-6 row-cols-xl-5 row-cols-md-4 row-cols-sm-3 row-cols-2">
+      <div className="row gy-5 row-cols-xl-5 row-cols-md-3 row-cols-sm-2 row-cols-1">
         <div className="col wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-          <div className="category-card">
-            <Link href="/multipurpose2/auction-sidebar" className="category-img">
-              <img src="/assets/img/home1/category-img1.jpg" alt="" />
-            </Link>
-            <div className="category-content">
-              <h5><Link href="/multipurpose2/auction-sidebar">Automotive</Link></h5>
-              <span>45,533 Item</span>
+          <div className="category-card7 two">
+            <div className="category-icon">
+              <img src="../assets/img/home7/icon/home7-category-icon1.svg" alt="" />
+            </div>
+            <div className="category-wrap">
+              <div className="category-content">
+                <h4><Link href="/multipurpose2/auction-sidebar">Automotive</Link></h4>
+                <span>45,533 Item</span>
+              </div>
+              <div className="category-img">
+                <img src="../assets/img/home7/home7-category-img1.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
         <div className="col wow animate fadeInDown" data-wow-delay="300ms" data-wow-duration="1500ms">
-          <div className="category-card">
-            <Link href="/multipurpose2/auction-sidebar" className="category-img">
-              <img src="/assets/img/home1/category-img2.jpg" alt="" />
-            </Link>
-            <div className="category-content">
-              <h5><Link href="/multipurpose2/auction-sidebar">Antiques</Link></h5>
-              <span>45,680 Item</span>
+          <div className="category-card7 two">
+            <div className="category-icon">
+              <img src="../assets/img/home7/icon/home7-category-icon2.svg" alt="" />
+            </div>
+            <div className="category-wrap">
+              <div className="category-content">
+                <h4><Link href="/multipurpose2/auction-sidebar">Antiques</Link></h4>
+                <span>43,856 Item</span>
+              </div>
+              <div className="category-img">
+                <img src="../assets/img/home7/home7-category-img2.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
         <div className="col wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-          <div className="category-card">
-            <Link href="/multipurpose2/auction-sidebar" className="category-img">
-              <img src="/assets/img/home1/category-img3.jpg" alt="" />
-            </Link>
-            <div className="category-content">
-              <h5><Link href="/multipurpose2/auction-sidebar">Digital Art</Link></h5>
-              <span>41,250 Item</span>
+          <div className="category-card7 two">
+            <div className="category-icon">
+              <img src="../assets/img/home7/icon/home7-category-icon3.svg" alt="" />
+            </div>
+            <div className="category-wrap">
+              <div className="category-content">
+                <h4><Link href="/multipurpose2/auction-sidebar">Digital Art</Link></h4>
+                <span>48,258 Item</span>
+              </div>
+              <div className="category-img">
+                <img src="../assets/img/home7/home7-category-img3.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
         <div className="col wow animate fadeInDown" data-wow-delay="500ms" data-wow-duration="1500ms">
-          <div className="category-card">
-            <Link href="/multipurpose2/auction-sidebar" className="category-img">
-              <img src="/assets/img/home1/category-img4.jpg" alt="" />
-            </Link>
-            <div className="category-content">
-              <h5><Link href="/multipurpose2/auction-sidebar">Books &amp; Comic</Link></h5>
-              <span>48,450 Item</span>
+          <div className="category-card7 two">
+            <div className="category-icon">
+              <img src="../assets/img/home7/icon/home7-category-icon4.svg" alt="" />
+            </div>
+            <div className="category-wrap">
+              <div className="category-content">
+                <h4><Link href="/multipurpose2/auction-sidebar">Books &amp; Comic</Link></h4>
+                <span>46,156 Item</span>
+              </div>
+              <div className="category-img">
+                <img src="../assets/img/home7/home7-category-img4.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
         <div className="col wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
-          <div className="category-card">
-            <Link href="/multipurpose2/auction-sidebar" className="category-img">
-              <img src="/assets/img/home1/category-img5.jpg" alt="" />
-            </Link>
-            <div className="category-content">
-              <h5><Link href="/multipurpose2/auction-sidebar">Old Coin</Link></h5>
-              <span>46,200 Item</span>
+          <div className="category-card7 two">
+            <div className="category-icon">
+              <img src="../assets/img/home7/icon/home7-category-icon5.svg" alt="" />
+            </div>
+            <div className="category-wrap">
+              <div className="category-content">
+                <h4><Link href="/multipurpose2/auction-sidebar">Gadget</Link></h4>
+                <span>41,546 Item</span>
+              </div>
+              <div className="category-img">
+                <img src="../assets/img/home7/home7-category-img5.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
         <div className="col wow animate fadeInDown" data-wow-delay="700ms" data-wow-duration="1500ms">
-          <div className="category-card">
-            <Link href="/multipurpose2/auction-sidebar" className="category-img">
-              <img src="/assets/img/home1/category-img6.jpg" alt="" />
-            </Link>
-            <div className="category-content">
-              <h5><Link href="/multipurpose2/auction-sidebar">Gadget</Link></h5>
-              <span>50,250 Item</span>
+          <div className="category-card7 two">
+            <div className="category-icon">
+              <img src="../assets/img/home7/icon/home7-category-icon6.svg" alt="" />
+            </div>
+            <div className="category-wrap">
+              <div className="category-content">
+                <h4><Link href="/multipurpose2/auction-sidebar">Real Estate</Link></h4>
+                <span>45,489 Item</span>
+              </div>
+              <div className="category-img">
+                <img src="../assets/img/home7/home7-category-img6.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
         <div className="col wow animate fadeInDown" data-wow-delay="800ms" data-wow-duration="1500ms">
-          <div className="category-card">
-            <Link href="/multipurpose2/auction-sidebar" className="category-img">
-              <img src="/assets/img/home1/category-img7.jpg" alt="" />
-            </Link>
-            <div className="category-content">
-              <h5><Link href="/multipurpose2/auction-sidebar">Jewelry</Link></h5>
-              <span>48,202 Item</span>
+          <div className="category-card7 two">
+            <div className="category-icon">
+              <img src="../assets/img/home7/icon/home7-category-icon7.svg" alt="" />
+            </div>
+            <div className="category-wrap">
+              <div className="category-content">
+                <h4><Link href="/multipurpose2/auction-sidebar">Fashion</Link></h4>
+                <span>45,890 Item</span>
+              </div>
+              <div className="category-img">
+                <img src="../assets/img/home7/home7-category-img7.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
         <div className="col wow animate fadeInDown" data-wow-delay="800ms" data-wow-duration="1500ms">
-          <div className="category-card">
-            <Link href="/multipurpose2/auction-sidebar" className="category-img">
-              <img src="/assets/img/home1/category-img8.jpg" alt="" />
-            </Link>
-            <div className="category-content">
-              <h5><Link href="/multipurpose2/auction-sidebar">Real Estate</Link></h5>
-              <span>45,680 Item</span>
+          <div className="category-card7 two">
+            <div className="category-icon">
+              <img src="../assets/img/home7/icon/home7-category-icon8.svg" alt="" />
+            </div>
+            <div className="category-wrap">
+              <div className="category-content">
+                <h4><Link href="/multipurpose2/auction-sidebar">Ceramics</Link></h4>
+                <span>41,255 Item</span>
+              </div>
+              <div className="category-img">
+                <img src="../assets/img/home7/home7-category-img8.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
         <div className="col wow animate fadeInDown" data-wow-delay="700ms" data-wow-duration="1500ms">
-          <div className="category-card">
-            <Link href="/multipurpose2/auction-sidebar" className="category-img">
-              <img src="/assets/img/home1/category-img9.jpg" alt="" />
-            </Link>
-            <div className="category-content">
-              <h5><Link href="/multipurpose2/auction-sidebar">Fashion</Link></h5>
-              <span>41,250 Item</span>
+          <div className="category-card7 two">
+            <div className="category-icon">
+              <img src="../assets/img/home7/icon/home7-category-icon9.svg" alt="" />
+            </div>
+            <div className="category-wrap">
+              <div className="category-content">
+                <h4><Link href="/multipurpose2/auction-sidebar">Instruments</Link></h4>
+                <span>41,589 Item</span>
+              </div>
+              <div className="category-img">
+                <img src="../assets/img/home7/home7-category-img9.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
         <div className="col wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
-          <div className="category-card">
-            <Link href="/multipurpose2/auction-sidebar" className="category-img">
-              <img src="/assets/img/inner-pages/category-img1.jpg" alt="" />
-            </Link>
-            <div className="category-content">
-              <h5><Link href="/multipurpose2/auction-sidebar">Ceramics</Link></h5>
-              <span>41,488 Item</span>
+          <div className="category-card7 two">
+            <div className="category-icon">
+              <img src="../assets/img/home7/icon/home7-category-icon10.svg" alt="" />
+            </div>
+            <div className="category-wrap">
+              <div className="category-content">
+                <h4><Link href="/multipurpose2/auction-sidebar">Toys &amp; Games</Link></h4>
+                <span>43,658 Item</span>
+              </div>
+              <div className="category-img">
+                <img src="../assets/img/home7/home7-category-img10.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
         <div className="col wow animate fadeInDown" data-wow-delay="500ms" data-wow-duration="1500ms">
-          <div className="category-card">
-            <Link href="/multipurpose2/auction-sidebar" className="category-img">
-              <img src="/assets/img/inner-pages/category-img2.jpg" alt="" />
-            </Link>
-            <div className="category-content">
-              <h5><Link href="/multipurpose2/auction-sidebar">Instruments</Link></h5>
-              <span>45,477 Item</span>
+          <div className="category-card7 two">
+            <div className="category-icon">
+              <img src="../assets/img/home7/icon/home7-category-icon11.svg" alt="" />
+            </div>
+            <div className="category-wrap">
+              <div className="category-content">
+                <h4><Link href="/multipurpose2/auction-sidebar">Automobiles</Link></h4>
+                <span>43,898 Item</span>
+              </div>
+              <div className="category-img">
+                <img src="../assets/img/home7/home7-category-img11.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
         <div className="col wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-          <div className="category-card">
-            <Link href="/multipurpose2/auction-sidebar" className="category-img">
-              <img src="/assets/img/inner-pages/category-img3.jpg" alt="" />
-            </Link>
-            <div className="category-content">
-              <h5><Link href="/multipurpose2/auction-sidebar">Toys &amp; Games</Link></h5>
-              <span>45,356 Item</span>
+          <div className="category-card7 two">
+            <div className="category-icon">
+              <img src="../assets/img/home7/icon/home7-category-icon12.svg" alt="" />
+            </div>
+            <div className="category-wrap">
+              <div className="category-content">
+                <h4><Link href="/multipurpose2/auction-sidebar">Jewelry</Link></h4>
+                <span>44,784 Item</span>
+              </div>
+              <div className="category-img">
+                <img src="../assets/img/home7/home7-category-img12.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
         <div className="col wow animate fadeInDown" data-wow-delay="300ms" data-wow-duration="1500ms">
-          <div className="category-card">
-            <Link href="/multipurpose2/auction-sidebar" className="category-img">
-              <img src="/assets/img/inner-pages/category-img4.jpg" alt="" />
-            </Link>
-            <div className="category-content">
-              <h5><Link href="/multipurpose2/auction-sidebar">Gadgets</Link></h5>
-              <span>45,878 Item</span>
+          <div className="category-card7 two">
+            <div className="category-icon">
+              <img src="../assets/img/home7/icon/home7-category-icon13.svg" alt="" />
             </div>
-          </div>
-        </div>
-        <div className="col wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-          <div className="category-card">
-            <Link href="/multipurpose2/auction-sidebar" className="category-img">
-              <img src="/assets/img/inner-pages/category-img5.jpg" alt="" />
-            </Link>
-            <div className="category-content">
-              <h5><Link href="/multipurpose2/auction-sidebar">Automobiles</Link></h5>
-              <span>45,897 Item</span>
-            </div>
-          </div>
-        </div>
-        <div className="col wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-          <div className="category-card">
-            <Link href="/multipurpose2/auction-sidebar" className="category-img">
-              <img src="/assets/img/inner-pages/category-img6.jpg" alt="" />
-            </Link>
-            <div className="category-content">
-              <h5><Link href="/multipurpose2/auction-sidebar">Decorative Art</Link></h5>
-              <span>43,778 Item</span>
+            <div className="category-wrap">
+              <div className="category-content">
+                <h4><Link href="/multipurpose2/auction-sidebar">Decorative Art</Link></h4>
+                <span>46,258 Item</span>
+              </div>
+              <div className="category-img">
+                <img src="../assets/img/home7/home7-category-img13.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <InnerPageFooter7/>
 </>
 
