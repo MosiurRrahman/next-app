@@ -28,7 +28,7 @@ const MyAuctionPage = () => {
                     <h6>Dashboard</h6>
                   </Link>
                 </li>
-                <li>
+                <li className="active">
                   <Link href="/antiques-auction/dashboard/my-auction">
                     <svg
                       width={18}
@@ -75,7 +75,7 @@ const MyAuctionPage = () => {
                     <h6>Settings</h6>
                   </Link>
                 </li>
-                <li className="active">
+                <li>
                   <Link href="/antiques-auction/dashboard/change-password">
                     <svg
                       width={18}

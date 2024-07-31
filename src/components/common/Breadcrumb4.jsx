@@ -1,6 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
-
+export const metadata = {
+  icons: {
+    icon: "/assets/img/fav-icon.svg",
+  },
+}
 const Breadcrumb4 = ({ pagetitle, currentPage }) => {
   return (
     <div className="breadcrumb-section four" style={{ backgroundImage: 'url(../assets/img/inner-pages/breadcrumb-bg4.png), linear-gradient(rgba(10, 10, 10, 1), rgba(10, 10, 10, 1))' }}>

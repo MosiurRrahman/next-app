@@ -1,6 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
-
+export const metadata = {
+  icons: {
+    icon: "/assets/img/fav-icon.svg",
+  },
+}
 const Breadcrumb6 = ({ pagetitle, currentPage }) => {
   return (
     <>

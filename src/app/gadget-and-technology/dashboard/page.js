@@ -14,7 +14,7 @@ const DashbaordPage = () => {
           <div className="dashboard-wrapper">
             <div className="dashboard-sidebar-menu">
               <ul>
-                <li>
+                <li className="active">
                   <Link href="/antiques-auction/dashboard">
                     <svg
                       width={18}
@@ -74,7 +74,7 @@ const DashbaordPage = () => {
                     <h6>Settings</h6>
                   </Link>
                 </li>
-                <li className="active">
+                <li>
                   <Link href="/antiques-auction/dashboard/change-password">
                     <svg
                       width={18}

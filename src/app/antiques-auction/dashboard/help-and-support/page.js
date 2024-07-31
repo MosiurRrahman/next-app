@@ -74,7 +74,7 @@ const helpAndSupport = () => {
                     <h6>Settings</h6>
                   </Link>
                 </li>
-                <li className="active">
+                <li>
                   <Link href="/antiques-auction/dashboard/change-password">
                     <svg
                       width={18}
@@ -90,7 +90,7 @@ const helpAndSupport = () => {
                     <h6>Changed Password</h6>
                   </Link>
                 </li>
-                <li>
+                <li className="active">
                   <Link href="/antiques-auction/dashboard/help-and-support">
                     <svg
                       width={18}

@@ -11,7 +11,6 @@ const BlogGridPage = () => {
     <>
       <InnerPageHeader1/>
       <Breadcrumb1 pagetitle="Blog Grid" currentPage="Blog Grid" />
-    
       <div className="blog-grid-section pt-110 mb-110">
         <div className="container">
           <div className="row g-4 mb-60">

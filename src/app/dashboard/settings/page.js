@@ -58,7 +58,7 @@ const SettingsPage = () => {
                     <h6>Payment</h6>
                   </Link>
                 </li>
-                <li>
+                <li className="active">
                   <Link href="/dashboard/settings">
                     <svg
                       width={18}
@@ -74,7 +74,7 @@ const SettingsPage = () => {
                     <h6>Settings</h6>
                   </Link>
                 </li>
-                <li className="active">
+                <li >
                   <Link href="/dashboard/change-password">
                     <svg
                       width={18}

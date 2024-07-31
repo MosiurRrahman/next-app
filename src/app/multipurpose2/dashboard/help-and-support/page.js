@@ -26,7 +26,7 @@ const helpAndSupport = () => {
                     <h6>Dashboard</h6>
                   </Link>
                 </li>
-                <li className="active">
+                <li>
                   <Link href="/dashboard/my-auction">
                     <svg
                       width={18}
@@ -89,7 +89,7 @@ const helpAndSupport = () => {
                     <h6>Changed Password</h6>
                   </Link>
                 </li>
-                <li>
+                <li className="active">
                   <Link href="/dashboard/help-and-support">
                     <svg
                       width={18}

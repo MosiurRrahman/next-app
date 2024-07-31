@@ -27,7 +27,7 @@ const MyAuctionPage = () => {
                     <h6>Dashboard</h6>
                   </Link>
                 </li>
-                <li>
+                <li className="active">
                   <Link href="/book-and-comic/dashboard/my-auction">
                     <svg width={18} height={18} viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                       <g>
@@ -59,7 +59,7 @@ const MyAuctionPage = () => {
                     <h6>Settings</h6>
                   </Link>
                 </li>
-                <li className="active">
+                <li>
                   <Link href="/book-and-comic/dashboard/change-password">
                     <svg width={18} height={18} viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                       <g>

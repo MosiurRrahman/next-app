@@ -3,7 +3,11 @@ import Footer from "@/components/footer/Footer";
 import InnerPageHeader1 from "@/components/header/InnerPageHeader1";
 import Link from "next/link";
 import React from "react";
-
+export const metadata = {
+  icons: {
+    icon: "/assets/img/fav-icon.svg",
+  },
+}
 const DashbaordPage = () => {
   return (
     <>
@@ -14,7 +18,7 @@ const DashbaordPage = () => {
           <div className="dashboard-wrapper">
             <div className="dashboard-sidebar-menu">
               <ul>
-                <li>
+                <li className="active">
                   <Link href="/dashboard">
                     <svg
                       width={18}
@@ -74,7 +78,7 @@ const DashbaordPage = () => {
                     <h6>Settings</h6>
                   </Link>
                 </li>
-                <li className="active">
+                <li>
                   <Link href="/dashboard/change-password">
                     <svg
                       width={18}

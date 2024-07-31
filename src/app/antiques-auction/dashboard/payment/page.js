@@ -92,7 +92,7 @@ const PaymentPage = () => {
                     <h6>My Auction</h6>
                   </Link>
                 </li>
-                <li>
+                <li  className="active">
                   <Link href="/antiques-auction/dashboard/payment">
                     <svg
                       width={18}
@@ -124,7 +124,7 @@ const PaymentPage = () => {
                     <h6>Settings</h6>
                   </Link>
                 </li>
-                <li className="active">
+                <li>
                   <Link href="/antiques-auction/dashboard/change-password">
                     <svg
                       width={18}

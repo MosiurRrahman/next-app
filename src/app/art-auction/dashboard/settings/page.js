@@ -58,7 +58,7 @@ const SettingsPage = () => {
                     <h6>Payment</h6>
                   </Link>
                 </li>
-                <li>
+                <li className="active">
                   <Link href="/art-auction/dashboard/settings">
                     <svg
                       width={18}

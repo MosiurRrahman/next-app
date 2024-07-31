@@ -1,7 +1,6 @@
 "use client";
 import Breadcrumb1 from '@/components/common/Breadcrumb1'
 import InnerPageHeader1 from '@/components/header/InnerPageHeader1'
-import auctionCardData from "../../data/auction-card.json";
 import React, { useMemo} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
@@ -13,7 +12,6 @@ import SwiperCore, {
 import Link from "next/link";
 import { useCountdownTimer } from '@/customHooks/useCountdownTimer';
 import Footer from '@/components/footer/Footer';
-import AuctionCard from '@/components/auction/auction-card';
 import HandleQuantity from '@/components/common/HandleQuantity';
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 

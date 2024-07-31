@@ -8,7 +8,11 @@ import Header from "@/components/header/Header";
 import Home2ProcessSection from "@/components/process-section/Home2ProcessSection";
 import Home1Testimonial from "@/components/testimonial/Home1Testimonial";
 import React from "react";
-
+export const metadata = {
+  icons: {
+    icon: "/assets/img/fav-icon.svg",
+  },
+}
 const AboutPage = () => {
   return (
     <>
