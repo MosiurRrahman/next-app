@@ -2,9 +2,8 @@
 
 import auctionCardData from "../../../data/auction-card.json";
 import SelectComponent from "@/components/common/SelectComponent";
-import AuctionCard from "@/components/auction/auction-card";
 const products = auctionCardData["products"];
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import Footer5 from "@/components/footer/Footer5";
 import InnerPageHeader5 from "@/components/header/InnerPageHeader5";
 import Breadcrumb5 from "@/components/common/Breadcrumb5";
@@ -17,8 +16,6 @@ const AuctionSidebarPage = () => {
   );
   const [activeColumn, setActiveColumn] = useState(3);
   const [currentPage, setCurrentPage] = useState(1);
-  const [sortedProducts, setSortedProducts] = useState(products);
-  const [displayedProducts, setDisplayedProducts] = useState([]);
 
   const sortOptions = [
     "Default Sorting",
@@ -28,29 +25,6 @@ const AuctionSidebarPage = () => {
 
   const productsPerPage = 8; // Number of products per page
   const totalProducts = products.length;
-
-  useEffect(() => {
-    updateDisplayedProducts();
-  }, [sortedProducts, currentPage]);
-  const updateDisplayedProducts = () => {
-    const startIndex = (currentPage - 1) * productsPerPage;
-    const endIndex = startIndex + productsPerPage;
-    setDisplayedProducts(sortedProducts.slice(startIndex, endIndex));
-  };
-  const handleSort = (selectedOption) => {
-    let sorted;
-    switch (selectedOption) {
-      case "Price Low to High":
-        sorted = [...products].sort((a, b) => a.currentBid - b.currentBid);
-        break;
-      case "Price High to Low":
-        sorted = [...products].sort((a, b) => b.currentBid - a.currentBid);
-        break;
-      default:
-        sorted = products;
-    }
-    setSortedProducts(sorted);
-  };
 
   const handleColumnClick = (columnNumber) => {
     setActiveColumn(columnNumber);
@@ -175,30 +149,7 @@ const AuctionSidebarPage = () => {
                       style="two"
                     />
                   </div>
-                  <div className="single-widget mb-30">
-                    <h5 className="widget-title">Price</h5>
-                    <div className="range-wrap">
-                      <div className="row">
-                        <div className="col-sm-12">
-                          <input type="hidden" name="min-value" defaultValue />
-                          <input type="hidden" name="max-value" defaultValue />
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-sm-12">
-                          <div id="slider-range" />
-                        </div>
-                      </div>
-                      <div className="slider-labels">
-                        <div className="caption">
-                          <span id="slider-range-value1" />
-                        </div>
-                        <div className="caption">
-                          <span id="slider-range-value2" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                   
                   <div className="single-widget mb-30">
                     <h5 className="widget-title">Type Of Sales</h5>
                     <div className="checkbox-container">
@@ -324,7 +275,6 @@ const AuctionSidebarPage = () => {
                   <div className="selector">
                     <SelectComponent
                       options={sortOptions}
-                      onSelect={handleSort}
                       placeholder="Sort by price"
                     />
                   </div>

@@ -177,30 +177,7 @@ const AuctionSidebarPage = () => {
                       style="two"
                     />
                   </div>
-                  <div className="single-widget mb-30">
-                    <h5 className="widget-title">Price</h5>
-                    <div className="range-wrap">
-                      <div className="row">
-                        <div className="col-sm-12">
-                          <input type="hidden" name="min-value" defaultValue />
-                          <input type="hidden" name="max-value" defaultValue />
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-sm-12">
-                          <div id="slider-range" />
-                        </div>
-                      </div>
-                      <div className="slider-labels">
-                        <div className="caption">
-                          <span id="slider-range-value1" />
-                        </div>
-                        <div className="caption">
-                          <span id="slider-range-value2" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                   
                   <div className="single-widget mb-30">
                     <h5 className="widget-title">Type Of Sales</h5>
                     <div className="checkbox-container">

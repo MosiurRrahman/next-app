@@ -5,6 +5,7 @@ import Breadcrumb6 from "@/components/common/Breadcrumb6";
 import Footer6 from "@/components/footer/Footer5";
 import Link from "next/link";
 import { useCountdownTimer } from "@/customHooks/useCountdownTimer";
+import SingleSearchBox from "@/components/common/SingleSearchBox";
 
 const StoreListPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

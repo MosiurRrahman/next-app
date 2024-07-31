@@ -5,6 +5,7 @@ import Breadcrumb3 from "@/components/common/Breadcrumb3";
 import Footer3 from "@/components/footer/Footer3";
 import Link from "next/link";
 import { useCountdownTimer } from "@/customHooks/useCountdownTimer";
+import SingleSearchBox from "@/components/common/SingleSearchBox";
 
 const StoreListPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -1974,7 +1975,6 @@ const StoreListPage = () => {
           </div>
         </div>
       </div>
-
       <Footer3 />
     </>
   );
