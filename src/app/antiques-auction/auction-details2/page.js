@@ -512,6 +512,17 @@ const AuctionDetails2Page = () => {
               </div>
             </div>
           </div>
+          <React.Fragment>
+        <ModalVideo
+          channel="youtube"
+          onClick={() => setOpen(true)}
+          isOpen={isOpen}
+          animationSpeed="350"
+          videoId="r4KpWiK08vM"
+          ratio="16:9"
+          onClose={() => setOpen(false)}
+        />
+      </React.Fragment>
         </div>
       </div>
     </div>
@@ -1263,17 +1274,7 @@ const AuctionDetails2Page = () => {
         </div>
       </div>
     </div>
-    <React.Fragment>
-        <ModalVideo
-          channel="youtube"
-          onClick={() => setOpen(true)}
-          isOpen={isOpen}
-          animationSpeed="350"
-          videoId="r4KpWiK08vM"
-          ratio="16:9"
-          onClose={() => setOpen(false)}
-        />
-      </React.Fragment>
+    
     <Footer3/>
   </>
   
