@@ -6,7 +6,7 @@ import InnerPageHeader5 from "@/components/header/InnerPageHeader5";
 import React, {useState } from "react";
 import ModalVideo from "react-modal-video";
 const HowTOSellPage = () => {
- const [isOpen, setOpen] = useStatw
+  const [isOpen, setOpen] = useState(false);
  (false);
   return (
     <>
