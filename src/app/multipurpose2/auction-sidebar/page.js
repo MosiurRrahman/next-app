@@ -273,7 +273,6 @@ const AuctionSidebarPage = () => {
               <div className="selector">
                   <SelectComponent
                     options={sortOptions}
-                    onSelect={handleSort}
                     placeholder="Sort by price"
                   />
                 </div>

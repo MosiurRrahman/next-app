@@ -11,7 +11,6 @@ const products = auctionCardData["products"]
 const AuctionGridPage = () => {
     const [activeColumn, setActiveColumn] = useState(4);
     const [currentPage, setCurrentPage] = useState(1);
-    const [sortedProducts, setSortedProducts] = useState(products);
     const [displayedProducts, setDisplayedProducts] = useState([]);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => {
@@ -27,33 +26,7 @@ const AuctionGridPage = () => {
     const productsPerPage = 8; // Number of products per page
     const totalProducts = products.length;
   
-    useEffect(() => {
-      updateDisplayedProducts();
-    }, [sortedProducts, currentPage]);
-    const updateDisplayedProducts = () => {
-      const startIndex = (currentPage - 1) * productsPerPage;
-      const endIndex = startIndex + productsPerPage;
-      setDisplayedProducts(sortedProducts.slice(startIndex, endIndex));
-    };
-    const handleSort = (selectedOption) => {
-      let sorted;
-      switch (selectedOption) {
-        case "Price Low to High":
-          sorted = [...products].sort(
-            (a, b) => a.currentBid - b.currentBid
-          );
-          break;
-        case "Price High to Low":
-          sorted = [...products].sort(
-            (a, b) => b.currentBid - a.currentBid
-          );
-          break;
-        default:
-          sorted = products;
-      }
-      setSortedProducts(sorted);
-    };
-  
+ 
     const handleColumnClick = (columnNumber) => {
       setActiveColumn(columnNumber);
     };
@@ -102,7 +75,6 @@ const AuctionGridPage = () => {
               <div className="selector">
                 <SelectComponent
                   options={sortOptions}
-                  onSelect={handleSort}
                   placeholder="Sort by price"
                 />
               </div>

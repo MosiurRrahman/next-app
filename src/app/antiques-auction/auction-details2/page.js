@@ -1,6 +1,5 @@
 "use client";
-import auctionCardData from "../../../data/auction-card.json";
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
   Autoplay,
@@ -10,7 +9,7 @@ import SwiperCore, {
 } from "swiper";
 import Link from "next/link";
 import { useCountdownTimer } from '@/customHooks/useCountdownTimer';
-import AuctionCard from '@/components/auction/auction-card';
+import ModalVideo from "react-modal-video";
 import Header3 from '@/components/header/Header3';
 import Breadcrumb3 from '@/components/common/Breadcrumb3';
 import Footer3 from '@/components/footer/Footer3';
@@ -18,6 +17,7 @@ import HandleQuantity from "@/components/common/HandleQuantity";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 const AuctionDetails2Page = () => {
+  const [isOpen, setOpen] = useState(false);
   const { days, hours, minutes, seconds } = useCountdownTimer("2024-08-23 11:42:00");
      const settings = useMemo(()=>{
     return {
@@ -277,7 +277,8 @@ const AuctionDetails2Page = () => {
                 <p>Urna Aenean onewaryzo eleifend vitae tellus a facilisis. Nunc posuere at augue eget port. Inei odion goat tellus, dignissim fermentumara purus nec, consequat dapibus metus. Vav urna worlda mauris, goat te faucibus at egestas quis, fermentum egetonav neque. Dphare lectus nec risusonl pellentesque, opi vitae aliquet nisi dapibus. Sed volutpat mi velit.</p>
                 <div className="video-wrapper">
                   <img src="/assets/img/inner-pages/auction-details-video-img.jpg" alt="" />
-                  <a href="https://www.youtube.com/watch?v=_P8N0SQpE-0" className="video-area video-player">
+                  <a style={{ cursor: "pointer" }}
+                          onClick={() => setOpen(true)} className="video-area video-player">
                     <div className="icon">
                       <svg className="video-circle" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" viewBox="0 0 206 206" style={{enableBackground: 'new 0 0 206 206'}} xmlSpace="preserve">
                         <circle className="circle" strokeMiterlimit={10} cx={103} cy={103} r={100} />
@@ -1262,6 +1263,17 @@ const AuctionDetails2Page = () => {
         </div>
       </div>
     </div>
+    <React.Fragment>
+        <ModalVideo
+          channel="youtube"
+          onClick={() => setOpen(true)}
+          isOpen={isOpen}
+          animationSpeed="350"
+          videoId="r4KpWiK08vM"
+          ratio="16:9"
+          onClose={() => setOpen(false)}
+        />
+      </React.Fragment>
     <Footer3/>
   </>
   

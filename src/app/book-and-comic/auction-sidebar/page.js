@@ -11,11 +11,14 @@ import Breadcrumb6 from "@/components/common/Breadcrumb6";
 import Footer6 from "@/components/footer/Footer5";
 import Link from "next/link";
 import SingleSearchBox from "@/components/common/SingleSearchBox";
+import { useCountdownTimer } from "@/customHooks/useCountdownTimer";
 const AuctionSidebarPage = () => {
 
   const [activeColumn, setActiveColumn] = useState(3);
   const [currentPage, setCurrentPage] = useState(1);
-
+  const { days, hours, minutes, seconds } = useCountdownTimer(
+    "2024-10-23 12:00:00"
+  );
   const sortOptions = [
     "Default Sorting",
     "Price Low to High",
