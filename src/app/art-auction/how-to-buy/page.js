@@ -1,9 +1,12 @@
+"use client"
 import Breadcrumb4 from "@/components/common/Breadcrumb4";
 import Footer4 from "@/components/footer/Footer4";
 import Header4 from "@/components/header/Header4";
-
+import { useState } from "react";
+import ModalVideo from "react-modal-video";
 
 const Home1AboutowToBuyPage = () => {
+   const [isOpen, setOpen] = useState(false);
   return (
     <>
       <Header4 />
@@ -149,7 +152,8 @@ const Home1AboutowToBuyPage = () => {
                 alt=""
               />
               <a
-                href="https://www.youtube.com/watch?v=nInHvH6X7zM"
+                style={{ cursor: "pointer" }}
+                onClick={() => setOpen(true)}
                 className="video-area video-player"
               >
                 <div className="icon">
@@ -188,6 +192,17 @@ const Home1AboutowToBuyPage = () => {
                 </div>
               </a>
             </div>
+            <React.Fragment>
+        <ModalVideo
+          channel="youtube"
+          onClick={() => setOpen(true)}
+          isOpen={isOpen}
+          animationSpeed="350"
+          videoId="r4KpWiK08vM"
+          ratio="16:9"
+          onClose={() => setOpen(false)}
+        />
+      </React.Fragment>
           </div>
         </div>
       </div>

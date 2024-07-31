@@ -1,8 +1,12 @@
+"use client"
 import Breadcrumb3 from "@/components/common/Breadcrumb3";
 import Footer3 from "@/components/footer/Footer3";
 import Header3 from "@/components/header/Header3";
+import { useState } from "react";
+import ModalVideo from "react-modal-video";
 
 const HowToSellPage = () => {
+ const [isOpen, setOpen] = useState(false);
   return (
     <>
       <Header3 />
@@ -148,7 +152,8 @@ const HowToSellPage = () => {
                 alt=""
               />
               <a
-                href="https://www.youtube.com/watch?v=nInHvH6X7zM"
+                style={{ cursor: "pointer" }}
+                onClick={() => setOpen(true)}
                 className="video-area video-player"
               >
                 <div className="icon">
@@ -187,6 +192,17 @@ const HowToSellPage = () => {
                 </div>
               </a>
             </div>
+            <React.Fragment>
+        <ModalVideo
+          channel="youtube"
+          onClick={() => setOpen(true)}
+          isOpen={isOpen}
+          animationSpeed="350"
+          videoId="r4KpWiK08vM"
+          ratio="16:9"
+          onClose={() => setOpen(false)}
+        />
+      </React.Fragment>
           </div>
         </div>
       </div>

@@ -1,9 +1,13 @@
 
+"use client"
 import Breadcrumb5 from "@/components/common/Breadcrumb5";
 import InnerpageFooter5 from "@/components/footer/InnerpageFooter5";
 import InnerPageHeader5 from "@/components/header/InnerPageHeader5";
-
-const page = () => {
+import { useState } from "react";
+import ModalVideo from "react-modal-video";
+const HowTOSellPage = () => {
+ const [isOpen, setOpen] = useStatw
+ (false);
   return (
     <>
       <InnerPageHeader5 />
@@ -149,7 +153,8 @@ const page = () => {
                 alt=""
               />
               <a
-                href="https://www.youtube.com/watch?v=nInHvH6X7zM"
+                style={{ cursor: "pointer" }}
+                onClick={() => setOpen(true)}
                 className="video-area video-player"
               >
                 <div className="icon">
@@ -188,6 +193,17 @@ const page = () => {
                 </div>
               </a>
             </div>
+            <React.Fragment>
+        <ModalVideo
+          channel="youtube"
+          onClick={() => setOpen(true)}
+          isOpen={isOpen}
+          animationSpeed="350"
+          videoId="r4KpWiK08vM"
+          ratio="16:9"
+          onClose={() => setOpen(false)}
+        />
+      </React.Fragment>
           </div>
         </div>
       </div>
@@ -196,4 +212,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default HowTOSellPage;

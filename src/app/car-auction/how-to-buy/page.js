@@ -1,9 +1,12 @@
+"use client"
 import Breadcrumb2 from "@/components/common/Breadcrumb2";
 import Footer2 from "@/components/footer/Footer2";
 import Header2 from "@/components/header/Header2";
-import React from "react";
+import React, { useState } from "react";
+import ModalVideo from "react-modal-video";
 
-const page = () => {
+const HowToBuePage = () => {
+ const [isOpen, setOpen] = useState(false);
   return (
     <>
       <Header2 />
@@ -148,7 +151,8 @@ const page = () => {
                 alt=""
               />
               <a
-                href="https://www.youtube.com/watch?v=nInHvH6X7zM"
+                style={{ cursor: "pointer" }}
+                onClick={() => setOpen(true)}
                 className="video-area video-player"
               >
                 <div className="icon">
@@ -187,6 +191,17 @@ const page = () => {
                 </div>
               </a>
             </div>
+            <React.Fragment>
+        <ModalVideo
+          channel="youtube"
+          onClick={() => setOpen(true)}
+          isOpen={isOpen}
+          animationSpeed="350"
+          videoId="r4KpWiK08vM"
+          ratio="16:9"
+          onClose={() => setOpen(false)}
+        />
+      </React.Fragment>
           </div>
         </div>
       </div>
@@ -195,4 +210,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default HowToBuePage;

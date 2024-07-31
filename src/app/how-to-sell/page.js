@@ -1,9 +1,11 @@
 import Breadcrumb1 from '@/components/common/Breadcrumb1'
 import Footer from '@/components/footer/Footer'
 import InnerPageHeader1 from '@/components/header/InnerPageHeader1'
-import React from 'react'
+import React, { useState } from 'react'
+import ModalVideo from "react-modal-video";
 
 const HowToSellPage = () => {
+ const [isOpen, setOpen] = useState(false);
   return (
   <>
     <InnerPageHeader1/>
@@ -90,7 +92,8 @@ const HowToSellPage = () => {
           <h2>Guidelines For Selling</h2>
           <div className="video-wrapper">
             <img src="assets/img/inner-pages/how-to-sell-video-img.jpg" alt="" />
-            <a href="https://www.youtube.com/watch?v=nInHvH6X7zM" className="video-area video-player">
+            <a style={{ cursor: "pointer" }}
+                          onClick={() => setOpen(true)} className="video-area video-player">
               <div className="icon">
                 <svg className="video-circle" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" viewBox="0 0 206 206" style={{enableBackground: 'new 0 0 206 206'}} xmlSpace="preserve">
                   <circle className="circle" strokeMiterlimit={10} cx={103} cy={103} r={100} />
@@ -101,6 +104,17 @@ const HowToSellPage = () => {
               </div> 
             </a>
           </div>
+          <React.Fragment>
+        <ModalVideo
+          channel="youtube"
+          onClick={() => setOpen(true)}
+          isOpen={isOpen}
+          animationSpeed="350"
+          videoId="r4KpWiK08vM"
+          ratio="16:9"
+          onClose={() => setOpen(false)}
+        />
+      </React.Fragment>
         </div>
       </div>
     </div>
