@@ -1,3 +1,4 @@
+"use client"
 import Breadcrumb1 from '@/components/common/Breadcrumb1'
 import Footer from '@/components/footer/Footer'
 import InnerPageHeader1 from '@/components/header/InnerPageHeader1'
