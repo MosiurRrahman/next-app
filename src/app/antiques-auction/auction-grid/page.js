@@ -1,7 +1,7 @@
 "use client";
 import AuctionFilterSidebar from '@/components/auction/AuctionFilterSidebar'
-
-import React, {  useState } from 'react'
+import AuctionCard from '@/components/auction/auction-card'
+import React, { useEffect, useState } from 'react'
 import auctionCardData from "../../../data/auction-card.json";
 import SelectComponent from '@/components/common/SelectComponent';
 import Header3 from '@/components/header/Header3';
@@ -13,6 +13,8 @@ const products = auctionCardData["products"]
 const AuctionGrid = () => {
     const [activeColumn, setActiveColumn] = useState(4);
     const [currentPage, setCurrentPage] = useState(1);
+    const [sortedProducts, setSortedProducts] = useState(products);
+    const [displayedProducts, setDisplayedProducts] = useState([]);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { days, hours, minutes, seconds } = useCountdownTimer("2024-08-23 11:42:00");
     const sortOptions = [
@@ -27,9 +29,32 @@ const AuctionGrid = () => {
     const toggleMenu = () => {
       setIsMenuOpen(!isMenuOpen);
     };
-  
-  
-   
+    useEffect(() => {
+      updateDisplayedProducts();
+    }, [sortedProducts, currentPage]);
+    const updateDisplayedProducts = () => {
+      const startIndex = (currentPage - 1) * productsPerPage;
+      const endIndex = startIndex + productsPerPage;
+      setDisplayedProducts(sortedProducts.slice(startIndex, endIndex));
+    };
+    const handleSort = (selectedOption) => {
+      let sorted;
+      switch (selectedOption) {
+        case "Price Low to High":
+          sorted = [...products].sort(
+            (a, b) => a.currentBid - b.currentBid
+          );
+          break;
+        case "Price High to Low":
+          sorted = [...products].sort(
+            (a, b) => b.currentBid - a.currentBid
+          );
+          break;
+        default:
+          sorted = products;
+      }
+      setSortedProducts(sorted);
+    };
   
     const handleColumnClick = (columnNumber) => {
       setActiveColumn(columnNumber);

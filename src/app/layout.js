@@ -1,9 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import useWow from "@/customHooks/useWow";
-import { Playfair_Display, DM_Sans } from "next/font/google";
-import useHoverEffect from "../customHooks/useHoverEffect";
-import ScrollTopBtn from "../components/common/ScrollTopBtn.jsx";
 import "../../public/assets/css/bootstrap-icons.css";
 import "../../public/assets/css/boxicons.min.css";
 import "../../public/assets/css/swiper-bundle.min.css";
@@ -15,6 +11,10 @@ import "../../public/assets/css/slick.css";
 import "../../public/assets/css/bootstrap.min.css";
 import "../../public/assets/css/style.css";
 
+import { Playfair_Display, DM_Sans } from "next/font/google";
+import useHoverEffect from "../customHooks/useHoverEffect";
+import ScrollTopBtn from "../components/common/ScrollTopBtn.jsx";
+import useWow from "@/customHooks/useWow";
 
 const playfair_display = Playfair_Display({
   subsets: ["latin"],

@@ -75,19 +75,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-15 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -140,19 +140,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-20 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -205,19 +205,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-20 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -270,19 +270,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-03 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -333,19 +333,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-16 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -398,19 +398,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-05 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -463,19 +463,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-08 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -526,19 +526,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-22 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -591,19 +591,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-16 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -656,19 +656,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-28 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -736,19 +736,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-15 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -801,19 +801,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-20 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -866,19 +866,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-20 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -931,19 +931,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-03 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -994,19 +994,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-16 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -1059,19 +1059,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-05 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -1124,19 +1124,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-08 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -1187,19 +1187,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-22 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -1252,19 +1252,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-16 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -1317,19 +1317,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-28 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -1397,19 +1397,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-15 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -1462,19 +1462,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-20 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -1527,19 +1527,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-20 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -1592,19 +1592,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-03 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -1655,19 +1655,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-16 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -1720,19 +1720,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-05 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -1785,19 +1785,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-08 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -1848,19 +1848,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-22 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -1913,19 +1913,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-16 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -1978,19 +1978,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-28 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -2058,19 +2058,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-15 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -2123,19 +2123,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-20 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -2188,19 +2188,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-20 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -2253,19 +2253,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-03 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -2316,19 +2316,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-16 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -2381,19 +2381,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-05 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -2446,19 +2446,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-08 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -2509,19 +2509,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-22 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -2574,19 +2574,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-16 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -2639,19 +2639,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-28 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -2719,19 +2719,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-15 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -2784,19 +2784,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-20 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -2849,19 +2849,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-20 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -2914,19 +2914,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-03 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -2977,19 +2977,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-16 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -3042,19 +3042,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-05 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -3107,19 +3107,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-08 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -3170,19 +3170,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-22 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -3235,19 +3235,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-16 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -3300,19 +3300,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-28 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -3380,19 +3380,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-15 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -3445,19 +3445,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-20 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -3510,19 +3510,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-20 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -3575,19 +3575,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-03 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -3638,19 +3638,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-16 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -3703,19 +3703,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-09-05 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -3768,19 +3768,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-11-08 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -3831,19 +3831,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-22 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -3896,19 +3896,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-16 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
@@ -3961,19 +3961,19 @@ const Home7Featured = () => {
                       </ul>
                       <div className="countdown-timer">
                         <ul data-countdown="2024-10-28 12:00:00">
-                          <li className="times" data-days={0}>{days}<span>Days</span></li>
+                          <li className="times" data-days={0}>{days}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-hours={0}>{hours}<span>Hours</span></li>
+                          <li className="times" data-hours={0}>{hours}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-minutes={0}>{minutes}<span>Min</span></li>
+                          <li className="times" data-minutes={0}>{minutes}</li>
                           <li className="colon">
                             :
                           </li>
-                          <li className="times" data-seconds={0}>{seconds}<span>Sec</span></li>
+                          <li className="times" data-seconds={0}>{seconds}</li>
                         </ul>
                       </div>
                     </div>
