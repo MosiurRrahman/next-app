@@ -2,7 +2,7 @@
 import auctionCardData from "../../../data/auction-card.json";
 import SelectComponent from "@/components/common/SelectComponent";
 const products = auctionCardData["products"];
-import { useState } from "react";
+import React, {useState } from "react";
 import Footer2 from "@/components/footer/Footer2";
 import Header2 from "@/components/header/Header2";
 import Breadcrumb2 from "@/components/common/Breadcrumb2";

@@ -1,7 +1,7 @@
 "use client";
 import auctionCardData from "../../../data/auction-card.json";
 import SelectComponent from "@/components/common/SelectComponent";
-import { useState } from "react";
+import React, {useState } from "react";
 import Header4 from "@/components/header/Header4";
 import Breadcrumb4 from "@/components/common/Breadcrumb4";
 import Footer4 from "@/components/footer/Footer4";

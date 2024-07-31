@@ -2,7 +2,7 @@
 import Breadcrumb3 from "@/components/common/Breadcrumb3";
 import Footer3 from "@/components/footer/Footer3";
 import Header3 from "@/components/header/Header3";
-import { useState } from "react";
+import React, {useState } from "react";
 import ModalVideo from "react-modal-video";
 
 const HowToSellPage = () => {

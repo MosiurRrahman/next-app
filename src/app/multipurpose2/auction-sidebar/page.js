@@ -3,7 +3,7 @@ import auctionCardData from "../../../data/auction-card.json";
 import SelectComponent from "@/components/common/SelectComponent";
 import AuctionCard from "@/components/auction/auction-card";
 const products = auctionCardData["products"]
-import { useState } from "react";
+import React, {useState } from "react";
 import Header7 from "@/components/header/Header7";
 import Breadcrumb7 from "@/components/common/Breadcrumb7";
 import InnerPageFooter7 from "@/components/footer/InnerPageFooter7";

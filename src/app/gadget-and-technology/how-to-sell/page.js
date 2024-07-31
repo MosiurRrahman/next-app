@@ -3,7 +3,7 @@
 import Breadcrumb5 from "@/components/common/Breadcrumb5";
 import InnerpageFooter5 from "@/components/footer/InnerpageFooter5";
 import InnerPageHeader5 from "@/components/header/InnerPageHeader5";
-import { useState } from "react";
+import React, {useState } from "react";
 import ModalVideo from "react-modal-video";
 const HowTOSellPage = () => {
  const [isOpen, setOpen] = useStatw

@@ -5,7 +5,7 @@ import InnerPageHeader1 from "@/components/header/InnerPageHeader1";
 import auctionCardData from "../../data/auction-card.json";
 import SelectComponent from "@/components/common/SelectComponent";
 const products = auctionCardData["products"];
-import { useState } from "react";
+import React, {useState } from "react";
 import Link from "next/link";
 import SingleSearchBox from "@/components/common/SingleSearchBox";
 import { useCountdownTimer } from "@/customHooks/useCountdownTimer";

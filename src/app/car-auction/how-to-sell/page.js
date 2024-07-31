@@ -2,7 +2,7 @@
 import Breadcrumb2 from "@/components/common/Breadcrumb2";
 import Footer2 from "@/components/footer/Footer2";
 import Header2 from "@/components/header/Header2";
-import { useState } from "react";
+import React, {useState } from "react";
 import ModalVideo from "react-modal-video";
 
 

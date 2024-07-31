@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, {useState } from "react";
 
 const useCustomSelect = (initialOptions, isOpenByDefault = false) => {
   const [isOpen, setIsOpen] = useState(isOpenByDefault);

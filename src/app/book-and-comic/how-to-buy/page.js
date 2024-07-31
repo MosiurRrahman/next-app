@@ -2,7 +2,7 @@
 import Breadcrumb6 from "@/components/common/Breadcrumb6";
 import Footer6 from "@/components/footer/Footer6";
 import InnerPageHeader6 from "@/components/header/InnerPageHeader6";
-import { useState } from "react";
+import React, {useState } from "react";
 import ModalVideo from "react-modal-video";
 
 

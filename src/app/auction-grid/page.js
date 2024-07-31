@@ -2,7 +2,7 @@
 import Footer from "@/components/footer/Footer";
 import auctionCardData from "../../data/auction-card.json";
 import SelectComponent from "@/components/common/SelectComponent";
-import { useState } from "react";
+import React, {useState } from "react";
 import InnerPageHeader1 from "@/components/header/InnerPageHeader1";
 import Breadcrumb1 from "@/components/common/Breadcrumb1";
 import AuctionFilterSidebar from "@/components/auction/AuctionFilterSidebar";

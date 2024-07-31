@@ -2,7 +2,7 @@
 import Breadcrumb4 from "@/components/common/Breadcrumb4";
 import Footer4 from "@/components/footer/Footer4";
 import Header4 from "@/components/header/Header4";
-import { useState } from "react";
+import React, {useState } from "react";
 import ModalVideo from "react-modal-video";
 
 const Home1AboutowToBuyPage = () => {
