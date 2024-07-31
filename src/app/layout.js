@@ -21,7 +21,7 @@ const playfair_display = Playfair_Display({
   variable: "--font-playfair",
   display: "swap",
   weight:["400","500","600","700","800","900"],
-  styles:  ['italic','normal'],
+  styles:  ['italic'],
 });
 
 const dm_mono = DM_Sans({
@@ -29,7 +29,7 @@ const dm_mono = DM_Sans({
   weight:["300","400","500","600","700","800","900"],
   variable: "--font-dmsans",
   display: "swap",
-  styles:  ['italic','normal'],
+  styles:  ['normal'],
 });
 export default function RootLayout({ children }) {
   // useHoverEffect(".btn-hover");
