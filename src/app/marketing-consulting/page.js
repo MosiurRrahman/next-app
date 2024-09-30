@@ -7,7 +7,7 @@ import Home4Contact from '@/components/contact/Home4Contact'
 import Home4Footer from '@/components/Footer/Home4Footer'
 import Header4 from '@/components/header/Header4'
 import Home4Pricing from '@/components/pricing-plan-section/Home4Pricing'
-import Home4ProcessSection from '@/components/process-section/Home4ProcessSection'
+import Home4Process from '@/components/process-section/Home4ProcessSection'
 import Home4Service from '@/components/service/Home4Service'
 import Home4Testimonial from '@/components/testimonial/Home4Testimonial'
 import Home4WhyChooseUs from '@/components/why-choose-us-section/Home4WhyChooseUs'
@@ -23,7 +23,7 @@ const MarketingConsultingpage = () => {
             <Header4 />
             <Home4Banner />
             <Home4Service />
-            <Home4ProcessSection />
+            <Home4Process />
             <Home4WhyChooseUs />
             <Home4ABout />
             <Home4Banner2 />

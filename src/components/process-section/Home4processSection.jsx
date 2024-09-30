@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Home4ProcessSection = () => {
+const Home4Process = () => {
     return (
         <>
             <div className="home4-process-section mb-120">
@@ -132,4 +132,4 @@ const Home4ProcessSection = () => {
     )
 }
 
-export default Home4ProcessSection
+export default Home4Process
