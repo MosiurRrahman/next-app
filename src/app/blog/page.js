@@ -5,9 +5,10 @@ import Head from 'next/head'
 import Header1 from '@/components/header/Header1'
 import Breadcrum from '@/components/common/Breadcrum'
 import Footer1 from '@/components/Footer/Footer1'
-import { blog_grid } from '@/data/blog-data'
+import blogGridData from '@/data/blog-data'
 import Link from 'next/link'
 import { slugify } from '@/utils/slugify'
+const blog_grid = blogGridData.blog_grid
 
 const BlogPage = () => {
     const [currentPage, setCurrentPage] = useState(1)

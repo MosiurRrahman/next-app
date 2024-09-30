@@ -3,9 +3,11 @@ import React, { useState } from 'react'
 import Header1 from '@/components/header/Header1'
 import Breadcrum from '@/components/common/Breadcrum'
 import Footer1 from '@/components/Footer/Footer1'
-import { products } from '@/data/products'
+
+import productData from '@/data/products'
 import { slugify } from '@/utils/slugify'
 import Link from 'next/link'
+const products = productData.products
 
 const ProductDetails = ({ params }) => {
     const { title } = params

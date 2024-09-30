@@ -2,10 +2,10 @@ import React from 'react'
 import Header1 from '@/components/header/Header1'
 import Breadcrum from '@/components/common/Breadcrum'
 import Footer1 from '@/components/Footer/Footer1'
-import {products} from '@/data/products'
+import productData from '@/data/products'
 import { slugify } from '@/utils/slugify'
 import Link from 'next/link'
-
+const products = productData.products
 const Shoppage = () => {
     return (
         <>
@@ -17,7 +17,7 @@ const Shoppage = () => {
                         {
                             products.map((product)=>{
                                 return(
-                                    <div className="col-lg-4 col-md-6">
+                                    <div key={product.id} className="col-lg-4 col-md-6">
                                     <div className="product-card magnetic-item">
                                         <div className="product-card-img">
                                             <Link href={`/product/${slugify(product.name)}`}>
