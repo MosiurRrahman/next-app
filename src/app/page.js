@@ -1,5 +1,5 @@
 import Header1 from "@/components/header/Header1";
-import Home1banner from "@/components/banner/Home1banner";
+import Home1Banner from "@/components/banner/Home1Banner";
 import Home1Service from "@/components/service/Home1Service";
 import Home1Feature from "@/components/feature/Home1Feature";
 import Home1About from "@/components/about/Home1About";
@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Header1 fluid="container" />
-      <Home1banner />
+      <Home1Banner />
       <Home1Service />
       <Home1Feature />
       <Home1About />

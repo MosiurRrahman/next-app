@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-const Home1banner = () => {
+const Home1Banner = () => {
     return (
         <div className="home1-banner-section">
             <div className="container-fluid">
@@ -50,4 +50,4 @@ const Home1banner = () => {
     )
 }
 
-export default Home1banner
+export default Home1Banner
