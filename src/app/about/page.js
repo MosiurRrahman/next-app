@@ -1,32 +1,35 @@
-import Home1About from "@/components/about-section/Home1About";
-import Home5About from "@/components/about-section/Home5About";
-import Home1Blog from "@/components/blog/Home1Blog";
-import Breadcrumb1 from "@/components/common/Breadcrumb1";
-import Home1Faq from "@/components/faq/Home1Faq";
-import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
-import Home2ProcessSection from "@/components/process-section/Home2ProcessSection";
-import Home1Testimonial from "@/components/testimonial/Home1Testimonial";
-import React from "react";
-export const metadata = {
-  icons: {
-    icon: "/assets/img/fav-icon.svg",
-  },
-}
-const AboutPage = () => {
-  return (
-    <>
-      <Header />
-      <Breadcrumb1 pagetitle={"About Us"} currentPage={"About Us"} />
-      <Home5About />
-      <Home1About />
-      <Home2ProcessSection />
-      <Home1Faq />
-      <Home1Testimonial />
-      <Home1Blog />
-      <Footer />
-    </>
-  );
-};
+import Breadcrum from '@/components/common/Breadcrum'
+import React from 'react'
+import Header1 from '@/components/header/Header1'
+import Footer1 from '@/components/Footer/Footer1'
+import Home1About from '@/components/about/Home1About'
+import Home1Feature from '@/components/feature/Home1Feature'
+import Home1ProcessSection from '@/components/process-section/Home1ProcessSection'
+import Home1Contact from '@/components/contact/Home1Contact'
+import Home1CaseStudy from '@/components/case-study-section/Home1CaseStudy'
+import Home1Testimonial from '@/components/testimonial/Home1Testimonial'
+import Home1blog from '@/components/blog-section/Home1blog'
 
-export default AboutPage;
+export const metadata = {
+    icons: {
+      icon: "/assets/img/fav-icon.svg",
+    },
+  };
+const AboutPage = () => {
+    return (
+        <div>
+            <Header1 style={"inner-page"} fluid="container" />
+            <Breadcrum pageTitle={'About Us'} pagename={'About Us'} />
+            <Home1About sectionGap={'pt-150'} />
+            <Home1Feature />
+            <Home1ProcessSection />
+            <Home1Contact/>
+            <Home1CaseStudy/>
+            <Home1Testimonial/>
+            <Home1blog/>
+            <Footer1 />
+        </div>
+    )
+}
+
+export default AboutPage    

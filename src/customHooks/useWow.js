@@ -1,39 +1,41 @@
-"use client"
-import { useEffect } from 'react';
+"use client";
+import { useEffect, useState } from "react";
+import { usePathname } from 'next/navigation';
 
-const useWow = () => {
+export const useWow = () => {
+  const pathname = usePathname();
+  const [wow, setWow] = useState(null);
+
   useEffect(() => {
-    const initWow = () => {
-      import('wowjs').then((module) => {
-        const WOW = module.default;
-        const wow = new WOW.WOW({
-          boxClass: 'wow',
-          animateClass: 'animated',
-          offset: 80,
+    const initWow = async () => {
+      if (typeof window !== "undefined") {
+        const WOW = (await import("wowjs")).default;
+        const instance = new WOW.WOW({
+          boxClass: "wow",
+          animateClass: "animated",
+          offset: 0,
           mobile: true,
           live: true,
         });
-        wow.init();
-      });
+        instance.init();
+        setWow(instance);
+      }
     };
 
-    if (typeof window !== 'undefined') {
-      initWow();
+    initWow();
 
-      const handleRouteChange = () => {
-        if (typeof window.WOW !== 'undefined') {
-          window.WOW.sync();
-        }
-      };
+    return () => {
+      if (wow) {
+        wow.stop();
+      }
+    };
+  }, []); // Empty dependency array to run only once on mount
 
-      // Listen for route changes
-      document.addEventListener('routeChangeComplete', handleRouteChange);
-
-      return () => {
-        document.removeEventListener('routeChangeComplete', handleRouteChange);
-      };
+  useEffect(() => {
+    if (wow) {
+      wow.sync();
     }
-  }, []);
-};
+  }, [pathname, wow]); // Run when pathname changes and wow is available
 
-export default useWow;
+  return wow;
+};

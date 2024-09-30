@@ -1,40 +1,42 @@
-
-import Home1About from "@/components/about-section/Home1About";
-import Home1Banner from "@/components/banner/Home1Banner";
-import Home1Banner2 from "@/components/banner/Home1Banner2";
-import Home1Blog from "@/components/blog/Home1Blog";
-import Home1Category from "@/components/category/Home1Category";
-import Home1Faq from "@/components/faq/Home1Faq";
-import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
-import Home1LatestAuction from "@/components/latest-auction/Home1LatestAuction";
-import Home1LiveAuction from "@/components/live-auction/Home1LiveAuction";
-import Home1LogoSection from "@/components/logo-section/Home1LogoSection";
+import Header1 from "@/components/header/Header1";
+import Home1banner from "@/components/banner/Home1banner";
+import Home1Service from "@/components/service/Home1Service";
+import Home1Feature from "@/components/feature/Home1Feature";
+import Home1About from "@/components/about/Home1About";
 import Home1ProcessSection from "@/components/process-section/Home1ProcessSection";
+import Home1Pricing from "@/components/pricing-plan-section/Home1Pricing";
+import Home1WhyChooseus from "@/components/why-choose-us-section/Home1WhyChooseus";
+import LogoSection1 from "@/components/logo-section/LogoSection1";
 import Home1Testimonial from "@/components/testimonial/Home1Testimonial";
-import Home1UpcomingAuction from "@/components/upcoming-auction/Home1UpcomingAuction";
-export const metadata = {
-  icons: {
-    icon: "/assets/img/fav-icon.svg",
-  },
-}
+import Home1CaseStudy from "@/components/case-study-section/Home1CaseStudy";
+import Home1Faq from "@/components/faq-section/Home1Faq";
+import Home1Audtit from "@/components/audit-section/Home1Audtit";
+import Home1Contact from "@/components/contact/Home1Contact";
+import Home1Team from "@/components/team-section/Home1Team";
+import Home1blog from "@/components/blog-section/Home1blog";
+import Footer1 from "@/components/Footer/Footer1";
+
+
 export default function Home() {
   return (
     <>
-      <Header />
-      <Home1Banner />
-      <Home1LiveAuction />
-      <Home1Category />
-      <Home1LatestAuction />
-      <Home1Banner2 />
+      <Header1 fluid="container" />
+      <Home1banner />
+      <Home1Service />
+      <Home1Feature />
       <Home1About />
-      <Home1UpcomingAuction />
+      <Home1Contact />
       <Home1ProcessSection />
-      <Home1LogoSection />
-      <Home1Faq />
+      <Home1Pricing />
+      <Home1WhyChooseus />
+      <LogoSection1 />
       <Home1Testimonial />
-      <Home1Blog />
-      <Footer />
+      <Home1CaseStudy />
+      <Home1Faq />
+      <Home1Team />
+      <Home1Audtit />
+      <Home1blog />
+      <Footer1 />
     </>
   );
 }
